@@ -1,0 +1,11 @@
+{
+  "total_flights": 4577,
+  "by_region": {
+    "North America": 741,
+    "Europe": 2106,
+    "Asia": 1043,
+    "Other": 687
+  },
+  "score": 30,
+  "updated": "2026-03-25T07:12:28.865512"
+}

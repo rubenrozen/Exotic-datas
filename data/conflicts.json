@@ -1,0 +1,14 @@
+{
+  "total_events": 448,
+  "total_fatalities": 2840,
+  "by_type": {
+    "Battles": 195,
+    "Violence against civilians": 128,
+    "Protests": 87,
+    "Explosions/Remote violence": 38
+  },
+  "score": 28,
+  "period_days": 30,
+  "updated": "2026-03-25T07:12:28.034841",
+  "source": "fallback"
+}

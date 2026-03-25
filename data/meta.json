@@ -1,0 +1,19 @@
+{
+  "last_run": "2026-03-25T07:12:29.567462",
+  "errors": [
+    "BDI: HTTP Error 404: Not Found",
+    "OilStocks: HTTP Error 403: Forbidden",
+    "FAO: HTTP Error 404: Not Found",
+    "ACLED: No ACLED_KEY set \u2014 using fallback"
+  ],
+  "datasets": [
+    "co2",
+    "bdi",
+    "gas_storage",
+    "oil_stocks",
+    "fao",
+    "conflicts",
+    "air_traffic",
+    "refugees"
+  ]
+}

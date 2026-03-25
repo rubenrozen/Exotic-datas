@@ -1,0 +1,35 @@
+{
+  "eu_avg": 72.0,
+  "year_ago": 68.0,
+  "delta": 4.0,
+  "series": [],
+  "score": 72,
+  "countries": [
+    {
+      "name": "Allemagne",
+      "pct": 68.0,
+      "flag": "DE"
+    },
+    {
+      "name": "France",
+      "pct": 74.0,
+      "flag": "FR"
+    },
+    {
+      "name": "Italie",
+      "pct": 71.0,
+      "flag": "IT"
+    },
+    {
+      "name": "Espagne",
+      "pct": 80.0,
+      "flag": "ES"
+    },
+    {
+      "name": "Pays-Bas",
+      "pct": 63.0,
+      "flag": "NL"
+    }
+  ],
+  "updated": "2026-03-25T07:12:27.150883"
+}
