@@ -224,6 +224,37 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 /* Leaflet dark */
 .leaflet-container{background:#0a0f1a}
 .leaflet-tile-pane{filter:brightness(.7) saturate(.6)}
+
+/* ── INFO TOOLTIP ── */
+.info-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:16px;height:16px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.2);
+  font-size:9px;font-weight:700;color:rgba(255,255,255,.4);
+  cursor:default;flex-shrink:0;position:relative;
+  transition:all .15s;font-family:sans-serif;
+  vertical-align:middle;margin-left:5px;
+}
+.info-btn:hover{border-color:rgba(255,255,255,.6);color:rgba(255,255,255,.9);background:rgba(255,255,255,.08)}
+.info-popup{
+  position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);
+  width:240px;background:#0f1929;border:1px solid rgba(255,255,255,.14);
+  border-radius:8px;padding:10px 12px;z-index:500;pointer-events:none;
+  opacity:0;transition:opacity .15s;
+  box-shadow:0 8px 32px rgba(0,0,0,.7);
+}
+.info-btn:hover .info-popup{opacity:1}
+.info-popup::after{
+  content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);
+  border:5px solid transparent;border-top-color:#0f1929;
+}
+.ip-title{font-size:11px;font-weight:600;color:rgba(220,235,255,.9);margin-bottom:5px}
+.ip-body{font-size:10px;color:rgba(160,185,220,.75);line-height:1.55}
+.ip-source{font-size:9px;font-family:var(--mono);color:rgba(120,150,200,.5);margin-top:5px;border-top:1px solid rgba(255,255,255,.06);padding-top:4px}
+
+/* fix map container heights */
+#map-quakes, #map-fires, #map-flights, #map-conflicts, #map-iss { min-height:200px }
+
 </style>
 </head>
 <body>
@@ -274,7 +305,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
     <div class="card" style="grid-column:1/-1">
       <div class="card-top-line"></div>
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
-        <div class="lbl">🌍 Séismes en temps réel — USGS live</div>
+        <div class="lbl">🌍 Séismes en temps réel — USGS live <span class="info-btn">i<div class="info-popup"><div class="ip-title">Séismes USGS live</div><div class="ip-body">Tous les séismes M≥4.5 détectés dans le monde sur les 7 derniers jours. Données en temps réel du réseau sismique mondial USGS. Mis à jour en continu.</div><div class="ip-source">Source : USGS · earthquake.usgs.gov · Temps réel</div></div></span></div>
         <div class="horizon-btns" style="margin:0">
           <button class="hz on" onclick="setQuakeFilter(4.5,this)">M≥4.5</button>
           <button class="hz" onclick="setQuakeFilter(5.0,this)">M≥5</button>
@@ -368,7 +399,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
     </div>
     <div class="card big-metric">
       <div class="card-top-line"></div>
-      <div class="lbl">💨 CO₂ Mauna Loa (NOAA)</div>
+      <div class="lbl">💨 CO₂ Mauna Loa (NOAA) <span class="info-btn">i<div class="info-popup"><div class="ip-title">CO₂ atmosphérique</div><div class="ip-body">Concentration de CO₂ en ppm mesurée à Mauna Loa (Hawaï) depuis 1958. La courbe de Keeling est l'un des graphiques scientifiques les plus importants. La saisonnalité annuelle (dents de scie) reflète la respiration des forêts de l'hémisphère nord.</div><div class="ip-source">Source : NOAA GML · gml.noaa.gov · Hebdomadaire</div></div></span></div>
       <div class="bm-val" id="co2-val" style="color:#a855f7">—</div>
       <div class="bm-unit">ppm</div>
       <div class="bm-delta" id="co2-delta">Chargement…</div>
@@ -458,7 +489,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
     <div style="display:flex;flex-direction:column;gap:12px">
       <div class="card" style="background:rgba(5,0,20,.95)">
         <div class="card-top-line" style="background:linear-gradient(90deg,transparent,#9050ff,transparent)"></div>
-        <div class="lbl">🌌 Indice Kp — Activité géomagnétique (NOAA SWPC)</div>
+        <div class="lbl">🌌 Indice Kp — Activité géomagnétique (NOAA SWPC) <span class="info-btn">i<div class="info-popup"><div class="ip-title">Indice Kp</div><div class="ip-body">Mesure de la perturbation du champ magnétique terrestre causée par le vent solaire. Échelle 0-9. Kp≥6 = risque pour les satellites et réseaux électriques en hautes latitudes. Kp=9 → aurores boréales visibles jusqu'en France.</div><div class="ip-source">Source : NOAA SWPC · services.swpc.noaa.gov · Temps réel</div></div></span></div>
         <div style="display:flex;align-items:center;gap:12px">
           <div>
             <div class="big" id="kp-val" style="color:#9050ff">—</div>
@@ -519,7 +550,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
     <!-- BDI -->
     <div class="card">
       <div class="card-top-line"></div>
-      <div class="lbl">⚓ Baltic Dry Index — données data/bdi.json</div>
+      <div class="lbl">⚓ Baltic Dry Index <span class="info-btn">i<div class="info-popup"><div class="ip-title">Baltic Dry Index (BDI)</div><div class="ip-body">Coût du transport maritime de vrac sec (charbon, minerai, céréales) entre 26 routes majeures. Signal avancé de la demande industrielle mondiale — monte 4 à 8 semaines avant que l'activité n'apparaisse dans les statistiques officielles.</div><div class="ip-source">Source : Yahoo Finance ^BDI · data/bdi.json · Hebdomadaire</div></div></span></div>
       <div class="horizon-btns"><button class="hz on" onclick="setBDIHz('6m',this)">6M</button><button class="hz" onclick="setBDIHz('1a',this)">1A</button><button class="hz" onclick="setBDIHz('2a',this)">2A</button></div>
       <div id="bdi-block"><div class="no-data"><div class="no-data-ico">⚓</div><div>Requiert <code>data/bdi.json</code><br>→ Run GitHub Actions</div></div></div>
       <div class="ch ch160"><canvas id="chart-bdi"></canvas></div>
@@ -605,30 +636,69 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 <!-- ═══ CONFLITS ═══ -->
 <div class="panel" id="p-conflict">
   <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px">
-    <div class="conflict-stat"><div class="cs-num" id="cf-events" style="color:#ff3232">—</div><div class="cs-label">Événements ACLED</div><div class="cs-delta">30 derniers jours</div></div>
-    <div class="conflict-stat"><div class="cs-num" id="cf-fat" style="color:#ff3232">—</div><div class="cs-label">Décès documentés</div><div class="cs-delta">Source ACLED</div></div>
-    <div class="conflict-stat"><div class="cs-num" id="cf-sanctions" style="color:#f59e0b">—</div><div class="cs-label">Entités sanctionnées</div><div class="cs-delta">Liste OFAC SDN</div></div>
-    <div class="conflict-stat"><div class="cs-num" id="cf-border" style="color:#ff5a20">—</div><div class="cs-label">Passages irréguliers EU</div><div class="cs-delta">Frontex mensuel</div></div>
+    <div class="conflict-stat">
+      <div class="cs-num" id="cf-events" style="color:#ff3232">—</div>
+      <div class="cs-label">Événements ACLED <span class="info-btn">i<div class="info-popup"><div class="ip-title">Événements de conflit ACLED</div><div class="ip-body">Nombre total d'événements de violence politique et de protestation documentés dans le monde sur les 30 derniers jours. Inclut batailles, violences contre civils, explosions, émeutes et protestations.</div><div class="ip-source">Source : ACLED · acleddata.com · Quotidien</div></div></span></div>
+      <div class="cs-delta">30 derniers jours</div>
+    </div>
+    <div class="conflict-stat">
+      <div class="cs-num" id="cf-fat" style="color:#ff3232">—</div>
+      <div class="cs-label">Décès documentés <span class="info-btn">i<div class="info-popup"><div class="ip-title">Fatalities ACLED</div><div class="ip-body">Décès confirmés liés aux conflits. Inclut combattants et civils. ACLED compile uniquement les décès directement reportés par sources primaires.</div><div class="ip-source">Source : ACLED · 30 jours</div></div></span></div>
+      <div class="cs-delta" id="cf-fat-civ">dont civils ciblés : —</div>
+    </div>
+    <div class="conflict-stat">
+      <div class="cs-num" id="cf-countries" style="color:#f59e0b">—</div>
+      <div class="cs-label">Pays touchés <span class="info-btn">i<div class="info-popup"><div class="ip-title">Pays avec conflits actifs</div><div class="ip-body">Nombre de pays avec au moins un événement de violence politique documenté sur les 30 derniers jours.</div><div class="ip-source">Source : ACLED · Coverage mondiale</div></div></span></div>
+      <div class="cs-delta">30 derniers jours</div>
+    </div>
+    <div class="conflict-stat">
+      <div class="cs-num" id="cf-civilian" style="color:#ff5a20">—</div>
+      <div class="cs-label">Ciblage civils <span class="info-btn">i<div class="info-popup"><div class="ip-title">Civilian targeting</div><div class="ip-body">Événements où des civils ont été explicitement ciblés selon la classification ACLED. Indicateur qualitatif de la gravité du conflit.</div><div class="ip-source">Source : ACLED · champ civilian_targeting</div></div></span></div>
+      <div class="cs-delta">Événements / fatalities civils</div>
+    </div>
   </div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
     <div class="card">
       <div class="card-top-line"></div>
-      <div class="lbl">🗺 Carte des conflits — ACLED (30 jours)</div>
-      <div class="map-box map280" id="map-conflicts"></div>
+      <div class="lbl">🗺 Carte géolocalisée — ACLED 30 jours <span class="info-btn">i<div class="info-popup"><div class="ip-title">Carte ACLED</div><div class="ip-body">Chaque point = un événement géolocalisé. 🔴 Violences armées · 🟠 Explosions · 🟡 Protestations. Taille ∝ fatalities.</div><div class="ip-source">Source : ACLED · data/conflicts.json</div></div></span></div>
+      <div class="map-box" id="map-conflicts" style="height:300px;margin-top:8px"></div>
+      <div style="display:flex;gap:10px;margin-top:8px;flex-wrap:wrap">
+        <span style="font-size:10px;color:rgba(255,255,255,.5)">🔴 Batailles/Violences</span>
+        <span style="font-size:10px;color:rgba(255,255,255,.5)">🟠 Explosions</span>
+        <span style="font-size:10px;color:rgba(255,255,255,.5)">🟡 Protestations</span>
+      </div>
     </div>
     <div class="card">
       <div class="card-top-line"></div>
-      <div class="lbl">📊 Évolution mensuelle des événements</div>
-      <div class="horizon-btns"><button class="hz on" onclick="setCfHz('6m',this)">6M</button><button class="hz" onclick="setCfHz('1a',this)">1A</button></div>
-      <div id="cf-block"><div class="no-data"><div class="no-data-ico">💥</div><div>Requiert clé ACLED<br><code>ACLED_KEY</code> dans GitHub Secrets</div></div></div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+        <div class="lbl" style="margin:0">📊 Tendances conflits <span class="info-btn">i<div class="info-popup"><div class="ip-title">Tendances temporelles</div><div class="ip-body">Évolution du nombre d'événements et de fatalities. "Hebdo" = 90 derniers jours · "Mensuel" = 12 mois · "Types" = répartition par nature · "Régions" = par zone géographique.</div><div class="ip-source">Source : ACLED · data/conflicts.json</div></div></span></div>
+        <div class="horizon-btns" style="margin:0;margin-left:auto">
+          <button class="hz on" onclick="setCfView('weekly',this)">Hebdo</button>
+          <button class="hz" onclick="setCfView('monthly',this)">Mensuel</button>
+          <button class="hz" onclick="setCfView('types',this)">Types</button>
+          <button class="hz" onclick="setCfView('regions',this)">Régions</button>
+        </div>
+      </div>
       <div class="ch ch200"><canvas id="chart-conflicts"></canvas></div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
+    <div class="card">
+      <div class="card-top-line"></div>
+      <div class="lbl">🌍 Top 10 pays — événements (30j) <span class="info-btn">i<div class="info-popup"><div class="ip-title">Classement par pays</div><div class="ip-body">Top 10 pays par volume d'événements. Présence ici ≠ forcément le plus dangereux — la couverture journalistique varie par pays.</div><div class="ip-source">Source : ACLED · 30 jours</div></div></span></div>
+      <div id="cf-top-countries" style="margin-top:10px"></div>
+    </div>
+    <div class="card">
+      <div class="card-top-line"></div>
+      <div class="lbl">⚔️ Types de désordre <span class="info-btn">i<div class="info-popup"><div class="ip-title">Disorder types ACLED</div><div class="ip-body">ACLED classe en 5 catégories : Conflits politiques · Violence politique · Démonstrations · Violences économiques · Développements stratégiques.</div><div class="ip-source">Source : ACLED · champ disorder_type</div></div></span></div>
+      <div id="cf-disorder-types" style="margin-top:10px"></div>
     </div>
   </div>
   <div class="card">
     <div class="card-top-line"></div>
-    <div class="lbl">⚔️ Derniers événements majeurs — ACLED live</div>
-    <div id="acled-feed">
-      <div class="no-data"><div class="no-data-ico">💥</div><div>Données ACLED — configurez <code>ACLED_KEY</code> + <code>ACLED_EMAIL</code></div></div>
+    <div class="lbl">📡 Flux d'événements récents — ACLED <span class="info-btn">i<div class="info-popup"><div class="ip-title">Live feed ACLED</div><div class="ip-body">Événements les plus récents avec géolocalisation, acteurs impliqués et décès confirmés. Triés par date décroissante.</div><div class="ip-source">Source : ACLED · data/conflicts.json · champ live_feed</div></div></span></div>
+    <div id="acled-feed" style="max-height:280px;overflow-y:auto;margin-top:8px">
+      <div class="no-data"><div class="no-data-ico">💥</div><div>Configurez <code>ACLED_EMAIL</code> + <code>ACLED_PASSWORD</code> dans GitHub Secrets</div></div>
     </div>
   </div>
 </div>
@@ -650,7 +720,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
     <!-- UNHCR -->
     <div class="card">
       <div class="card-top-line"></div>
-      <div class="lbl">🏕 Personnes déplacées de force — UNHCR</div>
+      <div class="lbl">🏕 Personnes déplacées de force — UNHCR <span class="info-btn">i<div class="info-popup"><div class="ip-title">Déplacements forcés</div><div class="ip-body">Total mondial de réfugiés, déplacés internes (IDP) et demandeurs d'asile. Ce chiffre a plus que doublé en 10 ans. Il monte avant les crises économiques, pas après.</div><div class="ip-source">Source : UNHCR · api.unhcr.org · Annuel</div></div></span></div>
       <div class="big" id="demo-refugees" style="color:#22c55e">—</div>
       <div class="unit">millions de personnes</div>
       <div class="delta up" id="demo-ref-delta">Chargement…</div>
@@ -660,7 +730,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
     <!-- Espérance de vie -->
     <div class="card">
       <div class="card-top-line"></div>
-      <div class="lbl">💚 Espérance de vie — top / bottom pays (WHO)</div>
+      <div class="lbl">💚 Espérance de vie — top / bottom pays (WHO) <span class="info-btn">i<div class="info-popup"><div class="ip-title">Espérance de vie à la naissance</div><div class="ip-body">Nombre d'années qu'un nouveau-né peut espérer vivre. Indicateur composite de la santé, des inégalités et du développement d'un pays. Écart de 30 ans entre pays riches et pauvres.</div><div class="ip-source">Source : OMS / WHO GHO · Annuel</div></div></span></div>
       <div class="life-bar" id="life-bars">
         <div class="no-data"><div class="no-data-ico loading">💚</div><div>Chargement WHO…</div></div>
       </div>
@@ -905,7 +975,8 @@ async function loadUSGS() {
 
     if(!quakeMap) {
       quakeMap = L.map('map-quakes',{zoomControl:false,attributionControl:false,scrollWheelZoom:false}).setView([20,0],1);
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter_nolabels/{z}/{x}/{y}{r}.png').addTo(quakeMap);
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter_nolabels/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; CartoDB'}).addTo(quakeMap);
+    setTimeout(()=>quakeMap.invalidateSize(),200);
     }
     quakeLayers.forEach(l=>l.remove());
     quakeLayers = [];
@@ -1234,7 +1305,8 @@ async function loadSolarWind() {
 let flightMap=null, flightMarkers=[];
 async function initFlightMap() {
   flightMap = L.map('map-flights',{zoomControl:false,attributionControl:false}).setView([30,10],2);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter_nolabels/{z}/{x}/{y}{r}.png').addTo(flightMap);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter_nolabels/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; CartoDB'}).addTo(flightMap);
+  setTimeout(()=>flightMap.invalidateSize(),300);
   await refreshFlights();
 }
 async function refreshFlights() {
@@ -1371,30 +1443,113 @@ async function loadOil(period='6m',btn) {
    CONFLITS
 ══════════════════ */
 let conflictMap=null;
-async function loadConflicts(period='6m',btn) {
-  if(btn){ document.querySelectorAll('#p-conflict .horizon-btns .hz').forEach(b=>b.classList.remove('on')); btn.classList.add('on'); }
-  const d = await loadJSON('conflicts.json');
-  if(d) {
-    document.getElementById('cf-events').textContent=(d.total_events||0).toLocaleString();
-    document.getElementById('cf-fat').textContent=(d.total_fatalities||0).toLocaleString();
-    SCORES.conflict=d.score||30; updateEPI();
-    addTick(`💥 Conflits ACLED: ${d.total_events} événements · ${d.total_fatalities} décès (30j)`);
-    if(d.monthly) mkChart('chart-conflicts','bar',d.monthly.map(p=>p.month),d.monthly.map(p=>p.count),'#ff3232');
-    document.getElementById('cf-block').style.display='none';
+let cfData = null, cfView = 'weekly';
+function setCfView(view, btn) {
+  cfView = view;
+  document.querySelectorAll('#p-conflict .horizon-btns .hz').forEach(b=>b.classList.remove('on'));
+  if(btn) btn.classList.add('on');
+  renderCfChart();
+}
+function renderCfChart() {
+  if(!cfData) return;
+  const d = cfData;
+  if(cfView === 'weekly' && d.weekly_trend_90d?.length) {
+    const wk = d.weekly_trend_90d.slice(-12);
+    mkChart('chart-conflicts','bar',wk.map(w=>w.week.slice(5)),wk.map(w=>w.events),'#ff3232');
+  } else if(cfView === 'monthly' && d.monthly_trend_12m?.length) {
+    mkChart('chart-conflicts','bar',d.monthly_trend_12m.map(m=>m.month),d.monthly_trend_12m.map(m=>m.events),'#ff3232');
+  } else if(cfView === 'types' && d.by_event_type) {
+    const entries = Object.entries(d.by_event_type).sort((a,b)=>b[1]-a[1]).slice(0,6);
+    mkChart('chart-conflicts','bar',entries.map(e=>e[0].split(' ').slice(0,2).join(' ')),entries.map(e=>e[1]),'#ff5a20');
+  } else if(cfView === 'regions' && d.by_region) {
+    const entries = Object.entries(d.by_region).sort((a,b)=>b[1]-a[1]);
+    mkChart('chart-conflicts','bar',entries.map(e=>e[0].replace(' Africa','').replace(' Asia','')),entries.map(e=>e[1]),'#f59e0b');
   }
-  document.getElementById('cf-sanctions').textContent='16 500+';
-  document.getElementById('cf-border').textContent='—';
-
+}
+async function loadConflicts() {
+  const d = await loadJSON('conflicts.json');
   if(!conflictMap) {
     conflictMap=L.map('map-conflicts',{zoomControl:false,attributionControl:false,scrollWheelZoom:false}).setView([20,20],2);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter_nolabels/{z}/{x}/{y}{r}.png').addTo(conflictMap);
-    const zones=[{ll:[15.5,32.5],r:24,c:'#ff3232',n:'Soudan'},{ll:[31.5,35],r:20,c:'#ff5a20',n:'Gaza/Moyen-Orient'},{ll:[48.5,31],r:16,c:'#ff5a20',n:'Ukraine'},{ll:[16,42],r:14,c:'#f59e0b',n:'Ethiopie'},{ll:[15,22],r:12,c:'#f59e0b',n:'Sahel'},{ll:[33,43.5],r:10,c:'#ff5a20',n:'Yémen'},{ll:[3.5,35],r:8,c:'#f59e0b',n:'Soudan du Sud'}];
-    zones.forEach(z=>{
-      L.circleMarker(z.ll,{radius:z.r,color:'transparent',fillColor:z.c,fillOpacity:.35}).bindTooltip(z.n).addTo(conflictMap);
-      L.circleMarker(z.ll,{radius:4,color:'transparent',fillColor:z.c,fillOpacity:.9}).addTo(conflictMap);
-    });
-    document.getElementById('acled-feed').innerHTML=`<div class="no-data"><div>Configurez <code>ACLED_KEY</code> + <code>ACLED_EMAIL</code> dans GitHub Secrets pour les données live</div></div>`;
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter_nolabels/{z}/{x}/{y}.png',{maxZoom:19}).addTo(conflictMap);
+    setTimeout(()=>conflictMap.invalidateSize(),300);
   }
+  if(!d || !d.summary_30d) {
+    const zones=[{ll:[15.5,32.5],r:20,c:'#ff3232',n:'Soudan'},{ll:[31.5,35],r:18,c:'#ff5a20',n:'Gaza'},{ll:[48.5,31],r:14,c:'#ff5a20',n:'Ukraine'},{ll:[16,42],r:12,c:'#f59e0b',n:'Éthiopie'},{ll:[14,22],r:11,c:'#f59e0b',n:'Sahel'},{ll:[33,43.5],r:9,c:'#ff5a20',n:'Yémen'},{ll:[3.5,35],r:7,c:'#f59e0b',n:'Soudan du Sud'}];
+    zones.forEach(z=>{L.circleMarker(z.ll,{radius:z.r,color:'transparent',fillColor:z.c,fillOpacity:.3}).bindTooltip(z.n).addTo(conflictMap);L.circleMarker(z.ll,{radius:4,color:'transparent',fillColor:z.c,fillOpacity:.85}).addTo(conflictMap);});
+    return;
+  }
+  cfData = d;
+  const s = d.summary_30d;
+  document.getElementById('cf-events').textContent = s.total_events.toLocaleString();
+  document.getElementById('cf-fat').textContent = s.total_fatalities.toLocaleString();
+  document.getElementById('cf-fat-civ').textContent = `dont civils : ${s.civilian_fatalities||0}`;
+  document.getElementById('cf-countries').textContent = s.countries_affected || '—';
+  document.getElementById('cf-civilian').textContent = (s.civilian_events||0).toLocaleString();
+  SCORES.conflict = d.score||30; updateEPI();
+  addTick(`💥 ACLED: ${s.total_events} événements · ${s.total_fatalities} décès · ${s.countries_affected} pays (30j)`);
+
+  // Map with real geolocated events
+  if(d.live_feed?.length) {
+    const typeColors = {'Battles':'#ff3232','Explosions/Remote violence':'#ff5a20','Violence against civilians':'#ff3232','Protests':'#f59e0b','Riots':'#f59e0b','Strategic developments':'#6b7fa0'};
+    d.live_feed.slice(0,200).forEach(ev=>{
+      if(!ev.lat||!ev.lon) return;
+      const c = typeColors[ev.type]||'#888';
+      const r = Math.max(4, Math.min(16, 4 + (ev.fatalities||0)*0.5));
+      L.circleMarker([ev.lat,ev.lon],{radius:r,color:'transparent',fillColor:c,fillOpacity:0.65})
+        .bindTooltip(`<b>${ev.type}</b><br>${ev.country}<br>${ev.date}<br>Fatalities: ${ev.fatalities||0}${ev.actor1?'<br>'+ev.actor1.slice(0,40):''}`)
+        .addTo(conflictMap);
+    });
+  } else {
+    const zones=[{ll:[15.5,32.5],r:20,c:'#ff3232',n:'Soudan'},{ll:[31.5,35],r:18,c:'#ff5a20',n:'Gaza'},{ll:[48.5,31],r:14,c:'#ff5a20',n:'Ukraine'},{ll:[16,42],r:12,c:'#f59e0b',n:'Éthiopie'},{ll:[14,22],r:11,c:'#f59e0b',n:'Sahel'},{ll:[33,43.5],r:9,c:'#ff5a20',n:'Yémen'}];
+    zones.forEach(z=>{L.circleMarker(z.ll,{radius:z.r,color:'transparent',fillColor:z.c,fillOpacity:.3}).bindTooltip(z.n).addTo(conflictMap);L.circleMarker(z.ll,{radius:4,color:'transparent',fillColor:z.c,fillOpacity:.85}).addTo(conflictMap);});
+  }
+
+  // Top countries
+  const tcEl = document.getElementById('cf-top-countries');
+  if(d.top_countries?.length) {
+    const maxN = d.top_countries[0].events;
+    tcEl.innerHTML = d.top_countries.map((c,i)=>`
+      <div class="pbar-row">
+        <div class="pbar-label">${['🥇','🥈','🥉','4️⃣','5️⃣','6️⃣','7️⃣','8️⃣','9️⃣','🔟'][i]} ${c.country}</div>
+        <div class="pbar-track"><div class="pbar-fill" style="width:${Math.round(c.events/maxN*100)}%;background:#ff3232"></div></div>
+        <div class="pbar-val" style="color:#ff3232">${c.events}</div>
+        <div class="pbar-delta" style="color:#ff5a20">${c.fatalities} ☠</div>
+      </div>`).join('');
+  }
+
+  // Disorder types
+  const dtEl = document.getElementById('cf-disorder-types');
+  if(d.by_disorder_type) {
+    const entries = Object.entries(d.by_disorder_type).sort((a,b)=>b[1]-a[1]);
+    const total = entries.reduce((s,[,v])=>s+v,0);
+    const colors={'Political violence':'#ff3232','Political turmoil':'#ff5a20','Demonstrations':'#f59e0b','Economic violence':'#a855f7','Strategic developments':'#6b7fa0'};
+    dtEl.innerHTML = entries.map(([type,count])=>`
+      <div class="pbar-row">
+        <div class="pbar-label">${type.split(' ').slice(0,2).join(' ')}</div>
+        <div class="pbar-track"><div class="pbar-fill" style="width:${Math.round(count/total*100)}%;background:${colors[type]||'#888'}"></div></div>
+        <div class="pbar-val" style="color:${colors[type]||'#888'}">${count}</div>
+        <div class="pbar-delta">${Math.round(count/total*100)}%</div>
+      </div>`).join('');
+  }
+
+  // Live feed
+  const feedEl = document.getElementById('acled-feed');
+  if(d.live_feed?.length) {
+    const typeEmoji={'Battles':'⚔️','Explosions/Remote violence':'💥','Violence against civilians':'🎯','Protests':'📢','Riots':'🔥','Strategic developments':'🧭'};
+    feedEl.innerHTML = d.live_feed.slice(0,40).map(ev=>`
+      <div class="feed-item">
+        <div style="font-size:14px;flex-shrink:0">${typeEmoji[ev.type]||'📌'}</div>
+        <div class="feed-dot" style="background:${ev.fatalities>0?'#ff3232':ev.civilian?'#ff5a20':'#f59e0b'}"></div>
+        <div class="feed-txt">
+          <span style="color:${ev.fatalities>0?'#ff5a20':'var(--text)'};font-weight:${ev.fatalities>0?600:400}">${ev.country}</span>
+          — ${ev.type}${ev.fatalities?' · <span style="color:#ff3232">☠ '+ev.fatalities+'</span>':''}
+          ${ev.actor1?'<br><span style="font-size:10px;color:var(--muted)">'+ev.actor1.slice(0,60)+'</span>':''}
+        </div>
+        <div class="feed-time">${ev.date}</div>
+      </div>`).join('');
+  }
+
+  renderCfChart();
 }
 
 /* ══════════════════
@@ -1528,7 +1683,7 @@ onTab('above', ()=>{initISS(); loadKp(); loadSolarWind();});
 onTab('trade', ()=>{initFlightMap(); loadBDI('6m',null);});
 onTab('net', ()=>{renderNetworkHealth();});
 onTab('energy', ()=>{loadGasStorage(); loadOil('6m',null);});
-onTab('conflict', ()=>{loadConflicts('6m',null);});
+onTab('conflict', ()=>{loadConflicts();});
 onTab('demo', ()=>{startPopCounter(); loadRefugees('5a',null); loadLifeExpectancy();});
 onTab('trends', ()=>{fetchWiki('fr'); fetchArxiv('cs.AI');});
 
