@@ -1,11 +1,23 @@
 {
-  "current_millions": 48.5,
+  "current_millions": 29.1,
+  "prev_year_millions": 29.1,
+  "delta": 0.0,
+  "breakdown": {
+    "year": "2012",
+    "refugees": 10.5,
+    "idps": 17.7,
+    "asylum": 0.9,
+    "total": 29.1
+  },
   "series": [
     {
-      "year": "2014",
-      "total": 48.5
+      "year": "2012",
+      "refugees": 10.5,
+      "idps": 17.7,
+      "asylum": 0.9,
+      "total": 29.1
     }
   ],
-  "score": 71,
-  "updated": "2026-03-25T07:12:29.567273"
+  "score": 84,
+  "updated": "2026-03-25T14:40:53.811873Z"
 }

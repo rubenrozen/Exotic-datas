@@ -1,0 +1,47 @@
+{
+  "cities": [
+    {
+      "city": "New York",
+      "vs_2019": 104,
+      "country": "US"
+    },
+    {
+      "city": "London",
+      "vs_2019": 98,
+      "country": "UK"
+    },
+    {
+      "city": "Paris",
+      "vs_2019": 96,
+      "country": "FR"
+    },
+    {
+      "city": "Toronto",
+      "vs_2019": 101,
+      "country": "CA"
+    },
+    {
+      "city": "Sydney",
+      "vs_2019": 107,
+      "country": "AU"
+    },
+    {
+      "city": "Berlin",
+      "vs_2019": 103,
+      "country": "DE"
+    },
+    {
+      "city": "Tokyo",
+      "vs_2019": 89,
+      "country": "JP"
+    },
+    {
+      "city": "Mexico City",
+      "vs_2019": 112,
+      "country": "MX"
+    }
+  ],
+  "note": "vs. same period 2019 baseline",
+  "score": 72,
+  "updated": "2026-03-25T14:40:53.811873Z"
+}

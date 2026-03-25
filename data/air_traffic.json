@@ -1,11 +1,13 @@
 {
-  "total_flights": 4577,
+  "total": 11272,
   "by_region": {
-    "North America": 741,
-    "Europe": 2106,
-    "Asia": 1043,
-    "Other": 687
+    "Europe": 2605,
+    "North America": 7281,
+    "Asia-Pacific": 657,
+    "Middle East": 21,
+    "Other": 634
   },
-  "score": 30,
-  "updated": "2026-03-25T07:12:28.865512"
+  "avg_altitude_m": 6293,
+  "score": 87,
+  "updated": "2026-03-25T14:40:53.811873Z"
 }
