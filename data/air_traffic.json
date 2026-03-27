@@ -1,13 +1,13 @@
 {
-  "total": 4899,
+  "total": 5207,
   "by_region": {
-    "Europe": 2288,
-    "North America": 829,
-    "Asia-Pacific": 1039,
-    "Middle East": 21,
-    "Other": 673
+    "Europe": 2449,
+    "North America": 969,
+    "Asia-Pacific": 1047,
+    "Middle East": 32,
+    "Other": 664
   },
-  "avg_altitude_m": 7674,
-  "score": 38,
-  "updated": "2026-03-26T07:20:21.484314Z"
+  "avg_altitude_m": 7628,
+  "score": 40,
+  "updated": "2026-03-27T07:19:18.178808Z"
 }
