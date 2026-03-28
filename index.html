@@ -2012,8 +2012,7 @@ function loadOpenTable() {
     </div>`).join('');
   const chart = document.getElementById('chart-restau');
   if(chart) {
-    // chart-restau handled by loadOpenTable()
-  // mkChart('chart-restau','bar',
+    mkChart('chart-restau','bar',
       CITIES.map(c=>c.flag+' '+c.city.split(' ')[0]),
       CITIES.map(c=>c.vs-100),
       '#ec4899',
