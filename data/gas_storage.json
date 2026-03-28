@@ -403,9 +403,19 @@
       "pct": 45.7,
       "trend": -0.17,
       "gasInStorage": 16.6
+    },
+    "CZ": {
+      "pct": 29.1,
+      "trend": -0.18,
+      "gasInStorage": 13.7
+    },
+    "HU": {
+      "pct": 33.1,
+      "trend": -0.01,
+      "gasInStorage": 22.5
     }
   },
   "alert_threshold": 20.0,
   "score": 28,
-  "updated": "2026-03-28T15:19:55.167137Z"
+  "updated": "2026-03-28T15:48:09.129549Z"
 }
