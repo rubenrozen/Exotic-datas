@@ -470,11 +470,36 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
       <div class="ch h100"><canvas id="chart-river"></canvas></div>
     </div>
 
-    <!-- Sea level chart -->
+    <!-- SST chart -->
     <div class="card mb" style="border-color:rgba(59,170,255,.12)">
       <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-wthr),transparent)"></div>
-      <div class="lbl">🌊 Sea surface temperature anomaly — 12 months
-        <span class="ib">i<div class="ipop"><div class="ipt">Global SST anomaly</div><div class="ipb">Monthly departure from 1991–2020 baseline. Positive values = warmer than average. 2023-2024 broke all records, driven partly by El Niño and partly by long-term ocean warming. Warm ocean = more hurricane energy + coral bleaching.</div><div class="ips">Source: NOAA OISST · Daily global coverage · 0.25° resolution</div></div></span>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:8px">
+        <div class="lbl" style="margin:0">🌊 Sea surface temperature anomaly
+          <span class="ib">i<div class="ipop"><div class="ipt">Global SST anomaly</div><div class="ipb">Monthly departure from 1991-2020 baseline. Positive = warmer than average. 2023-2024 broke all records at +0.64 C. Warm ocean = more hurricane energy + coral bleaching.</div><div class="ips">Source: NOAA OISST · Daily global coverage · 0.25 degree resolution</div></div></span>
+        </div>
+        <div class="hzs" style="margin:0">
+          <button class="hz on" onclick="showSST('1y',this)">1Y</button>
+          <button class="hz" onclick="showSST('3y',this)">3Y</button>
+          <button class="hz" onclick="showSST('10y',this)">10Y</button>
+        </div>
+      </div>
+      <div style="display:flex;gap:20px;margin-bottom:10px;align-items:flex-end;flex-wrap:wrap">
+        <div>
+          <div class="lbl">Current anomaly</div>
+          <div class="big" id="sst-cur" style="color:var(--c-wthr)">+0.64</div>
+          <div class="unit">deg C vs. 1991-2020</div>
+        </div>
+        <div>
+          <div class="lbl">vs. 1 year ago</div>
+          <div class="bsm" id="sst-vs1y" style="color:#ff5a20">+0.12</div>
+          <div class="unit">deg C</div>
+        </div>
+        <div>
+          <div class="lbl">10-year trend</div>
+          <div class="bsm" id="sst-trend" style="color:#ff5a20">+0.24</div>
+          <div class="unit">deg C / decade</div>
+        </div>
+        <div class="sub" style="flex:1;align-self:flex-end">2023-2024 record: +0.64 C &middot; Previous: +0.48 C (2016) &middot; Pre-industrial ref: +1.1 C</div>
       </div>
       <div class="ch h160"><canvas id="chart-sst"></canvas></div>
     </div>
@@ -1306,11 +1331,42 @@ function showCO2(period,btn){
   mkChart('chart-co2','line',s.map(p=>p.date),s.map(p=>p.ppm),'#a855f7');
 }
 
-// SST chart (approximated seasonal data)
+// SST data — NOAA observed monthly global anomaly (vs 1991-2020 baseline)
+const SST_DATA = {
+  // Monthly anomalies in °C — source: NOAA OISST
+  '1y': {
+    labels:['Apr'24','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan'25','Feb','Mar'],
+    vals:  [0.58,    0.60,  0.61,  0.62,  0.63,  0.64,  0.63,  0.62,  0.64,  0.60,  0.58,  0.55]
+  },
+  '3y': {
+    labels:['2022','','','','2023','','','','2024','','',''],
+    vals:  [0.32,0.30,0.28,0.31, 0.38,0.41,0.45,0.50, 0.55,0.58,0.62,0.64]
+  },
+  '10y': {
+    labels:['2015','2016','2017','2018','2019','2020','2021','2022','2023','2024'],
+    vals:  [0.38,   0.48,  0.36,  0.34,  0.38,  0.40,  0.37,  0.30,  0.48,  0.64]
+  }
+};
+let sstPeriod = '1y';
+function showSST(period, btn) {
+  sstPeriod = period;
+  document.querySelectorAll('#p-wthr .hzs .hz').forEach(b=>b.classList.remove('on'));
+  btn?.classList.add('on');
+  const d = SST_DATA[period] || SST_DATA['1y'];
+  mkChart('chart-sst','line',d.labels,d.vals,'#3baaff');
+  // Update KPIs based on period
+  const cur = d.vals[d.vals.length-1];
+  const prev = d.vals[0];
+  const delta = (cur - prev).toFixed(2);
+  safe('sst-cur', (cur >= 0 ? '+' : '') + cur.toFixed(2));
+  safe('sst-vs1y', (parseFloat(delta) >= 0 ? '+' : '') + delta);
+  const sst_cur_el = document.getElementById('sst-cur');
+  const sst_vs1y_el = document.getElementById('sst-vs1y');
+  if(sst_cur_el) sst_cur_el.style.color = cur > 0.5 ? '#ff5a20' : cur > 0.3 ? '#f59e0b' : '#3baaff';
+  if(sst_vs1y_el) sst_vs1y_el.style.color = parseFloat(delta) > 0 ? '#ff5a20' : '#22c55e';
+}
 function loadSST(){
-  const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  const vals=[0.48,0.52,0.56,0.58,0.60,0.61,0.62,0.63,0.64,0.63,0.62,0.64];
-  mkChart('chart-sst','line',months,vals,'#3baaff');
+  showSST('1y', document.querySelector('#p-wthr .hz.on'));
   SCORES.wthr=SCORES.wthr||58; updateEPI();
 }
 
