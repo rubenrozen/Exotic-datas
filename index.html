@@ -301,7 +301,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
         </div>
         <div class="feed" id="quake-feed"><div class="nodata"><div class="nodata-ico loading">🌍</div><div>Loading USGS…</div></div></div>
       </div>
-      <div id="map-quakes" class="mapbox" style="height:260px"></div>
+      <div id="map-quakes" style="height:260px;border-radius:8px;overflow:hidden;background:#060d1a;position:relative;border:1px solid rgba(255,255,255,.07)"><canvas id="quake-canvas" style="width:100%;height:100%;display:block"></canvas></div>
     </div>
   </div>
 
@@ -324,7 +324,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
           <div id="fire-regions" style="font-size:11px;color:var(--muted);font-family:var(--mono);line-height:1.9"></div>
         </div>
       </div>
-      <div id="map-fires" class="mapbox" style="height:110px"></div>
+      <div id="map-fires" style="height:110px;border-radius:8px;overflow:hidden;background:#060d1a;position:relative;border:1px solid rgba(255,255,255,.07)"><canvas id="fires-canvas" style="width:100%;height:100%;display:block"></canvas></div>
     </div>
 
     <!-- FAO -->
@@ -571,7 +571,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
       <div class="card" style="padding:10px 12px;border-color:rgba(245,158,11,.1)"><div class="lbl">Asia-Pacific</div><div class="bsm" id="fl-as" style="color:var(--c-trade)">—</div></div>
       <div class="card" style="padding:10px 12px;border-color:rgba(245,158,11,.1)"><div class="lbl">Rest of world</div><div class="bsm" id="fl-oth" style="color:var(--c-trade)">—</div></div>
     </div>
-    <div id="map-flights" class="mapbox" style="height:280px"></div>
+    <div id="map-flights" style="height:280px;border-radius:8px;overflow:hidden;background:#060d1a;position:relative;border:1px solid rgba(255,255,255,.07)"><canvas id="flights-canvas" style="width:100%;height:100%;display:block"></canvas></div>
   </div>
 
   <div class="g2">
@@ -762,7 +762,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
       <div class="lbl">🗺 Conflict map — ACLED geolocated events (30 days)
         <span class="ib">i<div class="ipop"><div class="ipt">ACLED conflict map</div><div class="ipb">Each dot = one geolocated conflict event in the last 30 days. Size proportional to fatalities. 🔴 Battles/Armed violence · 🟠 Explosions/Remote violence · 🟡 Protests/Riots. When ACLED credentials are configured, dots represent real geolocated events.</div><div class="ips">Source: ACLED · latitude/longitude fields · data/conflicts.json</div></div></span>
       </div>
-      <div id="map-conflicts" class="mapbox" style="height:300px;margin-top:8px"></div>
+      <div id="map-conflicts" style="height:300px;margin-top:8px;border-radius:8px;overflow:hidden;background:#060d1a;position:relative;border:1px solid rgba(255,255,255,.07)"><canvas id="conflicts-canvas" style="width:100%;height:100%;display:block"></canvas></div>
       <div style="display:flex;gap:12px;margin-top:8px;font-size:10px;color:var(--muted)">
         <span>🔴 Battles/Violence</span><span>🟠 Explosions</span><span>🟡 Protests</span>
       </div>
@@ -1085,7 +1085,7 @@ function renderTicker(){
 // ═══════════════════════════════
 // DISASTERS
 // ═══════════════════════════════
-let quakeMag=4.5, quakeMap=null, qLayers=[];
+let quakeMag=4.5, qLayers=[];
 
 function filterQuakes(mag,btn){
   // Score does NOT change with magnitude filter — it's always computed from M≥4.5 baseline
@@ -1132,50 +1132,22 @@ async function loadUSGS(computeScore=true){
       return `<div class="fi"><div class="fi-mag" style="color:${c}">M${m.toFixed(1)}</div><div class="fi-dot" style="background:${c}"></div><div class="fi-body">${f.properties.place||'Unknown'}</div><div class="fi-time">${timeAgo(f.properties.time)}</div></div>`;
     }).join('');
 
-    // Map
-    if(!quakeMap){
-      quakeMap=L.map('map-quakes',{zoomControl:false,attributionControl:false,scrollWheelZoom:false,preferCanvas:true}).setView([20,0],1);
-      L.tileLayer('https://cartodb-basemaps-a.global.ssl.fastly.net/dark_matter/{z}/{x}/{y}.png',{maxZoom:18,crossOrigin:true,attribution:'© CartoDB'}).addTo(quakeMap);
-      setTimeout(()=>quakeMap.invalidateSize(),400);
-    }
-    qLayers.forEach(l=>l.remove()); qLayers=[];
-    feats.forEach(f=>{
-      const[lon,lat]=f.geometry.coordinates;
-      const m=f.properties.mag;
-      const c=m>=6?'#ff3232':m>=5?'#ff5a20':'#f59e0b';
-      const mk=L.circleMarker([lat,lon],{radius:Math.max(4,m*2.2),color:'transparent',fillColor:c,fillOpacity:.7,renderer:L.canvas()});
-      mk.bindTooltip(`<b>M${m.toFixed(1)}</b><br>${f.properties.place}<br>${timeAgo(f.properties.time)}`);
-      mk.addTo(quakeMap); qLayers.push(mk);
-    });
+    // Canvas map — no external tiles
+    requestAnimationFrame(() => drawQuakeMap(feats));
   }catch(e){safe('q-total','Err');console.error('USGS:',e);}
 }
 
 // Fires map (static zones — NASA FIRMS requires server-side key)
-let firesMap=null;
+// firesMap replaced by canvas
+let firesMapDone = false;
 function initFiresMap(){
-  if(firesMap) return;
-  const el=document.getElementById('map-fires'); if(!el) return;
-  firesMap=L.map('map-fires',{zoomControl:false,attributionControl:false,scrollWheelZoom:false}).setView([10,20],1);
-  L.tileLayer('https://cartodb-basemaps-a.global.ssl.fastly.net/dark_matter/{z}/{x}/{y}.png',{maxZoom:18,crossOrigin:true,attribution:'© CartoDB'}).addTo(firesMap);
-  setTimeout(()=>firesMap.invalidateSize(),400);
-  const zones=[
-    {ll:[-10,-55],c:'#ff3232',r:14,n:'Amazon basin'},
-    {ll:[0,25],c:'#f59e0b',r:16,n:'Central Africa (Congo basin)'},
-    {ll:[-25,28],c:'#f59e0b',r:12,n:'Southern Africa'},
-    {ll:[60,90],c:'#ff5a20',r:10,n:'Siberia (seasonal)'},
-    {ll:[37,-119],c:'#ff5a20',r:9,n:'California / Western US'},
-    {ll:[0,105],c:'#f59e0b',r:10,n:'SE Asia — peatlands'},
-    {ll:[-30,145],c:'#ff5a20',r:8,n:'Eastern Australia'},
-    {ll:[20,45],c:'#f59e0b',r:8,n:'Arabian Peninsula'},
-  ];
-  zones.forEach(z=>{
-    L.circleMarker(z.ll,{radius:z.r,color:'transparent',fillColor:z.c,fillOpacity:.3}).bindTooltip(z.n).addTo(firesMap);
-    L.circleMarker(z.ll,{radius:4,color:'transparent',fillColor:z.c,fillOpacity:.85}).addTo(firesMap);
-  });
-  // Static fire data
+  if(firesMapDone) return;
+  firesMapDone = true;
   safe('fire-count','14,820'); safe('fire-delta','↑ +20% vs. daily avg');
   safe('fire-yoy','vs. same week last year: +8% (seasonal)');
   document.getElementById('fire-regions').innerHTML='Amazon: 3,240 🔥<br>C. Africa: 4,180 🔥<br>Siberia: 1,820 🔥<br>SE Asia: 2,100 🔥<br>Other: 3,480 🔥';
+  // Draw canvas map after layout
+  requestAnimationFrame(() => { requestAnimationFrame(() => drawFiresMap()); });
 }
 
 // FAO — 20 years hardcoded data as baseline, try API
@@ -1580,12 +1552,10 @@ async function loadSolarWind(){
 // ═══════════════════════════════
 // TRADE FLOWS
 // ═══════════════════════════════
-let flightMap=null,flightMarkers=[];
+let flightDots2=[];
 async function initFlightMap(){
-  const el=document.getElementById('map-flights'); if(!el) return;
-  flightMap=L.map('map-flights',{zoomControl:false,attributionControl:true}).setView([30,10],2);
-  L.tileLayer('https://cartodb-basemaps-a.global.ssl.fastly.net/dark_matter/{z}/{x}/{y}.png',{maxZoom:18,crossOrigin:true,attribution:'© CartoDB'}).addTo(flightMap);
-  setTimeout(()=>flightMap.invalidateSize(),400);
+  // Draw canvas world map as background
+  requestAnimationFrame(() => { requestAnimationFrame(() => initFlightsMap()); });
   await refreshFlights();
 }
 async function refreshFlights(){
@@ -1596,22 +1566,16 @@ async function refreshFlights(){
     const states=d.states||[];
     safe('flights-total',states.length.toLocaleString());
     let na=0,eu=0,as=0,oth=0;
-    flightMarkers.forEach(m=>m.remove()); flightMarkers=[];
     states.forEach(s=>{
-      const lon=s[5],lat=s[6],hdg=s[10]||0,vel=s[9]||0;
+      const lon=s[5],lat=s[6];
       if(!lon||!lat) return;
       if(lat>20&&lat<72&&lon>-130&&lon<-60) na++;
       else if(lat>35&&lat<72&&lon>-10&&lon<42) eu++;
       else if(lat>-15&&lat<60&&lon>60&&lon<155) as++;
       else oth++;
-      if(flightMap&&Math.random()<.1){
-        const ico=L.divIcon({html:`<div style="width:7px;height:7px;background:#f59e0b;border-radius:50%;box-shadow:0 0 4px rgba(245,158,11,.6);transform:rotate(${hdg}deg)"></div>`,className:'',iconSize:[7,7],iconAnchor:[3.5,3.5]});
-        const mk=L.marker([lat,lon],{icon:ico});
-        const call=s[1]?.trim()||''; const alt=s[7]?Math.round(s[7]*3.28084/100)*100+'ft':'?';
-        if(call) mk.bindTooltip(`${call} · ${alt} · ${Math.round(vel*1.944)} kts`,{className:'leaflet-tooltip-dark'});
-        mk.addTo(flightMap); flightMarkers.push(mk);
-      }
     });
+    // Draw all flights on canvas map
+    requestAnimationFrame(() => updateFlightDots(states));
     safe('fl-na',na.toLocaleString()); safe('fl-eu',eu.toLocaleString());
     safe('fl-as',as.toLocaleString()); safe('fl-oth',oth.toLocaleString());
     const base=14000; const vs=Math.round((states.length-base)/base*100);
@@ -1836,7 +1800,7 @@ async function loadElectricity(){
 // ═══════════════════════════════
 // CONFLICTS
 // ═══════════════════════════════
-let conflictMap=null, cfData=null, cfView='weekly';
+let cfData=null, cfView='weekly';
 function setCfView(v,btn){
   cfView=v;
   document.querySelectorAll('#p-conflict .hzs .hz').forEach(b=>b.classList.remove('on'));
@@ -1862,11 +1826,7 @@ function renderCfChart(){
 
 async function loadConflicts(){
   // Init map first (always)
-  if(!conflictMap){
-    conflictMap=L.map('map-conflicts',{zoomControl:false,attributionControl:false,scrollWheelZoom:false,preferCanvas:true}).setView([20,20],2);
-    L.tileLayer('https://cartodb-basemaps-a.global.ssl.fastly.net/dark_matter/{z}/{x}/{y}.png',{maxZoom:18,crossOrigin:true,attribution:'© CartoDB'}).addTo(conflictMap);
-    setTimeout(()=>conflictMap.invalidateSize(),500);
-  }
+  // Canvas map — no external tiles needed
   const d=await loadJSON('conflicts.json');
   if(!d||!d.summary_30d){
     // Static zone display with approximate data
@@ -1882,10 +1842,8 @@ async function loadConflicts(){
       {ll:[33.6,73.0],r:8,c:'#f59e0b',n:'Pakistan'},
       {ll:[35.0,38.5],r:8,c:'#f59e0b',n:'Syria'},
     ];
-    zones.forEach(z=>{
-      L.circleMarker(z.ll,{radius:z.r,color:'transparent',fillColor:z.c,fillOpacity:.25,renderer:L.canvas()}).bindTooltip(z.n).addTo(conflictMap);
-      L.circleMarker(z.ll,{radius:5,color:'transparent',fillColor:z.c,fillOpacity:.9,renderer:L.canvas()}).addTo(conflictMap);
-    });
+    const staticForCanvas = zones.map(z=>({lon:z.ll[1],lat:z.ll[0],r:z.r,c:z.c,n:z.n}));
+    requestAnimationFrame(()=>drawConflictsMap(null, staticForCanvas));
     safe('cf-events','~2,400'); safe('cf-fat','~3,200');
     safe('cf-countries','50+'); safe('cf-civilian','~420');
     safe('cf-fat-civ','est. 30-day global · ACLED public sources');
@@ -1914,19 +1872,14 @@ async function loadConflicts(){
   addTick(`💥 ACLED: ${s.total_events} events · ${s.total_fatalities} fatalities · ${s.countries_affected} countries (30d)`);
   // Real geolocated points
   if(d.live_feed?.length){
-    const tc={'Battles':'#ff3232','Explosions/Remote violence':'#ff5a20','Violence against civilians':'#ff3232','Protests':'#f59e0b','Riots':'#f59e0b','Strategic developments':'#6b7fa0'};
-    d.live_feed.slice(0,300).forEach(ev=>{
-      if(!ev.lat||!ev.lon) return;
-      const c=tc[ev.type]||'#888';
-      L.circleMarker([ev.lat,ev.lon],{radius:Math.max(4,Math.min(16,4+(ev.fatalities||0)*.4)),color:'transparent',fillColor:c,fillOpacity:.65,renderer:L.canvas()})
-        .bindTooltip(`<b>${ev.type}</b><br>${ev.country}<br>${ev.date}<br>☠ ${ev.fatalities||0}${ev.actor1?'<br>'+ev.actor1:''}`)
-        .addTo(conflictMap);
-    });
+    requestAnimationFrame(()=>drawConflictsMap(d.live_feed, null));
   } else {
-    [{ll:[15.5,30.5],r:18,c:'#ff3232',n:'Sudan'},{ll:[31.4,34.3],r:16,c:'#ff3232',n:'Gaza'},{ll:[48.8,31.5],r:14,c:'#ff5a20',n:'Ukraine'},{ll:[11,39],r:11,c:'#f59e0b',n:'Ethiopia'},{ll:[13.5,1.5],r:10,c:'#f59e0b',n:'Sahel'}].forEach(z=>{
-      L.circleMarker(z.ll,{radius:z.r,color:'transparent',fillColor:z.c,fillOpacity:.3,renderer:L.canvas()}).bindTooltip(z.n).addTo(conflictMap);
-      L.circleMarker(z.ll,{radius:4,color:'transparent',fillColor:z.c,fillOpacity:.9,renderer:L.canvas()}).addTo(conflictMap);
-    });
+    const fallbackZones=[
+      {lon:30.5,lat:15.5,r:18,c:'#ff3232',n:'Sudan'},{lon:34.3,lat:31.4,r:16,c:'#ff3232',n:'Gaza'},
+      {lon:31.5,lat:48.8,r:14,c:'#ff5a20',n:'Ukraine'},{lon:39,lat:11,r:11,c:'#f59e0b',n:'Ethiopia'},
+      {lon:1.5,lat:13.5,r:10,c:'#f59e0b',n:'Sahel'}
+    ];
+    requestAnimationFrame(()=>drawConflictsMap(null, fallbackZones));
   }
   // Top countries
   const tc=document.getElementById('cf-top-countries');
@@ -2198,6 +2151,301 @@ onTab('trends', ()=>{fetchWiki('en'); fetchArxiv('cs.AI'); loadOpenTable(); load
 renderOvGrid();
 addTick('🌍 Earth Pulse — loading live data streams…');
 addTick('🔥 USGS Quakes · 🛸 ISS orbital · ☀️ NOAA Space Weather · 🌿 CO₂ Mauna Loa · ✈️ OpenSky flights · 📖 Wikimedia · 🔬 arXiv');
+
+// ═══════════════════════════════
+// WORLD MAP ENGINE (canvas-based, no external tiles)
+// Equirectangular projection: lon→x, lat→y
+// ═══════════════════════════════
+
+// Simplified world coastline paths (major landmasses, encoded as normalized 0-1 coordinates)
+// Format: array of polygons, each polygon = array of [lon, lat] points
+const WORLD_LAND = (function(){
+  // Returns draw commands for world map on a canvas
+  // We use a pre-encoded simplified world outline
+  function lonlat(lon, lat, W, H) {
+    return [(lon + 180) / 360 * W, (90 - lat) / 180 * H];
+  }
+  return {lonlat};
+})();
+
+function drawWorldMap(canvas, opts = {}) {
+  const W = canvas.width, H = canvas.height;
+  const ctx = canvas.getContext('2d');
+  const bg = opts.bg || '#060d1a';
+  const landColor = opts.land || '#0d2240';
+  const borderColor = opts.border || '#1a3a60';
+  const gridColor = opts.grid || 'rgba(255,255,255,.04)';
+
+  // Background
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, W, H);
+
+  // Grid lines
+  ctx.strokeStyle = gridColor;
+  ctx.lineWidth = 0.5;
+  // Latitude lines every 30°
+  for (let lat = -60; lat <= 60; lat += 30) {
+    const y = (90 - lat) / 180 * H;
+    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+  }
+  // Longitude lines every 60°
+  for (let lon = -120; lon <= 120; lon += 60) {
+    const x = (lon + 180) / 360 * W;
+    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+  }
+
+  // Draw land using built-in Path2D shapes
+  ctx.fillStyle = landColor;
+  ctx.strokeStyle = borderColor;
+  ctx.lineWidth = 0.5;
+
+  function ll(lon, lat) { return [(lon + 180) / 360 * W, (90 - lat) / 180 * H]; }
+  function poly(pts) {
+    if (!pts.length) return;
+    ctx.beginPath();
+    const [x0,y0] = ll(pts[0][0], pts[0][1]);
+    ctx.moveTo(x0, y0);
+    for (let i = 1; i < pts.length; i++) {
+      const [x,y] = ll(pts[i][0], pts[i][1]);
+      ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+  }
+
+  // ── NORTH AMERICA ──
+  poly([[-168,72],[-140,70],[-95,72],[-85,68],[-65,65],[-52,68],[-55,47],[-65,44],[-70,42],[-75,35],[-80,25],[-88,16],[-77,8],[-85,10],[-90,16],[-95,19],[-105,20],[-110,24],[-117,32],[-120,36],[-124,48],[-130,54],[-138,58],[-140,60],[-145,60],[-150,61],[-160,60],[-165,62],[-168,65],[-168,72]]);
+  // Greenland
+  poly([[-73,83],[-20,84],[-17,77],[-37,65],[-54,69],[-66,76],[-73,83]]);
+  // Alaska
+  poly([[-141,60],[-141,70],[-156,72],[-165,65],[-168,55],[-160,54],[-152,58],[-148,61],[-141,60]]);
+
+  // ── SOUTH AMERICA ──
+  poly([[-80,8],[-65,12],[-62,11],[-50,5],[-35,-5],[-35,-10],[-38,-16],[-40,-22],[-45,-24],[-48,-28],[-52,-34],[-58,-38],[-62,-51],[-65,-55],[-68,-55],[-72,-50],[-75,-42],[-72,-30],[-68,-22],[-70,-18],[-75,-10],[-78,0],[-80,8]]);
+
+  // ── EUROPE ──
+  poly([[0,51],[5,53],[8,57],[10,58],[12,56],[18,56],[24,60],[28,65],[30,68],[24,70],[20,68],[15,68],[10,62],[5,62],[0,58],[-5,55],[-8,52],[-5,48],[0,46],[8,44],[12,44],[15,38],[12,36],[16,36],[20,38],[24,36],[28,38],[30,42],[30,46],[24,48],[20,50],[15,50],[10,50],[5,50],[0,51]]);
+  // Scandinavia
+  poly([[5,57],[8,58],[12,56],[16,56],[18,60],[24,60],[28,65],[30,68],[28,70],[24,70],[20,68],[16,68],[12,62],[8,60],[5,58],[5,57]]);
+  // UK/Ireland
+  poly([[-5,50],[-3,51],[0,51],[2,52],[0,54],[-3,56],[-5,58],[-7,58],[-8,54],[-6,52],[-5,50]]);
+
+  // ── AFRICA ──
+  poly([[-5,35],[0,34],[5,34],[10,37],[12,33],[15,31],[25,32],[32,28],[36,22],[38,18],[42,12],[44,12],[50,12],[44,10],[40,5],[40,-1],[35,-5],[30,-10],[32,-15],[36,-20],[35,-26],[32,-30],[28,-34],[18,-34],[15,-30],[12,-22],[10,-10],[8,2],[5,5],[0,5],[-5,5],[-8,5],[-10,8],[-10,15],[-8,20],[-5,25],[-5,35]]);
+  // Madagascar
+  poly([[48,-13],[50,-16],[50,-22],[44,-25],[44,-18],[46,-13],[48,-13]]);
+
+  // ── ASIA ──
+  // Main Eurasia
+  poly([[30,42],[35,38],[38,37],[42,37],[50,40],[55,42],[60,44],[65,38],[70,38],[75,36],[80,30],[88,28],[95,28],[100,22],[105,20],[108,18],[110,20],[115,22],[120,25],[122,30],[125,35],[130,35],[132,43],[135,46],[135,52],[140,52],[140,46],[138,40],[132,35],[128,36],[125,38],[120,38],[115,35],[110,34],[105,35],[100,38],[95,42],[90,42],[85,45],[80,50],[70,50],[65,52],[60,52],[55,58],[55,65],[60,70],[68,74],[75,72],[82,74],[90,76],[100,72],[110,72],[120,72],[130,72],[138,68],[140,60],[140,52],[138,46],[132,43],[130,35],[128,35],[125,35],[120,30],[115,22],[110,20],[108,18],[105,15],[102,10],[100,4],[102,1],[104,1],[106,5],[108,10],[110,14],[112,20],[115,22],[118,24],[120,30],[122,32],[125,34],[126,38],[130,40],[132,44],[136,46],[140,52],[142,55],[145,46],[142,45],[140,42],[138,38],[136,34],[132,32],[128,32],[122,30],[118,24],[115,22],[108,10],[106,5],[103,1],[100,2],[96,3],[92,8],[88,14],[82,15],[78,12],[75,15],[70,22],[65,22],[60,25],[55,28],[52,35],[50,40],[45,42],[40,42],[35,40],[30,42]]);
+  // Japan
+  poly([[130,31],[131,33],[132,34],[134,34],[133,32],[130,31]]);
+  poly([[140,36],[141,40],[143,42],[145,44],[144,42],[141,39],[140,36]]);
+  poly([[142,44],[143,46],[145,48],[145,44],[142,44]]);
+  // Indonesia (simplified)
+  poly([[95,6],[105,6],[108,2],[110,-2],[112,-6],[115,-8],[118,-8],[120,-9],[125,-8],[128,-4],[130,-2],[132,-2],[130,-4],[128,-6],[125,-8],[120,-9],[115,-8],[110,-6],[106,-6],[100,-2],[95,3],[95,6]]);
+  // Sri Lanka
+  poly([[80,10],[81,10],[82,8],[80,8],[80,10]]);
+
+  // ── AUSTRALIA + NZ ──
+  poly([[114,-22],[118,-20],[122,-18],[125,-15],[130,-12],[134,-12],[136,-14],[136,-20],[130,-25],[128,-30],[118,-35],[114,-35],[112,-30],[114,-22]]);
+  poly([[150,-22],[153,-28],[153,-34],[148,-38],[145,-38],[142,-38],[140,-36],[140,-30],[143,-26],[145,-22],[148,-19],[150,-22]]);
+  // NZ
+  poly([[172,-34],[174,-36],[174,-41],[172,-43],[170,-43],[168,-44],[170,-46],[172,-43],[174,-41],[174,-36],[172,-34]]);
+
+  // ── RUSSIA (Siberia simplified) ──
+  poly([[30,68],[40,68],[50,68],[60,68],[70,68],[82,70],[90,72],[100,72],[110,72],[120,72],[130,72],[140,68],[140,60],[138,55],[135,52],[130,52],[125,52],[120,52],[115,52],[110,52],[105,52],[100,52],[95,52],[90,52],[85,52],[80,55],[75,60],[70,58],[65,60],[60,60],[55,60],[50,62],[45,64],[40,64],[35,64],[30,65],[28,68],[30,68]]);
+
+  // ── CENTRAL AMERICA + CARIBBEAN ──
+  poly([[-78,8],[-75,10],[-70,12],[-65,18],[-72,20],[-75,20],[-78,18],[-82,10],[-80,8],[-78,8]]);
+  // Cuba
+  poly([[-85,22],[-82,23],[-75,20],[-75,20],[-82,22],[-85,22]]);
+
+  // Equator line
+  ctx.strokeStyle = 'rgba(255,200,100,.08)';
+  ctx.lineWidth = 0.8;
+  ctx.setLineDash([4,4]);
+  ctx.beginPath(); ctx.moveTo(0, H/2); ctx.lineTo(W, H/2); ctx.stroke();
+  ctx.setLineDash([]);
+}
+
+// Project lat/lon to canvas coordinates
+function project(lon, lat, W, H) {
+  return {
+    x: (lon + 180) / 360 * W,
+    y: (90 - lat) / 180 * H
+  };
+}
+
+// Draw a world map canvas and return it (cached)
+const mapCache = {};
+function getWorldMapCanvas(W, H, opts) {
+  const key = `${W}x${H}`;
+  if (!mapCache[key]) {
+    const c = document.createElement('canvas');
+    c.width = W; c.height = H;
+    drawWorldMap(c, opts);
+    mapCache[key] = c;
+  }
+  return mapCache[key];
+}
+
+// ── QUAKE MAP ──
+function initQuakeMap() {
+  const canvas = document.getElementById('quake-canvas');
+  if (!canvas) return;
+  canvas.width = canvas.offsetWidth || 600;
+  canvas.height = canvas.offsetHeight || 260;
+}
+
+function drawQuakeMap(feats) {
+  const canvas = document.getElementById('quake-canvas');
+  if (!canvas) return;
+  const W = canvas.width || canvas.offsetWidth || 600;
+  const H = canvas.height || canvas.offsetHeight || 260;
+  canvas.width = W; canvas.height = H;
+  const ctx = canvas.getContext('2d');
+  // Draw base world map
+  ctx.drawImage(getWorldMapCanvas(W, H, {bg:'#040c18',land:'#0d2240',border:'#1a3560'}), 0, 0);
+  // Draw quakes
+  feats.forEach(f => {
+    const [lon, lat] = f.geometry.coordinates;
+    const m = f.properties.mag;
+    const {x, y} = project(lon, lat, W, H);
+    const r = Math.max(3, m * 2.5);
+    const color = m >= 6 ? '#ff3232' : m >= 5 ? '#ff5a20' : '#f59e0b';
+    // Glow
+    const grd = ctx.createRadialGradient(x, y, 0, x, y, r * 2.5);
+    grd.addColorStop(0, color + 'aa'); grd.addColorStop(1, color + '00');
+    ctx.beginPath(); ctx.arc(x, y, r * 2.5, 0, Math.PI * 2);
+    ctx.fillStyle = grd; ctx.fill();
+    // Dot
+    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2);
+    ctx.fillStyle = color; ctx.globalAlpha = 0.85; ctx.fill();
+    ctx.globalAlpha = 1;
+  });
+}
+
+// ── FIRES MAP ──
+function drawFiresMap() {
+  const canvas = document.getElementById('fires-canvas');
+  if (!canvas) return;
+  canvas.width = canvas.offsetWidth || 600;
+  canvas.height = canvas.offsetHeight || 110;
+  const W = canvas.width, H = canvas.height;
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(getWorldMapCanvas(W, H, {bg:'#080800',land:'#1a1400',border:'#2a2000'}), 0, 0);
+  const zones = [
+    {lon:-55,lat:-10,r:14,label:'Amazon'},{lon:25,lat:0,r:16,label:'C.Africa'},
+    {lon:28,lat:-25,r:12,label:'S.Africa'},{lon:90,lat:60,r:10,label:'Siberia'},
+    {lon:-119,lat:37,r:9,label:'California'},{lon:105,lat:0,r:10,label:'SE Asia'},
+    {lon:145,lat:-30,r:8,label:'Australia'},{lon:45,lat:20,r:8,label:'Arabia'},
+  ];
+  zones.forEach(z => {
+    const {x, y} = project(z.lon, z.lat, W, H);
+    const grd = ctx.createRadialGradient(x, y, 0, x, y, z.r * 3);
+    grd.addColorStop(0, '#ff520088'); grd.addColorStop(1, '#ff520000');
+    ctx.beginPath(); ctx.arc(x, y, z.r * 3, 0, Math.PI * 2);
+    ctx.fillStyle = grd; ctx.fill();
+    ctx.beginPath(); ctx.arc(x, y, z.r * 0.6, 0, Math.PI * 2);
+    ctx.fillStyle = '#ff9933'; ctx.globalAlpha = 0.9; ctx.fill();
+    ctx.globalAlpha = 1;
+  });
+}
+
+// ── FLIGHTS MAP ──
+let flightAnimFrame = null, flightDots = [];
+function initFlightsMap() {
+  const canvas = document.getElementById('flights-canvas');
+  if (!canvas) return;
+  canvas.width = canvas.offsetWidth || 900;
+  canvas.height = canvas.offsetHeight || 280;
+  // Draw base map once
+  const W = canvas.width, H = canvas.height;
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(getWorldMapCanvas(W, H, {bg:'#060c14',land:'#0d2030',border:'#1a3050'}), 0, 0);
+}
+
+function updateFlightDots(states) {
+  const canvas = document.getElementById('flights-canvas');
+  if (!canvas) return;
+  const W = canvas.width, H = canvas.height;
+  const ctx = canvas.getContext('2d');
+  // Redraw base
+  ctx.drawImage(getWorldMapCanvas(W, H, {bg:'#060c14',land:'#0d2030',border:'#1a3050'}), 0, 0);
+  // Draw flight dots
+  const sample = states.filter(() => Math.random() < 0.15);
+  sample.forEach(s => {
+    const lon = s[5], lat = s[6], hdg = (s[10] || 0) * Math.PI / 180;
+    if (!lon || !lat) return;
+    const {x, y} = project(lon, lat, W, H);
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(hdg);
+    ctx.fillStyle = '#f59e0b';
+    ctx.globalAlpha = 0.75;
+    ctx.beginPath();
+    ctx.moveTo(0, -4); ctx.lineTo(2, 2); ctx.lineTo(0, 1); ctx.lineTo(-2, 2);
+    ctx.closePath();
+    ctx.fill();
+    ctx.globalAlpha = 1;
+    ctx.restore();
+  });
+  // Legend
+  ctx.fillStyle = 'rgba(245,158,11,.6)';
+  ctx.font = '10px Space Mono,monospace';
+  ctx.fillText(`${states.length.toLocaleString()} active flights`, 10, H - 10);
+}
+
+// ── CONFLICTS MAP ──
+function drawConflictsMap(events, staticZones) {
+  const canvas = document.getElementById('conflicts-canvas');
+  if (!canvas) return;
+  canvas.width = canvas.offsetWidth || 800;
+  canvas.height = canvas.offsetHeight || 300;
+  const W = canvas.width, H = canvas.height;
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(getWorldMapCanvas(W, H, {bg:'#0f0006',land:'#1a0010',border:'#2a0020'}), 0, 0);
+
+  const typeColors = {
+    'Battles':'#ff3232','Explosions/Remote violence':'#ff5a20',
+    'Violence against civilians':'#ff3232','Protests':'#f59e0b',
+    'Riots':'#f59e0b','Strategic developments':'#6b7fa0'
+  };
+
+  if (events && events.length) {
+    events.slice(0, 500).forEach(ev => {
+      if (!ev.lat || !ev.lon) return;
+      const {x, y} = project(ev.lon, ev.lat, W, H);
+      const c = typeColors[ev.type] || '#888';
+      const r = Math.max(3, Math.min(12, 3 + (ev.fatalities || 0) * 0.4));
+      const grd = ctx.createRadialGradient(x, y, 0, x, y, r * 2);
+      grd.addColorStop(0, c + '99'); grd.addColorStop(1, c + '00');
+      ctx.beginPath(); ctx.arc(x, y, r * 2, 0, Math.PI * 2);
+      ctx.fillStyle = grd; ctx.fill();
+      ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2);
+      ctx.fillStyle = c; ctx.globalAlpha = 0.8; ctx.fill();
+      ctx.globalAlpha = 1;
+    });
+  } else if (staticZones) {
+    staticZones.forEach(z => {
+      const {x, y} = project(z.lon || z.ll[1], z.lat || z.ll[0], W, H);
+      const grd = ctx.createRadialGradient(x, y, 0, x, y, z.r * 3);
+      grd.addColorStop(0, z.c + '55'); grd.addColorStop(1, z.c + '00');
+      ctx.beginPath(); ctx.arc(x, y, z.r * 3, 0, Math.PI * 2);
+      ctx.fillStyle = grd; ctx.fill();
+      ctx.beginPath(); ctx.arc(x, y, 5, 0, Math.PI * 2);
+      ctx.fillStyle = z.c; ctx.globalAlpha = 0.9; ctx.fill();
+      ctx.globalAlpha = 1;
+      // Label
+      ctx.fillStyle = 'rgba(255,255,255,.5)';
+      ctx.font = '9px Space Mono,monospace';
+      ctx.fillText(z.n, x + 7, y + 3);
+    });
+  }
+}
+
 </script>
 </body>
 </html>
