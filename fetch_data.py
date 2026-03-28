@@ -448,6 +448,38 @@ try:
 except Exception as e:
     errors.append(f"OpenSky: {e}"); print(f"  ✗ {e}")
 
+# ── [8b] Active satellites — Celestrak ───────────────────
+print("[8b] Active satellites — Celestrak...")
+try:
+    # Celestrak SATCAT — full satellite catalog, no key, updated daily
+    satcat = fetch_text("https://celestrak.org/pub/satcat.csv")
+    lines = [l for l in satcat.strip().splitlines() if l and not l.startswith("OBJECT_NAME")]
+    # Count active payloads only (PAY = payload, not debris/rocket body)
+    payloads = [l for l in lines if ",PAY," in l]
+    total = len(payloads)
+    starlink = sum(1 for l in payloads if "STARLINK" in l.upper())
+    oneweb   = sum(1 for l in payloads if "ONEWEB" in l.upper())
+    planet   = sum(1 for l in payloads if any(x in l.upper() for x in ["PLANET","DOVE","SKYSAT"]))
+    spire    = sum(1 for l in payloads if "SPIRE" in l.upper() or "LEMUR" in l.upper())
+    geo      = sum(1 for l in payloads if ",GEO," in l or ",IGSO," in l)
+    print(f"  ✓ {total} active payloads · Starlink:{starlink} · OneWeb:{oneweb} · Planet:{planet}")
+    save("satellites.json", {
+        "total": total,
+        "by_operator": {
+            "Starlink (SpaceX)": starlink,
+            "OneWeb": oneweb,
+            "Planet Labs": planet,
+            "Spire Global": spire,
+            "GEO satellites": geo,
+            "Other": total - starlink - oneweb - planet - spire
+        },
+        "source": "Celestrak SATCAT · celestrak.org/pub/satcat.csv",
+        "note": "Active payloads (PAY type). Updated daily by Celestrak.",
+        "updated": NOW
+    })
+except Exception as e:
+    errors.append(f"Satellites: {e}"); print(f"  ✗ {e}")
+
 # ── [9] OpenTable (static) ────────────────────────────────
 print("[9/9] Restaurant bookings...")
 save("opentable.json",{"cities":[{"city":"New York","vs_2019":104},{"city":"London","vs_2019":98},{"city":"Paris","vs_2019":96},{"city":"Toronto","vs_2019":101},{"city":"Sydney","vs_2019":107},{"city":"Berlin","vs_2019":103},{"city":"Tokyo","vs_2019":89},{"city":"Mexico City","vs_2019":112}],"note":"% vs 2019 baseline","score":72,"updated":NOW})
