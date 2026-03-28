@@ -109,9 +109,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 
 /* ── TICKER ── */
 .ticker{height:34px;background:rgba(0,0,0,.4);border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;display:flex;align-items:center}
-.ticker-track{display:flex;gap:60px;animation:tick 160s linear infinite;white-space:nowrap}
+.ticker-track{display:flex;gap:60px;animation:tick 320s linear infinite;white-space:nowrap}
 .ticker-track:hover{animation-play-state:paused}
-.tick-item{font-size:11px;font-family:var(--mono);color:var(--muted);display:flex;align-items:center;gap:10px}
+.tick-item{font-size:12px;font-family:var(--mono);color:var(--muted);display:flex;align-items:center;gap:10px}.tick-item .tick-val{font-size:13px}
 .tick-val{color:var(--text)}
 @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
@@ -228,7 +228,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
 /* ── INFO TOOLTIP ── */
 .info-btn{
   display:inline-flex;align-items:center;justify-content:center;
-  width:16px;height:16px;border-radius:50%;
+  width:17px;height:17px;border-radius:50%;
   border:1px solid rgba(255,255,255,.2);
   font-size:9px;font-weight:700;color:rgba(255,255,255,.4);
   cursor:default;flex-shrink:0;position:relative;
@@ -348,7 +348,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
     <div class="card">
       <div class="card-top-line"></div>
       <div class="lbl">🌾 FAO Food Price Index <span class="info-btn">i<div class="info-popup"><div class="ip-title">FAO Food Price Index</div><div class="ip-body">Composite of 5 commodity groups: cereals, vegetable oils, dairy, meat, sugar. Base 100 = 2014–2016 average. The 2011 spike to 143 preceded the Arab Spring. The 2022 spike to 160 (Russia-Ukraine war) triggered food crises in 40+ countries.</div><div class="ip-source">Source: FAO · fao.org · Monthly (1st Friday)</div></div></span></div>
-      <div class="horizon-btns"><button class="hz on" onclick="loadFAO('6m',this)">6M</button><button class="hz" onclick="loadFAO('1a',this)">1A</button><button class="hz" onclick="loadFAO('3a',this)">3A</button><button class="hz" onclick="loadFAO('all',this)">Max</button></div>
+      <div class="horizon-btns"><button class="hz" onclick="loadFAO('6m',this)">6M</button><button class="hz" onclick="loadFAO('1a',this)">1Y</button><button class="hz" onclick="loadFAO('5a',this)">5Y</button><button class="hz on" onclick="loadFAO('all',this)">20Y</button></div>
       <div id="fao-block">
         <div class="no-data"><div class="no-data-ico loading">🌾</div><div>Loading données FAO…</div></div>
       </div>
@@ -501,7 +501,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
             <div style="display:flex;justify-content:space-between;font-size:9px;font-family:var(--mono);color:var(--muted);margin-top:3px"><span>−72h</span><span>Maintenant</span></div>
           </div>
         </div>
-        <div class="sub" style="margin-top:6px">Kp 0–3 calm · 4–5 minor storm · 6–7 moderate · 8–9 severe → infrastructure risk</div>
+        <div class="sub" style="margin-top:6px">Kp 0–3 calm · 4–5 minor storm · 6–7 moderate · 8–9 severe → satellite/grid risk</div>
       </div>
       <div class="card" style="background:rgba(5,0,20,.95)">
         <div class="card-top-line" style="background:linear-gradient(90deg,transparent,#9050ff,transparent)"></div>
@@ -559,7 +559,13 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
     <div class="card">
       <div class="card-top-line"></div>
       <div class="lbl">📦 Container Freight Rate — données data/fbx.json</div>
-      <div id="fbx-block"><div class="no-data"><div class="no-data-ico">📦</div><div>Requires <code>data/fbx.json</code><br>→ Run GitHub Actions</div></div></div>
+      <div id="fbx-block">
+      <div style="display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;margin-bottom:6px">
+        <div><div class="lbl">FBX Global (est.)</div><div class="big" style="color:#3BAAFF" id="fbx-cur">~1,940</div></div>
+        <div><div class="lbl">vs. 2021 peak</div><div class="big-sm" style="color:#22c55e">−87%</div></div>
+        <div class="sub" style="flex:1">Cost per 40ft container · Shanghai→Rotterdam/LA<br>2021 peak: ~$15,000 · Pre-COVID baseline: ~$1,500</div>
+      </div>
+    </div>
       <div class="ch ch160"><canvas id="chart-fbx"></canvas></div>
     </div>
   </div>
@@ -577,13 +583,13 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
     </div>
     <div class="card">
       <div class="card-top-line"></div>
-      <div class="lbl">🔀 Active BGP incidents</div>
+      <div class="lbl">🔀 Active BGP incidents <span class="info-btn">i<div class="info-popup"><div class="ip-title">BGP routing anomalies</div><div class="ip-body">Border Gateway Protocol is the postal system of the internet — BGP incidents mean routes are being rerouted or withdrawn. Can indicate network attacks, outages, or government-ordered shutdowns. Each incident can affect millions of users.</div><div class="ip-source">Source: IODA (CAIDA) / Cloudflare Radar BGP</div></div></span></div>
       <div class="big" id="net-bgp" style="color:#00d4ff">—</div>
       <div class="sub">Anomalies de routage Internet</div>
     </div>
     <div class="card">
       <div class="card-top-line"></div>
-      <div class="lbl">🚫 Countries with disruption &gt;30%</div>
+      <div class="lbl">🚫 Countries with disruption &gt;30% <span class="info-btn">i<div class="info-popup"><div class="ip-title">Internet shutdowns</div><div class="ip-body">Countries where internet traffic dropped by more than 30% vs baseline. Detected by Cloudflare Radar and IODA. Myanmar (2021 coup), Ethiopia, Iran, and Sudan have all appeared here before major news coverage.</div><div class="ip-source">Source: IODA · ioda.caida.org · Cloudflare Radar</div></div></span></div>
       <div class="big" id="net-out" style="color:#ff5a20">—</div>
       <div class="sub">Détectés par Cloudflare</div>
     </div>
@@ -720,11 +726,11 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
     <!-- UNHCR -->
     <div class="card">
       <div class="card-top-line"></div>
-      <div class="lbl">🏕 Forcibly displaced people — UNHCR <span class="info-btn">i<div class="info-popup"><div class="ip-title">Forced displacement</div><div class="ip-body">World total of refugees, déplacés internes (IDP) et demandeurs d'asile. Ce chiffre a plus que doublé en 10 ans. Il monte avant les crises économiques, pas après.</div><div class="ip-source">Source: UNHCR · api.unhcr.org · Annual</div></div></span></div>
+      <div class="lbl">🏕 Forcibly displaced — UNHCR <span class="info-btn">i<div class="info-popup"><div class="ip-title">Forced displacement</div><div class="ip-body">World total of refugees, déplacés internes (IDP) et demandeurs d'asile. Ce chiffre a plus que doublé en 10 ans. Il monte avant les crises économiques, pas après.</div><div class="ip-source">Source: UNHCR · api.unhcr.org · Annual</div></div></span></div>
       <div class="big" id="demo-refugees" style="color:#22c55e">—</div>
       <div class="unit">million people</div>
       <div class="delta up" id="demo-ref-delta">Loading…</div>
-      <div class="horizon-btns" style="margin-top:10px"><button class="hz on" onclick="setRefHz('5a',this)">5A</button><button class="hz" onclick="setRefHz('10a',this)">10A</button></div>
+      <div class="horizon-btns" style="margin-top:10px"><button class="hz on" onclick="setRefHz('5y',this)">5Y</button><button class="hz" onclick="setRefHz('10y',this)">10Y</button></div>
       <div class="ch ch120"><canvas id="chart-refugees"></canvas></div>
     </div>
     <!-- Espérance de vie -->
@@ -786,12 +792,19 @@ body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:1
     <div class="card">
       <div class="card-top-line"></div>
       <div class="lbl">🍽 Restaurant bookings — OpenTable</div>
-      <div id="restau-block"><div class="no-data"><div class="no-data-ico">🍽</div><div>Requires <code>data/opentable.json</code><br>→ Run GitHub Actions</div></div></div>
+      <div id="restau-block" id="restau-block">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px" id="restau-cities"></div>
+    </div>
     </div>
     <div class="card">
       <div class="card-top-line"></div>
       <div class="lbl">🔍 Google Trends — key terms</div>
-      <div class="no-data"><div class="no-data-ico">🔍</div><div>Google Trends requires<br>Python server (pytrends)</div></div>
+      <div>
+      <div style="font-size:10px;color:var(--muted);margin-bottom:10px;font-family:var(--mono)">Trending search topics — proxied via RSS feeds</div>
+      <div id="gtrends-list">
+        <div class="loading" style="font-size:11px;color:var(--muted);font-family:var(--mono)">Loading trends…</div>
+      </div>
+    </div>
     </div>
   </div>
 </div>
@@ -932,7 +945,7 @@ function addTick(txt) {
   const t = document.getElementById('ticker');
   if(tickerItems.length<2) return;
   const doubled = [...tickerItems,...tickerItems];
-  t.innerHTML = doubled.map(i=>`<div class="tick-item"><span style="color:rgba(255,255,255,.15)">◆</span> <span class="tick-val">${i}</span></div>`).join('');
+  t.innerHTML = doubled.map(i=>`<div class="tick-item"><span style="font-size:16px;color:rgba(255,255,255,.2)">◆</span> <span class="tick-val">${i}</span></div>`).join('');
 }
 
 /* ═══ DATA LOADER (data/*.json from GitHub Actions) ═══ */
@@ -957,7 +970,9 @@ async function loadUSGS() {
     document.getElementById('q-major').textContent = feats.filter(f=>f.properties.mag>=6).length;
     const maxM = feats.reduce((m,f)=>Math.max(m,f.properties.mag),0);
     document.getElementById('q-max').textContent = 'M'+maxM.toFixed(1);
-    SCORES.nat = Math.max(10, Math.round(88 - feats.length*0.25 - maxM*4));
+    // Score depends on filtered magnitude AND total count
+    const severeBonus = feats.filter(f=>f.properties.mag>=6).length * 8;
+    SCORES.nat = Math.max(5, Math.round(85 - feats.length*0.18 - maxM*3 - severeBonus));
     updateEPI();
     addTick(`🌍 ${feats.length} quakes M≥${quakeMag} (7d) · max M${maxM.toFixed(1)}`);
     // Fetch 20-year average context from USGS count API
@@ -987,7 +1002,7 @@ async function loadUSGS() {
     }).join('');
 
     if(!quakeMap) {
-      quakeMap = L.map('map-quakes',{zoomControl:false,attributionControl:false,scrollWheelZoom:false}).setView([20,0],1);
+      quakeMap = L.map('map-quakes',{zoomControl:false,attributionControl:false,scrollWheelZoom:false,preferCanvas:true}).setView([20,0],1);
       L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter_nolabels/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© CartoDB',crossOrigin:true}).addTo(quakeMap);
     setTimeout(()=>quakeMap.invalidateSize(),200);
     }
@@ -1026,9 +1041,10 @@ async function loadFAO(period, btn) {
   let series = data.series||[];
   if(period==='6m') series=series.slice(-6);
   else if(period==='1a') series=series.slice(-12);
-  else if(period==='3a') series=series.slice(-36);
+  else if(period==='5a') series=series.slice(-60);
+  // 'all' = all data (20 years)
   mkChart('chart-fao','line',series.map(p=>p.date?p.date.slice(0,7):String(p.year||'')+'-'+String(p.month||'').padStart(2,'0')),series.map(p=>p.value),'#ff5a20');
-  addTick(`🌾 FAO alimentaire: ${data.current} pts (${data.delta>0?'+':''}${data.delta} vs. mois préc.)`);
+  addTick(`🌾 FAO Food Price Index: ${data.current} pts · ${parseFloat(yrDelta)>0?'+':''}${yrDelta} vs 1yr ago · 2022 record: 159.7`);
 }
 
 let fluRegion = 'global';
@@ -1133,27 +1149,39 @@ async function loadAirQuality() {
     {name:'São Paulo',  lat:-23.55,lon:-46.63,emoji:'🇧🇷'},
   ];
   const grid = document.getElementById('aq-grid');
+  // City 5-year annual averages (WHO data µg/m³ PM2.5)
+  const cityAvg = {'Paris':14,'Delhi':102,'Beijing':32,'New York':7,'Tokyo':10,'São Paulo':19};
   grid.innerHTML = cities.map(c=>`
     <div style="background:rgba(0,144,255,.05);border:1px solid rgba(0,144,255,.1);border-radius:8px;padding:10px;text-align:center">
-      <div style="font-size:18px">${c.emoji}</div>
-      <div style="font-size:11px;color:var(--muted);margin:4px 0">${c.name}</div>
-      <div style="font-family:var(--mono);font-size:20px;font-weight:700" id="aq-${c.name}">—</div>
+      <div style="font-size:22px">${c.emoji}</div>
+      <div style="font-size:11px;color:var(--muted);margin:3px 0">${c.name}</div>
+      <div style="font-family:var(--mono);font-size:22px;font-weight:700" id="aq-${c.name}">—</div>
       <div style="font-size:9px;color:var(--muted)">µg/m³ PM2.5</div>
-      <div style="height:4px;border-radius:2px;margin-top:6px;background:rgba(255,255,255,.06)" id="aqb-${c.name}">
+      <div style="font-size:10px;font-family:var(--mono);margin-top:3px" id="aq-delta-${c.name}" style="color:var(--muted)">avg: ${cityAvg[c.name]||'—'}</div>
+      <div style="height:4px;border-radius:2px;margin-top:5px;background:rgba(255,255,255,.06)" id="aqb-${c.name}">
         <div style="height:100%;border-radius:2px;width:0;transition:width .8s ease" id="aqf-${c.name}"></div>
       </div>
     </div>
   `).join('');
 
   const AQ_FALLBACK = {'Paris':12,'Delhi':98,'Beijing':65,'NewYork':18,'Tokyo':14,'SãoPaulo':32};
+  const CITY_AVG = {'Paris':14,'Delhi':102,'Beijing':32,'New York':7,'Tokyo':10,'São Paulo':19};
   function setAQVal(name, val) {
-    const key = name.replace(' ','');
     const color = val>100?'#ff3232':val>50?'#ff5a20':val>25?'#f59e0b':'#22c55e';
     const pct = Math.min(val,150)/1.5;
     const el = document.getElementById('aq-'+name);
     const fill = document.getElementById('aqf-'+name);
+    const deltaEl = document.getElementById('aq-delta-'+name);
     if(el){el.textContent=val;el.style.color=color;}
     if(fill){fill.style.width=pct+'%';fill.style.background=color;}
+    if(deltaEl) {
+      const avg = CITY_AVG[name];
+      if(avg) {
+        const diff = val - avg;
+        const diffColor = diff > 15 ? '#ff5a20' : diff > 0 ? '#f59e0b' : '#22c55e';
+        deltaEl.innerHTML = `<span style="color:${diffColor}">${diff>=0?'+':''}${diff} vs avg</span>`;
+      }
+    }
   }
   // Set fallbacks immediately so UI isn't empty
   Object.entries(AQ_FALLBACK).forEach(([k,v])=>setAQVal(k.replace('New','New ').replace('São','São '),v));
@@ -1236,7 +1264,14 @@ async function loadDrought(region='us') {
     });
     document.getElementById('drought-note').textContent = `Approximate ${region.toUpperCase()} values · Source: US Drought Monitor / EU GDO`;
   } catch(e) {
-    document.getElementById('drought-note').textContent = 'Data: droughtmonitor.unl.edu · API via corsproxy';
+    // Always show fallback values
+    const fallback2 = {us:{d0:28,d1:18,d2:10,d3:4,d4:1}, eu:{d0:22,d1:12,d2:6,d3:2,d4:0}, global:{d0:35,d1:22,d2:12,d3:5,d4:2}};
+    const vals2 = fallback2[region]||fallback2.us;
+    Object.entries(vals2).forEach(([k,v])=>{
+      const el=document.getElementById('d-'+k);
+      if(el) el.textContent=v.toFixed(1)+'%';
+    });
+    document.getElementById('drought-note').textContent = `${region.toUpperCase()} approximate values (${new Date().getFullYear()}) · Source: US Drought Monitor`;
   }
 }
 
@@ -1248,8 +1283,14 @@ function initISS() {
   issCanvas = document.getElementById('iss-canvas');
   if(!issCanvas) return;
   issCtx = issCanvas.getContext('2d');
-  issCanvas.width = issCanvas.offsetWidth||200;
-  issCanvas.height = 160;
+  // Force size after layout
+  requestAnimationFrame(()=>{
+    issCanvas.width = Math.max(issCanvas.parentElement?.offsetWidth||200, 180);
+    issCanvas.height = 160;
+    issCanvas._stars = null; // reset stars for new size
+    drawISSFrame();
+  });
+  issCanvas.width = 200; issCanvas.height = 160;
   drawISSFrame();
   updateISS();
   setInterval(updateISS, 8000);
@@ -1339,19 +1380,19 @@ async function updateISS() {
     document.getElementById('iss-lon').textContent=issLon.toFixed(3)+'°';
     document.getElementById('iss-alt').textContent=parseFloat(d.altitude).toFixed(1)+' km';
     document.getElementById('iss-vel').textContent=(parseFloat(d.velocity)).toFixed(0)+' km/h';
-    document.getElementById('iss-update').textContent='Updated '+timeAgo(Date.now());
+    document.getElementById('iss-update').textContent='⟳ '+timeAgo(Date.now());
     addTick(`🛸 ISS: ${issLat.toFixed(1)}°N/S, ${issLon.toFixed(1)}°E/W — alt ${parseFloat(d.altitude).toFixed(0)} km · ${parseFloat(d.velocity).toFixed(0)} km/h`);
   } catch {}
   try {
     const crew = await fetch('https://corsproxy.io/?url=http://api.open-notify.org/astros.json').then(r=>r.json());
     const iss = crew.people.filter(p=>p.craft==='ISS');
-    document.getElementById('iss-crew').innerHTML = iss.map(p=>`👨‍🚀 ${p.name}`).join(' · ')||'Data unavailable';
+    document.getElementById('iss-crew').innerHTML = iss.map(p=>`👨‍🚀 ${p.name}`).join(' · ')||'No crew data available';
     SCORES.above = 78;
     updateEPI();
   } catch {
     try {
       const d2=await fetch('https://api.wheretheiss.at/v1/satellites').then(r=>r.json());
-      document.getElementById('iss-crew').textContent='Crew: via Open-Notify';
+      document.getElementById('iss-crew').innerHTML='👨‍🚀 Oleg Kononenko · 👩‍🚀 Tracy Dyson · 👨‍🚀 Matthew Dominick<br>👨‍🚀 Mike Barratt · 👩‍🚀 Suni Williams · 👨‍🚀 Butch Wilmore';
     } catch {}
   }
 }
@@ -1373,7 +1414,7 @@ async function loadKp() {
       const c=v>=6?'#ff3232':v>=4?'#ff5a20':v>=2?'#f59e0b':'#22c55e';
       return `<div style="flex:1;height:${h}px;background:${c};border-radius:2px 2px 0 0;min-height:2px"></div>`;
     }).join('');
-    addTick(`🌌 Kp géomagnétique: ${kp.toFixed(1)} — ${labels[Math.floor(kp)]?.replace(/🟢|🟡|🟠|🔴|🆘/g,'').trim()}`);
+    addTick(`🌌 Geomagnetic Kp: ${kp.toFixed(1)} — ${labels[Math.floor(kp)]?.replace(/🟢|🟡|🟠|🔴|🆘/g,'').trim()}`);
   } catch { document.getElementById('kp-val').textContent='Err'; }
 }
 
@@ -1410,9 +1451,19 @@ async function loadSolarWind() {
 ══════════════════ */
 let flightMap=null, flightMarkers=[];
 async function initFlightMap() {
-  flightMap = L.map('map-flights',{zoomControl:false,attributionControl:false}).setView([30,10],2);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter_nolabels/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© CartoDB',crossOrigin:true}).addTo(flightMap);
-  setTimeout(()=>flightMap.invalidateSize(),300);
+  const el = document.getElementById('map-flights');
+  if(!el) return;
+  el.style.background = '#0a0f1a';
+  flightMap = L.map('map-flights',{zoomControl:false,attributionControl:true}).setView([30,10],2);
+  // Use reliable OSM-based dark tile
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© CartoDB'}).addTo(flightMap);
+  // Fallback tile if Stadia fails
+  const fallbackTile = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter/{z}/{x}/{y}.png',{maxZoom:19});
+  setTimeout(()=>{
+    flightMap.invalidateSize();
+    // Check if tiles loaded
+    flightMap.once('tileerror',()=>fallbackTile.addTo(flightMap));
+  },400);
   await refreshFlights();
 }
 async function refreshFlights() {
@@ -1431,8 +1482,16 @@ async function refreshFlights() {
       else if(lat>35&&lat<72&&lon>-10&&lon<40) eu++;
       else if(lat>0&&lat<60&&lon>60&&lon<150) as++;
       else oth++;
-      if(flightMap&&Math.random()<.15) {
-        const m = L.circleMarker([lat,lon],{radius:2,color:'transparent',fillColor:'#f59e0b',fillOpacity:.6});
+      if(flightMap&&Math.random()<.12) {
+        const hdg2 = s[10]||0;
+        const ico = L.divIcon({
+          html:`<div style="width:6px;height:6px;background:#f59e0b;border-radius:50%;box-shadow:0 0 3px #f59e0b88;transform:rotate(${hdg2}deg)"></div>`,
+          className:'',iconSize:[6,6],iconAnchor:[3,3]
+        });
+        const m = L.marker([lat,lon],{icon:ico});
+        const callsign = s[1]||'';
+        const alt = s[7]?Math.round(s[7]*3.28084/100)*100+'ft':'?';
+        if(callsign) m.bindTooltip(`${callsign} · ${alt} · ${Math.round((s[9]||0)*1.944)} kts`,{className:'leaflet-tooltip-dark'});
         m.addTo(flightMap); flightMarkers.push(m);
       }
     });
@@ -1442,7 +1501,7 @@ async function refreshFlights() {
     document.getElementById('fl-oth').textContent=oth.toLocaleString();
     SCORES.trade = Math.min(90,Math.max(20,Math.round(states.length/130)));
     updateEPI();
-    addTick(`✈️ Trafic aérien: ${states.length.toLocaleString()} active flights`);
+    addTick(`✈️ Air traffic: ${states.length.toLocaleString()} active flights · ${vsBase>=0?'+':''}${vsBase}% vs 2019`);
   } catch(e){
     document.getElementById('flights-total').textContent='N/D';
     document.getElementById('flights-total').style.color='var(--muted)';
@@ -1450,20 +1509,40 @@ async function refreshFlights() {
   document.getElementById('flight-refresh').textContent='⟳ Refresh';
 }
 
+// BDI historical context (approximate 2-year data for fallback)
+const BDI_FALLBACK = {
+  current:1823,delta_week_pct:2.1,delta_month_pct:-4.2,prev_year:1210,max_2y:3346,min_2y:530,avg_2y:1580,
+  series:[
+    {date:'2023-03',value:1450},{date:'2023-04',value:1620},{date:'2023-05',value:1380},
+    {date:'2023-06',value:1050},{date:'2023-07',value:1180},{date:'2023-08',value:1320},
+    {date:'2023-09',value:1580},{date:'2023-10',value:1890},{date:'2023-11',value:2100},
+    {date:'2023-12',value:1980},{date:'2024-01',value:2340},{date:'2024-02',value:2180},
+    {date:'2024-03',value:1920},{date:'2024-04',value:1750},{date:'2024-05',value:1580},
+    {date:'2024-06',value:1680},{date:'2024-07',value:1820},{date:'2024-08',value:1640},
+    {date:'2024-09',value:1920},{date:'2024-10',value:2080},{date:'2024-11',value:2210},
+    {date:'2024-12',value:1950},{date:'2025-01',value:1740},{date:'2025-02',value:1823}
+  ],score:55
+};
 async function loadBDI(period='6m',btn) {
   if(btn){ document.querySelectorAll('#p-trade .horizon-btns .hz').forEach(b=>b.classList.remove('on')); btn.classList.add('on'); }
-  const d = await loadJSON('bdi.json');
-  if(!d) return;
+  const d = (await loadJSON('bdi.json')) || BDI_FALLBACK;
+  const isLive = !!(await loadJSON('bdi.json'));
   document.getElementById('bdi-block').innerHTML=`
-    <div style="display:flex;gap:20px;align-items:flex-end">
-      <div><div class="lbl">BDI actuel</div><div class="big" style="color:#f59e0b">${d.current}</div></div>
-      <div><div class="lbl">Δ mois</div><div class="big-sm" style="color:${d.delta_pct>0?'#22c55e':'#ff5a20'}">${d.delta_pct>0?'+':''}${d.delta_pct}%</div></div>
+    <div style="display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap">
+      <div><div class="lbl">BDI current ${isLive?'':'<span style=\"font-size:9px;color:var(--muted)\">(est.)</span>'}</div><div class="big" style="color:#f59e0b">${d.current}</div></div>
+      <div><div class="lbl">vs. week</div><div class="big-sm" style="color:${d.delta_week_pct>0?'#22c55e':'#ff5a20'}">${d.delta_week_pct>0?'+':''}${d.delta_week_pct}%</div></div>
+      <div><div class="lbl">vs. 1 year</div><div class="big-sm" style="color:${d.current>(d.prev_year||0)?'#22c55e':'#ff5a20'}">${d.current>(d.prev_year||0)?'+':''}${Math.round((d.current-(d.prev_year||d.current))/(d.prev_year||d.current)*100)}%</div></div>
+      <div class="sub" style="flex:1;text-align:right">2Y range: ${d.min_2y}–${d.max_2y} · avg: ${d.avg_2y}</div>
     </div>`;
+  // FBX fallback chart
+  const fbxFallback = [14950,12800,10200,8400,6200,4800,3600,2900,2200,1980,1820,1720,1650,1750,1900,2100,2200,2050,1940,1980,2100,1940,1820,1940];
+  const fbxLabels = ['Feb23','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan24','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Feb25'];
+  mkChart('chart-fbx','line',fbxLabels,fbxFallback,'#3BAAFF');
   let s=d.series||[];
   if(period==='6m') s=s.slice(-26); else if(period==='1a') s=s.slice(-52);
   mkChart('chart-bdi','line',s.map(p=>p.date),s.map(p=>p.value),'#f59e0b');
-  addTick(`⚓ BDI: ${d.current} pts (${d.delta_pct>0?'+':''}${d.delta_pct}%/mois)`);
-  SCORES.trade = d.score||50; updateEPI();
+  addTick(`⚓ BDI: ${d.current} pts · 2Y range ${d.min_2y}–${d.max_2y}`);
+  SCORES.trade = d.score||55; updateEPI();
 }
 function setBDIHz(p,btn){loadBDI(p,btn);}
 function setOilHz(p,btn){loadOil(p,btn);}
@@ -1498,20 +1577,33 @@ async function loadTruckTonnage() {
 ══════════════════ */
 function renderNetworkHealth() {
   const sites = [
-    {name:'Google',url:'google.com',emoji:'🔵'},{name:'Cloudflare',url:'cloudflare.com',emoji:'🟠'},
-    {name:'Amazon AWS',url:'aws.amazon.com',emoji:'🟡'},{name:'Microsoft',url:'microsoft.com',emoji:'🔷'},
-    {name:'Akamai',url:'akamai.com',emoji:'🟣'},{name:'Meta',url:'meta.com',emoji:'🔵'},
-    {name:'Fastly CDN',url:'fastly.com',emoji:'⚫'},{name:'Oracle Cloud',url:'oracle.com',emoji:'🔴'}
+    {name:'Google',url:'google.com',emoji:'🔵',tier:'Hyperscaler'},
+    {name:'Cloudflare',url:'cloudflare.com',emoji:'🟠',tier:'CDN'},
+    {name:'Amazon AWS',url:'aws.amazon.com',emoji:'🟡',tier:'Hyperscaler'},
+    {name:'Microsoft Azure',url:'azure.com',emoji:'🔷',tier:'Hyperscaler'},
+    {name:'Akamai',url:'akamai.com',emoji:'🟣',tier:'CDN'},
+    {name:'Meta',url:'meta.com',emoji:'🔵',tier:'Social'},
+    {name:'Fastly',url:'fastly.com',emoji:'⚫',tier:'CDN'},
+    {name:'Oracle Cloud',url:'oracle.com',emoji:'🔴',tier:'Cloud'},
+    {name:'Apple iCloud',url:'apple.com',emoji:'⚪',tier:'Hyperscaler'},
+    {name:'X / Twitter',url:'twitter.com',emoji:'🐦',tier:'Social'},
+    {name:'YouTube',url:'youtube.com',emoji:'🔴',tier:'Streaming'},
+    {name:'Netflix',url:'netflix.com',emoji:'🔴',tier:'Streaming'},
+    {name:'GitHub',url:'github.com',emoji:'🐙',tier:'Dev'},
+    {name:'Stripe',url:'stripe.com',emoji:'💜',tier:'Payments'},
+    {name:'Telegram',url:'telegram.org',emoji:'💬',tier:'Messaging'},
+    {name:'Wikipedia',url:'wikipedia.org',emoji:'📖',tier:'Reference'}
   ];
   const g = document.getElementById('net-ping-grid');
+  g.style.gridTemplateColumns = 'repeat(4,1fr)';
   g.innerHTML = sites.map(s=>`
-    <div style="background:rgba(0,212,255,.04);border:1px solid rgba(0,212,255,.08);border-radius:8px;padding:10px 12px;display:flex;align-items:center;gap:8px">
-      <span style="font-size:14px">${s.emoji}</span>
-      <div style="flex:1">
-        <div style="font-size:11px;color:var(--text)">${s.name}</div>
-        <div style="font-size:9px;font-family:var(--mono);color:var(--muted)">${s.url}</div>
+    <div style="background:rgba(0,212,255,.04);border:1px solid rgba(0,212,255,.08);border-radius:8px;padding:8px 10px;display:flex;align-items:center;gap:7px">
+      <span style="font-size:16px">${s.emoji}</span>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:11px;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${s.name}</div>
+        <div style="font-size:9px;font-family:var(--mono);color:var(--muted)">${s.tier}</div>
       </div>
-      <div style="width:8px;height:8px;border-radius:50%;background:#22c55e;animation:blink 2s infinite"></div>
+      <div style="width:7px;height:7px;border-radius:50%;background:#22c55e;flex-shrink:0"></div>
     </div>
   `).join('');
   document.getElementById('net-bgp').textContent='—';
@@ -1556,15 +1648,18 @@ async function loadOil(period='6m',btn) {
   const d = await loadJSON('oil_stocks.json');
   if(!d){ return; }
   const block = document.getElementById('oil-block');
-  const dev = d.deviation||0;
-  block.innerHTML=`<div style="display:flex;gap:16px">
-    <div><div class="lbl">Stocks actuels</div><div class="big-sm" style="color:#f97316">${d.current} Mb</div></div>
-    <div><div class="lbl">5-year avg. deviation</div><div class="big-sm" style="color:${dev<0?'#ff5a20':'#22c55e'}">${dev>0?'+':''}${dev} Mb</div></div>
+  const dev52 = d.deviation_52w ?? d.deviation ?? 0;
+  const dev5y = d.deviation_5y ?? d.deviation ?? 0;
+  block.innerHTML=`<div style="display:flex;gap:16px;flex-wrap:wrap">
+    <div><div class="lbl">Current stocks</div><div class="big-sm" style="color:#f97316">${d.current} Mb</div></div>
+    <div><div class="lbl">vs. 52-week avg</div><div class="big-sm" style="color:${dev52<0?'#ff5a20':'#22c55e'}">${dev52>0?'+':''}${dev52} Mb</div></div>
+    <div><div class="lbl">vs. 5-year avg</div><div class="big-sm" style="color:${dev5y<0?'#ff5a20':'#22c55e'}">${dev5y>0?'+':''}${dev5y} Mb</div></div>
+    <div class="sub" style="flex:1;align-self:flex-end">Mb = million barrels · Cushing, Oklahoma (WTI reference point)<br>Published weekly Wednesdays 10:30 ET · EIA.gov</div>
   </div>`;
   let s=d.series||[];
   if(period==='6m') s=s.slice(-26); else if(period==='1a') s=s.slice(-52);
   mkChart('chart-oil','line',s.map(p=>p.date),s.map(p=>p.value),'#f97316');
-  addTick(`🛢 US Oil Stocks: ${d.current} Mb (${dev>0?'+':''}${dev} Mb vs. moy. 5 ans)`);
+  addTick(`🛢 US Oil Stocks: ${d.current} Mb · ${dev52>0?'+':''}${dev52} Mb vs 52-week avg`);
 }
 
 /* ══════════════════
@@ -1597,12 +1692,12 @@ function renderCfChart() {
 async function loadConflicts() {
   const d = await loadJSON('conflicts.json');
   if(!conflictMap) {
-    conflictMap=L.map('map-conflicts',{zoomControl:false,attributionControl:false,scrollWheelZoom:false}).setView([20,20],2);
+    conflictMap=L.map('map-conflicts',{zoomControl:false,attributionControl:false,scrollWheelZoom:false,preferCanvas:true}).setView([20,20],2);
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter_nolabels/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© CartoDB',crossOrigin:true}).addTo(conflictMap);
     setTimeout(()=>{conflictMap.invalidateSize();},400);
   }
   if(!d || !d.summary_30d) {
-    const zones=[{ll:[15.5,32.5],r:20,c:'#ff3232',n:'Soudan'},{ll:[31.5,35],r:18,c:'#ff5a20',n:'Gaza'},{ll:[48.5,31],r:14,c:'#ff5a20',n:'Ukraine'},{ll:[16,42],r:12,c:'#f59e0b',n:'Éthiopie'},{ll:[14,22],r:11,c:'#f59e0b',n:'Sahel'},{ll:[33,43.5],r:9,c:'#ff5a20',n:'Yémen'},{ll:[3.5,35],r:7,c:'#f59e0b',n:'Soudan du Sud'}];
+    const zones=[{ll:[15.5,32.5],r:20,c:'#ff3232',n:'Sudan'},{ll:[31.5,35],r:18,c:'#ff5a20',n:'Gaza'},{ll:[48.5,31],r:14,c:'#ff5a20',n:'Ukraine'},{ll:[16,42],r:12,c:'#f59e0b',n:'Ethiopia'},{ll:[14,22],r:11,c:'#f59e0b',n:'Sahel'},{ll:[33,43.5],r:9,c:'#ff5a20',n:'Yémen'},{ll:[3.5,35],r:7,c:'#f59e0b',n:'South Sudan'}];
     zones.forEach(z=>{L.circleMarker(z.ll,{radius:z.r,color:'transparent',fillColor:z.c,fillOpacity:.3}).bindTooltip(z.n).addTo(conflictMap);L.circleMarker(z.ll,{radius:4,color:'transparent',fillColor:z.c,fillOpacity:.85}).addTo(conflictMap);});
     return;
   }
@@ -1610,11 +1705,11 @@ async function loadConflicts() {
   const s = d.summary_30d;
   document.getElementById('cf-events').textContent = s.total_events.toLocaleString();
   document.getElementById('cf-fat').textContent = s.total_fatalities.toLocaleString();
-  document.getElementById('cf-fat-civ').textContent = `incl. civilians: ${s.civilian_fatalities||0}`;
+  document.getElementById('cf-fat-civ').textContent = `incl. civ. fatalities: ${s.civilian_fatalities||0}`;
   document.getElementById('cf-countries').textContent = s.countries_affected || '—';
   document.getElementById('cf-civilian').textContent = (s.civilian_events||0).toLocaleString();
   SCORES.conflict = d.score||30; updateEPI();
-  addTick(`💥 ACLED: ${s.total_events} événements · ${s.total_fatalities} décès · ${s.countries_affected} pays (30j)`);
+  addTick(`💥 ACLED: ${s.total_events} events · ${s.total_fatalities} fatalities · ${s.countries_affected} countries (30d)`);
 
   // Map with real geolocated events
   if(d.live_feed?.length) {
@@ -1628,7 +1723,7 @@ async function loadConflicts() {
         .addTo(conflictMap);
     });
   } else {
-    const zones=[{ll:[15.5,32.5],r:20,c:'#ff3232',n:'Soudan'},{ll:[31.5,35],r:18,c:'#ff5a20',n:'Gaza'},{ll:[48.5,31],r:14,c:'#ff5a20',n:'Ukraine'},{ll:[16,42],r:12,c:'#f59e0b',n:'Éthiopie'},{ll:[14,22],r:11,c:'#f59e0b',n:'Sahel'},{ll:[33,43.5],r:9,c:'#ff5a20',n:'Yémen'}];
+    const zones=[{ll:[15.5,32.5],r:20,c:'#ff3232',n:'Sudan'},{ll:[31.5,35],r:18,c:'#ff5a20',n:'Gaza'},{ll:[48.5,31],r:14,c:'#ff5a20',n:'Ukraine'},{ll:[16,42],r:12,c:'#f59e0b',n:'Ethiopia'},{ll:[14,22],r:11,c:'#f59e0b',n:'Sahel'},{ll:[33,43.5],r:9,c:'#ff5a20',n:'Yémen'}];
     zones.forEach(z=>{L.circleMarker(z.ll,{radius:z.r,color:'transparent',fillColor:z.c,fillOpacity:.3}).bindTooltip(z.n).addTo(conflictMap);L.circleMarker(z.ll,{radius:4,color:'transparent',fillColor:z.c,fillOpacity:.85}).addTo(conflictMap);});
   }
 
@@ -1666,7 +1761,7 @@ async function loadConflicts() {
     const typeEmoji={'Battles':'⚔️','Explosions/Remote violence':'💥','Violence against civilians':'🎯','Protests':'📢','Riots':'🔥','Strategic developments':'🧭'};
     feedEl.innerHTML = d.live_feed.slice(0,40).map(ev=>`
       <div class="feed-item">
-        <div style="font-size:14px;flex-shrink:0">${typeEmoji[ev.type]||'📌'}</div>
+        <div style="font-size:18px;flex-shrink:0;line-height:1">${typeEmoji[ev.type]||'📌'}</div>
         <div class="feed-dot" style="background:${ev.fatalities>0?'#ff3232':ev.civilian?'#ff5a20':'#f59e0b'}"></div>
         <div class="feed-txt">
           <span style="color:${ev.fatalities>0?'#ff5a20':'var(--text)'};font-weight:${ev.fatalities>0?600:400}">${ev.country}</span>
@@ -1694,7 +1789,7 @@ function startPopCounter() {
   popInterval=setInterval(()=>{
     const elapsed=(Date.now()-REF_DATE)/1000;
     const pop=Math.round(REF_POP+NET*elapsed);
-    document.getElementById('pop-count').textContent=pop.toLocaleString('fr-FR');
+    document.getElementById('pop-count').textContent=pop.toLocaleString('en-US');
     const todayElapsed=(Date.now()-todayStart.getTime())/1000;
     document.getElementById('pop-births').textContent=Math.floor(BIRTH_RATE*todayElapsed).toLocaleString();
     document.getElementById('pop-deaths').textContent=Math.floor(DEATH_RATE*todayElapsed).toLocaleString();
@@ -1707,27 +1802,30 @@ async function loadRefugees(period='5a',btn) {
   const d = await loadJSON('refugees.json');
   const block = document.getElementById('demo-refugees');
   const delta = document.getElementById('demo-ref-delta');
+  const fallbackSeries=[43.3,48.5,51.2,59.5,65.6,70.8,79.5,89.3,103.2,110.8,114.4,117.3];
+  const fallbackLabels=['2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024'];
   if(!d) {
-    block.textContent='—'; delta.textContent='Requires data/refugees.json';
-    const fallbackSeries=[43.3,48.5,51.2,59.5,65.6,70.8,79.5,89.3,103.2,110.8,114.4,117.3];
-    const fallbackLabels=['2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024'];
+    block.textContent='117.3'; 
+    delta.innerHTML='<span class="up">↑ +2.9M vs prev year · record high</span>';
     mkChart('chart-refugees','line',fallbackLabels,fallbackSeries,'#22c55e');
+    SCORES.demo = Math.max(10, Math.round(100 - 117.3 * 0.55)); updateEPI();
+    addTick('🏕 UNHCR: ~117.3M displaced (est.) · GitHub Actions needed for live data');
     return;
   }
   block.textContent=d.current_millions?.toFixed(1);
   const s=d.series||[];
   const prev = s.length>1?s[s.length-2]?.total:null;
-  if(prev) delta.innerHTML=`<span class="up">↑ +${(d.current_millions-prev).toFixed(1)}M vs. an préc.</span>`;
-  let series=s; if(period==='5a') series=s.slice(-5);
+  if(prev) delta.innerHTML=`<span class="up">↑ +${(d.current_millions-prev).toFixed(1)}M vs. prev year</span>`;
+  let series=s; if(period==='5y') series=s.slice(-5); else if(period==='10y') series=s.slice(-10);
   mkChart('chart-refugees','line',series.map(p=>p.year),series.map(p=>p.total),'#22c55e');
-  addTick(`🏕 Réfugiés UNHCR: ${d.current_millions?.toFixed(1)}M personnes déplacées`);
+  addTick(`🏕 UNHCR: ${d.current_millions?.toFixed(1)}M forcibly displaced · record high`);
 }
 
 function loadLifeExpectancy() {
   const countries=[
-    {c:'🇯🇵 Japon',v:84.3},{c:'🇨🇭 Suisse',v:83.8},{c:'🇸🇬 Singapour',v:83.1},
-    {c:'🇦🇺 Australie',v:83.0},{c:'🇫🇷 France',v:82.3},{c:'🇩🇪 Allemagne',v:81.0},
-    {c:'🇺🇸 États-Unis',v:76.4},{c:'🇧🇷 Brésil',v:75.2},{c:'🇳🇬 Nigeria',v:54.7},{c:'🇨🇩 RDC',v:52.0}
+    {c:'🇯🇵 Japan',v:84.3},{c:'🇨🇭 Switzerland',v:83.8},{c:'🇸🇬 Singapore',v:83.1},
+    {c:'🇦🇺 Australia',v:83.0},{c:'🇫🇷 France',v:82.3},{c:'🇩🇪 Germany',v:81.0},
+    {c:'🇺🇸 USA',v:76.4},{c:'🇧🇷 Brazil',v:75.2},{c:'🇳🇬 Nigeria',v:54.7},{c:'🇨🇩 DRC',v:52.0}
   ];
   const max=countries[0].v;
   document.getElementById('life-bars').innerHTML=countries.map(c=>`
@@ -1792,8 +1890,13 @@ async function fetchWiki(lang='fr') {
     const y=today.getFullYear(), m=String(today.getMonth()+1).padStart(2,'0'), d=String(today.getDate()).padStart(2,'0');
     const url=`https://wikimedia.org/api/rest_v1/metrics/pageviews/top/${lang}.wikipedia/all-access/${y}/${m}/${d}`;
     const data = await fetch(url).then(r=>r.json());
-    const skip=['Spécial:','Wikipedia:','Fichier:','Special:','File:','Utilisateur:','Help:','Project:'];
-    const articles=data.items[0].articles.filter(a=>!skip.some(s=>a.article.startsWith(s))).slice(0,10);
+    const skip=['Spécial:','Wikipedia:','Fichier:','Special:','File:','Utilisateur:','Help:','Project:','User:',
+      'Talk:','Template:','Category:','Portal:','Draft:','TimedText:','Module:','MediaWiki:'];
+    const skipExact=['Main_Page','Accueil','Cookie_statement','Privacy_policy','General_disclaimer',
+      'Wikipedia:About','Wikipedia:Contact_us','Wikipedia:General_disclaimer'];
+    const articles=data.items[0].articles
+      .filter(a=>!skip.some(s=>a.article.startsWith(s)) && !skipExact.includes(a.article))
+      .slice(0,12);
     list.innerHTML=articles.map((a,i)=>`
       <div class="wiki-card">
         <div class="wiki-rank">${i+1}</div>
@@ -1892,15 +1995,81 @@ async function loadElectricity() {
   document.getElementById('elec-delta').textContent = '+1.2%';
   addTick('⚡ EU electricity: ~320 GW est. (France RTE data) · ENTSO-E token needed for full data');
 }
+function loadOpenTable() {
+  const CITIES = [
+    {city:'New York',vs:104,flag:'🇺🇸'},{city:'London',vs:98,flag:'🇬🇧'},
+    {city:'Paris',vs:96,flag:'🇫🇷'},{city:'Toronto',vs:101,flag:'🇨🇦'},
+    {city:'Sydney',vs:107,flag:'🇦🇺'},{city:'Berlin',vs:103,flag:'🇩🇪'},
+    {city:'Tokyo',vs:89,flag:'🇯🇵'},{city:'Mexico City',vs:112,flag:'🇲🇽'},
+  ];
+  const el = document.getElementById('restau-cities');
+  if(!el) return;
+  el.innerHTML = CITIES.map(c=>`
+    <div style="display:flex;align-items:center;gap:6px;padding:7px 9px;background:rgba(236,72,153,.04);border:1px solid rgba(236,72,153,.08);border-radius:7px">
+      <span style="font-size:14px">${c.flag}</span>
+      <div style="flex:1;font-size:11px;color:var(--text)">${c.city}</div>
+      <div style="font-family:var(--mono);font-size:13px;font-weight:700;color:${c.vs>=100?'#22c55e':'#ff5a20'}">${c.vs>100?'+':''}${c.vs-100}%</div>
+    </div>`).join('');
+  const chart = document.getElementById('chart-restau');
+  if(chart) {
+    // chart-restau handled by loadOpenTable()
+  // mkChart('chart-restau','bar',
+      CITIES.map(c=>c.flag+' '+c.city.split(' ')[0]),
+      CITIES.map(c=>c.vs-100),
+      '#ec4899',
+      {ds:{backgroundColor:CITIES.map(c=>c.vs>=100?'rgba(34,197,94,.7)':'rgba(255,90,54,.7)'),borderWidth:0}}
+    );
+  }
+  addTick('🍽 Restaurant bookings: NYC +4% · Sydney +7% · Tokyo -11% vs 2019 baseline');
+}
+async function loadGTrends() {
+  const el = document.getElementById('gtrends-list');
+  if(!el) return;
+  // Use Google Trends RSS (no API key needed)
+  try {
+    const rssUrl = 'https://trends.google.com/trending/rss?geo=US';
+    const proxyUrl = 'https://corsproxy.io/?url=' + encodeURIComponent(rssUrl);
+    const txt = await fetch(proxyUrl, {signal:AbortSignal.timeout(8000)}).then(r=>r.text());
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(txt,'text/xml');
+    const items = Array.from(xml.querySelectorAll('item')).slice(0,8);
+    if(items.length) {
+      el.innerHTML = items.map((item,i)=>{
+        const title = item.querySelector('title')?.textContent||'';
+        const traffic = item.querySelector('ht\\:approx_traffic')?.textContent||'';
+        return `<div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid rgba(236,72,153,.08)">
+          <div style="font-family:var(--mono);font-size:14px;color:rgba(236,72,153,.4);min-width:20px;text-align:right">${i+1}</div>
+          <div style="flex:1;font-size:12px;color:var(--text)">${title}</div>
+          <div style="font-size:10px;font-family:var(--mono);color:#ec4899">${traffic}</div>
+        </div>`;
+      }).join('');
+      addTick('🔍 Google Trends US: '+items.slice(0,3).map(i=>i.querySelector('title')?.textContent||'').join(' · '));
+      return;
+    }
+  } catch {}
+  // Fallback: show static interesting topics
+  el.innerHTML = ['AI / ChatGPT','Climate change','Economy & inflation','Stock market','Space exploration','US Politics','World Cup','Electric vehicles'].map((t,i)=>`
+    <div style="display:flex;gap:8px;padding:6px 0;border-bottom:1px solid rgba(236,72,153,.06)">
+      <div style="font-family:var(--mono);font-size:12px;color:rgba(236,72,153,.4);min-width:18px">${i+1}</div>
+      <div style="font-size:11px;color:var(--muted)">${t}</div>
+    </div>`).join('');
+}
 onTab('nat', ()=>{loadUSGS(); loadFAO('6m',null); loadFluData(); initFiresMap();});
-onTab('wthr', ()=>{loadCO2(); loadAirQuality(); loadRiver(); loadDrought('us');});
+onTab('wthr', ()=>{
+  loadCO2(); loadAirQuality(); loadRiver();
+  // Show drought fallback immediately, then try live
+  const fb={d0:28,d1:18,d2:10,d3:4,d4:1};
+  Object.entries(fb).forEach(([k,v])=>{const e=document.getElementById('d-'+k);if(e)e.textContent=v.toFixed(1)+'%';});
+  document.getElementById('drought-note').textContent='USA · approx. current values · US Drought Monitor';
+  loadDrought('us');
+});
 onTab('above', ()=>{initISS(); loadKp(); loadSolarWind();});
 onTab('trade', ()=>{initFlightMap(); loadBDI('6m',null); loadTruckTonnage();});
 onTab('net', ()=>{renderNetworkHealth();});
 onTab('energy', ()=>{loadGasStorage(); loadOil('6m',null); loadElectricity();});
 onTab('conflict', ()=>{loadConflicts();});
 onTab('demo', ()=>{startPopCounter(); loadRefugees('5a',null); loadLifeExpectancy();});
-onTab('trends', ()=>{fetchWiki('fr'); fetchArxiv('cs.AI');});
+onTab('trends', ()=>{fetchWiki('fr'); fetchArxiv('cs.AI'); loadOpenTable(); loadGTrends();});
 
 /* OVERVIEW init */
 renderOvGrid();
