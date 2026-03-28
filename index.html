@@ -308,16 +308,16 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
     </div>
   </div>
 
-  <div class="g2">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;align-items:start">
     <!-- FIRES -->
-    <div class="card mb" style="border-color:rgba(255,90,32,.14)">
+    <div class="card" style="border-color:rgba(255,90,32,.14)">
       <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-nat),transparent)"></div>
       <div class="lbl">🔥 Active fires — NASA FIRMS (VIIRS)
         <span class="ib">i<div class="ipop"><div class="ipt">NASA FIRMS — Fire Information</div><div class="ipb">Satellite-detected active fire spots globally, updated every 12 hours via the VIIRS instrument on Suomi NPP. Covers wildfires, agricultural burns, and industrial fires. 1-year comparison shows seasonal vs. anomalous activity.</div><div class="ips">Source: NASA FIRMS · firms.modaps.eosdis.nasa.gov · 12h refresh</div></div></span>
       </div>
       <div style="display:flex;gap:16px;align-items:flex-end;margin-bottom:8px">
         <div>
-          <div class="big" id="fire-count" style="color:var(--c-nat)">14,820</div>
+          <div class="big" id="fire-count" style="color:var(--c-nat)">—</div>
           <div class="unit">active fire spots</div>
           <div class="delta" id="fire-delta"></div>
           <div class="delta" id="fire-yoy" style="color:var(--muted);font-size:10px;margin-top:2px"></div>
@@ -333,8 +333,9 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
 </div>
     </div>
 
+    <div style="display:flex;flex-direction:column;gap:12px">
     <!-- FAO -->
-    <div class="card mb" style="border-color:rgba(255,90,32,.14)">
+    <div class="card" style="border-color:rgba(255,90,32,.14)">
       <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-nat),transparent)"></div>
       <div class="lbl">🌾 FAO Food Price Index
         <span class="ib">i<div class="ipop"><div class="ipt">FAO Food Price Index</div><div class="ipb">Composite of 5 commodity groups: cereals, vegetable oils, dairy, meat, sugar. Base 100 = 2014–2016 average. The 2008 spike to 213 triggered riots in 30+ countries. The 2022 spike to 160 followed the Russia-Ukraine war. Directly correlated with political instability.</div><div class="ips">Source: FAO · fao.org · Monthly (1st Friday)</div></div></span>
@@ -351,17 +352,27 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
     </div>
 
     
-    <div class="card mb" style="grid-column:1/-1;border-color:rgba(255,90,32,.14)">
+    <div class="card" style="border-color:rgba(255,90,32,.14)">
       <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-nat),transparent)"></div>
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:10px">
-        <div><div class="lbl">N. Hemisphere</div><div class="bsm" id="flu-north" style="color:var(--c-nat)">42K</div><div class="unit">cases/week</div></div>
-        <div><div class="lbl">S. Hemisphere</div><div class="bsm" id="flu-south" style="color:#f59e0b">8.2K</div><div class="unit">cases/week</div></div>
-        <div><div class="lbl">Influenza A</div><div class="bsm" id="flu-a" style="color:var(--c-nat)">35K</div><div class="unit">subtypes</div></div>
-        <div><div class="lbl">Influenza B</div><div class="bsm" id="flu-b" style="color:#f59e0b">9.5K</div><div class="unit">cases</div></div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap">
+        <div class="lbl" style="margin:0">🦠 Flu — WHO FluNet <span class="ib">i<div class="ipop"><div class="ipt">WHO FluNet</div><div class="ipb">Weekly influenza surveillance from 130 countries. Source: WHO FluNet API · who.int/tools/flunet · Weekly updated. Data loaded from data/flu.json via GitHub Actions, or WHO REST API directly.</div><div class="ips">Source: WHO · services.who.int/flumart · Weekly</div></div></span></div>
+        <div style="margin-left:auto;display:flex;gap:4px">
+          <button class="hz on" onclick="setFluRegion('global',this)">Global</button>
+          <button class="hz" onclick="setFluRegion('north',this)">N. Hem.</button>
+          <button class="hz" onclick="setFluRegion('south',this)">S. Hem.</button>
+          <button class="hz" onclick="setFluRegion('tropics',this)">Tropics</button>
+        </div>
       </div>
-      <div id="flu-note" style="font-size:10px;color:var(--muted);font-family:var(--mono);margin-bottom:6px">Global — all 130 WHO member countries · A/H3N2 dominant strain this season</div>
-      <div class="ch h100"><canvas id="chart-flu"></canvas></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+        <div><div class="lbl">N. Hemisphere</div><div class="bsm" id="flu-north" style="color:var(--c-nat)">—</div><div class="unit">cases/week</div></div>
+        <div><div class="lbl">Influenza A</div><div class="bsm" id="flu-a" style="color:var(--c-nat)">—</div><div class="unit">cases</div></div>
+        <div><div class="lbl">S. Hemisphere</div><div class="bsm" id="flu-south" style="color:#f59e0b">—</div><div class="unit">cases/week</div></div>
+        <div><div class="lbl">Influenza B</div><div class="bsm" id="flu-b" style="color:#f59e0b">—</div><div class="unit">cases</div></div>
+      </div>
+      <div id="flu-note" style="font-size:10px;color:var(--muted);font-family:var(--mono);margin-bottom:6px"></div>
+      <div class="ch h80"><canvas id="chart-flu"></canvas></div>
     </div>
+  </div>
   </div>
 </div>
 
@@ -1141,14 +1152,34 @@ async function loadUSGS(computeScore=true){
 // Fires map (static zones — NASA FIRMS requires server-side key)
 // firesMap replaced by canvas
 let firesMapDone = false;
-function initFiresMap(){
+async function initFiresMap(){
   if(firesMapDone) return;
   firesMapDone = true;
-  safe('fire-count','14,820'); safe('fire-delta','↑ +20% vs. daily avg');
-  safe('fire-yoy','vs. same week last year: +8% (seasonal)');
-  document.getElementById('fire-regions').innerHTML='Amazon: 3,240 🔥<br>C. Africa: 4,180 🔥<br>Siberia: 1,820 🔥<br>SE Asia: 2,100 🔥<br>Other: 3,480 🔥';
-  // Draw canvas map after layout
-  setTimeout(() => drawFiresMap(), 50);
+  // Try to load real fire data from data/firms.json (via GitHub Actions + NASA_FIRMS_KEY)
+  const d = await loadJSON('firms.json');
+  if(d && d.total) {
+    safe('fire-count', d.total.toLocaleString());
+    safe('fire-delta', d.delta_day ? (d.delta_day>0?'↑ +':'↓ ')+Math.abs(d.delta_day)+'% vs. daily avg' : '');
+    safe('fire-yoy', d.delta_year ? 'vs. same week last year: '+(d.delta_year>0?'+':'')+d.delta_year+'%' : '');
+    if(d.by_region) {
+      document.getElementById('fire-regions').innerHTML =
+        Object.entries(d.by_region).map(([k,v])=>k+': '+v.toLocaleString()+' 🔥').join('<br>');
+    }
+    // Draw real hotspots if available
+    if(d.hotspots?.length) {
+      setTimeout(() => drawFiresMapLive(d.hotspots), 50);
+      return;
+    }
+  } else {
+    // No data — show empty map with message
+    safe('fire-count','—');
+    safe('fire-delta','');
+    safe('fire-yoy','');
+    document.getElementById('fire-regions').innerHTML =
+      '<span style="color:var(--muted);font-size:10px">Requires <code>NASA_FIRMS_KEY</code> in GitHub Secrets<br>Free key: <a href="https://firms.modaps.eosdis.nasa.gov/api/area/" target="_blank" style="color:var(--c-nat)">firms.modaps.eosdis.nasa.gov</a></span>';
+  }
+  // Draw canvas with no dots (just the map background)
+  setTimeout(() => drawFiresMap(false), 50);
 }
 
 // FAO — 20 years hardcoded data as baseline, try API
@@ -1177,7 +1208,12 @@ function loadFAO(period,btn){
   if(btn){document.querySelectorAll('#p-nat .hzs .hz').forEach(b=>b.classList.remove('on'));btn.classList.add('on');}
   // Try to load from data/fao.json first, fall back to hardcoded
   loadJSON('fao.json').then(d=>{
-    const rows=(d?.series||FAO_DATA.map(r=>({date:`${r.y}-${r.m}`,value:r.v}))).filter(r=>r.value>0);
+    const rawSeries = d?.series || [];
+    const mappedSeries = rawSeries.map(r=>({
+      date: r.date || (r.year ? String(r.year)+'-'+String(r.month||r.m||'01').padStart(2,'0') : undefined),
+      value: r.value ?? r.v
+    })).filter(r=>r.value>0 && r.date);
+    const rows = mappedSeries.length ? mappedSeries : FAO_DATA.map(r=>({date:String(r.y)+'-'+String(r.m).padStart(2,'0'),value:r.v}));
     const cur=rows[rows.length-1]; const prev=rows[rows.length-2];
     const yrAgo=rows.length>13?rows[rows.length-13]:rows[0];
     const block=document.getElementById('fao-block');
@@ -1195,7 +1231,7 @@ function loadFAO(period,btn){
     if(period==='6m') slice=rows.slice(-6);
     else if(period==='1y') slice=rows.slice(-12);
     else if(period==='5y') slice=rows.slice(-60);
-    const labels=slice.map(r=>r.date?String(r.date).slice(0,7):(String(r.y)+'-'+String(r.m||'01').padStart(2,'0')));
+    const labels=slice.map(r=>String(r.date||'').slice(0,7));
     const vals=slice.map(r=>r.value||r.v);
     mkChart('chart-fao','line',labels,vals,'#ff5a20');
     if(d) addTick(`🌾 FAO Food Price Index: ${round1(cur.value)} pts · ${yrDelta>0?'+':''}${yrDelta} vs 1yr ago`);
@@ -2329,12 +2365,31 @@ function drawQuakeMap(feats) {
 }
 
 // ── FIRES MAP ──
-function drawFiresMap() {
+function drawFiresMapLive(hotspots) {
   const canvas = document.getElementById('fires-canvas');
   if (!canvas) return;
   const W = 977, H = 816;
   const ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, W, H);
+  hotspots.forEach(h => {
+    const {x,y} = project(h.lon, h.lat, W, H);
+    const r = 3;
+    const g1 = ctx.createRadialGradient(x,y,0,x,y,r*5);
+    g1.addColorStop(0,'rgba(255,80,0,0.14)'); g1.addColorStop(1,'rgba(255,80,0,0)');
+    ctx.beginPath(); ctx.arc(x,y,r*5,0,Math.PI*2); ctx.fillStyle=g1; ctx.fill();
+    const g3 = ctx.createRadialGradient(x-1,y-1,0,x,y,r);
+    g3.addColorStop(0,'#fffde0'); g3.addColorStop(0.3,'#ffcc40'); g3.addColorStop(1,'#ff5500');
+    ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2);
+    ctx.fillStyle=g3; ctx.globalAlpha=0.98; ctx.fill(); ctx.globalAlpha=1;
+  });
+}
+function drawFiresMap(show_zones=true) {
+  const canvas = document.getElementById('fires-canvas');
+  if (!canvas) return;
+  const W = 977, H = 816;
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, W, H);
+  if(!show_zones) return; // Map bg only, no fake dots
   const zones = [
     {lon:-62, lat:-5,  label:'Amazon'},     // Amazon basin — Manaus/Para region
     {lon:23,  lat:0,   label:'C.Africa'},   // Congo basin — DRC center
