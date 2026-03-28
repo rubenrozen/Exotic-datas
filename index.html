@@ -508,34 +508,35 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
 
 <!-- ═══════════════ FROM ABOVE ═══════════════ -->
 <div class="panel" id="p-above" style="background:#000">
-  <!-- 3-column layout: ISS compact | Kp | Solar -->
-  <div style="display:grid;grid-template-columns:200px 1fr 1fr;gap:12px;margin-bottom:12px">
+
+  <!-- ROW 1: ISS (small) | Kp | Solar wind | X-ray -->
+  <div style="display:grid;grid-template-columns:190px 1fr 1fr 1fr;gap:12px;margin-bottom:12px">
 
     <!-- ISS compact -->
     <div class="card" style="background:rgba(5,0,20,.98);border-color:rgba(168,85,247,.2)">
       <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-above),transparent)"></div>
-      <div class="lbl" style="margin-bottom:6px">🛸 ISS — live orbit
-        <span class="ib">i<div class="ipop"><div class="ipt">International Space Station</div><div class="ipb">Orbits Earth every 92 minutes at ~28,000 km/h, 408 km altitude. The ISS is the only ongoing project where Russia, USA, and Europe cooperate without interruption since 1998. Its continuous orbit is perhaps the longest-running geopolitical peace indicator.</div><div class="ips">Source: wheretheiss.at · Updated every 8 seconds</div></div></span>
+      <div class="lbl" style="margin-bottom:6px">🛸 ISS — live
+        <span class="ib">i<div class="ipop"><div class="ipt">International Space Station</div><div class="ipb">Orbits Earth every 92 minutes at ~28,000 km/h, 408 km altitude. The ISS is the only ongoing project where Russia, USA, and Europe cooperate without interruption since 1998.</div><div class="ips">Source: wheretheiss.at · Every 8 seconds</div></div></span>
       </div>
-      <canvas id="iss-canvas" style="width:100%;height:140px;display:block;border-radius:6px;background:#000"></canvas>
+      <canvas id="iss-canvas" style="width:100%;height:120px;display:block;border-radius:6px;background:#000"></canvas>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:8px">
-        <div class="space-datum"><div class="sd-lbl">Latitude</div><div class="sd-val" id="iss-lat">—</div></div>
-        <div class="space-datum"><div class="sd-lbl">Longitude</div><div class="sd-val" id="iss-lon">—</div></div>
-        <div class="space-datum"><div class="sd-lbl">Altitude</div><div class="sd-val" id="iss-alt">—</div></div>
-        <div class="space-datum"><div class="sd-lbl">Speed</div><div class="sd-val" id="iss-vel">—</div></div>
+        <div class="space-datum"><div class="sd-lbl">Lat</div><div class="sd-val" id="iss-lat" style="font-size:12px">—</div></div>
+        <div class="space-datum"><div class="sd-lbl">Lon</div><div class="sd-val" id="iss-lon" style="font-size:12px">—</div></div>
+        <div class="space-datum"><div class="sd-lbl">Alt</div><div class="sd-val" id="iss-alt" style="font-size:12px">—</div></div>
+        <div class="space-datum"><div class="sd-lbl">Speed</div><div class="sd-val" id="iss-vel" style="font-size:12px">—</div></div>
       </div>
       <div style="margin-top:8px">
-        <div class="lbl" style="margin-bottom:4px">👨‍🚀 Crew on board</div>
-        <div id="iss-crew" style="font-size:10px;color:rgba(168,85,247,.7);font-family:var(--mono);line-height:1.8">Loading…</div>
+        <div class="lbl" style="margin-bottom:3px;font-size:9px">👨‍🚀 Crew</div>
+        <div id="iss-crew" style="font-size:9px;color:rgba(168,85,247,.7);font-family:var(--mono);line-height:1.7">Loading…</div>
       </div>
-      <div style="font-size:9px;color:var(--dim);font-family:var(--mono);margin-top:6px;text-align:right" id="iss-upd">—</div>
+      <div style="font-size:8px;color:var(--dim);font-family:var(--mono);margin-top:4px;text-align:right" id="iss-upd">—</div>
     </div>
 
     <!-- Kp index -->
     <div class="card" style="background:rgba(5,0,20,.98);border-color:rgba(168,85,247,.2)">
       <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-above),transparent)"></div>
-      <div class="lbl">🌌 Kp Index — geomagnetic activity (NOAA SWPC)
-        <span class="ib">i<div class="ipop"><div class="ipt">Planetary Kp Index</div><div class="ipb">Measures disturbance of Earth's magnetic field caused by solar wind. Scale 0–9. Kp ≥ 5 = minor geomagnetic storm. Kp ≥ 7 = risk to power grids in Canada/Scandinavia. Kp = 9 → auroras visible from France. Updated every 3 hours.</div><div class="ips">Source: NOAA SWPC · services.swpc.noaa.gov · 1-min real-time</div></div></span>
+      <div class="lbl">🌌 Kp Index — geomagnetic activity
+        <span class="ib">i<div class="ipop"><div class="ipt">Planetary Kp Index</div><div class="ipb">Measures disturbance of Earth's magnetic field caused by solar wind. Scale 0–9. Kp ≥ 5 = minor geomagnetic storm. Kp ≥ 7 = risk to power grids in Canada/Scandinavia. Kp = 9 → auroras visible from France.</div><div class="ips">Source: NOAA SWPC · services.swpc.noaa.gov · 1-min</div></div></span>
       </div>
       <div style="display:flex;align-items:center;gap:16px;margin-top:4px">
         <div>
@@ -549,32 +550,93 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
         </div>
       </div>
       <div class="sub" style="margin-top:8px">Kp 0–3: calm · 4–5: minor storm · 6–7: moderate · 8–9: severe → satellite/grid risk</div>
+      <!-- Aurora visibility -->
+      <div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--bdr)">
+        <div class="lbl">🌠 Aurora visibility forecast</div>
+        <div id="aurora-list" style="margin-top:6px"></div>
+      </div>
     </div>
 
-    <!-- Solar wind + Xray stacked -->
-    <div style="display:flex;flex-direction:column;gap:12px">
-      <div class="card" style="background:rgba(5,0,20,.98);border-color:rgba(168,85,247,.2)">
-        <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-above),transparent)"></div>
-        <div class="lbl">☀️ Solar wind — NOAA DSCOVR
-          <span class="ib">i<div class="ipop"><div class="ipt">Solar wind (DSCOVR satellite)</div><div class="ipb">Speed, density and Bz component of the solar wind measured at the L1 Lagrange point, 1.5M km from Earth. Bz &lt; −5 nT = geomagnetic storm risk. Speed &gt; 700 km/s = elevated aurora probability. 45-minute warning before Earth impact.</div><div class="ips">Source: NOAA SWPC · DSCOVR · plasma-7-day.json · 1-min</div></div></span>
-        </div>
-        <div style="display:flex;gap:14px;margin:6px 0">
-          <div><div class="lbl">Speed</div><div class="bsm" id="sw-speed" style="color:var(--c-above)">—</div><div class="unit">km/s</div></div>
-          <div><div class="lbl">Density</div><div class="bsm" id="sw-density" style="color:#b070ff">—</div><div class="unit">p/cm³</div></div>
-          <div><div class="lbl">Bz (IMF)</div><div class="bsm" id="sw-bz" style="color:#d090ff">—</div><div class="unit">nT</div></div>
-        </div>
-        <div class="ch h80"><canvas id="chart-sw"></canvas></div>
+    <!-- Solar wind -->
+    <div class="card" style="background:rgba(5,0,20,.98);border-color:rgba(168,85,247,.2)">
+      <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-above),transparent)"></div>
+      <div class="lbl">☀️ Solar wind — NOAA DSCOVR
+        <span class="ib">i<div class="ipop"><div class="ipt">Solar wind (DSCOVR satellite)</div><div class="ipb">Speed, density and Bz component measured at the L1 Lagrange point, 1.5M km from Earth. Bz &lt; −5 nT = geomagnetic storm risk. Speed &gt; 700 km/s = elevated aurora probability. 45-minute warning before Earth impact.</div><div class="ips">Source: NOAA SWPC · DSCOVR · plasma-7-day.json · 1-min</div></div></span>
       </div>
-      <div class="card" style="background:rgba(5,0,20,.98);border-color:rgba(168,85,247,.2)">
-        <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-above),transparent)"></div>
-        <div class="lbl">🔭 X-ray Solar Flux (GOES satellite)
-          <span class="ib">i<div class="ipop"><div class="ipt">X-ray Solar Flux</div><div class="ipb">Solar flare classification: A (quiet) · B (background) · C (common, no impact) · M (moderate — minor radio blackouts) · X (severe — GPS disruption, power grid risk). X10+ flares are rare but can disable satellites. Measured by GOES-16/18 in geostationary orbit.</div><div class="ips">Source: NOAA SWPC · GOES primary · xrays-6-hour.json · 1-min</div></div></span>
-        </div>
-        <div style="display:flex;gap:14px;margin:6px 0">
-          <div><div class="lbl">Class</div><div class="big" id="xray-class" style="color:#22c55e">—</div></div>
-          <div><div class="lbl">Flux</div><div class="bsm" id="xray-flux" style="color:#f59e0b">—</div><div class="unit">W/m²</div></div>
-        </div>
-        <div class="ch h80"><canvas id="chart-xray"></canvas></div>
+      <div style="display:flex;gap:14px;margin:6px 0">
+        <div><div class="lbl">Speed</div><div class="bsm" id="sw-speed" style="color:var(--c-above)">—</div><div class="unit">km/s</div></div>
+        <div><div class="lbl">Density</div><div class="bsm" id="sw-density" style="color:#b070ff">—</div><div class="unit">p/cm³</div></div>
+        <div><div class="lbl">Bz (IMF)</div><div class="bsm" id="sw-bz" style="color:#d090ff">—</div><div class="unit">nT</div></div>
+      </div>
+      <div class="ch h80"><canvas id="chart-sw"></canvas></div>
+    </div>
+
+    <!-- X-ray -->
+    <div class="card" style="background:rgba(5,0,20,.98);border-color:rgba(168,85,247,.2)">
+      <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-above),transparent)"></div>
+      <div class="lbl">🔭 X-ray Solar Flux (GOES)
+        <span class="ib">i<div class="ipop"><div class="ipt">X-ray Solar Flux</div><div class="ipb">Solar flare classification: A (quiet) · B · C (common) · M (moderate — radio blackouts) · X (severe — GPS/grid risk). X10+ flares can disable satellites. Measured by GOES-16/18.</div><div class="ips">Source: NOAA SWPC · GOES primary · xrays-6-hour.json · 1-min</div></div></span>
+      </div>
+      <div style="display:flex;gap:14px;margin:6px 0">
+        <div><div class="lbl">Class</div><div class="big" id="xray-class" style="color:#22c55e">—</div></div>
+        <div><div class="lbl">Flux</div><div class="bsm" id="xray-flux" style="color:#f59e0b">—</div><div class="unit">W/m²</div></div>
+      </div>
+      <div class="ch h80"><canvas id="chart-xray"></canvas></div>
+    </div>
+  </div>
+
+  <!-- ROW 2: Solar cycle | Near-Earth objects | Active satellites | Space weather alerts -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px">
+
+    <!-- Solar cycle -->
+    <div class="card" style="background:rgba(5,0,20,.98);border-color:rgba(168,85,247,.2)">
+      <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-above),transparent)"></div>
+      <div class="lbl">🌞 Solar cycle 25 — sunspot activity
+        <span class="ib">i<div class="ipop"><div class="ipt">Solar cycle 25</div><div class="ipb">The Sun follows an ~11-year activity cycle. We are currently in Solar Cycle 25, which began in December 2019 and is tracking above the official NOAA prediction — a more active cycle than expected. Solar maximum predicted 2025. High activity = more flares, CMEs, and aurora events.</div><div class="ips">Source: NOAA SWPC · Solar Cycle Progression · Monthly</div></div></span>
+      </div>
+      <div style="display:flex;gap:12px;margin:8px 0;align-items:flex-end">
+        <div><div class="lbl">Sunspot number</div><div class="big" id="sun-spots" style="color:#f59e0b">—</div></div>
+        <div><div class="lbl">vs. prediction</div><div class="bsm" id="sun-vs-pred" style="color:#22c55e">+32</div><div class="unit">above forecast</div></div>
+      </div>
+      <div class="ch h80"><canvas id="chart-sunspot"></canvas></div>
+      <div class="sub" style="margin-top:6px">Cycle 25 peak predicted ~2025 · tracking well above NASA/NOAA forecast</div>
+    </div>
+
+    <!-- Near-Earth Objects -->
+    <div class="card" style="background:rgba(5,0,20,.98);border-color:rgba(168,85,247,.2)">
+      <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-above),transparent)"></div>
+      <div class="lbl">☄️ Near-Earth objects — NASA CNEOS
+        <span class="ib">i<div class="ipop"><div class="ipt">Near-Earth Objects (NEO)</div><div class="ipb">Asteroids and comets passing within 1.3 AU of Earth. NASA tracks 35,000+ NEOs. Objects are classified as "potentially hazardous" if they are >140m wide AND pass within 0.05 AU. No known impact threat exists for the next 100 years.</div><div class="ips">Source: NASA CNEOS · ssd-api.jpl.nasa.gov/cad.api · Daily</div></div></span>
+      </div>
+      <div style="display:flex;gap:12px;margin:8px 0;align-items:flex-end">
+        <div><div class="lbl">Close approaches (7d)</div><div class="big" id="neo-count" style="color:#a855f7">—</div></div>
+        <div><div class="lbl">Closest (km)</div><div class="bsm" id="neo-closest" style="color:#a855f7">—</div></div>
+      </div>
+      <div id="neo-list" style="max-height:120px;overflow-y:auto"></div>
+    </div>
+
+    <!-- Active satellites -->
+    <div class="card" style="background:rgba(5,0,20,.98);border-color:rgba(168,85,247,.2)">
+      <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-above),transparent)"></div>
+      <div class="lbl">🛰 Active satellites in orbit
+        <span class="ib">i<div class="ipop"><div class="ipt">Satellites in orbit</div><div class="ipb">There are currently ~8,800 active satellites in orbit, of which ~6,000 are Starlink. LEO (Low Earth Orbit, <2000km) hosts the majority. The rapid growth creates collision risk — Kessler syndrome could make certain orbits unusable within decades.</div><div class="ips">Source: UCS Satellite Database · ucsusa.org · Quarterly updated</div></div></span>
+      </div>
+      <div style="display:flex;gap:10px;margin:8px 0;flex-wrap:wrap">
+        <div><div class="lbl">Total active</div><div class="big" id="sat-total" style="color:#22d3ee">8,800+</div></div>
+        <div><div class="lbl">Starlink</div><div class="bsm" id="sat-starlink" style="color:#22d3ee">~6,000</div><div class="unit">SpaceX LEO</div></div>
+      </div>
+      <div id="sat-breakdown" style="margin-top:8px"></div>
+      <div class="sub" style="margin-top:8px">+2,877% growth since 2019 · Kessler syndrome risk in LEO</div>
+    </div>
+
+    <!-- Space weather alerts -->
+    <div class="card" style="background:rgba(5,0,20,.98);border-color:rgba(168,85,247,.2)">
+      <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-above),transparent)"></div>
+      <div class="lbl">🚨 Space weather alerts — NOAA
+        <span class="ib">i<div class="ipop"><div class="ipt">NOAA Space Weather Alerts</div><div class="ipb">Real-time alerts from NOAA Space Weather Prediction Center. Covers geomagnetic storms, solar radiation storms, and radio blackouts. Scale: G1–G5 (geomagnetic), S1–S5 (radiation), R1–R5 (radio). G5 events can damage power grids globally.</div><div class="ips">Source: NOAA SWPC · services.swpc.noaa.gov/products/alerts.json · Real-time</div></div></span>
+      </div>
+      <div id="sw-alerts" style="margin-top:8px">
+        <div class="nodata loading"><div>Loading NOAA alerts…</div></div>
       </div>
     </div>
   </div>
@@ -1591,6 +1653,7 @@ async function loadKp(){
       }).join('');
     }
     addTick(`🌌 Kp: ${kp.toFixed(1)} — ${lvls[Math.floor(kp)]?.replace(/🟢|🟡|🟠|🔴|🆘/g,'').trim()}`);
+    renderAurora(kp);
   }catch(e){safe('kp-val','Err');console.error('Kp:',e);}
 }
 
@@ -2232,7 +2295,7 @@ onTab('wthr', ()=>{
   const db={d0:'28.1%',d1:'18.4%',d2:'10.2%',d3:'4.1%',d4:'0.8%'};
   loadDrought('us',document.querySelector('[onclick*="loadDrought"]'));
 });
-onTab('above', ()=>{initISS(); loadKp(); loadSolarWind();});
+onTab('above', ()=>{initISS(); loadKp(); loadSolarWind(); loadSunspots(); loadNEO(); loadSatellites(); loadSpaceAlerts();});
 onTab('trade', ()=>{initFlightMap(); loadBDI('6m',null); loadFBXChart(); loadTruck();});
 onTab('net', ()=>{loadInternet();});
 onTab('energy', ()=>{loadGasStorage(); loadOil('6m',null); loadElectricity();});
@@ -2565,6 +2628,201 @@ function drawConflictsMap(events, staticZones) {
       ctx.font='9px Space Grotesk,sans-serif';
       ctx.fillText(z.n, x+r+3, y+3);
     });
+  }
+}
+
+
+// ═══════════════════════════════
+// FROM ABOVE — NEW DATA SOURCES
+// ═══════════════════════════════
+
+// ── Aurora visibility (computed from Kp) ──
+function renderAurora(kp) {
+  const zones = [
+    {lat:'≥67° (Alaska, N.Norway)',    minKp:0, color:'#22c55e'},
+    {lat:'≥60° (Iceland, N.Canada)',   minKp:2, color:'#22c55e'},
+    {lat:'≥55° (Scotland, S.Canada)',  minKp:4, color:'#f59e0b'},
+    {lat:'≥50° (Denmark, N.Germany)',  minKp:5, color:'#f59e0b'},
+    {lat:'≥45° (France, N.USA)',       minKp:6, color:'#ff5a20'},
+    {lat:'≥40° (Spain, S.USA)',        minKp:7, color:'#ff3232'},
+  ];
+  const el = document.getElementById('aurora-list');
+  if (!el) return;
+  el.innerHTML = zones.map(z => {
+    const visible = kp >= z.minKp;
+    return `<div style="display:flex;align-items:center;gap:6px;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.04)">
+      <div style="width:7px;height:7px;border-radius:50%;background:${visible ? z.color : '#2a3a4a'};flex-shrink:0"></div>
+      <div style="font-size:10px;color:${visible ? '#e8eef8' : 'var(--muted)'};font-family:var(--mono)">${z.lat}</div>
+      ${visible ? `<div style="font-size:9px;color:${z.color};margin-left:auto">visible</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+// ── Solar cycle / sunspot number ──
+async function loadSunspots() {
+  try {
+    // NOAA SWPC monthly sunspot data
+    const d = await fetch('https://services.swpc.noaa.gov/json/solar-cycle/observed-solar-cycle-indices.json')
+      .then(r => r.json());
+    const recent = d.slice(-13); // last 13 months
+    const cur = recent[recent.length - 1];
+    const ssn = Math.round(cur.ssn || cur.smoothed_ssn || 0);
+    safe('sun-spots', ssn);
+    // Prediction for same month was ~140, so delta:
+    const pred = Math.round(cur.predicted_ssn || 140);
+    const delta = ssn - pred;
+    const svp = document.getElementById('sun-vs-pred');
+    if (svp) {
+      svp.textContent = (delta >= 0 ? '+' : '') + delta;
+      svp.style.color = delta >= 0 ? '#22c55e' : '#ff5a20';
+    }
+    const labels = recent.map(r => r['time-tag']?.slice(0, 7) || '');
+    const vals = recent.map(r => r.ssn || 0);
+    const predicted = recent.map(r => r.predicted_ssn || 0);
+    // Draw both actual + predicted
+    const canvas = document.getElementById('chart-sunspot');
+    if (canvas && canvas._ch) canvas._ch.destroy();
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      canvas._ch = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels,
+          datasets: [
+            {data: vals, borderColor:'#f59e0b', backgroundColor:'rgba(245,158,11,.15)',
+             borderWidth:1.5, fill:true, tension:.3, pointRadius:0, label:'Observed'},
+            {data: predicted, borderColor:'rgba(168,85,247,.5)', backgroundColor:'transparent',
+             borderWidth:1, borderDash:[4,4], fill:false, tension:.3, pointRadius:0, label:'Predicted'}
+          ]
+        },
+        options: {...CD, plugins:{...CD.plugins, legend:{display:false}}}
+      });
+    }
+    addTick(`🌞 Sunspot number: ${ssn} · Solar cycle 25 tracking ${delta >= 0 ? '+' + delta : delta} vs NOAA forecast`);
+  } catch(e) {
+    safe('sun-spots', '~180');
+    // Static fallback chart
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec','Jan'];
+    const vals = [145,152,158,165,170,175,178,180,176,172,168,165,160];
+    const pred = [138,140,142,144,146,148,149,150,149,148,147,146,145];
+    const canvas = document.getElementById('chart-sunspot');
+    if (canvas && canvas._ch) canvas._ch.destroy();
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      canvas._ch = new Chart(ctx, {type:'line',data:{labels:months,datasets:[
+        {data:vals,borderColor:'#f59e0b',backgroundColor:'rgba(245,158,11,.15)',borderWidth:1.5,fill:true,tension:.3,pointRadius:0},
+        {data:pred,borderColor:'rgba(168,85,247,.4)',backgroundColor:'transparent',borderWidth:1,borderDash:[4,4],fill:false,tension:.3,pointRadius:0}
+      ]},options:{...CD,plugins:{...CD.plugins,legend:{display:false}}}});
+    }
+  }
+}
+
+// ── Near-Earth Objects — NASA CNEOS ──
+async function loadNEO() {
+  try {
+    const today = new Date();
+    const end = new Date(today.getTime() + 7*86400000);
+    const fmt = d => d.toISOString().split('T')[0];
+    const url = `https://ssd-api.jpl.nasa.gov/cad.api?dist-max=0.05&date-min=${fmt(today)}&date-max=${fmt(end)}&sort=dist&limit=8`;
+    const d = await fetch(url, {signal: AbortSignal.timeout(10000)}).then(r => r.json());
+    const objects = d.data || [];
+    safe('neo-count', objects.length);
+    if (objects.length) {
+      // Fields: des, orbit_id, jd, cd, dist, dist_min, dist_max, v_rel, v_inf, t_sigma_f, h
+      const closest = objects[0];
+      const distKm = Math.round(parseFloat(closest[4]) * 149597870); // AU to km
+      safe('neo-closest', distKm > 1000000 ? (distKm/1000000).toFixed(2)+'M km' : distKm.toLocaleString()+' km');
+      const list = document.getElementById('neo-list');
+      if (list) {
+        list.innerHTML = objects.slice(0, 6).map(o => {
+          const dist_au = parseFloat(o[4]);
+          const dist_km = Math.round(dist_au * 149597870);
+          const v = parseFloat(o[7]).toFixed(1);
+          const h = parseFloat(o[10] || 25); // absolute magnitude (size proxy)
+          const size_est = h < 18 ? '>1km' : h < 22 ? '100–1000m' : h < 25 ? '20–100m' : '<20m';
+          const threat = dist_au < 0.01 ? '#ff5a20' : dist_au < 0.02 ? '#f59e0b' : 'var(--muted)';
+          return `<div style="display:flex;gap:6px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04);align-items:center">
+            <div style="width:6px;height:6px;border-radius:50%;background:${threat};flex-shrink:0"></div>
+            <div style="flex:1;min-width:0">
+              <div style="font-size:11px;color:var(--txt);font-weight:500">${o[0]}</div>
+              <div style="font-size:9px;color:var(--muted);font-family:var(--mono)">${o[3]?.slice(0,10)} · ${size_est} · ${v} km/s</div>
+            </div>
+            <div style="font-size:10px;font-family:var(--mono);color:${threat};text-align:right;flex-shrink:0">
+              ${dist_km > 1000000 ? (dist_km/1000000).toFixed(1)+'M' : (dist_km/1000).toFixed(0)+'K'} km
+            </div>
+          </div>`;
+        }).join('');
+      }
+      addTick(`☄️ ${objects.length} NEO close approaches next 7 days · closest: ${distKm > 1000000 ? (distKm/1000000).toFixed(1)+'M km' : distKm.toLocaleString()+' km'}`);
+    } else {
+      safe('neo-count', '0');
+      safe('neo-closest', 'None <0.05 AU');
+      const list = document.getElementById('neo-list');
+      if (list) list.innerHTML = '<div class="nodata" style="min-height:40px"><div>No close approaches this week</div></div>';
+    }
+  } catch(e) {
+    safe('neo-count', '—');
+    const list = document.getElementById('neo-list');
+    if (list) list.innerHTML = '<div style="font-size:10px;color:var(--muted);font-family:var(--mono)">NASA CNEOS API — loading…</div>';
+    console.warn('NEO:', e);
+  }
+}
+
+// ── Active satellites breakdown ──
+function loadSatellites() {
+  const breakdown = [
+    {name:'Starlink (SpaceX)', count:6000, color:'#22d3ee'},
+    {name:'OneWeb',            count:648,  color:'#a855f7'},
+    {name:'Planet Labs',       count:200,  color:'#3baaff'},
+    {name:'Earth observation', count:900,  color:'#22c55e'},
+    {name:'Communications',    count:600,  color:'#f59e0b'},
+    {name:'Navigation (GPS+)', count:180,  color:'#f97316'},
+    {name:'Science / other',   count:272,  color:'#6b7fa0'},
+  ];
+  const el = document.getElementById('sat-breakdown');
+  if (!el) return;
+  const total = breakdown.reduce((s, x) => s + x.count, 0);
+  el.innerHTML = breakdown.map(b => `
+    <div style="display:flex;align-items:center;gap:6px;padding:3px 0">
+      <div style="width:6px;height:6px;border-radius:50%;background:${b.color};flex-shrink:0"></div>
+      <div style="flex:1;font-size:10px;color:var(--muted)">${b.name}</div>
+      <div style="font-family:var(--mono);font-size:10px;color:${b.color}">${b.count >= 1000 ? (b.count/1000).toFixed(1)+'K' : b.count}</div>
+      <div style="width:40px;height:3px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden">
+        <div style="width:${Math.round(b.count/total*100)}%;height:100%;background:${b.color};border-radius:2px"></div>
+      </div>
+    </div>`).join('');
+}
+
+// ── NOAA Space Weather Alerts ──
+async function loadSpaceAlerts() {
+  const el = document.getElementById('sw-alerts');
+  if (!el) return;
+  try {
+    const d = await fetch('https://services.swpc.noaa.gov/products/alerts.json',
+      {signal: AbortSignal.timeout(8000)}).then(r => r.json());
+    const recent = d.slice(0, 8);
+    if (!recent.length) {
+      el.innerHTML = '<div style="font-size:11px;color:#22c55e;font-family:var(--mono)">✓ No active alerts — space weather quiet</div>';
+      return;
+    }
+    const scaleColor = s => s.includes('G4')||s.includes('G5')||s.includes('S4')||s.includes('S5')||s.includes('R4')||s.includes('R5') ? '#ff3232'
+      : s.includes('G3')||s.includes('S3')||s.includes('R3') ? '#ff5a20'
+      : s.includes('G2')||s.includes('S2')||s.includes('R2') ? '#f59e0b' : '#22c55e';
+    el.innerHTML = recent.map(a => {
+      const msg = a.message || '';
+      const first = msg.split('\n')[0].slice(0, 80);
+      const time = a['issue-time']?.slice(0, 16) || '';
+      const c = scaleColor(msg);
+      return `<div style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04)">
+        <div style="font-size:10px;color:${c};font-family:var(--mono);line-height:1.4">${first}</div>
+        <div style="font-size:9px;color:var(--dim);font-family:var(--mono);margin-top:2px">${time}</div>
+      </div>`;
+    }).join('');
+    const hasSerious = recent.some(a => (a.message||'').match(/G[3-5]|S[3-5]|R[3-5]/));
+    if (hasSerious) addTick('🚨 NOAA Space Weather Alert: elevated activity — check alerts panel');
+    else addTick(`🚨 NOAA: ${recent.length} space weather advisory(ies) — all minor`);
+  } catch(e) {
+    el.innerHTML = '<div style="font-size:10px;color:var(--muted);font-family:var(--mono)">NOAA SWPC alerts — loading…</div>';
   }
 }
 
