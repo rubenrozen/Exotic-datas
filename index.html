@@ -1135,7 +1135,7 @@ async function loadUSGS(computeScore=true){
     // Map
     if(!quakeMap){
       quakeMap=L.map('map-quakes',{zoomControl:false,attributionControl:false,scrollWheelZoom:false,preferCanvas:true}).setView([20,0],1);
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter/{z}/{x}/{y}.png',{maxZoom:18}).addTo(quakeMap);
+      L.tileLayer('https://cartodb-basemaps-a.global.ssl.fastly.net/dark_matter/{z}/{x}/{y}.png',{maxZoom:18,crossOrigin:true,attribution:'© CartoDB'}).addTo(quakeMap);
       setTimeout(()=>quakeMap.invalidateSize(),400);
     }
     qLayers.forEach(l=>l.remove()); qLayers=[];
@@ -1156,7 +1156,7 @@ function initFiresMap(){
   if(firesMap) return;
   const el=document.getElementById('map-fires'); if(!el) return;
   firesMap=L.map('map-fires',{zoomControl:false,attributionControl:false,scrollWheelZoom:false}).setView([10,20],1);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter/{z}/{x}/{y}.png',{maxZoom:18}).addTo(firesMap);
+  L.tileLayer('https://cartodb-basemaps-a.global.ssl.fastly.net/dark_matter/{z}/{x}/{y}.png',{maxZoom:18,crossOrigin:true,attribution:'© CartoDB'}).addTo(firesMap);
   setTimeout(()=>firesMap.invalidateSize(),400);
   const zones=[
     {ll:[-10,-55],c:'#ff3232',r:14,n:'Amazon basin'},
@@ -1222,7 +1222,7 @@ function loadFAO(period,btn){
     if(period==='6m') slice=rows.slice(-6);
     else if(period==='1y') slice=rows.slice(-12);
     else if(period==='5y') slice=rows.slice(-60);
-    const labels=slice.map(r=>r.date||(r.y+'-'+r.m));
+    const labels=slice.map(r=>r.date?String(r.date).slice(0,7):(String(r.y)+'-'+String(r.m||'01').padStart(2,'0')));
     const vals=slice.map(r=>r.value||r.v);
     mkChart('chart-fao','line',labels,vals,'#ff5a20');
     if(d) addTick(`🌾 FAO Food Price Index: ${round1(cur.value)} pts · ${yrDelta>0?'+':''}${yrDelta} vs 1yr ago`);
@@ -1584,7 +1584,7 @@ let flightMap=null,flightMarkers=[];
 async function initFlightMap(){
   const el=document.getElementById('map-flights'); if(!el) return;
   flightMap=L.map('map-flights',{zoomControl:false,attributionControl:true}).setView([30,10],2);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© CartoDB'}).addTo(flightMap);
+  L.tileLayer('https://cartodb-basemaps-a.global.ssl.fastly.net/dark_matter/{z}/{x}/{y}.png',{maxZoom:18,crossOrigin:true,attribution:'© CartoDB'}).addTo(flightMap);
   setTimeout(()=>flightMap.invalidateSize(),400);
   await refreshFlights();
 }
@@ -1864,7 +1864,7 @@ async function loadConflicts(){
   // Init map first (always)
   if(!conflictMap){
     conflictMap=L.map('map-conflicts',{zoomControl:false,attributionControl:false,scrollWheelZoom:false,preferCanvas:true}).setView([20,20],2);
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter/{z}/{x}/{y}.png',{maxZoom:18}).addTo(conflictMap);
+    L.tileLayer('https://cartodb-basemaps-a.global.ssl.fastly.net/dark_matter/{z}/{x}/{y}.png',{maxZoom:18,crossOrigin:true,attribution:'© CartoDB'}).addTo(conflictMap);
     setTimeout(()=>conflictMap.invalidateSize(),500);
   }
   const d=await loadJSON('conflicts.json');
