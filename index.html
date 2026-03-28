@@ -2768,29 +2768,32 @@ async function loadNEO() {
   }
 }
 
-// ── Active satellites breakdown ──
-function loadSatellites() {
-  const breakdown = [
-    {name:'Starlink (SpaceX)', count:6000, color:'#22d3ee'},
-    {name:'OneWeb',            count:648,  color:'#a855f7'},
-    {name:'Planet Labs',       count:200,  color:'#3baaff'},
-    {name:'Earth observation', count:900,  color:'#22c55e'},
-    {name:'Communications',    count:600,  color:'#f59e0b'},
-    {name:'Navigation (GPS+)', count:180,  color:'#f97316'},
-    {name:'Science / other',   count:272,  color:'#6b7fa0'},
-  ];
+// ── Active satellites — from data/satellites.json (Celestrak, daily) ──
+async function loadSatellites() {
   const el = document.getElementById('sat-breakdown');
-  if (!el) return;
-  const total = breakdown.reduce((s, x) => s + x.count, 0);
-  el.innerHTML = breakdown.map(b => `
-    <div style="display:flex;align-items:center;gap:6px;padding:3px 0">
-      <div style="width:6px;height:6px;border-radius:50%;background:${b.color};flex-shrink:0"></div>
-      <div style="flex:1;font-size:10px;color:var(--muted)">${b.name}</div>
-      <div style="font-family:var(--mono);font-size:10px;color:${b.color}">${b.count >= 1000 ? (b.count/1000).toFixed(1)+'K' : b.count}</div>
-      <div style="width:40px;height:3px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden">
-        <div style="width:${Math.round(b.count/total*100)}%;height:100%;background:${b.color};border-radius:2px"></div>
-      </div>
-    </div>`).join('');
+  const d = await loadJSON('satellites.json');
+  const COLORS = ['#22d3ee','#a855f7','#3baaff','#22c55e','#f59e0b','#f97316','#6b7fa0'];
+  if (d && d.by_operator) {
+    safe('sat-total', d.total?.toLocaleString() || '—');
+    safe('sat-starlink', d.by_operator?.['Starlink (SpaceX)']?.toLocaleString() || '—');
+    const entries = Object.entries(d.by_operator).sort((a,b) => b[1]-a[1]);
+    const total = Object.values(d.by_operator).reduce((s,v) => s+v, 0);
+    if (el) el.innerHTML = entries.map(([name, count], i) => `
+      <div style="display:flex;align-items:center;gap:6px;padding:3px 0">
+        <div style="width:6px;height:6px;border-radius:50%;background:${COLORS[i%COLORS.length]};flex-shrink:0"></div>
+        <div style="flex:1;font-size:10px;color:var(--muted)">${name}</div>
+        <div style="font-family:var(--mono);font-size:10px;color:${COLORS[i%COLORS.length]}">${count >= 1000 ? (count/1000).toFixed(1)+'K' : count}</div>
+        <div style="width:40px;height:3px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden">
+          <div style="width:${Math.round(count/total*100)}%;height:100%;background:${COLORS[i%COLORS.length]};border-radius:2px"></div>
+        </div>
+      </div>`).join('');
+    addTick(`🛰 ${d.total?.toLocaleString()} active satellites · Starlink: ${d.by_operator?.['Starlink (SpaceX)']?.toLocaleString()} · Source: Celestrak`);
+  } else {
+    // No data yet — show message
+    safe('sat-total', '—');
+    safe('sat-starlink', '—');
+    if (el) el.innerHTML = '<div style="font-size:10px;color:var(--muted);font-family:var(--mono)">Requires GitHub Actions workflow run<br>Source: Celestrak · celestrak.org · Daily</div>';
+  }
 }
 
 // ── NOAA Space Weather Alerts ──
