@@ -382,6 +382,54 @@ try:
 except Exception as e:
     errors.append(f"UNHCR: {e}"); print(f"  ✗ {e}")
 
+# ── [7b] NASA FIRMS — Active fires ───────────────────────
+print("[7b] Active fires — NASA FIRMS...")
+firms_key = os.environ.get("NASA_FIRMS_KEY","")
+if firms_key:
+    try:
+        # VIIRS SNPP NRT — last 1 day, global, CSV format
+        url = f"https://firms.modaps.eosdis.nasa.gov/api/area/csv/{firms_key}/VIIRS_SNPP_NRT/World/1"
+        csv_txt = fetch_text(url)
+        lines = [l for l in csv_txt.strip().splitlines() if l and not l.startswith("latitude")]
+        hotspots = []
+        by_region = {"Amazon":0,"C.Africa":0,"S.Africa":0,"Siberia":0,"N.America":0,"SE Asia":0,"Australia":0,"Other":0}
+        for line in lines:
+            parts = line.split(",")
+            if len(parts) < 3: continue
+            try:
+                lat, lon = float(parts[0]), float(parts[1])
+                brightness = float(parts[2]) if len(parts)>2 else 300
+                hotspots.append({"lat":round(lat,3),"lon":round(lon,3),"brightness":round(brightness,1)})
+                # Assign to region
+                if -20<lat<15 and -80<lon<-35: by_region["Amazon"]+=1
+                elif -10<lat<15 and 10<lon<40: by_region["C.Africa"]+=1
+                elif -35<lat<-10 and 10<lon<40: by_region["S.Africa"]+=1
+                elif 50<lat<75 and 60<lon<140: by_region["Siberia"]+=1
+                elif 25<lat<72 and -130<lon<-60: by_region["N.America"]+=1
+                elif -10<lat<25 and 90<lon<140: by_region["SE Asia"]+=1
+                elif -40<lat<-10 and 110<lon<155: by_region["Australia"]+=1
+                else: by_region["Other"]+=1
+            except: continue
+        # Thin hotspots for file size — keep max 2000 points
+        import random
+        if len(hotspots) > 2000:
+            hotspots = random.sample(hotspots, 2000)
+        total = len(lines)
+        print(f"  ✓ {total} fire spots — {len(hotspots)} sampled for map")
+        save("firms.json", {
+            "total": total,
+            "by_region": by_region,
+            "hotspots": hotspots,
+            "delta_day": None,   # would need yesterday's count to compute
+            "delta_year": None,
+            "score": max(10, round(100 - min(total, 50000)/500)),
+            "updated": NOW
+        })
+    except Exception as e:
+        errors.append(f"FIRMS: {e}"); print(f"  ✗ {e}")
+else:
+    print("  ⚠ NASA_FIRMS_KEY not set — get free key at firms.modaps.eosdis.nasa.gov/api/area/")
+
 # ── [8] OpenSky ───────────────────────────────────────────
 print("[8/9] Air Traffic — OpenSky...")
 try:
