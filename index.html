@@ -301,7 +301,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
         </div>
         <div class="feed" id="quake-feed"><div class="nodata"><div class="nodata-ico loading">🌍</div><div>Loading USGS…</div></div></div>
       </div>
-      <div id="map-quakes" style="height:260px;border-radius:8px;overflow:hidden;background:#060d1a;position:relative;border:1px solid rgba(255,255,255,.07)"><canvas id="quake-canvas" style="width:100%;height:100%;display:block"></canvas></div>
+      <div id="map-quakes" style="height:260px;border-radius:8px;overflow:hidden;background:#060d1a;position:relative;border:1px solid rgba(255,255,255,.07)"><canvas id="quake-canvas" width="600" height="260" style="width:100%;height:100%;display:block"></canvas></div>
     </div>
   </div>
 
@@ -324,7 +324,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
           <div id="fire-regions" style="font-size:11px;color:var(--muted);font-family:var(--mono);line-height:1.9"></div>
         </div>
       </div>
-      <div id="map-fires" style="height:110px;border-radius:8px;overflow:hidden;background:#060d1a;position:relative;border:1px solid rgba(255,255,255,.07)"><canvas id="fires-canvas" style="width:100%;height:100%;display:block"></canvas></div>
+      <div id="map-fires" style="height:110px;border-radius:8px;overflow:hidden;background:#060d1a;position:relative;border:1px solid rgba(255,255,255,.07)"><canvas id="fires-canvas" width="600" height="110" style="width:100%;height:100%;display:block"></canvas></div>
     </div>
 
     <!-- FAO -->
@@ -571,7 +571,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
       <div class="card" style="padding:10px 12px;border-color:rgba(245,158,11,.1)"><div class="lbl">Asia-Pacific</div><div class="bsm" id="fl-as" style="color:var(--c-trade)">—</div></div>
       <div class="card" style="padding:10px 12px;border-color:rgba(245,158,11,.1)"><div class="lbl">Rest of world</div><div class="bsm" id="fl-oth" style="color:var(--c-trade)">—</div></div>
     </div>
-    <div id="map-flights" style="height:280px;border-radius:8px;overflow:hidden;background:#060d1a;position:relative;border:1px solid rgba(255,255,255,.07)"><canvas id="flights-canvas" style="width:100%;height:100%;display:block"></canvas></div>
+    <div id="map-flights" style="height:280px;border-radius:8px;overflow:hidden;background:#060d1a;position:relative;border:1px solid rgba(255,255,255,.07)"><canvas id="flights-canvas" width="900" height="280" style="width:100%;height:100%;display:block"></canvas></div>
   </div>
 
   <div class="g2">
@@ -762,7 +762,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
       <div class="lbl">🗺 Conflict map — ACLED geolocated events (30 days)
         <span class="ib">i<div class="ipop"><div class="ipt">ACLED conflict map</div><div class="ipb">Each dot = one geolocated conflict event in the last 30 days. Size proportional to fatalities. 🔴 Battles/Armed violence · 🟠 Explosions/Remote violence · 🟡 Protests/Riots. When ACLED credentials are configured, dots represent real geolocated events.</div><div class="ips">Source: ACLED · latitude/longitude fields · data/conflicts.json</div></div></span>
       </div>
-      <div id="map-conflicts" style="height:300px;margin-top:8px;border-radius:8px;overflow:hidden;background:#060d1a;position:relative;border:1px solid rgba(255,255,255,.07)"><canvas id="conflicts-canvas" style="width:100%;height:100%;display:block"></canvas></div>
+      <div id="map-conflicts" style="height:300px;margin-top:8px;border-radius:8px;overflow:hidden;background:#060d1a;position:relative;border:1px solid rgba(255,255,255,.07)"><canvas id="conflicts-canvas" width="800" height="300" style="width:100%;height:100%;display:block"></canvas></div>
       <div style="display:flex;gap:12px;margin-top:8px;font-size:10px;color:var(--muted)">
         <span>🔴 Battles/Violence</span><span>🟠 Explosions</span><span>🟡 Protests</span>
       </div>
@@ -1133,7 +1133,7 @@ async function loadUSGS(computeScore=true){
     }).join('');
 
     // Canvas map — no external tiles
-    requestAnimationFrame(() => drawQuakeMap(feats));
+    setTimeout(() => drawQuakeMap(feats), 50);
   }catch(e){safe('q-total','Err');console.error('USGS:',e);}
 }
 
@@ -1147,7 +1147,7 @@ function initFiresMap(){
   safe('fire-yoy','vs. same week last year: +8% (seasonal)');
   document.getElementById('fire-regions').innerHTML='Amazon: 3,240 🔥<br>C. Africa: 4,180 🔥<br>Siberia: 1,820 🔥<br>SE Asia: 2,100 🔥<br>Other: 3,480 🔥';
   // Draw canvas map after layout
-  requestAnimationFrame(() => { requestAnimationFrame(() => drawFiresMap()); });
+  setTimeout(() => drawFiresMap(), 50);
 }
 
 // FAO — 20 years hardcoded data as baseline, try API
@@ -1555,7 +1555,7 @@ async function loadSolarWind(){
 let flightDots2=[];
 async function initFlightMap(){
   // Draw canvas world map as background
-  requestAnimationFrame(() => { requestAnimationFrame(() => initFlightsMap()); });
+  setTimeout(() => initFlightsMap(), 50);
   await refreshFlights();
 }
 async function refreshFlights(){
@@ -1575,7 +1575,7 @@ async function refreshFlights(){
       else oth++;
     });
     // Draw all flights on canvas map
-    requestAnimationFrame(() => updateFlightDots(states));
+    setTimeout(() => updateFlightDots(states), 50);
     safe('fl-na',na.toLocaleString()); safe('fl-eu',eu.toLocaleString());
     safe('fl-as',as.toLocaleString()); safe('fl-oth',oth.toLocaleString());
     const base=14000; const vs=Math.round((states.length-base)/base*100);
@@ -1843,7 +1843,7 @@ async function loadConflicts(){
       {ll:[35.0,38.5],r:8,c:'#f59e0b',n:'Syria'},
     ];
     const staticForCanvas = zones.map(z=>({lon:z.ll[1],lat:z.ll[0],r:z.r,c:z.c,n:z.n}));
-    requestAnimationFrame(()=>drawConflictsMap(null, staticForCanvas));
+    setTimeout(()=>drawConflictsMap(null, staticForCanvas), 50);
     safe('cf-events','~2,400'); safe('cf-fat','~3,200');
     safe('cf-countries','50+'); safe('cf-civilian','~420');
     safe('cf-fat-civ','est. 30-day global · ACLED public sources');
@@ -1872,14 +1872,14 @@ async function loadConflicts(){
   addTick(`💥 ACLED: ${s.total_events} events · ${s.total_fatalities} fatalities · ${s.countries_affected} countries (30d)`);
   // Real geolocated points
   if(d.live_feed?.length){
-    requestAnimationFrame(()=>drawConflictsMap(d.live_feed, null));
+    setTimeout(()=>drawConflictsMap(d.live_feed, null), 50);
   } else {
     const fallbackZones=[
       {lon:30.5,lat:15.5,r:18,c:'#ff3232',n:'Sudan'},{lon:34.3,lat:31.4,r:16,c:'#ff3232',n:'Gaza'},
       {lon:31.5,lat:48.8,r:14,c:'#ff5a20',n:'Ukraine'},{lon:39,lat:11,r:11,c:'#f59e0b',n:'Ethiopia'},
       {lon:1.5,lat:13.5,r:10,c:'#f59e0b',n:'Sahel'}
     ];
-    requestAnimationFrame(()=>drawConflictsMap(null, fallbackZones));
+    setTimeout(()=>drawConflictsMap(null, fallbackZones), 50);
   }
   // Top countries
   const tc=document.getElementById('cf-top-countries');
@@ -2292,19 +2292,12 @@ function getWorldMapCanvas(W, H, opts) {
 }
 
 // ── QUAKE MAP ──
-function initQuakeMap() {
-  const canvas = document.getElementById('quake-canvas');
-  if (!canvas) return;
-  canvas.width = canvas.offsetWidth || 600;
-  canvas.height = canvas.offsetHeight || 260;
-}
+function initQuakeMap() {}
 
 function drawQuakeMap(feats) {
   const canvas = document.getElementById('quake-canvas');
   if (!canvas) return;
-  const W = canvas.width || canvas.offsetWidth || 600;
-  const H = canvas.height || canvas.offsetHeight || 260;
-  canvas.width = W; canvas.height = H;
+  const W = 600, H = 260;
   const ctx = canvas.getContext('2d');
   // Draw base world map
   ctx.drawImage(getWorldMapCanvas(W, H, {bg:'#040c18',land:'#0d2240',border:'#1a3560'}), 0, 0);
@@ -2331,9 +2324,7 @@ function drawQuakeMap(feats) {
 function drawFiresMap() {
   const canvas = document.getElementById('fires-canvas');
   if (!canvas) return;
-  canvas.width = canvas.offsetWidth || 600;
-  canvas.height = canvas.offsetHeight || 110;
-  const W = canvas.width, H = canvas.height;
+  const W = 600, H = 110;
   const ctx = canvas.getContext('2d');
   ctx.drawImage(getWorldMapCanvas(W, H, {bg:'#080800',land:'#1a1400',border:'#2a2000'}), 0, 0);
   const zones = [
@@ -2359,10 +2350,7 @@ let flightAnimFrame = null, flightDots = [];
 function initFlightsMap() {
   const canvas = document.getElementById('flights-canvas');
   if (!canvas) return;
-  canvas.width = canvas.offsetWidth || 900;
-  canvas.height = canvas.offsetHeight || 280;
-  // Draw base map once
-  const W = canvas.width, H = canvas.height;
+  const W = 900, H = 280;
   const ctx = canvas.getContext('2d');
   ctx.drawImage(getWorldMapCanvas(W, H, {bg:'#060c14',land:'#0d2030',border:'#1a3050'}), 0, 0);
 }
@@ -2370,7 +2358,7 @@ function initFlightsMap() {
 function updateFlightDots(states) {
   const canvas = document.getElementById('flights-canvas');
   if (!canvas) return;
-  const W = canvas.width, H = canvas.height;
+  const W = 900, H = 280;
   const ctx = canvas.getContext('2d');
   // Redraw base
   ctx.drawImage(getWorldMapCanvas(W, H, {bg:'#060c14',land:'#0d2030',border:'#1a3050'}), 0, 0);
@@ -2402,9 +2390,7 @@ function updateFlightDots(states) {
 function drawConflictsMap(events, staticZones) {
   const canvas = document.getElementById('conflicts-canvas');
   if (!canvas) return;
-  canvas.width = canvas.offsetWidth || 800;
-  canvas.height = canvas.offsetHeight || 300;
-  const W = canvas.width, H = canvas.height;
+  const W = 800, H = 300;
   const ctx = canvas.getContext('2d');
   ctx.drawImage(getWorldMapCanvas(W, H, {bg:'#0f0006',land:'#1a0010',border:'#2a0020'}), 0, 0);
 
