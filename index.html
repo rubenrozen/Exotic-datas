@@ -696,13 +696,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
           <div id="ais-status" style="font-size:10px;font-family:var(--mono);color:var(--muted)">●  disconnected</div>
         </div>
       </div>
-      <!-- AISStream key input -->
-      <div id="ais-key-setup" style="margin-bottom:8px;display:flex;gap:6px;align-items:center">
-        <input id="ais-key-input" type="password" placeholder="Paste your AISStream API key (free at aisstream.io)"
-          style="flex:1;background:rgba(255,255,255,.05);border:1px solid var(--bdr);border-radius:6px;padding:6px 10px;color:var(--txt);font-family:var(--mono);font-size:11px;outline:none">
-        <button onclick="connectAIS()" class="hz" style="padding:6px 14px;background:rgba(59,170,255,.15);border-color:rgba(59,170,255,.3);color:var(--c-wthr)">Connect</button>
-        <button onclick="clearAISKey()" class="hz" style="padding:6px 10px;font-size:10px">✕</button>
-      </div>
+      <!-- AISStream connects automatically from data/config.json -->
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:8px">
         <div style="background:rgba(59,170,255,.06);border:1px solid rgba(59,170,255,.1);border-radius:6px;padding:7px 10px">
           <div class="lbl" style="font-size:9px">Cargo</div><div class="bsm" id="ais-cargo" style="color:var(--c-wthr);font-size:20px">—</div>
@@ -2924,31 +2918,11 @@ function getShipCategory(typeCode) {
   return 'other';
 }
 
-function connectAIS() {
-  const input = document.getElementById('ais-key-input');
-  const key = input?.value?.trim() || localStorage.getItem('ais_key') || '';
-  if (!key) {
-    alert('Please enter your AISStream API key.\nGet a free key at aisstream.io');
-    return;
-  }
-  localStorage.setItem('ais_key', key);
-  if (input) input.value = key;
-  startAISStream(key);
-}
-
+// connectAIS/clearAISKey kept for console use if needed
+function connectAIS(key) { if (key) startAISStream(key); }
 function clearAISKey() {
-  localStorage.removeItem('ais_key');
   if (aisSocket) { aisSocket.close(); aisSocket = null; }
   aisVessels = {};
-  safe('ais-count', '—');
-  safe('ais-cargo', '—'); safe('ais-tanker', '—');
-  safe('ais-passenger', '—'); safe('ais-other', '—');
-  const statusEl = document.getElementById('ais-status');
-  if (statusEl) { statusEl.textContent = '●  disconnected'; statusEl.style.color = 'var(--muted)'; }
-  const canvas = document.getElementById('maritime-canvas');
-  if (canvas) canvas.getContext('2d').clearRect(0, 0, 977, 816);
-  const keyInput = document.getElementById('ais-key-input');
-  if (keyInput) keyInput.value = '';
 }
 
 function startAISStream(key) {
@@ -3080,14 +3054,23 @@ function drawMaritimeMap() {
   }
 }
 
-// Auto-connect if key stored
-function initMaritimeMap() {
-  const storedKey = localStorage.getItem('ais_key');
-  const keyInput = document.getElementById('ais-key-input');
-  const setupDiv = document.getElementById('ais-key-setup');
-  if (storedKey) {
-    if (keyInput) keyInput.value = storedKey;
-    startAISStream(storedKey);
+// Auto-connect from data/config.json (key injected by GitHub Actions)
+async function initMaritimeMap() {
+  try {
+    const cfg = await loadJSON('config.json');
+    const key = cfg?.ais_key;
+    if (key) {
+      startAISStream(key);
+    } else {
+      const statusEl = document.getElementById('ais-status');
+      if (statusEl) {
+        statusEl.innerHTML = '●  add <code>AIS_KEY</code> to GitHub Secrets';
+        statusEl.style.color = 'var(--muted)';
+      }
+    }
+  } catch {
+    const statusEl = document.getElementById('ais-status');
+    if (statusEl) { statusEl.textContent = '●  run GitHub Actions to connect'; statusEl.style.color = 'var(--muted)'; }
   }
 }
 
