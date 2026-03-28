@@ -1,130 +1,274 @@
 {
-  "current": 116.1,
-  "prev_month": 118.2,
-  "delta": -2.1,
+  "current": 127.1,
+  "prev_month": 124.9,
+  "delta_month": 2.2,
+  "year_ago": 154.3,
+  "delta_year": -27.2,
+  "max_ever": 237.9,
+  "milestones": {
+    "2007_crisis": 127.2,
+    "2008_peak": 213.5,
+    "2011_peak": 237.9,
+    "2022_peak": 159.7,
+    "current": 127.1
+  },
   "series": [
     {
-      "date": "2023",
-      "month": 1,
-      "value": 118.0
+      "year": 2004,
+      "month": "01",
+      "value": 107.1
     },
     {
-      "date": "2023",
-      "month": 2,
-      "value": 118.2
+      "year": 2005,
+      "month": "01",
+      "value": 116.0
     },
     {
-      "date": "2023",
-      "month": 3,
-      "value": 118.4
+      "year": 2006,
+      "month": "01",
+      "value": 117.7
     },
     {
-      "date": "2023",
-      "month": 4,
-      "value": 117.1
+      "year": 2007,
+      "month": "01",
+      "value": 127.2
     },
     {
-      "date": "2023",
-      "month": 5,
-      "value": 117.3
+      "year": 2008,
+      "month": "01",
+      "value": 148.3
     },
     {
-      "date": "2023",
-      "month": 6,
-      "value": 117.5
+      "year": 2008,
+      "month": "06",
+      "value": 213.5
     },
     {
-      "date": "2023",
-      "month": 7,
-      "value": 116.2
+      "year": 2008,
+      "month": "12",
+      "value": 143.4
     },
     {
-      "date": "2023",
-      "month": 8,
-      "value": 116.4
+      "year": 2009,
+      "month": "06",
+      "value": 123.0
     },
     {
-      "date": "2023",
-      "month": 9,
-      "value": 116.6
+      "year": 2009,
+      "month": "12",
+      "value": 135.5
     },
     {
-      "date": "2023",
-      "month": 10,
-      "value": 115.3
+      "year": 2010,
+      "month": "06",
+      "value": 165.4
     },
     {
-      "date": "2023",
-      "month": 11,
-      "value": 115.5
+      "year": 2010,
+      "month": "12",
+      "value": 188.0
     },
     {
-      "date": "2023",
-      "month": 12,
-      "value": 115.7
+      "year": 2011,
+      "month": "02",
+      "value": 237.9
     },
     {
-      "date": "2024",
-      "month": 1,
-      "value": 114.4
+      "year": 2011,
+      "month": "12",
+      "value": 192.5
     },
     {
-      "date": "2024",
-      "month": 2,
-      "value": 114.6
+      "year": 2012,
+      "month": "06",
+      "value": 213.3
     },
     {
-      "date": "2024",
-      "month": 3,
-      "value": 114.8
+      "year": 2012,
+      "month": "12",
+      "value": 205.6
     },
     {
-      "date": "2024",
-      "month": 4,
-      "value": 113.5
+      "year": 2013,
+      "month": "06",
+      "value": 211.2
     },
     {
-      "date": "2024",
-      "month": 5,
-      "value": 113.7
+      "year": 2013,
+      "month": "12",
+      "value": 199.1
     },
     {
-      "date": "2024",
-      "month": 6,
-      "value": 113.9
+      "year": 2014,
+      "month": "06",
+      "value": 201.3
     },
     {
-      "date": "2024",
-      "month": 7,
-      "value": 112.6
+      "year": 2014,
+      "month": "12",
+      "value": 173.2
     },
     {
-      "date": "2024",
-      "month": 8,
-      "value": 112.8
+      "year": 2015,
+      "month": "06",
+      "value": 165.9
     },
     {
-      "date": "2024",
-      "month": 9,
-      "value": 113.0
+      "year": 2015,
+      "month": "12",
+      "value": 154.3
     },
     {
-      "date": "2024",
-      "month": 10,
-      "value": 111.7
+      "year": 2016,
+      "month": "06",
+      "value": 163.1
     },
     {
-      "date": "2024",
-      "month": 11,
-      "value": 111.9
+      "year": 2016,
+      "month": "12",
+      "value": 171.7
     },
     {
-      "date": "2024",
-      "month": 12,
-      "value": 112.1
+      "year": 2017,
+      "month": "06",
+      "value": 174.9
+    },
+    {
+      "year": 2017,
+      "month": "12",
+      "value": 180.5
+    },
+    {
+      "year": 2018,
+      "month": "06",
+      "value": 172.1
+    },
+    {
+      "year": 2018,
+      "month": "12",
+      "value": 161.6
+    },
+    {
+      "year": 2019,
+      "month": "06",
+      "value": 171.9
+    },
+    {
+      "year": 2019,
+      "month": "12",
+      "value": 172.8
+    },
+    {
+      "year": 2020,
+      "month": "03",
+      "value": 170.1
+    },
+    {
+      "year": 2020,
+      "month": "06",
+      "value": 164.9
+    },
+    {
+      "year": 2020,
+      "month": "12",
+      "value": 182.5
+    },
+    {
+      "year": 2021,
+      "month": "03",
+      "value": 118.5
+    },
+    {
+      "year": 2021,
+      "month": "06",
+      "value": 124.6
+    },
+    {
+      "year": 2021,
+      "month": "09",
+      "value": 130.0
+    },
+    {
+      "year": 2021,
+      "month": "12",
+      "value": 133.7
+    },
+    {
+      "year": 2022,
+      "month": "02",
+      "value": 140.7
+    },
+    {
+      "year": 2022,
+      "month": "03",
+      "value": 159.7
+    },
+    {
+      "year": 2022,
+      "month": "06",
+      "value": 154.3
+    },
+    {
+      "year": 2022,
+      "month": "09",
+      "value": 136.3
+    },
+    {
+      "year": 2022,
+      "month": "12",
+      "value": 132.4
+    },
+    {
+      "year": 2023,
+      "month": "03",
+      "value": 127.8
+    },
+    {
+      "year": 2023,
+      "month": "06",
+      "value": 122.3
+    },
+    {
+      "year": 2023,
+      "month": "09",
+      "value": 121.4
+    },
+    {
+      "year": 2023,
+      "month": "12",
+      "value": 118.5
+    },
+    {
+      "year": 2024,
+      "month": "03",
+      "value": 117.8
+    },
+    {
+      "year": 2024,
+      "month": "06",
+      "value": 120.6
+    },
+    {
+      "year": 2024,
+      "month": "09",
+      "value": 124.4
+    },
+    {
+      "year": 2024,
+      "month": "12",
+      "value": 127.1
+    },
+    {
+      "year": 2025,
+      "month": "01",
+      "value": 124.9
+    },
+    {
+      "year": 2025,
+      "month": "02",
+      "value": 127.1
     }
   ],
-  "score": 55,
-  "updated": "2026-03-25T07:12:28.033452",
-  "source": "fallback"
+  "score": 71,
+  "updated": "2026-03-28T15:19:55.167137Z"
 }
