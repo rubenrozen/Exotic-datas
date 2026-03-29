@@ -2446,7 +2446,7 @@ async function fetchArxiv(cat){
   if(!list) return;
   list.innerHTML = '<div class="nodata loading"><div class="nodata-ico">🔬</div><div>Loading…</div></div>';
 
-  // Primary: data/arxiv.json (GitHub Actions)
+  // 1. data/arxiv.json — generated server-side by GitHub Actions (most reliable)
   try {
     const d = await loadJSON('arxiv.json');
     if (d && d[cat] && d[cat].papers && d[cat].papers.length > 0) {
@@ -2455,52 +2455,78 @@ async function fetchArxiv(cat){
     }
   } catch(e) {}
 
-  // Fallback A: rss2json.com — proxies RSS feeds with CORS (free, 1 req/sec)
+  // 2. OpenAlex — open academic graph, CORS enabled, no key needed
+  // Indexes arXiv + 250M+ papers
+  const OPENALEX_TOPICS = {
+    'cs.AI':   'machine learning artificial intelligence',
+    'q-fin':   'quantitative finance econometrics',
+    'physics': 'quantum physics condensed matter',
+    'econ':    'macroeconomics economic growth',
+    'cs.CR':   'cryptography cybersecurity',
+    'q-bio':   'computational biology bioinformatics',
+  };
+  try {
+    const q = encodeURIComponent(OPENALEX_TOPICS[cat] || cat);
+    const url = 'https://api.openalex.org/works?search=' + q +
+      '&sort=publication_date:desc&per_page=8' +
+      '&select=title,abstract_inverted_index,authorships,publication_date,primary_location,open_access' +
+      '&mailto=earthpulse@example.com';
+    const d = await fetch(url, {signal: AbortSignal.timeout(12000)}).then(r => r.json());
+    const results = d.results || [];
+    if (results.length > 0) {
+      const papers = results.map(function(w) {
+        // Reconstruct abstract from inverted index
+        let abstract = '';
+        const inv = w.abstract_inverted_index;
+        if (inv) {
+          const words = [];
+          Object.entries(inv).forEach(function(e){ e[1].forEach(function(i){ words[i]=e[0]; }); });
+          abstract = words.filter(Boolean).join(' ').slice(0,200);
+        }
+        const authors = (w.authorships||[]).slice(0,3).map(function(a){
+          return a.author && a.author.display_name ? a.author.display_name : '';
+        }).filter(Boolean);
+        const link = (w.primary_location && w.primary_location.landing_page_url) ||
+                     (w.open_access && w.open_access.oa_url) || '';
+        return {
+          title: w.title || '',
+          summary: abstract,
+          authors: authors,
+          date: (w.publication_date || '').slice(0,10),
+          link: link
+        };
+      });
+      renderArxivPapers(list, papers, cat);
+      addTick('🔬 arXiv ' + cat + ': ' + papers.length + ' papers (OpenAlex)');
+      return;
+    }
+  } catch(e) { console.warn('OpenAlex:', e); }
+
+  // 3. rss2json fallback
   try {
     const rssUrl = 'https://arxiv.org/rss/' + cat.replace('.','_');
-    const apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(rssUrl) + '&count=8';
-    const d = await fetch(apiUrl, {signal: AbortSignal.timeout(10000)}).then(r => r.json());
-    if (d.status === 'ok' && d.items && d.items.length > 0) {
+    const url = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(rssUrl) + '&count=8';
+    const d = await fetch(url, {signal: AbortSignal.timeout(8000)}).then(r => r.json());
+    if (d.status === 'ok' && (d.items||[]).length > 0) {
       const papers = d.items.map(function(item) {
         return {
           title: item.title || '',
-          summary: (item.description || item.content || '').replace(/<[^>]+>/g,'').trim().slice(0,200),
+          summary: (item.description||'').replace(/<[^>]+>/g,'').trim().slice(0,200),
           authors: item.author ? [item.author] : [],
-          date: (item.pubDate || '').slice(0,10),
-          link: item.link || item.guid || ''
+          date: (item.pubDate||'').slice(0,10),
+          link: item.link || ''
         };
       });
       renderArxivPapers(list, papers, cat);
       addTick('🔬 arXiv ' + cat + ': ' + papers.length + ' papers');
       return;
     }
-  } catch(e) { console.warn('rss2json:', e); }
+  } catch(e) {}
 
-  // Fallback B: feed2json.org
-  try {
-    const rssUrl = 'https://arxiv.org/rss/' + cat.replace('.','_');
-    const apiUrl = 'https://feed2json.org/convert?url=' + encodeURIComponent(rssUrl);
-    const d = await fetch(apiUrl, {signal: AbortSignal.timeout(10000)}).then(r => r.json());
-    const items = d.items || d.entries || [];
-    if (items.length > 0) {
-      const papers = items.slice(0,8).map(function(item) {
-        return {
-          title: item.title && item.title.value ? item.title.value : (item.title || ''),
-          summary: (item.summary && item.summary.value ? item.summary.value : (item.content_text || '')).replace(/<[^>]+>/g,'').slice(0,200),
-          authors: (item.authors || []).slice(0,3).map(function(a){ return a.name || ''; }),
-          date: (item.date_published || item.published || '').slice(0,10),
-          link: item.url || item.id || ''
-        };
-      });
-      renderArxivPapers(list, papers, cat);
-      addTick('🔬 arXiv ' + cat + ': ' + papers.length + ' papers');
-      return;
-    }
-  } catch(e) { console.warn('feed2json:', e); }
-
+  // 4. Last resort
   list.innerHTML = '<div style="padding:12px;font-size:11px;color:var(--muted);font-family:var(--mono);line-height:2">' +
-    'Run GitHub Actions to load arXiv papers.<br>' +
-    '<a href="https://arxiv.org/list/' + cat + '/recent" target="_blank" style="color:var(--c-trends)">arxiv.org/list/' + cat + '/recent ↗</a>' +
+    'Upload new fetch_data.py → run GitHub Actions.<br>' +
+    '<a href="https://arxiv.org/list/' + cat + '/recent" target="_blank" style="color:var(--c-trends)">arxiv.org → ' + cat + ' ↗</a>' +
     '</div>';
 }
 
@@ -2508,12 +2534,12 @@ function renderArxivPapers(list, papers, cat) {
   list.innerHTML = papers.map(function(p) {
     const link = (p.link || '#').replace(/'/g,'%27');
     return '<div class="ax-item" onclick="window.open(\'' + link + '\',\'_blank\')">' +
-      '<div class="ax-title">' + (p.title || '') + '</div>' +
-      '<div style="font-size:10px;color:var(--muted);margin:3px 0;line-height:1.4">' + ((p.summary||'').slice(0,130)) + '…</div>' +
-      '<div class="ax-meta">' + (Array.isArray(p.authors) ? p.authors.join(' · ') : (p.authors||'')) + ' · ' + (p.date||'') + '</div>' +
+      '<div class="ax-title">' + (p.title||'') + '</div>' +
+      '<div style="font-size:10px;color:var(--muted);margin:3px 0;line-height:1.4">' + (p.summary||'').slice(0,130) + '…</div>' +
+      '<div class="ax-meta">' + (Array.isArray(p.authors) ? p.authors.join(' · ') : '') + ' · ' + (p.date||'') + '</div>' +
       '</div>';
   }).join('');
-  addTick('🔬 arXiv ' + cat + ': ' + papers.length + ' papers · ' + ((papers[0]||{}).title||'').slice(0,50));
+  addTick('🔬 ' + cat + ': ' + papers.length + ' papers · ' + ((papers[0]||{}).title||'').slice(0,50));
 }
 
 
