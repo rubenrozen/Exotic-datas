@@ -2449,49 +2449,73 @@ async function fetchWiki(lang){
 async function fetchArxiv(cat){
   const list = document.getElementById('arxiv-list');
   if(!list) return;
-  list.innerHTML = '<div class="nodata loading"><div class="nodata-ico">\u{1F52C}</div><div>Loading arXiv\u2026</div></div>';
+  list.innerHTML = '<div class="nodata loading"><div class="nodata-ico">🔬</div><div>Loading…</div></div>';
 
-  // Primary: data/arxiv.json fetched server-side by GitHub Actions
+  // Map our categories to Semantic Scholar fields of study
+  const S2_FIELDS = {
+    'cs.AI':   'Computer Science',
+    'q-fin':   'Economics',
+    'physics': 'Physics',
+    'econ':    'Economics',
+    'cs.CR':   'Computer Science',
+    'q-bio':   'Biology',
+  };
+  const S2_QUERIES = {
+    'cs.AI':   'artificial intelligence machine learning',
+    'q-fin':   'quantitative finance',
+    'physics': 'physics',
+    'econ':    'economics',
+    'cs.CR':   'cybersecurity cryptography',
+    'q-bio':   'computational biology bioinformatics',
+  };
+
+  // ── Primary: data/arxiv.json (GitHub Actions, server-side) ──
   try {
     const d = await loadJSON('arxiv.json');
     if (d && d[cat] && d[cat].papers && d[cat].papers.length > 0) {
-      const papers = d[cat].papers;
-      list.innerHTML = papers.map(p =>
-        `<div class="ax-item" onclick="window.open('${p.link}','_blank')">` +
-        `<div class="ax-title">${p.title}</div>` +
-        `<div style="font-size:10px;color:var(--muted);margin:3px 0;line-height:1.4">${(p.summary||'').slice(0,130)}\u2026</div>` +
-        `<div class="ax-meta">${(p.authors||[]).join(' \u00b7 ')} \u00b7 ${p.date}</div></div>`
-      ).join('');
-      addTick(`\u{1F52C} arXiv ${cat}: ${papers.length} papers`);
+      renderArxivPapers(list, d[cat].papers, cat);
       return;
     }
   } catch(e) {}
 
-  // Fallback: CORS proxies
-  const base = `https://export.arxiv.org/api/query?search_query=cat:${encodeURIComponent(cat)}&sortBy=submittedDate&sortOrder=descending&max_results=8`;
-  for (const proxy of [`https://corsproxy.io/?url=${encodeURIComponent(base)}`, `https://api.allorigins.win/raw?url=${encodeURIComponent(base)}`]) {
-    try {
-      const txt = await fetch(proxy, {signal: AbortSignal.timeout(10000)}).then(r => r.text());
-      const xml = new DOMParser().parseFromString(txt, 'text/xml');
-      const entries = Array.from(xml.querySelectorAll('entry'));
-      if (!entries.length) continue;
-      list.innerHTML = entries.map(e => {
-        const title = (e.querySelector('title')?.textContent||'').replace(/\s+/g,' ').trim();
-        const authors = Array.from(e.querySelectorAll('author name')).slice(0,3).map(a => a.textContent.trim()).join(' \u00b7 ');
-        const date = (e.querySelector('published')?.textContent||'').slice(0,10);
-        const link = (e.querySelector('id')?.textContent||'').trim();
-        const summary = (e.querySelector('summary')?.textContent||'').replace(/\s+/g,' ').trim().slice(0,130);
-        return `<div class="ax-item" onclick="window.open('${link}','_blank')">` +
-          `<div class="ax-title">${title}</div>` +
-          `<div style="font-size:10px;color:var(--muted);margin:3px 0;line-height:1.4">${summary}\u2026</div>` +
-          `<div class="ax-meta">${authors} \u00b7 ${date}</div></div>`;
-      }).join('');
-      addTick(`\u{1F52C} arXiv ${cat}: ${entries.length} papers`);
+  // ── Fallback: Semantic Scholar API (CORS enabled, free, no key) ──
+  try {
+    const query = encodeURIComponent(S2_QUERIES[cat] || cat);
+    const fields = 'title,authors,year,abstract,externalIds,openAccessPdf,publicationDate';
+    const url = `https://api.semanticscholar.org/graph/v1/paper/search?query=${query}&fields=${fields}&limit=8&sort=publicationDate`;
+    const d = await fetch(url, {signal: AbortSignal.timeout(10000)}).then(r => r.json());
+    const papers = (d.data || []).map(p => ({
+      title: p.title || '',
+      summary: (p.abstract || '').slice(0, 200),
+      authors: (p.authors || []).slice(0,3).map(a => a.name),
+      date: p.publicationDate || String(p.year || ''),
+      link: p.externalIds?.ArXiv
+        ? `https://arxiv.org/abs/${p.externalIds.ArXiv}`
+        : (p.openAccessPdf?.url || `https://www.semanticscholar.org/paper/${p.paperId}`)
+    }));
+    if (papers.length > 0) {
+      renderArxivPapers(list, papers, cat);
+      addTick('🔬 arXiv ' + cat + ': ' + papers.length + ' papers (Semantic Scholar)');
       return;
-    } catch(e2) {}
-  }
+    }
+  } catch(e) { console.warn('Semantic Scholar:', e); }
 
-  list.innerHTML = `<div style="padding:12px;font-size:11px;color:var(--muted);font-family:var(--mono);line-height:2">Run GitHub Actions to load arXiv papers.<br><a href="https://arxiv.org/list/${cat}/recent" target="_blank" style="color:var(--c-trends)">arxiv.org \u2192 ${cat} \u2197</a></div>`;
+  // ── Last resort: direct link ──
+  list.innerHTML = '<div style="padding:12px;font-size:11px;color:var(--muted);font-family:var(--mono);line-height:2">' +
+    'Run GitHub Actions to load arXiv papers server-side.<br>' +
+    'Or browse: <a href="https://arxiv.org/list/' + cat + '/recent" target="_blank" style="color:var(--c-trends)">arxiv.org/list/' + cat + '/recent ↗</a>' +
+    '</div>';
+}
+
+function renderArxivPapers(list, papers, cat) {
+  list.innerHTML = papers.map(p =>
+    '<div class="ax-item" onclick="window.open(\'' + (p.link||'#').replace(/'/g,'%27') + '\',\'_blank\')">' +
+    '<div class="ax-title">' + (p.title||'') + '</div>' +
+    '<div style="font-size:10px;color:var(--muted);margin:3px 0;line-height:1.4">' + (p.summary||'').slice(0,130) + '…</div>' +
+    '<div class="ax-meta">' + (Array.isArray(p.authors) ? p.authors.join(' · ') : (p.authors||'')) + ' · ' + (p.date||'') + '</div>' +
+    '</div>'
+  ).join('');
+  addTick('🔬 arXiv ' + cat + ': ' + papers.length + ' papers · ' + (papers[0]?.title||'').slice(0,50));
 }
 
 
