@@ -1,5 +1,5 @@
 {
-  "total": 552,
+  "total": 1080,
   "by_region": {
     "Amazon": 0,
     "C.Africa": 143,
@@ -7,8 +7,8 @@
     "Siberia": 45,
     "N.America": 0,
     "SE Asia": 0,
-    "Australia": 0,
-    "Other": 351
+    "Australia": 22,
+    "Other": 857
   },
   "hotspots": [
     {
@@ -2770,10 +2770,2650 @@
       "lat": -32.94,
       "lon": 18.758,
       "brightness": 314.6
+    },
+    {
+      "lat": 59.131,
+      "lon": 37.788,
+      "brightness": 311.4
+    },
+    {
+      "lat": 59.149,
+      "lon": 37.84,
+      "brightness": 295.4
+    },
+    {
+      "lat": 59.15,
+      "lon": 37.857,
+      "brightness": 295.0
+    },
+    {
+      "lat": 59.153,
+      "lon": 37.831,
+      "brightness": 298.5
+    },
+    {
+      "lat": 59.156,
+      "lon": 37.833,
+      "brightness": 295.1
+    },
+    {
+      "lat": 60.724,
+      "lon": 41.979,
+      "brightness": 298.1
+    },
+    {
+      "lat": 64.648,
+      "lon": 30.708,
+      "brightness": 308.6
+    },
+    {
+      "lat": 64.648,
+      "lon": 30.715,
+      "brightness": 295.2
+    },
+    {
+      "lat": 65.562,
+      "lon": 22.215,
+      "brightness": 306.6
+    },
+    {
+      "lat": 65.563,
+      "lon": 22.228,
+      "brightness": 297.8
+    },
+    {
+      "lat": 65.565,
+      "lon": 22.219,
+      "brightness": 309.2
+    },
+    {
+      "lat": 58.685,
+      "lon": 17.131,
+      "brightness": 332.1
+    },
+    {
+      "lat": 59.129,
+      "lon": 9.619,
+      "brightness": 302.8
+    },
+    {
+      "lat": 59.386,
+      "lon": 28.463,
+      "brightness": 309.4
+    },
+    {
+      "lat": 59.402,
+      "lon": 28.491,
+      "brightness": 325.5
+    },
+    {
+      "lat": 59.403,
+      "lon": 28.491,
+      "brightness": 323.4
+    },
+    {
+      "lat": 59.507,
+      "lon": 32.091,
+      "brightness": 319.0
+    },
+    {
+      "lat": 59.705,
+      "lon": 28.432,
+      "brightness": 319.3
+    },
+    {
+      "lat": 59.706,
+      "lon": 28.427,
+      "brightness": 350.9
+    },
+    {
+      "lat": 59.713,
+      "lon": 28.428,
+      "brightness": 297.0
+    },
+    {
+      "lat": 60.338,
+      "lon": 28.729,
+      "brightness": 367.0
+    },
+    {
+      "lat": 60.34,
+      "lon": 28.724,
+      "brightness": 295.0
+    },
+    {
+      "lat": 60.342,
+      "lon": 28.735,
+      "brightness": 312.8
+    },
+    {
+      "lat": 60.583,
+      "lon": 15.817,
+      "brightness": 308.0
+    },
+    {
+      "lat": 60.611,
+      "lon": 16.788,
+      "brightness": 296.8
+    },
+    {
+      "lat": 52.15,
+      "lon": 10.402,
+      "brightness": 313.5
+    },
+    {
+      "lat": 52.151,
+      "lon": 10.396,
+      "brightness": 326.4
+    },
+    {
+      "lat": 52.153,
+      "lon": 10.404,
+      "brightness": 327.7
+    },
+    {
+      "lat": 52.157,
+      "lon": 10.406,
+      "brightness": 342.1
+    },
+    {
+      "lat": 52.159,
+      "lon": 10.414,
+      "brightness": 306.9
+    },
+    {
+      "lat": 52.163,
+      "lon": 10.416,
+      "brightness": 328.8
+    },
+    {
+      "lat": 52.165,
+      "lon": 10.425,
+      "brightness": 295.6
+    },
+    {
+      "lat": 52.171,
+      "lon": 10.414,
+      "brightness": 327.0
+    },
+    {
+      "lat": 52.174,
+      "lon": 10.416,
+      "brightness": 327.0
+    },
+    {
+      "lat": 52.353,
+      "lon": 9.89,
+      "brightness": 297.5
+    },
+    {
+      "lat": 52.467,
+      "lon": 7.318,
+      "brightness": 305.6
+    },
+    {
+      "lat": 52.475,
+      "lon": 4.611,
+      "brightness": 296.5
+    },
+    {
+      "lat": 52.476,
+      "lon": 4.582,
+      "brightness": 306.8
+    },
+    {
+      "lat": 52.478,
+      "lon": 4.594,
+      "brightness": 295.6
+    },
+    {
+      "lat": 52.482,
+      "lon": 4.59,
+      "brightness": 332.7
+    },
+    {
+      "lat": 52.483,
+      "lon": 4.585,
+      "brightness": 302.2
+    },
+    {
+      "lat": 52.485,
+      "lon": 4.591,
+      "brightness": 299.6
+    },
+    {
+      "lat": 52.486,
+      "lon": 4.586,
+      "brightness": 296.5
+    },
+    {
+      "lat": 52.493,
+      "lon": 4.612,
+      "brightness": 344.6
+    },
+    {
+      "lat": 52.707,
+      "lon": 9.517,
+      "brightness": 297.3
+    },
+    {
+      "lat": 53.339,
+      "lon": -1.757,
+      "brightness": 303.4
+    },
+    {
+      "lat": 53.52,
+      "lon": 9.904,
+      "brightness": 324.1
+    },
+    {
+      "lat": 53.521,
+      "lon": 9.898,
+      "brightness": 307.1
+    },
+    {
+      "lat": 53.523,
+      "lon": 9.906,
+      "brightness": 305.0
+    },
+    {
+      "lat": 53.525,
+      "lon": 9.9,
+      "brightness": 296.4
+    },
+    {
+      "lat": 53.565,
+      "lon": -0.597,
+      "brightness": 329.3
+    },
+    {
+      "lat": 53.569,
+      "lon": -0.596,
+      "brightness": 309.1
+    },
+    {
+      "lat": 53.57,
+      "lon": -0.604,
+      "brightness": 310.9
+    },
+    {
+      "lat": 53.583,
+      "lon": -0.623,
+      "brightness": 298.7
+    },
+    {
+      "lat": 53.636,
+      "lon": -0.246,
+      "brightness": 300.5
+    },
+    {
+      "lat": 55.467,
+      "lon": 8.609,
+      "brightness": 327.9
+    },
+    {
+      "lat": 57.01,
+      "lon": 1.841,
+      "brightness": 300.0
+    },
+    {
+      "lat": 57.011,
+      "lon": 1.834,
+      "brightness": 341.9
+    },
+    {
+      "lat": 57.015,
+      "lon": 1.835,
+      "brightness": 307.4
+    },
+    {
+      "lat": 57.063,
+      "lon": 9.975,
+      "brightness": 328.0
+    },
+    {
+      "lat": 58.347,
+      "lon": 11.421,
+      "brightness": 296.5
+    },
+    {
+      "lat": 40.516,
+      "lon": 17.205,
+      "brightness": 302.7
+    },
+    {
+      "lat": 45.381,
+      "lon": 11.947,
+      "brightness": 305.0
+    },
+    {
+      "lat": 48.387,
+      "lon": 2.979,
+      "brightness": 313.9
+    },
+    {
+      "lat": 48.598,
+      "lon": 7.82,
+      "brightness": 309.4
+    },
+    {
+      "lat": 48.61,
+      "lon": 6.116,
+      "brightness": 305.5
+    },
+    {
+      "lat": 48.611,
+      "lon": 6.11,
+      "brightness": 295.6
+    },
+    {
+      "lat": 48.69,
+      "lon": 6.967,
+      "brightness": 301.6
+    },
+    {
+      "lat": 49.358,
+      "lon": 6.746,
+      "brightness": 337.7
+    },
+    {
+      "lat": 49.503,
+      "lon": 5.96,
+      "brightness": 324.3
+    },
+    {
+      "lat": 50.763,
+      "lon": 5.668,
+      "brightness": 301.2
+    },
+    {
+      "lat": 51.027,
+      "lon": 2.272,
+      "brightness": 313.6
+    },
+    {
+      "lat": 51.03,
+      "lon": 2.278,
+      "brightness": 296.5
+    },
+    {
+      "lat": 51.033,
+      "lon": 2.28,
+      "brightness": 328.4
+    },
+    {
+      "lat": 51.036,
+      "lon": 2.286,
+      "brightness": 327.5
+    },
+    {
+      "lat": 51.044,
+      "lon": 2.301,
+      "brightness": 306.3
+    },
+    {
+      "lat": 51.045,
+      "lon": 2.296,
+      "brightness": 328.1
+    },
+    {
+      "lat": 51.166,
+      "lon": 4.329,
+      "brightness": 305.4
+    },
+    {
+      "lat": 51.257,
+      "lon": 4.337,
+      "brightness": 299.9
+    },
+    {
+      "lat": 51.259,
+      "lon": 4.344,
+      "brightness": 327.8
+    },
+    {
+      "lat": 51.263,
+      "lon": 4.34,
+      "brightness": 310.0
+    },
+    {
+      "lat": 51.355,
+      "lon": 4.279,
+      "brightness": 297.6
+    },
+    {
+      "lat": 38.375,
+      "lon": -0.544,
+      "brightness": 297.0
+    },
+    {
+      "lat": 38.695,
+      "lon": -0.997,
+      "brightness": 328.1
+    },
+    {
+      "lat": 38.793,
+      "lon": 15.213,
+      "brightness": 298.0
+    },
+    {
+      "lat": 39.395,
+      "lon": -2.568,
+      "brightness": 321.3
+    },
+    {
+      "lat": 40.246,
+      "lon": -3.474,
+      "brightness": 321.3
+    },
+    {
+      "lat": 40.272,
+      "lon": 0.277,
+      "brightness": 295.4
+    },
+    {
+      "lat": 41.312,
+      "lon": 1.664,
+      "brightness": 304.3
+    },
+    {
+      "lat": 41.453,
+      "lon": 1.98,
+      "brightness": 304.9
+    },
+    {
+      "lat": 41.456,
+      "lon": 1.981,
+      "brightness": 301.3
+    },
+    {
+      "lat": 41.474,
+      "lon": -1.487,
+      "brightness": 299.2
+    },
+    {
+      "lat": 41.539,
+      "lon": -8.082,
+      "brightness": 304.8
+    },
+    {
+      "lat": 41.543,
+      "lon": -8.069,
+      "brightness": 306.3
+    },
+    {
+      "lat": 41.543,
+      "lon": -8.075,
+      "brightness": 345.2
+    },
+    {
+      "lat": 41.544,
+      "lon": -8.082,
+      "brightness": 339.3
+    },
+    {
+      "lat": 41.783,
+      "lon": -7.719,
+      "brightness": 302.9
+    },
+    {
+      "lat": 41.785,
+      "lon": -7.714,
+      "brightness": 295.7
+    },
+    {
+      "lat": 41.791,
+      "lon": -7.599,
+      "brightness": 327.1
+    },
+    {
+      "lat": 41.827,
+      "lon": -7.928,
+      "brightness": 337.7
+    },
+    {
+      "lat": 41.827,
+      "lon": -7.934,
+      "brightness": 307.9
+    },
+    {
+      "lat": 41.831,
+      "lon": -7.927,
+      "brightness": 318.5
+    },
+    {
+      "lat": 41.933,
+      "lon": -8.52,
+      "brightness": 338.6
+    },
+    {
+      "lat": 41.937,
+      "lon": -8.512,
+      "brightness": 306.2
+    },
+    {
+      "lat": 41.937,
+      "lon": -8.52,
+      "brightness": 341.0
+    },
+    {
+      "lat": 42.044,
+      "lon": -8.243,
+      "brightness": 338.9
+    },
+    {
+      "lat": 42.045,
+      "lon": -8.243,
+      "brightness": 340.5
+    },
+    {
+      "lat": 42.048,
+      "lon": -8.242,
+      "brightness": 307.7
+    },
+    {
+      "lat": 42.552,
+      "lon": -6.768,
+      "brightness": 302.8
+    },
+    {
+      "lat": 42.554,
+      "lon": -6.771,
+      "brightness": 295.7
+    },
+    {
+      "lat": 43.408,
+      "lon": -3.84,
+      "brightness": 297.3
+    },
+    {
+      "lat": 43.412,
+      "lon": -3.839,
+      "brightness": 311.1
+    },
+    {
+      "lat": 43.442,
+      "lon": 4.877,
+      "brightness": 298.1
+    },
+    {
+      "lat": 43.442,
+      "lon": 4.894,
+      "brightness": 295.3
+    },
+    {
+      "lat": 43.442,
+      "lon": 4.892,
+      "brightness": 298.3
+    },
+    {
+      "lat": 43.444,
+      "lon": 4.881,
+      "brightness": 329.6
+    },
+    {
+      "lat": 43.445,
+      "lon": 4.9,
+      "brightness": 312.8
+    },
+    {
+      "lat": 43.445,
+      "lon": 4.878,
+      "brightness": 320.4
+    },
+    {
+      "lat": 28.081,
+      "lon": 9.789,
+      "brightness": 317.9
+    },
+    {
+      "lat": 28.082,
+      "lon": 9.785,
+      "brightness": 321.4
+    },
+    {
+      "lat": 28.082,
+      "lon": 9.783,
+      "brightness": 302.4
+    },
+    {
+      "lat": 28.188,
+      "lon": 9.802,
+      "brightness": 306.2
+    },
+    {
+      "lat": 28.193,
+      "lon": 9.804,
+      "brightness": 302.6
+    },
+    {
+      "lat": 28.447,
+      "lon": 9.132,
+      "brightness": 310.0
+    },
+    {
+      "lat": 28.447,
+      "lon": 9.136,
+      "brightness": 307.5
+    },
+    {
+      "lat": 28.448,
+      "lon": 9.132,
+      "brightness": 315.7
+    },
+    {
+      "lat": 28.452,
+      "lon": 9.134,
+      "brightness": 322.8
+    },
+    {
+      "lat": 28.524,
+      "lon": 9.12,
+      "brightness": 313.1
+    },
+    {
+      "lat": 28.53,
+      "lon": 9.122,
+      "brightness": 304.1
+    },
+    {
+      "lat": 28.632,
+      "lon": 9.784,
+      "brightness": 300.8
+    },
+    {
+      "lat": 28.633,
+      "lon": 9.782,
+      "brightness": 301.4
+    },
+    {
+      "lat": 28.637,
+      "lon": 7.615,
+      "brightness": 307.9
+    },
+    {
+      "lat": 28.639,
+      "lon": 9.784,
+      "brightness": 300.4
+    },
+    {
+      "lat": 28.704,
+      "lon": 8.939,
+      "brightness": 331.8
+    },
+    {
+      "lat": 28.705,
+      "lon": 8.936,
+      "brightness": 342.6
+    },
+    {
+      "lat": 28.705,
+      "lon": 8.934,
+      "brightness": 310.0
+    },
+    {
+      "lat": 28.711,
+      "lon": 9.034,
+      "brightness": 301.4
+    },
+    {
+      "lat": 28.714,
+      "lon": 8.947,
+      "brightness": 303.2
+    },
+    {
+      "lat": 28.736,
+      "lon": 9.154,
+      "brightness": 300.5
+    },
+    {
+      "lat": 28.737,
+      "lon": 9.149,
+      "brightness": 309.8
+    },
+    {
+      "lat": 28.82,
+      "lon": 9.908,
+      "brightness": 309.7
+    },
+    {
+      "lat": 28.82,
+      "lon": 9.909,
+      "brightness": 302.3
+    },
+    {
+      "lat": 28.865,
+      "lon": 9.935,
+      "brightness": 295.4
+    },
+    {
+      "lat": 28.915,
+      "lon": 9.743,
+      "brightness": 315.3
+    },
+    {
+      "lat": 28.921,
+      "lon": 9.745,
+      "brightness": 310.2
+    },
+    {
+      "lat": 28.974,
+      "lon": 10.04,
+      "brightness": 298.2
+    },
+    {
+      "lat": 29.105,
+      "lon": 9.664,
+      "brightness": 299.8
+    },
+    {
+      "lat": 29.111,
+      "lon": 9.666,
+      "brightness": 333.7
+    },
+    {
+      "lat": 29.693,
+      "lon": 6.703,
+      "brightness": 315.5
+    },
+    {
+      "lat": 29.693,
+      "lon": 6.703,
+      "brightness": 312.0
+    },
+    {
+      "lat": 29.695,
+      "lon": 6.696,
+      "brightness": 301.3
+    },
+    {
+      "lat": 29.695,
+      "lon": 6.697,
+      "brightness": 307.5
+    },
+    {
+      "lat": 29.698,
+      "lon": 6.704,
+      "brightness": 302.0
+    },
+    {
+      "lat": 29.698,
+      "lon": 6.705,
+      "brightness": 299.9
+    },
+    {
+      "lat": 29.701,
+      "lon": 6.712,
+      "brightness": 312.7
+    },
+    {
+      "lat": 29.702,
+      "lon": 6.713,
+      "brightness": 311.2
+    },
+    {
+      "lat": 30.178,
+      "lon": 7.688,
+      "brightness": 302.2
+    },
+    {
+      "lat": 30.253,
+      "lon": 8.084,
+      "brightness": 297.8
+    },
+    {
+      "lat": 30.377,
+      "lon": 7.009,
+      "brightness": 329.5
+    },
+    {
+      "lat": 30.389,
+      "lon": 7.906,
+      "brightness": 297.1
+    },
+    {
+      "lat": 30.39,
+      "lon": 7.902,
+      "brightness": 297.0
+    },
+    {
+      "lat": 30.611,
+      "lon": 8.261,
+      "brightness": 338.7
+    },
+    {
+      "lat": 30.661,
+      "lon": 8.103,
+      "brightness": 295.4
+    },
+    {
+      "lat": 30.662,
+      "lon": 8.099,
+      "brightness": 306.4
+    },
+    {
+      "lat": 30.875,
+      "lon": 5.642,
+      "brightness": 303.6
+    },
+    {
+      "lat": 30.897,
+      "lon": 5.586,
+      "brightness": 314.9
+    },
+    {
+      "lat": 31.008,
+      "lon": 8.171,
+      "brightness": 304.7
+    },
+    {
+      "lat": 31.008,
+      "lon": 8.173,
+      "brightness": 295.3
+    },
+    {
+      "lat": 31.009,
+      "lon": 8.169,
+      "brightness": 300.1
+    },
+    {
+      "lat": 31.016,
+      "lon": 8.161,
+      "brightness": 301.8
+    },
+    {
+      "lat": 31.016,
+      "lon": 8.163,
+      "brightness": 299.0
+    },
+    {
+      "lat": 31.053,
+      "lon": 8.032,
+      "brightness": 339.6
+    },
+    {
+      "lat": 31.058,
+      "lon": 8.034,
+      "brightness": 334.1
+    },
+    {
+      "lat": 31.179,
+      "lon": 8.105,
+      "brightness": 313.4
+    },
+    {
+      "lat": 31.188,
+      "lon": 6.789,
+      "brightness": 337.5
+    },
+    {
+      "lat": 31.319,
+      "lon": 11.803,
+      "brightness": 337.8
+    },
+    {
+      "lat": 31.357,
+      "lon": 6.052,
+      "brightness": 299.2
+    },
+    {
+      "lat": 31.361,
+      "lon": 6.053,
+      "brightness": 301.8
+    },
+    {
+      "lat": 31.363,
+      "lon": 6.047,
+      "brightness": 309.6
+    },
+    {
+      "lat": 31.389,
+      "lon": 10.604,
+      "brightness": 295.1
+    },
+    {
+      "lat": 31.395,
+      "lon": 12.146,
+      "brightness": 311.4
+    },
+    {
+      "lat": 31.396,
+      "lon": 6.93,
+      "brightness": 337.4
+    },
+    {
+      "lat": 31.397,
+      "lon": 12.14,
+      "brightness": 316.7
+    },
+    {
+      "lat": 31.397,
+      "lon": 12.144,
+      "brightness": 335.1
+    },
+    {
+      "lat": 31.399,
+      "lon": 6.931,
+      "brightness": 327.5
+    },
+    {
+      "lat": 31.407,
+      "lon": 5.976,
+      "brightness": 298.6
+    },
+    {
+      "lat": 31.585,
+      "lon": 5.951,
+      "brightness": 295.5
+    },
+    {
+      "lat": 31.588,
+      "lon": 5.958,
+      "brightness": 304.7
+    },
+    {
+      "lat": 31.649,
+      "lon": 5.989,
+      "brightness": 296.0
+    },
+    {
+      "lat": 31.661,
+      "lon": 6.062,
+      "brightness": 312.3
+    },
+    {
+      "lat": 31.662,
+      "lon": 6.057,
+      "brightness": 345.7
+    },
+    {
+      "lat": 31.663,
+      "lon": 6.052,
+      "brightness": 337.2
+    },
+    {
+      "lat": 31.667,
+      "lon": 6.058,
+      "brightness": 300.2
+    },
+    {
+      "lat": 31.668,
+      "lon": 6.053,
+      "brightness": 297.0
+    },
+    {
+      "lat": 31.698,
+      "lon": 5.964,
+      "brightness": 319.3
+    },
+    {
+      "lat": 31.75,
+      "lon": 5.227,
+      "brightness": 306.7
+    },
+    {
+      "lat": 31.784,
+      "lon": 6.067,
+      "brightness": 295.2
+    },
+    {
+      "lat": 31.785,
+      "lon": 6.061,
+      "brightness": 298.7
+    },
+    {
+      "lat": 31.789,
+      "lon": 6.068,
+      "brightness": 300.5
+    },
+    {
+      "lat": 31.797,
+      "lon": 6.053,
+      "brightness": 302.6
+    },
+    {
+      "lat": 31.849,
+      "lon": 5.053,
+      "brightness": 299.2
+    },
+    {
+      "lat": 31.85,
+      "lon": 6.054,
+      "brightness": 303.7
+    },
+    {
+      "lat": 31.957,
+      "lon": 11.143,
+      "brightness": 296.9
+    },
+    {
+      "lat": 31.959,
+      "lon": 5.216,
+      "brightness": 303.6
+    },
+    {
+      "lat": 31.996,
+      "lon": 9.49,
+      "brightness": 296.7
+    },
+    {
+      "lat": 32.055,
+      "lon": 7.028,
+      "brightness": 303.5
+    },
+    {
+      "lat": 32.056,
+      "lon": 7.022,
+      "brightness": 309.8
+    },
+    {
+      "lat": 32.134,
+      "lon": 6.467,
+      "brightness": 339.7
+    },
+    {
+      "lat": 32.138,
+      "lon": 6.469,
+      "brightness": 313.0
+    },
+    {
+      "lat": 32.171,
+      "lon": 7.061,
+      "brightness": 299.3
+    },
+    {
+      "lat": 32.277,
+      "lon": 3.988,
+      "brightness": 315.7
+    },
+    {
+      "lat": 32.358,
+      "lon": 6.974,
+      "brightness": 298.0
+    },
+    {
+      "lat": 32.4,
+      "lon": 4.004,
+      "brightness": 307.6
+    },
+    {
+      "lat": 32.404,
+      "lon": 4.005,
+      "brightness": 297.5
+    },
+    {
+      "lat": 32.514,
+      "lon": 6.71,
+      "brightness": 306.7
+    },
+    {
+      "lat": 32.544,
+      "lon": 6.538,
+      "brightness": 299.1
+    },
+    {
+      "lat": 32.553,
+      "lon": 3.167,
+      "brightness": 310.6
+    },
+    {
+      "lat": 32.555,
+      "lon": 3.171,
+      "brightness": 295.9
+    },
+    {
+      "lat": 32.556,
+      "lon": 3.165,
+      "brightness": 318.6
+    },
+    {
+      "lat": 32.557,
+      "lon": 3.168,
+      "brightness": 300.0
+    },
+    {
+      "lat": 32.745,
+      "lon": 3.18,
+      "brightness": 295.6
+    },
+    {
+      "lat": 32.749,
+      "lon": 3.181,
+      "brightness": 297.2
+    },
+    {
+      "lat": 32.933,
+      "lon": 3.235,
+      "brightness": 296.0
+    },
+    {
+      "lat": 32.937,
+      "lon": 3.236,
+      "brightness": 297.2
+    },
+    {
+      "lat": 32.947,
+      "lon": 3.227,
+      "brightness": 303.6
+    },
+    {
+      "lat": 32.948,
+      "lon": 3.222,
+      "brightness": 295.8
+    },
+    {
+      "lat": 32.951,
+      "lon": 3.228,
+      "brightness": 305.4
+    },
+    {
+      "lat": 33.125,
+      "lon": 3.316,
+      "brightness": 299.5
+    },
+    {
+      "lat": 33.127,
+      "lon": 3.323,
+      "brightness": 297.4
+    },
+    {
+      "lat": 33.128,
+      "lon": 3.317,
+      "brightness": 302.7
+    },
+    {
+      "lat": 33.872,
+      "lon": 2.657,
+      "brightness": 300.7
+    },
+    {
+      "lat": 33.892,
+      "lon": 12.605,
+      "brightness": 324.6
+    },
+    {
+      "lat": 34.903,
+      "lon": -4.615,
+      "brightness": 305.6
+    },
+    {
+      "lat": 35.039,
+      "lon": -5.626,
+      "brightness": 298.3
+    },
+    {
+      "lat": 35.315,
+      "lon": -5.682,
+      "brightness": 299.2
+    },
+    {
+      "lat": 35.567,
+      "lon": -0.937,
+      "brightness": 307.0
+    },
+    {
+      "lat": 35.782,
+      "lon": 0.54,
+      "brightness": 297.8
+    },
+    {
+      "lat": 36.138,
+      "lon": 2.926,
+      "brightness": 302.8
+    },
+    {
+      "lat": 36.712,
+      "lon": -2.806,
+      "brightness": 298.3
+    },
+    {
+      "lat": 36.712,
+      "lon": -2.811,
+      "brightness": 317.0
+    },
+    {
+      "lat": 37.131,
+      "lon": -5.485,
+      "brightness": 315.3
+    },
+    {
+      "lat": 38.5,
+      "lon": -8.935,
+      "brightness": 298.7
+    },
+    {
+      "lat": 38.835,
+      "lon": -6.96,
+      "brightness": 307.2
+    },
+    {
+      "lat": 38.921,
+      "lon": -9.012,
+      "brightness": 300.6
+    },
+    {
+      "lat": 26.58,
+      "lon": 12.211,
+      "brightness": 296.8
+    },
+    {
+      "lat": 27.411,
+      "lon": 8.836,
+      "brightness": 300.9
+    },
+    {
+      "lat": 27.529,
+      "lon": 9.623,
+      "brightness": 301.4
+    },
+    {
+      "lat": 27.703,
+      "lon": 9.171,
+      "brightness": 310.5
+    },
+    {
+      "lat": 27.723,
+      "lon": 9.877,
+      "brightness": 303.3
+    },
+    {
+      "lat": 27.727,
+      "lon": 9.879,
+      "brightness": 317.3
+    },
+    {
+      "lat": 27.728,
+      "lon": 9.874,
+      "brightness": 297.7
+    },
+    {
+      "lat": 27.733,
+      "lon": 9.177,
+      "brightness": 312.8
+    },
+    {
+      "lat": 27.739,
+      "lon": 9.179,
+      "brightness": 302.8
+    },
+    {
+      "lat": 27.923,
+      "lon": 9.246,
+      "brightness": 307.3
+    },
+    {
+      "lat": 27.929,
+      "lon": 8.373,
+      "brightness": 310.0
+    },
+    {
+      "lat": 28.431,
+      "lon": 7.51,
+      "brightness": 295.2
+    },
+    {
+      "lat": 28.458,
+      "lon": 7.514,
+      "brightness": 299.6
+    },
+    {
+      "lat": 28.471,
+      "lon": 7.506,
+      "brightness": 303.3
+    },
+    {
+      "lat": 28.574,
+      "lon": 7.651,
+      "brightness": 297.6
+    },
+    {
+      "lat": 28.579,
+      "lon": 7.653,
+      "brightness": 304.7
+    },
+    {
+      "lat": 28.683,
+      "lon": 7.193,
+      "brightness": 311.5
+    },
+    {
+      "lat": 30.462,
+      "lon": -9.657,
+      "brightness": 297.1
+    },
+    {
+      "lat": 11.253,
+      "lon": -11.13,
+      "brightness": 307.6
+    },
+    {
+      "lat": 11.369,
+      "lon": -10.633,
+      "brightness": 308.2
+    },
+    {
+      "lat": 11.406,
+      "lon": -11.2,
+      "brightness": 305.8
+    },
+    {
+      "lat": 11.473,
+      "lon": -11.922,
+      "brightness": 310.3
+    },
+    {
+      "lat": 11.473,
+      "lon": -11.925,
+      "brightness": 309.0
+    },
+    {
+      "lat": 11.531,
+      "lon": -10.981,
+      "brightness": 307.0
+    },
+    {
+      "lat": 11.654,
+      "lon": -11.603,
+      "brightness": 308.0
+    },
+    {
+      "lat": 11.773,
+      "lon": -11.157,
+      "brightness": 306.8
+    },
+    {
+      "lat": 11.779,
+      "lon": -9.027,
+      "brightness": 307.4
+    },
+    {
+      "lat": 11.801,
+      "lon": -11.167,
+      "brightness": 310.0
+    },
+    {
+      "lat": 11.802,
+      "lon": -11.169,
+      "brightness": 309.7
+    },
+    {
+      "lat": 11.814,
+      "lon": -13.369,
+      "brightness": 306.0
+    },
+    {
+      "lat": 11.818,
+      "lon": -13.36,
+      "brightness": 320.0
+    },
+    {
+      "lat": 11.822,
+      "lon": -13.36,
+      "brightness": 329.4
+    },
+    {
+      "lat": 11.822,
+      "lon": -13.364,
+      "brightness": 308.9
+    },
+    {
+      "lat": 11.841,
+      "lon": -13.177,
+      "brightness": 309.3
+    },
+    {
+      "lat": 11.844,
+      "lon": -13.172,
+      "brightness": 308.7
+    },
+    {
+      "lat": 11.845,
+      "lon": -13.176,
+      "brightness": 306.9
+    },
+    {
+      "lat": 11.857,
+      "lon": -13.166,
+      "brightness": 312.7
+    },
+    {
+      "lat": 11.858,
+      "lon": -13.179,
+      "brightness": 310.9
+    },
+    {
+      "lat": 11.863,
+      "lon": -13.178,
+      "brightness": 315.9
+    },
+    {
+      "lat": 11.866,
+      "lon": -13.236,
+      "brightness": 307.4
+    },
+    {
+      "lat": 11.87,
+      "lon": -13.231,
+      "brightness": 307.8
+    },
+    {
+      "lat": 11.871,
+      "lon": -13.235,
+      "brightness": 310.4
+    },
+    {
+      "lat": 11.871,
+      "lon": -11.115,
+      "brightness": 309.9
+    },
+    {
+      "lat": 11.871,
+      "lon": -13.239,
+      "brightness": 307.5
+    },
+    {
+      "lat": 11.873,
+      "lon": -13.232,
+      "brightness": 319.3
+    },
+    {
+      "lat": 11.874,
+      "lon": -13.226,
+      "brightness": 308.6
+    },
+    {
+      "lat": 11.874,
+      "lon": -13.23,
+      "brightness": 316.7
+    },
+    {
+      "lat": 11.876,
+      "lon": -13.239,
+      "brightness": 307.1
+    },
+    {
+      "lat": 11.882,
+      "lon": -10.63,
+      "brightness": 306.0
+    },
+    {
+      "lat": 11.882,
+      "lon": -10.635,
+      "brightness": 307.2
+    },
+    {
+      "lat": 11.885,
+      "lon": -10.63,
+      "brightness": 306.2
+    },
+    {
+      "lat": 11.886,
+      "lon": -10.634,
+      "brightness": 315.1
+    },
+    {
+      "lat": 11.925,
+      "lon": -11.252,
+      "brightness": 305.1
+    },
+    {
+      "lat": 11.925,
+      "lon": -11.25,
+      "brightness": 307.2
+    },
+    {
+      "lat": 11.926,
+      "lon": -11.257,
+      "brightness": 307.4
+    },
+    {
+      "lat": 11.926,
+      "lon": -11.254,
+      "brightness": 307.3
+    },
+    {
+      "lat": 11.929,
+      "lon": -11.252,
+      "brightness": 309.0
+    },
+    {
+      "lat": 11.941,
+      "lon": -9.429,
+      "brightness": 315.9
+    },
+    {
+      "lat": 11.966,
+      "lon": -10.439,
+      "brightness": 312.6
+    },
+    {
+      "lat": 11.984,
+      "lon": -11.535,
+      "brightness": 306.2
+    },
+    {
+      "lat": 12.066,
+      "lon": -10.117,
+      "brightness": 311.1
+    },
+    {
+      "lat": 12.217,
+      "lon": -13.078,
+      "brightness": 345.0
+    },
+    {
+      "lat": 12.222,
+      "lon": -13.078,
+      "brightness": 317.0
+    },
+    {
+      "lat": 12.226,
+      "lon": -13.077,
+      "brightness": 313.5
+    },
+    {
+      "lat": 12.37,
+      "lon": -9.287,
+      "brightness": 315.6
+    },
+    {
+      "lat": 12.374,
+      "lon": -9.286,
+      "brightness": 319.9
+    },
+    {
+      "lat": 12.399,
+      "lon": -13.853,
+      "brightness": 335.5
+    },
+    {
+      "lat": 12.4,
+      "lon": -13.851,
+      "brightness": 339.4
+    },
+    {
+      "lat": 12.401,
+      "lon": -13.856,
+      "brightness": 316.0
+    },
+    {
+      "lat": 12.435,
+      "lon": -9.572,
+      "brightness": 309.5
+    },
+    {
+      "lat": 12.435,
+      "lon": -9.568,
+      "brightness": 304.5
+    },
+    {
+      "lat": 12.449,
+      "lon": -11.196,
+      "brightness": 309.5
+    },
+    {
+      "lat": 12.452,
+      "lon": -11.193,
+      "brightness": 309.5
+    },
+    {
+      "lat": 12.467,
+      "lon": -10.949,
+      "brightness": 315.0
+    },
+    {
+      "lat": 12.501,
+      "lon": -9.045,
+      "brightness": 307.4
+    },
+    {
+      "lat": 12.504,
+      "lon": -9.044,
+      "brightness": 329.2
+    },
+    {
+      "lat": 12.511,
+      "lon": -13.499,
+      "brightness": 317.7
+    },
+    {
+      "lat": 12.52,
+      "lon": -13.498,
+      "brightness": 308.4
+    },
+    {
+      "lat": 12.551,
+      "lon": -9.991,
+      "brightness": 309.5
+    },
+    {
+      "lat": 12.561,
+      "lon": -14.397,
+      "brightness": 314.9
+    },
+    {
+      "lat": 12.563,
+      "lon": -14.395,
+      "brightness": 323.7
+    },
+    {
+      "lat": 12.566,
+      "lon": -14.396,
+      "brightness": 315.0
+    },
+    {
+      "lat": 12.568,
+      "lon": -8.934,
+      "brightness": 314.4
+    },
+    {
+      "lat": 12.571,
+      "lon": -8.93,
+      "brightness": 313.7
+    },
+    {
+      "lat": 12.574,
+      "lon": -8.929,
+      "brightness": 312.8
+    },
+    {
+      "lat": 12.577,
+      "lon": -8.925,
+      "brightness": 311.4
+    },
+    {
+      "lat": 12.577,
+      "lon": -8.929,
+      "brightness": 314.7
+    },
+    {
+      "lat": 12.581,
+      "lon": -8.928,
+      "brightness": 308.8
+    },
+    {
+      "lat": 12.596,
+      "lon": -10.424,
+      "brightness": 304.9
+    },
+    {
+      "lat": 12.6,
+      "lon": -10.423,
+      "brightness": 318.6
+    },
+    {
+      "lat": 12.602,
+      "lon": -9.872,
+      "brightness": 318.9
+    },
+    {
+      "lat": 12.636,
+      "lon": 6.448,
+      "brightness": 307.5
+    },
+    {
+      "lat": 12.645,
+      "lon": -11.558,
+      "brightness": 311.8
+    },
+    {
+      "lat": 12.685,
+      "lon": -12.29,
+      "brightness": 309.7
+    },
+    {
+      "lat": 12.695,
+      "lon": -8.348,
+      "brightness": 347.3
+    },
+    {
+      "lat": 12.696,
+      "lon": -8.351,
+      "brightness": 330.0
+    },
+    {
+      "lat": 12.699,
+      "lon": -8.347,
+      "brightness": 347.6
+    },
+    {
+      "lat": 12.699,
+      "lon": -8.351,
+      "brightness": 330.1
+    },
+    {
+      "lat": 12.751,
+      "lon": -11.659,
+      "brightness": 307.9
+    },
+    {
+      "lat": 12.753,
+      "lon": -9.073,
+      "brightness": 345.1
+    },
+    {
+      "lat": 12.756,
+      "lon": -9.072,
+      "brightness": 323.1
+    },
+    {
+      "lat": 12.757,
+      "lon": -9.076,
+      "brightness": 309.0
+    },
+    {
+      "lat": 12.812,
+      "lon": -11.209,
+      "brightness": 325.2
+    },
+    {
+      "lat": 12.816,
+      "lon": -11.209,
+      "brightness": 310.7
+    },
+    {
+      "lat": 12.823,
+      "lon": -12.306,
+      "brightness": 314.1
+    },
+    {
+      "lat": 12.823,
+      "lon": -12.31,
+      "brightness": 312.3
+    },
+    {
+      "lat": 12.823,
+      "lon": -12.305,
+      "brightness": 316.2
+    },
+    {
+      "lat": 12.824,
+      "lon": -12.309,
+      "brightness": 316.5
+    },
+    {
+      "lat": 12.826,
+      "lon": -12.301,
+      "brightness": 334.5
+    },
+    {
+      "lat": 12.827,
+      "lon": -12.305,
+      "brightness": 346.7
+    },
+    {
+      "lat": 12.827,
+      "lon": -12.301,
+      "brightness": 317.2
+    },
+    {
+      "lat": 12.827,
+      "lon": -12.305,
+      "brightness": 350.2
+    },
+    {
+      "lat": 12.831,
+      "lon": -12.305,
+      "brightness": 307.2
+    },
+    {
+      "lat": 12.834,
+      "lon": -10.396,
+      "brightness": 328.0
+    },
+    {
+      "lat": 12.853,
+      "lon": -15.586,
+      "brightness": 302.3
+    },
+    {
+      "lat": 12.856,
+      "lon": -15.567,
+      "brightness": 311.0
+    },
+    {
+      "lat": 12.856,
+      "lon": -10.37,
+      "brightness": 312.9
+    },
+    {
+      "lat": 12.856,
+      "lon": -15.57,
+      "brightness": 304.2
+    },
+    {
+      "lat": 12.86,
+      "lon": -10.374,
+      "brightness": 311.0
+    },
+    {
+      "lat": 12.936,
+      "lon": -9.597,
+      "brightness": 307.9
+    },
+    {
+      "lat": 12.964,
+      "lon": -12.221,
+      "brightness": 313.8
+    },
+    {
+      "lat": 12.992,
+      "lon": -11.47,
+      "brightness": 307.5
+    },
+    {
+      "lat": 13.006,
+      "lon": -9.632,
+      "brightness": 313.0
+    },
+    {
+      "lat": 13.019,
+      "lon": -8.943,
+      "brightness": 348.6
+    },
+    {
+      "lat": 13.022,
+      "lon": -8.943,
+      "brightness": 349.1
+    },
+    {
+      "lat": 13.023,
+      "lon": -8.946,
+      "brightness": 330.8
+    },
+    {
+      "lat": 13.026,
+      "lon": -8.942,
+      "brightness": 342.2
+    },
+    {
+      "lat": 13.028,
+      "lon": -13.958,
+      "brightness": 324.9
+    },
+    {
+      "lat": 13.032,
+      "lon": -10.708,
+      "brightness": 309.3
+    },
+    {
+      "lat": 13.033,
+      "lon": -13.962,
+      "brightness": 315.1
+    },
+    {
+      "lat": 13.034,
+      "lon": -10.705,
+      "brightness": 308.9
+    },
+    {
+      "lat": 13.034,
+      "lon": -13.967,
+      "brightness": 307.3
+    },
+    {
+      "lat": 13.034,
+      "lon": -10.71,
+      "brightness": 306.1
+    },
+    {
+      "lat": 13.054,
+      "lon": -13.282,
+      "brightness": 325.3
+    },
+    {
+      "lat": 13.054,
+      "lon": -13.287,
+      "brightness": 314.5
+    },
+    {
+      "lat": 13.137,
+      "lon": -12.449,
+      "brightness": 314.8
+    },
+    {
+      "lat": 13.141,
+      "lon": -12.449,
+      "brightness": 351.9
+    },
+    {
+      "lat": 13.141,
+      "lon": -12.452,
+      "brightness": 327.9
+    },
+    {
+      "lat": 13.145,
+      "lon": -12.448,
+      "brightness": 346.1
+    },
+    {
+      "lat": 13.146,
+      "lon": -12.452,
+      "brightness": 319.1
+    },
+    {
+      "lat": 13.149,
+      "lon": -12.447,
+      "brightness": 313.2
+    },
+    {
+      "lat": 13.152,
+      "lon": -8.012,
+      "brightness": 308.2
+    },
+    {
+      "lat": 13.158,
+      "lon": -12.446,
+      "brightness": 307.1
+    },
+    {
+      "lat": 13.191,
+      "lon": -16.303,
+      "brightness": 306.9
+    },
+    {
+      "lat": 13.29,
+      "lon": -14.816,
+      "brightness": 305.3
+    },
+    {
+      "lat": 13.295,
+      "lon": -14.815,
+      "brightness": 322.1
+    },
+    {
+      "lat": 13.296,
+      "lon": -14.821,
+      "brightness": 308.2
+    },
+    {
+      "lat": 13.3,
+      "lon": -13.972,
+      "brightness": 307.6
+    },
+    {
+      "lat": 13.303,
+      "lon": -13.957,
+      "brightness": 328.5
+    },
+    {
+      "lat": 13.303,
+      "lon": -13.962,
+      "brightness": 316.8
+    },
+    {
+      "lat": 13.304,
+      "lon": -13.966,
+      "brightness": 311.4
+    },
+    {
+      "lat": 13.307,
+      "lon": -11.475,
+      "brightness": 307.9
+    },
+    {
+      "lat": 13.439,
+      "lon": -14.001,
+      "brightness": 308.2
+    },
+    {
+      "lat": 13.482,
+      "lon": -9.714,
+      "brightness": 312.0
+    },
+    {
+      "lat": 13.483,
+      "lon": -9.718,
+      "brightness": 309.1
+    },
+    {
+      "lat": 13.484,
+      "lon": -10.134,
+      "brightness": 315.9
+    },
+    {
+      "lat": 13.484,
+      "lon": -10.136,
+      "brightness": 313.9
+    },
+    {
+      "lat": 13.486,
+      "lon": -9.717,
+      "brightness": 309.9
+    },
+    {
+      "lat": 13.487,
+      "lon": -9.721,
+      "brightness": 311.5
+    },
+    {
+      "lat": 13.488,
+      "lon": -10.133,
+      "brightness": 311.2
+    },
+    {
+      "lat": 13.488,
+      "lon": -10.136,
+      "brightness": 314.9
+    },
+    {
+      "lat": 13.488,
+      "lon": -10.137,
+      "brightness": 315.8
+    },
+    {
+      "lat": 13.488,
+      "lon": -10.14,
+      "brightness": 316.6
+    },
+    {
+      "lat": 13.551,
+      "lon": -12.136,
+      "brightness": 306.4
+    },
+    {
+      "lat": 13.552,
+      "lon": -12.135,
+      "brightness": 313.6
+    },
+    {
+      "lat": 13.556,
+      "lon": -12.135,
+      "brightness": 314.7
+    },
+    {
+      "lat": 13.556,
+      "lon": -12.134,
+      "brightness": 313.0
+    },
+    {
+      "lat": 13.588,
+      "lon": -11.918,
+      "brightness": 313.0
+    },
+    {
+      "lat": 13.626,
+      "lon": -11.248,
+      "brightness": 326.5
+    },
+    {
+      "lat": 13.725,
+      "lon": -13.667,
+      "brightness": 314.4
+    },
+    {
+      "lat": 13.806,
+      "lon": -11.537,
+      "brightness": 307.1
+    },
+    {
+      "lat": 13.893,
+      "lon": -11.757,
+      "brightness": 314.9
+    },
+    {
+      "lat": 13.938,
+      "lon": -4.476,
+      "brightness": 306.9
+    },
+    {
+      "lat": 13.974,
+      "lon": -7.723,
+      "brightness": 312.1
+    },
+    {
+      "lat": 14.284,
+      "lon": -4.256,
+      "brightness": 310.4
+    },
+    {
+      "lat": 14.392,
+      "lon": -6.331,
+      "brightness": 332.4
+    },
+    {
+      "lat": 14.395,
+      "lon": -6.331,
+      "brightness": 339.4
+    },
+    {
+      "lat": 14.399,
+      "lon": -6.334,
+      "brightness": 315.0
+    },
+    {
+      "lat": 14.486,
+      "lon": -17.0,
+      "brightness": 302.0
+    },
+    {
+      "lat": 14.665,
+      "lon": -17.013,
+      "brightness": 312.9
+    },
+    {
+      "lat": 14.749,
+      "lon": -8.875,
+      "brightness": 315.0
+    },
+    {
+      "lat": 14.75,
+      "lon": -8.879,
+      "brightness": 311.9
+    },
+    {
+      "lat": 14.752,
+      "lon": -8.874,
+      "brightness": 322.9
+    },
+    {
+      "lat": 14.753,
+      "lon": -8.878,
+      "brightness": 309.2
+    },
+    {
+      "lat": 14.756,
+      "lon": -8.874,
+      "brightness": 325.5
+    },
+    {
+      "lat": 14.757,
+      "lon": -8.878,
+      "brightness": 310.2
+    },
+    {
+      "lat": 14.759,
+      "lon": -8.873,
+      "brightness": 311.9
+    },
+    {
+      "lat": 14.763,
+      "lon": -8.873,
+      "brightness": 307.1
+    },
+    {
+      "lat": 14.864,
+      "lon": -10.24,
+      "brightness": 318.7
+    },
+    {
+      "lat": 14.865,
+      "lon": -10.244,
+      "brightness": 321.7
+    },
+    {
+      "lat": 14.866,
+      "lon": -10.249,
+      "brightness": 333.3
+    },
+    {
+      "lat": 14.866,
+      "lon": -10.253,
+      "brightness": 313.8
+    },
+    {
+      "lat": 15.044,
+      "lon": -11.205,
+      "brightness": 330.2
+    },
+    {
+      "lat": 15.044,
+      "lon": -11.209,
+      "brightness": 330.7
+    },
+    {
+      "lat": 15.045,
+      "lon": -11.21,
+      "brightness": 310.6
+    },
+    {
+      "lat": 15.048,
+      "lon": -11.208,
+      "brightness": 308.0
+    },
+    {
+      "lat": 15.049,
+      "lon": -11.213,
+      "brightness": 333.0
+    },
+    {
+      "lat": 15.049,
+      "lon": -11.21,
+      "brightness": 333.4
+    },
+    {
+      "lat": 15.213,
+      "lon": -4.103,
+      "brightness": 308.3
+    },
+    {
+      "lat": 15.356,
+      "lon": -4.898,
+      "brightness": 306.5
+    },
+    {
+      "lat": 15.36,
+      "lon": -4.898,
+      "brightness": 311.5
+    },
+    {
+      "lat": 15.367,
+      "lon": -4.9,
+      "brightness": 305.8
+    },
+    {
+      "lat": 15.37,
+      "lon": -4.9,
+      "brightness": 314.9
+    },
+    {
+      "lat": 15.371,
+      "lon": -4.903,
+      "brightness": 306.7
+    },
+    {
+      "lat": 15.403,
+      "lon": -4.898,
+      "brightness": 310.3
+    },
+    {
+      "lat": 15.406,
+      "lon": -4.898,
+      "brightness": 309.1
+    },
+    {
+      "lat": 15.409,
+      "lon": -4.897,
+      "brightness": 306.1
+    },
+    {
+      "lat": 15.41,
+      "lon": -4.901,
+      "brightness": 316.3
+    },
+    {
+      "lat": 15.413,
+      "lon": -4.9,
+      "brightness": 324.1
+    },
+    {
+      "lat": 15.414,
+      "lon": -4.904,
+      "brightness": 309.6
+    },
+    {
+      "lat": 15.418,
+      "lon": -4.907,
+      "brightness": 306.6
+    },
+    {
+      "lat": 15.466,
+      "lon": -4.903,
+      "brightness": 311.5
+    },
+    {
+      "lat": 15.469,
+      "lon": -4.902,
+      "brightness": 332.2
+    },
+    {
+      "lat": 15.472,
+      "lon": -4.901,
+      "brightness": 324.4
+    },
+    {
+      "lat": 15.537,
+      "lon": -4.971,
+      "brightness": 330.7
+    },
+    {
+      "lat": 15.542,
+      "lon": -4.94,
+      "brightness": 308.2
+    },
+    {
+      "lat": 15.597,
+      "lon": -5.002,
+      "brightness": 309.5
+    },
+    {
+      "lat": 15.601,
+      "lon": -5.001,
+      "brightness": 307.0
+    },
+    {
+      "lat": 15.603,
+      "lon": -4.997,
+      "brightness": 307.3
+    },
+    {
+      "lat": 15.604,
+      "lon": -5.001,
+      "brightness": 310.4
+    },
+    {
+      "lat": 15.605,
+      "lon": -4.985,
+      "brightness": 322.2
+    },
+    {
+      "lat": 15.607,
+      "lon": -4.997,
+      "brightness": 319.4
+    },
+    {
+      "lat": 15.609,
+      "lon": -4.989,
+      "brightness": 327.5
+    },
+    {
+      "lat": 15.609,
+      "lon": -4.992,
+      "brightness": 317.1
+    },
+    {
+      "lat": 4.606,
+      "lon": -7.741,
+      "brightness": 309.0
+    },
+    {
+      "lat": 5.293,
+      "lon": -4.952,
+      "brightness": 304.4
+    },
+    {
+      "lat": 5.694,
+      "lon": -7.616,
+      "brightness": 324.4
+    },
+    {
+      "lat": 5.957,
+      "lon": -9.272,
+      "brightness": 302.4
+    },
+    {
+      "lat": 6.134,
+      "lon": -7.848,
+      "brightness": 313.5
+    },
+    {
+      "lat": 6.165,
+      "lon": -9.588,
+      "brightness": 305.5
+    },
+    {
+      "lat": 6.335,
+      "lon": -9.03,
+      "brightness": 309.9
+    },
+    {
+      "lat": 6.356,
+      "lon": -8.304,
+      "brightness": 308.9
+    },
+    {
+      "lat": 6.371,
+      "lon": -9.999,
+      "brightness": 302.7
+    },
+    {
+      "lat": 6.412,
+      "lon": -9.369,
+      "brightness": 305.0
+    },
+    {
+      "lat": 6.435,
+      "lon": -9.318,
+      "brightness": 310.4
+    },
+    {
+      "lat": 6.437,
+      "lon": -9.286,
+      "brightness": 306.2
+    },
+    {
+      "lat": 6.521,
+      "lon": -9.868,
+      "brightness": 308.4
+    },
+    {
+      "lat": 6.561,
+      "lon": -10.525,
+      "brightness": 305.6
+    },
+    {
+      "lat": 6.676,
+      "lon": -8.228,
+      "brightness": 307.1
+    },
+    {
+      "lat": 6.966,
+      "lon": -11.285,
+      "brightness": 305.6
+    },
+    {
+      "lat": 6.968,
+      "lon": -11.286,
+      "brightness": 309.5
+    },
+    {
+      "lat": 7.046,
+      "lon": -11.04,
+      "brightness": 301.3
+    },
+    {
+      "lat": 7.185,
+      "lon": -11.872,
+      "brightness": 303.2
+    },
+    {
+      "lat": 7.23,
+      "lon": -10.92,
+      "brightness": 302.3
+    },
+    {
+      "lat": 7.353,
+      "lon": -11.889,
+      "brightness": 309.3
+    },
+    {
+      "lat": 7.409,
+      "lon": -12.421,
+      "brightness": 304.3
+    },
+    {
+      "lat": 7.756,
+      "lon": -12.135,
+      "brightness": 305.8
+    },
+    {
+      "lat": 7.833,
+      "lon": -12.45,
+      "brightness": 304.5
+    },
+    {
+      "lat": 8.062,
+      "lon": -12.536,
+      "brightness": 303.1
+    },
+    {
+      "lat": 8.177,
+      "lon": -11.428,
+      "brightness": 315.3
+    },
+    {
+      "lat": 8.177,
+      "lon": -11.43,
+      "brightness": 316.4
+    },
+    {
+      "lat": 8.18,
+      "lon": -11.427,
+      "brightness": 329.5
+    },
+    {
+      "lat": 8.257,
+      "lon": -12.136,
+      "brightness": 308.8
+    },
+    {
+      "lat": 8.379,
+      "lon": -13.178,
+      "brightness": 321.4
+    },
+    {
+      "lat": 8.471,
+      "lon": -12.278,
+      "brightness": 323.0
+    },
+    {
+      "lat": 8.475,
+      "lon": -12.278,
+      "brightness": 331.6
+    },
+    {
+      "lat": 8.88,
+      "lon": -12.861,
+      "brightness": 321.3
+    },
+    {
+      "lat": 8.88,
+      "lon": -12.865,
+      "brightness": 314.6
+    },
+    {
+      "lat": 8.934,
+      "lon": -12.719,
+      "brightness": 311.1
+    },
+    {
+      "lat": 8.938,
+      "lon": -12.719,
+      "brightness": 317.9
+    },
+    {
+      "lat": 9.376,
+      "lon": -12.27,
+      "brightness": 305.8
+    },
+    {
+      "lat": 9.377,
+      "lon": -12.273,
+      "brightness": 308.4
+    },
+    {
+      "lat": -34.46,
+      "lon": 150.887,
+      "brightness": 330.6
+    },
+    {
+      "lat": -32.432,
+      "lon": 148.914,
+      "brightness": 345.9
+    },
+    {
+      "lat": -32.432,
+      "lon": 148.914,
+      "brightness": 341.8
+    },
+    {
+      "lat": -31.918,
+      "lon": 151.928,
+      "brightness": 341.4
+    },
+    {
+      "lat": -31.911,
+      "lon": 151.928,
+      "brightness": 338.8
+    },
+    {
+      "lat": -31.911,
+      "lon": 151.934,
+      "brightness": 352.8
+    },
+    {
+      "lat": -31.782,
+      "lon": 148.866,
+      "brightness": 351.8
+    },
+    {
+      "lat": -31.781,
+      "lon": 148.875,
+      "brightness": 356.2
+    },
+    {
+      "lat": -31.781,
+      "lon": 148.879,
+      "brightness": 367.0
+    },
+    {
+      "lat": -31.221,
+      "lon": 152.018,
+      "brightness": 330.0
+    },
+    {
+      "lat": -31.216,
+      "lon": 152.012,
+      "brightness": 327.2
+    },
+    {
+      "lat": -31.215,
+      "lon": 152.018,
+      "brightness": 350.6
+    },
+    {
+      "lat": -28.947,
+      "lon": 152.851,
+      "brightness": 343.1
+    },
+    {
+      "lat": -28.941,
+      "lon": 152.851,
+      "brightness": 339.4
+    },
+    {
+      "lat": -28.941,
+      "lon": 152.856,
+      "brightness": 325.8
+    },
+    {
+      "lat": -28.94,
+      "lon": 152.86,
+      "brightness": 330.9
+    },
+    {
+      "lat": -28.829,
+      "lon": 152.426,
+      "brightness": 329.5
+    },
+    {
+      "lat": -28.827,
+      "lon": 152.422,
+      "brightness": 333.5
+    },
+    {
+      "lat": -28.469,
+      "lon": 150.395,
+      "brightness": 337.8
+    },
+    {
+      "lat": -25.812,
+      "lon": 150.115,
+      "brightness": 348.7
+    },
+    {
+      "lat": -24.829,
+      "lon": 147.758,
+      "brightness": 344.4
+    },
+    {
+      "lat": -22.21,
+      "lon": 148.394,
+      "brightness": 330.7
     }
   ],
   "delta_day": null,
   "delta_year": null,
-  "score": 99,
-  "updated": "2026-03-29T04:12:48.678418Z"
+  "score": 98,
+  "updated": "2026-03-29T04:58:38.190897Z"
 }

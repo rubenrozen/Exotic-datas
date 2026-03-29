@@ -1,0 +1,32 @@
+{
+  "cs.AI": {
+    "label": "AI / Machine Learning",
+    "papers": [],
+    "error": "name 'requests' is not defined"
+  },
+  "q-fin": {
+    "label": "Quantitative Finance",
+    "papers": [],
+    "error": "name 'requests' is not defined"
+  },
+  "physics": {
+    "label": "Physics",
+    "papers": [],
+    "error": "name 'requests' is not defined"
+  },
+  "econ": {
+    "label": "Economics",
+    "papers": [],
+    "error": "name 'requests' is not defined"
+  },
+  "cs.CR": {
+    "label": "Cybersecurity",
+    "papers": [],
+    "error": "name 'requests' is not defined"
+  },
+  "q-bio": {
+    "label": "Biology",
+    "papers": [],
+    "error": "name 'requests' is not defined"
+  }
+}
