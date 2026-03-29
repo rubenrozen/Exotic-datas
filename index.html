@@ -1096,13 +1096,16 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
       <div style="font-size:10px;color:var(--muted);margin-top:8px;font-family:var(--mono)">Global aggregate · 2B+ activities tracked · <a href="https://metro.strava.com" target="_blank" style="color:var(--c-trends)">metro.strava.com</a></div>
     </div>
 
-    <!-- OpenTable -->
+    <!-- Restaurant spending FRED -->
     <div class="card mb" style="border-color:rgba(236,72,153,.12)">
       <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-trends),transparent)"></div>
-      <div class="lbl">🍽 Restaurant bookings — OpenTable
-        <span class="ib">i<div class="ipop"><div class="ipt">Restaurant bookings vs. 2019</div><div class="ipb">Percentage of seated diners vs. the same period in 2019 (pre-COVID baseline). A real-time proxy for consumer confidence and discretionary spending. Data sourced from OpenTable aggregate reports and The Economist dataset.</div><div class="ips">Source: OpenTable / The Economist · vs. 2019 baseline · Monthly</div></div></span>
+      <div class="lbl">🍽 Restaurant & bar spending — FRED
+        <span class="ib">i<div class="ipop"><div class="ipt">US Food Services & Drinking Places</div><div class="ipb">Monthly retail sales for US restaurants and bars (NAICS 722). Seasonally adjusted. A direct proxy for consumer confidence and discretionary spending. Published monthly by the US Census Bureau via FRED (series MRTSSM7220USN). YoY % change shown.</div><div class="ips">Source: FRED · MRTSSM7220USN · US Census Bureau · Monthly</div></div></span>
       </div>
-      <div id="restau-cities" style="margin-top:8px"></div>
+      <div id="restau-block" style="margin-top:8px">
+        <div class="nodata loading"><div class="nodata-ico">🍽</div><div>Loading FRED data…</div></div>
+      </div>
+      <div class="ch h100"><canvas id="chart-restau"></canvas></div>
     </div>
 
     <!-- Google Trends -->
@@ -2599,72 +2602,116 @@ function loadStrava(period, btn) {
 // Strava activity data — indexed from Strava Year in Sport reports
 // Values = estimated global activity change per period
 
-function loadOpenTable(){
-  const cities=[
-    {flag:'🇺🇸',city:'New York',   region:'N. America', v:104},
-    {flag:'🇦🇺',city:'Sydney',     region:'Pacific',    v:107},
-    {flag:'🇲🇽',city:'Mexico City',region:'N. America', v:112},
-    {flag:'🇩🇪',city:'Berlin',     region:'Europe',     v:103},
-    {flag:'🇨🇦',city:'Toronto',    region:'N. America', v:101},
-    {flag:'🇬🇧',city:'London',     region:'Europe',     v:98},
-    {flag:'🇫🇷',city:'Paris',      region:'Europe',     v:96},
-    {flag:'🇯🇵',city:'Tokyo',      region:'Asia',       v:89},
+async function loadOpenTable(){
+  const block = document.getElementById('restau-block');
+  // Read from data/restaurant.json (fetched monthly by GitHub Actions via FRED)
+  const d = await loadJSON('restaurant.json');
+  if (d && d.current) {
+    const cur = d.current, prev = d.prev, yoy = d.yoy_pct;
+    const mom = d.mom_pct;
+    if(block) block.innerHTML =
+      '<div style="display:flex;gap:20px;align-items:flex-end;flex-wrap:wrap;margin-bottom:8px">' +
+        '<div><div class="lbl">Monthly sales</div>' +
+          '<div style="font-family:Bebas Neue,sans-serif;font-size:36px;color:var(--c-trends)">$' + (cur/1000).toFixed(0) + 'B</div>' +
+          '<div class="unit">US restaurants & bars</div></div>' +
+        '<div><div class="lbl">vs. last month</div>' +
+          '<div class="bsm" style="color:' + (mom>=0?'#22c55e':'#ff5a20') + '">' + (mom>=0?'+':'') + mom + '%</div></div>' +
+        '<div><div class="lbl">vs. 1 year ago</div>' +
+          '<div class="bsm" style="color:' + (yoy>=0?'#22c55e':'#ff5a20') + '">' + (yoy>=0?'+':'') + yoy + '%</div></div>' +
+        '<div class="sub" style="flex:1;align-self:flex-end">FRED · MRTSSM7220USN · US Census · Seasonally adjusted</div>' +
+      '</div>';
+    // Draw chart
+    if (d.series && d.series.length) {
+      // Compute YoY for each point
+      const series = d.series;
+      const yoyArr = series.map((p,i) => {
+        const prev12 = series[i-12];
+        return prev12 ? +((p.value-prev12.value)/prev12.value*100).toFixed(1) : null;
+      });
+      const canvas = document.getElementById('chart-restau');
+      if(canvas && canvas._ch) canvas._ch.destroy();
+      if(canvas) {
+        const ctx = canvas.getContext('2d');
+        canvas._ch = new Chart(ctx, {type:'line', data:{
+          labels: series.map(p=>p.date.slice(0,7)),
+          datasets: [
+            {data: series.map(p=>p.value/1000), borderColor:'#ec4899', backgroundColor:'rgba(236,72,153,.1)',
+             borderWidth:1.5, fill:true, tension:.3, pointRadius:0, yAxisID:'y', label:'$B/month'},
+            {data: yoyArr, borderColor:'rgba(34,197,94,.7)', backgroundColor:'transparent',
+             borderWidth:1.5, borderDash:[4,3], fill:false, tension:.3, pointRadius:0, yAxisID:'y2', label:'YoY %'}
+          ]
+        }, options:{...CD, scales:{
+          x: CD.scales.x,
+          y: {...CD.scales.y, position:'left'},
+          y2: {type:'linear', position:'right', grid:{drawOnChartArea:false},
+            ticks:{color:'rgba(34,197,94,.5)', font:{family:'Space Mono',size:9},
+              callback: v => v!==null ? (v>=0?'+':'')+v+'%' : ''}}
+        }, plugins:{...CD.plugins, legend:{display:false}}}});
+      }
+    }
+    addTick('🍽 US Restaurants: $' + (cur/1000).toFixed(0) + 'B/month · YoY: ' + (yoy>=0?'+':'') + yoy + '%');
+    return;
+  }
+  // No data yet
+  if(block) block.innerHTML = '<div class="nodata"><div class="nodata-ico">🍽</div>' +
+    '<div>Requires <code>FRED_API_KEY</code> in GitHub Secrets<br>' +
+    'Fetches <code>MRTSSM7220USN</code> monthly</div></div>';
+}
+
+
+async function loadBikeshare(){
+  const block = document.getElementById('bikeshare-block');
+  if(!block) return;
+
+  const networks = [
+    {name:'NYC Citi Bike',   city:'New York',  flag:'🇺🇸',
+     url:'https://gbfs.citibikenyc.com/gbfs/en/station_status.json'},
+    {name:'Vélib Paris',     city:'Paris',     flag:'🇫🇷',
+     url:'https://velib-metropole-opendata.smovengo.fr/opendata/Velib_Metropole/station_status.json'},
+    {name:'Santander London',city:'London',    flag:'🇬🇧',
+     url:'https://tfl.gov.uk/tfl/syndication/feeds/cycle-hire/livecyclehireupdates.xml'},
+    {name:'Bicing Barcelona',city:'Barcelona', flag:'🇪🇸',
+     url:'https://opendata-ajuntament.barcelona.cat/resources/bcn/BICING/bicing_opendata_latest.json'},
   ];
 
-  // Sort: best → worst
-  cities.sort((a,b) => b.v - a.v);
+  const results = await Promise.allSettled(networks.slice(0,3).map(async n => {
+    try {
+      const d = await fetch(n.url, {signal: AbortSignal.timeout(8000)}).then(r => r.json());
+      const stations = d.data?.stations || d.stations || [];
+      const total_docks = stations.reduce((s,st) => s + (st.num_docks_available||0) + (st.num_bikes_available||0), 0);
+      const bikes_available = stations.reduce((s,st) => s + (st.num_bikes_available||0), 0);
+      const in_use = total_docks > 0 ? Math.round((1 - bikes_available/total_docks) * 100) : null;
+      return {...n, stations: stations.length, bikes_available, in_use};
+    } catch(e) { return {...n, error: true}; }
+  }));
 
-  const el = document.getElementById('restau-cities');
-  if(!el) return;
+  const valid = results.filter(r => r.status==='fulfilled' && !r.value.error).map(r => r.value);
 
-  // Global average
-  const avg = Math.round(cities.reduce((s,c) => s + (c.v-100), 0) / cities.length * 10) / 10;
-  const avgColor = avg >= 0 ? '#22c55e' : '#ff5a20';
+  if(!valid.length) {
+    block.innerHTML = '<div class="nodata"><div>GBFS networks — connecting…</div></div>';
+    return;
+  }
 
-  // Max absolute value for bar scaling
-  const maxAbs = Math.max(...cities.map(c => Math.abs(c.v - 100)), 1);
+  block.innerHTML = valid.map(n =>
+    '<div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:rgba(236,72,153,.04);border:1px solid rgba(236,72,153,.1);border-radius:8px;margin-bottom:6px">' +
+      '<span style="font-size:20px">' + n.flag + '</span>' +
+      '<div style="flex:1">' +
+        '<div style="font-size:12px;font-weight:500;color:var(--txt)">' + n.city + '</div>' +
+        '<div style="font-size:9px;color:var(--muted);font-family:var(--mono)">' + n.stations + ' stations · ' + n.name + '</div>' +
+      '</div>' +
+      '<div style="text-align:right">' +
+        '<div style="font-family:var(--mono);font-size:18px;font-weight:700;color:var(--c-trends)">' + (n.bikes_available||'—').toLocaleString() + '</div>' +
+        '<div style="font-size:9px;color:var(--muted)">bikes available</div>' +
+      '</div>' +
+      (n.in_use !== null ? '<div style="text-align:right;min-width:44px"><div style="font-size:12px;color:#22c55e;font-family:var(--mono)">~' + n.in_use + '%</div><div style="font-size:9px;color:var(--muted)">in use</div></div>' : '') +
+    '</div>'
+  ).join('') +
+  '<div style="font-size:9px;color:var(--dim);font-family:var(--mono);margin-top:4px">GBFS standard · Live · Updated every 30s</div>';
 
-  el.innerHTML =
-    // Header row
-    '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">' +
-      '<div style="font-size:11px;color:var(--muted);font-family:var(--mono)">vs. 2019 baseline · 8 cities tracked</div>' +
-      '<div style="font-size:12px;font-family:var(--mono)">Avg: <span style="color:' + avgColor + ';font-weight:700">' + (avg >= 0 ? '+' : '') + avg + '%</span></div>' +
-    '</div>' +
-    // City rows
-    cities.map(function(c) {
-      const delta = c.v - 100;
-      const isPos = delta >= 0;
-      const color = isPos ? '#22c55e' : '#ff5a20';
-      const bgColor = isPos ? 'rgba(34,197,94,0.06)' : 'rgba(255,90,32,0.06)';
-      const borderColor = isPos ? 'rgba(34,197,94,0.15)' : 'rgba(255,90,32,0.15)';
-      const barW = Math.round(Math.abs(delta) / maxAbs * 100);
-      return '<div style="display:grid;grid-template-columns:28px 1fr auto;align-items:center;gap:10px;padding:9px 12px;background:' + bgColor + ';border:1px solid ' + borderColor + ';border-radius:8px;margin-bottom:6px">' +
-        // Flag
-        '<div style="font-size:20px;line-height:1">' + c.flag + '</div>' +
-        // City + bar
-        '<div>' +
-          '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:5px">' +
-            '<span style="font-size:12px;font-weight:500;color:var(--txt)">' + c.city + '</span>' +
-            '<span style="font-size:9px;font-family:var(--mono);color:var(--muted)">' + c.region + '</span>' +
-          '</div>' +
-          '<div style="position:relative;height:5px;background:rgba(255,255,255,0.07);border-radius:3px">' +
-            // Zero line
-            '<div style="position:absolute;top:0;bottom:0;left:50%;width:1px;background:rgba(255,255,255,0.15)"></div>' +
-            // Bar — grows from center
-            '<div style="position:absolute;top:0;bottom:0;' + (isPos ? 'left:50%' : 'right:50%') + ';width:' + (barW/2) + '%;background:' + color + ';border-radius:3px;transition:width .8s ease"></div>' +
-          '</div>' +
-        '</div>' +
-        // Delta badge
-        '<div style="font-family:var(--mono);font-size:14px;font-weight:700;color:' + color + ';min-width:44px;text-align:right">' +
-          (isPos ? '+' : '') + delta + '%' +
-        '</div>' +
-      '</div>';
-    }).join('') +
-    // Footer
-    '<div style="font-size:9px;color:var(--dim);font-family:var(--mono);margin-top:6px;text-align:right">Source: OpenTable / The Economist · vs. 2019 pre-COVID baseline</div>';
-
-  addTick('🍽 Restaurants: Mexico City +12% · Sydney +7% · Tokyo -11% vs 2019');
+  const total_bikes = valid.reduce((s,n) => s + (n.bikes_available||0), 0);
+  addTick('🚲 Bikeshare live: ' + valid.map(n => n.flag + ' ' + n.city + ': ' + (n.bikes_available||'—') + ' bikes').join(' · '));
 }
+
 
 async function loadGTrends(){
   const el=document.getElementById('gtrends-list'); if(!el) return;
