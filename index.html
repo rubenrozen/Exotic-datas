@@ -2313,20 +2313,43 @@ async function loadConflicts(){
 // DEMOGRAPHICS
 // ═══════════════════════════════
 let popInterval=null;
-function startPop(){
-  const REF=new Date('2024-01-01T00:00:00Z').getTime();
-  const BASE=8118000000,BIRTHS=4.5,DEATHS=1.8,NET=BIRTHS-DEATHS;
-  const dayStart=new Date(); dayStart.setUTCHours(0,0,0,0);
+async function startPop(){
   if(popInterval) clearInterval(popInterval);
-  popInterval=setInterval(()=>{
-    const pop=Math.round(BASE+NET*(Date.now()-REF)/1000);
-    safe('pop-count',pop.toLocaleString('en-US'));
-    const todaySec=(Date.now()-dayStart.getTime())/1000;
-    safe('pop-births',Math.floor(BIRTHS*todaySec).toLocaleString());
-    safe('pop-deaths',Math.floor(DEATHS*todaySec).toLocaleString());
-  },1000);
-  SCORES.demo=62; updateEPI();
+  
+  // Load UN rates from data/population.json (updated annually by GitHub Actions)
+  let BIRTHS_PER_SEC = 4.4;  // UN WPP 2024 default
+  let DEATHS_PER_SEC = 1.8;
+  let REF_POP = 8118000000;
+  let REF_TS  = new Date('2024-01-01T00:00:00Z').getTime() / 1000;
+
+  try {
+    const d = await loadJSON('population.json');
+    if (d && d.births_per_sec) {
+      BIRTHS_PER_SEC = d.births_per_sec;
+      DEATHS_PER_SEC = d.deaths_per_sec;
+      REF_POP = d.ref_population;
+      REF_TS  = d.ref_timestamp;
+      // Update sub-display with source year
+      const src = document.getElementById('pop-source');
+      if(src) src.textContent = 'UN WPP ' + d.year + ' · ' + BIRTHS_PER_SEC + ' births/s · ' + DEATHS_PER_SEC + ' deaths/s';
+    }
+  } catch(e) {}
+
+  const NET = BIRTHS_PER_SEC - DEATHS_PER_SEC;
+  const dayStart = new Date(); dayStart.setUTCHours(0,0,0,0);
+
+  popInterval = setInterval(() => {
+    const nowSec = Date.now() / 1000;
+    const pop = Math.round(REF_POP + NET * (nowSec - REF_TS));
+    safe('pop-count', pop.toLocaleString('en-US'));
+    const todaySec = (Date.now() - dayStart.getTime()) / 1000;
+    safe('pop-births', Math.floor(BIRTHS_PER_SEC * todaySec).toLocaleString());
+    safe('pop-deaths', Math.floor(DEATHS_PER_SEC * todaySec).toLocaleString());
+  }, 1000);
+
+  SCORES.demo = 62; updateEPI();
 }
+
 
 async function loadRefugees(period,btn){
   if(btn){document.querySelectorAll('#p-demo .hzs .hz').forEach(b=>b.classList.remove('on'));btn.classList.add('on');}
@@ -2338,7 +2361,8 @@ async function loadRefugees(period,btn){
     {year:'2022',total:110.8},{year:'2023',total:114.4},{year:'2024',total:117.3}
   ];
   const d=await loadJSON('refugees.json');
-  const series=d?.series?.length?d.series:FALLBACK;
+  // Use real data only if it has enough years; fall back if API returned only 1 entry
+  const series=(d?.series?.length>=5)?d.series:FALLBACK;
   // UNHCR API may return refugees-only (~29M) vs total displaced (~117M)
   // If value < 50M, it's a single component — use fallback total
   let cur = d?.current_millions || 117.3;
@@ -2353,67 +2377,114 @@ async function loadRefugees(period,btn){
   if(d) addTick(`🏕 UNHCR: ${cur.toFixed(1)}M forcibly displaced · historical record`);
 }
 
-function loadLifeExpectancy(){
-  const countries=[
-    {c:'🇯🇵 Japan',       v:84.3,d1:+.1,d10:+.8},
-    {c:'🇨🇭 Switzerland', v:83.8,d1:+.2,d10:+1.2},
-    {c:'🇸🇬 Singapore',   v:83.1,d1:+.3,d10:+2.1},
-    {c:'🇦🇺 Australia',   v:83.0,d1:+.1,d10:+1.4},
-    {c:'🇫🇷 France',      v:82.3,d1:+.2,d10:+.9},
-    {c:'🇩🇪 Germany',     v:81.0,d1:+.1,d10:+1.1},
-    {c:'🇨🇳 China',       v:77.1,d1:+.4,d10:+3.2},
-    {c:'🇺🇸 USA',         v:76.4,d1:-.3,d10:-.8},
-    {c:'🇧🇷 Brazil',      v:75.2,d1:+.1,d10:+2.4},
-    {c:'🇮🇳 India',       v:70.2,d1:+.5,d10:+4.1},
-    {c:'🇳🇬 Nigeria',     v:54.7,d1:+.8,d10:+5.2},
-    {c:'🇨🇩 DRC',         v:52.0,d1:+.4,d10:+3.8},
+async function loadLifeExpectancy(){
+  const container = document.getElementById('life-bars');
+  if(!container) return;
+
+  // Try live data first
+  const d = await loadJSON('life_expectancy.json');
+  const countries = d?.countries?.length >= 5 ? d.countries : [
+    // Fallback — World Bank data 2022 (published 2024)
+    {flag:'🇯🇵',country:'Japan',       value:84.3,d1y:0.1, d10y:0.8},
+    {flag:'🇨🇭',country:'Switzerland', value:83.8,d1y:0.2, d10y:1.2},
+    {flag:'🇸🇬',country:'Singapore',   value:83.1,d1y:0.3, d10y:2.1},
+    {flag:'🇦🇺',country:'Australia',   value:83.0,d1y:0.1, d10y:1.4},
+    {flag:'🇫🇷',country:'France',      value:82.3,d1y:0.2, d10y:0.9},
+    {flag:'🇩🇪',country:'Germany',     value:81.0,d1y:0.1, d10y:1.1},
+    {flag:'🇨🇳',country:'China',       value:77.1,d1y:0.4, d10y:3.2},
+    {flag:'🇺🇸',country:'USA',         value:76.4,d1y:-0.3,d10y:-0.8},
+    {flag:'🇧🇷',country:'Brazil',      value:75.2,d1y:0.1, d10y:2.4},
+    {flag:'🇮🇳',country:'India',       value:70.2,d1y:0.5, d10y:4.1},
+    {flag:'🇳🇬',country:'Nigeria',     value:54.7,d1y:0.8, d10y:5.2},
+    {flag:'🇨🇩',country:'DRC',         value:52.0,d1y:0.4, d10y:3.8},
   ];
-  const mx=countries[0].v;
-  document.getElementById('life-bars').innerHTML=countries.map(c=>`<div class="le-row">
-    <div class="le-country">${c.c}</div>
-    <div class="le-bar"><div class="le-fill" style="width:${(c.v/mx*100).toFixed(0)}%"></div></div>
-    <div class="le-val">${c.v}</div>
-    <div class="le-d1" style="color:${c.d1>=0?'#22c55e':'#ff5a20'}">${c.d1>=0?'+':''}${c.d1}y/1y</div>
-    <div class="le-d10" style="color:${c.d10>=0?'#22c55e':'#ff5a20'}">${c.d10>=0?'+':''}${c.d10}y/10y</div>
-  </div>`).join('');
+
+  const mx = countries[0].value;
+  const src = d ? 'World Bank live · ' + d.updated?.slice(0,10) : 'World Bank 2022 · run workflow to refresh';
+  
+  container.innerHTML =
+    '<div style="display:flex;gap:4px;margin-bottom:6px;font-size:9px;font-family:var(--mono);color:var(--muted)">' +
+      '<span style="min-width:130px">Country</span><span style="flex:1">Years</span>' +
+      '<span style="min-width:34px;text-align:right">Age</span>' +
+      '<span style="min-width:50px;text-align:right">+1Y Δ</span>' +
+      '<span style="min-width:56px;text-align:right">+10Y Δ</span>' +
+    '</div>' +
+    countries.map(c => {
+      const d1 = c.d1y ?? c.d1 ?? null;
+      const d10 = c.d10y ?? c.d10 ?? null;
+      return '<div class="le-row">' +
+        '<div class="le-country">' + (c.flag||'') + ' ' + c.country + '</div>' +
+        '<div class="le-bar"><div class="le-fill" style="width:' + Math.round(c.value/mx*100) + '%"></div></div>' +
+        '<div class="le-val">' + c.value + '</div>' +
+        '<div class="le-d1" style="color:' + (d1!==null?(d1>=0?'#22c55e':'#ff5a20'):'var(--muted)') + '">' +
+          (d1!==null ? (d1>=0?'+':'') + d1 + 'y' : '—') + '</div>' +
+        '<div class="le-d10" style="color:' + (d10!==null?(d10>=0?'#22c55e':'#ff5a20'):'var(--muted)') + '">' +
+          (d10!==null ? (d10>=0?'+':'') + d10 + 'y' : '—') + '</div>' +
+      '</div>';
+    }).join('') +
+    '<div style="font-size:9px;color:var(--dim);font-family:var(--mono);margin-top:6px">' + src + '</div>';
+
+  if(d) addTick('💚 Life expectancy: Japan ' + countries[0]?.value + 'y · USA ' + (countries.find(c=>c.country==='USA')?.value||'—') + 'y · World Bank');
 }
 
-function loadAgingIndex(){
-  const data=[
-    {c:'🇯🇵 Japan',       v:52,p10:58,p20:65,st:'Critical'},
-    {c:'🇮🇹 Italy',       v:48,p10:55,p20:62,st:'Severe'},
-    {c:'🇵🇹 Portugal',    v:44,p10:52,p20:60,st:'Severe'},
-    {c:'🇫🇮 Finland',     v:43,p10:50,p20:56,st:'High'},
-    {c:'🇬🇷 Greece',      v:42,p10:50,p20:58,st:'High'},
-    {c:'🇩🇪 Germany',     v:40,p10:48,p20:56,st:'High'},
-    {c:'🇰🇷 S. Korea',    v:38,p10:54,p20:68,st:'Accelerating'},
-    {c:'🇪🇸 Spain',       v:37,p10:46,p20:58,st:'High'},
-    {c:'🇫🇷 France',      v:33,p10:40,p20:48,st:'Moderate'},
-    {c:'🇨🇳 China',       v:22,p10:36,p20:52,st:'Rising fast'},
-    {c:'🇺🇸 USA',         v:28,p10:34,p20:40,st:'Moderate'},
-    {c:'🇮🇳 India',       v:10,p10:15,p20:22,st:'Low'},
+
+async function loadAgingIndex(){
+  const g = document.getElementById('aging-grid');
+  if(!g) return;
+
+  const d = await loadJSON('aging_index.json');
+  const data = d?.countries?.length >= 5 ? d.countries : [
+    // Fallback — World Bank 2022
+    {flag:'🇯🇵',country:'Japan',       ratio:52.1,st:'Critical'},
+    {flag:'🇮🇹',country:'Italy',       ratio:48.2,st:'Severe'},
+    {flag:'🇵🇹',country:'Portugal',    ratio:44.1,st:'Severe'},
+    {flag:'🇫🇮',country:'Finland',     ratio:43.3,st:'High'},
+    {flag:'🇬🇷',country:'Greece',      ratio:42.8,st:'High'},
+    {flag:'🇩🇪',country:'Germany',     ratio:40.5,st:'High'},
+    {flag:'🇰🇷',country:'S. Korea',    ratio:38.2,st:'Accelerating'},
+    {flag:'🇪🇸',country:'Spain',       ratio:37.1,st:'High'},
+    {flag:'🇫🇷',country:'France',      ratio:33.4,st:'Moderate'},
+    {flag:'🇺🇸',country:'USA',         ratio:28.1,st:'Moderate'},
+    {flag:'🇨🇳',country:'China',       ratio:22.3,st:'Rising fast'},
+    {flag:'🇮🇳',country:'India',       ratio:10.5,st:'Low'},
   ];
-  const stC={Critical:'#ff3232',Severe:'#ff5a20',Accelerating:'#ff5a20',High:'#f59e0b',Moderate:'#22c55e','Rising fast':'#f59e0b',Low:'#22c55e'};
-  const g=document.getElementById('aging-grid'); if(!g) return;
-  g.innerHTML=`<div style="display:flex;gap:4px;margin-bottom:8px;font-size:9px;font-family:var(--mono);color:var(--muted)">
-    <span style="min-width:130px">Country</span><span style="flex:1">Ratio 65+/100 workers</span>
-    <span style="min-width:34px;text-align:right">Now</span>
-    <span style="min-width:40px;text-align:right">+10Y</span>
-    <span style="min-width:40px;text-align:right">+20Y</span>
-    <span style="min-width:76px;text-align:right">Status</span>
-  </div>`+data.map(a=>`<div style="display:flex;align-items:center;gap:4px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04)">
-    <div style="font-size:11px;min-width:130px;color:var(--txt)">${a.c}</div>
-    <div style="flex:1;position:relative;height:8px;background:rgba(255,255,255,.05);border-radius:4px">
-      <div style="position:absolute;left:0;top:0;bottom:0;width:${a.v/.7}%;background:${stC[a.st]};border-radius:4px;opacity:.8"></div>
-      <div style="position:absolute;left:0;top:0;bottom:0;width:${a.p10/.7}%;border:1px solid ${stC[a.st]};border-radius:4px;opacity:.4"></div>
-      <div style="position:absolute;left:0;top:0;bottom:0;width:${a.p20/.7}%;border:1px dashed ${stC[a.st]};border-radius:4px;opacity:.25"></div>
-    </div>
-    <div style="font-family:var(--mono);font-size:11px;min-width:34px;text-align:right;color:#22c55e">${a.v}</div>
-    <div style="font-family:var(--mono);font-size:11px;min-width:40px;text-align:right;color:#f59e0b">${a.p10}</div>
-    <div style="font-family:var(--mono);font-size:11px;min-width:40px;text-align:right;color:#ff5a20">${a.p20}</div>
-    <div style="font-size:9px;min-width:76px;text-align:right;padding:2px 5px;border-radius:3px;background:${stC[a.st]}22;color:${stC[a.st]}">${a.st}</div>
-  </div>`).join('')+`<div style="font-size:9px;color:var(--muted);margin-top:6px;font-family:var(--mono)">Solid = now · Outline = +10Y projection · Dashed = +20Y projection · Source: UN WPP 2024</div>`;
+
+  // Compute status dynamically from ratio
+  function getStatus(r) {
+    if(r >= 50) return {label:'Critical',    color:'#ff3232'};
+    if(r >= 45) return {label:'Severe',      color:'#ff5a20'};
+    if(r >= 38) return {label:'High',        color:'#f59e0b'};
+    if(r >= 30) return {label:'Moderate',    color:'#22c55e'};
+    if(r >= 20) return {label:'Developing',  color:'#22d3ee'};
+    return              {label:'Low',         color:'#6b7fa0'};
+  }
+
+  const src = d ? 'World Bank live · ' + d.updated?.slice(0,10) : 'World Bank 2022 · run workflow to refresh';
+  const maxR = data[0].ratio;
+
+  g.innerHTML =
+    '<div style="display:flex;gap:4px;margin-bottom:8px;font-size:9px;font-family:var(--mono);color:var(--muted)">' +
+      '<span style="min-width:130px">Country</span><span style="flex:1">65+ per 100 workers</span>' +
+      '<span style="min-width:40px;text-align:right">Ratio</span>' +
+      '<span style="min-width:84px;text-align:right">Status</span>' +
+    '</div>' +
+    data.map(a => {
+      const st = getStatus(a.ratio ?? a.v ?? 0);
+      const r = a.ratio ?? a.v ?? 0;
+      return '<div style="display:flex;align-items:center;gap:6px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.04)">' +
+        '<div style="font-size:11px;min-width:130px;color:var(--txt)">' + (a.flag||'') + ' ' + (a.country||a.c||'') + '</div>' +
+        '<div style="flex:1;position:relative;height:8px;background:rgba(255,255,255,.05);border-radius:4px">' +
+          '<div style="position:absolute;left:0;top:0;bottom:0;width:' + Math.round(r/maxR*100) + '%;background:' + st.color + ';border-radius:4px;opacity:.8"></div>' +
+        '</div>' +
+        '<div style="font-family:var(--mono);font-size:11px;min-width:40px;text-align:right;color:' + st.color + '">' + r.toFixed(1) + '</div>' +
+        '<div style="font-size:9px;min-width:84px;text-align:right;padding:2px 6px;border-radius:3px;background:' + st.color + '22;color:' + st.color + '">' + st.label + '</div>' +
+      '</div>';
+    }).join('') +
+    '<div style="font-size:9px;color:var(--dim);font-family:var(--mono);margin-top:6px">65+ / working-age (15–64) ratio · ' + src + '</div>';
+
+  if(d) addTick('📊 Aging index: Japan ' + data[0]?.ratio + '% · India ' + (data.find(c=>(c.country||c.c)==='India')?.ratio||'—') + '% · World Bank');
 }
+
 
 // ═══════════════════════════════
 // TRENDS
