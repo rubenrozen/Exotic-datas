@@ -753,12 +753,27 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
     <div class="card" style="border-color:rgba(245,158,11,.12)">
       <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-trade),transparent)"></div>
       <div class="lbl">🚛 ATA Truck Tonnage — USA (FRED)
-        <span class="ib">i<div class="ipop"><div class="ipt">ATA Truck Tonnage Index</div><div class="ipb">Volume of goods transported by US trucks (index 2015=100). What trucks carry today appears in stores in 3 weeks. Direct proxy for US retail activity. Monthly data via FRED.</div><div class="ips">Source: FRED · TRUCKD11 · Monthly</div></div></span>
+        <span class="ib">i<div class="ipop"><div class="ipt">ATA Truck Tonnage Index</div><div class="ipb">Volume of goods transported by US trucks (index 2015=100). What trucks carry today appears in stores in 3 weeks. A leading indicator for US retail sales and consumer spending. The "vs. year-ago" line shows whether freight activity is accelerating or contracting.</div><div class="ips">Source: FRED · TRUCKD11 · St. Louis Fed · Monthly (6-week delay)</div></div></span>
       </div>
-      <div style="display:flex;gap:16px;align-items:flex-end;margin-bottom:4px">
-        <div><div class="lbl">Current index</div><div class="bsm" id="truck-val" style="color:var(--c-trade)">—</div><div class="unit">USA index (2015=100)</div></div>
-        <div class="delta" id="truck-delta" style="margin-top:auto"></div>
+      <div style="display:flex;gap:20px;align-items:flex-end;margin-bottom:10px;flex-wrap:wrap">
+        <div>
+          <div class="lbl">Current index</div>
+          <div class="bsm" id="truck-val" style="color:var(--c-trade)">—</div>
+          <div class="unit">2015 = 100</div>
+        </div>
+        <div>
+          <div class="lbl">vs. prev month</div>
+          <div class="bsm" id="truck-mom" style="color:var(--muted)">—</div>
+          <div class="unit">% change</div>
+        </div>
+        <div>
+          <div class="lbl">vs. 1 year ago</div>
+          <div class="bsm" id="truck-yoy" style="color:var(--muted)">—</div>
+          <div class="unit">% change</div>
+        </div>
+        <div class="delta" id="truck-delta" style="margin-top:auto;font-size:10px;color:var(--muted)"></div>
       </div>
+      <div class="ch h120"><canvas id="chart-truck"></canvas></div>
     </div>
   </div>
 </div>
@@ -1867,21 +1882,101 @@ async function loadTruck(){
       if (obs.length >= 2) {
         const cur = parseFloat(obs[obs.length-1].value);
         const prev = parseFloat(obs[obs.length-2].value);
-        const delta = ((cur-prev)/prev*100).toFixed(1);
+        const yoy_obs = obs.length >= 13 ? parseFloat(obs[obs.length-13].value) : null;
+        const mom = ((cur-prev)/prev*100).toFixed(1);
+        const yoy = yoy_obs ? ((cur-yoy_obs)/yoy_obs*100).toFixed(1) : null;
         safe('truck-val', cur.toFixed(1));
+        // MoM
+        const momEl = document.getElementById('truck-mom');
+        if(momEl){ momEl.textContent=(parseFloat(mom)>=0?'+':'')+mom+'%'; momEl.style.color=parseFloat(mom)>0?'#22c55e':'#ff5a20'; }
+        // YoY
+        const yoyEl = document.getElementById('truck-yoy');
+        if(yoyEl && yoy!==null){ yoyEl.textContent=(parseFloat(yoy)>=0?'+':'')+yoy+'%'; yoyEl.style.color=parseFloat(yoy)>0?'#22c55e':'#ff5a20'; }
+        // Date label
         const tv = document.getElementById('truck-delta');
-        if(tv) tv.innerHTML = `<span class="${parseFloat(delta)>0?'dn':'up'}">${parseFloat(delta)>0?'↑':'↓'} ${Math.abs(delta)}% vs prev · ${obs[obs.length-1].date.slice(0,7)}</span>`;
-        addTick(`🚛 ATA Truck Tonnage: ${cur.toFixed(1)} · ${parseFloat(delta)>0?'+':''}${delta}% (FRED live)`);
+        if(tv) tv.innerHTML = `Latest: ${obs[obs.length-1].date.slice(0,7)} · FRED live`;
+        // Draw chart — index value + YoY % as second axis
+        drawTruckChart(obs.slice(-24));
+        addTick(`🚛 ATA Truck Tonnage: ${cur.toFixed(1)} · MoM: ${parseFloat(mom)>=0?'+':''}${mom}% · YoY: ${yoy!==null?(parseFloat(yoy)>=0?'+':'')+yoy+'%':'—'}`);
         return;
       }
     } catch(e) { console.warn('FRED API:', e); }
   }
 
-  // No key or API failed — show last known value
+  // No key or API failed — show static fallback chart
   safe('truck-val', STATIC_VAL.toFixed(1));
+  const momEl = document.getElementById('truck-mom'); if(momEl){ momEl.textContent='+0.8%'; momEl.style.color='#22c55e'; }
+  const yoyEl = document.getElementById('truck-yoy'); if(yoyEl){ yoyEl.textContent='+1.2%'; yoyEl.style.color='#22c55e'; }
   const tv = document.getElementById('truck-delta');
-  if(tv) tv.innerHTML = `<span class="neu">+0.8% vs prev · Jan 2025 · add FRED_API_KEY secret</span>`;
+  if(tv) tv.innerHTML = 'Jan 2025 · add FRED_API_KEY secret for live data';
+  // Static fallback chart (ATA Truck Tonnage 2023-2025 approximate)
+  const staticObs = [
+    {date:'2023-02',value:107.2},{date:'2023-03',value:109.8},{date:'2023-04',value:111.3},
+    {date:'2023-05',value:112.8},{date:'2023-06',value:113.1},{date:'2023-07',value:114.2},
+    {date:'2023-08',value:115.1},{date:'2023-09',value:114.8},{date:'2023-10',value:115.9},
+    {date:'2023-11',value:114.2},{date:'2023-12',value:113.8},{date:'2024-01',value:112.4},
+    {date:'2024-02',value:113.9},{date:'2024-03',value:116.1},{date:'2024-04',value:117.2},
+    {date:'2024-05',value:117.8},{date:'2024-06',value:118.0},{date:'2024-07',value:118.6},
+    {date:'2024-08',value:119.1},{date:'2024-09',value:118.8},{date:'2024-10',value:119.3},
+    {date:'2024-11',value:118.9},{date:'2024-12',value:117.6},{date:'2025-01',value:118.4}
+  ];
+  drawTruckChart(staticObs);
   addTick(`🚛 ATA Truck Tonnage: ${STATIC_VAL} (last published)`);
+}
+
+// Draw truck chart with index + YoY relative line
+function drawTruckChart(obs) {
+  if (!obs || obs.length < 2) return;
+  const labels = obs.map(o => o.date.slice(0,7));
+  const vals = obs.map(o => parseFloat(o.value));
+  // Compute YoY % change for each point
+  const yoyPct = obs.map((o,i) => {
+    const prev12 = obs[i-12];
+    if (!prev12) return null;
+    return parseFloat(((parseFloat(o.value) - parseFloat(prev12.value)) / parseFloat(prev12.value) * 100).toFixed(1));
+  });
+  const hasYoy = yoyPct.some(v => v !== null);
+  const canvas = document.getElementById('chart-truck');
+  if (!canvas) return;
+  if (canvas._ch) canvas._ch.destroy();
+  const ctx = canvas.getContext('2d');
+  canvas._ch = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'Index (2015=100)',
+          data: vals,
+          borderColor: '#f59e0b',
+          backgroundColor: 'rgba(245,158,11,0.12)',
+          borderWidth: 2, fill: true, tension: 0.3, pointRadius: 0,
+          yAxisID: 'y'
+        },
+        ...(hasYoy ? [{
+          label: 'YoY %',
+          data: yoyPct,
+          borderColor: 'rgba(34,197,94,0.8)',
+          backgroundColor: 'transparent',
+          borderWidth: 1.5, borderDash: [4,3], fill: false, tension: 0.3, pointRadius: 0,
+          yAxisID: 'y2'
+        }] : [])
+      ]
+    },
+    options: {
+      ...CD,
+      scales: {
+        x: CD.scales.x,
+        y: { ...CD.scales.y, position: 'left' },
+        y2: hasYoy ? {
+          type: 'linear', position: 'right', grid: { drawOnChartArea: false },
+          ticks: { color: 'rgba(34,197,94,0.5)', font: { family: 'Space Mono', size: 9 },
+            callback: v => v !== null ? (v >= 0 ? '+' : '') + v + '%' : '' }
+        } : undefined
+      },
+      plugins: { ...CD.plugins, legend: { display: hasYoy, labels: { color: 'rgba(180,200,230,0.6)', font: { size: 9, family: 'Space Mono' }, boxWidth: 20 } } }
+    }
+  });
 }
 
 // ═══════════════════════════════
