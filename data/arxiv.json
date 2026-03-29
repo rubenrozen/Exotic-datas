@@ -7,22 +7,22 @@
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "error": "The read operation timed out"
+    "error": "HTTP Error 429: Unknown Error"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "error": "The read operation timed out"
+    "error": "HTTP Error 429: Unknown Error"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "error": "The read operation timed out"
+    "error": "HTTP Error 429: Unknown Error"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "error": "The read operation timed out"
   },
   "q-bio": {
     "label": "Biology",

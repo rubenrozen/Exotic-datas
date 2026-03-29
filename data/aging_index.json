@@ -1,0 +1,101 @@
+{
+  "countries": [
+    {
+      "code": "JPN",
+      "flag": "\ud83c\uddef\ud83c\uddf5",
+      "country": "Japan",
+      "ratio": 50.7,
+      "pct65": 29.8,
+      "pct1564": 58.8
+    },
+    {
+      "code": "PRT",
+      "flag": "\ud83c\uddf5\ud83c\uddf9",
+      "country": "Portugal",
+      "ratio": 39.1,
+      "pct65": 24.5,
+      "pct1564": 62.7
+    },
+    {
+      "code": "FIN",
+      "flag": "\ud83c\uddeb\ud83c\uddee",
+      "country": "Finland",
+      "ratio": 38.9,
+      "pct65": 23.9,
+      "pct1564": 61.5
+    },
+    {
+      "code": "ITA",
+      "flag": "\ud83c\uddee\ud83c\uddf9",
+      "country": "Italy",
+      "ratio": 38.7,
+      "pct65": 24.6,
+      "pct1564": 63.5
+    },
+    {
+      "code": "GRC",
+      "flag": "\ud83c\uddec\ud83c\uddf7",
+      "country": "Greece",
+      "ratio": 38.1,
+      "pct65": 23.9,
+      "pct1564": 62.8
+    },
+    {
+      "code": "DEU",
+      "flag": "\ud83c\udde9\ud83c\uddea",
+      "country": "Germany",
+      "ratio": 36.9,
+      "pct65": 23.2,
+      "pct1564": 62.9
+    },
+    {
+      "code": "FRA",
+      "flag": "\ud83c\uddeb\ud83c\uddf7",
+      "country": "France",
+      "ratio": 36.1,
+      "pct65": 22.1,
+      "pct1564": 61.3
+    },
+    {
+      "code": "ESP",
+      "flag": "\ud83c\uddea\ud83c\uddf8",
+      "country": "Spain",
+      "ratio": 32.0,
+      "pct65": 21.1,
+      "pct1564": 65.9
+    },
+    {
+      "code": "USA",
+      "flag": "\ud83c\uddfa\ud83c\uddf8",
+      "country": "USA",
+      "ratio": 27.7,
+      "pct65": 17.9,
+      "pct1564": 64.7
+    },
+    {
+      "code": "KOR",
+      "flag": "\ud83c\uddf0\ud83c\uddf7",
+      "country": "S. Korea",
+      "ratio": 27.5,
+      "pct65": 19.3,
+      "pct1564": 70.2
+    },
+    {
+      "code": "CHN",
+      "flag": "\ud83c\udde8\ud83c\uddf3",
+      "country": "China",
+      "ratio": 21.2,
+      "pct65": 14.7,
+      "pct1564": 69.3
+    },
+    {
+      "code": "IND",
+      "flag": "\ud83c\uddee\ud83c\uddf3",
+      "country": "India",
+      "ratio": 10.4,
+      "pct65": 7.1,
+      "pct1564": 68.2
+    }
+  ],
+  "updated": "2026-03-29T16:20:58.362076Z"
+}

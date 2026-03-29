@@ -1,12 +1,12 @@
 {
-  "total": 11720,
+  "total": 11728,
   "by_region": {
-    "Europe": 2889,
-    "North America": 7532,
-    "Asia-Pacific": 569,
-    "Middle East": 18,
-    "Other": 626
+    "Europe": 2843,
+    "North America": 7674,
+    "Asia-Pacific": 476,
+    "Middle East": 12,
+    "Other": 614
   },
   "score": 90,
-  "updated": "2026-03-29T15:49:34.917086Z"
+  "updated": "2026-03-29T16:20:58.362076Z"
 }

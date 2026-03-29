@@ -1,21 +1,73 @@
 {
-  "current_millions": 29.1,
-  "prev_year_millions": 29.1,
-  "total_millions": 29.1,
-  "delta": 0.0,
+  "current_millions": 102.8,
+  "prev_year_millions": 107.4,
+  "total_millions": 102.8,
+  "delta": -4.6,
   "breakdown": {
-    "year": "2012",
-    "refugees": 10.5,
-    "idps": 17.7,
-    "asylum": 0.9,
-    "total": 29.1
+    "year": "2025",
+    "refugees": 30.5,
+    "idps": 63.9,
+    "asylum": 8.4,
+    "total": 102.8
   },
   "series": [
     {
       "year": "2012",
       "total": 29.1
+    },
+    {
+      "year": "2013",
+      "total": 36.8
+    },
+    {
+      "year": "2014",
+      "total": 48.5
+    },
+    {
+      "year": "2015",
+      "total": 56.8
+    },
+    {
+      "year": "2016",
+      "total": 56.5
+    },
+    {
+      "year": "2017",
+      "total": 62.1
+    },
+    {
+      "year": "2018",
+      "total": 65.3
+    },
+    {
+      "year": "2019",
+      "total": 68.1
+    },
+    {
+      "year": "2020",
+      "total": 73.4
+    },
+    {
+      "year": "2021",
+      "total": 77.3
+    },
+    {
+      "year": "2022",
+      "total": 92.2
+    },
+    {
+      "year": "2023",
+      "total": 101.7
+    },
+    {
+      "year": "2024",
+      "total": 107.4
+    },
+    {
+      "year": "2025",
+      "total": 102.8
     }
   ],
-  "score": 84,
-  "updated": "2026-03-29T15:49:34.917086Z"
+  "score": 43,
+  "updated": "2026-03-29T16:20:58.362076Z"
 }
