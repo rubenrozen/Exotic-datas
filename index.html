@@ -2089,32 +2089,77 @@ function gasColor(pct){return pct>60?'#22c55e':pct>40?'#f59e0b':'#ff5a20';}
 function gasGradient(pct){return pct>60?'linear-gradient(90deg,#16a34a,#22c55e)':pct>40?'linear-gradient(90deg,#d97706,#f59e0b)':'linear-gradient(90deg,#dc2626,#ff5a20)';}
 function renderGas(){
   if(!gasData) return;
-  const d=gasData; const eu=d.eu_avg||0;
-  const HIST={now:null,'6m':eu-12,'1y':eu-8,'3y':eu-5};
-  const hist=HIST[gasHz]; const delta=hist!==null?round1(eu-hist):null;
-  const flags={DE:'🇩🇪',FR:'🇫🇷',IT:'🇮🇹',ES:'🇪🇸',NL:'🇳🇱',AT:'🇦🇹',BE:'🇧🇪',PL:'🇵🇱',CZ:'🇨🇿',HU:'🇭🇺'};
-  const g=document.getElementById('gas-body');
+  const d = gasData;
+  const eu = d.eu_avg || 0;
+
+  // Real historical deltas from gas_storage.json series
+  // gas_storage.json contains d.history = [{date, eu_avg}, ...]
+  function getHistorical(monthsAgo) {
+    // Use d.series which contains {date, pct} entries from AGSI
+    const series = d.series || d.history || [];
+    if (!series.length) return null;
+    const target = new Date();
+    target.setMonth(target.getMonth() - monthsAgo);
+    const targetStr = target.toISOString().slice(0,7);
+    // Find entry closest to target date
+    let best = null, bestDiff = Infinity;
+    series.forEach(e => {
+      const eStr = (e.date || '').slice(0,7);
+      const diff = Math.abs(eStr.localeCompare(targetStr));
+      if (diff < bestDiff) { bestDiff = diff; best = e; }
+    });
+    return best ? (best.eu_avg ?? best.pct ?? null) : null;
+  }
+
+  const histMap = {
+    'now': null,
+    '6m':  getHistorical(6),
+    '1y':  getHistorical(12),
+    '3y':  getHistorical(36)
+  };
+  const hist = histMap[gasHz];
+  const delta = (hist !== null && hist !== undefined) ? round1(eu - hist) : null;
+
+  const flags = {DE:'🇩🇪',FR:'🇫🇷',IT:'🇮🇹',ES:'🇪🇸',NL:'🇳🇱',AT:'🇦🇹',BE:'🇧🇪',PL:'🇵🇱',CZ:'🇨🇿',HU:'🇭🇺'};
+  const g = document.getElementById('gas-body');
   if(!g) return;
-  const histLabels={'6m':'vs. 6 months ago','1y':'vs. 1 year ago','3y':'vs. 3 years ago (pre-crisis)'};
-  g.innerHTML=`<div style="margin-bottom:12px">
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap">
-      <div style="font-size:13px;color:var(--txt)">EU average: <span style="font-family:var(--mono);font-size:18px;font-weight:700;color:${gasColor(eu)}">${eu.toFixed(1)}%</span></div>
-      ${delta!==null?`<span style="font-size:12px;font-family:var(--mono);color:${delta>0?'#22c55e':'#ff5a20'}">${delta>0?'↑+':'↓'}${Math.abs(delta)}pp ${histLabels[gasHz]||''}</span>`:''}
-      <span style="font-size:10px;color:var(--muted);margin-left:auto">⚠️ Alert: 20% · Target: 90%</span>
-    </div>
-    <div style="height:10px;background:rgba(255,255,255,.06);border-radius:5px;overflow:hidden;position:relative">
-      <div style="height:100%;width:${eu}%;background:${gasGradient(eu)};border-radius:5px;transition:width 1s ease"></div>
-      ${hist!==null?`<div style="position:absolute;top:0;bottom:0;left:${hist}%;width:2px;background:rgba(255,255,255,.4)"></div>`:''}
-    </div>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px">${Object.entries(d.countries||{}).slice(0,10).map(([code,c])=>{
-    const h=hist!==null?round1((c.pct||0)-(Math.abs(delta||0)*(0.8+Math.random()*.4))):null;
-    return `<div class="fuel-row"><div class="fuel-top"><span style="font-size:12px">${flags[code]||'🏳️'} ${code}</span><div style="display:flex;align-items:center;gap:4px">${h!==null?`<span style="font-size:9px;font-family:var(--mono);color:${(c.pct||0)>h?'#22c55e':'#ff5a20'}">${(c.pct||0)>h?'+':''}${round1((c.pct||0)-h)}pp</span>`:''}
-      <span class="fuel-pct" style="color:${gasColor(c.pct||0)}">${(c.pct||0).toFixed(1)}%</span></div></div>
-      <div class="fuel-track"><div class="fuel-fill" style="width:${c.pct||0}%;background:${gasGradient(c.pct||0)}"></div>${h!==null?`<div class="fuel-marker" style="left:${h}%"></div>`:''}</div>
-    </div>`;
-  }).join('')}</div>`;
+
+  const histLabels = {'6m':'vs. 6 months ago','1y':'vs. 1 year ago','3y':'vs. 3 years ago'};
+  g.innerHTML =
+    '<div style="margin-bottom:12px">' +
+      '<div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;flex-wrap:wrap">' +
+        '<div style="font-size:13px;color:var(--txt)">EU average: <span style="font-family:var(--mono);font-size:18px;font-weight:700;color:' + gasColor(eu) + '">' + eu.toFixed(1) + '%</span></div>' +
+        (delta !== null ? '<span style="font-size:12px;font-family:var(--mono);color:' + (delta>0?'#22c55e':'#ff5a20') + '">' + (delta>0?'↑+':'↓') + Math.abs(delta) + 'pp ' + (histLabels[gasHz]||'') + '</span>' : '') +
+        '<span style="font-size:10px;color:var(--muted);margin-left:auto">⚠️ Alert: 20% · Target: 90%</span>' +
+      '</div>' +
+      '<div style="height:10px;background:rgba(255,255,255,.06);border-radius:5px;overflow:hidden;position:relative">' +
+        '<div style="height:100%;width:' + eu + '%;background:' + gasGradient(eu) + ';border-radius:5px;transition:width 1s ease"></div>' +
+        (hist !== null ? '<div style="position:absolute;top:0;bottom:0;left:' + hist + '%;width:2px;background:rgba(255,255,255,.4)"></div>' : '') +
+      '</div>' +
+    '</div>' +
+    '<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px">' +
+    Object.entries(d.countries||{}).slice(0,10).map(([code,c]) => {
+      // Per-country historical data not available from AGSI API
+      const cHist = null;
+      const cDelta = null;
+      return '<div class="fuel-row">' +
+        '<div class="fuel-top">' +
+          '<span style="font-size:12px">' + (flags[code]||'🏳️') + ' ' + code + '</span>' +
+          '<div style="display:flex;align-items:center;gap:4px">' +
+            (cDelta !== null ? '<span style="font-size:9px;font-family:var(--mono);color:' + ((c.pct||0)>cHist?'#22c55e':'#ff5a20') + '">' + ((c.pct||0)>cHist?'+':'') + cDelta + 'pp</span>' : '') +
+            '<span class="fuel-pct" style="color:' + gasColor(c.pct||0) + '">' + (c.pct||0).toFixed(1) + '%</span>' +
+          '</div>' +
+        '</div>' +
+        '<div class="fuel-track">' +
+          '<div class="fuel-fill" style="width:' + (c.pct||0) + '%;background:' + gasGradient(c.pct||0) + '"></div>' +
+          (cHist !== null ? '<div class="fuel-marker" style="left:' + cHist + '%"></div>' : '') +
+        '</div>' +
+      '</div>';
+    }).join('') +
+    '</div>';
 }
+
+
 async function loadGasStorage(){
   const d=await loadJSON('gas_storage.json');
   safe('gas-updated',d?.updated?'Updated '+d.updated.slice(0,10):'—');
@@ -2175,12 +2220,11 @@ async function loadElectricity(){
       return;
     }
   }catch(e){console.warn('RTE:',e);}
-  // Fallback
-  safe('elec-fr','54.2'); safe('elec-eu','~320'); safe('elec-delta','+1.2%');
-  const hours=Array.from({length:12},(_,i)=>i*2+'h');
-  const vals=[45,42,40,42,50,58,62,63,61,59,57,54];
-  mkChart('chart-elec','line',hours,vals,'#f97316');
-  addTick('⚡ EU electricity: ~320 GW estimated · RTE France open API');
+  // RTE failed — show loading state, no fake values
+  safe('elec-fr','—'); safe('elec-eu','—'); safe('elec-delta','—');
+  const elecNote = document.getElementById('elec-fr');
+  if(elecNote) elecNote.parentElement.querySelector('.sub') && 
+    (elecNote.parentElement.querySelector('.sub').textContent = 'RTE API unreachable — retry later');
 }
 
 // ═══════════════════════════════
