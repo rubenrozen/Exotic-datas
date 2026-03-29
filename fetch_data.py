@@ -373,7 +373,7 @@ else:
 # ── [7] UNHCR ─────────────────────────────────────────────
 print("[7/9] UNHCR Refugees...")
 try:
-    d = fetch_json("https://api.unhcr.org/population/v1/population/?limit=1&dataset=population&displayType=totals&columns%5B%5D=refugees&columns%5B%5D=idps&columns%5B%5D=asylum_seekers&yearFrom=2012&yearTo=2025")
+    d = fetch_json("https://api.unhcr.org/population/v1/population/?limit=20&dataset=population&displayType=totals&columns%5B%5D=refugees&columns%5B%5D=idps&columns%5B%5D=asylum_seekers&yearFrom=2012&yearTo=2025")
     items = d.get("items",[])
     series = [{"year":str(i["year"]),"refugees":round((i.get("refugees") or 0)/1e6,1),"idps":round((i.get("idps") or 0)/1e6,1),"asylum":round((i.get("asylum_seekers") or 0)/1e6,1),"total":round(((i.get("refugees") or 0)+(i.get("idps") or 0)+(i.get("asylum_seekers") or 0))/1e6,1)} for i in items if i.get("year")]
     # Sum all components for true total
@@ -597,6 +597,144 @@ for cat, label in ARXIV_CATS.items():
         arxiv_data[cat] = {'label': label, 'papers': [], 'error': str(e)}
 
 save("arxiv.json", arxiv_data)
+
+
+# ── [DEMO] Demographics: Population, Life Expectancy, Aging Index ──
+print("[DEMO] Fetching UN/WHO/WorldBank demographics...")
+
+# ── Population — UN World Population Prospects API ──
+try:
+    # UN DESA WPP API: total population + births + deaths per year
+    url_pop = "https://population.un.org/dataportalapi/api/v1/data/indicators/49,55,60/locations/900/start/2020/end/2026/?format=json&pageSize=200"
+    d_pop = fetch_json(url_pop)
+    items_pop = d_pop.get("data", [])
+    # indicator 49=total population, 55=births, 60=deaths
+    pop_by_year = {}
+    for row in items_pop:
+        yr = row.get("timeLabel") or row.get("time", "")
+        ind = row.get("indicatorId")
+        val = row.get("value")
+        if yr and ind and val is not None:
+            if yr not in pop_by_year:
+                pop_by_year[yr] = {}
+            pop_by_year[yr][ind] = float(val)
+    # Latest year
+    latest_yr = max(pop_by_year.keys()) if pop_by_year else "2024"
+    latest = pop_by_year.get(latest_yr, {})
+    # Pop in thousands → convert to units
+    total_pop = round(latest.get(49, 8118000) * 1000)
+    births_per_year = round(latest.get(55, 140000000))
+    deaths_per_year = round(latest.get(60, 58000000))
+    births_per_sec = round(births_per_year / 31536000, 3)
+    deaths_per_sec = round(deaths_per_year / 31536000, 3)
+    # Reference timestamp: Jan 1 of latest year
+    import datetime
+    ref_ts = int(datetime.datetime(int(latest_yr), 1, 1).timestamp())
+    save("population.json", {
+        "total": total_pop,
+        "year": latest_yr,
+        "births_per_sec": births_per_sec,
+        "deaths_per_sec": deaths_per_sec,
+        "ref_timestamp": ref_ts,
+        "ref_population": total_pop,
+        "source": "UN DESA World Population Prospects",
+        "updated": NOW
+    })
+    print(f"  ✓ Population {latest_yr}: {total_pop/1e9:.3f}B · {births_per_sec} births/s · {deaths_per_sec} deaths/s")
+except Exception as e:
+    errors.append(f"Population: {e}"); print(f"  ✗ Population: {e}")
+
+# ── Life expectancy — World Bank API (free, CORS ok) ──
+try:
+    # SP.DYN.LE00.IN = life expectancy at birth, total
+    countries_le = ["JPN","CHE","SGP","AUS","FRA","DEU","CHN","USA","BRA","IND","NGA","COD"]
+    flags = {"JPN":"🇯🇵","CHE":"🇨🇭","SGP":"🇸🇬","AUS":"🇦🇺","FRA":"🇫🇷",
+             "DEU":"🇩🇪","CHN":"🇨🇳","USA":"🇺🇸","BRA":"🇧🇷","IND":"🇮🇳","NGA":"🇳🇬","COD":"🇨🇩"}
+    names = {"JPN":"Japan","CHE":"Switzerland","SGP":"Singapore","AUS":"Australia","FRA":"France",
+             "DEU":"Germany","CHN":"China","USA":"USA","BRA":"Brazil","IND":"India","NGA":"Nigeria","COD":"DRC"}
+    le_data = []
+    codes = ";".join(countries_le)
+    url_le = f"https://api.worldbank.org/v2/country/{codes}/indicator/SP.DYN.LE00.IN?format=json&mrv=12&per_page=300"
+    d_le = fetch_json(url_le)
+    rows = d_le[1] if isinstance(d_le, list) and len(d_le)>1 else []
+    # Group by country, get latest non-null
+    latest_le = {}
+    prev_le = {}
+    for row in rows:
+        code = row.get("countryiso3code","")
+        yr = int(row.get("date",0))
+        val = row.get("value")
+        if code in countries_le and val is not None:
+            if code not in latest_le or yr > latest_le[code]["year"]:
+                if code in latest_le:
+                    prev_le[code] = latest_le[code]
+                latest_le[code] = {"year": yr, "value": round(float(val),1)}
+    # Compute 1Y delta and build series for 10Y delta
+    le_series = {}
+    for row in rows:
+        code = row.get("countryiso3code","")
+        if code not in countries_le: continue
+        yr = int(row.get("date",0))
+        val = row.get("value")
+        if val is not None:
+            if code not in le_series: le_series[code] = {}
+            le_series[code][yr] = round(float(val),1)
+    result_le = []
+    for code in countries_le:
+        if code not in latest_le: continue
+        cur_yr = latest_le[code]["year"]
+        cur_val = latest_le[code]["value"]
+        val_1y = le_series.get(code,{}).get(cur_yr-1)
+        val_10y = le_series.get(code,{}).get(cur_yr-10)
+        d1 = round(cur_val - val_1y, 1) if val_1y else None
+        d10 = round(cur_val - val_10y, 1) if val_10y else None
+        result_le.append({
+            "code": code, "flag": flags[code], "country": names[code],
+            "value": cur_val, "year": cur_yr, "d1y": d1, "d10y": d10
+        })
+    result_le.sort(key=lambda x: -x["value"])
+    save("life_expectancy.json", {"countries": result_le, "updated": NOW})
+    print(f"  ✓ Life expectancy: {len(result_le)} countries")
+except Exception as e:
+    errors.append(f"LifeExp: {e}"); print(f"  ✗ LifeExp: {e}")
+
+# ── Aging index — World Bank SP.POP.65UP.TO.ZS + SP.POP.1564.TO.ZS ──
+try:
+    countries_ag = ["JPN","ITA","PRT","FIN","GRC","DEU","KOR","ESP","FRA","CHN","USA","IND"]
+    names_ag = {"JPN":"Japan","ITA":"Italy","PRT":"Portugal","FIN":"Finland","GRC":"Greece",
+                "DEU":"Germany","KOR":"S. Korea","ESP":"Spain","FRA":"France",
+                "CHN":"China","USA":"USA","IND":"India"}
+    flags_ag = {"JPN":"🇯🇵","ITA":"🇮🇹","PRT":"🇵🇹","FIN":"🇫🇮","GRC":"🇬🇷",
+                "DEU":"🇩🇪","KOR":"🇰🇷","ESP":"🇪🇸","FRA":"🇫🇷","CHN":"🇨🇳","USA":"🇺🇸","IND":"🇮🇳"}
+    codes_ag = ";".join(countries_ag)
+    # 65+ share and working-age share
+    url65 = f"https://api.worldbank.org/v2/country/{codes_ag}/indicator/SP.POP.65UP.TO.ZS?format=json&mrv=5&per_page=200"
+    url1564 = f"https://api.worldbank.org/v2/country/{codes_ag}/indicator/SP.POP.1564.TO.ZS?format=json&mrv=5&per_page=200"
+    d65 = fetch_json(url65); d1564 = fetch_json(url1564)
+    rows65 = d65[1] if isinstance(d65,list) and len(d65)>1 else []
+    rows1564 = d1564[1] if isinstance(d1564,list) and len(d1564)>1 else []
+    def latest_val(rows, code):
+        best = None
+        for r in rows:
+            if r.get("countryiso3code","") == code and r.get("value") is not None:
+                if best is None or int(r.get("date",0)) > int(best.get("date",0)):
+                    best = r
+        return round(float(best["value"]),1) if best else None
+    aging_result = []
+    for code in countries_ag:
+        p65 = latest_val(rows65, code)
+        p1564 = latest_val(rows1564, code)
+        if p65 is None or p1564 is None or p1564 == 0: continue
+        ratio = round(p65 / p1564 * 100, 1)
+        aging_result.append({
+            "code": code, "flag": flags_ag[code], "country": names_ag[code],
+            "ratio": ratio, "pct65": p65, "pct1564": p1564
+        })
+    aging_result.sort(key=lambda x: -x["ratio"])
+    save("aging_index.json", {"countries": aging_result, "updated": NOW})
+    print(f"  ✓ Aging index: {len(aging_result)} countries")
+except Exception as e:
+    errors.append(f"Aging: {e}"); print(f"  ✗ Aging: {e}")
 
 # ── META ──────────────────────────────────────────────────
 save("meta.json",{"last_run":NOW,"errors":errors,"datasets":["co2","bdi","gas_storage","oil_stocks","fao","conflicts","refugees","air_traffic","opentable"],"acled_ok":bool(acled_email and acled_password),"eia_ok":bool(os.environ.get("EIA_API_KEY")),"agsi_ok":bool(os.environ.get("AGSI_KEY"))})
