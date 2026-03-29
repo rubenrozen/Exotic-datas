@@ -484,8 +484,8 @@ try:
 except Exception as e:
     errors.append(f"Satellites: {e}"); print(f"  ✗ {e}")
 
-# ── [9] Truck Tonnage + OpenTable ────────────────────────
-print("[9/9] ATA Truck Tonnage + Restaurant bookings...")
+# ── [9] Truck Tonnage + Restaurant spending + OpenTable ──────
+print("[9/9] ATA Truck Tonnage + Restaurant spending...")
 fred_key = os.environ.get("FRED_API_KEY","")
 if fred_key:
     try:
@@ -509,7 +509,34 @@ if fred_key:
         errors.append(f"Truck: {e}"); print(f"  ✗ {e}")
 else:
     print("  ⚠ FRED_API_KEY not set")
-save("opentable.json",{"cities":[{"city":"New York","vs_2019":104},{"city":"London","vs_2019":98},{"city":"Paris","vs_2019":96},{"city":"Toronto","vs_2019":101},{"city":"Sydney","vs_2019":107},{"city":"Berlin","vs_2019":103},{"city":"Tokyo","vs_2019":89},{"city":"Mexico City","vs_2019":112}],"note":"% vs 2019 baseline","score":72,"updated":NOW})
+# Restaurant & bar spending — FRED MRTSSM7220USN (monthly, US Census)
+if fred_key:
+    try:
+        url = (f"https://api.stlouisfed.org/fred/series/observations"
+               f"?series_id=MRTSSM7220USN&sort_order=desc&limit=25"
+               f"&file_type=json&api_key={fred_key}")
+        d = fetch_json(url)
+        obs = [{"date":r["date"],"value":float(r["value"])}
+               for r in d.get("observations",[]) if r.get("value",".") != "."]
+        obs.reverse()
+        if obs:
+            cur = obs[-1]["value"]
+            prev = obs[-2]["value"] if len(obs)>1 else cur
+            yoy_val = obs[-13]["value"] if len(obs)>=13 else None
+            mom = round((cur-prev)/prev*100, 1)
+            yoy = round((cur-yoy_val)/yoy_val*100, 1) if yoy_val else None
+            save("restaurant.json", {
+                "current": round(cur,1),
+                "prev": round(prev,1),
+                "mom_pct": mom,
+                "yoy_pct": yoy,
+                "series": obs[-25:],
+                "note": "FRED MRTSSM7220USN · Food Services & Drinking Places · Millions USD",
+                "updated": NOW
+            })
+            print(f"  ✓ Restaurants: ${cur/1000:.1f}B/month · MoM {mom:+.1f}% · YoY {yoy:+.1f}%")
+    except Exception as e:
+        errors.append(f"Restaurant: {e}"); print(f"  ✗ {e}")
 
 # ── CONFIG — inject secrets for client-side use ──────────
 ais_key  = os.environ.get("AIS_KEY","")
