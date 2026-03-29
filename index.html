@@ -2574,6 +2574,59 @@ renderOvGrid();
 addTick('🌍 Earth Pulse — loading live data streams…');
 addTick('🔥 USGS Quakes · 🛸 ISS orbital · ☀️ NOAA Space Weather · 🌿 CO₂ Mauna Loa · ✈️ OpenSky flights · 📖 Wikimedia · 🔬 arXiv');
 
+// ── Background pre-load: compute EPI without waiting for tab clicks ──
+// Load lightweight signals immediately so overview shows real scores
+(async function preloadScores(){
+  // Small stagger to avoid hammering APIs simultaneously
+  const delay = ms => new Promise(r => setTimeout(r, ms));
+
+  // 1. USGS Quakes (fast, no key)
+  loadUSGS(true).catch(()=>{});
+  await delay(800);
+
+  // 2. CO₂ (fast CSV)
+  loadCO2().catch(()=>{});
+  await delay(800);
+
+  // 3. Kp index (fast JSON)
+  loadKp().catch(()=>{});
+  await delay(500);
+
+  // 4. Solar wind
+  loadSolarWind().catch(()=>{});
+  await delay(800);
+
+  // 5. ISS position
+  updateISS().catch(()=>{});
+  await delay(500);
+
+  // 6. Flights (gives trade score)
+  refreshFlights().catch(()=>{});
+  await delay(1000);
+
+  // 7. Internet
+  loadInternet().catch(()=>{});
+  await delay(800);
+
+  // 8. Conflicts (from data/conflicts.json — fast local fetch)
+  loadConflicts().catch(()=>{});
+  await delay(500);
+
+  // 9. Gas + Oil + Electricity
+  loadGasStorage().catch(()=>{});
+  loadOil('6m',null).catch(()=>{});
+  loadElectricity().catch(()=>{});
+  await delay(500);
+
+  // 10. Demographics
+  loadRefugees('5y',null).catch(()=>{});
+  startPop();
+  await delay(300);
+
+  // Force overview redraw after all loads
+  updateEPI();
+})();
+
 // ═══════════════════════════════
 // WORLD MAP ENGINE (canvas-based, no external tiles)
 // Equirectangular projection: lon→x, lat→y
