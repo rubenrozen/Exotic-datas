@@ -2,31 +2,31 @@
   "cs.AI": {
     "label": "AI / Machine Learning",
     "papers": [],
-    "error": "name 'requests' is not defined"
+    "error": "HTTP Error 429: Unknown Error"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "error": "name 'requests' is not defined"
+    "error": "The read operation timed out"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "error": "name 'requests' is not defined"
+    "error": "HTTP Error 429: Unknown Error"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "error": "name 'requests' is not defined"
+    "error": "The read operation timed out"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [],
-    "error": "name 'requests' is not defined"
+    "error": "The read operation timed out"
   },
   "q-bio": {
     "label": "Biology",
     "papers": [],
-    "error": "name 'requests' is not defined"
+    "error": "The read operation timed out"
   }
 }
