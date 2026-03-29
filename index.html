@@ -1106,7 +1106,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
       <div class="lbl">🍽 Restaurant bookings — OpenTable
         <span class="ib">i<div class="ipop"><div class="ipt">Restaurant bookings vs. 2019</div><div class="ipb">Percentage of seated diners vs. the same period in 2019 (pre-COVID baseline). A real-time proxy for consumer confidence and discretionary spending. Data sourced from OpenTable aggregate reports and The Economist dataset.</div><div class="ips">Source: OpenTable / The Economist · vs. 2019 baseline · Monthly</div></div></span>
       </div>
-      <div id="restau-cities" style="display:flex;flex-direction:column;gap:5px;margin-top:6px"></div>
+      <div id="restau-cities" style="margin-top:8px"></div>
     </div>
 
     <!-- Google Trends -->
@@ -1119,11 +1119,6 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
     </div>
   </div>
 
-  <div class="card" style="border-color:rgba(236,72,153,.12)">
-    <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-trends),transparent)"></div>
-    <div class="lbl">🍽 Restaurant bookings vs. 2019 — city comparison</div>
-    <div class="ch h160"><canvas id="chart-restau"></canvas></div>
-  </div>
 </div>
 
 <!-- ═══════════════ SCRIPTS ═══════════════ -->
@@ -2451,25 +2446,7 @@ async function fetchArxiv(cat){
   if(!list) return;
   list.innerHTML = '<div class="nodata loading"><div class="nodata-ico">🔬</div><div>Loading…</div></div>';
 
-  // Map our categories to Semantic Scholar fields of study
-  const S2_FIELDS = {
-    'cs.AI':   'Computer Science',
-    'q-fin':   'Economics',
-    'physics': 'Physics',
-    'econ':    'Economics',
-    'cs.CR':   'Computer Science',
-    'q-bio':   'Biology',
-  };
-  const S2_QUERIES = {
-    'cs.AI':   'artificial intelligence machine learning',
-    'q-fin':   'quantitative finance',
-    'physics': 'physics',
-    'econ':    'economics',
-    'cs.CR':   'cybersecurity cryptography',
-    'q-bio':   'computational biology bioinformatics',
-  };
-
-  // ── Primary: data/arxiv.json (GitHub Actions, server-side) ──
+  // Primary: data/arxiv.json (GitHub Actions)
   try {
     const d = await loadJSON('arxiv.json');
     if (d && d[cat] && d[cat].papers && d[cat].papers.length > 0) {
@@ -2478,62 +2455,133 @@ async function fetchArxiv(cat){
     }
   } catch(e) {}
 
-  // ── Fallback: Semantic Scholar API (CORS enabled, free, no key) ──
+  // Fallback A: rss2json.com — proxies RSS feeds with CORS (free, 1 req/sec)
   try {
-    const query = encodeURIComponent(S2_QUERIES[cat] || cat);
-    const fields = 'title,authors,year,abstract,externalIds,openAccessPdf,publicationDate';
-    const url = `https://api.semanticscholar.org/graph/v1/paper/search?query=${query}&fields=${fields}&limit=8&sort=publicationDate`;
-    const d = await fetch(url, {signal: AbortSignal.timeout(10000)}).then(r => r.json());
-    const papers = (d.data || []).map(p => ({
-      title: p.title || '',
-      summary: (p.abstract || '').slice(0, 200),
-      authors: (p.authors || []).slice(0,3).map(a => a.name),
-      date: p.publicationDate || String(p.year || ''),
-      link: p.externalIds?.ArXiv
-        ? `https://arxiv.org/abs/${p.externalIds.ArXiv}`
-        : (p.openAccessPdf?.url || `https://www.semanticscholar.org/paper/${p.paperId}`)
-    }));
-    if (papers.length > 0) {
+    const rssUrl = 'https://arxiv.org/rss/' + cat.replace('.','_');
+    const apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(rssUrl) + '&count=8';
+    const d = await fetch(apiUrl, {signal: AbortSignal.timeout(10000)}).then(r => r.json());
+    if (d.status === 'ok' && d.items && d.items.length > 0) {
+      const papers = d.items.map(function(item) {
+        return {
+          title: item.title || '',
+          summary: (item.description || item.content || '').replace(/<[^>]+>/g,'').trim().slice(0,200),
+          authors: item.author ? [item.author] : [],
+          date: (item.pubDate || '').slice(0,10),
+          link: item.link || item.guid || ''
+        };
+      });
       renderArxivPapers(list, papers, cat);
-      addTick('🔬 arXiv ' + cat + ': ' + papers.length + ' papers (Semantic Scholar)');
+      addTick('🔬 arXiv ' + cat + ': ' + papers.length + ' papers');
       return;
     }
-  } catch(e) { console.warn('Semantic Scholar:', e); }
+  } catch(e) { console.warn('rss2json:', e); }
 
-  // ── Last resort: direct link ──
+  // Fallback B: feed2json.org
+  try {
+    const rssUrl = 'https://arxiv.org/rss/' + cat.replace('.','_');
+    const apiUrl = 'https://feed2json.org/convert?url=' + encodeURIComponent(rssUrl);
+    const d = await fetch(apiUrl, {signal: AbortSignal.timeout(10000)}).then(r => r.json());
+    const items = d.items || d.entries || [];
+    if (items.length > 0) {
+      const papers = items.slice(0,8).map(function(item) {
+        return {
+          title: item.title && item.title.value ? item.title.value : (item.title || ''),
+          summary: (item.summary && item.summary.value ? item.summary.value : (item.content_text || '')).replace(/<[^>]+>/g,'').slice(0,200),
+          authors: (item.authors || []).slice(0,3).map(function(a){ return a.name || ''; }),
+          date: (item.date_published || item.published || '').slice(0,10),
+          link: item.url || item.id || ''
+        };
+      });
+      renderArxivPapers(list, papers, cat);
+      addTick('🔬 arXiv ' + cat + ': ' + papers.length + ' papers');
+      return;
+    }
+  } catch(e) { console.warn('feed2json:', e); }
+
   list.innerHTML = '<div style="padding:12px;font-size:11px;color:var(--muted);font-family:var(--mono);line-height:2">' +
-    'Run GitHub Actions to load arXiv papers server-side.<br>' +
-    'Or browse: <a href="https://arxiv.org/list/' + cat + '/recent" target="_blank" style="color:var(--c-trends)">arxiv.org/list/' + cat + '/recent ↗</a>' +
+    'Run GitHub Actions to load arXiv papers.<br>' +
+    '<a href="https://arxiv.org/list/' + cat + '/recent" target="_blank" style="color:var(--c-trends)">arxiv.org/list/' + cat + '/recent ↗</a>' +
     '</div>';
 }
 
 function renderArxivPapers(list, papers, cat) {
-  list.innerHTML = papers.map(p =>
-    '<div class="ax-item" onclick="window.open(\'' + (p.link||'#').replace(/'/g,'%27') + '\',\'_blank\')">' +
-    '<div class="ax-title">' + (p.title||'') + '</div>' +
-    '<div style="font-size:10px;color:var(--muted);margin:3px 0;line-height:1.4">' + (p.summary||'').slice(0,130) + '…</div>' +
-    '<div class="ax-meta">' + (Array.isArray(p.authors) ? p.authors.join(' · ') : (p.authors||'')) + ' · ' + (p.date||'') + '</div>' +
-    '</div>'
-  ).join('');
-  addTick('🔬 arXiv ' + cat + ': ' + papers.length + ' papers · ' + (papers[0]?.title||'').slice(0,50));
+  list.innerHTML = papers.map(function(p) {
+    const link = (p.link || '#').replace(/'/g,'%27');
+    return '<div class="ax-item" onclick="window.open(\'' + link + '\',\'_blank\')">' +
+      '<div class="ax-title">' + (p.title || '') + '</div>' +
+      '<div style="font-size:10px;color:var(--muted);margin:3px 0;line-height:1.4">' + ((p.summary||'').slice(0,130)) + '…</div>' +
+      '<div class="ax-meta">' + (Array.isArray(p.authors) ? p.authors.join(' · ') : (p.authors||'')) + ' · ' + (p.date||'') + '</div>' +
+      '</div>';
+  }).join('');
+  addTick('🔬 arXiv ' + cat + ': ' + papers.length + ' papers · ' + ((papers[0]||{}).title||'').slice(0,50));
 }
 
 
 function loadOpenTable(){
   const cities=[
-    {c:'🇺🇸 New York',v:104},{c:'🇬🇧 London',v:98},{c:'🇫🇷 Paris',v:96},
-    {c:'🇨🇦 Toronto',v:101},{c:'🇦🇺 Sydney',v:107},{c:'🇩🇪 Berlin',v:103},
-    {c:'🇯🇵 Tokyo',v:89},{c:'🇲🇽 Mexico City',v:112},
+    {flag:'🇺🇸',city:'New York',   region:'N. America', v:104},
+    {flag:'🇦🇺',city:'Sydney',     region:'Pacific',    v:107},
+    {flag:'🇲🇽',city:'Mexico City',region:'N. America', v:112},
+    {flag:'🇩🇪',city:'Berlin',     region:'Europe',     v:103},
+    {flag:'🇨🇦',city:'Toronto',    region:'N. America', v:101},
+    {flag:'🇬🇧',city:'London',     region:'Europe',     v:98},
+    {flag:'🇫🇷',city:'Paris',      region:'Europe',     v:96},
+    {flag:'🇯🇵',city:'Tokyo',      region:'Asia',       v:89},
   ];
-  const el=document.getElementById('restau-cities');
-  if(el) el.innerHTML=cities.map(c=>`<div style="display:flex;align-items:center;gap:8px;padding:6px 8px;background:rgba(236,72,153,.04);border:1px solid rgba(236,72,153,.08);border-radius:6px">
-    <span style="flex:1;font-size:12px">${c.c}</span>
-    <span style="font-family:var(--mono);font-size:13px;font-weight:700;color:${c.v>=100?'#22c55e':'#ff5a20'}">${c.v>=100?'+':''}${c.v-100}%</span>
-    <div style="width:40px;height:4px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden"><div style="width:${c.v>100?Math.min((c.v-100)*5,100):0}%;height:100%;background:#22c55e;border-radius:2px"></div></div>
-  </div>`).join('');
-  mkChart('chart-restau','bar',cities.map(c=>c.c.split(' ').slice(-1)[0]),cities.map(c=>c.v-100),'#ec4899',
-    {ds:{backgroundColor:cities.map(c=>c.v>=100?'rgba(34,197,94,.65)':'rgba(255,90,54,.65)'),borderWidth:0}});
-  addTick('🍽 Restaurant bookings: NYC +4% · Sydney +7% · Tokyo -11% vs 2019');
+
+  // Sort: best → worst
+  cities.sort((a,b) => b.v - a.v);
+
+  const el = document.getElementById('restau-cities');
+  if(!el) return;
+
+  // Global average
+  const avg = Math.round(cities.reduce((s,c) => s + (c.v-100), 0) / cities.length * 10) / 10;
+  const avgColor = avg >= 0 ? '#22c55e' : '#ff5a20';
+
+  // Max absolute value for bar scaling
+  const maxAbs = Math.max(...cities.map(c => Math.abs(c.v - 100)), 1);
+
+  el.innerHTML =
+    // Header row
+    '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">' +
+      '<div style="font-size:11px;color:var(--muted);font-family:var(--mono)">vs. 2019 baseline · 8 cities tracked</div>' +
+      '<div style="font-size:12px;font-family:var(--mono)">Avg: <span style="color:' + avgColor + ';font-weight:700">' + (avg >= 0 ? '+' : '') + avg + '%</span></div>' +
+    '</div>' +
+    // City rows
+    cities.map(function(c) {
+      const delta = c.v - 100;
+      const isPos = delta >= 0;
+      const color = isPos ? '#22c55e' : '#ff5a20';
+      const bgColor = isPos ? 'rgba(34,197,94,0.06)' : 'rgba(255,90,32,0.06)';
+      const borderColor = isPos ? 'rgba(34,197,94,0.15)' : 'rgba(255,90,32,0.15)';
+      const barW = Math.round(Math.abs(delta) / maxAbs * 100);
+      return '<div style="display:grid;grid-template-columns:28px 1fr auto;align-items:center;gap:10px;padding:9px 12px;background:' + bgColor + ';border:1px solid ' + borderColor + ';border-radius:8px;margin-bottom:6px">' +
+        // Flag
+        '<div style="font-size:20px;line-height:1">' + c.flag + '</div>' +
+        // City + bar
+        '<div>' +
+          '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:5px">' +
+            '<span style="font-size:12px;font-weight:500;color:var(--txt)">' + c.city + '</span>' +
+            '<span style="font-size:9px;font-family:var(--mono);color:var(--muted)">' + c.region + '</span>' +
+          '</div>' +
+          '<div style="position:relative;height:5px;background:rgba(255,255,255,0.07);border-radius:3px">' +
+            // Zero line
+            '<div style="position:absolute;top:0;bottom:0;left:50%;width:1px;background:rgba(255,255,255,0.15)"></div>' +
+            // Bar — grows from center
+            '<div style="position:absolute;top:0;bottom:0;' + (isPos ? 'left:50%' : 'right:50%') + ';width:' + (barW/2) + '%;background:' + color + ';border-radius:3px;transition:width .8s ease"></div>' +
+          '</div>' +
+        '</div>' +
+        // Delta badge
+        '<div style="font-family:var(--mono);font-size:14px;font-weight:700;color:' + color + ';min-width:44px;text-align:right">' +
+          (isPos ? '+' : '') + delta + '%' +
+        '</div>' +
+      '</div>';
+    }).join('') +
+    // Footer
+    '<div style="font-size:9px;color:var(--dim);font-family:var(--mono);margin-top:6px;text-align:right">Source: OpenTable / The Economist · vs. 2019 pre-COVID baseline</div>';
+
+  addTick('🍽 Restaurants: Mexico City +12% · Sydney +7% · Tokyo -11% vs 2019');
 }
 
 async function loadGTrends(){
