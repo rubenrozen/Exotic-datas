@@ -376,9 +376,13 @@ try:
     d = fetch_json("https://api.unhcr.org/population/v1/population/?limit=1&dataset=population&displayType=totals&columns%5B%5D=refugees&columns%5B%5D=idps&columns%5B%5D=asylum_seekers&yearFrom=2012&yearTo=2025")
     items = d.get("items",[])
     series = [{"year":str(i["year"]),"refugees":round((i.get("refugees") or 0)/1e6,1),"idps":round((i.get("idps") or 0)/1e6,1),"asylum":round((i.get("asylum_seekers") or 0)/1e6,1),"total":round(((i.get("refugees") or 0)+(i.get("idps") or 0)+(i.get("asylum_seekers") or 0))/1e6,1)} for i in items if i.get("year")]
-    cur = series[-1]["total"] if series else 117.3
-    prev = series[-2]["total"] if len(series)>1 else cur
-    save("refugees.json",{"current_millions":cur,"prev_year_millions":prev,"delta":round(cur-prev,1),"breakdown":series[-1] if series else {},"series":series,"score":max(5,round(100-cur*0.55)),"updated":NOW})
+    # Sum all components for true total
+    def row_total(row):
+        return round(((row.get("refugees") or 0)+(row.get("idps") or 0)+(row.get("asylum_seekers") or 0))/1e6,1)
+    totals = [{"year":str(i["year"]),"total":row_total(i)} for i in items if i.get("year")]
+    cur = totals[-1]["total"] if totals else 117.3
+    prev = totals[-2]["total"] if len(totals)>1 else cur
+    save("refugees.json",{"current_millions":cur,"prev_year_millions":prev,"total_millions":cur,"delta":round(cur-prev,1),"breakdown":series[-1] if series else {},"series":totals,"score":max(5,round(100-cur*0.55)),"updated":NOW})
 except Exception as e:
     errors.append(f"UNHCR: {e}"); print(f"  ✗ {e}")
 
@@ -522,6 +526,44 @@ if ais_key:
     print("  ✓ config.json — AIS_KEY injected")
 else:
     print("  ⚠ config.json — AIS_KEY not set (add to GitHub Secrets)")
+
+
+# ── [arXiv] Scientific papers by category ─────────────────
+print("[arXiv] Fetching latest scientific papers...")
+ARXIV_CATS = {
+    'cs.AI':  'AI / Machine Learning',
+    'q-fin':  'Quantitative Finance',
+    'physics':'Physics',
+    'econ':   'Economics',
+    'cs.CR':  'Cybersecurity',
+    'q-bio':  'Biology',
+}
+arxiv_data = {}
+for cat, label in ARXIV_CATS.items():
+    try:
+        import xml.etree.ElementTree as ET
+        url = f"https://export.arxiv.org/api/query?search_query=cat:{cat}&sortBy=submittedDate&sortOrder=descending&max_results=8"
+        r = requests.get(url, timeout=15, headers={'User-Agent':'EarthPulse/1.0'})
+        root = ET.fromstring(r.text)
+        ns = {'atom':'http://www.w3.org/2005/Atom'}
+        papers = []
+        for entry in root.findall('atom:entry', ns):
+            title = entry.findtext('atom:title', '', ns).replace('\n',' ').strip()
+            summary = entry.findtext('atom:summary', '', ns).replace('\n',' ').strip()[:200]
+            link = entry.findtext('atom:id', '', ns).strip()
+            published = entry.findtext('atom:published', '', ns)[:10]
+            authors = [a.findtext('atom:name','',ns) for a in entry.findall('atom:author',ns)][:3]
+            papers.append({
+                'title': title, 'summary': summary, 'link': link,
+                'date': published, 'authors': authors
+            })
+        arxiv_data[cat] = {'label': label, 'papers': papers, 'updated': NOW}
+        print(f"  ✓ {cat}: {len(papers)} papers")
+    except Exception as e:
+        print(f"  ✗ {cat}: {e}")
+        arxiv_data[cat] = {'label': label, 'papers': [], 'error': str(e)}
+
+save("arxiv.json", arxiv_data)
 
 # ── META ──────────────────────────────────────────────────
 save("meta.json",{"last_run":NOW,"errors":errors,"datasets":["co2","bdi","gas_storage","oil_stocks","fao","conflicts","refugees","air_traffic","opentable"],"acled_ok":bool(acled_email and acled_password),"eia_ok":bool(os.environ.get("EIA_API_KEY")),"agsi_ok":bool(os.environ.get("AGSI_KEY"))})
