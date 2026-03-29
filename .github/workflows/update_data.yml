@@ -25,6 +25,7 @@ jobs:
           NASA_FIRMS_KEY:   ${{ secrets.NASA_FIRMS_KEY }}
           AIS_KEY:          ${{ secrets.AIS_KEY }}
           CF_RADAR_KEY:     ${{ secrets.CF_RADAR_KEY }}
+          FRED_API_KEY:     ${{ secrets.FRED_API_KEY }}
         run: python fetch_data.py
       - name: Commit updated data
         run: |
