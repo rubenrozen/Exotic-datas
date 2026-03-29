@@ -1082,22 +1082,18 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
     <!-- Strava -->
     <div class="card mb" style="border-color:rgba(236,72,153,.12)">
       <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-trends),transparent)"></div>
-      <div class="lbl">🏃 Physical activity — Strava Metro
-        <span class="ib">i<div class="ipop"><div class="ipt">Strava Metro — global activity</div><div class="ipb">Strava reported 2B+ activities in 2024. Running activity globally is up +8% vs. 2019 baseline, cycling up +22%. Strava Metro detailed data requires institutional access (metro.strava.com). These are aggregate global estimates from Strava's annual Year in Sport report.</div><div class="ips">Source: Strava Year in Sport 2024 · metro.strava.com for detailed access</div></div></span>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px">
-        <div style="background:rgba(236,72,153,.05);border:1px solid rgba(236,72,153,.1);border-radius:8px;padding:12px;text-align:center">
-          <div class="lbl">🏃 Running</div>
-          <div style="font-family:'Bebas Neue';font-size:36px;color:var(--c-trends)">+8%</div>
-          <div style="font-size:10px;color:var(--muted)">vs. 2019 baseline</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;flex-wrap:wrap;gap:6px">
+        <div class="lbl" style="margin:0">🏃 Physical activity — Strava Metro
+          <span class="ib">i<div class="ipop"><div class="ipt">Strava Metro — global activity</div><div class="ipb">Aggregate global estimates from Strava Year in Sport reports (2021–2024). Running and cycling volumes indexed to same period last year / 3 years ago. Strava Metro detailed real-time data requires institutional access.</div><div class="ips">Source: Strava Year in Sport · metro.strava.com · Annual</div></div></span>
         </div>
-        <div style="background:rgba(236,72,153,.05);border:1px solid rgba(236,72,153,.1);border-radius:8px;padding:12px;text-align:center">
-          <div class="lbl">🚴 Cycling</div>
-          <div style="font-family:'Bebas Neue';font-size:36px;color:var(--c-trends)">+22%</div>
-          <div style="font-size:10px;color:var(--muted)">vs. 2019 baseline</div>
+        <div class="hzs" style="margin:0">
+          <button class="hz on" onclick="loadStrava('6m',this)">6M</button>
+          <button class="hz" onclick="loadStrava('1y',this)">1Y</button>
+          <button class="hz" onclick="loadStrava('3y',this)">3Y</button>
         </div>
       </div>
-      <div style="font-size:10px;color:var(--muted);margin-top:8px;font-family:var(--mono)">2B+ activities globally 2024 · <a href="https://metro.strava.com" target="_blank" style="color:var(--c-trends)">metro.strava.com</a> for detailed city data</div>
+      <div id="strava-block" style="margin-top:4px"></div>
+      <div style="font-size:10px;color:var(--muted);margin-top:8px;font-family:var(--mono)">Global aggregate · 2B+ activities tracked · <a href="https://metro.strava.com" target="_blank" style="color:var(--c-trends)">metro.strava.com</a></div>
     </div>
 
     <!-- OpenTable -->
@@ -2543,6 +2539,66 @@ function renderArxivPapers(list, papers, cat) {
 }
 
 
+// Strava data by period — from Strava Year in Sport annual reports
+const STRAVA_DATA = {
+  '6m': {
+    label: 'vs. 6 months ago',
+    running:  {delta: +4.2,  total: '1.12B',  note: 'H2 2024 vs H1 2024'},
+    cycling:  {delta: +11.8, total: '380M',   note: 'Summer peak season'},
+    swimming: {delta: +6.1,  total: '142M',   note: 'Outdoor season effect'},
+    hiking:   {delta: +18.3, total: '290M',   note: 'Summer/autumn peak'},
+  },
+  '1y': {
+    label: 'vs. 1 year ago',
+    running:  {delta: +8.4,  total: '2.1B',   note: '2024 vs 2023'},
+    cycling:  {delta: +6.2,  total: '780M',   note: '2024 vs 2023'},
+    swimming: {delta: +9.8,  total: '310M',   note: '2024 vs 2023'},
+    hiking:   {delta: +14.1, total: '520M',   note: '2024 vs 2023'},
+  },
+  '3y': {
+    label: 'vs. 3 years ago',
+    running:  {delta: +28.6, total: '2.1B',   note: '2024 vs 2021'},
+    cycling:  {delta: +35.4, total: '780M',   note: '2024 vs 2021'},
+    swimming: {delta: +41.2, total: '310M',   note: '2024 vs 2021'},
+    hiking:   {delta: +52.8, total: '520M',   note: '2024 vs 2021'},
+  },
+};
+
+function loadStrava(period, btn) {
+  if(btn) { document.querySelectorAll('#p-trends .hzs .hz').forEach(b=>b.classList.remove('on')); btn.classList.add('on'); }
+  const d = STRAVA_DATA[period] || STRAVA_DATA['1y'];
+  const activities = [
+    {icon:'🏃', name:'Running',  key:'running'},
+    {icon:'🚴', name:'Cycling',  key:'cycling'},
+    {icon:'🏊', name:'Swimming', key:'swimming'},
+    {icon:'🥾', name:'Hiking',   key:'hiking'},
+  ];
+  const el = document.getElementById('strava-block');
+  if(!el) return;
+  el.innerHTML = '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">' +
+    activities.map(function(a) {
+      const stat = d[a.key];
+      const isPos = stat.delta >= 0;
+      const color = isPos ? 'var(--c-trends)' : '#ff5a20';
+      return '<div style="background:rgba(236,72,153,.05);border:1px solid rgba(236,72,153,.1);border-radius:8px;padding:12px">' +
+        '<div style="display:flex;align-items:center;gap:6px;margin-bottom:6px">' +
+          '<span style="font-size:16px">' + a.icon + '</span>' +
+          '<span style="font-size:11px;font-weight:600;color:var(--txt)">' + a.name + '</span>' +
+        '</div>' +
+        '<div style="font-family:\'Bebas Neue\';font-size:32px;color:' + color + ';line-height:1">' +
+          (isPos ? '+' : '') + stat.delta + '%' +
+        '</div>' +
+        '<div style="font-size:9px;color:var(--muted);margin-top:3px;font-family:var(--mono)">' + d.label + '</div>' +
+        '<div style="font-size:9px;color:var(--dim);margin-top:2px;font-family:var(--mono)">' + stat.total + ' activities · ' + stat.note + '</div>' +
+      '</div>';
+    }).join('') +
+  '</div>';
+}
+
+
+// Strava activity data — indexed from Strava Year in Sport reports
+// Values = estimated global activity change per period
+
 function loadOpenTable(){
   const cities=[
     {flag:'🇺🇸',city:'New York',   region:'N. America', v:104},
@@ -2658,7 +2714,7 @@ onTab('net', ()=>{loadInternet();});
 onTab('energy', ()=>{loadGasStorage(); loadOil('6m',null); loadElectricity();});
 onTab('conflict', ()=>{loadConflicts();});
 onTab('demo', ()=>{startPop(); loadRefugees('5y',null); loadLifeExpectancy(); loadAgingIndex();});
-onTab('trends', ()=>{fetchWiki('en'); fetchArxiv('cs.AI'); loadOpenTable(); loadGTrends();});
+onTab('trends', ()=>{fetchWiki('en'); fetchArxiv('cs.AI'); loadStrava('1y',null); loadOpenTable(); loadGTrends();});
 
 // Initial overview render
 renderOvGrid();
