@@ -2345,9 +2345,13 @@ async function loadRefugees(period,btn){
   ];
   const d=await loadJSON('refugees.json');
   const series=d?.series?.length?d.series:FALLBACK;
-  const cur=d?.current_millions||117.3;
-  const prev=d?.prev_year_millions||114.4;
-  safe('demo-refugees',cur.toFixed(1));
+  // UNHCR API may return refugees-only (~29M) vs total displaced (~117M)
+  // If value < 50M, it's a single component — use fallback total
+  let cur = d?.current_millions || 117.3;
+  let prev = d?.prev_year_millions || 114.4;
+  if (cur < 50) cur = 117.3;   // UNHCR 2024 total forcibly displaced
+  if (prev < 50) prev = 114.4;
+  safe('demo-refugees', cur.toFixed(1));
   const delta=document.getElementById('demo-ref-delta');
   if(delta) delta.innerHTML=`<span class="up">↑ +${round1(cur-prev)}M vs. prev year · historical record</span>`;
   let sl=series; if(period==='5y') sl=series.slice(-5);
@@ -2445,31 +2449,57 @@ async function fetchWiki(lang){
 async function fetchArxiv(cat){
   const list=document.getElementById('arxiv-list');
   list.innerHTML='<div class="nodata loading"><div class="nodata-ico">🔬</div><div>Loading arXiv…</div></div>';
-  const base=`https://export.arxiv.org/api/query?search_query=cat:${encodeURIComponent(cat)}&sortBy=submittedDate&sortOrder=descending&max_results=8`;
-  // Try direct first, then corsproxy
-  for(const url of [base,'https://corsproxy.io/?url='+encodeURIComponent(base)]){
-    try{
-      const txt=await fetch(url,{signal:AbortSignal.timeout(10000)}).then(r=>r.text());
-      const xml=new DOMParser().parseFromString(txt,'text/xml');
-      const entries=Array.from(xml.querySelectorAll('entry'));
-      if(!entries.length) continue;
-      list.innerHTML=entries.map(e=>{
-        const title=(e.querySelector('title')?.textContent||'').replace(/\s+/g,' ').trim();
-        const authors=Array.from(e.querySelectorAll('author name')).slice(0,3).map(a=>a.textContent.trim()).join(' · ');
-        const date=(e.querySelector('published')?.textContent||'').slice(0,10);
-        const link=(e.querySelector('id')?.textContent||'').trim();
-        const summary=(e.querySelector('summary')?.textContent||'').replace(/\s+/g,' ').trim().slice(0,120);
-        return `<div class="ax-item" onclick="window.open('${link}','_blank')">
-          <div class="ax-title">${title}</div>
-          <div style="font-size:10px;color:var(--muted);margin:3px 0;line-height:1.4">${summary}…</div>
-          <div class="ax-meta">${authors} · ${date}</div>
-        </div>`;
-      }).join('');
-      addTick(`🔬 arXiv ${cat}: ${entries.length} papers · ${(entries[0]?.querySelector('title')?.textContent||'').slice(0,50)}`);
+
+  // ── Primary: read from data/arxiv.json (fetched server-side by GitHub Actions) ──
+  try {
+    const d = await loadJSON('arxiv.json');
+    if (d && d[cat] && d[cat].papers && d[cat].papers.length > 0) {
+      const papers = d[cat].papers;
+      list.innerHTML = papers.map(p => `<div class="ax-item" onclick="window.open('${p.link}','_blank')">
+        <div class="ax-title">${p.title}</div>
+        <div style="font-size:10px;color:var(--muted);margin:3px 0;line-height:1.4">${(p.summary||'').slice(0,130)}…</div>
+        <div class="ax-meta">${(p.authors||[]).join(' · ')} · ${p.date}</div>
+      </div>`).join('');
+      addTick(\`🔬 arXiv \${cat}: \${papers.length} papers · \${papers[0].title.slice(0,60)}\`);
       return;
-    }catch{}
+    }
+  } catch {}
+
+  // ── Fallback: try live XML API via multiple proxies ──
+  const base = \`https://export.arxiv.org/api/query?search_query=cat:\${encodeURIComponent(cat)}&sortBy=submittedDate&sortOrder=descending&max_results=8\`;
+  const proxies = [
+    'https://corsproxy.io/?url=' + encodeURIComponent(base),
+    'https://api.allorigins.win/raw?url=' + encodeURIComponent(base),
+  ];
+  for (const url of proxies) {
+    try {
+      const txt = await fetch(url, {signal:AbortSignal.timeout(10000)}).then(r=>r.text());
+      const xml = new DOMParser().parseFromString(txt, 'text/xml');
+      const entries = Array.from(xml.querySelectorAll('entry'));
+      if (!entries.length) continue;
+      list.innerHTML = entries.map(e => {
+        const title = (e.querySelector('title')?.textContent||'').replace(/\s+/g,' ').trim();
+        const authors = Array.from(e.querySelectorAll('author name')).slice(0,3).map(a=>a.textContent.trim()).join(' · ');
+        const date = (e.querySelector('published')?.textContent||'').slice(0,10);
+        const link = (e.querySelector('id')?.textContent||'').trim();
+        const summary = (e.querySelector('summary')?.textContent||'').replace(/\s+/g,' ').trim().slice(0,130);
+        return \`<div class="ax-item" onclick="window.open('\${link}','_blank')">
+          <div class="ax-title">\${title}</div>
+          <div style="font-size:10px;color:var(--muted);margin:3px 0;line-height:1.4">\${summary}…</div>
+          <div class="ax-meta">\${authors} · \${date}</div>
+        </div>\`;
+      }).join('');
+      addTick(\`🔬 arXiv \${cat}: \${entries.length} papers\`);
+      return;
+    } catch {}
   }
-  list.innerHTML=`<div style="padding:10px;font-size:11px;color:var(--muted);font-family:var(--mono);line-height:1.8">CORS issue — visit directly:<br><a href="https://arxiv.org/search/?searchtype=all&query=${encodeURIComponent(cat)}&order=-announced_date_first" target="_blank" style="color:var(--c-trends)">arxiv.org → ${cat}</a><br><br>Data available via GitHub Actions server-side.</div>`;
+
+  // ── Last resort: direct link ──
+  list.innerHTML = \`<div style="padding:12px;font-size:11px;color:var(--muted);font-family:var(--mono);line-height:2">
+    Run GitHub Actions to load arXiv papers server-side.<br>
+    Or browse directly:<br>
+    <a href="https://arxiv.org/list/\${cat}/recent" target="_blank" style="color:var(--c-trends)">arxiv.org/list/\${cat}/recent ↗</a>
+  </div>\`;
 }
 
 function loadOpenTable(){
