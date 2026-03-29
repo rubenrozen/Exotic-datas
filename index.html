@@ -2723,10 +2723,58 @@ async function loadOpenTable(){
     addTick('🍽 US Restaurants: $' + (cur/1000).toFixed(0) + 'B/month · YoY: ' + (yoy>=0?'+':'') + yoy + '%');
     return;
   }
-  // No data yet
+  // No restaurant.json yet — try direct FRED API with key from config.json
+  try {
+    const cfg = await loadJSON('config.json');
+    const fredKey = cfg?.fred_api_key;
+    if (fredKey && fredKey !== 'null') {
+      const url = `https://api.stlouisfed.org/fred/series/observations?series_id=MRTSSM7220USN&sort_order=desc&limit=25&file_type=json&api_key=${fredKey}`;
+      const d2 = await fetch(url, {signal: AbortSignal.timeout(8000)}).then(r => r.json());
+      const obs = (d2.observations||[]).filter(o=>o.value!=='.').reverse();
+      if (obs.length >= 2) {
+        const cur = parseFloat(obs[obs.length-1].value);
+        const prev = parseFloat(obs[obs.length-2].value);
+        const yoy_v = obs.length>=13 ? parseFloat(obs[obs.length-13].value) : null;
+        const mom = +((cur-prev)/prev*100).toFixed(1);
+        const yoy = yoy_v ? +((cur-yoy_v)/yoy_v*100).toFixed(1) : null;
+        if(block) block.innerHTML =
+          '<div style="display:flex;gap:20px;align-items:flex-end;flex-wrap:wrap;margin-bottom:8px">' +
+            '<div><div class="lbl">Monthly sales</div>' +
+              '<div style="font-family:Bebas Neue,sans-serif;font-size:36px;color:var(--c-trends)">$' + (cur/1000).toFixed(0) + 'B</div>' +
+              '<div class="unit">US restaurants & bars</div></div>' +
+            '<div><div class="lbl">vs. last month</div>' +
+              '<div class="bsm" style="color:' + (mom>=0?'#22c55e':'#ff5a20') + '">' + (mom>=0?'+':'') + mom + '%</div></div>' +
+            (yoy!==null ? '<div><div class="lbl">vs. 1 year ago</div>' +
+              '<div class="bsm" style="color:' + (yoy>=0?'#22c55e':'#ff5a20') + '">' + (yoy>=0?'+':'') + yoy + '%</div></div>' : '') +
+            '<div class="sub" style="flex:1;align-self:flex-end">' + obs[obs.length-1].date.slice(0,7) + ' · FRED live · MRTSSM7220USN</div>' +
+          '</div>';
+        // Draw chart
+        const series = obs.slice(-24);
+        const yoyArr = series.map((p,i) => { const p12=series[i-12]; return p12?+((p.value-p12.value)/p12.value*100).toFixed(1):null; });
+        const canvas = document.getElementById('chart-restau');
+        if(canvas && canvas._ch) canvas._ch.destroy();
+        if(canvas) {
+          const ctx = canvas.getContext('2d');
+          canvas._ch = new Chart(ctx, {type:'line', data:{
+            labels: series.map(p=>p.date.slice(0,7)),
+            datasets: [
+              {data:series.map(p=>parseFloat(p.value)/1000), borderColor:'#ec4899', backgroundColor:'rgba(236,72,153,.1)', borderWidth:1.5, fill:true, tension:.3, pointRadius:0, yAxisID:'y', label:'$B'},
+              {data:yoyArr, borderColor:'rgba(34,197,94,.7)', backgroundColor:'transparent', borderWidth:1.5, borderDash:[4,3], fill:false, tension:.3, pointRadius:0, yAxisID:'y2', label:'YoY%'}
+            ]
+          }, options:{...CD, scales:{x:CD.scales.x, y:{...CD.scales.y,position:'left'},
+            y2:{type:'linear',position:'right',grid:{drawOnChartArea:false},
+              ticks:{color:'rgba(34,197,94,.5)',font:{family:'Space Mono',size:9},callback:v=>v!==null?(v>=0?'+':'')+v+'%':''}}},
+            plugins:{...CD.plugins,legend:{display:false}}}});
+        }
+        addTick('🍽 US Restaurants: $' + (cur/1000).toFixed(0) + 'B/month · YoY: ' + (yoy>=0?'+':'') + yoy + '%');
+        return;
+      }
+    }
+  } catch(e) { console.warn('FRED direct:', e); }
+
   if(block) block.innerHTML = '<div class="nodata"><div class="nodata-ico">🍽</div>' +
-    '<div>Requires <code>FRED_API_KEY</code> in GitHub Secrets<br>' +
-    'Fetches <code>MRTSSM7220USN</code> monthly</div></div>';
+    '<div>Run GitHub Actions to load restaurant data<br>' +
+    '<code>FRED_API_KEY</code> · series <code>MRTSSM7220USN</code></div></div>';
 }
 
 
