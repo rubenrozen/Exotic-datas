@@ -1,8 +1,7 @@
 {
-  "last_run": "2026-03-29T15:00:13.703890Z",
+  "last_run": "2026-03-29T15:28:54.437923Z",
   "errors": [
     "BDI: No BDI data from any source",
-    "Gas: AGSI+ unreachable \u2014 verify key at agsi.gie.eu",
     "ACLED OAuth: HTTP Error 403: Forbidden"
   ],
   "datasets": [
