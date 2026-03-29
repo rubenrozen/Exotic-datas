@@ -538,12 +538,18 @@ ARXIV_CATS = {
     'cs.CR':  'Cybersecurity',
     'q-bio':  'Biology',
 }
+import xml.etree.ElementTree as ET
+import urllib.request as _urllib_req
 arxiv_data = {}
 for cat, label in ARXIV_CATS.items():
     try:
-        import xml.etree.ElementTree as ET
         url = f"https://export.arxiv.org/api/query?search_query=cat:{cat}&sortBy=submittedDate&sortOrder=descending&max_results=8"
-        r = requests.get(url, timeout=15, headers={'User-Agent':'EarthPulse/1.0'})
+        req = _urllib_req.Request(url, headers={'User-Agent':'EarthPulse/1.0 (github-actions)'})
+        with _urllib_req.urlopen(req, timeout=15) as resp:
+            raw = resp.read().decode('utf-8')
+        # Parse with requests-style interface
+        class _R: text = raw
+        r = _R()
         root = ET.fromstring(r.text)
         ns = {'atom':'http://www.w3.org/2005/Atom'}
         papers = []
