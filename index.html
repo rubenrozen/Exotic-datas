@@ -2595,24 +2595,46 @@ function updateFlightDots(states) {
   const W = 1536, H = 1024;
   const ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, W, H);
-  // Draw flight dots
-  const sample = states.filter(() => Math.random() < 0.12);
+
+  // Draw flights — sample to ~3000 for performance while keeping visual density
+  const sample = states.length > 3000
+    ? states.filter(() => Math.random() < 3000/states.length)
+    : states;
   sample.forEach(s => {
-    const lon = s[5], lat = s[6], hdg = ((s[10] || 0) - 90) * Math.PI / 180;
-    if (!lon || !lat) return;
+    const lon = s[5], lat = s[6];
+    if (!lon || !lat || Math.abs(lon) > 180 || Math.abs(lat) > 90) return;
+    const hdg = ((s[10] || s[11] || 0) - 90) * Math.PI / 180;
+    const alt = s[7] || 10000; // altitude in meters
+    const vel = s[9] || 200;   // velocity m/s
     const {x, y} = project(lon, lat, W, H);
-    // Glow
-    const grd = ctx.createRadialGradient(x,y,0,x,y,5);
-    grd.addColorStop(0,'rgba(255,200,60,0.6)'); grd.addColorStop(1,'rgba(255,200,60,0)');
-    ctx.beginPath(); ctx.arc(x,y,5,0,Math.PI*2); ctx.fillStyle=grd; ctx.fill();
-    // Plane icon
+
+    // Color by altitude: low=orange, cruise=gold, high=white
+    const altColor = alt > 10000 ? 'rgba(255,240,180,0.9)'
+                   : alt > 5000  ? 'rgba(255,200,80,0.85)'
+                   : alt > 1000  ? 'rgba(255,160,40,0.8)'
+                   : 'rgba(255,100,30,0.75)';
+
+    // Tight glow (1.5px radius for dense map)
+    const grd = ctx.createRadialGradient(x,y,0,x,y,4);
+    grd.addColorStop(0, altColor.replace('0.', '0.4').replace(',0.', ',0.4'));
+    grd.addColorStop(1, 'rgba(255,200,60,0)');
+    ctx.beginPath(); ctx.arc(x,y,4,0,Math.PI*2);
+    ctx.fillStyle = grd; ctx.fill();
+
+    // Plane arrow (tiny, precise)
     ctx.save();
     ctx.translate(x, y); ctx.rotate(hdg);
-    ctx.fillStyle = '#f5c040'; ctx.globalAlpha = 0.85;
+    ctx.fillStyle = altColor;
+    ctx.globalAlpha = 0.9;
     ctx.beginPath();
-    ctx.moveTo(0,-4); ctx.lineTo(1.5,1); ctx.lineTo(0,0); ctx.lineTo(-1.5,1);
-    ctx.closePath(); ctx.fill();
-    ctx.globalAlpha=1; ctx.restore();
+    ctx.moveTo(0, -2.5);
+    ctx.lineTo(1.2, 1.5);
+    ctx.lineTo(0, 0.5);
+    ctx.lineTo(-1.2, 1.5);
+    ctx.closePath();
+    ctx.fill();
+    ctx.globalAlpha = 1;
+    ctx.restore();
   });
 }
 
@@ -3049,23 +3071,28 @@ function drawMaritimeMap() {
   }
 }
 
-// Auto-connect from data/config.json (key injected by GitHub Actions)
+// Auto-connect: try config.json first, then localStorage fallback
 async function initMaritimeMap() {
+  const statusEl = document.getElementById('ais-status');
   try {
     const cfg = await loadJSON('config.json');
     const key = cfg?.ais_key;
     if (key) {
+      // Save to localStorage so it works even before next Actions run
+      localStorage.setItem('ais_key', key);
       startAISStream(key);
-    } else {
-      const statusEl = document.getElementById('ais-status');
-      if (statusEl) {
-        statusEl.innerHTML = '●  add <code>AIS_KEY</code> to GitHub Secrets';
-        statusEl.style.color = 'var(--muted)';
-      }
+      return;
     }
-  } catch {
-    const statusEl = document.getElementById('ais-status');
-    if (statusEl) { statusEl.textContent = '●  run GitHub Actions to connect'; statusEl.style.color = 'var(--muted)'; }
+  } catch {}
+  // Fallback: check localStorage (key may have been set previously)
+  const stored = localStorage.getItem('ais_key');
+  if (stored) {
+    startAISStream(stored);
+    return;
+  }
+  if (statusEl) {
+    statusEl.innerHTML = '●  add <code>AIS_KEY</code> to GitHub Secrets · run workflow';
+    statusEl.style.color = 'var(--muted)';
   }
 }
 
