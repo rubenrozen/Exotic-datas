@@ -2095,17 +2095,17 @@ function renderGas(){
   // Real historical deltas from gas_storage.json series
   // gas_storage.json contains d.history = [{date, eu_avg}, ...]
   function getHistorical(monthsAgo) {
-    // Use d.series which contains {date, pct} entries from AGSI
     const series = d.series || d.history || [];
     if (!series.length) return null;
     const target = new Date();
     target.setMonth(target.getMonth() - monthsAgo);
-    const targetStr = target.toISOString().slice(0,7);
-    // Find entry closest to target date
+    const targetMs = target.getTime();
+    // Find entry whose date is closest to target in actual milliseconds
     let best = null, bestDiff = Infinity;
     series.forEach(e => {
-      const eStr = (e.date || '').slice(0,7);
-      const diff = Math.abs(eStr.localeCompare(targetStr));
+      const eDate = new Date((e.date || '').slice(0,10));
+      if (isNaN(eDate)) return;
+      const diff = Math.abs(eDate.getTime() - targetMs);
       if (diff < bestDiff) { bestDiff = diff; best = e; }
     });
     return best ? (best.eu_avg ?? best.pct ?? null) : null;
@@ -2196,35 +2196,69 @@ async function loadOil(period,btn){
 }
 
 async function loadElectricity(){
-  try{
-    const url='https://digital.iservices.rte-france.com/open_api/actual_generation/v1/actual_generations_per_production_type?start_date='+new Date(Date.now()-86400000).toISOString().slice(0,10)+'T00:00:00%2B01:00';
-    const d=await fetch(url,{signal:AbortSignal.timeout(10000)}).then(r=>r.json());
-    let total=0;
-    if(d.actual_generations_per_production_type){
-      const latest={};
-      d.actual_generations_per_production_type.forEach(pt=>{
-        const vs=pt.values||[];
-        if(vs.length) latest[pt.production_type]=vs[vs.length-1].value/1000;
+  // Try RTE France open API first
+  try {
+    const url = 'https://digital.iservices.rte-france.com/open_api/actual_generation/v1/actual_generations_per_production_type?start_date=' + new Date(Date.now()-86400000).toISOString().slice(0,10) + 'T00:00:00%2B01:00';
+    const d = await fetch(url, {signal: AbortSignal.timeout(8000)}).then(r => r.json());
+    let total = 0;
+    if (d.actual_generations_per_production_type) {
+      const latest = {};
+      d.actual_generations_per_production_type.forEach(pt => {
+        const vs = pt.values || [];
+        if (vs.length) latest[pt.production_type] = vs[vs.length-1].value / 1000;
       });
-      total=Object.values(latest).reduce((a,b)=>a+(b||0),0);
+      total = Object.values(latest).reduce((a,b) => a + (b||0), 0);
     }
-    if(total>0){
-      safe('elec-fr',total.toFixed(1));
-      safe('elec-eu',(total*14).toFixed(0));
-      safe('elec-delta','+1.2%');
-      const hours=Array.from({length:12},(_,i)=>i*2+'h');
-      const vals=Array.from({length:12},(_,i)=>total*(0.85+Math.sin(i*.5)*.15));
-      mkChart('chart-elec','line',hours,vals,'#f97316');
-      addTick(`⚡ France electricity: ${total.toFixed(1)} GW · EU est. ~${(total*14).toFixed(0)} GW`);
-      SCORES.energy=Math.min(85,Math.max(30,Math.round(60+(total-55)*.5))); updateEPI();
+    if (total > 0) {
+      renderElectricity(total, 'RTE France live');
       return;
     }
-  }catch(e){console.warn('RTE:',e);}
-  // RTE failed — show loading state, no fake values
-  safe('elec-fr','—'); safe('elec-eu','—'); safe('elec-delta','—');
-  const elecNote = document.getElementById('elec-fr');
-  if(elecNote) elecNote.parentElement.querySelector('.sub') && 
-    (elecNote.parentElement.querySelector('.sub').textContent = 'RTE API unreachable — retry later');
+  } catch(e) { console.warn('RTE:', e); }
+
+  // Fallback: Open-Meteo Ensemble API for solar/wind proxy
+  // Or better: use electricity.fossilfuelregistry.org or similar
+  // Best available no-key option: ENTSOE-E transparency public CSV
+  try {
+    // Use corsproxy to fetch ENTSO-E actual load for France
+    const now = new Date();
+    const dateStr = now.toISOString().slice(0,10).replace(/-/g,'');
+    const url2 = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(
+      'https://web-api.tp.entsoe.eu/api?documentType=A65&processType=A16&outBiddingZone_Domain=10YFR-RTE------C&periodStart=' + dateStr + '0000&periodEnd=' + dateStr + '2300&securityToken=nokey'
+    );
+    const txt = await fetch(url2, {signal: AbortSignal.timeout(8000)}).then(r => r.text());
+    // Parse XML quantity
+    const match = txt.match(/<quantity>(\d+)<\/quantity>/g);
+    if (match && match.length) {
+      const vals = match.map(m => parseInt(m.replace(/<\/?quantity>/g,'')));
+      const latest = vals[vals.length-1] / 1000; // MW → GW
+      if (latest > 0) {
+        renderElectricity(latest, 'ENTSO-E');
+        return;
+      }
+    }
+  } catch(e) { console.warn('ENTSO-E:', e); }
+
+  // Nothing worked — clear display
+  safe('elec-fr', '—'); safe('elec-eu', '—'); safe('elec-delta', '—');
+  const sub = document.querySelector('#p-energy .sub');
+  if(sub) sub.textContent = 'Electricity API temporarily unavailable';
+}
+
+function renderElectricity(frGW, source) {
+  safe('elec-fr', frGW.toFixed(1));
+  safe('elec-eu', (frGW * 14).toFixed(0));
+  // Compare to yesterday's same hour
+  const hr = new Date().getHours();
+  safe('elec-delta', '—');
+  // Draw 24h profile approximation based on current value
+  const hours = Array.from({length:12}, (_,i) => (i*2) + 'h');
+  const profile = [0.72,0.68,0.65,0.67,0.75,0.88,0.97,1.02,1.0,0.97,0.93,0.90];
+  const base = frGW / profile[Math.min(hr >> 1, 11)];
+  const vals = profile.map(f => +(base * f).toFixed(1));
+  mkChart('chart-elec','line', hours, vals, '#f97316');
+  addTick('⚡ France: ' + frGW.toFixed(1) + ' GW · EU est. ~' + (frGW*14).toFixed(0) + ' GW · ' + source);
+  SCORES.energy = Math.min(85, Math.max(30, Math.round(60 + (frGW-55)*0.5)));
+  updateEPI();
 }
 
 // ═══════════════════════════════
