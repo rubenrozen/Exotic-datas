@@ -365,11 +365,8 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
           <button class="hz" onclick="setFluRegion('tropics',this)">Tropics</button>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
-        <div><div class="lbl">N. Hemisphere</div><div class="bsm" id="flu-north" style="color:var(--c-nat)">—</div><div class="unit">cases/week</div></div>
-        <div><div class="lbl">Influenza A</div><div class="bsm" id="flu-a" style="color:var(--c-nat)">—</div><div class="unit">cases</div></div>
-        <div><div class="lbl">S. Hemisphere</div><div class="bsm" id="flu-south" style="color:#f59e0b">—</div><div class="unit">cases/week</div></div>
-        <div><div class="lbl">Influenza B</div><div class="bsm" id="flu-b" style="color:#f59e0b">—</div><div class="unit">cases</div></div>
+      <div id="flu-kpis" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+        <!-- populated dynamically by setFluRegion -->
       </div>
       <div id="flu-note" style="font-size:10px;color:var(--muted);font-family:var(--mono);margin-bottom:6px"></div>
       <div class="ch h80"><canvas id="chart-flu"></canvas></div>
@@ -559,35 +556,34 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
       </div>
     </div>
 
-    <!-- Solar wind -->
+    <!-- Active satellites -->
     <div class="card" style="background:rgba(5,0,20,.98);border-color:rgba(168,85,247,.2)">
       <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-above),transparent)"></div>
-      <div class="lbl">☀️ Solar wind — NOAA DSCOVR
-        <span class="ib">i<div class="ipop"><div class="ipt">Solar wind (DSCOVR satellite)</div><div class="ipb">Speed, density and Bz component measured at the L1 Lagrange point, 1.5M km from Earth. Bz &lt; −5 nT = geomagnetic storm risk. Speed &gt; 700 km/s = elevated aurora probability. 45-minute warning before Earth impact.</div><div class="ips">Source: NOAA SWPC · DSCOVR · plasma-7-day.json · 1-min</div></div></span>
+      <div class="lbl">🛰 Active satellites in orbit
+        <span class="ib">i<div class="ipop"><div class="ipt">Satellites in orbit</div><div class="ipb">There are currently ~8,800 active satellites in orbit, of which ~6,000 are Starlink. LEO (Low Earth Orbit, <2000km) hosts the majority. The rapid growth creates collision risk — Kessler syndrome could make certain orbits unusable within decades.</div><div class="ips">Source: UCS Satellite Database · ucsusa.org · Quarterly updated</div></div></span>
       </div>
-      <div style="display:flex;gap:14px;margin:6px 0">
-        <div><div class="lbl">Speed</div><div class="bsm" id="sw-speed" style="color:var(--c-above)">—</div><div class="unit">km/s</div></div>
-        <div><div class="lbl">Density</div><div class="bsm" id="sw-density" style="color:#b070ff">—</div><div class="unit">p/cm³</div></div>
-        <div><div class="lbl">Bz (IMF)</div><div class="bsm" id="sw-bz" style="color:#d090ff">—</div><div class="unit">nT</div></div>
+      <div style="display:flex;gap:10px;margin:8px 0;flex-wrap:wrap">
+        <div><div class="lbl">Total active</div><div class="big" id="sat-total" style="color:#22d3ee">8,800+</div></div>
+        <div><div class="lbl">Starlink</div><div class="bsm" id="sat-starlink" style="color:#22d3ee">~6,000</div><div class="unit">SpaceX LEO</div></div>
       </div>
-      <div class="ch h80"><canvas id="chart-sw"></canvas></div>
+      <div id="sat-breakdown" style="margin-top:8px"></div>
+      <div class="sub" style="margin-top:8px">+2,877% growth since 2019 · Kessler syndrome risk in LEO</div>
     </div>
 
-    <!-- X-ray -->
+    <!-- Space weather alerts -->
     <div class="card" style="background:rgba(5,0,20,.98);border-color:rgba(168,85,247,.2)">
       <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-above),transparent)"></div>
-      <div class="lbl">🔭 X-ray Solar Flux (GOES)
-        <span class="ib">i<div class="ipop"><div class="ipt">X-ray Solar Flux</div><div class="ipb">Solar flare classification: A (quiet) · B · C (common) · M (moderate — radio blackouts) · X (severe — GPS/grid risk). X10+ flares can disable satellites. Measured by GOES-16/18.</div><div class="ips">Source: NOAA SWPC · GOES primary · xrays-6-hour.json · 1-min</div></div></span>
+      <div class="lbl">🚨 Space weather alerts — NOAA
+        <span class="ib">i<div class="ipop"><div class="ipt">NOAA Space Weather Alerts</div><div class="ipb">Real-time alerts from NOAA Space Weather Prediction Center. Covers geomagnetic storms, solar radiation storms, and radio blackouts. Scale: G1–G5 (geomagnetic), S1–S5 (radiation), R1–R5 (radio). G5 events can damage power grids globally.</div><div class="ips">Source: NOAA SWPC · services.swpc.noaa.gov/products/alerts.json · Real-time</div></div></span>
       </div>
-      <div style="display:flex;gap:14px;margin:6px 0">
-        <div><div class="lbl">Class</div><div class="big" id="xray-class" style="color:#22c55e">—</div></div>
-        <div><div class="lbl">Flux</div><div class="bsm" id="xray-flux" style="color:#f59e0b">—</div><div class="unit">W/m²</div></div>
+      <div id="sw-alerts" style="margin-top:8px">
+        <div class="nodata loading"><div>Loading NOAA alerts…</div></div>
       </div>
-      <div class="ch h80"><canvas id="chart-xray"></canvas></div>
     </div>
   </div>
+</div>
 
-  <!-- ROW 2: Solar cycle | Near-Earth objects | Active satellites | Space weather alerts -->
+<!-- ROW 2: Solar cycle | Near-Earth objects | Active satellites | Space weather alerts -->
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px">
 
     <!-- Solar cycle -->
@@ -617,34 +613,35 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
       <div id="neo-list" style="max-height:120px;overflow-y:auto"></div>
     </div>
 
-    <!-- Active satellites -->
+    <!-- Solar wind -->
     <div class="card" style="background:rgba(5,0,20,.98);border-color:rgba(168,85,247,.2)">
       <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-above),transparent)"></div>
-      <div class="lbl">🛰 Active satellites in orbit
-        <span class="ib">i<div class="ipop"><div class="ipt">Satellites in orbit</div><div class="ipb">There are currently ~8,800 active satellites in orbit, of which ~6,000 are Starlink. LEO (Low Earth Orbit, <2000km) hosts the majority. The rapid growth creates collision risk — Kessler syndrome could make certain orbits unusable within decades.</div><div class="ips">Source: UCS Satellite Database · ucsusa.org · Quarterly updated</div></div></span>
+      <div class="lbl">☀️ Solar wind — NOAA DSCOVR
+        <span class="ib">i<div class="ipop"><div class="ipt">Solar wind (DSCOVR satellite)</div><div class="ipb">Speed, density and Bz component measured at the L1 Lagrange point, 1.5M km from Earth. Bz &lt; −5 nT = geomagnetic storm risk. Speed &gt; 700 km/s = elevated aurora probability. 45-minute warning before Earth impact.</div><div class="ips">Source: NOAA SWPC · DSCOVR · plasma-7-day.json · 1-min</div></div></span>
       </div>
-      <div style="display:flex;gap:10px;margin:8px 0;flex-wrap:wrap">
-        <div><div class="lbl">Total active</div><div class="big" id="sat-total" style="color:#22d3ee">8,800+</div></div>
-        <div><div class="lbl">Starlink</div><div class="bsm" id="sat-starlink" style="color:#22d3ee">~6,000</div><div class="unit">SpaceX LEO</div></div>
+      <div style="display:flex;gap:14px;margin:6px 0">
+        <div><div class="lbl">Speed</div><div class="bsm" id="sw-speed" style="color:var(--c-above)">—</div><div class="unit">km/s</div></div>
+        <div><div class="lbl">Density</div><div class="bsm" id="sw-density" style="color:#b070ff">—</div><div class="unit">p/cm³</div></div>
+        <div><div class="lbl">Bz (IMF)</div><div class="bsm" id="sw-bz" style="color:#d090ff">—</div><div class="unit">nT</div></div>
       </div>
-      <div id="sat-breakdown" style="margin-top:8px"></div>
-      <div class="sub" style="margin-top:8px">+2,877% growth since 2019 · Kessler syndrome risk in LEO</div>
+      <div class="ch h80"><canvas id="chart-sw"></canvas></div>
     </div>
 
-    <!-- Space weather alerts -->
+    <!-- X-ray -->
     <div class="card" style="background:rgba(5,0,20,.98);border-color:rgba(168,85,247,.2)">
       <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-above),transparent)"></div>
-      <div class="lbl">🚨 Space weather alerts — NOAA
-        <span class="ib">i<div class="ipop"><div class="ipt">NOAA Space Weather Alerts</div><div class="ipb">Real-time alerts from NOAA Space Weather Prediction Center. Covers geomagnetic storms, solar radiation storms, and radio blackouts. Scale: G1–G5 (geomagnetic), S1–S5 (radiation), R1–R5 (radio). G5 events can damage power grids globally.</div><div class="ips">Source: NOAA SWPC · services.swpc.noaa.gov/products/alerts.json · Real-time</div></div></span>
+      <div class="lbl">🔭 X-ray Solar Flux (GOES)
+        <span class="ib">i<div class="ipop"><div class="ipt">X-ray Solar Flux</div><div class="ipb">Solar flare classification: A (quiet) · B · C (common) · M (moderate — radio blackouts) · X (severe — GPS/grid risk). X10+ flares can disable satellites. Measured by GOES-16/18.</div><div class="ips">Source: NOAA SWPC · GOES primary · xrays-6-hour.json · 1-min</div></div></span>
       </div>
-      <div id="sw-alerts" style="margin-top:8px">
-        <div class="nodata loading"><div>Loading NOAA alerts…</div></div>
+      <div style="display:flex;gap:14px;margin:6px 0">
+        <div><div class="lbl">Class</div><div class="big" id="xray-class" style="color:#22c55e">—</div></div>
+        <div><div class="lbl">Flux</div><div class="bsm" id="xray-flux" style="color:#f59e0b">—</div><div class="unit">W/m²</div></div>
       </div>
+      <div class="ch h80"><canvas id="chart-xray"></canvas></div>
     </div>
   </div>
-</div>
 
-<!-- ═══════════════ TRADE FLOWS ═══════════════ -->
+  <!-- ═══════════════ TRADE FLOWS ═══════════════ -->
 <div class="panel" id="p-trade" style="background:linear-gradient(135deg,rgba(20,12,0,.5),var(--bg))">
 
   <!-- TWO LIVE MAPS: Flights + Maritime -->
@@ -1400,8 +1397,52 @@ function setFluRegion(r,btn){
   document.querySelectorAll('#p-nat .hzs .hz').forEach(b=>b.classList.remove('on'));
   btn?.classList.add('on');
   const rd=FLU_REGIONS[r]||FLU_REGIONS.global;
-  // KPIs always show GLOBAL totals — buttons only change the chart view and label
+
+  // KPI definitions per region — only show relevant metrics
+  const kpiDefs = {
+    global: [
+      {label:'N. Hemisphere', val:rd.north, unit:'cases/week', color:'var(--c-nat)'},
+      {label:'Influenza A',   val:rd.a,     unit:'cases',      color:'var(--c-nat)'},
+      {label:'S. Hemisphere', val:rd.south, unit:'cases/week', color:'#f59e0b'},
+      {label:'Influenza B',   val:rd.b,     unit:'cases',      color:'#f59e0b'},
+    ],
+    north: [
+      {label:'N. Hemisphere', val:rd.north, unit:'cases/week', color:'var(--c-nat)'},
+      {label:'Influenza A',   val:rd.a,     unit:'cases',      color:'var(--c-nat)'},
+      {label:'Influenza B',   val:rd.b,     unit:'cases',      color:'#f59e0b'},
+      {label:'Season',        val:null,     unit:'Oct – Mar',  color:'var(--muted)', text:true},
+    ],
+    south: [
+      {label:'S. Hemisphere', val:rd.south, unit:'cases/week', color:'#f59e0b'},
+      {label:'Influenza A',   val:rd.a,     unit:'cases',      color:'var(--c-nat)'},
+      {label:'Influenza B',   val:rd.b,     unit:'cases',      color:'#f59e0b'},
+      {label:'Season',        val:null,     unit:'Apr – Sep',  color:'var(--muted)', text:true},
+    ],
+    tropics: [
+      {label:'Tropics',     val:rd.north+rd.south, unit:'cases/week', color:'var(--c-nat)'},
+      {label:'Influenza A', val:rd.a,              unit:'cases',      color:'var(--c-nat)'},
+      {label:'Influenza B', val:rd.b,              unit:'cases',      color:'#f59e0b'},
+      {label:'Pattern',     val:null,              unit:'Year-round', color:'var(--muted)', text:true},
+    ],
+  };
+
+  const kpis = kpiDefs[r] || kpiDefs.global;
+  const grid = document.getElementById('flu-kpis');
+  if (grid) {
+    grid.innerHTML = kpis.map(k =>
+      '<div>' +
+        '<div class="lbl">' + k.label + '</div>' +
+        (k.text
+          ? '<div style="font-size:16px;font-family:var(--mono);color:' + k.color + '">' + k.unit + '</div>'
+          : '<div class="bsm" style="color:' + k.color + '">' + (k.val != null ? (k.val/1000).toFixed(0)+'K' : '—') + '</div>' +
+            '<div class="unit">' + k.unit + '</div>'
+        ) +
+      '</div>'
+    ).join('');
+  }
+
   safe('flu-note','WHO FluNet · '+rd.label);
+
   // Chart: seasonal activity curve for selected region
   const wks=Array.from({length:26},(_,i)=>'W'+(i+1));
   const seasonal=Array.from({length:26},(_,i)=>{
