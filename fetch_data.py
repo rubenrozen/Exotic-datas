@@ -142,9 +142,9 @@ try:
     eu_data = None
 
     for url in [
-        "https://agsi.gie.eu/api?type=EU&size=60",
-        "https://agsi.gie.eu/api/data/eu?size=60",
-        "https://agsi.gie.eu/api/v1/data/eu?size=60",
+        "https://agsi.gie.eu/api?type=EU&size=1100",   # 3 years daily
+        "https://agsi.gie.eu/api/data/eu?size=1100",   # 3 years daily
+        "https://agsi.gie.eu/api/v1/data/eu?size=1100",   # 3 years daily
     ]:
         try:
             resp = fetch_json(url, headers=hdrs)
@@ -160,7 +160,7 @@ try:
         raise ValueError("AGSI+ unreachable — verify key at agsi.gie.eu")
 
     series = []
-    for entry in reversed(eu_data[:60]):
+    for entry in reversed(eu_data[:1100]):
         try:
             series.append({
                 "date": entry.get("gasDayStart",""),
