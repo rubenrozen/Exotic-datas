@@ -2111,11 +2111,13 @@ function renderGas(){
     return best ? (best.eu_avg ?? best.pct ?? null) : null;
   }
 
+  const seriesLen = (d.series || []).length;
+  // Only show comparison if we have enough history
   const histMap = {
     'now': null,
-    '6m':  getHistorical(6),
-    '1y':  getHistorical(12),
-    '3y':  getHistorical(36)
+    '6m':  seriesLen >= 180 ? getHistorical(6)  : null,
+    '1y':  seriesLen >= 360 ? getHistorical(12) : null,
+    '3y':  seriesLen >= 900 ? getHistorical(36) : null,
   };
   const hist = histMap[gasHz];
   const delta = (hist !== null && hist !== undefined) ? round1(eu - hist) : null;
