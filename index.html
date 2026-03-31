@@ -315,16 +315,18 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
       <div class="lbl">🔥 Active fires — NASA FIRMS (VIIRS)
         <span class="ib">i<div class="ipop"><div class="ipt">NASA FIRMS — Fire Information</div><div class="ipb">Satellite-detected active fire spots globally, updated every 12 hours via the VIIRS instrument on Suomi NPP. Covers wildfires, agricultural burns, and industrial fires. 1-year comparison shows seasonal vs. anomalous activity.</div><div class="ips">Source: NASA FIRMS · firms.modaps.eosdis.nasa.gov · 12h refresh</div></div></span>
       </div>
-      <div style="display:flex;gap:16px;align-items:flex-end;margin-bottom:8px">
-        <div>
-          <div class="big" id="fire-count" style="color:var(--c-nat)">—</div>
-          <div class="unit">active fire spots</div>
-          <div class="delta" id="fire-delta"></div>
-          <div class="delta" id="fire-yoy" style="color:var(--muted);font-size:10px;margin-top:2px"></div>
+      <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;gap:12px">
+        <!-- Left: region breakdown in 2 columns -->
+        <div style="flex:1">
+          <div class="lbl" style="margin-bottom:5px">By region</div>
+          <div id="fire-regions" style="display:grid;grid-template-columns:1fr 1fr;gap:2px 12px;font-size:11px;color:var(--muted);font-family:var(--mono);line-height:1.8"></div>
         </div>
-        <div style="flex:1;text-align:right">
-          <div class="lbl">By region</div>
-          <div id="fire-regions" style="font-size:11px;color:var(--muted);font-family:var(--mono);line-height:1.9"></div>
+        <!-- Right: big count -->
+        <div style="text-align:right;flex-shrink:0">
+          <div class="big" id="fire-count" style="color:var(--c-nat);font-size:48px;line-height:1">—</div>
+          <div class="unit" style="text-align:right">active fire spots</div>
+          <div class="delta" id="fire-delta" style="text-align:right"></div>
+          <div class="delta" id="fire-yoy" style="color:var(--muted);font-size:10px;margin-top:2px;text-align:right"></div>
         </div>
       </div>
       <div id="map-fires" style="position:relative;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.07);background:#000">
@@ -1309,7 +1311,7 @@ async function initFiresMap(){
     safe('fire-yoy', d.delta_year ? 'vs. same week last year: '+(d.delta_year>0?'+':'')+d.delta_year+'%' : '');
     if(d.by_region) {
       document.getElementById('fire-regions').innerHTML =
-        Object.entries(d.by_region).map(([k,v])=>k+': '+v.toLocaleString()+' 🔥').join('<br>');
+        Object.entries(d.by_region).map(([k,v])=>'<div>'+k+': <span style="color:var(--c-nat)">'+v.toLocaleString()+'</span> 🔥</div>').join('');
     }
     // Draw real hotspots if available
     if(d.hotspots?.length) {
@@ -1322,7 +1324,7 @@ async function initFiresMap(){
     safe('fire-delta','Live data: add NASA_FIRMS_KEY to GitHub Secrets');
     safe('fire-yoy','Showing typical active fire regions');
     document.getElementById('fire-regions').innerHTML =
-      'Amazon · C.Africa · Siberia · SE Asia · Australia';
+      '<div>Amazon</div><div>C.Africa</div><div>Siberia</div><div>SE Asia</div><div>Australia</div><div>N.America</div>';
   }
   // Draw canvas with static zones as fallback
   setTimeout(() => drawFiresMap(true), 50);
