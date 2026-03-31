@@ -2772,8 +2772,10 @@ async function loadOpenTable(){
     const cfg = await loadJSON('config.json');
     const fredKey = cfg?.fred_api_key;
     if (fredKey && fredKey !== 'null') {
-      const url = `https://api.stlouisfed.org/fred/series/observations?series_id=MRTSSM7220USN&sort_order=desc&limit=25&file_type=json&api_key=${fredKey}`;
-      const d2 = await fetch(url, {signal: AbortSignal.timeout(8000)}).then(r => r.json());
+      // FRED API blocks CORS — use allorigins proxy
+      const fredUrl = 'https://api.stlouisfed.org/fred/series/observations?series_id=MRTSSM7220USN&sort_order=desc&limit=25&file_type=json&api_key=' + fredKey;
+      const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(fredUrl);
+      const d2 = await fetch(proxyUrl, {signal: AbortSignal.timeout(10000)}).then(r => r.json());
       const obs = (d2.observations||[]).filter(o=>o.value!=='.').reverse();
       if (obs.length >= 2) {
         const cur = parseFloat(obs[obs.length-1].value);
