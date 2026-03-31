@@ -1400,17 +1400,16 @@ function setFluRegion(r,btn){
   document.querySelectorAll('#p-nat .hzs .hz').forEach(b=>b.classList.remove('on'));
   btn?.classList.add('on');
   const rd=FLU_REGIONS[r]||FLU_REGIONS.global;
-  safe('flu-north',(rd.north/1000).toFixed(0)+'K');
-  safe('flu-south',(rd.south/1000).toFixed(0)+'K');
-  safe('flu-a',(rd.a/1000).toFixed(0)+'K');
-  safe('flu-b',(rd.b/1000).toFixed(0)+'K');
+  // KPIs always show GLOBAL totals — buttons only change the chart view and label
   safe('flu-note','WHO FluNet · '+rd.label);
+  // Chart: seasonal activity curve for selected region
   const wks=Array.from({length:26},(_,i)=>'W'+(i+1));
   const seasonal=Array.from({length:26},(_,i)=>{
     const base=r==='north'?Math.max(0,40000*Math.cos((i-8)*.3)+30000):
                r==='south'?Math.max(0,35000*Math.cos((i-20)*.3)+20000):
-               20000+Math.sin(i*.5)*12000;
-    return Math.round(Math.max(0,base+Math.random()*4000));
+               r==='tropics'?20000+Math.sin(i*.5)*8000:
+               30000+Math.sin(i*.4)*15000;
+    return Math.round(Math.max(0,base));
   });
   mkChart('chart-flu','line',wks,seasonal,'#9050ff');
 }
