@@ -872,11 +872,11 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
         <span class="ib">i<div class="ipop"><div class="ipt">EU Electricity demand</div><div class="ipb">Real-time electricity consumption is the most honest GDP proxy — it shows exactly when industries stop and start, without statistical delay. ENTSO-E aggregates 35 European countries hourly. RTE France (open API, no key) is used as a proxy when ENTSO-E token not configured.</div><div class="ips">Source: RTE France open API / ENTSO-E · Near real-time</div></div></span>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:10px">
-        <div class="card" style="padding:10px 12px"><div class="lbl">France (RTE)</div><div class="bsm" id="elec-fr" style="color:var(--c-energy)">—</div><div class="unit">GW</div></div>
+        <div class="card" style="padding:10px 12px"><div class="lbl">France (RTE)</div><div class="bsm" id="elec-eu" style="color:var(--c-energy)">—</div><div class="unit">GW</div></div>
         <div class="card" style="padding:10px 12px"><div class="lbl">EU estimate</div><div class="bsm" id="elec-eu" style="color:var(--c-energy)">—</div><div class="unit">GW</div></div>
         <div class="card" style="padding:10px 12px"><div class="lbl">vs. yesterday</div><div class="bsm" id="elec-delta" style="color:var(--muted)">—</div><div class="unit">%</div></div>
       </div>
-      <div class="ch h160"><div id="elec-mix" style="margin-bottom:10px"></div>
+      <div class="ch h160"><div id="elec-block"></div>
       <canvas id="chart-elec"></canvas></div>
     </div>
   </div>
@@ -2199,14 +2199,143 @@ async function loadOil(period,btn){
 }
 
 async function loadElectricity(){
+  // Primary: electricity.json from GitHub Actions (EU/US/China)
+  const d = await loadJSON('electricity.json');
+  const regions = d?.regions || {};
+
+  // Fallback: build EU from eco2mix + US from EIA direct
+  if (!regions.eu || !regions.us) {
+    await loadElecLive(regions);
+  }
+
+  renderElectricity(regions);
+}
+
+async function loadElecLive(regions){
+  // EU: eco2mix ODRE (France real-time, no auth, CORS ok)
+  if (!regions.eu) {
+    try {
+      const url = 'https://odre.opendatasoft.com/api/explore/v2.1/catalog/datasets/eco2mix-national-tr/records' +
+        '?select=date_heure,consommation,prevision_j1,nucleaire,eolien,solaire,gaz,hydraulique,taux_co2' +
+        '&where=consommation%20is%20not%20null&order_by=date_heure%20desc&limit=52&timezone=Europe%2FParis';
+      const j = await fetch(url, {signal: AbortSignal.timeout(10000)}).then(r => r.json());
+      const rows = (j.results||[]).filter(r => r.consommation > 0);
+      if (rows.length) {
+        const frGW = rows[0].consommation / 1000;
+        const euGW = +(frGW * 14).toFixed(0);
+        const nowMs = new Date(rows[0].date_heure).getTime();
+        const yest = rows.find(r => { const d = nowMs - new Date(r.date_heure).getTime(); return d >= 22*3600000 && d <= 26*3600000; });
+        const prevGW = yest ? yest.consommation/1000 : (rows[0].prevision_j1||0)/1000;
+        const delta = prevGW > 0 ? +((frGW-prevGW)/prevGW*100).toFixed(1) : null;
+        const mix = {
+          nucleaire:   rows[0].nucleaire||0,
+          hydraulique: rows[0].hydraulique||0,
+          eolien:      rows[0].eolien||0,
+          gaz:         rows[0].gaz||0,
+          solaire:     rows[0].solaire||0,
+        };
+        const series = rows.slice().reverse().map(r => ({time: (r.date_heure||'').slice(11,16), value: +(r.consommation/1000*14).toFixed(0)}));
+        regions.eu = {gw: euGW, delta_pct: delta, co2: rows[0].taux_co2, mix, series, note: 'FR×14 est.', updated: rows[0].date_heure?.slice(0,16)};
+      }
+    } catch(e) { console.warn('eco2mix:', e); }
+  }
+
+  // US: EIA direct with key from config.json
+  if (!regions.us) {
+    try {
+      const cfg = await loadJSON('config.json');
+      const eiaKey = cfg?.eia_api_key || cfg?.EIA_API_KEY;
+      if (eiaKey) {
+        const url = 'https://api.eia.gov/v2/electricity/rto/region-data/data/?api_key=' + eiaKey +
+          '&frequency=hourly&facets[respondent][]=US48&facets[type][]=D&data[0]=value' +
+          '&sort[0][column]=period&sort[0][direction]=desc&length=48';
+        const j = await fetch(url, {signal: AbortSignal.timeout(10000)}).then(r => r.json());
+        const rows = (j.response?.data||[]).filter(r => r.value != null);
+        if (rows.length) {
+          const curGW = rows[0].value / 1000;
+          const prevGW = rows[Math.min(23,rows.length-1)].value / 1000;
+          const delta = +((curGW-prevGW)/prevGW*100).toFixed(1);
+          const series = rows.slice().reverse().map(r => ({time: r.period?.slice(11,16)||'', value: +(r.value/1000).toFixed(0)}));
+          regions.us = {gw: +curGW.toFixed(0), delta_pct: delta, series, updated: rows[0].period};
+        }
+      }
+    } catch(e) { console.warn('EIA:', e); }
+  }
+}
+
+function renderElectricity(regions){
+  const EU = regions.eu || {};
+  const US = regions.us || {};
+  const CN = regions.cn || {};
+
+  // KPI tiles
+  const tiles = [
+    {id:'elec-eu', label:'EU', val: EU.gw, delta: EU.delta_pct, note: EU.note||'ENTSO-E', color:'#22d3ee'},
+    {id:'elec-us', label:'US', val: US.gw, delta: US.delta_pct, note: 'EIA', color:'#f59e0b'},
+    {id:'elec-cn', label:'China', val: CN.gw, delta: CN.delta_pct, note: CN.note||'IEA', color:'#ff5a20'},
+  ];
+
+  // Update KPI values
+  tiles.forEach(t => {
+    safe(t.id, t.val ? t.val.toLocaleString() + ' GW' : '—');
+  });
+
+  // Summary bar
+  const block = document.getElementById('elec-block');
+  if (block) {
+    block.innerHTML =
+      '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:12px">' +
+      tiles.map(t => {
+        const dc = t.delta != null ? (t.delta > 0 ? '#ff5a20' : t.delta < 0 ? '#22c55e' : 'var(--muted)') : 'var(--muted)';
+        return '<div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:10px 12px">' +
+          '<div style="font-size:9px;font-family:var(--mono);color:var(--muted);margin-bottom:4px">' + t.label + ' · ' + t.note + '</div>' +
+          '<div style="font-family:Bebas Neue,sans-serif;font-size:28px;color:' + t.color + '">' + (t.val ? t.val.toLocaleString() : '—') + '</div>' +
+          '<div style="font-size:9px;font-family:var(--mono);color:var(--muted)">GW</div>' +
+          (t.delta != null ? '<div style="font-size:11px;font-family:var(--mono);color:' + dc + ';margin-top:4px">' + (t.delta > 0 ? '↑+' : '↓') + t.delta + '% vs. 24h</div>' : '') +
+          '</div>';
+      }).join('') +
+      '</div>';
+
+    // EU mix breakdown if available
+    if (EU.mix) {
+      const mix = EU.mix;
+      const frGW = EU.gw / 14;
+      const colors = {nucleaire:'#22d3ee', hydraulique:'#3b82f6', eolien:'#22c55e', solaire:'#f59e0b', gaz:'#ff5a20'};
+      const labels = {nucleaire:'Nuclear', hydraulique:'Hydro', eolien:'Wind', solaire:'Solar', gaz:'Gas'};
+      block.innerHTML += '<div style="font-size:9px;color:var(--muted);font-family:var(--mono);margin-bottom:6px">France production mix (proxy for EU)</div>' +
+        Object.entries(mix).filter(([k,v]) => v > 100).map(([k,v]) => {
+          const gw = v/1000, pct = Math.round(gw/frGW*100);
+          return '<div style="display:flex;align-items:center;gap:6px;margin-bottom:3px">' +
+            '<div style="width:60px;font-size:10px;color:var(--muted);font-family:var(--mono)">' + labels[k] + '</div>' +
+            '<div style="flex:1;height:5px;background:rgba(255,255,255,.06);border-radius:3px">' +
+              '<div style="width:' + pct + '%;height:100%;background:' + colors[k] + ';border-radius:3px"></div></div>' +
+            '<div style="width:32px;text-align:right;font-size:10px;font-family:var(--mono);color:' + colors[k] + '">' + gw.toFixed(1) + '</div>' +
+            '<div style="width:26px;text-align:right;font-size:9px;font-family:var(--mono);color:var(--dim)">' + pct + '%</div></div>';
+        }).join('') +
+        (EU.co2 ? '<div style="font-size:9px;color:var(--muted);margin-top:6px;font-family:var(--mono)">CO₂: ' + EU.co2 + ' g/kWh · ' + (EU.updated||'') + '</div>' : '');
+    }
+  }
+
+  // Chart — EU 24h if available
+  const series = EU.series || US.series || [];
+  if (series.length) {
+    mkChart('chart-elec', 'line', series.map(p=>p.time), series.map(p=>p.value), '#f97316');
+  }
+
+  SCORES.energy = 65; updateEPI();
+  const tick = [EU.gw ? 'EU: ' + EU.gw + ' GW' : '', US.gw ? 'US: ' + US.gw + ' GW' : '', CN.gw ? 'CN: ~' + CN.gw + ' GW' : ''].filter(Boolean).join(' · ');
+  if (tick) addTick('⚡ ' + tick);
+}
+
+async function loadElectricity(){
   // éCO2mix ODRE — official RTE open data, public CORS, no auth, updated every 15min
   // consommation is in MW, can be null for latest entries (30min measurement lag)
   // → filter with where=consommation is not null, order desc, limit 48 (24h at 30min)
   const BASE = 'https://odre.opendatasoft.com/api/explore/v2.1/catalog/datasets/eco2mix-national-tr/records';
-  const PARAMS = '?select=date_heure,consommation,nucleaire,eolien,solaire,gaz,hydraulique,taux_co2' +
+  const PARAMS = '?select=date_heure,consommation,prevision_j1,nucleaire,eolien,solaire,gaz,hydraulique,bioenergies,fioul,charbon,taux_co2' +
                  '&where=consommation%20is%20not%20null' +
                  '&order_by=date_heure%20desc' +
-                 '&limit=48' +
+                 '&limit=52' +
                  '&timezone=Europe%2FParis';
   try {
     const d = await fetch(BASE + PARAMS, {signal: AbortSignal.timeout(10000)}).then(r => {
@@ -2221,26 +2350,40 @@ async function loadElectricity(){
     const latest = rows[0];
     const frGW = latest.consommation / 1000; // MW → GW
 
-    // Mix énergétique
-    const mix = {
-      nucleaire:  (latest.nucleaire  || 0) / 1000,
-      hydraulique:(latest.hydraulique|| 0) / 1000,
-      eolien:     (latest.eolien     || 0) / 1000,
-      solaire:    (latest.solaire    || 0) / 1000,
-      gaz:        (latest.gaz        || 0) / 1000,
+    // Mix énergétique France (MW → GW)
+    const mixRaw = {
+      nucleaire:   (latest.nucleaire   || 0) / 1000,
+      hydraulique: (latest.hydraulique || 0) / 1000,
+      eolien:      (latest.eolien      || 0) / 1000,
+      solaire:     (latest.solaire     || 0) / 1000,
+      gaz:         (latest.gaz         || 0) / 1000,
+      bioenergies: (latest.bioenergies || 0) / 1000,
+      fioul:       (latest.fioul       || 0) / 1000,
+      charbon:     (latest.charbon     || 0) / 1000,
     };
+    // "Autre" = consommation - somme des sources connues (imports nets, etc.)
+    const sumKnown = Object.values(mixRaw).reduce((a,b) => a+b, 0);
+    const autre = Math.max(0, frGW - sumKnown);
+    const mix = {...mixRaw, autre};
     const co2 = latest.taux_co2 || null;
 
-    // Yesterday same time for delta
+    // Delta vs. yesterday: compare to J-1 forecast if real data not available
+    const nowMs = new Date(rows[0].date_heure).getTime();
     const yesterday = rows.find(r => {
-      const diff = new Date(rows[0].date_heure) - new Date(r.date_heure);
-      return diff >= 23 * 3600000 && diff <= 25 * 3600000;
+      const diff = nowMs - new Date(r.date_heure).getTime();
+      return diff >= 22 * 3600000 && diff <= 26 * 3600000; // ±2h window
     });
-    const delta = yesterday ? (((frGW - yesterday.consommation/1000) / (yesterday.consommation/1000)) * 100).toFixed(1) : null;
+    let delta = null;
+    if (yesterday) {
+      delta = (((frGW - yesterday.consommation/1000) / (yesterday.consommation/1000)) * 100).toFixed(1);
+    } else if (latest.prevision_j1) {
+      // Fallback: compare to J-1 forecast for this slot
+      delta = (((frGW - latest.prevision_j1/1000) / (latest.prevision_j1/1000)) * 100).toFixed(1);
+    }
 
     // Update KPIs
     safe('elec-fr', frGW.toFixed(1));
-    safe('elec-eu', (frGW * 14).toFixed(0));
+    safe('elec-eu', '~' + (frGW * 14).toFixed(0));
     safe('elec-delta', delta !== null ? (parseFloat(delta) >= 0 ? '+' : '') + delta + '% vs. yesterday' : '—');
 
     // Update delta color
@@ -2252,19 +2395,27 @@ async function loadElectricity(){
     // Mix breakdown
     const mixEl = document.getElementById('elec-mix');
     if (mixEl) {
-      const total = Object.values(mix).reduce((a,b) => a+b, 0) || frGW;
-      const colors = {nucleaire:'#22d3ee', hydraulique:'#3b82f6', eolien:'#22c55e', solaire:'#f59e0b', gaz:'#ff5a20'};
-      const labels = {nucleaire:'Nuclear', hydraulique:'Hydro', eolien:'Wind', solaire:'Solar', gaz:'Gas'};
-      mixEl.innerHTML = Object.entries(mix).map(([k,v]) =>
-        '<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">' +
-        '<div style="width:70px;font-size:10px;color:var(--muted);font-family:var(--mono)">' + labels[k] + '</div>' +
-        '<div style="flex:1;height:6px;background:rgba(255,255,255,.06);border-radius:3px">' +
-          '<div style="width:' + Math.round(v/total*100) + '%;height:100%;background:' + colors[k] + ';border-radius:3px"></div>' +
-        '</div>' +
-        '<div style="width:36px;text-align:right;font-size:10px;font-family:var(--mono);color:' + colors[k] + '">' + v.toFixed(1) + '</div>' +
-        '</div>'
-      ).join('') +
-      (co2 ? '<div style="font-size:9px;color:var(--muted);margin-top:6px;font-family:var(--mono)">CO₂: ' + co2 + ' g/kWh · RTE eco2mix · ' + latest.date_heure?.slice(0,16)?.replace('T',' ') + '</div>' : '');
+      // Use frGW (total consumption) as denominator so all bars sum to 100%
+      const colors = {nucleaire:'#22d3ee', hydraulique:'#3b82f6', eolien:'#22c55e', solaire:'#f59e0b',
+                      gaz:'#ff5a20', bioenergies:'#84cc16', fioul:'#9ca3af', charbon:'#6b7280', autre:'#4b5563'};
+      const labels = {nucleaire:'Nuclear', hydraulique:'Hydro', eolien:'Wind', solaire:'Solar',
+                      gaz:'Gas', bioenergies:'Bio', fioul:'Oil', charbon:'Coal', autre:'Other'};
+      // Only show sources with meaningful values (>0.1 GW)
+      const visible = Object.entries(mix).filter(([k,v]) => v > 0.1);
+      mixEl.innerHTML =
+        '<div style="font-size:9px;color:var(--muted);font-family:var(--mono);margin-bottom:6px">France production mix (GW · % of total consumption)</div>' +
+        visible.map(([k,v]) => {
+          const pct = Math.round(v / frGW * 100);
+          return '<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">' +
+            '<div style="width:64px;font-size:10px;color:var(--muted);font-family:var(--mono)">' + labels[k] + '</div>' +
+            '<div style="flex:1;height:6px;background:rgba(255,255,255,.06);border-radius:3px">' +
+              '<div style="width:' + pct + '%;height:100%;background:' + colors[k] + ';border-radius:3px"></div>' +
+            '</div>' +
+            '<div style="width:32px;text-align:right;font-size:10px;font-family:var(--mono);color:' + colors[k] + '">' + v.toFixed(1) + '</div>' +
+            '<div style="width:28px;text-align:right;font-size:9px;font-family:var(--mono);color:var(--dim)">' + pct + '%</div>' +
+            '</div>';
+        }).join('') +
+        (co2 ? '<div style="font-size:9px;color:var(--muted);margin-top:4px;font-family:var(--mono)">CO₂: ' + co2 + ' g/kWh · RTE eco2mix · ' + (latest.date_heure||'').slice(0,16).replace('T',' ') + '</div>' : '');
     }
 
     // 24h consumption chart (reversed = chronological order)
