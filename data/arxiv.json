@@ -1,205 +1,32 @@
 {
   "cs.AI": {
     "label": "AI / Machine Learning",
-    "papers": [
-      {
-        "title": "Geometry-aware similarity metrics for neural representations on Riemannian and statistical manifolds",
-        "summary": "Similarity measures are widely used to interpret the representational geometries used by neural networks to solve tasks. Yet, because existing methods compare the extrinsic geometry of representations",
-        "link": "http://arxiv.org/abs/2603.28764v1",
-        "date": "2026-03-30",
-        "authors": [
-          "N Alex Cayco Gajic",
-          "Arthur Pellegrino"
-        ]
-      },
-      {
-        "title": "On-the-fly Repulsion in the Contextual Space for Rich Diversity in Diffusion Transformers",
-        "summary": "Modern Text-to-Image (T2I) diffusion models have achieved remarkable semantic alignment, yet they often suffer from a significant lack of variety, converging on a narrow set of visual solutions for an",
-        "link": "http://arxiv.org/abs/2603.28762v1",
-        "date": "2026-03-30",
-        "authors": [
-          "Omer Dahary",
-          "Benaya Koren",
-          "Daniel Garibi"
-        ]
-      },
-      {
-        "title": "ParaSpeechCLAP: A Dual-Encoder Speech-Text Model for Rich Stylistic Language-Audio Pretraining",
-        "summary": "We introduce ParaSpeechCLAP, a dual-encoder contrastive model that maps speech and text style captions into a common embedding space, supporting a wide range of intrinsic (speaker-level) and situation",
-        "link": "http://arxiv.org/abs/2603.28737v1",
-        "date": "2026-03-30",
-        "authors": [
-          "Anuj Diwan",
-          "Eunsol Choi",
-          "David Harwath"
-        ]
-      },
-      {
-        "title": "RAD-AI: Rethinking Architecture Documentation for AI-Augmented Ecosystems",
-        "summary": "AI-augmented ecosystems (interconnected systems where multiple AI components interact through shared data and infrastructure) are becoming the architectural norm for smart cities, autonomous fleets, a",
-        "link": "http://arxiv.org/abs/2603.28735v1",
-        "date": "2026-03-30",
-        "authors": [
-          "Oliver Aleksander Larsen",
-          "Mahyar T. Moghaddam"
-        ]
-      },
-      {
-        "title": "SAGAI-MID: A Generative AI-Driven Middleware for Dynamic Runtime Interoperability",
-        "summary": "Modern distributed systems integrate heterogeneous services, REST APIs with different schema versions, GraphQL endpoints, and IoT devices with proprietary payloads that suffer from persistent schema m",
-        "link": "http://arxiv.org/abs/2603.28731v1",
-        "date": "2026-03-30",
-        "authors": [
-          "Oliver Aleksander Larsen",
-          "Mahyar T. Moghaddam"
-        ]
-      },
-      {
-        "title": "Stepwise Credit Assignment for GRPO on Flow-Matching Models",
-        "summary": "Flow-GRPO successfully applies reinforcement learning to flow models, but uses uniform credit assignment across all steps. This ignores the temporal structure of diffusion generation: early steps dete",
-        "link": "http://arxiv.org/abs/2603.28718v1",
-        "date": "2026-03-30",
-        "authors": [
-          "Yash Savani",
-          "Branislav Kveton",
-          "Yuchen Liu"
-        ]
-      },
-      {
-        "title": "Dynamic Dual-Granularity Skill Bank for Agentic RL",
-        "summary": "Agentic reinforcement learning (RL) can benefit substantially from reusable experience, yet existing skill-based methods mainly extract trajectory-level guidance and often lack principled mechanisms f",
-        "link": "http://arxiv.org/abs/2603.28716v1",
-        "date": "2026-03-30",
-        "authors": [
-          "Songjun Tu",
-          "Chengdong Xu",
-          "Qichao Zhang"
-        ]
-      },
-      {
-        "title": "A Convex Route to Thermomechanics: Learning Internal Energy and Dissipation",
-        "summary": "We present a physics-based neural network framework for the discovery of constitutive models in fully coupled thermomechanics. In contrast to classical formulations based on the Helmholtz energy, we a",
-        "link": "http://arxiv.org/abs/2603.28707v1",
-        "date": "2026-03-30",
-        "authors": [
-          "Hagen Holthusen",
-          "Paul Steinmann",
-          "Ellen Kuhl"
-        ]
-      }
-    ],
-    "updated": "2026-03-31T15:00:49.265235Z"
+    "papers": [],
+    "error": "HTTP Error 429: Unknown Error"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-03-31T15:00:49.265235Z"
+    "error": "HTTP Error 429: Unknown Error"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-03-31T15:00:49.265235Z"
+    "error": "HTTP Error 429: Unknown Error"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-03-31T15:00:49.265235Z"
+    "error": "HTTP Error 429: Unknown Error"
   },
   "cs.CR": {
     "label": "Cybersecurity",
-    "papers": [
-      {
-        "title": "BitSov: A Composable Bitcoin-Native Architecture for Sovereign Internet Infrastructure",
-        "summary": "Today's internet concentrates identity, payments, communication, and content hosting under a small number of corporate intermediaries, creating single points of failure, enabling censorship, and extra",
-        "link": "http://arxiv.org/abs/2603.28727v1",
-        "date": "2026-03-30",
-        "authors": [
-          "Oliver Aleksander Larsen",
-          "Rasmus Thorsen Larsen",
-          "Mahyar T. Moghaddam"
-        ]
-      },
-      {
-        "title": "FL-PBM: Pre-Training Backdoor Mitigation for Federated Learning",
-        "summary": "Backdoor attacks pose a significant threat to the integrity and reliability of Artificial Intelligence (AI) models, enabling adversaries to manipulate model behavior by injecting poisoned data with hi",
-        "link": "http://arxiv.org/abs/2603.28673v1",
-        "date": "2026-03-30",
-        "authors": [
-          "Osama Wehbi",
-          "Sarhad Arisdakessian",
-          "Omar Abdel Wahab"
-        ]
-      },
-      {
-        "title": "Safeguarding LLMs Against Misuse and AI-Driven Malware Using Steganographic Canaries",
-        "summary": "AI-powered malware increasingly exploits cloud-hosted generative-AI services and large language models (LLMs) as analysis engines for reconnaissance and code generation. Simultaneously, enterprise upl",
-        "link": "http://arxiv.org/abs/2603.28655v1",
-        "date": "2026-03-30",
-        "authors": [
-          "Md Raz",
-          "Venkata Sai Charan Putrevu",
-          "Meet Udeshi"
-        ]
-      },
-      {
-        "title": "Interpretable Ensemble Learning for Network Traffic Anomaly Detection: A SHAP-based Explainable AI Framework for Embedded Systems Security",
-        "summary": "Network security threats in embedded systems pose significant challenges to critical infrastructure protection. This paper presents a comprehensive framework combining ensemble learning methods with e",
-        "link": "http://arxiv.org/abs/2603.28654v1",
-        "date": "2026-03-30",
-        "authors": [
-          "Wanru Shao"
-        ]
-      },
-      {
-        "title": "Mitigating Backdoor Attacks in Federated Learning Using PPA and MiniMax Game Theory",
-        "summary": "Federated Learning (FL) is witnessing wider adoption due to its ability to benefit from large amounts of scattered data while preserving privacy. However, despite its advantages, federated learning su",
-        "link": "http://arxiv.org/abs/2603.28652v1",
-        "date": "2026-03-30",
-        "authors": [
-          "Osama Wehbi",
-          "Sarhad Arisdakessian",
-          "Omar Abdel Wahab"
-        ]
-      },
-      {
-        "title": "Empowering Mobile Networks Security Resilience by using Post-Quantum Cryptography",
-        "summary": "The transition to a cloud-native 5G Service-Based Architecture (SBA) improves scalability but exposes control-plane signaling to emerging quantum threats, including Harvest-Now, Decrypt-Later (HNDL) a",
-        "link": "http://arxiv.org/abs/2603.28626v1",
-        "date": "2026-03-30",
-        "authors": [
-          "Ricardo Alves Faval",
-          "Rodrigo Moreira",
-          "Fl\u00e1vio de Oliveira Silva"
-        ]
-      },
-      {
-        "title": "TGIF2: Extended Text-Guided Inpainting Forgery Dataset & Benchmark",
-        "summary": "Generative AI has made text-guided inpainting a powerful image editing tool, but at the same time a growing challenge for media forensics. Existing benchmarks, including our text-guided inpainting for",
-        "link": "http://arxiv.org/abs/2603.28613v1",
-        "date": "2026-03-30",
-        "authors": [
-          "Hannes Mareen",
-          "Dimitrios Karageorgiou",
-          "Paschalis Giakoumoglou"
-        ]
-      },
-      {
-        "title": "Detection of Adversarial Attacks in Robotic Perception",
-        "summary": "Deep Neural Networks (DNNs) achieve strong performance in semantic segmentation for robotic perception but remain vulnerable to adversarial attacks, threatening safety-critical applications. While rob",
-        "link": "http://arxiv.org/abs/2603.28594v1",
-        "date": "2026-03-30",
-        "authors": [
-          "Ziad Sharawy",
-          "Mohammad Nakshbandiand",
-          "Sorin Mihai Grigorescu"
-        ]
-      }
-    ],
-    "updated": "2026-03-31T15:00:49.265235Z"
+    "papers": [],
+    "error": "HTTP Error 429: Unknown Error"
   },
   "q-bio": {
     "label": "Biology",
     "papers": [],
-    "error": "The read operation timed out"
+    "error": "HTTP Error 429: Unknown Error"
   }
 }

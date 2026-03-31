@@ -3,6 +3,1446 @@
   "trend": 0.01,
   "series": [
     {
+      "date": "2025-06-03",
+      "pct": 49.5,
+      "gasInStorage": 561.9,
+      "trend": 0.33
+    },
+    {
+      "date": "2025-06-04",
+      "pct": 49.9,
+      "gasInStorage": 565.7,
+      "trend": 0.34
+    },
+    {
+      "date": "2025-06-05",
+      "pct": 50.2,
+      "gasInStorage": 568.9,
+      "trend": 0.28
+    },
+    {
+      "date": "2025-06-06",
+      "pct": 50.5,
+      "gasInStorage": 573.0,
+      "trend": 0.36
+    },
+    {
+      "date": "2025-06-07",
+      "pct": 51.0,
+      "gasInStorage": 578.0,
+      "trend": 0.44
+    },
+    {
+      "date": "2025-06-08",
+      "pct": 51.4,
+      "gasInStorage": 583.0,
+      "trend": 0.43
+    },
+    {
+      "date": "2025-06-09",
+      "pct": 51.8,
+      "gasInStorage": 587.3,
+      "trend": 0.39
+    },
+    {
+      "date": "2025-06-10",
+      "pct": 52.1,
+      "gasInStorage": 591.1,
+      "trend": 0.33
+    },
+    {
+      "date": "2025-06-11",
+      "pct": 52.4,
+      "gasInStorage": 594.7,
+      "trend": 0.32
+    },
+    {
+      "date": "2025-06-12",
+      "pct": 52.8,
+      "gasInStorage": 598.2,
+      "trend": 0.31
+    },
+    {
+      "date": "2025-06-13",
+      "pct": 53.0,
+      "gasInStorage": 601.2,
+      "trend": 0.27
+    },
+    {
+      "date": "2025-06-14",
+      "pct": 53.4,
+      "gasInStorage": 605.6,
+      "trend": 0.38
+    },
+    {
+      "date": "2025-06-15",
+      "pct": 53.8,
+      "gasInStorage": 609.9,
+      "trend": 0.38
+    },
+    {
+      "date": "2025-06-16",
+      "pct": 54.1,
+      "gasInStorage": 613.2,
+      "trend": 0.29
+    },
+    {
+      "date": "2025-06-17",
+      "pct": 54.4,
+      "gasInStorage": 616.7,
+      "trend": 0.31
+    },
+    {
+      "date": "2025-06-18",
+      "pct": 54.7,
+      "gasInStorage": 620.5,
+      "trend": 0.33
+    },
+    {
+      "date": "2025-06-19",
+      "pct": 55.1,
+      "gasInStorage": 624.4,
+      "trend": 0.34
+    },
+    {
+      "date": "2025-06-20",
+      "pct": 55.4,
+      "gasInStorage": 628.2,
+      "trend": 0.34
+    },
+    {
+      "date": "2025-06-21",
+      "pct": 55.8,
+      "gasInStorage": 632.9,
+      "trend": 0.42
+    },
+    {
+      "date": "2025-06-22",
+      "pct": 56.2,
+      "gasInStorage": 637.7,
+      "trend": 0.42
+    },
+    {
+      "date": "2025-06-23",
+      "pct": 56.6,
+      "gasInStorage": 641.8,
+      "trend": 0.36
+    },
+    {
+      "date": "2025-06-24",
+      "pct": 56.9,
+      "gasInStorage": 645.4,
+      "trend": 0.32
+    },
+    {
+      "date": "2025-06-25",
+      "pct": 57.2,
+      "gasInStorage": 648.3,
+      "trend": 0.26
+    },
+    {
+      "date": "2025-06-26",
+      "pct": 57.4,
+      "gasInStorage": 651.2,
+      "trend": 0.25
+    },
+    {
+      "date": "2025-06-27",
+      "pct": 57.8,
+      "gasInStorage": 655.2,
+      "trend": 0.35
+    },
+    {
+      "date": "2025-06-28",
+      "pct": 58.2,
+      "gasInStorage": 659.8,
+      "trend": 0.4
+    },
+    {
+      "date": "2025-06-29",
+      "pct": 58.6,
+      "gasInStorage": 664.4,
+      "trend": 0.41
+    },
+    {
+      "date": "2025-06-30",
+      "pct": 58.9,
+      "gasInStorage": 667.9,
+      "trend": 0.31
+    },
+    {
+      "date": "2025-07-01",
+      "pct": 59.1,
+      "gasInStorage": 670.7,
+      "trend": 0.25
+    },
+    {
+      "date": "2025-07-02",
+      "pct": 59.4,
+      "gasInStorage": 674.1,
+      "trend": 0.29
+    },
+    {
+      "date": "2025-07-03",
+      "pct": 59.7,
+      "gasInStorage": 676.9,
+      "trend": 0.25
+    },
+    {
+      "date": "2025-07-04",
+      "pct": 60.0,
+      "gasInStorage": 680.1,
+      "trend": 0.28
+    },
+    {
+      "date": "2025-07-05",
+      "pct": 60.3,
+      "gasInStorage": 683.9,
+      "trend": 0.33
+    },
+    {
+      "date": "2025-07-06",
+      "pct": 60.6,
+      "gasInStorage": 687.8,
+      "trend": 0.35
+    },
+    {
+      "date": "2025-07-07",
+      "pct": 60.9,
+      "gasInStorage": 691.1,
+      "trend": 0.29
+    },
+    {
+      "date": "2025-07-08",
+      "pct": 61.6,
+      "gasInStorage": 698.4,
+      "trend": 0.65
+    },
+    {
+      "date": "2025-07-09",
+      "pct": 61.6,
+      "gasInStorage": 698.1,
+      "trend": -0.03
+    },
+    {
+      "date": "2025-07-10",
+      "pct": 61.9,
+      "gasInStorage": 702.1,
+      "trend": 0.35
+    },
+    {
+      "date": "2025-07-11",
+      "pct": 62.2,
+      "gasInStorage": 705.7,
+      "trend": 0.32
+    },
+    {
+      "date": "2025-07-12",
+      "pct": 62.6,
+      "gasInStorage": 710.2,
+      "trend": 0.4
+    },
+    {
+      "date": "2025-07-13",
+      "pct": 63.0,
+      "gasInStorage": 714.6,
+      "trend": 0.39
+    },
+    {
+      "date": "2025-07-14",
+      "pct": 63.3,
+      "gasInStorage": 718.0,
+      "trend": 0.3
+    },
+    {
+      "date": "2025-07-15",
+      "pct": 63.6,
+      "gasInStorage": 721.3,
+      "trend": 0.28
+    },
+    {
+      "date": "2025-07-16",
+      "pct": 63.8,
+      "gasInStorage": 723.6,
+      "trend": 0.21
+    },
+    {
+      "date": "2025-07-17",
+      "pct": 64.0,
+      "gasInStorage": 726.3,
+      "trend": 0.24
+    },
+    {
+      "date": "2025-07-18",
+      "pct": 64.3,
+      "gasInStorage": 729.6,
+      "trend": 0.29
+    },
+    {
+      "date": "2025-07-19",
+      "pct": 64.7,
+      "gasInStorage": 733.7,
+      "trend": 0.36
+    },
+    {
+      "date": "2025-07-20",
+      "pct": 65.1,
+      "gasInStorage": 737.9,
+      "trend": 0.37
+    },
+    {
+      "date": "2025-07-21",
+      "pct": 65.4,
+      "gasInStorage": 741.1,
+      "trend": 0.28
+    },
+    {
+      "date": "2025-07-22",
+      "pct": 65.7,
+      "gasInStorage": 744.5,
+      "trend": 0.3
+    },
+    {
+      "date": "2025-07-23",
+      "pct": 65.9,
+      "gasInStorage": 747.7,
+      "trend": 0.29
+    },
+    {
+      "date": "2025-07-24",
+      "pct": 66.2,
+      "gasInStorage": 750.6,
+      "trend": 0.25
+    },
+    {
+      "date": "2025-07-25",
+      "pct": 66.5,
+      "gasInStorage": 753.7,
+      "trend": 0.28
+    },
+    {
+      "date": "2025-07-26",
+      "pct": 66.8,
+      "gasInStorage": 757.9,
+      "trend": 0.37
+    },
+    {
+      "date": "2025-07-27",
+      "pct": 67.3,
+      "gasInStorage": 763.0,
+      "trend": 0.45
+    },
+    {
+      "date": "2025-07-28",
+      "pct": 67.6,
+      "gasInStorage": 766.4,
+      "trend": 0.3
+    },
+    {
+      "date": "2025-07-29",
+      "pct": 67.9,
+      "gasInStorage": 770.4,
+      "trend": 0.35
+    },
+    {
+      "date": "2025-07-30",
+      "pct": 68.3,
+      "gasInStorage": 774.3,
+      "trend": 0.34
+    },
+    {
+      "date": "2025-07-31",
+      "pct": 68.6,
+      "gasInStorage": 777.7,
+      "trend": 0.3
+    },
+    {
+      "date": "2025-08-01",
+      "pct": 68.8,
+      "gasInStorage": 781.4,
+      "trend": 0.33
+    },
+    {
+      "date": "2025-08-02",
+      "pct": 69.2,
+      "gasInStorage": 785.8,
+      "trend": 0.39
+    },
+    {
+      "date": "2025-08-03",
+      "pct": 69.6,
+      "gasInStorage": 790.1,
+      "trend": 0.39
+    },
+    {
+      "date": "2025-08-04",
+      "pct": 70.0,
+      "gasInStorage": 794.0,
+      "trend": 0.34
+    },
+    {
+      "date": "2025-08-05",
+      "pct": 70.3,
+      "gasInStorage": 797.8,
+      "trend": 0.33
+    },
+    {
+      "date": "2025-08-06",
+      "pct": 70.6,
+      "gasInStorage": 801.4,
+      "trend": 0.32
+    },
+    {
+      "date": "2025-08-07",
+      "pct": 70.9,
+      "gasInStorage": 805.0,
+      "trend": 0.31
+    },
+    {
+      "date": "2025-08-08",
+      "pct": 71.2,
+      "gasInStorage": 808.5,
+      "trend": 0.31
+    },
+    {
+      "date": "2025-08-09",
+      "pct": 71.6,
+      "gasInStorage": 812.6,
+      "trend": 0.36
+    },
+    {
+      "date": "2025-08-10",
+      "pct": 72.0,
+      "gasInStorage": 817.5,
+      "trend": 0.43
+    },
+    {
+      "date": "2025-08-11",
+      "pct": 72.3,
+      "gasInStorage": 821.0,
+      "trend": 0.3
+    },
+    {
+      "date": "2025-08-12",
+      "pct": 72.5,
+      "gasInStorage": 824.0,
+      "trend": 0.26
+    },
+    {
+      "date": "2025-08-13",
+      "pct": 72.7,
+      "gasInStorage": 826.7,
+      "trend": 0.24
+    },
+    {
+      "date": "2025-08-14",
+      "pct": 73.0,
+      "gasInStorage": 829.6,
+      "trend": 0.25
+    },
+    {
+      "date": "2025-08-15",
+      "pct": 73.3,
+      "gasInStorage": 833.1,
+      "trend": 0.31
+    },
+    {
+      "date": "2025-08-16",
+      "pct": 73.6,
+      "gasInStorage": 836.8,
+      "trend": 0.33
+    },
+    {
+      "date": "2025-08-17",
+      "pct": 74.0,
+      "gasInStorage": 840.5,
+      "trend": 0.32
+    },
+    {
+      "date": "2025-08-18",
+      "pct": 74.2,
+      "gasInStorage": 843.8,
+      "trend": 0.29
+    },
+    {
+      "date": "2025-08-19",
+      "pct": 74.5,
+      "gasInStorage": 847.1,
+      "trend": 0.29
+    },
+    {
+      "date": "2025-08-20",
+      "pct": 74.8,
+      "gasInStorage": 850.1,
+      "trend": 0.27
+    },
+    {
+      "date": "2025-08-21",
+      "pct": 75.1,
+      "gasInStorage": 853.3,
+      "trend": 0.28
+    },
+    {
+      "date": "2025-08-22",
+      "pct": 75.3,
+      "gasInStorage": 856.3,
+      "trend": 0.27
+    },
+    {
+      "date": "2025-08-23",
+      "pct": 75.7,
+      "gasInStorage": 860.0,
+      "trend": 0.32
+    },
+    {
+      "date": "2025-08-24",
+      "pct": 76.0,
+      "gasInStorage": 863.6,
+      "trend": 0.32
+    },
+    {
+      "date": "2025-08-25",
+      "pct": 76.2,
+      "gasInStorage": 866.4,
+      "trend": 0.25
+    },
+    {
+      "date": "2025-08-26",
+      "pct": 76.5,
+      "gasInStorage": 868.9,
+      "trend": 0.22
+    },
+    {
+      "date": "2025-08-27",
+      "pct": 76.6,
+      "gasInStorage": 871.1,
+      "trend": 0.19
+    },
+    {
+      "date": "2025-08-28",
+      "pct": 76.8,
+      "gasInStorage": 873.3,
+      "trend": 0.2
+    },
+    {
+      "date": "2025-08-29",
+      "pct": 77.1,
+      "gasInStorage": 876.0,
+      "trend": 0.23
+    },
+    {
+      "date": "2025-08-30",
+      "pct": 77.4,
+      "gasInStorage": 879.4,
+      "trend": 0.3
+    },
+    {
+      "date": "2025-08-31",
+      "pct": 77.7,
+      "gasInStorage": 882.4,
+      "trend": 0.27
+    },
+    {
+      "date": "2025-09-01",
+      "pct": 78.1,
+      "gasInStorage": 887.9,
+      "trend": 0.48
+    },
+    {
+      "date": "2025-09-02",
+      "pct": 78.3,
+      "gasInStorage": 890.2,
+      "trend": 0.21
+    },
+    {
+      "date": "2025-09-03",
+      "pct": 78.5,
+      "gasInStorage": 892.9,
+      "trend": 0.23
+    },
+    {
+      "date": "2025-09-04",
+      "pct": 78.7,
+      "gasInStorage": 895.5,
+      "trend": 0.23
+    },
+    {
+      "date": "2025-09-05",
+      "pct": 79.0,
+      "gasInStorage": 897.9,
+      "trend": 0.21
+    },
+    {
+      "date": "2025-09-06",
+      "pct": 79.2,
+      "gasInStorage": 901.0,
+      "trend": 0.27
+    },
+    {
+      "date": "2025-09-07",
+      "pct": 79.5,
+      "gasInStorage": 904.1,
+      "trend": 0.28
+    },
+    {
+      "date": "2025-09-08",
+      "pct": 79.6,
+      "gasInStorage": 905.9,
+      "trend": 0.16
+    },
+    {
+      "date": "2025-09-09",
+      "pct": 79.7,
+      "gasInStorage": 907.3,
+      "trend": 0.12
+    },
+    {
+      "date": "2025-09-10",
+      "pct": 79.9,
+      "gasInStorage": 908.7,
+      "trend": 0.12
+    },
+    {
+      "date": "2025-09-11",
+      "pct": 80.0,
+      "gasInStorage": 910.1,
+      "trend": 0.12
+    },
+    {
+      "date": "2025-09-12",
+      "pct": 80.1,
+      "gasInStorage": 912.0,
+      "trend": 0.17
+    },
+    {
+      "date": "2025-09-13",
+      "pct": 80.3,
+      "gasInStorage": 914.7,
+      "trend": 0.24
+    },
+    {
+      "date": "2025-09-14",
+      "pct": 80.6,
+      "gasInStorage": 917.5,
+      "trend": 0.25
+    },
+    {
+      "date": "2025-09-15",
+      "pct": 80.8,
+      "gasInStorage": 920.1,
+      "trend": 0.23
+    },
+    {
+      "date": "2025-09-16",
+      "pct": 81.0,
+      "gasInStorage": 921.8,
+      "trend": 0.15
+    },
+    {
+      "date": "2025-09-17",
+      "pct": 81.1,
+      "gasInStorage": 923.1,
+      "trend": 0.12
+    },
+    {
+      "date": "2025-09-18",
+      "pct": 81.2,
+      "gasInStorage": 924.7,
+      "trend": 0.14
+    },
+    {
+      "date": "2025-09-19",
+      "pct": 81.4,
+      "gasInStorage": 926.4,
+      "trend": 0.15
+    },
+    {
+      "date": "2025-09-20",
+      "pct": 81.6,
+      "gasInStorage": 929.1,
+      "trend": 0.24
+    },
+    {
+      "date": "2025-09-21",
+      "pct": 81.8,
+      "gasInStorage": 931.8,
+      "trend": 0.24
+    },
+    {
+      "date": "2025-09-22",
+      "pct": 82.0,
+      "gasInStorage": 933.1,
+      "trend": 0.11
+    },
+    {
+      "date": "2025-09-23",
+      "pct": 82.0,
+      "gasInStorage": 933.9,
+      "trend": 0.07
+    },
+    {
+      "date": "2025-09-24",
+      "pct": 82.0,
+      "gasInStorage": 934.6,
+      "trend": 0.06
+    },
+    {
+      "date": "2025-09-25",
+      "pct": 82.1,
+      "gasInStorage": 935.3,
+      "trend": 0.06
+    },
+    {
+      "date": "2025-09-26",
+      "pct": 82.2,
+      "gasInStorage": 936.3,
+      "trend": 0.09
+    },
+    {
+      "date": "2025-09-27",
+      "pct": 82.3,
+      "gasInStorage": 938.2,
+      "trend": 0.17
+    },
+    {
+      "date": "2025-09-28",
+      "pct": 82.5,
+      "gasInStorage": 940.0,
+      "trend": 0.16
+    },
+    {
+      "date": "2025-09-29",
+      "pct": 82.6,
+      "gasInStorage": 941.0,
+      "trend": 0.09
+    },
+    {
+      "date": "2025-09-30",
+      "pct": 82.5,
+      "gasInStorage": 940.0,
+      "trend": -0.09
+    },
+    {
+      "date": "2025-10-01",
+      "pct": 82.6,
+      "gasInStorage": 942.5,
+      "trend": 0.22
+    },
+    {
+      "date": "2025-10-02",
+      "pct": 82.5,
+      "gasInStorage": 942.0,
+      "trend": -0.04
+    },
+    {
+      "date": "2025-10-03",
+      "pct": 82.6,
+      "gasInStorage": 942.8,
+      "trend": 0.07
+    },
+    {
+      "date": "2025-10-04",
+      "pct": 82.8,
+      "gasInStorage": 944.3,
+      "trend": 0.14
+    },
+    {
+      "date": "2025-10-05",
+      "pct": 82.9,
+      "gasInStorage": 945.8,
+      "trend": 0.12
+    },
+    {
+      "date": "2025-10-06",
+      "pct": 82.9,
+      "gasInStorage": 945.9,
+      "trend": 0.01
+    },
+    {
+      "date": "2025-10-07",
+      "pct": 82.9,
+      "gasInStorage": 945.6,
+      "trend": -0.02
+    },
+    {
+      "date": "2025-10-08",
+      "pct": 82.8,
+      "gasInStorage": 945.2,
+      "trend": -0.03
+    },
+    {
+      "date": "2025-10-09",
+      "pct": 82.8,
+      "gasInStorage": 945.1,
+      "trend": -0.01
+    },
+    {
+      "date": "2025-10-10",
+      "pct": 82.9,
+      "gasInStorage": 945.8,
+      "trend": 0.06
+    },
+    {
+      "date": "2025-10-11",
+      "pct": 83.0,
+      "gasInStorage": 947.5,
+      "trend": 0.15
+    },
+    {
+      "date": "2025-10-12",
+      "pct": 83.2,
+      "gasInStorage": 948.9,
+      "trend": 0.12
+    },
+    {
+      "date": "2025-10-13",
+      "pct": 83.1,
+      "gasInStorage": 948.2,
+      "trend": -0.05
+    },
+    {
+      "date": "2025-10-14",
+      "pct": 83.0,
+      "gasInStorage": 947.6,
+      "trend": -0.06
+    },
+    {
+      "date": "2025-10-15",
+      "pct": 82.9,
+      "gasInStorage": 946.3,
+      "trend": -0.11
+    },
+    {
+      "date": "2025-10-16",
+      "pct": 82.8,
+      "gasInStorage": 945.0,
+      "trend": -0.12
+    },
+    {
+      "date": "2025-10-17",
+      "pct": 82.8,
+      "gasInStorage": 944.4,
+      "trend": -0.05
+    },
+    {
+      "date": "2025-10-18",
+      "pct": 82.8,
+      "gasInStorage": 944.8,
+      "trend": 0.04
+    },
+    {
+      "date": "2025-10-19",
+      "pct": 82.8,
+      "gasInStorage": 945.4,
+      "trend": 0.05
+    },
+    {
+      "date": "2025-10-20",
+      "pct": 82.8,
+      "gasInStorage": 945.3,
+      "trend": -0.01
+    },
+    {
+      "date": "2025-10-21",
+      "pct": 82.8,
+      "gasInStorage": 945.2,
+      "trend": -0.01
+    },
+    {
+      "date": "2025-10-22",
+      "pct": 82.8,
+      "gasInStorage": 945.2,
+      "trend": 0.0
+    },
+    {
+      "date": "2025-10-23",
+      "pct": 82.9,
+      "gasInStorage": 945.6,
+      "trend": 0.04
+    },
+    {
+      "date": "2025-10-24",
+      "pct": 82.9,
+      "gasInStorage": 945.7,
+      "trend": 0.01
+    },
+    {
+      "date": "2025-10-25",
+      "pct": 82.8,
+      "gasInStorage": 946.1,
+      "trend": 0.03
+    },
+    {
+      "date": "2025-10-26",
+      "pct": 82.9,
+      "gasInStorage": 946.3,
+      "trend": 0.01
+    },
+    {
+      "date": "2025-10-27",
+      "pct": 82.9,
+      "gasInStorage": 945.7,
+      "trend": -0.05
+    },
+    {
+      "date": "2025-10-28",
+      "pct": 82.8,
+      "gasInStorage": 945.7,
+      "trend": 0.0
+    },
+    {
+      "date": "2025-10-29",
+      "pct": 82.8,
+      "gasInStorage": 945.2,
+      "trend": -0.04
+    },
+    {
+      "date": "2025-10-30",
+      "pct": 82.8,
+      "gasInStorage": 945.5,
+      "trend": 0.03
+    },
+    {
+      "date": "2025-10-31",
+      "pct": 82.8,
+      "gasInStorage": 945.8,
+      "trend": 0.02
+    },
+    {
+      "date": "2025-11-01",
+      "pct": 82.8,
+      "gasInStorage": 945.7,
+      "trend": -0.01
+    },
+    {
+      "date": "2025-11-02",
+      "pct": 82.9,
+      "gasInStorage": 946.7,
+      "trend": 0.09
+    },
+    {
+      "date": "2025-11-03",
+      "pct": 83.0,
+      "gasInStorage": 948.1,
+      "trend": 0.12
+    },
+    {
+      "date": "2025-11-04",
+      "pct": 83.0,
+      "gasInStorage": 948.1,
+      "trend": 0.0
+    },
+    {
+      "date": "2025-11-05",
+      "pct": 83.0,
+      "gasInStorage": 947.5,
+      "trend": -0.06
+    },
+    {
+      "date": "2025-11-06",
+      "pct": 82.8,
+      "gasInStorage": 945.9,
+      "trend": -0.13
+    },
+    {
+      "date": "2025-11-07",
+      "pct": 82.7,
+      "gasInStorage": 944.2,
+      "trend": -0.15
+    },
+    {
+      "date": "2025-11-08",
+      "pct": 82.6,
+      "gasInStorage": 943.4,
+      "trend": -0.07
+    },
+    {
+      "date": "2025-11-09",
+      "pct": 82.5,
+      "gasInStorage": 942.7,
+      "trend": -0.06
+    },
+    {
+      "date": "2025-11-10",
+      "pct": 82.4,
+      "gasInStorage": 940.8,
+      "trend": -0.16
+    },
+    {
+      "date": "2025-11-11",
+      "pct": 82.3,
+      "gasInStorage": 939.9,
+      "trend": -0.08
+    },
+    {
+      "date": "2025-11-12",
+      "pct": 82.2,
+      "gasInStorage": 938.9,
+      "trend": -0.08
+    },
+    {
+      "date": "2025-11-13",
+      "pct": 82.1,
+      "gasInStorage": 937.7,
+      "trend": -0.11
+    },
+    {
+      "date": "2025-11-14",
+      "pct": 82.0,
+      "gasInStorage": 936.8,
+      "trend": -0.08
+    },
+    {
+      "date": "2025-11-15",
+      "pct": 82.0,
+      "gasInStorage": 936.2,
+      "trend": -0.06
+    },
+    {
+      "date": "2025-11-16",
+      "pct": 81.9,
+      "gasInStorage": 935.2,
+      "trend": -0.09
+    },
+    {
+      "date": "2025-11-17",
+      "pct": 81.6,
+      "gasInStorage": 932.1,
+      "trend": -0.27
+    },
+    {
+      "date": "2025-11-18",
+      "pct": 81.2,
+      "gasInStorage": 926.9,
+      "trend": -0.46
+    },
+    {
+      "date": "2025-11-19",
+      "pct": 80.7,
+      "gasInStorage": 921.5,
+      "trend": -0.47
+    },
+    {
+      "date": "2025-11-20",
+      "pct": 80.1,
+      "gasInStorage": 915.2,
+      "trend": -0.56
+    },
+    {
+      "date": "2025-11-21",
+      "pct": 79.5,
+      "gasInStorage": 908.3,
+      "trend": -0.6
+    },
+    {
+      "date": "2025-11-22",
+      "pct": 79.1,
+      "gasInStorage": 902.9,
+      "trend": -0.47
+    },
+    {
+      "date": "2025-11-23",
+      "pct": 78.6,
+      "gasInStorage": 897.9,
+      "trend": -0.44
+    },
+    {
+      "date": "2025-11-24",
+      "pct": 78.1,
+      "gasInStorage": 891.6,
+      "trend": -0.55
+    },
+    {
+      "date": "2025-11-25",
+      "pct": 77.5,
+      "gasInStorage": 885.2,
+      "trend": -0.56
+    },
+    {
+      "date": "2025-11-26",
+      "pct": 76.9,
+      "gasInStorage": 878.5,
+      "trend": -0.59
+    },
+    {
+      "date": "2025-11-27",
+      "pct": 76.4,
+      "gasInStorage": 872.5,
+      "trend": -0.53
+    },
+    {
+      "date": "2025-11-28",
+      "pct": 75.9,
+      "gasInStorage": 867.2,
+      "trend": -0.46
+    },
+    {
+      "date": "2025-11-29",
+      "pct": 75.6,
+      "gasInStorage": 863.5,
+      "trend": -0.32
+    },
+    {
+      "date": "2025-11-30",
+      "pct": 75.2,
+      "gasInStorage": 858.9,
+      "trend": -0.41
+    },
+    {
+      "date": "2025-12-01",
+      "pct": 74.8,
+      "gasInStorage": 854.1,
+      "trend": -0.42
+    },
+    {
+      "date": "2025-12-02",
+      "pct": 74.3,
+      "gasInStorage": 848.1,
+      "trend": -0.53
+    },
+    {
+      "date": "2025-12-03",
+      "pct": 73.7,
+      "gasInStorage": 841.2,
+      "trend": -0.6
+    },
+    {
+      "date": "2025-12-04",
+      "pct": 73.1,
+      "gasInStorage": 835.0,
+      "trend": -0.54
+    },
+    {
+      "date": "2025-12-05",
+      "pct": 72.6,
+      "gasInStorage": 829.2,
+      "trend": -0.51
+    },
+    {
+      "date": "2025-12-06",
+      "pct": 72.3,
+      "gasInStorage": 825.7,
+      "trend": -0.3
+    },
+    {
+      "date": "2025-12-07",
+      "pct": 72.0,
+      "gasInStorage": 823.1,
+      "trend": -0.23
+    },
+    {
+      "date": "2025-12-08",
+      "pct": 71.8,
+      "gasInStorage": 820.3,
+      "trend": -0.25
+    },
+    {
+      "date": "2025-12-09",
+      "pct": 71.5,
+      "gasInStorage": 817.2,
+      "trend": -0.27
+    },
+    {
+      "date": "2025-12-10",
+      "pct": 71.2,
+      "gasInStorage": 813.9,
+      "trend": -0.29
+    },
+    {
+      "date": "2025-12-11",
+      "pct": 70.8,
+      "gasInStorage": 809.5,
+      "trend": -0.39
+    },
+    {
+      "date": "2025-12-12",
+      "pct": 70.4,
+      "gasInStorage": 804.3,
+      "trend": -0.45
+    },
+    {
+      "date": "2025-12-13",
+      "pct": 70.0,
+      "gasInStorage": 800.3,
+      "trend": -0.35
+    },
+    {
+      "date": "2025-12-14",
+      "pct": 69.7,
+      "gasInStorage": 796.7,
+      "trend": -0.31
+    },
+    {
+      "date": "2025-12-15",
+      "pct": 69.2,
+      "gasInStorage": 791.3,
+      "trend": -0.47
+    },
+    {
+      "date": "2025-12-16",
+      "pct": 68.6,
+      "gasInStorage": 784.3,
+      "trend": -0.61
+    },
+    {
+      "date": "2025-12-17",
+      "pct": 68.2,
+      "gasInStorage": 778.7,
+      "trend": -0.48
+    },
+    {
+      "date": "2025-12-18",
+      "pct": 67.9,
+      "gasInStorage": 775.3,
+      "trend": -0.3
+    },
+    {
+      "date": "2025-12-19",
+      "pct": 67.5,
+      "gasInStorage": 771.4,
+      "trend": -0.34
+    },
+    {
+      "date": "2025-12-20",
+      "pct": 67.2,
+      "gasInStorage": 767.4,
+      "trend": -0.35
+    },
+    {
+      "date": "2025-12-21",
+      "pct": 66.9,
+      "gasInStorage": 764.3,
+      "trend": -0.28
+    },
+    {
+      "date": "2025-12-22",
+      "pct": 66.5,
+      "gasInStorage": 759.7,
+      "trend": -0.4
+    },
+    {
+      "date": "2025-12-23",
+      "pct": 66.1,
+      "gasInStorage": 755.1,
+      "trend": -0.4
+    },
+    {
+      "date": "2025-12-24",
+      "pct": 65.7,
+      "gasInStorage": 750.3,
+      "trend": -0.42
+    },
+    {
+      "date": "2025-12-25",
+      "pct": 65.2,
+      "gasInStorage": 744.4,
+      "trend": -0.52
+    },
+    {
+      "date": "2025-12-26",
+      "pct": 64.6,
+      "gasInStorage": 738.2,
+      "trend": -0.54
+    },
+    {
+      "date": "2025-12-27",
+      "pct": 64.2,
+      "gasInStorage": 733.0,
+      "trend": -0.45
+    },
+    {
+      "date": "2025-12-28",
+      "pct": 63.7,
+      "gasInStorage": 727.8,
+      "trend": -0.46
+    },
+    {
+      "date": "2025-12-29",
+      "pct": 63.1,
+      "gasInStorage": 721.2,
+      "trend": -0.58
+    },
+    {
+      "date": "2025-12-30",
+      "pct": 62.5,
+      "gasInStorage": 714.5,
+      "trend": -0.58
+    },
+    {
+      "date": "2025-12-31",
+      "pct": 62.0,
+      "gasInStorage": 708.0,
+      "trend": -0.57
+    },
+    {
+      "date": "2026-01-01",
+      "pct": 61.5,
+      "gasInStorage": 702.7,
+      "trend": 0.0
+    },
+    {
+      "date": "2026-01-02",
+      "pct": 61.0,
+      "gasInStorage": 696.6,
+      "trend": -0.54
+    },
+    {
+      "date": "2026-01-03",
+      "pct": 60.4,
+      "gasInStorage": 690.1,
+      "trend": -0.56
+    },
+    {
+      "date": "2026-01-04",
+      "pct": 59.7,
+      "gasInStorage": 682.5,
+      "trend": -0.66
+    },
+    {
+      "date": "2026-01-05",
+      "pct": 58.9,
+      "gasInStorage": 672.7,
+      "trend": -0.86
+    },
+    {
+      "date": "2026-01-06",
+      "pct": 58.0,
+      "gasInStorage": 663.1,
+      "trend": -0.85
+    },
+    {
+      "date": "2026-01-07",
+      "pct": 57.1,
+      "gasInStorage": 652.8,
+      "trend": -0.9
+    },
+    {
+      "date": "2026-01-08",
+      "pct": 56.2,
+      "gasInStorage": 642.6,
+      "trend": -0.9
+    },
+    {
+      "date": "2026-01-09",
+      "pct": 55.5,
+      "gasInStorage": 634.0,
+      "trend": -0.75
+    },
+    {
+      "date": "2026-01-10",
+      "pct": 54.7,
+      "gasInStorage": 625.3,
+      "trend": -0.76
+    },
+    {
+      "date": "2026-01-11",
+      "pct": 54.0,
+      "gasInStorage": 616.6,
+      "trend": -0.76
+    },
+    {
+      "date": "2026-01-12",
+      "pct": 53.2,
+      "gasInStorage": 607.6,
+      "trend": -0.79
+    },
+    {
+      "date": "2026-01-13",
+      "pct": 52.5,
+      "gasInStorage": 599.7,
+      "trend": -0.69
+    },
+    {
+      "date": "2026-01-14",
+      "pct": 51.9,
+      "gasInStorage": 592.6,
+      "trend": -0.62
+    },
+    {
+      "date": "2026-01-15",
+      "pct": 51.3,
+      "gasInStorage": 586.4,
+      "trend": -0.54
+    },
+    {
+      "date": "2026-01-16",
+      "pct": 50.8,
+      "gasInStorage": 580.7,
+      "trend": -0.5
+    },
+    {
+      "date": "2026-01-17",
+      "pct": 50.3,
+      "gasInStorage": 575.0,
+      "trend": -0.5
+    },
+    {
+      "date": "2026-01-18",
+      "pct": 49.8,
+      "gasInStorage": 569.2,
+      "trend": -0.51
+    },
+    {
+      "date": "2026-01-19",
+      "pct": 49.1,
+      "gasInStorage": 560.9,
+      "trend": -0.73
+    },
+    {
+      "date": "2026-01-20",
+      "pct": 48.3,
+      "gasInStorage": 551.9,
+      "trend": -0.79
+    },
+    {
+      "date": "2026-01-21",
+      "pct": 47.6,
+      "gasInStorage": 543.6,
+      "trend": -0.73
+    },
+    {
+      "date": "2026-01-22",
+      "pct": 46.8,
+      "gasInStorage": 534.9,
+      "trend": -0.76
+    },
+    {
+      "date": "2026-01-23",
+      "pct": 46.1,
+      "gasInStorage": 526.8,
+      "trend": -0.71
+    },
+    {
+      "date": "2026-01-24",
+      "pct": 45.5,
+      "gasInStorage": 520.0,
+      "trend": -0.59
+    },
+    {
+      "date": "2026-01-25",
+      "pct": 44.9,
+      "gasInStorage": 513.2,
+      "trend": -0.6
+    },
+    {
+      "date": "2026-01-26",
+      "pct": 44.2,
+      "gasInStorage": 505.0,
+      "trend": -0.72
+    },
+    {
+      "date": "2026-01-27",
+      "pct": 43.5,
+      "gasInStorage": 497.3,
+      "trend": -0.67
+    },
+    {
+      "date": "2026-01-28",
+      "pct": 42.9,
+      "gasInStorage": 489.6,
+      "trend": -0.68
+    },
+    {
       "date": "2026-01-29",
       "pct": 42.1,
       "gasInStorage": 481.7,
@@ -417,5 +1857,5 @@
   },
   "alert_threshold": 20.0,
   "score": 28,
-  "updated": "2026-03-31T15:00:49.265235Z"
+  "updated": "2026-03-31T16:00:09.672290Z"
 }
