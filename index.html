@@ -1030,7 +1030,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
     <div class="card mb span2" style="border-color:rgba(34,197,94,.12)">
       <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-demo),transparent)"></div>
       <div class="lbl">📊 Aging index — 65+ / working age ratio
-        <span class="ib">i<div class="ipop"><div class="ipt">Aging Index</div><div class="ipb">Number of people aged 65+ per 100 working-age people (15–64). Japan at 52 means 52 retirees for every 100 workers — the highest pension system pressure in the world. Above 35 = significant structural economic impact. Solid bar = now, outline = +10yr projection, dashed = +20yr.</div><div class="ips">Source: UN World Population Prospects 2024 · Annual projections to 2100</div></div></span>
+        <span class="ib">i<div class="ipop"><div class="ipt">Aging Index</div><div class="ipb">Number of people aged 65+ per 100 working-age people (15–64). Japan at 52 means 52 retirees for every 100 workers — the highest pension system pressure in the world. Above 35 = significant structural economic impact. Values from World Bank API (SP.POP.65UP.TO.ZS / SP.POP.1564.TO.ZS).</div><div class="ips">Source: World Bank · Annual · live data</div></div></span>
       </div>
       <div id="aging-grid" style="margin-top:10px"></div>
     </div>
@@ -2770,16 +2770,68 @@ async function loadOpenTable(){
     addTick('🍽 US Restaurants: $' + (cur/1000).toFixed(0) + 'B/month · YoY: ' + (yoy>=0?'+':'') + yoy + '%');
     return;
   }
-  // No restaurant.json yet — try direct FRED API with key from config.json
+  // No restaurant.json yet — try FRED (public CSV needs no key, JSON needs key)
+  try {
+    // First try public CSV endpoint — no key needed
+    const csvUrl = 'https://fred.stlouisfed.org/graph/fredgraph.csv?id=MRTSSM7220USN';
+    for (const proxy of ['https://api.allorigins.win/raw?url=','https://corsproxy.io/?url=']) {
+      try {
+        const txt = await fetch(proxy + encodeURIComponent(csvUrl), {signal:AbortSignal.timeout(8000)}).then(r=>r.text());
+        const lines = txt.split('\n').filter(l=>l&&!l.startsWith('DATE'));
+        const obs0 = lines.map(l=>{const p=l.split(',');return{date:p[0],value:p[1]};}).filter(r=>r.value&&r.value!=='.'&&r.value.trim()!='');
+        if (obs0.length >= 2) {
+          const cur0 = parseFloat(obs0[obs0.length-1].value);
+          const prev0 = parseFloat(obs0[obs0.length-2].value);
+          const yoy0_v = obs0.length>=13 ? parseFloat(obs0[obs0.length-13].value) : null;
+          const mom0 = +((cur0-prev0)/prev0*100).toFixed(1);
+          const yoy0 = yoy0_v ? +((cur0-yoy0_v)/yoy0_v*100).toFixed(1) : null;
+          if(block) block.innerHTML =
+            '<div style="display:flex;gap:20px;align-items:flex-end;flex-wrap:wrap;margin-bottom:8px">' +
+              '<div><div class="lbl">Monthly sales</div>' +
+                '<div style="font-family:Bebas Neue,sans-serif;font-size:36px;color:var(--c-trends)">$' + (cur0/1000).toFixed(0) + 'B</div>' +
+                '<div class="unit">US restaurants & bars</div></div>' +
+              '<div><div class="lbl">vs. last month</div><div class="bsm" style="color:' + (mom0>=0?'#22c55e':'#ff5a20') + '">' + (mom0>=0?'+':'') + mom0 + '%</div></div>' +
+              (yoy0!==null?'<div><div class="lbl">vs. 1 year ago</div><div class="bsm" style="color:' + (yoy0>=0?'#22c55e':'#ff5a20') + '">' + (yoy0>=0?'+':'') + yoy0 + '%</div></div>':'') +
+              '<div class="sub" style="flex:1;align-self:flex-end">' + obs0[obs0.length-1].date.slice(0,7) + ' · FRED · MRTSSM7220USN</div>' +
+            '</div>';
+          const series0 = obs0.slice(-24);
+          const yoyArr0 = series0.map((p,i)=>{const p12=series0[i-12];return p12?+((parseFloat(p.value)-parseFloat(p12.value))/parseFloat(p12.value)*100).toFixed(1):null;});
+          const canvas0 = document.getElementById('chart-restau');
+          if(canvas0&&canvas0._ch) canvas0._ch.destroy();
+          if(canvas0){const ctx0=canvas0.getContext('2d');canvas0._ch=new Chart(ctx0,{type:'line',data:{labels:series0.map(p=>p.date.slice(0,7)),datasets:[{data:series0.map(p=>parseFloat(p.value)/1000),borderColor:'#ec4899',backgroundColor:'rgba(236,72,153,.1)',borderWidth:1.5,fill:true,tension:.3,pointRadius:0,yAxisID:'y'},{data:yoyArr0,borderColor:'rgba(34,197,94,.7)',backgroundColor:'transparent',borderWidth:1.5,borderDash:[4,3],fill:false,tension:.3,pointRadius:0,yAxisID:'y2'}]},options:{...CD,scales:{x:CD.scales.x,y:{...CD.scales.y,position:'left'},y2:{type:'linear',position:'right',grid:{drawOnChartArea:false},ticks:{color:'rgba(34,197,94,.5)',font:{family:'Space Mono',size:9},callback:v=>v!==null?(v>=0?'+':'')+v+'%':''}}},plugins:{...CD.plugins,legend:{display:false}}}});}
+          addTick('🍽 US Restaurants: $' + (cur0/1000).toFixed(0) + 'B/month · YoY: ' + (yoy0>=0?'+':'') + yoy0 + '%');
+          return;
+        }
+      } catch(e) {}
+    }
+  } catch(e) {}
+
+  // Try with FRED API key from config.json
   try {
     const cfg = await loadJSON('config.json');
     const fredKey = cfg?.fred_api_key;
     if (fredKey && fredKey !== 'null') {
-      // FRED API blocks CORS — use allorigins proxy
-      const fredUrl = 'https://api.stlouisfed.org/fred/series/observations?series_id=MRTSSM7220USN&sort_order=desc&limit=25&file_type=json&api_key=' + fredKey;
-      const proxyUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(fredUrl);
-      const d2 = await fetch(proxyUrl, {signal: AbortSignal.timeout(10000)}).then(r => r.json());
-      const obs = (d2.observations||[]).filter(o=>o.value!=='.').reverse();
+      // Try FRED JSON API via multiple proxies, then fall back to CSV
+      let obs = [];
+      const fredJsonUrl = 'https://api.stlouisfed.org/fred/series/observations?series_id=MRTSSM7220USN&sort_order=desc&limit=25&file_type=json&api_key=' + fredKey;
+      for (const proxy of [
+        'https://api.allorigins.win/raw?url=' + encodeURIComponent(fredJsonUrl),
+        'https://corsproxy.io/?url=' + encodeURIComponent(fredJsonUrl),
+      ]) {
+        try {
+          const r = await fetch(proxy, {signal: AbortSignal.timeout(8000)}).then(r => r.json());
+          obs = (r.observations||[]).filter(o=>o.value!=='.').reverse();
+          if (obs.length) break;
+        } catch(e) {}
+      }
+      // Last resort: public CSV (no key needed)
+      if (!obs.length) {
+        try {
+          const csvUrl = 'https://fred.stlouisfed.org/graph/fredgraph.csv?id=MRTSSM7220USN';
+          const txt = await fetch('https://api.allorigins.win/raw?url=' + encodeURIComponent(csvUrl), {signal:AbortSignal.timeout(8000)}).then(r=>r.text());
+          obs = txt.split('\n').filter(l=>l&&!l.startsWith('DATE')).map(l=>{const p=l.split(',');return{date:p[0],value:p[1]};}).filter(r=>r.value&&r.value!=='.');
+        } catch(e) {}
+      }
       if (obs.length >= 2) {
         const cur = parseFloat(obs[obs.length-1].value);
         const prev = parseFloat(obs[obs.length-2].value);
