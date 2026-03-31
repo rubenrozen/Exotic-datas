@@ -2215,28 +2215,13 @@ async function loadElectricity(){
     }
   } catch(e) { console.warn('RTE:', e); }
 
-  // Fallback: Open-Meteo Ensemble API for solar/wind proxy
-  // Or better: use electricity.fossilfuelregistry.org or similar
-  // Best available no-key option: ENTSOE-E transparency public CSV
+  // // Fallback: RTE eco2mix open data (truly public, no auth)
   try {
-    // Use corsproxy to fetch ENTSO-E actual load for France
-    const now = new Date();
-    const dateStr = now.toISOString().slice(0,10).replace(/-/g,'');
-    const url2 = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(
-      'https://web-api.tp.entsoe.eu/api?documentType=A65&processType=A16&outBiddingZone_Domain=10YFR-RTE------C&periodStart=' + dateStr + '0000&periodEnd=' + dateStr + '2300&securityToken=nokey'
-    );
-    const txt = await fetch(url2, {signal: AbortSignal.timeout(8000)}).then(r => r.text());
-    // Parse XML quantity
-    const match = txt.match(/<quantity>(\d+)<\/quantity>/g);
-    if (match && match.length) {
-      const vals = match.map(m => parseInt(m.replace(/<\/?quantity>/g,'')));
-      const latest = vals[vals.length-1] / 1000; // MW → GW
-      if (latest > 0) {
-        renderElectricity(latest, 'ENTSO-E');
-        return;
-      }
-    }
-  } catch(e) { console.warn('ENTSO-E:', e); }
+    const odsUrl = 'https://odre.opendatasoft.com/api/explore/v2.1/catalog/datasets/eco2mix-national-tr/records?select=consommation&order_by=date_heure%20desc&limit=1';
+    const d2 = await fetch(odsUrl, {signal: AbortSignal.timeout(8000)}).then(r => r.json());
+    const cons = d2?.results?.[0]?.consommation;
+    if (cons && cons > 0) { renderElectricity(cons / 1000, 'RTE eco2mix'); return; }
+  } catch(e) { console.warn('eco2mix:', e); }
 
   // Nothing worked — clear display
   safe('elec-fr', '—'); safe('elec-eu', '—'); safe('elec-delta', '—');
@@ -2811,8 +2796,10 @@ async function loadOpenTable(){
     for (const proxy of ['https://api.allorigins.win/raw?url=','https://corsproxy.io/?url=']) {
       try {
         const txt = await fetch(proxy + encodeURIComponent(csvUrl), {signal:AbortSignal.timeout(8000)}).then(r=>r.text());
-        const lines = txt.split('\n').filter(l=>l&&!l.startsWith('DATE'));
-        const obs0 = lines.map(l=>{const p=l.split(',');return{date:p[0],value:p[1]};}).filter(r=>r.value&&r.value!=='.'&&r.value.trim()!='');
+        // Reject HTML error pages from proxy
+        if (!txt || txt.trim().startsWith('<') || !txt.includes(',')) continue;
+        const lines = txt.split('\n').filter(l=>l&&!l.startsWith('DATE')&&/^\d{4}-/.test(l));
+        const obs0 = lines.map(l=>{const p=l.split(',');return{date:p[0].trim(),value:(p[1]||'').trim()};}).filter(r=>r.value&&r.value!=='.'&&!isNaN(parseFloat(r.value)));
         if (obs0.length >= 2) {
           const cur0 = parseFloat(obs0[obs0.length-1].value);
           const prev0 = parseFloat(obs0[obs0.length-2].value);
@@ -2853,7 +2840,9 @@ async function loadOpenTable(){
         'https://corsproxy.io/?url=' + encodeURIComponent(fredJsonUrl),
       ]) {
         try {
-          const r = await fetch(proxy, {signal: AbortSignal.timeout(8000)}).then(r => r.json());
+          const txt2 = await fetch(proxy, {signal: AbortSignal.timeout(8000)}).then(r => r.text());
+          if (!txt2 || txt2.includes('<html') || txt2.includes('<!DOCTYPE')) continue;
+          const r = JSON.parse(txt2);
           obs = (r.observations||[]).filter(o=>o.value!=='.').reverse();
           if (obs.length) break;
         } catch(e) {}
