@@ -2020,103 +2020,95 @@ function drawTruckChart(obs) {
 // INTERNET
 // ═══════════════════════════════
 async function loadInternet(){
-  // IODA API v2 — correct endpoint for outage alerts
-  // /v2/outages/alerts returns per-country outages with severity and duration
   const now = Math.floor(Date.now()/1000);
-  const from7d = now - 7*86400;
   const from24h = now - 86400;
+  const from7d  = now - 7*86400;
 
+  // IODA moved to Georgia Tech in 2021. Correct API: api.ioda.inetintel.cc.gatech.edu/v2/
+  // Use /outages/events endpoint (cleaner than /alerts — already denoised)
   try {
-    // Fetch recent outage alerts (country level, last 48h)
-    const url = `https://api.ioda.caida.org/v2/outages/alerts?from=${from7d}&until=${now}&limit=100&page=1`;
-    const d = await fetch(url, {signal: AbortSignal.timeout(12000)}).then(r=>r.json());
-    const alerts = d.data || d.alerts || [];
-
-    // Count unique countries with severity > 0.5 in last 24h
-    const recent = alerts.filter(a => {
-      const ts = a.time || a.start || a.date || 0;
-      return ts > from24h;
+    const url = `https://api.ioda.inetintel.cc.gatech.edu/v2/outages/events?from=${from7d}&until=${now}&limit=50&meta=country`;
+    const d = await fetch(url, {signal: AbortSignal.timeout(12000)}).then(r => {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
     });
-    const countries = new Set(recent.map(a => a.entity?.name || a.country || a.entityName).filter(Boolean));
-    const bgpEvents = alerts.filter(a => a.datasource === 'bgp' || a.type === 'bgp').length;
-    const severeOutages = recent.filter(a => (a.score || a.deviation || 0) > 30).length;
 
-    safe('net-bgp', bgpEvents || alerts.length);
-    safe('net-out', countries.size || severeOutages);
-    safe('net-bgp-sub', 'Routing anomalies (7 days)');
-    safe('net-out-sub', countries.size > 0 ? `Countries affected: ${[...countries].slice(0,3).join(', ')}` : 'Traffic reduction >30%');
+    const events = d.data || [];
+    // Keep only country-level events
+    const countryEvents = events.filter(e =>
+      e.entity?.type === 'country' || e.entityType === 'country'
+    );
+
+    // Active events (ongoing or ended within last 24h)
+    const recentEvents = countryEvents.filter(e => {
+      const start = e.start || e.from || 0;
+      const end   = e.end   || e.until || now;
+      return end > from24h;
+    });
+
+    // Count affected countries (unique)
+    const countries = [...new Set(recentEvents.map(e =>
+      e.entity?.name || e.entityName || e.country || 'Unknown'
+    ))];
+
+    // BGP-specific count
+    const bgpEvents = countryEvents.filter(e =>
+      (e.datasource || e.type || '').toLowerCase().includes('bgp')
+    ).length;
+
+    safe('net-out', countries.length || '0');
+    safe('net-bgp',  bgpEvents || events.length);
+    safe('net-bgp-sub', `BGP anomalies (7 days)`);
+    safe('net-out-sub', countries.length > 0
+      ? countries.slice(0,3).join(', ') + (countries.length > 3 ? ` +${countries.length-3}` : '')
+      : 'Traffic nominal'
+    );
 
     const feed = document.getElementById('net-outage-feed');
     if (feed) {
-      if (recent.length > 0) {
-        feed.innerHTML = recent.slice(0, 8).map(a => {
-          const name = a.entity?.name || a.country || a.entityName || 'Unknown';
-          const sev = a.score || a.deviation || 0;
-          const c = sev > 60 ? '#ff3232' : sev > 30 ? '#ff5a20' : '#f59e0b';
-          const ts = a.time || a.start || 0;
+      if (recentEvents.length > 0) {
+        // Sort by recency
+        recentEvents.sort((a,b) => (b.start||b.from||0) - (a.start||a.from||0));
+        feed.innerHTML = recentEvents.slice(0,8).map(e => {
+          const name  = e.entity?.name || e.entityName || 'Unknown';
+          const score = e.overallScore || e.score || 0;
+          const src   = e.datasource || e.type || 'multi-source';
+          const ts    = e.start || e.from || 0;
+          const ended = (e.end || e.until || 0) < now - 300;
+          const color = score > 700 ? '#ff3232' : score > 300 ? '#ff5a20' : '#f59e0b';
           return `<div class="fi">
-            <div class="fi-dot" style="background:${c}"></div>
-            <div class="fi-body"><b>${name}</b> — ${a.datasource || a.type || 'outage'}${sev ? ' · severity: '+sev.toFixed(0) : ''}</div>
+            <div class="fi-dot" style="background:${ended?'#6b7fa0':color}"></div>
+            <div class="fi-body"><b>${name}</b> — ${src}${score?` · score ${Math.round(score)}`:''}${ended?' · resolved':''}</div>
             <div class="fi-time">${ts ? timeAgo(ts*1000) : 'recent'}</div>
           </div>`;
         }).join('');
       } else {
-        feed.innerHTML = `<div class="fi"><div class="fi-dot" style="background:#22c55e"></div>
+        feed.innerHTML = `<div class="fi">
+          <div class="fi-dot" style="background:#22c55e"></div>
           <div class="fi-body">Global internet — nominal · No significant outages (24h)</div>
-          <div class="fi-time">Now</div></div>
-          <div style="font-size:10px;color:var(--muted);margin-top:8px;font-family:var(--mono)">
-            Source: IODA (CAIDA) · ioda.caida.org · BGP + active probing</div>`;
+          <div class="fi-time">Now</div>
+        </div>
+        <div style="font-size:10px;color:var(--muted);margin-top:8px;font-family:var(--mono)">
+          Source: IODA (Georgia Tech) · <a href="https://ioda.inetintel.cc.gatech.edu/dashboard" target="_blank" style="color:var(--c-net)">ioda.live ↗</a>
+        </div>`;
       }
     }
-    SCORES.net = countries.size > 5 ? 50 : countries.size > 2 ? 65 : 82;
+
+    SCORES.net = countries.length > 5 ? 45 : countries.length > 2 ? 62 : 82;
     updateEPI();
-    addTick(`🌐 Internet: ${alerts.length} alerts (7d) · ${countries.size} countries disrupted (24h)`);
+    addTick(`🌐 IODA: ${events.length} events (7d) · ${countries.length} countries disrupted (24h)`);
+
   } catch(e) {
-    // IODA API failed — try alternative BGP stats endpoint
-    console.warn('IODA primary failed:', e);
-    try {
-      // Try simpler IODA summary endpoint
-      const url2 = `https://api.ioda.caida.org/v2/outages/summaries?from=${from24h}&until=${now}`;
-      const d2 = await fetch(url2, {signal: AbortSignal.timeout(8000)}).then(r=>r.json());
-      const summaries = d2.data || [];
-      const affectedCountries = summaries.filter(s => (s.score||0) > 0.3).length;
-      safe('net-bgp', summaries.length);
-      safe('net-out', affectedCountries);
-      safe('net-bgp-sub', 'Routing anomalies detected');
-      safe('net-out-sub', affectedCountries > 0 ? `${affectedCountries} countries >30% reduction` : 'Traffic nominal');
-      SCORES.net = affectedCountries > 3 ? 55 : 80; updateEPI();
-      addTick(`🌐 Internet: ${affectedCountries} countries with disruption`);
-    } catch {
-      // Full fallback
-      safe('net-bgp','—'); safe('net-out','—');
-      safe('net-bgp-sub', 'IODA API — connecting…');
-      safe('net-out-sub', 'Data from ioda.caida.org');
-      const feed = document.getElementById('net-outage-feed');
-      if(feed) feed.innerHTML = `<div class="fi"><div class="fi-dot" style="background:#22c55e"></div>
-        <div class="fi-body">IODA API connected — monitoring global traffic</div></div>
-        <div style="font-size:10px;color:var(--muted);margin-top:8px;font-family:var(--mono)">
-          Source: IODA · ioda.caida.org · <a href="https://ioda.inetintel.cc.gatech.edu" target="_blank" style="color:var(--c-net)">View live dashboard</a></div>`;
-      SCORES.net = 78; updateEPI();
-    }
+    console.warn('IODA v2:', e);
+    safe('net-bgp', '—'); safe('net-out', '—');
+    safe('net-bgp-sub', 'IODA connecting…'); safe('net-out-sub', 'api.ioda.inetintel.cc.gatech.edu');
+    const feed = document.getElementById('net-outage-feed');
+    if (feed) feed.innerHTML = `<div class="fi">
+      <div class="fi-dot" style="background:#f59e0b"></div>
+      <div class="fi-body">IODA API unreachable — <a href="https://ioda.inetintel.cc.gatech.edu/dashboard" target="_blank" style="color:var(--c-net)">view live dashboard ↗</a></div>
+    </div>`;
+    SCORES.net = 72; updateEPI();
   }
-  // Infrastructure sites
-  const sites=[
-    {n:'Google',t:'Hyperscaler',e:'🔵'},{n:'Cloudflare',t:'CDN',e:'🟠'},
-    {n:'Amazon AWS',t:'Hyperscaler',e:'🟡'},{n:'Microsoft Azure',t:'Hyperscaler',e:'🔷'},
-    {n:'Akamai',t:'CDN',e:'🟣'},{n:'Meta',t:'Social',e:'🔵'},
-    {n:'Fastly',t:'CDN',e:'⚫'},{n:'Oracle Cloud',t:'Cloud',e:'🔴'},
-    {n:'Apple',t:'Hyperscaler',e:'⚪'},{n:'Netflix',t:'Streaming',e:'🔴'},
-    {n:'GitHub',t:'Developer',e:'🐙'},{n:'Stripe',t:'Payments',e:'💜'},
-    {n:'X/Twitter',t:'Social',e:'🐦'},{n:'YouTube',t:'Streaming',e:'🔴'},
-    {n:'Telegram',t:'Messaging',e:'💬'},{n:'Wikipedia',t:'Reference',e:'📖'},
-  ];
-  const g=document.getElementById('net-sites'); if(!g) return;
-  g.innerHTML=sites.map(s=>`<div style="background:rgba(34,211,238,.04);border:1px solid rgba(34,211,238,.08);border-radius:8px;padding:8px 10px;display:flex;align-items:center;gap:7px">
-    <span style="font-size:16px">${s.e}</span>
-    <div style="flex:1;min-width:0"><div style="font-size:11px;color:var(--txt);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${s.n}</div><div style="font-size:9px;font-family:var(--mono);color:var(--muted)">${s.t}</div></div>
-    <div style="width:7px;height:7px;border-radius:50%;background:#22c55e;flex-shrink:0"></div>
-  </div>`).join('');
-}
 
 // ═══════════════════════════════
 // ENERGY
@@ -4012,6 +4004,8 @@ function drawMaritimeMap() {
 }
 
 // Auto-connect: try config.json first, then localStorage fallback
+}
+
 async function initMaritimeMap() {
   const statusEl = document.getElementById('ais-status');
   try {
@@ -4039,3 +4033,4 @@ async function initMaritimeMap() {
 </script>
 </body>
 </html>
+}
