@@ -1,10 +1,9 @@
 {
-  "last_run": "2026-03-31T16:00:09.672290Z",
+  "last_run": "2026-04-01T04:48:52.962940Z",
   "errors": [
     "BDI: No BDI data from any source",
     "ACLED OAuth: HTTP Error 403: Forbidden",
-    "Truck: HTTP Error 500: Internal Server Error",
-    "Restaurant: HTTP Error 500: Internal Server Error",
+    "Restaurant: HTTP Error 400: Bad Request",
     "Population: HTTP Error 401: Unauthorized"
   ],
   "datasets": [

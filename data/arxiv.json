@@ -1,32 +1,119 @@
 {
   "cs.AI": {
     "label": "AI / Machine Learning",
-    "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "papers": [
+      {
+        "title": "Automatic Identification of Parallelizable Loops Using Transformer-Based Source Code Representations",
+        "summary": "Automatic parallelization remains a challenging problem in software engineering, particularly in identifying code regions where loops can be safely executed in parallel on modern multi-core architectu",
+        "link": "http://arxiv.org/abs/2603.30040v1",
+        "date": "2026-03-31",
+        "authors": [
+          "Izavan dos S. Correia",
+          "Henrique C. T. Santos",
+          "Tiago A. E. Ferreira"
+        ]
+      },
+      {
+        "title": "Aligned, Orthogonal or In-conflict: When can we safely optimize Chain-of-Thought?",
+        "summary": "Chain-of-Thought (CoT) monitoring, in which automated systems monitor the CoT of an LLM, is a promising approach for effectively overseeing AI systems. However, the extent to which a model's CoT helps",
+        "link": "http://arxiv.org/abs/2603.30036v1",
+        "date": "2026-03-31",
+        "authors": [
+          "Max Kaufmann",
+          "David Lindner",
+          "Roland S. Zimmermann"
+        ]
+      },
+      {
+        "title": "Tucker Attention: A generalization of approximate attention mechanisms",
+        "summary": "The pursuit of reducing the memory footprint of the self-attention mechanism in multi-headed self attention (MHA) spawned a rich portfolio of methods, e.g., group-query attention (GQA) and multi-head ",
+        "link": "http://arxiv.org/abs/2603.30033v1",
+        "date": "2026-03-31",
+        "authors": [
+          "Timon Klein",
+          "Jonas Kusch",
+          "Sebastian Sager"
+        ]
+      },
+      {
+        "title": "The Triadic Cognitive Architecture: Bounding Autonomous Action via Spatio-Temporal and Epistemic Friction",
+        "summary": "Current autonomous AI agents, driven primarily by Large Language Models (LLMs), operate in a state of cognitive weightlessness: they process information without an intrinsic sense of network topology,",
+        "link": "http://arxiv.org/abs/2603.30031v1",
+        "date": "2026-03-31",
+        "authors": [
+          "Davide Di Gioia"
+        ]
+      },
+      {
+        "title": "Hybrid Framework for Robotic Manipulation: Integrating Reinforcement Learning and Large Language Models",
+        "summary": "This paper introduces a new hybrid framework that combines Reinforcement Learning (RL) and Large Language Models (LLMs) to improve robotic manipulation tasks. By utilizing RL for accurate low-level co",
+        "link": "http://arxiv.org/abs/2603.30022v1",
+        "date": "2026-03-31",
+        "authors": [
+          "Md Saad",
+          "Sajjad Hussain",
+          "Mohd Suhaib"
+        ]
+      },
+      {
+        "title": "Architecting Secure AI Agents: Perspectives on System-Level Defenses Against Indirect Prompt Injection Attacks",
+        "summary": "AI agents, predominantly powered by large language models (LLMs), are vulnerable to indirect prompt injection, in which malicious instructions embedded in untrusted data can trigger dangerous agent ac",
+        "link": "http://arxiv.org/abs/2603.30016v1",
+        "date": "2026-03-31",
+        "authors": [
+          "Chong Xiang",
+          "Drew Zagieboylo",
+          "Shaona Ghosh"
+        ]
+      },
+      {
+        "title": "Scalable AI-assisted Workflow Management for Detector Design Optimization Using Distributed Computing",
+        "summary": "The Production and Distributed Analysis (PanDA) system, originally developed for the ATLAS experiment at the CERN Large Hadron Collider (LHC), has evolved into a robust platform for orchestrating larg",
+        "link": "http://arxiv.org/abs/2603.30014v1",
+        "date": "2026-03-31",
+        "authors": [
+          "Derek Anderson",
+          "Amit Bashyal",
+          "Markus Diefenthaler"
+        ]
+      },
+      {
+        "title": "Phyelds: A Pythonic Framework for Aggregate Computing",
+        "summary": "Aggregate programming is a field-based coordination paradigm with over a decade of exploration and successful applications across domains including sensor networks, robotics, and IoT, with implementat",
+        "link": "http://arxiv.org/abs/2603.29999v1",
+        "date": "2026-03-31",
+        "authors": [
+          "Gianluca Aguzzi",
+          "Davide Domini",
+          "Nicolas Farabegoli"
+        ]
+      }
+    ],
+    "updated": "2026-04-01T04:48:52.962940Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "error": "HTTP Error 406: Not Acceptable"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "error": "HTTP Error 406: Not Acceptable"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "error": "HTTP Error 406: Not Acceptable"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "error": "HTTP Error 406: Not Acceptable"
   },
   "q-bio": {
     "label": "Biology",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "error": "HTTP Error 406: Not Acceptable"
   }
 }
