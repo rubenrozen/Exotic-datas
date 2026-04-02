@@ -3,117 +3,284 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Automatic Identification of Parallelizable Loops Using Transformer-Based Source Code Representations",
-        "summary": "Automatic parallelization remains a challenging problem in software engineering, particularly in identifying code regions where loops can be safely executed in parallel on modern multi-core architectu",
-        "link": "http://arxiv.org/abs/2603.30040v1",
-        "date": "2026-03-31",
+        "title": "HippoCamp: Benchmarking Contextual Agents on Personal Computers",
+        "summary": "We present HippoCamp, a new benchmark designed to evaluate agents' capabilities on multimodal file management. Unlike existing agent benchmarks that focus on tasks like web interaction, tool use, or s",
+        "link": "http://arxiv.org/abs/2604.01221v1",
+        "date": "2026-04-01",
         "authors": [
-          "Izavan dos S. Correia",
-          "Henrique C. T. Santos",
-          "Tiago A. E. Ferreira"
+          "Zhe Yang",
+          "Shulin Tian",
+          "Kairui Hu"
         ]
       },
       {
-        "title": "Aligned, Orthogonal or In-conflict: When can we safely optimize Chain-of-Thought?",
-        "summary": "Chain-of-Thought (CoT) monitoring, in which automated systems monitor the CoT of an LLM, is a promising approach for effectively overseeing AI systems. However, the extent to which a model's CoT helps",
-        "link": "http://arxiv.org/abs/2603.30036v1",
-        "date": "2026-03-31",
+        "title": "LAtent Phase Inference from Short time sequences using SHallow REcurrent Decoders (LAPIS-SHRED)",
+        "summary": "Reconstructing full spatio-temporal dynamics from sparse observations in both space and time remains a central challenge in complex systems, as measurements can be spatially incomplete and can be also",
+        "link": "http://arxiv.org/abs/2604.01216v1",
+        "date": "2026-04-01",
         "authors": [
-          "Max Kaufmann",
-          "David Lindner",
-          "Roland S. Zimmermann"
+          "Yuxuan Bao",
+          "Xingyue Zhang",
+          "J. Nathan Kutz"
         ]
       },
       {
-        "title": "Tucker Attention: A generalization of approximate attention mechanisms",
-        "summary": "The pursuit of reducing the memory footprint of the self-attention mechanism in multi-headed self attention (MHA) spawned a rich portfolio of methods, e.g., group-query attention (GQA) and multi-head ",
-        "link": "http://arxiv.org/abs/2603.30033v1",
-        "date": "2026-03-31",
+        "title": "The Recipe Matters More Than the Kitchen:Mathematical Foundations of the AI Weather Prediction Pipeline",
+        "summary": "AI weather prediction has advanced rapidly, yet no unified mathematical framework explains what determines forecast skill. Existing theory addresses specific architectural choices rather than the lear",
+        "link": "http://arxiv.org/abs/2604.01215v1",
+        "date": "2026-04-01",
         "authors": [
-          "Timon Klein",
-          "Jonas Kusch",
-          "Sebastian Sager"
+          "Piyush Garg",
+          "Diana R. Gergel",
+          "Andrew E. Shao"
         ]
       },
       {
-        "title": "The Triadic Cognitive Architecture: Bounding Autonomous Action via Spatio-Temporal and Epistemic Friction",
-        "summary": "Current autonomous AI agents, driven primarily by Large Language Models (LLMs), operate in a state of cognitive weightlessness: they process information without an intrinsic sense of network topology,",
-        "link": "http://arxiv.org/abs/2603.30031v1",
-        "date": "2026-03-31",
+        "title": "$\\texttt{YC-Bench}$: Benchmarking AI Agents for Long-Term Planning and Consistent Execution",
+        "summary": "As LLM agents tackle increasingly complex tasks, a critical question is whether they can maintain strategic coherence over long horizons: planning under uncertainty, learning from delayed feedback, an",
+        "link": "http://arxiv.org/abs/2604.01212v1",
+        "date": "2026-04-01",
         "authors": [
-          "Davide Di Gioia"
+          "Muyu He",
+          "Adit Jain",
+          "Anand Kumar"
         ]
       },
       {
-        "title": "Hybrid Framework for Robotic Manipulation: Integrating Reinforcement Learning and Large Language Models",
-        "summary": "This paper introduces a new hybrid framework that combines Reinforcement Learning (RL) and Large Language Models (LLMs) to improve robotic manipulation tasks. By utilizing RL for accurate low-level co",
-        "link": "http://arxiv.org/abs/2603.30022v1",
-        "date": "2026-03-31",
+        "title": "CliffSearch: Structured Agentic Co-Evolution over Theory and Code for Scientific Algorithm Discovery",
+        "summary": "Scientific algorithm discovery is iterative: hypotheses are proposed, implemented, stress-tested, and revised. Current LLM-guided search systems accelerate proposal generation, but often under-represe",
+        "link": "http://arxiv.org/abs/2604.01210v1",
+        "date": "2026-04-01",
         "authors": [
-          "Md Saad",
-          "Sajjad Hussain",
-          "Mohd Suhaib"
+          "Youssef Mroueh",
+          "Carlos Fonseca",
+          "Brian Belgodere"
         ]
       },
       {
-        "title": "Architecting Secure AI Agents: Perspectives on System-Level Defenses Against Indirect Prompt Injection Attacks",
-        "summary": "AI agents, predominantly powered by large language models (LLMs), are vulnerable to indirect prompt injection, in which malicious instructions embedded in untrusted data can trigger dangerous agent ac",
-        "link": "http://arxiv.org/abs/2603.30016v1",
-        "date": "2026-03-31",
+        "title": "Neural Harmonic Textures for High-Quality Primitive Based Neural Reconstruction",
+        "summary": "Primitive-based methods such as 3D Gaussian Splatting have recently become the state-of-the-art for novel-view synthesis and related reconstruction tasks. Compared to neural fields, these representati",
+        "link": "http://arxiv.org/abs/2604.01204v1",
+        "date": "2026-04-01",
         "authors": [
-          "Chong Xiang",
-          "Drew Zagieboylo",
-          "Shaona Ghosh"
+          "Jorge Condor",
+          "Nicolas Moenne-Loccoz",
+          "Merlin Nimier-David"
         ]
       },
       {
-        "title": "Scalable AI-assisted Workflow Management for Detector Design Optimization Using Distributed Computing",
-        "summary": "The Production and Distributed Analysis (PanDA) system, originally developed for the ATLAS experiment at the CERN Large Hadron Collider (LHC), has evolved into a robust platform for orchestrating larg",
-        "link": "http://arxiv.org/abs/2603.30014v1",
-        "date": "2026-03-31",
+        "title": "Therefore I am. I Think",
+        "summary": "We consider the question: when a large language reasoning model makes a choice, did it think first and then decide to, or decide first and then think? In this paper, we present evidence that detectabl",
+        "link": "http://arxiv.org/abs/2604.01202v1",
+        "date": "2026-04-01",
         "authors": [
-          "Derek Anderson",
-          "Amit Bashyal",
-          "Markus Diefenthaler"
+          "Esakkivel Esakkiraja",
+          "Sai Rajeswar",
+          "Denis Akhiyarov"
         ]
       },
       {
-        "title": "Phyelds: A Pythonic Framework for Aggregate Computing",
-        "summary": "Aggregate programming is a field-based coordination paradigm with over a decade of exploration and successful applications across domains including sensor networks, robotics, and IoT, with implementat",
-        "link": "http://arxiv.org/abs/2603.29999v1",
-        "date": "2026-03-31",
+        "title": "ORBIT: Scalable and Verifiable Data Generation for Search Agents on a Tight Budget",
+        "summary": "Search agents, which integrate language models (LMs) with web search, are becoming crucial for answering complex user queries. Constructing training datasets for deep research tasks, involving multi-s",
+        "link": "http://arxiv.org/abs/2604.01195v1",
+        "date": "2026-04-01",
         "authors": [
-          "Gianluca Aguzzi",
-          "Davide Domini",
-          "Nicolas Farabegoli"
+          "Nandan Thakur",
+          "Zijian Chen",
+          "Xueguang Ma"
         ]
       }
     ],
-    "updated": "2026-04-01T04:48:52.962940Z"
+    "updated": "2026-04-02T04:31:24.131516Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "error": "HTTP Error 406: Not Acceptable"
+    "updated": "2026-04-02T04:31:24.131516Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "error": "HTTP Error 406: Not Acceptable"
+    "updated": "2026-04-02T04:31:24.131516Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "error": "HTTP Error 406: Not Acceptable"
+    "updated": "2026-04-02T04:31:24.131516Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
-    "papers": [],
-    "error": "HTTP Error 406: Not Acceptable"
+    "papers": [
+      {
+        "title": "AgentWatcher: A Rule-based Prompt Injection Monitor",
+        "summary": "Large language models (LLMs) and their applications, such as agents, are highly vulnerable to prompt injection attacks. State-of-the-art prompt injection detection methods have the following limitatio",
+        "link": "http://arxiv.org/abs/2604.01194v1",
+        "date": "2026-04-01",
+        "authors": [
+          "Yanting Wang",
+          "Wei Zou",
+          "Runpeng Geng"
+        ]
+      },
+      {
+        "title": "SERSEM: Selective Entropy-Weighted Scoring for Membership Inference in Code Language Models",
+        "summary": "As Large Language Models (LLMs) for code increasingly utilize massive, often non-permissively licensed datasets, evaluating data contamination through Membership Inference Attacks (MIAs) has become cr",
+        "link": "http://arxiv.org/abs/2604.01147v1",
+        "date": "2026-04-01",
+        "authors": [
+          "K\u0131van\u00e7 Kuzey Dikici",
+          "Serdar Kara",
+          "Semih \u00c7a\u011flar"
+        ]
+      },
+      {
+        "title": "Obfuscating Code Vulnerabilities against Static Analysis in JavaScript Code",
+        "summary": "Code obfuscation is widely adopted in modern software development to protect intellectual property and hinder reverse engineering, but it also provides attackers with a powerful means to conceal malic",
+        "link": "http://arxiv.org/abs/2604.01131v1",
+        "date": "2026-04-01",
+        "authors": [
+          "Francesco Pagano",
+          "Lorenzo Pisu",
+          "Leonardo Regano"
+        ]
+      },
+      {
+        "title": "Multi-Agent LLM Governance for Safe Two-Timescale Reinforcement Learning in SDN-IoT Defense",
+        "summary": "Software-Defined Networking (SDN) is increasingly adopted to secure Internet-of-Things (IoT) networks due to its centralized control and programmable forwarding. However, SDN-IoT defense is inherently",
+        "link": "http://arxiv.org/abs/2604.01127v1",
+        "date": "2026-04-01",
+        "authors": [
+          "Saeid Jamshidi",
+          "Negar Shahabi",
+          "Foutse Khomh"
+        ]
+      },
+      {
+        "title": "LightGuard: Transparent WiFi Security via Physical-Layer LiFi Key Bootstrapping",
+        "summary": "WiFi is inherently vulnerable to eavesdropping because RF signals may penetrate many physical boundaries, such as walls and floors. LiFi, by contrast, is an optical method confined to line-of-sight an",
+        "link": "http://arxiv.org/abs/2604.01092v1",
+        "date": "2026-04-01",
+        "authors": [
+          "Shiqi Xu",
+          "Yuyang Du",
+          "Mingyue Zhang"
+        ]
+      },
+      {
+        "title": "Automated Generation of Cybersecurity Exercise Scenarios",
+        "summary": "There is a growing need for cybersecurity professionals with practical knowledge and experience to meet societal needs and comply with new standards and regulations. At the same time, the advances in ",
+        "link": "http://arxiv.org/abs/2604.01079v1",
+        "date": "2026-04-01",
+        "authors": [
+          "Charilaos Skandylas",
+          "Mikael Asplund"
+        ]
+      },
+      {
+        "title": "VibeGuard: A Security Gate Framework for AI-Generated Code",
+        "summary": "\"Vibe coding,\" in which developers delegate code generation to AI assistants and accept the output with little manual review, has gained rapid adoption in production settings. On March 31, 2026, Anthr",
+        "link": "http://arxiv.org/abs/2604.01052v1",
+        "date": "2026-04-01",
+        "authors": [
+          "Ying Xie"
+        ]
+      },
+      {
+        "title": "Automated Framework to Evaluate and Harden LLM System Instructions against Encoding Attacks",
+        "summary": "System Instructions in Large Language Models (LLMs) are commonly used to enforce safety policies, define agent behavior, and protect sensitive operational context in agentic AI applications. These ins",
+        "link": "http://arxiv.org/abs/2604.01039v1",
+        "date": "2026-04-01",
+        "authors": [
+          "Anubhab Sahu",
+          "Diptisha Samanta",
+          "Reza Soosahabi"
+        ]
+      }
+    ],
+    "updated": "2026-04-02T04:31:24.131516Z"
   },
   "q-bio": {
     "label": "Biology",
-    "papers": [],
-    "error": "HTTP Error 406: Not Acceptable"
+    "papers": [
+      {
+        "title": "Synchronization of active mechanical oscillators by an inertial load",
+        "summary": "Motivated by the operation of myogenic (self-oscillatory) insect flight muscle, we study a model consisting of a large number of identical oscillatory contractile elements joined in a chain, whose end",
+        "link": "http://arxiv.org/abs/physics/0307155v1",
+        "date": "2003-07-31",
+        "authors": [
+          "Andrej Vilfan",
+          "Thomas Duke"
+        ]
+      },
+      {
+        "title": "Towards the Understanding of Stability Puzzles in Phage lambda",
+        "summary": "We discuss two aspects, the in vivo and in vitro difference and the modeling of noise, of integrative modeling of network dynamics in biology, using phage lambda as an example. We believe those two as",
+        "link": "http://arxiv.org/abs/cond-mat/0307747v1",
+        "date": "2003-07-30",
+        "authors": [
+          "P. Ao",
+          "L. Yin"
+        ]
+      },
+      {
+        "title": "A Growth Model for Multicellular Tumor Spheroids",
+        "summary": "Most organisms grow according to simple laws, which in principle can be derived from energy conservation and scaling arguments, critically dependent on the relation between the metabolic rate B of ene",
+        "link": "http://arxiv.org/abs/physics/0307136v1",
+        "date": "2003-07-29",
+        "authors": [
+          "Pier Paolo Delsanto",
+          "Caterina Guiot",
+          "Piero Giorgio Degiorgis"
+        ]
+      },
+      {
+        "title": "Bidirectional communication in neural networks moderated by a Hebb-like learning rule",
+        "summary": "We demonstrate that our recently introduced stochastic Hebb-like learning rule is capable of learning the problem of timing in general network topologies generated by an algorithm of Watts and Strogat",
+        "link": "http://arxiv.org/abs/cond-mat/0307667v1",
+        "date": "2003-07-28",
+        "authors": [
+          "Frank Emmert-Streib"
+        ]
+      },
+      {
+        "title": "A novel stochastic Hebb-like learning rule for neural networks",
+        "summary": "We present a novel stochastic Hebb-like learning rule for neural networks. This learning rule is stochastic with respect to the selection of the time points when a synaptic modification is induced by ",
+        "link": "http://arxiv.org/abs/cond-mat/0307666v1",
+        "date": "2003-07-28",
+        "authors": [
+          "Frank Emmert-Streib"
+        ]
+      },
+      {
+        "title": "Free Energy Transduction in a Chemical Motor Model",
+        "summary": "Motor enzymes catalyze chemical reactions, like the hydrolysis of ATP, and in the process they also perform work. Recent studies indicate that motor enzymes perform work with specific intermediate ste",
+        "link": "http://arxiv.org/abs/physics/0307121v1",
+        "date": "2003-07-24",
+        "authors": [
+          "Josh E. Baker"
+        ]
+      },
+      {
+        "title": "Maximisation Principles and Daisyworld",
+        "summary": "We investigate whether the equilibrium time averaged state of a self-organising system with many internal degrees of freedom, 2D- daisyworld, can be described by optimising a single quantity. Unlike p",
+        "link": "http://arxiv.org/abs/cond-mat/0307567v1",
+        "date": "2003-07-23",
+        "authors": [
+          "G. J. Ackland"
+        ]
+      },
+      {
+        "title": "Xerogel Protein Substrates for Far Infrared Studies",
+        "summary": "A number of researchers are attempting to develop a biosensor based on terahertz sensing. Key to the realization of any biosensor system is the access of the target molecules to the sensor. In the cas",
+        "link": "http://arxiv.org/abs/cond-mat/0307558v1",
+        "date": "2003-07-23",
+        "authors": [
+          "J. -Y. Chen",
+          "W. Cox",
+          "E. Tehan"
+        ]
+      }
+    ],
+    "updated": "2026-04-02T04:31:24.131516Z"
   }
 }
