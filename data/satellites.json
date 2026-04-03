@@ -1,7 +1,7 @@
 {
-  "total": 25588,
+  "total": 25613,
   "by_operator": {
-    "Starlink (SpaceX)": 11589,
+    "Starlink (SpaceX)": 11614,
     "OneWeb": 656,
     "Planet Labs": 32,
     "Spire Global": 237,
@@ -10,5 +10,5 @@
   },
   "source": "Celestrak SATCAT \u00b7 celestrak.org/pub/satcat.csv",
   "note": "Active payloads (PAY type). Updated daily by Celestrak.",
-  "updated": "2026-04-02T04:31:24.131516Z"
+  "updated": "2026-04-03T04:31:32.333796Z"
 }
