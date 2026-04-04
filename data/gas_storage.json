@@ -1,13 +1,7 @@
 {
   "eu_avg": 27.9,
-  "trend": 0.18,
+  "trend": -0.05,
   "series": [
-    {
-      "date": "2025-06-06",
-      "pct": 50.5,
-      "gasInStorage": 573.0,
-      "trend": 0.36
-    },
     {
       "date": "2025-06-07",
       "pct": 51.0,
@@ -1801,61 +1795,67 @@
       "pct": 27.9,
       "gasInStorage": 316.3,
       "trend": 0.18
+    },
+    {
+      "date": "2026-04-02",
+      "pct": 27.9,
+      "gasInStorage": 315.8,
+      "trend": -0.05
     }
   ],
   "countries": {
     "DE": {
       "pct": 21.9,
-      "trend": 0.09,
-      "gasInStorage": 54.5
+      "trend": -0.19,
+      "gasInStorage": 54.1
     },
     "FR": {
-      "pct": 22.1,
-      "trend": -0.07,
+      "pct": 22.0,
+      "trend": -0.03,
       "gasInStorage": 27.3
     },
     "IT": {
-      "pct": 43.2,
-      "trend": -0.14,
-      "gasInStorage": 88.0
+      "pct": 43.1,
+      "trend": -0.05,
+      "gasInStorage": 87.8
     },
     "ES": {
-      "pct": 57.5,
+      "pct": 57.8,
       "trend": 0.28,
-      "gasInStorage": 20.6
+      "gasInStorage": 20.7
     },
     "NL": {
       "pct": 4.6,
-      "trend": -0.03,
+      "trend": -0.0,
       "gasInStorage": 6.7
     },
     "AT": {
-      "pct": 34.1,
-      "trend": 2.28,
-      "gasInStorage": 34.2
+      "pct": 34.4,
+      "trend": 0.28,
+      "gasInStorage": 34.5
     },
     "BE": {
-      "pct": 25.5,
-      "trend": -0.06,
+      "pct": 25.4,
+      "trend": -0.14,
       "gasInStorage": 1.9
     },
     "PL": {
-      "pct": 44.5,
-      "trend": -0.22,
-      "gasInStorage": 16.2
+      "pct": 44.3,
+      "trend": -0.16,
+      "gasInStorage": 16.1
     },
     "CZ": {
-      "pct": 29.8,
-      "trend": 0.48,
-      "gasInStorage": 13.5
+      "pct": 29.6,
+      "trend": -0.16,
+      "gasInStorage": 13.4
     },
     "HU": {
       "pct": 32.4,
-      "trend": -0.08,
+      "trend": 0.0,
       "gasInStorage": 22.0
     }
   },
   "alert_threshold": 20.0,
   "score": 28,
-  "updated": "2026-04-03T04:31:32.333796Z"
+  "updated": "2026-04-04T04:20:45.128312Z"
 }
