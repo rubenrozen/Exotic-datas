@@ -1832,32 +1832,40 @@ async function refreshFlights(){
     }
   } catch(e) {}
 
-  // Live fallback: adsb.fi public API (CORS-enabled, free)
+  // Live fallback 1: adsb.fi (CORS enabled, global, free)
   if (states.length < 50) {
     try {
-      const d = await fetch('https://api.adsb.fi/v1/flights', {
+      const r = await fetch('https://api.adsb.fi/v1/flights', {
         signal: AbortSignal.timeout(12000)
-      }).then(r => r.json());
-      const ac = d.flights || d.ac || d.aircraft || [];
-      if (ac.length > 0) {
-        states = ac.filter(a => a.lat && a.lon).map(a => [
-          a.hex||'', (a.callsign||a.flight||'').trim(), '',
-          null, null, a.lon, a.lat,
-          (a.alt_baro || a.altitude || 0) * 0.3048,
-          false, (a.gs || a.speed || 0) * 0.514444,
-          a.track || 0, null, null, null, '', false, 0, null
-        ]);
+      });
+      if (r.ok) {
+        const d = await r.json();
+        const ac = d.flights || d.ac || d.aircraft || [];
+        if (ac.length > 50) {
+          states = ac.filter(a => a.lat && a.lon).map(a => [
+            a.hex||'', (a.callsign||a.flight||'').trim(), '',
+            null, null, +a.lon, +a.lat,
+            +(a.alt_baro || a.altitude || 0) * 0.3048,
+            false, +(a.gs || a.speed || 0) * 0.514444,
+            +(a.track || 0), null, null, null, '', false, 0, null
+          ]);
+          console.log('adsb.fi:', states.length, 'aircraft');
+        }
       }
-    } catch(e) {}
+    } catch(e) { console.warn('adsb.fi:', e); }
   }
 
   // Second live fallback: adsb.lol (regional queries)
   if (states.length < 50) {
     try {
+      // adsb.lol: max dist is 250nm, cover 6 regions
       const regions = [
-        'https://api.adsb.lol/v2/lat/45/lon/-100/dist/3000',
-        'https://api.adsb.lol/v2/lat/50/lon/15/dist/3000',
-        'https://api.adsb.lol/v2/lat/30/lon/110/dist/3000',
+        'https://api.adsb.lol/v2/lat/50/lon/-95/dist/250',
+        'https://api.adsb.lol/v2/lat/50/lon/-30/dist/250',
+        'https://api.adsb.lol/v2/lat/50/lon/15/dist/250',
+        'https://api.adsb.lol/v2/lat/35/lon/100/dist/250',
+        'https://api.adsb.lol/v2/lat/5/lon/20/dist/250',
+        'https://api.adsb.lol/v2/lat/-25/lon/135/dist/250',
       ];
       const results = await Promise.allSettled(
         regions.map(u => fetch(u, {signal: AbortSignal.timeout(8000)}).then(r => r.json()))
@@ -2104,4 +2112,3 @@ async function initMaritimeMap() {
 </script>
 </body>
 </html>
-}
