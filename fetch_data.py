@@ -447,8 +447,23 @@ else:
 # ── [8] OpenSky ───────────────────────────────────────────
 print("[8/9] Air Traffic — OpenSky...")
 try:
-    d = fetch_json("https://opensky-network.org/api/states/all")
-    states = d.get("states",[])
+    # Primary: adsb.lol — no auth, server-side has no CORS issues
+    states = []
+    try:
+        d = fetch_json("https://api.adsb.lol/v2/point/0/0/20000")
+        ac = d.get("ac") or d.get("aircraft") or []
+        states = [[a.get("hex",""), (a.get("flight","") or "").strip(), "",
+                   None, None, a.get("lon"), a.get("lat"),
+                   (a.get("alt_baro") or 0)*0.3048, False,
+                   (a.get("gs") or 0)*0.514444, a.get("track") or 0,
+                   None,None,None,"",False,0,None]
+                  for a in ac if a.get("lat") and a.get("lon")]
+        print(f"  adsb.lol: {len(states)} aircraft")
+    except Exception as e:
+        print(f"  adsb.lol failed: {e}, trying OpenSky...")
+    if not states:
+        d = fetch_json("https://opensky-network.org/api/states/all")
+        states = d.get("states",[])
     by_reg = {"Europe":0,"North America":0,"Asia-Pacific":0,"Middle East":0,"Other":0}
     for s in states:
         lon=s[5]; lat=s[6]
