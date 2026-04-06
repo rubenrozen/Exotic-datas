@@ -1,13 +1,7 @@
 {
-  "eu_avg": 27.9,
-  "trend": 0.03,
+  "eu_avg": 28.2,
+  "trend": 0.21,
   "series": [
-    {
-      "date": "2025-06-08",
-      "pct": 51.4,
-      "gasInStorage": 583.0,
-      "trend": 0.43
-    },
     {
       "date": "2025-06-09",
       "pct": 51.8,
@@ -1801,23 +1795,29 @@
       "pct": 27.9,
       "gasInStorage": 316.1,
       "trend": 0.03
+    },
+    {
+      "date": "2026-04-04",
+      "pct": 28.2,
+      "gasInStorage": 318.5,
+      "trend": 0.21
     }
   ],
   "countries": {
     "DE": {
-      "pct": 22.0,
-      "trend": 0.09,
-      "gasInStorage": 54.3
+      "pct": 22.3,
+      "trend": 0.29,
+      "gasInStorage": 55.0
     },
     "FR": {
-      "pct": 22.1,
-      "trend": 0.1,
-      "gasInStorage": 27.3
+      "pct": 22.4,
+      "trend": 0.35,
+      "gasInStorage": 27.8
     },
     "IT": {
-      "pct": 43.2,
-      "trend": 0.03,
-      "gasInStorage": 87.9
+      "pct": 43.3,
+      "trend": 0.11,
+      "gasInStorage": 88.1
     },
     "ES": {
       "pct": 57.8,
@@ -1825,37 +1825,37 @@
       "gasInStorage": 20.7
     },
     "NL": {
-      "pct": 4.7,
-      "trend": 0.08,
-      "gasInStorage": 6.8
+      "pct": 5.0,
+      "trend": 0.23,
+      "gasInStorage": 7.1
     },
     "AT": {
-      "pct": 34.3,
-      "trend": -0.13,
-      "gasInStorage": 34.4
+      "pct": 34.5,
+      "trend": 0.24,
+      "gasInStorage": 34.6
     },
     "BE": {
-      "pct": 25.0,
-      "trend": -0.33,
+      "pct": 25.1,
+      "trend": 0.05,
       "gasInStorage": 1.9
     },
     "PL": {
-      "pct": 44.4,
-      "trend": 0.11,
-      "gasInStorage": 16.1
+      "pct": 44.6,
+      "trend": 0.22,
+      "gasInStorage": 16.2
     },
     "CZ": {
-      "pct": 29.6,
-      "trend": -0.04,
+      "pct": 29.5,
+      "trend": -0.01,
       "gasInStorage": 13.4
     },
     "HU": {
-      "pct": 32.4,
-      "trend": 0.06,
+      "pct": 32.5,
+      "trend": 0.11,
       "gasInStorage": 22.1
     }
   },
   "alert_threshold": 20.0,
   "score": 28,
-  "updated": "2026-04-05T04:38:30.701781Z"
+  "updated": "2026-04-06T04:46:27.563004Z"
 }
