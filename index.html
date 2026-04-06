@@ -1824,29 +1824,68 @@ async function initFlightMap(){
 async function refreshFlights(){
   const btn=document.getElementById('btn-refresh-flights');
   if(btn) btn.textContent='⟳ Loading…';
-  try{
-    const d=await fetch('https://opensky-network.org/api/states/all?lamin=0&lamax=75&lomin=-140&lomax=155',{signal:AbortSignal.timeout(14000)}).then(r=>r.json());
-    const states=d.states||[];
-    safe('flights-total',states.length.toLocaleString());
-    let na=0,eu=0,as=0,oth=0;
-    states.forEach(s=>{
-      const lon=s[5],lat=s[6];
-      if(!lon||!lat) return;
-      if(lat>20&&lat<72&&lon>-130&&lon<-60) na++;
-      else if(lat>35&&lat<72&&lon>-10&&lon<42) eu++;
-      else if(lat>-15&&lat<60&&lon>60&&lon<155) as++;
-      else oth++;
-    });
-    // Draw all flights on canvas map
-    setTimeout(() => updateFlightDots(states), 50);
-    safe('fl-na',na.toLocaleString()); safe('fl-eu',eu.toLocaleString());
-    safe('fl-as',as.toLocaleString()); safe('fl-oth',oth.toLocaleString());
-    const base=14000; const vs=Math.round((states.length-base)/base*100);
-    const vsEl=document.getElementById('flights-vs19');
-    if(vsEl) vsEl.innerHTML=`<span class="${vs>=-5?'dn':'up'}">${vs>=0?'+':''}${vs}% vs 2019 baseline</span>`;
-    SCORES.trade=Math.min(88,Math.max(20,Math.round(states.length/140))); updateEPI();
-    addTick(`✈️ ${states.length.toLocaleString()} active flights · ${vs>=0?'+':''}${vs}% vs 2019`);
-  }catch(e){safe('flights-total','N/A');}
+
+  // Primary: ADSB.lol — community ADS-B, CORS enabled, free, no rate limit
+  // Fallback: OpenSky (rate-limited, 400 credits/day anonymous since Mar 2025)
+  let states = [];
+  const SOURCES = [
+    async () => {
+      // ADSB.lol — returns all aircraft as {ac:[{lat,lon,alt_baro,track,flight,...}]}
+      const d = await fetch('https://api.adsb.lol/v2/point/0/0/20000', {signal:AbortSignal.timeout(12000)}).then(r=>r.json());
+      // Convert to OpenSky-compatible format [icao,callsign,country,...,lon,lat,...,alt,...]
+      return (d.ac||[]).filter(a=>a.lat&&a.lon).map(a=>[
+        a.hex||'', (a.flight||'').trim(), a.r||'', null, null, a.lon, a.lat,
+        (a.alt_baro||0)*0.3048, false, (a.gs||0)*0.514444, a.track||0,
+        null, null, null, '', false, 0, null
+      ]);
+    },
+    async () => {
+      // ADSB.fi — another community ADS-B network
+      const d = await fetch('https://api.adsb.fi/v1/flights', {signal:AbortSignal.timeout(12000)}).then(r=>r.json());
+      return (d.flights||d.ac||[]).filter(a=>a.lat&&a.lon).map(a=>[
+        a.hex||'', (a.callsign||a.flight||'').trim(), '', null, null, a.lon, a.lat,
+        (a.altitude||a.alt||0)*0.3048, false, (a.speed||a.gs||0)*0.514444, a.track||0,
+        null, null, null, '', false, 0, null
+      ]);
+    },
+    async () => {
+      // OpenSky fallback — rate limited, may fail
+      const d = await fetch('https://opensky-network.org/api/states/all?lamin=0&lamax=75&lomin=-140&lomax=155',{signal:AbortSignal.timeout(14000)}).then(r=>r.json());
+      return d.states||[];
+    }
+  ];
+
+  for (const src of SOURCES) {
+    try {
+      states = await src();
+      if (states.length > 100) break;
+    } catch(e) { console.warn('Flight source failed:', e); }
+  }
+
+  if (states.length === 0) {
+    safe('flights-total','N/A');
+    if(btn) btn.textContent='⟳';
+    return;
+  }
+
+  safe('flights-total', states.length.toLocaleString());
+  let na=0,eu=0,as=0,oth=0;
+  states.forEach(s=>{
+    const lon=s[5], lat=s[6];
+    if(!lon||!lat) return;
+    if(lat>20&&lat<72&&lon>-130&&lon<-60) na++;
+    else if(lat>35&&lat<72&&lon>-10&&lon<42) eu++;
+    else if(lat>-15&&lat<60&&lon>60&&lon<155) as++;
+    else oth++;
+  });
+  setTimeout(() => updateFlightDots(states), 50);
+  safe('fl-na',na.toLocaleString()); safe('fl-eu',eu.toLocaleString());
+  safe('fl-as',as.toLocaleString()); safe('fl-oth',oth.toLocaleString());
+  const base=14000; const vs=Math.round((states.length-base)/base*100);
+  const vsEl=document.getElementById('flights-vs19');
+  if(vsEl) vsEl.innerHTML=`<span class="${vs>=-5?'dn':'up'}">${vs>=0?'+':''}${vs}% vs 2019 baseline</span>`;
+  SCORES.trade=Math.min(88,Math.max(20,Math.round(states.length/140))); updateEPI();
+  addTick(`✈️ ${states.length.toLocaleString()} active flights · ${vs>=0?'+':''}${vs}% vs 2019`);
   if(btn) btn.textContent='⟳';
   const upd = document.getElementById('flights-updated');
   if(upd) upd.textContent='Last updated: '+new Date().toLocaleTimeString();
