@@ -663,7 +663,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
           <div class="bsm" id="flights-total" style="color:var(--c-trade)">—</div>
           <div class="unit">flights</div>
           <div class="delta" id="flights-vs19" style="font-size:11px"></div>
-          <button class="hz" id="btn-refresh-flights" onclick="refreshFlights()">⟳</button>
+          <button class="hz" id="btn-refresh-flights" onclick="refreshFlights()">↺</button>
         </div>
       </div>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:8px">
@@ -1822,90 +1822,92 @@ async function initFlightMap(){
   await refreshFlights();
 }
 async function refreshFlights(){
-  const btn=document.getElementById('btn-refresh-flights');
-  if(btn) btn.textContent='⟳ Loading…';
-
   let states = [];
 
-  // 1. Try air_traffic.json (fetched by GitHub Actions every 6h — no CORS, no rate limit)
+  // Primary: air_traffic.json (GitHub Actions, updated every ~6h, no CORS issues)
   try {
     const d = await loadJSON('air_traffic.json');
-    if (d && d.states && d.states.length > 100) {
+    if (d && d.states && d.states.length > 0) {
       states = d.states;
-      console.log('air_traffic.json:', states.length, 'aircraft');
     }
   } catch(e) {}
 
-  // 2. Live browser APIs (try several, in order of reliability)
-  if (states.length < 100) {
-    const LIVE_SOURCES = [
-      // adsb.fi — community, CORS enabled, truly free
-      async () => {
-        const d = await fetch('https://api.adsb.fi/v1/flights', {signal:AbortSignal.timeout(12000)}).then(r=>r.json());
-        const ac = d.flights || d.ac || d.aircraft || [];
-        return ac.filter(a=>a.lat&&a.lon).map(a=>[
-          a.hex||'', (a.callsign||a.flight||'').trim(), '', null, null,
-          a.lon, a.lat, (a.alt_baro||a.altitude||0)*0.3048,
-          false, (a.gs||a.speed||0)*0.514444, a.track||0,
-          null,null,null,'',false,0,null]);
-      },
-      // adsb.lol — compatible with adsbexchange format
-      async () => {
-        // Query several regions to get global coverage
-        const regions = [
-          'https://api.adsb.lol/v2/lat/45/lon/-100/dist/3000',  // N America
-          'https://api.adsb.lol/v2/lat/50/lon/10/dist/3000',    // Europe
-          'https://api.adsb.lol/v2/lat/30/lon/100/dist/3000',   // Asia
-        ];
-        const results = await Promise.allSettled(regions.map(u=>
-          fetch(u, {signal:AbortSignal.timeout(10000)}).then(r=>r.json())
-        ));
-        const all = results.filter(r=>r.status==='fulfilled').flatMap(r=>(r.value.ac||[]));
-        return all.filter(a=>a.lat&&a.lon).map(a=>[
-          a.hex||'',(a.flight||'').trim(),'',null,null,
-          a.lon,a.lat,(a.alt_baro||0)*0.3048,false,(a.gs||0)*0.514444,a.track||0,
-          null,null,null,'',false,0,null]);
-      },
-    ];
-
-    for (const src of LIVE_SOURCES) {
-      try {
-        const result = await src();
-        if (result.length > 100) { states = result; break; }
-      } catch(e) { console.warn('Flight source failed:', e); }
-    }
+  // Live fallback: adsb.fi public API (CORS-enabled, free)
+  if (states.length < 50) {
+    try {
+      const d = await fetch('https://api.adsb.fi/v1/flights', {
+        signal: AbortSignal.timeout(12000)
+      }).then(r => r.json());
+      const ac = d.flights || d.ac || d.aircraft || [];
+      if (ac.length > 0) {
+        states = ac.filter(a => a.lat && a.lon).map(a => [
+          a.hex||'', (a.callsign||a.flight||'').trim(), '',
+          null, null, a.lon, a.lat,
+          (a.alt_baro || a.altitude || 0) * 0.3048,
+          false, (a.gs || a.speed || 0) * 0.514444,
+          a.track || 0, null, null, null, '', false, 0, null
+        ]);
+      }
+    } catch(e) {}
   }
 
-  if (states.length === 0) {
-    safe('flights-total','N/A');
-    if(btn) btn.textContent='⟳';
-    const upd = document.getElementById('flights-updated');
-    if(upd) upd.textContent='No data available';
+  // Second live fallback: adsb.lol (regional queries)
+  if (states.length < 50) {
+    try {
+      const regions = [
+        'https://api.adsb.lol/v2/lat/45/lon/-100/dist/3000',
+        'https://api.adsb.lol/v2/lat/50/lon/15/dist/3000',
+        'https://api.adsb.lol/v2/lat/30/lon/110/dist/3000',
+      ];
+      const results = await Promise.allSettled(
+        regions.map(u => fetch(u, {signal: AbortSignal.timeout(8000)}).then(r => r.json()))
+      );
+      const allAc = results.flatMap(r =>
+        r.status === 'fulfilled' ? (r.value.ac || []) : []
+      );
+      if (allAc.length > 0) {
+        states = allAc.filter(a => a.lat && a.lon).map(a => [
+          a.hex||'', (a.flight||'').trim(), '',
+          null, null, a.lon, a.lat,
+          (a.alt_baro || 0) * 0.3048,
+          false, (a.gs || 0) * 0.514444,
+          a.track || 0, null, null, null, '', false, 0, null
+        ]);
+      }
+    } catch(e) {}
+  }
+
+  if (!states.length) {
+    safe('flights-total', '—');
     return;
   }
 
   safe('flights-total', states.length.toLocaleString());
-  let na=0,eu=0,as=0,oth=0;
-  states.forEach(s=>{
-    const lon=s[5], lat=s[6];
-    if(!lon||!lat) return;
-    if(lat>20&&lat<72&&lon>-130&&lon<-60) na++;
-    else if(lat>35&&lat<72&&lon>-10&&lon<42) eu++;
-    else if(lat>-15&&lat<60&&lon>60&&lon<155) as++;
+  let na=0, eu=0, as=0, oth=0;
+  states.forEach(s => {
+    const lon = s[5], lat = s[6];
+    if (!lon || !lat) return;
+    if (lat>20 && lat<72 && lon>-130 && lon<-60) na++;
+    else if (lat>35 && lat<72 && lon>-10 && lon<42) eu++;
+    else if (lat>-15 && lat<60 && lon>60 && lon<155) as++;
     else oth++;
   });
   setTimeout(() => updateFlightDots(states), 50);
-  safe('fl-na',na.toLocaleString()); safe('fl-eu',eu.toLocaleString());
-  safe('fl-as',as.toLocaleString()); safe('fl-oth',oth.toLocaleString());
-  const base=14000; const vs=Math.round((states.length-base)/base*100);
-  const vsEl=document.getElementById('flights-vs19');
-  if(vsEl) vsEl.innerHTML=`<span class="${vs>=-5?'dn':'up'}">${vs>=0?'+':''}${vs}% vs 2019 baseline</span>`;
-  SCORES.trade=Math.min(88,Math.max(20,Math.round(states.length/140))); updateEPI();
-  addTick(`✈️ ${states.length.toLocaleString()} active flights · ${vs>=0?'+':''}${vs}% vs 2019`);
-  if(btn) btn.textContent='⟳';
+  safe('fl-na', na.toLocaleString());
+  safe('fl-eu', eu.toLocaleString());
+  safe('fl-as', as.toLocaleString());
+  safe('fl-oth', oth.toLocaleString());
+  const base = 14000;
+  const vs = Math.round((states.length - base) / base * 100);
+  const vsEl = document.getElementById('flights-vs19');
+  if (vsEl) vsEl.innerHTML = `<span class="${vs>=-5?'dn':'up'}">${vs>=0?'+':''}${vs}% vs 2019 baseline</span>`;
+  SCORES.trade = Math.min(88, Math.max(20, Math.round(states.length/140)));
+  updateEPI();
+  addTick(`✈️ ${states.length.toLocaleString()} active flights`);
   const upd = document.getElementById('flights-updated');
-  if(upd) upd.textContent='Last updated: '+new Date().toLocaleTimeString();
+  if (upd) upd.textContent = 'Last updated: ' + new Date().toLocaleTimeString();
 }
+
 
 async function initFlightMap() {
   setTimeout(() => initFlightsMap(), 100);
