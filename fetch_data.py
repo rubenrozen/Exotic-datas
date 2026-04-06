@@ -392,11 +392,11 @@ firms_key = os.environ.get("NASA_FIRMS_KEY","")
 if firms_key:
     try:
         # VIIRS SNPP NRT — last 1 day, global, CSV format
-        url = f"https://firms.modaps.eosdis.nasa.gov/api/area/csv/{firms_key}/VIIRS_SNPP_NRT/World/1"
+        url = f"https://firms.modaps.eosdis.nasa.gov/api/area/csv/{firms_key}/VIIRS_SNPP_NRT/World/2"  # last 48h for better coverage
         csv_txt = fetch_text(url)
         lines = [l for l in csv_txt.strip().splitlines() if l and not l.startswith("latitude")]
         hotspots = []
-        by_region = {"Amazon":0,"C.Africa":0,"S.Africa":0,"Siberia":0,"N.America":0,"SE Asia":0,"Australia":0,"Other":0}
+        by_region = {"Africa":0,"S.Asia":0,"SE Asia":0,"N.America":0,"S.America":0,"Siberia":0,"Europe":0,"Australia":0,"Other":0}
         for line in lines:
             parts = line.split(",")
             if len(parts) < 3: continue
@@ -405,20 +405,21 @@ if firms_key:
                 brightness = float(parts[2]) if len(parts)>2 else 300
                 frp = float(parts[13]) if len(parts)>13 else 0  # Fire Radiative Power (MW)
                 hotspots.append({"lat":round(lat,3),"lon":round(lon,3),"brightness":round(brightness,1),"frp":round(frp,1)})
-                # Assign to region
-                if -20<lat<15 and -80<lon<-35: by_region["Amazon"]+=1
-                elif -10<lat<15 and 10<lon<40: by_region["C.Africa"]+=1
-                elif -35<lat<-10 and 10<lon<40: by_region["S.Africa"]+=1
-                elif 50<lat<75 and 60<lon<140: by_region["Siberia"]+=1
-                elif 25<lat<72 and -130<lon<-60: by_region["N.America"]+=1
-                elif -10<lat<25 and 90<lon<140: by_region["SE Asia"]+=1
-                elif -40<lat<-10 and 110<lon<155: by_region["Australia"]+=1
+                # Assign to region (broader, more accurate bounds)
+                if -40<lat<38 and -20<lon<55:  by_region["Africa"]+=1      # all of Africa
+                elif 5<lat<40 and 55<lon<90:   by_region["S.Asia"]+=1      # India, Pakistan, Iran
+                elif -10<lat<28 and 90<lon<155: by_region["SE Asia"]+=1    # SE Asia + China south
+                elif 25<lat<72 and -170<lon<-50: by_region["N.America"]+=1 # N+C America
+                elif -60<lat<15 and -85<lon<-30: by_region["S.America"]+=1 # S America incl Amazon
+                elif 50<lat<80 and 40<lon<180:  by_region["Siberia"]+=1    # Russia/Siberia
+                elif 35<lat<72 and -15<lon<45:  by_region["Europe"]+=1     # Europe
+                elif -45<lat<-8 and 110<lon<160: by_region["Australia"]+=1 # Australia
                 else: by_region["Other"]+=1
             except: continue
         # Keep up to 8000 points — prioritise high-intensity fires (high FRP)
         # Sort by brightness desc so the most significant fires are always included
         hotspots.sort(key=lambda h: -h.get("brightness", 0))
-        total = len(hotspots)
+        total = len(hotspots)  # total BEFORE sampling
         if len(hotspots) > 8000:
             # Keep all high-intensity (top 4000) + random sample of the rest
             import random
