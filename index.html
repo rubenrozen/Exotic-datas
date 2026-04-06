@@ -1307,7 +1307,7 @@ async function initFiresMap(){
   firesMapDone = true;
   // Try to load real fire data from data/firms.json (via GitHub Actions + NASA_FIRMS_KEY)
   const d = await loadJSON('firms.json');
-  if(d && d.total) {
+  if(d && (d.total || (d.hotspots && d.hotspots.length > 0))) {
     safe('fire-count', d.total.toLocaleString());
     safe('fire-delta', d.delta_day ? (d.delta_day>0?'↑ +':'↓ ')+Math.abs(d.delta_day)+'% vs. daily avg' : '');
     safe('fire-yoy', d.delta_year ? 'vs. same week last year: '+(d.delta_year>0?'+':'')+d.delta_year+'%' : '');
@@ -1323,8 +1323,9 @@ async function initFiresMap(){
   } else {
     // No firms.json — show static known fire zones with indication
     safe('fire-count','—');
-    safe('fire-delta','Live data: add NASA_FIRMS_KEY to GitHub Secrets');
-    safe('fire-yoy','Showing typical active fire regions');
+    const hasKey = d && 'total' in d;
+    safe('fire-delta', hasKey ? 'No hotspots returned by FIRMS API — try re-running workflow' : 'Live data: add NASA_FIRMS_KEY to GitHub Secrets');
+    safe('fire-yoy', hasKey ? ('Last run: ' + (d.updated||'unknown')) : 'Showing typical active fire regions');
     document.getElementById('fire-regions').innerHTML =
       '<div>Amazon</div><div>C.Africa</div><div>Siberia</div><div>SE Asia</div><div>Australia</div><div>N.America</div>';
   }
