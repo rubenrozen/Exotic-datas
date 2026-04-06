@@ -403,7 +403,8 @@ if firms_key:
             try:
                 lat, lon = float(parts[0]), float(parts[1])
                 brightness = float(parts[2]) if len(parts)>2 else 300
-                hotspots.append({"lat":round(lat,3),"lon":round(lon,3),"brightness":round(brightness,1)})
+                frp = float(parts[13]) if len(parts)>13 else 0  # Fire Radiative Power (MW)
+                hotspots.append({"lat":round(lat,3),"lon":round(lon,3),"brightness":round(brightness,1),"frp":round(frp,1)})
                 # Assign to region
                 if -20<lat<15 and -80<lon<-35: by_region["Amazon"]+=1
                 elif -10<lat<15 and 10<lon<40: by_region["C.Africa"]+=1
@@ -414,12 +415,17 @@ if firms_key:
                 elif -40<lat<-10 and 110<lon<155: by_region["Australia"]+=1
                 else: by_region["Other"]+=1
             except: continue
-        # Thin hotspots for file size — keep max 2000 points
-        import random
-        if len(hotspots) > 2000:
-            hotspots = random.sample(hotspots, 2000)
-        total = len(lines)
-        print(f"  ✓ {total} fire spots — {len(hotspots)} sampled for map")
+        # Keep up to 8000 points — prioritise high-intensity fires (high FRP)
+        # Sort by brightness desc so the most significant fires are always included
+        hotspots.sort(key=lambda h: -h.get("brightness", 0))
+        total = len(hotspots)
+        if len(hotspots) > 8000:
+            # Keep all high-intensity (top 4000) + random sample of the rest
+            import random
+            top = hotspots[:4000]
+            rest = random.sample(hotspots[4000:], min(4000, len(hotspots)-4000))
+            hotspots = top + rest
+        print(f"  ✓ {total} fire spots — {len(hotspots)} kept for map (sorted by intensity)")
         save("firms.json", {
             "total": total,
             "by_region": by_region,
