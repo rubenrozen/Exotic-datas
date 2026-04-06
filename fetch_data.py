@@ -473,7 +473,16 @@ try:
             elif -15<lat<60 and 60<lon<150: by_reg["Asia-Pacific"]+=1
             elif 10<lat<40 and 35<lon<65: by_reg["Middle East"]+=1
             else: by_reg["Other"]+=1
-    save("air_traffic.json",{"total":len(states),"by_region":by_reg,"score":min(90,max(20,round(len(states)/130))),"updated":NOW})
+    # Save with states for browser to use directly (thin down to 5000 for file size)
+    import random
+    states_sample = states if len(states) <= 5000 else random.sample(states, 5000)
+    save("air_traffic.json",{
+        "total": len(states),
+        "states": states_sample,
+        "by_region": by_reg,
+        "score": min(90,max(20,round(len(states)/130))),
+        "updated": NOW
+    })
 except Exception as e:
     errors.append(f"OpenSky: {e}"); print(f"  ✗ {e}")
 
