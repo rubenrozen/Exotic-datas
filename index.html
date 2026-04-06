@@ -358,7 +358,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
       <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-nat),transparent)"></div>
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap">
         <div class="lbl" style="margin:0">🦠 Flu — WHO FluNet <span class="ib">i<div class="ipop"><div class="ipt">WHO FluNet</div><div class="ipb">Weekly influenza surveillance from 130 countries. Source: WHO FluNet API · who.int/tools/flunet · Weekly updated. Data loaded from data/flu.json via GitHub Actions, or WHO REST API directly.</div><div class="ips">Source: WHO · services.who.int/flumart · Weekly</div></div></span></div>
-        <div style="margin-left:auto;display:flex;gap:4px">
+        <div id="flu-btns" style="margin-left:auto;display:flex;gap:4px">
           <button class="hz on" onclick="setFluRegion('global',this)">Global</button>
           <button class="hz" onclick="setFluRegion('north',this)">N. Hem.</button>
           <button class="hz" onclick="setFluRegion('south',this)">S. Hem.</button>
@@ -1399,7 +1399,7 @@ const FLU_REGIONS={
 let fluReg='global';
 function setFluRegion(r,btn){
   fluReg=r;
-  document.querySelectorAll('#p-nat .hzs .hz').forEach(b=>b.classList.remove('on'));
+  document.querySelectorAll('#flu-btns .hz').forEach(b=>b.classList.remove('on'));
   btn?.classList.add('on');
   const rd=FLU_REGIONS[r]||FLU_REGIONS.global;
 
@@ -3525,16 +3525,45 @@ function drawFiresMapLive(hotspots) {
   const W = 1536, H = 1024;
   const ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, W, H);
-  hotspots.forEach(h => {
-    const {x,y} = project(h.lon, h.lat, W, H);
-    const r = 3;
-    const g1 = ctx.createRadialGradient(x,y,0,x,y,r*5);
-    g1.addColorStop(0,'rgba(255,80,0,0.14)'); g1.addColorStop(1,'rgba(255,80,0,0)');
-    ctx.beginPath(); ctx.arc(x,y,r*5,0,Math.PI*2); ctx.fillStyle=g1; ctx.fill();
-    const g3 = ctx.createRadialGradient(x-1,y-1,0,x,y,r);
-    g3.addColorStop(0,'#fffde0'); g3.addColorStop(0.3,'#ffcc40'); g3.addColorStop(1,'#ff5500');
+
+  // Sort low-intensity first so high-intensity renders on top
+  const sorted = [...hotspots].sort((a,b) => (a.frp||a.brightness||0) - (b.frp||b.brightness||0));
+
+  sorted.forEach(pt => {
+    const {x,y} = project(pt.lon, pt.lat, W, H);
+
+    // Size based on FRP (Fire Radiative Power in MW) or brightness (Kelvin)
+    // FRP: <10MW = small grass fire, 10-100MW = moderate, >100MW = major fire
+    // Brightness: <330K = low, 330-400K = moderate, >400K = intense
+    const frp = pt.frp || 0;
+    const bright = pt.brightness || 300;
+    let r;
+    if (frp > 500)       r = 6;    // extreme (>500MW) — major wildfire
+    else if (frp > 100)  r = 4.5;  // large fire
+    else if (frp > 30)   r = 3.5;  // moderate fire
+    else if (frp > 10)   r = 2.5;  // small fire
+    else if (bright > 400) r = 3;  // hot but no FRP — use brightness
+    else                 r = 1.8;  // small/agricultural burn
+
+    // Outer glow — size proportional to intensity
+    const g1 = ctx.createRadialGradient(x,y,0,x,y,r*4);
+    const alpha = frp > 100 ? 0.2 : frp > 30 ? 0.15 : 0.08;
+    g1.addColorStop(0, `rgba(255,80,0,${alpha})`);
+    g1.addColorStop(1, 'rgba(255,80,0,0)');
+    ctx.beginPath(); ctx.arc(x,y,r*4,0,Math.PI*2);
+    ctx.fillStyle=g1; ctx.fill();
+
+    // Core dot — white-hot center for intense fires
+    const g3 = ctx.createRadialGradient(x-r*.3,y-r*.3,0,x,y,r);
+    if (frp > 100 || bright > 420) {
+      g3.addColorStop(0,'#ffffff'); g3.addColorStop(0.2,'#fffde0');
+      g3.addColorStop(0.5,'#ffcc40'); g3.addColorStop(1,'#ff3300');
+    } else {
+      g3.addColorStop(0,'#fffde0'); g3.addColorStop(0.3,'#ffcc40');
+      g3.addColorStop(1,'#ff5500');
+    }
     ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2);
-    ctx.fillStyle=g3; ctx.globalAlpha=0.98; ctx.fill(); ctx.globalAlpha=1;
+    ctx.fillStyle=g3; ctx.globalAlpha=0.92; ctx.fill(); ctx.globalAlpha=1;
   });
 }
 function drawFiresMap(show_zones=true) {
