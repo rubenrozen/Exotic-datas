@@ -397,13 +397,16 @@ if firms_key:
         lines = [l for l in csv_txt.strip().splitlines() if l and not l.startswith("latitude")]
         hotspots = []
         by_region = {"Africa":0,"S.Asia":0,"SE Asia":0,"N.America":0,"S.America":0,"Siberia":0,"Europe":0,"Australia":0,"Other":0}
+        if lines:
+            print(f"  CSV sample (first line): {lines[0][:120]}")
+            print(f"  Total lines to parse: {len(lines)}")
         for line in lines:
             parts = line.split(",")
             if len(parts) < 3: continue
             try:
                 lat, lon = float(parts[0]), float(parts[1])
                 brightness = float(parts[2]) if len(parts)>2 else 300
-                frp = float(parts[13]) if len(parts)>13 else 0  # Fire Radiative Power (MW)
+                frp = float(parts[12]) if len(parts)>12 else 0  # Fire Radiative Power (MW) — col 12 in VIIRS NRT
                 hotspots.append({"lat":round(lat,3),"lon":round(lon,3),"brightness":round(brightness,1),"frp":round(frp,1)})
                 # Assign to region (broader, more accurate bounds)
                 if -40<lat<38 and -20<lon<55:  by_region["Africa"]+=1      # all of Africa
