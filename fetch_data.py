@@ -447,23 +447,45 @@ else:
 # ── [8] OpenSky ───────────────────────────────────────────
 print("[8/9] Air Traffic — OpenSky...")
 try:
-    # Primary: adsb.lol — no auth, server-side has no CORS issues
+    # Primary: adsb.fi — public API, no key, global endpoint
     states = []
     try:
-        d = fetch_json("https://api.adsb.lol/v2/point/0/0/20000")
-        ac = d.get("ac") or d.get("aircraft") or []
-        states = [[a.get("hex",""), (a.get("flight","") or "").strip(), "",
+        d = fetch_json("https://api.adsb.fi/v1/flights")
+        ac = d.get("flights") or d.get("ac") or d.get("aircraft") or []
+        states = [[a.get("hex",""), (a.get("callsign") or a.get("flight","") or "").strip(), "",
                    None, None, a.get("lon"), a.get("lat"),
-                   (a.get("alt_baro") or 0)*0.3048, False,
-                   (a.get("gs") or 0)*0.514444, a.get("track") or 0,
+                   (a.get("alt_baro") or a.get("altitude") or 0)*0.3048, False,
+                   (a.get("gs") or a.get("speed") or 0)*0.514444, a.get("track") or 0,
                    None,None,None,"",False,0,None]
                   for a in ac if a.get("lat") and a.get("lon")]
-        print(f"  adsb.lol: {len(states)} aircraft")
+        print(f"  adsb.fi: {len(states)} aircraft")
     except Exception as e:
-        print(f"  adsb.lol failed: {e}, trying OpenSky...")
+        print(f"  adsb.fi failed: {e}")
+    # Fallback: adsb.lol regional queries
     if not states:
-        d = fetch_json("https://opensky-network.org/api/states/all")
-        states = d.get("states",[])
+        try:
+            import urllib.request
+            all_ac = []
+            for lat,lon in [(50,0),(40,-95),(35,105),(-10,25),(20,75),(-25,135)]:
+                try:
+                    url = f"https://api.adsb.lol/v2/lat/{lat}/lon/{lon}/dist/500"
+                    resp = urllib.request.urlopen(url, timeout=8)
+                    d2 = json.loads(resp.read())
+                    all_ac.extend(d2.get("ac") or [])
+                except: pass
+            seen = set()
+            for a in all_ac:
+                k = a.get("hex","")
+                if k and k not in seen and a.get("lat") and a.get("lon"):
+                    seen.add(k)
+                    states.append([k,(a.get("flight","") or "").strip(),"",
+                                   None,None,a.get("lon"),a.get("lat"),
+                                   (a.get("alt_baro") or 0)*0.3048,False,
+                                   (a.get("gs") or 0)*0.514444,a.get("track") or 0,
+                                   None,None,None,"",False,0,None])
+            if states: print(f"  adsb.lol regional: {len(states)} aircraft")
+        except Exception as e:
+            print(f"  adsb.lol failed: {e}")
     by_reg = {"Europe":0,"North America":0,"Asia-Pacific":0,"Middle East":0,"Other":0}
     for s in states:
         lon=s[5]; lat=s[6]
