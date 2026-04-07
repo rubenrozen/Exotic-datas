@@ -475,7 +475,7 @@ try:
         if lat and lon:
             if 35<lat<72 and -10<lon<40: by_reg["Europe"]+=1
             elif 15<lat<72 and -130<lon<-60: by_reg["North America"]+=1
-            elif -15<lat<60 and 60<lon<150: by_reg["Asia-Pacific"]+=1
+            elif -50<lat<60 and 60<lon<180: by_reg["Asia-Pacific"]+=1  # Asie + Australie + Océanie
             elif 10<lat<40 and 35<lon<65: by_reg["Middle East"]+=1
             else: by_reg["Other"]+=1
     # Save with states for browser to use directly (thin down to 5000 for file size)
