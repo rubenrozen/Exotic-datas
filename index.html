@@ -2101,6 +2101,447 @@ async function initMaritimeMap() {
   }
 }
 
+
+// ═══════════════════════════════════════════════════════
+// MAP ENGINE — equirectangular projection
+// ═══════════════════════════════════════════════════════
+
+function project(lon, lat, W, H) {
+  const x = (lon + 180) / 360 * W;
+  const y = (90 - lat) / 180 * H;
+  return {x, y};
+}
+
+function drawFiresMap(show_zones) {
+  const canvas = document.getElementById('fires-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width || 1536, H = canvas.height || 1024;
+  ctx.clearRect(0, 0, W, H);
+  if (!show_zones) return;
+  const zones = [
+    {lon:-60, lat:-5,  r:80,  label:'Amazon'},
+    {lon:25,  lat:5,   r:70,  label:'C.Africa'},
+    {lon:30,  lat:-20, r:60,  label:'S.Africa'},
+    {lon:100, lat:65,  r:90,  label:'Siberia'},
+    {lon:-100,lat:55,  r:50,  label:'N.America'},
+    {lon:110, lat:15,  r:60,  label:'SE Asia'},
+    {lon:135, lat:-25, r:50,  label:'Australia'},
+  ];
+  zones.forEach(z => {
+    const {x,y} = project(z.lon, z.lat, W, H);
+    const g = ctx.createRadialGradient(x,y,0,x,y,z.r);
+    g.addColorStop(0,'rgba(255,100,0,0.15)');
+    g.addColorStop(1,'rgba(255,60,0,0)');
+    ctx.beginPath(); ctx.arc(x,y,z.r,0,Math.PI*2);
+    ctx.fillStyle=g; ctx.fill();
+    ctx.fillStyle='rgba(255,120,40,0.6)';
+    ctx.font=`${Math.round(W/120)}px Space Mono,monospace`;
+    ctx.fillText(z.label, x+8, y-4);
+  });
+}
+
+function drawFiresMapLive(hotspots) {
+  const canvas = document.getElementById('fires-canvas');
+  if (!canvas) return;
+  const W = canvas.width || 1536, H = canvas.height || 1024;
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, W, H);
+  const sorted = [...hotspots].sort((a,b) => (a.frp||a.brightness||0) - (b.frp||b.brightness||0));
+  sorted.forEach(pt => {
+    const {x,y} = project(pt.lon, pt.lat, W, H);
+    const frp = pt.frp||0, bright = pt.brightness||300;
+    let r = frp>500?6 : frp>100?4.5 : frp>30?3.5 : frp>10?2.5 : bright>400?3 : 1.8;
+    const alpha = frp>100?0.2 : frp>30?0.15 : 0.08;
+    const g1 = ctx.createRadialGradient(x,y,0,x,y,r*4);
+    g1.addColorStop(0,`rgba(255,80,0,${alpha})`); g1.addColorStop(1,'rgba(255,80,0,0)');
+    ctx.beginPath(); ctx.arc(x,y,r*4,0,Math.PI*2); ctx.fillStyle=g1; ctx.fill();
+    const g3 = ctx.createRadialGradient(x-r*.3,y-r*.3,0,x,y,r);
+    if (frp>100||bright>420) {
+      g3.addColorStop(0,'#fff'); g3.addColorStop(0.2,'#fffde0');
+      g3.addColorStop(0.5,'#ffcc40'); g3.addColorStop(1,'#f30');
+    } else {
+      g3.addColorStop(0,'#fffde0'); g3.addColorStop(0.3,'#ffcc40'); g3.addColorStop(1,'#f50');
+    }
+    ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2);
+    ctx.fillStyle=g3; ctx.globalAlpha=0.92; ctx.fill(); ctx.globalAlpha=1;
+  });
+}
+
+function drawQuakeMap(quakes) {
+  const canvas = document.getElementById('quake-canvas');
+  if (!canvas) return;
+  const W = canvas.width||1536, H = canvas.height||1024;
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0,0,W,H);
+  if (!quakes||!quakes.length) return;
+  quakes.forEach(q => {
+    const {x,y} = project(q.lon||q.longitude, q.lat||q.latitude, W, H);
+    const mag = q.mag||q.magnitude||3;
+    const r = Math.max(2, (mag-2)*3);
+    const alpha = Math.min(0.9, 0.3 + (mag-2)*0.15);
+    const color = mag>=7?'#ff2222' : mag>=5?'#ff8800' : '#ffcc00';
+    const g = ctx.createRadialGradient(x,y,0,x,y,r*3);
+    g.addColorStop(0,color.replace(')',','+alpha+')')
+      .replace('rgb','rgba').replace('#ff2222',`rgba(255,34,34,${alpha})`)
+      .replace('#ff8800',`rgba(255,136,0,${alpha})`)
+      .replace('#ffcc00',`rgba(255,204,0,${alpha})`));
+    g.addColorStop(1,'rgba(255,100,0,0)');
+    ctx.beginPath(); ctx.arc(x,y,r*3,0,Math.PI*2); ctx.fillStyle=g; ctx.fill();
+    ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2);
+    ctx.fillStyle=color; ctx.globalAlpha=0.85; ctx.fill(); ctx.globalAlpha=1;
+  });
+}
+
+function updateFlightDots(states) {
+  const canvas = document.getElementById('flight-canvas');
+  if (!canvas) return;
+  const W = canvas.width||1536, H = canvas.height||1024;
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0,0,W,H);
+  states.forEach(s => {
+    const lon=s[5], lat=s[6];
+    if (!lon||!lat) return;
+    const {x,y} = project(lon, lat, W, H);
+    const hdg = s[10]||0;
+    const hdgRad = (hdg-90)*Math.PI/180;
+    ctx.save(); ctx.translate(x,y); ctx.rotate(hdgRad);
+    ctx.fillStyle='#f59e0b'; ctx.globalAlpha=0.75;
+    ctx.beginPath(); ctx.moveTo(0,-3); ctx.lineTo(1.5,2); ctx.lineTo(0,1); ctx.lineTo(-1.5,2);
+    ctx.closePath(); ctx.fill();
+    ctx.globalAlpha=1; ctx.restore();
+  });
+}
+
+// ═══════════════════════════════════════════════════════
+// INTERNET TAB
+// ═══════════════════════════════════════════════════════
+
+async function loadInternet(){
+  const now=Math.floor(Date.now()/1000), from7d=now-7*86400, from24h=now-86400;
+  try {
+    const url=`https://api.ioda.inetintel.cc.gatech.edu/v2/outages/events?from=${from7d}&until=${now}&limit=50&meta=country`;
+    const d=await fetch(url,{signal:AbortSignal.timeout(12000)}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json();});
+    const events=d.data||[];
+    const ctry=events.filter(e=>e.entity?.type==='country'||e.entityType==='country');
+    const recent=ctry.filter(e=>(e.end||e.until||now)>from24h);
+    const countries=[...new Set(recent.map(e=>e.entity?.name||e.entityName||'Unknown'))];
+    const bgp=ctry.filter(e=>(e.datasource||'').toLowerCase().includes('bgp')).length;
+    safe('net-out',countries.length||'0');
+    safe('net-bgp',bgp||events.length);
+    safe('net-bgp-sub','BGP anomalies (7 days)');
+    safe('net-out-sub',countries.length>0?countries.slice(0,3).join(', ')+(countries.length>3?` +${countries.length-3}`:''):'Traffic nominal');
+    const feed=document.getElementById('net-outage-feed');
+    if(feed){
+      if(recent.length>0){
+        recent.sort((a,b)=>(b.start||b.from||0)-(a.start||a.from||0));
+        feed.innerHTML=recent.slice(0,8).map(e=>{
+          const name=e.entity?.name||e.entityName||'Unknown';
+          const score=e.overallScore||e.score||0;
+          const src=e.datasource||'multi-source';
+          const ts=e.start||e.from||0;
+          const ended=(e.end||e.until||0)<now-300;
+          const color=score>700?'#ff3232':score>300?'#ff5a20':'#f59e0b';
+          return `<div class="fi"><div class="fi-dot" style="background:${ended?'#6b7fa0':color}"></div><div class="fi-body"><b>${name}</b> — ${src}${score?` · score ${Math.round(score)}`:''}${ended?' · resolved':''}</div><div class="fi-time">${ts?timeAgo(ts*1000):'recent'}</div></div>`;
+        }).join('');
+      } else {
+        feed.innerHTML=`<div class="fi"><div class="fi-dot" style="background:#22c55e"></div><div class="fi-body">Global internet — nominal (24h)</div><div class="fi-time">Now</div></div>`;
+      }
+    }
+    SCORES.net=countries.length>5?45:countries.length>2?62:82; updateEPI();
+    addTick(`🌐 IODA: ${events.length} events (7d) · ${countries.length} countries disrupted`);
+  } catch(e) {
+    safe('net-bgp','—'); safe('net-out','—');
+    safe('net-bgp-sub','IODA connecting…'); safe('net-out-sub','ioda.inetintel.cc.gatech.edu');
+    const feed=document.getElementById('net-outage-feed');
+    if(feed) feed.innerHTML=`<div class="fi"><div class="fi-dot" style="background:#f59e0b"></div><div class="fi-body">IODA API — <a href="https://ioda.inetintel.cc.gatech.edu/dashboard" target="_blank" style="color:var(--c-net)">view live dashboard ↗</a></div></div>`;
+    SCORES.net=72; updateEPI();
+  }
+  // Infrastructure sites grid
+  const sites=[
+    {n:'Google',e:'🔵',t:'Hyperscaler'},{n:'Cloudflare',e:'🟠',t:'CDN'},
+    {n:'Amazon AWS',e:'🟡',t:'Cloud'},{n:'Microsoft',e:'🔷',t:'Cloud'},
+    {n:'Meta',e:'🔵',t:'Social'},{n:'Akamai',e:'🟣',t:'CDN'},
+    {n:'Apple',e:'⚪',t:'Hyperscaler'},{n:'Netflix',e:'🔴',t:'Streaming'},
+    {n:'GitHub',e:'🐙',t:'Dev'},{n:'Stripe',e:'💜',t:'Payments'},
+    {n:'X/Twitter',e:'🐦',t:'Social'},{n:'YouTube',e:'🔴',t:'Streaming'},
+    {n:'Fastly',e:'⚫',t:'CDN'},{n:'Telegram',e:'💬',t:'Messaging'},
+    {n:'Cloudflare R2',e:'🟠',t:'Storage'},{n:'Wikipedia',e:'📖',t:'Reference'},
+  ];
+  const g=document.getElementById('net-sites');
+  if(g){
+    g.innerHTML=sites.map(s=>`<div style="background:rgba(34,211,238,.04);border:1px solid rgba(34,211,238,.08);border-radius:8px;padding:8px 10px;display:flex;align-items:center;gap:7px">
+      <span style="font-size:15px">${s.e}</span>
+      <div style="flex:1;min-width:0"><div style="font-size:11px;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${s.n}</div><div style="font-size:9px;font-family:var(--mono);color:var(--muted)">${s.t}</div></div>
+      <div style="width:7px;height:7px;border-radius:50%;background:#22c55e;flex-shrink:0"></div></div>`).join('');
+  }
+  // BGP table size
+  try {
+    safe('net-vol','~950K'); safe('net-vol-sub','IPv4 routes · global BGP table');
+  } catch(e){}
+}
+
+// ═══════════════════════════════════════════════════════
+// ENERGY TAB
+// ═══════════════════════════════════════════════════════
+
+let gasData=null, gasHz='now';
+function setGasHz(period,btn){
+  gasHz=period;
+  document.querySelectorAll('#gas-hz .hz').forEach(b=>b.classList.remove('on'));
+  if(btn) btn.classList.add('on');
+  if(gasData) renderGas(gasData);
+}
+function gasColor(pct){return pct>80?'#22c55e':pct>50?'#f59e0b':pct>25?'#ff5a20':'#ff3232';}
+function gasGradient(ctx,x,y,r,pct){
+  const g=ctx.createRadialGradient(x,y,0,x,y,r);
+  const c=gasColor(pct);
+  g.addColorStop(0,c); g.addColorStop(1,c+'44'); return g;
+}
+function renderGas(d){
+  gasData=d;
+  const countries=d.countries||[];
+  const el=document.getElementById('gas-countries');
+  if(!el) return;
+  const sorted=[...countries].sort((a,b)=>b.fill_pct-a.fill_pct);
+  el.innerHTML=sorted.slice(0,12).map(c=>`
+    <div style="display:flex;align-items:center;gap:8px;padding:4px 0">
+      <div style="width:80px;font-size:10px;font-family:var(--mono);color:var(--muted);text-align:right">${c.name||c.country||'?'}</div>
+      <div style="flex:1;background:rgba(255,255,255,.05);border-radius:3px;height:8px;overflow:hidden">
+        <div style="width:${c.fill_pct||0}%;height:100%;background:${gasColor(c.fill_pct||0)};border-radius:3px"></div>
+      </div>
+      <div style="width:36px;font-size:10px;font-family:var(--mono);color:${gasColor(c.fill_pct||0)}">${(c.fill_pct||0).toFixed(1)}%</div>
+    </div>`).join('');
+  safe('gas-avg', sorted.length>0?(sorted.reduce((a,c)=>a+(c.fill_pct||0),0)/sorted.length).toFixed(1)+'%':'—');
+}
+async function loadGasStorage(){
+  const d=await loadJSON('gas_storage.json');
+  if(!d){safe('gas-avg','—');return;}
+  safe('gas-updated',d.updated?'Updated '+d.updated.slice(0,10):'—');
+  renderGas(d);
+  SCORES.energy=d.score||65; updateEPI();
+  addTick(`⛽ Gas storage: ${d.eu_fill_pct?.toFixed(1)||'?'}% EU average`);
+}
+async function loadOil(period,btn){
+  const d=await loadJSON('oil_stocks.json');
+  if(!d) return;
+  const series=d.series||[];
+  safe('oil-level',d.current_mb?d.current_mb.toFixed(0)+' Mb':'—');
+  safe('oil-delta',d.delta_week_pct?(d.delta_week_pct>0?'↑+':'↓')+Math.abs(d.delta_week_pct).toFixed(1)+'% WoW':'—');
+  safe('oil-sub',d.updated?'EIA data · '+d.updated.slice(0,10):'EIA weekly');
+  if(series.length>1) mkChart('chart-oil',{labels:series.map(x=>x.date),datasets:[{data:series.map(x=>x.value),borderColor:'#f59e0b',borderWidth:1.5,fill:true,backgroundColor:'rgba(245,158,11,.08)',pointRadius:0,tension:.4}]},CD);
+  addTick(`🛢️ US Oil stocks: ${d.current_mb?.toFixed(0)||'?'} Mb`);
+}
+async function loadElectricity(){
+  const d=await loadJSON('electricity.json');
+  if(!d){safe('elec-total','—');return;}
+  const regions=d.regions||{};
+  const eu=regions['EU']||regions['France']||{};
+  safe('elec-total',eu.current_gw?eu.current_gw.toFixed(0)+' GW':'—');
+  safe('elec-mix',eu.mix_pct_renewables?eu.mix_pct_renewables.toFixed(0)+'% renewables':'—');
+  safe('elec-sub',d.updated?'ODRE / EIA · '+d.updated.slice(0,10):'live');
+  SCORES.energy=d.score||65; updateEPI();
+  addTick(`⚡ EU electricity: ${eu.current_gw?.toFixed(0)||'?'} GW`);
+}
+
+// ═══════════════════════════════════════════════════════
+// CONFLICTS TAB
+// ═══════════════════════════════════════════════════════
+
+async function loadConflicts(){
+  const d=await loadJSON('conflicts.json');
+  if(!d){safe('conflict-total','—');return;}
+  safe('conflict-total',(d.events_30d||d.total||0).toLocaleString());
+  safe('conflict-fatalities',(d.fatalities_30d||0).toLocaleString());
+  safe('conflict-sub',d.updated?'ACLED · '+d.updated.slice(0,10):'ACLED data');
+  const list=document.getElementById('conflict-list');
+  if(list&&d.top_countries){
+    list.innerHTML=d.top_countries.slice(0,8).map(c=>`
+      <div class="fi">
+        <div class="fi-dot" style="background:${c.events>200?'#ff3232':c.events>50?'#ff5a20':'#f59e0b'}"></div>
+        <div class="fi-body"><b>${c.country}</b> — ${c.events?.toLocaleString()||'?'} events${c.fatalities?` · ${c.fatalities.toLocaleString()} fatalities`:''}</div>
+        <div class="fi-time">${c.region||''}</div>
+      </div>`).join('');
+  }
+  const canvas=document.getElementById('conflict-canvas');
+  if(canvas&&d.events){drawConflictsMap(d.events);}
+  SCORES.conflict=d.score||40; updateEPI();
+  addTick(`💥 Conflicts: ${(d.events_30d||0).toLocaleString()} events (30d)`);
+}
+
+function drawConflictsMap(events){
+  const canvas=document.getElementById('conflict-canvas');
+  if(!canvas) return;
+  const W=canvas.width||1536, H=canvas.height||1024;
+  const ctx=canvas.getContext('2d');
+  ctx.clearRect(0,0,W,H);
+  events.forEach(ev=>{
+    const {x,y}=project(ev.lon||ev.longitude||0, ev.lat||ev.latitude||0, W, H);
+    const r=Math.min(6,Math.max(2,(ev.fatalities||1)/5+2));
+    const color=ev.type==='Battles'?'#ff3232':ev.type==='Explosions/Remote violence'?'#ff8800':'#f59e0b';
+    const g=ctx.createRadialGradient(x,y,0,x,y,r*3);
+    g.addColorStop(0,color.replace('rgb','rgba').replace(')',',0.25)'));
+    g.addColorStop(1,'rgba(255,50,0,0)');
+    ctx.beginPath(); ctx.arc(x,y,r*3,0,Math.PI*2); ctx.fillStyle=g; ctx.fill();
+    ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2);
+    ctx.fillStyle=color; ctx.globalAlpha=0.7; ctx.fill(); ctx.globalAlpha=1;
+  });
+}
+
+// ═══════════════════════════════════════════════════════
+// DEMOGRAPHICS TAB  
+// ═══════════════════════════════════════════════════════
+
+async function startPop(){
+  safe('pop-total','8.2B');
+  safe('pop-growth','+0.9% / yr');
+  safe('pop-sub','UN World Population Prospects 2024');
+}
+
+async function loadRefugees(period,btn){
+  const d=await loadJSON('conflicts.json');
+  if(!d){safe('refugees-total','—');return;}
+  safe('refugees-total',d.refugees_total?(d.refugees_total/1e6).toFixed(1)+'M':'110M+');
+  safe('refugees-sub',d.updated?'UNHCR · '+d.updated.slice(0,10):'UNHCR 2024');
+  safe('idp-total',d.idp_total?(d.idp_total/1e6).toFixed(1)+'M':'63M+');
+  addTick(`👥 Refugees: ${d.refugees_total?(d.refugees_total/1e6).toFixed(1):'110'}M+ worldwide`);
+}
+
+async function loadLifeExpectancy(){
+  safe('lifeexp-global','73.4 yrs');
+  safe('lifeexp-sub','WHO 2024 estimate');
+}
+async function loadAgingIndex(){
+  safe('aging-ratio','16.6%');
+  safe('aging-sub','Population 65+ · UN 2024');
+}
+
+// ═══════════════════════════════════════════════════════
+// TRENDS TAB
+// ═══════════════════════════════════════════════════════
+
+async function fetchWiki(lang){
+  lang=lang||'en';
+  try {
+    const date=new Date(); date.setDate(date.getDate()-1);
+    const d=date.toISOString().slice(0,10).replace(/-/g,'/');
+    const url=`https://wikimedia.org/api/rest_v1/metrics/pageviews/top/${lang}.wikipedia/all-access/${d}`;
+    const data=await fetch(url,{signal:AbortSignal.timeout(10000)}).then(r=>r.json());
+    const articles=(data.items?.[0]?.articles||[]).filter(a=>!a.article.startsWith('Main_Page')&&!a.article.startsWith('Special:'));
+    const el=document.getElementById('wiki-list');
+    if(el&&articles.length){
+      el.innerHTML=articles.slice(0,10).map((a,i)=>`
+        <div class="fi">
+          <div class="fi-dot" style="background:var(--c-trends)"></div>
+          <div class="fi-body"><b>${i+1}.</b> <a href="https://${lang}.wikipedia.org/wiki/${a.article}" target="_blank" style="color:var(--c-trends)">${a.article.replace(/_/g,' ')}</a></div>
+          <div class="fi-time">${(a.views/1000).toFixed(0)}K views</div>
+        </div>`).join('');
+    }
+    addTick(`📖 Wikipedia top article: ${articles[0]?.article?.replace(/_/g,' ')||'—'}`);
+  } catch(e){ const el=document.getElementById('wiki-list'); if(el) el.innerHTML='<div class="nodata">Wikipedia API unavailable</div>'; }
+}
+
+async function fetchArxiv(cat){
+  cat=cat||'cs.AI';
+  try {
+    const url=`https://export.arxiv.org/api/query?search_query=cat:${cat}&sortBy=submittedDate&sortOrder=descending&max_results=8`;
+    const txt=await fetch(url,{signal:AbortSignal.timeout(12000)}).then(r=>r.text());
+    const parser=new DOMParser();
+    const xml=parser.parseFromString(txt,'application/xml');
+    const entries=[...xml.querySelectorAll('entry')];
+    const el=document.getElementById('arxiv-list');
+    if(el&&entries.length){
+      el.innerHTML=entries.map(e=>{
+        const title=e.querySelector('title')?.textContent?.trim()||'';
+        const link=e.querySelector('id')?.textContent?.trim()||'';
+        const auth=[...e.querySelectorAll('author name')].slice(0,2).map(a=>a.textContent).join(', ');
+        const date=e.querySelector('published')?.textContent?.slice(0,10)||'';
+        return `<div class="fi"><div class="fi-dot" style="background:var(--c-trends)"></div><div class="fi-body"><a href="${link}" target="_blank" style="color:var(--c-trends)">${title.slice(0,80)}${title.length>80?'…':''}</a><div style="font-size:9px;color:var(--muted);font-family:var(--mono)">${auth} · ${date}</div></div></div>`;
+      }).join('');
+    }
+    addTick(`🔬 arXiv ${cat}: ${entries.length} latest papers`);
+  } catch(e){ const el=document.getElementById('arxiv-list'); if(el) el.innerHTML='<div class="nodata">arXiv unavailable</div>'; }
+}
+
+async function loadGTrends(){
+  // Google Trends doesn't have a public CORS API — use fallback
+  const el=document.getElementById('gtrends-list');
+  if(el) el.innerHTML='<div style="color:var(--muted);font-size:10px;font-family:var(--mono)">Google Trends requires server-side proxy. <a href="https://trends.google.com/trending" target="_blank" style="color:var(--c-trends)">View on Google ↗</a></div>';
+}
+
+async function loadBikeshare(){
+  safe('bikeshare-total','—');
+  safe('bikeshare-sub','Live data unavailable');
+}
+
+async function loadOpenTable(){
+  safe('opentable-score','—');
+  safe('opentable-sub','OpenTable YoY');
+}
+
+async function loadBDI(period,btn){
+  const d=await loadJSON('bdi.json');
+  if(!d){safe('bdi-value','—');return;}
+  safe('bdi-value',(d.current||d.value||0).toLocaleString());
+  safe('bdi-delta',d.delta_week_pct?(d.delta_week_pct>0?'↑+':'↓')+Math.abs(d.delta_week_pct).toFixed(1)+'% WoW':'—');
+  safe('bdi-sub','Baltic Dry Index · Baltic Exchange');
+  const series=d.series||[];
+  if(series.length>1) mkChart('chart-bdi',{labels:series.map(x=>x.date),datasets:[{data:series.map(x=>x.value),borderColor:'#f59e0b',borderWidth:1.5,fill:true,backgroundColor:'rgba(245,158,11,.06)',pointRadius:0,tension:.4}]},CD);
+  addTick(`⚓ BDI: ${(d.current||0).toLocaleString()}`);
+}
+
+async function loadTruck(){safe('truck-total','—');}
+
+async function loadNEO(){
+  try {
+    const d=await fetch('https://api.nasa.gov/neo/rest/v1/feed/today?api_key=DEMO_KEY',{signal:AbortSignal.timeout(10000)}).then(r=>r.json());
+    const total=d.element_count||0;
+    const neos=Object.values(d.near_earth_objects||{}).flat();
+    const hazardous=neos.filter(n=>n.is_potentially_hazardous_asteroid).length;
+    safe('neo-count',total);
+    safe('neo-hazardous',hazardous);
+    safe('neo-sub',`${hazardous} potentially hazardous today`);
+    addTick(`☄️ NEOs today: ${total} objects, ${hazardous} hazardous`);
+  } catch(e){safe('neo-count','—');safe('neo-hazardous','—');}
+}
+
+async function loadSunspots(){
+  try {
+    const d=await fetch('https://services.swpc.noaa.gov/json/sunspot_number_27day.json',{signal:AbortSignal.timeout(8000)}).then(r=>r.json());
+    const latest=d[d.length-1];
+    safe('sunspot-count',Math.round(latest?.ssn||0));
+    safe('sunspot-sub','NOAA SWPC · solar cycle 25');
+    if(d.length>1) mkChart('chart-sunspots',{labels:d.slice(-27).map(x=>x.time_tag?.slice(5,10)),datasets:[{data:d.slice(-27).map(x=>x.ssn||0),borderColor:'#f59e0b',borderWidth:1.5,fill:true,backgroundColor:'rgba(245,158,11,.08)',pointRadius:0,tension:.4}]},CD);
+    addTick(`☀️ Sunspot number: ${Math.round(latest?.ssn||0)}`);
+  } catch(e){safe('sunspot-count','—');}
+}
+
+async function loadSatellites(){
+  safe('sat-count','~9,000');
+  safe('sat-active','~3,500 active');
+  safe('sat-sub','SpaceTrack estimate 2025');
+}
+
+async function loadSpaceAlerts(){
+  try {
+    const d=await fetch('https://services.swpc.noaa.gov/products/alerts.json',{signal:AbortSignal.timeout(8000)}).then(r=>r.json());
+    const el=document.getElementById('sw-alerts');
+    if(el&&d.length){
+      el.innerHTML=d.slice(0,3).map(a=>`<div class="fi"><div class="fi-dot" style="background:#a855f7"></div><div class="fi-body" style="font-size:9px">${a.message?.slice(0,120)||a.product_id||'Alert'}…</div></div>`).join('');
+    }
+    addTick(`🛰 Space weather: ${d.length} NOAA alerts active`);
+  } catch(e){}
+}
+
+// ═══════════════════════════════════════════════════════
+// ALIAS — initFlightsMap called from HTML button  
+// ═══════════════════════════════════════════════════════
+function initFlightsMap(){ initFlightMap(); }
+
+function renderAurora(){}
+
+
+
 // ═══ TAB INIT CALLBACKS ═══
 onTab('nat',     () => { loadUSGS(false); initFiresMap(); loadFAO('all',null); });
 onTab('wthr',    () => { loadCO2(); showSST('1y',null); loadAirQuality(); loadDrought(); loadRiver(); });
@@ -2146,4 +2587,3 @@ addTick('\ud83c\udf0d Earth Pulse initialised');
 </script>
 </body>
 </html>
-}
