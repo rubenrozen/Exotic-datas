@@ -1816,10 +1816,17 @@ async function loadSolarWind(){
 // TRADE FLOWS
 // ═══════════════════════════════
 let flightDots2=[];
+let flightMapDone = false;
 async function initFlightMap(){
+  if (flightMapDone) return;
+  flightMapDone = true;
   // Draw canvas world map as background
   setTimeout(() => initFlightsMap(), 50);
   await refreshFlights();
+  // Auto-refresh every 60s (silently, no ticker spam)
+  setInterval(async () => {
+    await refreshFlights();
+  }, 60000);
 }
 async function refreshFlights(){
   let states = [];
@@ -2200,7 +2207,7 @@ function drawQuakeMap(quakes) {
 }
 
 function updateFlightDots(states) {
-  const canvas = document.getElementById('flight-canvas');
+  const canvas = document.getElementById('flights-canvas');
   if (!canvas) return;
   const W = canvas.width||1536, H = canvas.height||1024;
   const ctx = canvas.getContext('2d');
