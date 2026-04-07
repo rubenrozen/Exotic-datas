@@ -662,7 +662,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
         <div style="margin-left:auto;display:flex;align-items:center;gap:10px">
           <div class="bsm" id="flights-total" style="color:var(--c-trade)">—</div>
           <div class="unit">flights</div>
-          <div class="delta" id="flights-vs19" style="font-size:11px"></div>
+          
           
         </div>
       </div>
@@ -1236,7 +1236,7 @@ function onTab(id,fn){INIT[id]=()=>{if(!INITED[id]){INITED[id]=true;fn();}};}
 
 // ═══ TICKER ═══
 const ticks=[];
-function addTick(t){ticks.push(t);renderTicker();}
+function addTick(t){ticks.push(t); if(ticks.length>50) ticks.shift(); renderTicker();}
 function renderTicker(){
   if(ticks.length<2) return;
   const tt=document.getElementById('ticker-track'); if(!tt) return;
@@ -1823,12 +1823,10 @@ async function initFlightMap(){
   // Draw canvas world map as background
   setTimeout(() => initFlightsMap(), 50);
   await refreshFlights();
-  // Auto-refresh every 60s (silently, no ticker spam)
-  setInterval(async () => {
-    await refreshFlights();
-  }, 60000);
+  // Auto-refresh every 60s silencieusement
+  setInterval(() => refreshFlights(true), 60000);
 }
-async function refreshFlights(){
+async function refreshFlights(silent=false){
   let states = [];
 
   // Primary: air_traffic.json (GitHub Actions, updated every ~6h, no CORS issues)
@@ -1902,7 +1900,7 @@ async function refreshFlights(){
     if (!lon || !lat) return;
     if (lat>20 && lat<72 && lon>-130 && lon<-60) na++;
     else if (lat>35 && lat<72 && lon>-10 && lon<42) eu++;
-    else if (lat>-15 && lat<60 && lon>60 && lon<155) as++;
+    else if (lat>-50 && lat<60 && lon>60 && lon<180) as++;  // Asie + Australie + Océanie
     else oth++;
   });
   setTimeout(() => updateFlightDots(states), 50);
@@ -1910,13 +1908,10 @@ async function refreshFlights(){
   safe('fl-eu', eu.toLocaleString());
   safe('fl-as', as.toLocaleString());
   safe('fl-oth', oth.toLocaleString());
-  const base = 14000;
-  const vs = Math.round((states.length - base) / base * 100);
-  const vsEl = document.getElementById('flights-vs19');
-  if (vsEl) vsEl.innerHTML = `<span class="${vs>=-5?'dn':'up'}">${vs>=0?'+':''}${vs}% vs 2019 baseline</span>`;
+  // No relative baseline displayed
   SCORES.trade = Math.min(88, Math.max(20, Math.round(states.length/140)));
   updateEPI();
-  addTick(`✈️ ${states.length.toLocaleString()} active flights`);
+  if (!silent) addTick(`✈️ ${states.length.toLocaleString()} active flights`);
   const upd = document.getElementById('flights-updated');
   if (upd) upd.textContent = 'Last updated: ' + new Date().toLocaleTimeString();
 }
