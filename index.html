@@ -663,7 +663,7 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
           <div class="bsm" id="flights-total" style="color:var(--c-trade)">—</div>
           <div class="unit">flights</div>
           <div class="delta" id="flights-vs19" style="font-size:11px"></div>
-          <button class="hz" id="btn-refresh-flights" onclick="refreshFlights()">↺</button>
+          
         </div>
       </div>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:8px">
@@ -1854,10 +1854,16 @@ async function refreshFlights(){
   // Second live fallback: adsb.lol (regional queries)
   if (states.length < 50) {
     try {
+      // adsb.lol: dist en nm, max ~250. 8 points pour couvrir la planète.
       const regions = [
-        'https://api.adsb.lol/v2/lat/45/lon/-100/dist/3000',
-        'https://api.adsb.lol/v2/lat/50/lon/15/dist/3000',
-        'https://api.adsb.lol/v2/lat/30/lon/110/dist/3000',
+        'https://api.adsb.lol/v2/lat/50/lon/-95/dist/250',   // N. America E
+        'https://api.adsb.lol/v2/lat/50/lon/-120/dist/250',  // N. America W
+        'https://api.adsb.lol/v2/lat/48/lon/10/dist/250',    // Europe W
+        'https://api.adsb.lol/v2/lat/48/lon/40/dist/250',    // Europe E
+        'https://api.adsb.lol/v2/lat/35/lon/100/dist/250',   // Asia C
+        'https://api.adsb.lol/v2/lat/25/lon/55/dist/250',    // Middle East
+        'https://api.adsb.lol/v2/lat/5/lon/110/dist/250',    // SE Asia
+        'https://api.adsb.lol/v2/lat/-25/lon/135/dist/250',  // Australia
       ];
       const results = await Promise.allSettled(
         regions.map(u => fetch(u, {signal: AbortSignal.timeout(8000)}).then(r => r.json()))
