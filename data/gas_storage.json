@@ -1787,27 +1787,27 @@
     {
       "date": "2026-04-03",
       "pct": 28.0,
-      "gasInStorage": 316.3,
+      "gasInStorage": 316.4,
       "trend": 0.05
     },
     {
       "date": "2026-04-04",
       "pct": 28.2,
       "gasInStorage": 318.8,
-      "trend": 0.22
+      "trend": 0.21
     },
     {
       "date": "2026-04-05",
       "pct": 28.4,
-      "gasInStorage": 321.5,
+      "gasInStorage": 321.4,
       "trend": 0.23
     }
   ],
   "countries": {
     "DE": {
       "pct": 22.6,
-      "trend": 0.3,
-      "gasInStorage": 55.8
+      "trend": 0.29,
+      "gasInStorage": 55.7
     },
     "FR": {
       "pct": 22.8,
@@ -1857,5 +1857,5 @@
   },
   "alert_threshold": 20.0,
   "score": 28,
-  "updated": "2026-04-07T14:06:04.476154Z"
+  "updated": "2026-04-07T17:24:28.362879Z"
 }
