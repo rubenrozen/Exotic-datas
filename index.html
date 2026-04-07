@@ -1240,6 +1240,10 @@ function addTick(t){ticks.push(t); if(ticks.length>50) ticks.shift(); renderTick
 function renderTicker(){
   if(ticks.length<2) return;
   const tt=document.getElementById('ticker-track'); if(!tt) return;
+  // Ne reconstruire que si le nombre de ticks a changé
+  const current = tt.querySelectorAll('.tick-item').length;
+  const target = ticks.length * 2;
+  if (current === target) return;  // Pas de changement → pas de saccade
   const doubled=[...ticks,...ticks];
   tt.innerHTML=doubled.map(t=>`<div class="tick-item"><span class="tick-sep">◆</span><span class="tick-val">${t}</span></div>`).join('');
 }
@@ -1920,13 +1924,6 @@ async function refreshFlights(silent=false){
 }
 
 
-async function initFlightMap() {
-  setTimeout(() => initFlightsMap(), 100);
-  await refreshFlights();
-  // Auto-refresh every 30 seconds
-  if (flightRefreshTimer) clearInterval(flightRefreshTimer);
-  flightRefreshTimer = setInterval(refreshFlights, 30000);
-}
 
 // ── AISStream WebSocket ──
 let aisSocket = null;
