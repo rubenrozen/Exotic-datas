@@ -1829,15 +1829,18 @@ async function initFlightMap(){
 async function refreshFlights(silent=false){
   let states = [];
 
-  // Primary: air_traffic.json (GitHub Actions, updated every ~6h, no CORS issues)
-  try {
-    const d = await loadJSON('air_traffic.json');
-    if (d && d.states && d.states.length > 0) {
-      states = d.states;
-    }
-  } catch(e) {}
+  // Primary: air_traffic.json pour le premier chargement seulement
+  // Les refresh silencieux (auto 60s) vont direct au live
+  if (!silent) {
+    try {
+      const d = await loadJSON('air_traffic.json');
+      if (d && d.states && d.states.length > 0) {
+        states = d.states;
+      }
+    } catch(e) {}
+  }
 
-  // Live fallback: adsb.fi public API (CORS-enabled, free)
+  // Live: adsb.fi (CORS-enabled, global, free)
   if (states.length < 50) {
     try {
       const d = await fetch('https://api.adsb.fi/v1/flights', {
