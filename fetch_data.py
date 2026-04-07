@@ -447,23 +447,28 @@ else:
 # ── [8] OpenSky ───────────────────────────────────────────
 print("[8/9] Air Traffic — OpenSky...")
 try:
-    # Primary: adsb.lol — no auth, server-side has no CORS issues
+    # Primary: adsb.fi — global endpoint, no auth, no rate limit
     states = []
     try:
-        d = fetch_json("https://api.adsb.lol/v2/point/0/0/20000")
-        ac = d.get("ac") or d.get("aircraft") or []
-        states = [[a.get("hex",""), (a.get("flight","") or "").strip(), "",
+        d = fetch_json("https://api.adsb.fi/v1/flights")
+        ac = d.get("flights") or d.get("ac") or d.get("aircraft") or []
+        states = [[a.get("hex",""), (a.get("callsign") or a.get("flight","") or "").strip(), "",
                    None, None, a.get("lon"), a.get("lat"),
-                   (a.get("alt_baro") or 0)*0.3048, False,
-                   (a.get("gs") or 0)*0.514444, a.get("track") or 0,
+                   (a.get("alt_baro") or a.get("altitude") or 0)*0.3048, False,
+                   (a.get("gs") or a.get("speed") or 0)*0.514444, a.get("track") or 0,
                    None,None,None,"",False,0,None]
                   for a in ac if a.get("lat") and a.get("lon")]
-        print(f"  adsb.lol: {len(states)} aircraft")
+        print(f"  adsb.fi: {len(states)} aircraft")
     except Exception as e:
-        print(f"  adsb.lol failed: {e}, trying OpenSky...")
+        print(f"  adsb.fi failed: {e}, trying OpenSky...")
+    # Fallback: OpenSky (rate-limited but works server-side)
     if not states:
-        d = fetch_json("https://opensky-network.org/api/states/all")
-        states = d.get("states",[])
+        try:
+            d = fetch_json("https://opensky-network.org/api/states/all")
+            states = d.get("states",[])
+            print(f"  OpenSky: {len(states)} aircraft")
+        except Exception as e2:
+            print(f"  OpenSky failed: {e2}")
     by_reg = {"Europe":0,"North America":0,"Asia-Pacific":0,"Middle East":0,"Other":0}
     for s in states:
         lon=s[5]; lat=s[6]
