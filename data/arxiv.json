@@ -3,198 +3,200 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Enhancing Robustness of Federated Learning via Server Learning",
-        "summary": "This paper explores the use of server learning for enhancing the robustness of federated learning against malicious attacks even when clients' training data are not independent and identically distrib",
-        "link": "http://arxiv.org/abs/2604.03226v1",
-        "date": "2026-04-03",
+        "title": "Early Stopping for Large Reasoning Models via Confidence Dynamics",
+        "summary": "Large reasoning models rely on long chain-of-thought generation to solve complex problems, but extended reasoning often incurs substantial computational cost and can even degrade performance due to ov",
+        "link": "http://arxiv.org/abs/2604.04930v1",
+        "date": "2026-04-06",
         "authors": [
-          "Van Sy Mai",
-          "Kushal Chakrabarti",
-          "Richard J. La"
+          "Parsa Hosseini",
+          "Sumit Nawathe",
+          "Mahdi Salmani"
         ]
       },
       {
-        "title": "PR3DICTR: A modular AI framework for medical 3D image-based detection and outcome prediction",
-        "summary": "Three-dimensional medical image data and computer-aided decision making, particularly using deep learning, are becoming increasingly important in the medical field. To aid in these developments we int",
-        "link": "http://arxiv.org/abs/2604.03203v1",
-        "date": "2026-04-03",
+        "title": "Your Pre-trained Diffusion Model Secretly Knows Restoration",
+        "summary": "Pre-trained diffusion models have enabled significant advancements in All-in-One Restoration (AiOR), offering improved perceptual quality and generalization. However, diffusion-based restoration metho",
+        "link": "http://arxiv.org/abs/2604.04924v1",
+        "date": "2026-04-06",
         "authors": [
-          "Daniel C. MacRae",
-          "Luuk van der Hoek",
-          "Robert van der Wal"
+          "Sudarshan Rajagopalan",
+          "Vishal M. Patel"
         ]
       },
       {
-        "title": "Coupled Control, Structured Memory, and Verifiable Action in Agentic AI (SCRAT -- Stochastic Control with Retrieval and Auditable Trajectories): A Comparative Perspective from Squirrel Locomotion and Scatter-Hoarding",
-        "summary": "Agentic AI is increasingly judged not by fluent output alone but by whether it can act, remember, and verify under partial observability, delay, and strategic observation. Existing research often stud",
-        "link": "http://arxiv.org/abs/2604.03201v1",
-        "date": "2026-04-03",
+        "title": "Vero: An Open RL Recipe for General Visual Reasoning",
+        "summary": "What does it take to build a visual reasoner that works across charts, science, spatial understanding, and open-ended tasks? The strongest vision-language models (VLMs) show such broad visual reasonin",
+        "link": "http://arxiv.org/abs/2604.04917v1",
+        "date": "2026-04-06",
         "authors": [
-          "Maximiliano Armesto",
-          "Christophe Kolb"
+          "Gabriel Sarch",
+          "Linrong Cai",
+          "Qunzhong Wang"
         ]
       },
       {
-        "title": "Reliability Gated Multi-Teacher Distillation for Low Resource Abstractive Summarization",
-        "summary": "We study multiteacher knowledge distillation for low resource abstractive summarization from a reliability aware perspective. We introduce EWAD (Entropy Weighted Agreement Aware Distillation), a token",
-        "link": "http://arxiv.org/abs/2604.03192v1",
-        "date": "2026-04-03",
+        "title": "Analyzing Symbolic Properties for DRL Agents in Systems and Networking",
+        "summary": "Deep reinforcement learning (DRL) has shown remarkable performance on complex control problems in systems and networking, including adaptive video streaming, wireless resource management, and congesti",
+        "link": "http://arxiv.org/abs/2604.04914v1",
+        "date": "2026-04-06",
         "authors": [
-          "Dipto Sumit",
-          "Ankan Kumar Roy",
-          "Sadia Khair Rodela"
+          "Mohammad Zangooei",
+          "Jannis Weil",
+          "Amr Rizk"
         ]
       },
       {
-        "title": "Gradient Boosting within a Single Attention Layer",
-        "summary": "Transformer attention computes a single softmax-weighted average over values -- a one-pass estimate that cannot correct its own errors. We introduce \\emph{gradient-boosted attention}, which applies th",
-        "link": "http://arxiv.org/abs/2604.03190v1",
-        "date": "2026-04-03",
+        "title": "How AI Aggregation Affects Knowledge",
+        "summary": "Artificial intelligence (AI) changes social learning when aggregated outputs become training data for future predictions. To study this, we extend the DeGroot model by introducing an AI aggregator tha",
+        "link": "http://arxiv.org/abs/2604.04906v1",
+        "date": "2026-04-06",
         "authors": [
-          "Saleh Sargolzaei"
+          "Daron Acemoglu",
+          "Tianyi Lin",
+          "Asuman Ozdaglar"
         ]
       },
       {
-        "title": "Reflective Context Learning: Studying the Optimization Primitives of Context Space",
-        "summary": "Generally capable agents must learn from experience in ways that generalize across tasks and environments. The fundamental problems of learning, including credit assignment, overfitting, forgetting, l",
-        "link": "http://arxiv.org/abs/2604.03189v1",
-        "date": "2026-04-03",
+        "title": "FileGram: Grounding Agent Personalization in File-System Behavioral Traces",
+        "summary": "Coworking AI agents operating within local file systems are rapidly emerging as a paradigm in human-AI interaction; however, effective personalization remains limited by severe data constraints, as st",
+        "link": "http://arxiv.org/abs/2604.04901v1",
+        "date": "2026-04-06",
         "authors": [
-          "Nikita Vassilyev",
-          "William Berrios",
-          "Ruowang Zhang"
+          "Shuai Liu",
+          "Shulin Tian",
+          "Kairui Hu"
         ]
       },
       {
-        "title": "Understanding the Role of Hallucination in Reinforcement Post-Training of Multimodal Reasoning Models",
-        "summary": "The recent success of reinforcement learning (RL) in large reasoning models has inspired the growing adoption of RL for post-training Multimodal Large Language Models (MLLMs) to enhance their visual r",
-        "link": "http://arxiv.org/abs/2604.03179v1",
-        "date": "2026-04-03",
+        "title": "QED-Nano: Teaching a Tiny Model to Prove Hard Theorems",
+        "summary": "Proprietary AI systems have recently demonstrated impressive capabilities on complex proof-based problems, with gold-level performance reported at the 2025 International Mathematical Olympiad (IMO). H",
+        "link": "http://arxiv.org/abs/2604.04898v1",
+        "date": "2026-04-06",
         "authors": [
-          "Gengwei Zhang",
-          "Jie Peng",
-          "Zhen Tan"
+          " LM-Provers",
+          "Yuxiao Qu",
+          "Amrith Setlur"
         ]
       },
       {
-        "title": "Beyond the Parameters: A Technical Survey of Contextual Enrichment in Large Language Models: From In-Context Prompting to Causal Retrieval-Augmented Generation",
-        "summary": "Large language models (LLMs) encode vast world knowledge in their parameters, yet they remain fundamentally limited by static knowledge, finite context windows, and weakly structured causal reasoning.",
-        "link": "http://arxiv.org/abs/2604.03174v1",
-        "date": "2026-04-03",
+        "title": "Agentic Federated Learning: The Future of Distributed Training Orchestration",
+        "summary": "Although Federated Learning (FL) promises privacy and distributed collaboration, its effectiveness in real-world scenarios is often hampered by the stochastic heterogeneity of clients and unpredictabl",
+        "link": "http://arxiv.org/abs/2604.04895v1",
+        "date": "2026-04-06",
         "authors": [
-          "Prakhar Bansal",
-          "Shivangi Agarwal"
+          "Rafael O. Jarczewski",
+          "Gabriel U. Talasso",
+          "Leandro Villas"
         ]
       }
     ],
-    "updated": "2026-04-06T23:37:53.442711Z"
+    "updated": "2026-04-07T04:35:22.921196Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-04-06T23:37:53.442711Z"
+    "updated": "2026-04-07T04:35:22.921196Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-04-06T23:37:53.442711Z"
+    "updated": "2026-04-07T04:35:22.921196Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-04-06T23:37:53.442711Z"
+    "updated": "2026-04-07T04:35:22.921196Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "A Tsetlin Machine-driven Intrusion Detection System for Next-Generation IoMT Security",
-        "summary": "The rapid adoption of the Internet of Medical Things (IoMT) is transforming healthcare by enabling seamless connectivity among medical devices, systems, and services. However, it also introduces serio",
-        "link": "http://arxiv.org/abs/2604.03205v1",
-        "date": "2026-04-03",
+        "title": "Comprehensive List of User Deception Techniques in Emails",
+        "summary": "Email remains a central communication medium, yet its long-standing design and interface conventions continue to enable deceptive attacks. This research note presents a structured list of 42 email-bas",
+        "link": "http://arxiv.org/abs/2604.04926v1",
+        "date": "2026-04-06",
         "authors": [
-          "Rahul Jaiswal",
-          "Per-Arne Andersen",
-          "Linga Reddy Cenkeramaddi"
+          "Maxime Veit",
+          "Mattia Mossano",
+          "Tobias L\u00e4nge"
         ]
       },
       {
-        "title": "Learning the Signature of Memorization in Autoregressive Language Models",
-        "summary": "All prior membership inference attacks for fine-tuned language models use hand-crafted heuristics (e.g., loss thresholding, Min-K\\%, reference calibration), each bounded by the designer's intuition. W",
-        "link": "http://arxiv.org/abs/2604.03199v1",
-        "date": "2026-04-03",
+        "title": "Strengthening Human-Centric Chain-of-Thought Reasoning Integrity in LLMs via a Structured Prompt Framework",
+        "summary": "Chain-of-Thought (CoT) prompting has been used to enhance the reasoning capability of LLMs. However, its reliability in security-sensitive analytical tasks remains insufficiently examined, particularl",
+        "link": "http://arxiv.org/abs/2604.04852v1",
+        "date": "2026-04-06",
         "authors": [
-          "David Ili\u0107",
-          "Kostadin Cvejoski",
-          "David Stanojevi\u0107"
+          "Jiling Zhou",
+          "Aisvarya Adeseye",
+          "Seppo Virtanen"
         ]
       },
       {
-        "title": "A Systematic Security Evaluation of OpenClaw and Its Variants",
-        "summary": "Tool-augmented AI agents substantially extend the practical capabilities of large language models, but they also introduce security risks that cannot be identified through model-only evaluation. In th",
-        "link": "http://arxiv.org/abs/2604.03131v1",
-        "date": "2026-04-03",
+        "title": "Cryptanalysis of the Legendre Pseudorandom Function over Extension Fields",
+        "summary": "The Legendre Pseudorandom Function (PRF) is a highly efficient cryptographic primitive built upon the Legendre symbol, valued for its low multiplicative complexity in Multi-Party Computation (MPC) and",
+        "link": "http://arxiv.org/abs/2604.04833v1",
+        "date": "2026-04-06",
         "authors": [
-          "Yuhang Wang",
-          "Haichang Gao",
-          "Zhenxing Niu"
+          "Daksh Pandey"
         ]
       },
       {
-        "title": "An Independent Safety Evaluation of Kimi K2.5",
-        "summary": "Kimi K2.5 is an open-weight LLM that rivals closed models across coding, multimodal, and agentic benchmarks, but was released without an accompanying safety evaluation. In this work, we conduct a prel",
-        "link": "http://arxiv.org/abs/2604.03121v1",
-        "date": "2026-04-03",
+        "title": "Unpacking .zip: A First Look at Domain and File Name Confusion",
+        "summary": "The namespace for filenames and DNS names has overlapped since the introduction of DNS in 1985: \\texttt{.com} was the original binary format used for DOS and CP/M systems. Recently the introduction of",
+        "link": "http://arxiv.org/abs/2604.04805v1",
+        "date": "2026-04-06",
         "authors": [
-          "Zheng-Xin Yong",
-          "Parv Mahajan",
-          "Andy Wang"
+          "Zane Ma",
+          "Predrag Despotovic",
+          "Pranab Mishra"
         ]
       },
       {
-        "title": "AlertStar: Path-Aware Alert Prediction on Hyper-Relational Knowledge Graphs",
-        "summary": "Cyber-attacks continue to grow in scale and sophistication, yet existing network intrusion detection approaches lack the semantic depth required for path reasoning over attacker-victim interactions. W",
-        "link": "http://arxiv.org/abs/2604.03104v1",
-        "date": "2026-04-03",
+        "title": "Forgetting to Witness: Efficient Federated Unlearning and Its Visible Evaluation",
+        "summary": "With the increasing importance of data privacy and security, federated unlearning has emerged as a novel research field dedicated to ensuring that federated learning models no longer retain or leak re",
+        "link": "http://arxiv.org/abs/2604.04800v1",
+        "date": "2026-04-06",
         "authors": [
-          "Zahra Makki Nayeri",
-          "Mohsen Rezvani"
+          "Houzhe Wang",
+          "Xiaojie Zhu",
+          "Chi Chen"
         ]
       },
       {
-        "title": "Supply-Chain Poisoning Attacks Against LLM Coding Agent Skill Ecosystems",
-        "summary": "LLM-based coding agents extend their capabilities via third-party agent skills distributed through open marketplaces without mandatory security review. Unlike traditional packages, these skills are ex",
-        "link": "http://arxiv.org/abs/2604.03081v1",
-        "date": "2026-04-03",
+        "title": "GPU Acceleration of TFHE-Based High-Precision Nonlinear Layers for Encrypted LLM Inference",
+        "summary": "Deploying large language models (LLMs) as cloud services raises privacy concerns as inference may leak sensitive data. Fully Homomorphic Encryption (FHE) allows computation on encrypted data, but curr",
+        "link": "http://arxiv.org/abs/2604.04783v1",
+        "date": "2026-04-06",
         "authors": [
-          "Yubin Qu",
-          "Yi Liu",
-          "Tongcheng Geng"
+          "Guoci Chen",
+          "Xiurui Pan",
+          "Qiao Li"
         ]
       },
       {
-        "title": "Credential Leakage in LLM Agent Skills: A Large-Scale Empirical Study",
-        "summary": "Third-party skills extend LLM agents with powerful capabilities but often handle sensitive credentials in privileged environments, making leakage risks poorly understood. We present the first large-sc",
-        "link": "http://arxiv.org/abs/2604.03070v1",
-        "date": "2026-04-03",
+        "title": "Your Agent, Their Asset: A Real-World Safety Analysis of OpenClaw",
+        "summary": "OpenClaw, the most widely deployed personal AI agent in early 2026, operates with full local system access and integrates with sensitive services such as Gmail, Stripe, and the filesystem. While these",
+        "link": "http://arxiv.org/abs/2604.04759v1",
+        "date": "2026-04-06",
         "authors": [
-          "Zhihao Chen",
-          "Ying Zhang",
-          "Yi Liu"
+          "Zijun Wang",
+          "Haoqin Tu",
+          "Letian Zhang"
         ]
       },
       {
-        "title": "Analyzing Healthcare Interoperability Vulnerabilities: Formal Modeling and Graph-Theoretic Approach",
-        "summary": "In a healthcare environment, the healthcare interoperability platforms based on HL7 FHIR allow concurrent, asynchronous access to a set of shared patient resources, which are independent systems, i.e.",
-        "link": "http://arxiv.org/abs/2604.03043v1",
-        "date": "2026-04-03",
+        "title": "Undetectable Conversations Between AI Agents via Pseudorandom Noise-Resilient Key Exchange",
+        "summary": "AI agents are increasingly deployed to interact with other agents on behalf of users and organizations. We ask whether two such agents, operated by different entities, can carry out a parallel secret ",
+        "link": "http://arxiv.org/abs/2604.04757v1",
+        "date": "2026-04-06",
         "authors": [
-          "Jawad Mohammed",
-          "Gahangir Hossain"
+          "Vinod Vaikuntanathan",
+          "Or Zamir"
         ]
       }
     ],
-    "updated": "2026-04-06T23:37:53.442711Z"
+    "updated": "2026-04-07T04:35:22.921196Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -278,6 +280,6 @@
         ]
       }
     ],
-    "updated": "2026-04-06T23:37:53.442711Z"
+    "updated": "2026-04-07T04:35:22.921196Z"
   }
 }
