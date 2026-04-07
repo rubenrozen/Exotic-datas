@@ -1832,40 +1832,32 @@ async function refreshFlights(){
     }
   } catch(e) {}
 
-  // Live fallback 1: adsb.fi (CORS enabled, global, free)
+  // Live fallback: adsb.fi public API (CORS-enabled, free)
   if (states.length < 50) {
     try {
-      const r = await fetch('https://api.adsb.fi/v1/flights', {
+      const d = await fetch('https://api.adsb.fi/v1/flights', {
         signal: AbortSignal.timeout(12000)
-      });
-      if (r.ok) {
-        const d = await r.json();
-        const ac = d.flights || d.ac || d.aircraft || [];
-        if (ac.length > 50) {
-          states = ac.filter(a => a.lat && a.lon).map(a => [
-            a.hex||'', (a.callsign||a.flight||'').trim(), '',
-            null, null, +a.lon, +a.lat,
-            +(a.alt_baro || a.altitude || 0) * 0.3048,
-            false, +(a.gs || a.speed || 0) * 0.514444,
-            +(a.track || 0), null, null, null, '', false, 0, null
-          ]);
-          console.log('adsb.fi:', states.length, 'aircraft');
-        }
+      }).then(r => r.json());
+      const ac = d.flights || d.ac || d.aircraft || [];
+      if (ac.length > 0) {
+        states = ac.filter(a => a.lat && a.lon).map(a => [
+          a.hex||'', (a.callsign||a.flight||'').trim(), '',
+          null, null, a.lon, a.lat,
+          (a.alt_baro || a.altitude || 0) * 0.3048,
+          false, (a.gs || a.speed || 0) * 0.514444,
+          a.track || 0, null, null, null, '', false, 0, null
+        ]);
       }
-    } catch(e) { console.warn('adsb.fi:', e); }
+    } catch(e) {}
   }
 
   // Second live fallback: adsb.lol (regional queries)
   if (states.length < 50) {
     try {
-      // adsb.lol: max dist is 250nm, cover 6 regions
       const regions = [
-        'https://api.adsb.lol/v2/lat/50/lon/-95/dist/250',
-        'https://api.adsb.lol/v2/lat/50/lon/-30/dist/250',
-        'https://api.adsb.lol/v2/lat/50/lon/15/dist/250',
-        'https://api.adsb.lol/v2/lat/35/lon/100/dist/250',
-        'https://api.adsb.lol/v2/lat/5/lon/20/dist/250',
-        'https://api.adsb.lol/v2/lat/-25/lon/135/dist/250',
+        'https://api.adsb.lol/v2/lat/45/lon/-100/dist/3000',
+        'https://api.adsb.lol/v2/lat/50/lon/15/dist/3000',
+        'https://api.adsb.lol/v2/lat/30/lon/110/dist/3000',
       ];
       const results = await Promise.allSettled(
         regions.map(u => fetch(u, {signal: AbortSignal.timeout(8000)}).then(r => r.json()))
@@ -2109,6 +2101,49 @@ async function initMaritimeMap() {
   }
 }
 
+// ═══ TAB INIT CALLBACKS ═══
+onTab('nat',     () => { loadUSGS(false); initFiresMap(); loadFAO('all',null); });
+onTab('wthr',    () => { loadCO2(); showSST('1y',null); loadAirQuality(); loadDrought(); loadRiver(); });
+onTab('above',   () => { initISS(); loadKp(); loadSolarWind(); });
+onTab('trade',   () => { initFlightMap(); initMaritimeMap(); });
+onTab('net',     () => { if(typeof loadInternet==='function') loadInternet(); });
+onTab('energy',  () => { if(typeof loadGasStorage==='function') loadGasStorage(); if(typeof loadOil==='function') loadOil('6m',null); if(typeof loadElectricity==='function') loadElectricity(); });
+onTab('conflict',() => { if(typeof loadConflicts==='function') loadConflicts(); });
+onTab('demo',    () => { if(typeof loadRefugees==='function') loadRefugees('5y',null); });
+onTab('trends',  () => { if(typeof fetchWiki==='function') fetchWiki('en'); if(typeof fetchArxiv==='function') fetchArxiv('cs.AI'); if(typeof loadGTrends==='function') loadGTrends(); });
+
+// ═══ INITIAL LOAD ═══
+(async function preloadScores() {
+  try {
+    const results = await Promise.allSettled([
+      loadJSON('quakes.json'),
+      loadJSON('firms.json'),
+      loadJSON('co2.json'),
+      loadJSON('kp.json'),
+      loadJSON('bdi.json'),
+      loadJSON('conflicts.json'),
+      loadJSON('gas_storage.json'),
+      loadJSON('oil_stocks.json'),
+    ]);
+    const [quakes, fires, co2, kp, bdi, conflicts, gas, oil] = results;
+    if (quakes.value?.score)    SCORES.nat      = quakes.value.score;
+    if (fires.value?.score)     SCORES.nat      = Math.min(SCORES.nat??100, fires.value.score);
+    if (co2.value?.score)       SCORES.wthr     = co2.value.score;
+    if (kp.value?.score)        SCORES.above    = kp.value.score;
+    if (bdi.value?.score)       SCORES.trade    = bdi.value.score;
+    if (conflicts.value?.score) SCORES.conflict = conflicts.value.score;
+    if (gas.value?.score)       SCORES.energy   = gas.value.score;
+    if (oil.value?.score)       SCORES.energy   = Math.round(((SCORES.energy??100) + oil.value.score) / 2);
+    updateEPI();
+  } catch(e) {
+    updateEPI();
+  }
+})();
+
+renderOvGrid();
+addTick('\ud83c\udf0d Earth Pulse initialised');
+
 </script>
 </body>
 </html>
+}
