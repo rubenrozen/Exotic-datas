@@ -2488,17 +2488,68 @@ async function loadOpenTable(){
 }
 
 async function loadBDI(period,btn){
-  const d=await loadJSON('bdi.json');
-  if(!d){safe('bdi-value','—');return;}
+  // Highlight active button
+  if(btn){
+    const par=btn.closest('.hzs')||btn.parentNode;
+    if(par) par.querySelectorAll('.hz').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+  }
+  const d=await loadJSON('bdi.json').catch(()=>null);
+  if(!d){
+    // Fallback: show static known value with explanation
+    safe('bdi-value','1 823');
+    safe('bdi-delta','Requires data/bdi.json → Run workflow');
+    safe('bdi-sub','Baltic Dry Index · Baltic Exchange');
+    return;
+  }
   safe('bdi-value',(d.current||d.value||0).toLocaleString());
   safe('bdi-delta',d.delta_week_pct?(d.delta_week_pct>0?'↑+':'↓')+Math.abs(d.delta_week_pct).toFixed(1)+'% WoW':'—');
-  safe('bdi-sub','Baltic Dry Index · Baltic Exchange');
-  const series=d.series||[];
-  if(series.length>1) mkChart('chart-bdi',{labels:series.map(x=>x.date),datasets:[{data:series.map(x=>x.value),borderColor:'#f59e0b',borderWidth:1.5,fill:true,backgroundColor:'rgba(245,158,11,.06)',pointRadius:0,tension:.4}]},CD);
+  safe('bdi-sub','Baltic Dry Index · Baltic Exchange · Live');
+  const series=(period==='1y'?d.series?.slice(-52):period==='2y'?d.series:d.series?.slice(-26))||[];
+  if(series.length>1)
+    mkChart('chart-bdi',{labels:series.map(x=>x.date),datasets:[{data:series.map(x=>x.value),borderColor:'#f59e0b',borderWidth:1.5,fill:true,backgroundColor:'rgba(245,158,11,.06)',pointRadius:0,tension:.4}]},CD);
   addTick(`⚓ BDI: ${(d.current||0).toLocaleString()}`);
 }
 
-async function loadTruck(){safe('truck-total','—');}
+async function loadTruck(){
+  try{
+    const cfg = await loadJSON('config.json').catch(()=>null);
+    const fredKey = cfg?.fred_api_key;
+    const url = fredKey
+      ? `https://api.stlouisfed.org/fred/series/observations?series_id=TRUCKD11&sort_order=desc&limit=13&api_key=${fredKey}&file_type=json`
+      : 'https://corsproxy.io/?url='+encodeURIComponent('https://fred.stlouisfed.org/graph/fredgraph.csv?id=TRUCKD11');
+    
+    let vals=[], labels=[];
+    if(fredKey){
+      const d=await fetch(url,{signal:AbortSignal.timeout(10000)}).then(r=>r.json());
+      const obs=(d.observations||[]).filter(o=>o.value!=='.').reverse();
+      vals=obs.map(o=>parseFloat(o.value));
+      labels=obs.map(o=>o.date.slice(0,7));
+    } else {
+      const txt=await fetch(url,{signal:AbortSignal.timeout(10000)}).then(r=>r.text());
+      const lines=txt.split('\n').filter(l=>l&&!l.startsWith('DATE')).slice(-13);
+      vals=lines.map(l=>parseFloat(l.split(',')[1])).filter(v=>!isNaN(v));
+      labels=lines.map(l=>l.split(',')[0].slice(0,7));
+    }
+    if(vals.length){
+      const cur=vals[vals.length-1];
+      const prev=vals[vals.length-2]||cur;
+      const prevY=vals[vals.length-13]||cur;
+      safe('truck-val',cur.toFixed(1));
+      const mom=((cur-prev)/prev*100);
+      const yoy=((cur-prevY)/prevY*100);
+      const td=document.getElementById('truck-delta');
+      if(td) td.innerHTML=`<span class="${mom>0?'dn':'up'}">${mom>0?'↑':'↓'}${Math.abs(mom).toFixed(1)}% MoM</span>`;
+      safe('truck-mom',(mom>0?'+':'')+mom.toFixed(1)+'%');
+      safe('truck-yoy',(yoy>0?'+':'')+yoy.toFixed(1)+'%');
+      addTick(`🚛 ATA Truck Tonnage: ${cur.toFixed(1)}`);
+    }
+  }catch(e){
+    safe('truck-val','—');
+    const td=document.getElementById('truck-delta');
+    if(td) td.textContent='Via FRED · add FRED_API_KEY secret';
+  }
+}
 
 async function loadNEO(){
   try {
@@ -2554,7 +2605,7 @@ function renderAurora(){}
 onTab('nat',     () => { loadUSGS(false); initFiresMap(); loadFAO('all',null); });
 onTab('wthr',    () => { loadCO2(); showSST('1y',null); loadAirQuality(); loadDrought(); loadRiver(); });
 onTab('above',   () => { initISS(); loadKp(); loadSolarWind(); });
-onTab('trade',   () => { initFlightMap(); initMaritimeMap(); });
+onTab('trade',   () => { initFlightMap(); initMaritimeMap(); loadBDI('6m',null); loadTruck(); });
 onTab('net',     () => { if(typeof loadInternet==='function') loadInternet(); });
 onTab('energy',  () => { if(typeof loadGasStorage==='function') loadGasStorage(); if(typeof loadOil==='function') loadOil('6m',null); if(typeof loadElectricity==='function') loadElectricity(); });
 onTab('conflict',() => { if(typeof loadConflicts==='function') loadConflicts(); });
