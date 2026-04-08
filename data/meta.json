@@ -1,10 +1,11 @@
 {
-  "last_run": "2026-04-08T22:56:54.317620Z",
+  "last_run": "2026-04-08T23:45:35.014934Z",
   "errors": [
     "BDI: No BDI data from any source",
     "ACLED OAuth: Expecting value: line 1 column 1 (char 0)",
     "Restaurant: HTTP Error 400: Bad Request",
-    "Population: HTTP Error 401: Unauthorized"
+    "Population: HTTP Error 502: Bad Gateway",
+    "IODA: HTTP Error 500: Internal Server Error"
   ],
   "datasets": [
     "co2",
