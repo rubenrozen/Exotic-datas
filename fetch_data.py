@@ -880,75 +880,74 @@ save("electricity.json", {"regions": elec, "updated": NOW})
 print(f"  Saved electricity.json: {list(elec.keys())}")
 
 # ── META ──────────────────────────────────────────────────
-# ── [IODA] Internet outages ───────────────────────────────
-print("[IODA] Internet outages...")
-try:
-    import time as _time
-    now_ts = int(_time.time())
-    from7d  = now_ts - 7*86400
-    url = f"https://api.ioda.inetintel.cc.gatech.edu/v2/outages/events?from={from7d}&until={now_ts}&limit=100&meta=country"
-    d = fetch_json(url)
-    events = d.get("data") or []
-    from24h = now_ts - 86400
-    active = [e for e in events if (e.get("end") or e.get("until") or now_ts) > from24h]
-    countries_active = list({e.get("entity",{}).get("name") or e.get("entityName","?") for e in active})
-    save("ioda_outages.json", {
-        "total_7d":   len(events),
-        "active_24h": len(countries_active),
-        "countries":  countries_active,
-        "events":     events[:40],
-        "updated":    NOW
-    })
-    print(f"  ✓ IODA: {len(events)} events, {len(countries_active)} countries active")
-except Exception as e:
-    errors.append(f"IODA: {e}"); print(f"  ✗ IODA: {e}")
+# ── [INTERNET] Cloudflare Radar ──────────────────────────
+print("[INTERNET] Cloudflare Radar data...")
+cf_key = os.environ.get("CF_RADAR_KEY", "")
+if cf_key:
+    try:
+        import datetime as _dt
+        headers_cf = {"Authorization": f"Bearer {cf_key}", "Content-Type": "application/json"}
 
-# ── [APNIC] IPv6 adoption ─────────────────────────────────
-print("[APNIC] IPv6 adoption...")
-try:
-    import datetime as _dt
-    date_str = _dt.datetime.utcnow().strftime("%Y%m%d")
-    # Global + 6 major countries/regions
-    regions = [
-        ("XA","World"), ("US","United States"), ("IN","India"),
-        ("CN","China"),  ("DE","Germany"),       ("BR","Brazil"), ("JP","Japan")
-    ]
-    ipv6_data = {}
-    for code, name in regions:
+        # 1. Outages & anomalies détectés par Cloudflare
         try:
-            url_r = f"https://stats.labs.apnic.net/cgi-bin/plotcache/{date_str}/v6cc.cgi?type=ip6&r={code}&f=json"
-            rd = fetch_json(url_r)
-            pct = rd.get("pct") or rd.get("v6pct")
-            if pct is not None:
-                ipv6_data[code] = {"name": name, "pct": round(float(pct), 1)}
-        except: pass
-    if ipv6_data:
-        save("ipv6_adoption.json", {"regions": ipv6_data, "updated": NOW})
-        print(f"  ✓ APNIC IPv6: {len(ipv6_data)} regions")
-    else:
-        print("  ⚠ APNIC: no data returned")
-except Exception as e:
-    errors.append(f"APNIC: {e}"); print(f"  ✗ APNIC: {e}")
+            outages = fetch_json(
+                "https://api.cloudflare.com/client/v4/radar/annotations/outages?dateRange=7d&format=json",
+                headers=headers_cf
+            )
+            annotations = outages.get("result", {}).get("annotations", [])
+        except Exception as e:
+            annotations = []
+            print(f"  ⚠ CF outages: {e}")
 
-# ── [RIPE] BGP activity ───────────────────────────────────
-print("[RIPE] BGP update activity...")
-try:
-    import datetime as _dt
-    today = _dt.datetime.utcnow().strftime("%Y-%m-%d")
-    week_ago = (_dt.datetime.utcnow() - _dt.timedelta(days=7)).strftime("%Y-%m-%d")
-    url_bgp = f"https://stat.ripe.net/data/bgp-update-activity/data.json?resource=0.0.0.0%2F0&starttime={week_ago}&endtime={today}"
-    bd = fetch_json(url_bgp)
-    stats = bd.get("data", {}).get("stats") or []
-    if stats:
-        save("bgp_activity.json", {
-            "stats":   [{"t": s.get("timestamp","")[:10], "n": (s.get("announcements",0) or 0) + (s.get("withdrawals",0) or 0)} for s in stats],
+        # 2. Résumé trafic HTTP — IPv4 vs IPv6 (7 jours)
+        try:
+            ipv_data = fetch_json(
+                "https://api.cloudflare.com/client/v4/radar/http/summary/ip_version?dateRange=7d&format=json",
+                headers=headers_cf
+            )
+            ipv_summary = ipv_data.get("result", {}).get("summary_0", {})
+        except Exception as e:
+            ipv_summary = {}
+            print(f"  ⚠ CF IPv6: {e}")
+
+        # 3. Timeseries trafic global 7j
+        try:
+            ts_data = fetch_json(
+                "https://api.cloudflare.com/client/v4/radar/http/timeseries?dateRange=7d&format=json",
+                headers=headers_cf
+            )
+            ts_serie = ts_data.get("result", {}).get("serie_0", {})
+        except Exception as e:
+            ts_serie = {}
+            print(f"  ⚠ CF timeseries: {e}")
+
+        # 4. Attaques DDoS L3/L4
+        try:
+            ddos_data = fetch_json(
+                "https://api.cloudflare.com/client/v4/radar/attacks/layer3/summary?dateRange=7d&format=json",
+                headers=headers_cf
+            )
+            ddos_summary = ddos_data.get("result", {}).get("summary_0", {})
+        except Exception as e:
+            ddos_summary = {}
+            print(f"  ⚠ CF DDoS: {e}")
+
+        save("cloudflare_internet.json", {
+            "annotations":  annotations[:20],
+            "ipv6_pct":     float(ipv_summary.get("IPv6", 0)) if ipv_summary else None,
+            "ipv4_pct":     float(ipv_summary.get("IPv4", 0)) if ipv_summary else None,
+            "traffic_ts":   {
+                "timestamps": ts_serie.get("timestamps", []),
+                "values":     ts_serie.get("requests", ts_serie.get("values", []))
+            },
+            "ddos_vectors": ddos_summary,
             "updated": NOW
         })
-        print(f"  ✓ RIPE BGP: {len(stats)} data points")
-    else:
-        print("  ⚠ RIPE BGP: no stats returned")
-except Exception as e:
-    errors.append(f"RIPE BGP: {e}"); print(f"  ✗ RIPE BGP: {e}")
+        print(f"  ✓ cloudflare_internet.json — {len(annotations)} outages, IPv6={ipv_summary.get('IPv6','?')}%")
+    except Exception as e:
+        errors.append(f"CF Radar: {e}"); print(f"  ✗ CF Radar: {e}")
+else:
+    print("  ⚠ CF_RADAR_KEY not set — add to GitHub Secrets")
 
 
 save("meta.json",{"last_run":NOW,"errors":errors,"datasets":["co2","bdi","gas_storage","oil_stocks","fao","conflicts","refugees","air_traffic","opentable"],"acled_ok":bool(acled_email and acled_password),"eia_ok":bool(os.environ.get("EIA_API_KEY")),"agsi_ok":bool(os.environ.get("AGSI_KEY"))})
