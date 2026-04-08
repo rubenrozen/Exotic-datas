@@ -783,52 +783,68 @@ html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);overflow
 </div>
 
 <!-- ═══════════════ INTERNET ═══════════════ -->
-<div class="panel" id="p-net" style="background:linear-gradient(180deg,rgba(0,30,30,.4),var(--bg))">
+<div class="panel" id="p-net" style="background:linear-gradient(180deg,rgba(0,20,30,.5),var(--bg))">
+
   <div class="g3">
-    <div class="card mb" style="border-color:rgba(34,211,238,.1)">
+    <div class="card mb" style="border-color:rgba(34,211,238,.12)">
       <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-net),transparent)"></div>
-      <div class="lbl">🌐 Global BGP routing table
-        <span class="ib">i<div class="ipop"><div class="ipt">Global BGP routing table size</div><div class="ipb">Number of IPv4 prefixes in the global BGP routing table. Growth indicates internet expansion. Sudden large changes indicate route leaks or hijacks. The table has grown from ~100K routes in 2000 to 950K+ today.</div><div class="ips">Source: RIPE NCC RIS · stat.ripe.net · Public API</div></div></span>
-      </div>
-      <div class="big" id="net-vol" style="color:var(--c-net)">—</div>
-      <div class="unit">IPv4 prefixes in global BGP table</div>
-      <div class="delta" id="net-vol-sub" style="margin-top:4px;color:var(--muted)">Loading RIPE stat…</div>
-    </div>
-    <div class="card mb" style="border-color:rgba(34,211,238,.1)">
-      <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-net),transparent)"></div>
-      <div class="lbl">🔀 Active BGP incidents
-        <span class="ib">i<div class="ipop"><div class="ipt">BGP routing anomalies</div><div class="ipb">Border Gateway Protocol is the postal system of the internet — BGP incidents mean routes are being rerouted or withdrawn. Can signal network attacks, accidental misconfigurations, or government-ordered shutdowns. Each incident can affect millions of users instantly.</div><div class="ips">Source: IODA (Georgia Tech) · ioda.inetintel.cc.gatech.edu · Real-time</div></div></span>
-      </div>
-      <div class="big" id="net-bgp" style="color:var(--c-net)">—</div>
-      <div class="delta" id="net-bgp-sub" style="margin-top:4px">Routing anomalies detected</div>
-    </div>
-    <div class="card mb" style="border-color:rgba(34,211,238,.1)">
-      <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-net),transparent)"></div>
-      <div class="lbl">🚫 Countries with disruption
-        <span class="ib">i<div class="ipop"><div class="ipt">Internet shutdowns</div><div class="ipb">Countries where internet traffic dropped &gt;30% vs. baseline. Detected by IODA (CAIDA research). Myanmar (2021 coup), Ethiopia, Iran, and Sudan have appeared here before major news coverage. Each shutdown affects millions of people.</div><div class="ips">Source: IODA (Georgia Tech) · ioda.inetintel.cc.gatech.edu · Live</div></div></span>
-      </div>
+      <div class="lbl">🚨 Pays coupés — 24h<span class="ib">i<div class="ipop"><div class="ipt">Coupures actives</div><div class="ipb">Pays où IODA détecte une chute de trafic BGP/probing/telescope.</div><div class="ips">IODA Georgia Tech · Live</div></div></span></div>
       <div class="big" id="net-out" style="color:#ff5a20">—</div>
-      <div class="delta" id="net-out-sub" style="margin-top:4px">Traffic reduction &gt;30%</div>
+      <div class="delta" id="net-out-sub" style="margin-top:4px;color:var(--muted)">—</div>
+    </div>
+    <div class="card mb" style="border-color:rgba(34,211,238,.12)">
+      <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-net),transparent)"></div>
+      <div class="lbl">📡 Événements réseau — 7j<span class="ib">i<div class="ipop"><div class="ipt">Outages IODA 7 jours</div><div class="ipb">Total événements réseau détectés toutes sources confondues.</div><div class="ips">IODA Georgia Tech · Live</div></div></span></div>
+      <div class="big" id="net-events" style="color:var(--c-net)">—</div>
+      <div class="delta" id="net-events-sub" style="margin-top:4px;color:var(--muted)">Tous pays</div>
+    </div>
+    <div class="card mb" style="border-color:rgba(34,211,238,.12)">
+      <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-net),transparent)"></div>
+      <div class="lbl">🌐 Adoption IPv6 mondiale<span class="ib">i<div class="ipop"><div class="ipt">IPv6 global</div><div class="ipb">Part des utilisateurs capables de se connecter en IPv6-only. APNIC Labs, 25M tests/jour.</div><div class="ips">APNIC Labs · 30j glissant</div></div></span></div>
+      <div class="big" id="net-ipv6" style="color:#22d3ee">—</div>
+      <div class="delta" id="net-ipv6-sub" style="margin-top:4px;color:var(--muted)">utilisateurs mondiaux</div>
     </div>
   </div>
 
-  <!-- Outage feed -->
-  <div class="card mb" style="border-color:rgba(34,211,238,.1)">
-    <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-net),transparent)"></div>
-    <div class="lbl">📡 Internet outage alerts — IODA / Cloudflare Radar
-      <span class="ib">i<div class="ipop"><div class="ipt">Internet outage detection</div><div class="ipb">IODA (Internet Outage Detection and Analysis) by CAIDA uses BGP routing data and active probing to detect connectivity disruptions. This is the same methodology used by digital rights organizations to document censorship events.</div><div class="ips">Source: IODA · ioda.caida.org · Real-time · No API key required</div></div></span>
+  <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:12px;margin-bottom:12px">
+    <div class="card mb" style="border-color:rgba(34,211,238,.12);padding:0;overflow:hidden">
+      <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-net),transparent)"></div>
+      <div style="padding:10px 14px 0;display:flex;justify-content:space-between;align-items:center">
+        <div class="lbl" style="margin:0">🗺 Coupures actives — carte mondiale</div>
+        <div style="font-size:9px;font-family:var(--mono);color:var(--muted)">
+          <span style="color:#ff3232">● sévère</span>&nbsp;<span style="color:#ff5a20">● majeur</span>&nbsp;<span style="color:#f59e0b">● mineur</span>
+        </div>
+      </div>
+      <canvas id="net-outages-canvas" width="1200" height="500" style="width:100%;height:auto;display:block;margin-top:6px"></canvas>
     </div>
-    <div id="net-outage-feed"><div class="nodata loading"><div>Loading IODA data…</div></div></div>
+    <div class="card mb" style="border-color:rgba(34,211,238,.12)">
+      <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-net),transparent)"></div>
+      <div class="lbl">📋 Dernières perturbations</div>
+      <div id="net-outage-feed" style="margin-top:8px;max-height:300px;overflow-y:auto;scrollbar-width:thin">
+        <div class="nodata loading"><div>Chargement…</div></div>
+      </div>
+      <div style="font-size:9px;color:var(--muted);margin-top:8px;font-family:var(--mono)">
+        <a href="https://ioda.inetintel.cc.gatech.edu/dashboard" target="_blank" style="color:var(--c-net)">ioda.live ↗</a>
+      </div>
+    </div>
   </div>
 
-  <!-- Infrastructure health -->
-  <div class="card" style="border-color:rgba(34,211,238,.1)">
-    <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-net),transparent)"></div>
-    <div class="lbl">🖥 Global infrastructure health
-      <span class="ib">i<div class="ipop"><div class="ipt">Infrastructure health monitor</div><div class="ipb">Status of major internet infrastructure providers — CDNs, hyperscalers, and critical platforms. These providers collectively serve &gt;90% of internet traffic. A disruption at any one can cascade across millions of services.</div><div class="ips">Source: status.io · uptime monitoring · Live</div></div></span>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div class="card mb" style="border-color:rgba(34,211,238,.12)">
+      <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-net),transparent)"></div>
+      <div class="lbl">📊 Activité BGP — RIPE RIS<span class="ib">i<div class="ipop"><div class="ipt">BGP updates</div><div class="ipb">Volume annonces/retraits BGP (RIPE RIS). Un pic = instabilité du routage mondial.</div><div class="ips">RIPE NCC · stat.ripe.net · Live</div></div></span></div>
+      <div class="ch h80" style="margin-top:8px"><canvas id="chart-bgp-activity"></canvas></div>
+      <div class="delta" id="net-bgp-status" style="margin-top:6px;font-size:10px;color:var(--muted)">Chargement RIPE…</div>
     </div>
-    <div id="net-sites" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px"></div>
+    <div class="card mb" style="border-color:rgba(34,211,238,.12)">
+      <div class="card-line" style="background:linear-gradient(90deg,transparent,var(--c-net),transparent)"></div>
+      <div class="lbl">🌍 IPv6 par région RIR<span class="ib">i<div class="ipop"><div class="ipt">IPv6 par région</div><div class="ipb">Taux d'adoption IPv6 par grande région internet (ARIN, RIPE, APNIC, LACNIC, AFRINIC). APNIC Labs.</div><div class="ips">APNIC Labs · 30j glissant</div></div></span></div>
+      <div id="net-ipv6-bars" style="margin-top:10px;display:flex;flex-direction:column;gap:8px">
+        <div class="nodata loading"><div>Chargement APNIC…</div></div>
+      </div>
+    </div>
   </div>
+
 </div>
 
 <!-- ═══════════════ ENERGY ═══════════════ -->
@@ -2229,67 +2245,213 @@ function updateFlightDots(states) {
 // ═══════════════════════════════════════════════════════
 
 async function loadInternet(){
-  const now=Math.floor(Date.now()/1000), from7d=now-7*86400, from24h=now-86400;
+  const now = Math.floor(Date.now()/1000);
+  const from7d = now - 7*86400;
+  const from24h = now - 86400;
+
+  // ── 1. IODA v2 — outage events ──────────────────────────
   try {
-    const url=`https://api.ioda.inetintel.cc.gatech.edu/v2/outages/events?from=${from7d}&until=${now}&limit=50&meta=country`;
-    const d=await fetch(url,{signal:AbortSignal.timeout(12000)}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json();});
-    const events=d.data||[];
-    const ctry=events.filter(e=>e.entity?.type==='country'||e.entityType==='country');
-    const recent=ctry.filter(e=>(e.end||e.until||now)>from24h);
-    const countries=[...new Set(recent.map(e=>e.entity?.name||e.entityName||'Unknown'))];
-    const bgp=ctry.filter(e=>(e.datasource||'').toLowerCase().includes('bgp')).length;
-    safe('net-out',countries.length||'0');
-    safe('net-bgp',bgp||events.length);
-    safe('net-bgp-sub','BGP anomalies (7 days)');
-    safe('net-out-sub',countries.length>0?countries.slice(0,3).join(', ')+(countries.length>3?` +${countries.length-3}`:''):'Traffic nominal');
-    const feed=document.getElementById('net-outage-feed');
-    if(feed){
-      if(recent.length>0){
-        recent.sort((a,b)=>(b.start||b.from||0)-(a.start||a.from||0));
-        feed.innerHTML=recent.slice(0,8).map(e=>{
-          const name=e.entity?.name||e.entityName||'Unknown';
-          const score=e.overallScore||e.score||0;
-          const src=e.datasource||'multi-source';
-          const ts=e.start||e.from||0;
-          const ended=(e.end||e.until||0)<now-300;
-          const color=score>700?'#ff3232':score>300?'#ff5a20':'#f59e0b';
-          return `<div class="fi"><div class="fi-dot" style="background:${ended?'#6b7fa0':color}"></div><div class="fi-body"><b>${name}</b> — ${src}${score?` · score ${Math.round(score)}`:''}${ended?' · resolved':''}</div><div class="fi-time">${ts?timeAgo(ts*1000):'recent'}</div></div>`;
+    const url = `https://api.ioda.inetintel.cc.gatech.edu/v2/outages/events?from=${from7d}&until=${now}&limit=100&meta=country`;
+    const d = await fetch(url, {signal: AbortSignal.timeout(14000)}).then(r => {
+      if (!r.ok) throw new Error('IODA '+r.status);
+      return r.json();
+    });
+    const events = d.data || [];
+
+    // Pays actifs (non résolus dans les 24h)
+    const active = events.filter(e => {
+      const end = e.end || e.until || now;
+      return end > from24h;
+    });
+    const countries = [...new Set(active.map(e => e.entity?.name || e.entityName || '?'))];
+
+    safe('net-out', countries.length || '0');
+    safe('net-out-sub', countries.length > 0
+      ? countries.slice(0,3).join(', ') + (countries.length > 3 ? ` +${countries.length-3}` : '')
+      : 'Aucune coupure active');
+    safe('net-events', events.length);
+    safe('net-events-sub', `${active.length} actifs · ${events.length - active.length} résolus`);
+
+    // Feed
+    const feed = document.getElementById('net-outage-feed');
+    if (feed) {
+      if (events.length > 0) {
+        const sorted = [...events].sort((a,b) => (b.end||b.until||now) - (a.end||a.until||now));
+        feed.innerHTML = sorted.slice(0,12).map(e => {
+          const name  = e.entity?.name || e.entityName || '?';
+          const score = e.overallScore || e.score || 0;
+          const src   = (e.datasource || 'multi').replace('merit-nt','telescope');
+          const ts    = e.start || e.from || 0;
+          const ended = (e.end || e.until || 0) < now - 300;
+          const col   = score > 700 ? '#ff3232' : score > 200 ? '#ff5a20' : '#f59e0b';
+          return `<div class="fi">
+            <div class="fi-dot" style="background:${ended?'#4b5778':col}"></div>
+            <div class="fi-body"><b>${name}</b><span style="color:var(--muted);font-size:10px"> · ${src}${score?' · '+Math.round(score/10)+'%':''}</span></div>
+            <div class="fi-time">${ended?'résolu':ts?timeAgo(ts*1000):'récent'}</div>
+          </div>`;
         }).join('');
       } else {
-        feed.innerHTML=`<div class="fi"><div class="fi-dot" style="background:#22c55e"></div><div class="fi-body">Global internet — nominal (24h)</div><div class="fi-time">Now</div></div>`;
+        feed.innerHTML = `<div class="fi"><div class="fi-dot" style="background:#22c55e"></div><div class="fi-body">Aucune perturbation majeure (7 jours)</div></div>`;
       }
     }
-    SCORES.net=countries.length>5?45:countries.length>2?62:82; updateEPI();
-    addTick(`🌐 IODA: ${events.length} events (7d) · ${countries.length} countries disrupted`);
+
+    // Carte des shutdowns
+    drawNetOutagesMap(active);
+
+    SCORES.net = countries.length > 8 ? 38 : countries.length > 3 ? 58 : 80;
+    updateEPI();
+    addTick(`🌐 IODA: ${events.length} événements · ${countries.length} pays coupés`);
   } catch(e) {
-    safe('net-bgp','—'); safe('net-out','—');
-    safe('net-bgp-sub','IODA connecting…'); safe('net-out-sub','ioda.inetintel.cc.gatech.edu');
-    const feed=document.getElementById('net-outage-feed');
-    if(feed) feed.innerHTML=`<div class="fi"><div class="fi-dot" style="background:#f59e0b"></div><div class="fi-body">IODA API — <a href="https://ioda.inetintel.cc.gatech.edu/dashboard" target="_blank" style="color:var(--c-net)">view live dashboard ↗</a></div></div>`;
-    SCORES.net=72; updateEPI();
+    console.warn('IODA:', e);
+    safe('net-out', '—'); safe('net-events', '—');
+    const feed = document.getElementById('net-outage-feed');
+    if (feed) feed.innerHTML = `<div class="fi"><div class="fi-dot" style="background:#f59e0b"></div><div class="fi-body">IODA inaccessible · <a href="https://ioda.inetintel.cc.gatech.edu/dashboard" target="_blank" style="color:var(--c-net)">voir live ↗</a></div></div>`;
   }
-  // Infrastructure sites grid
-  const sites=[
-    {n:'Google',e:'🔵',t:'Hyperscaler'},{n:'Cloudflare',e:'🟠',t:'CDN'},
-    {n:'Amazon AWS',e:'🟡',t:'Cloud'},{n:'Microsoft',e:'🔷',t:'Cloud'},
-    {n:'Meta',e:'🔵',t:'Social'},{n:'Akamai',e:'🟣',t:'CDN'},
-    {n:'Apple',e:'⚪',t:'Hyperscaler'},{n:'Netflix',e:'🔴',t:'Streaming'},
-    {n:'GitHub',e:'🐙',t:'Dev'},{n:'Stripe',e:'💜',t:'Payments'},
-    {n:'X/Twitter',e:'🐦',t:'Social'},{n:'YouTube',e:'🔴',t:'Streaming'},
-    {n:'Fastly',e:'⚫',t:'CDN'},{n:'Telegram',e:'💬',t:'Messaging'},
-    {n:'Cloudflare R2',e:'🟠',t:'Storage'},{n:'Wikipedia',e:'📖',t:'Reference'},
-  ];
-  const g=document.getElementById('net-sites');
-  if(g){
-    g.innerHTML=sites.map(s=>`<div style="background:rgba(34,211,238,.04);border:1px solid rgba(34,211,238,.08);border-radius:8px;padding:8px 10px;display:flex;align-items:center;gap:7px">
-      <span style="font-size:15px">${s.e}</span>
-      <div style="flex:1;min-width:0"><div style="font-size:11px;color:var(--txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${s.n}</div><div style="font-size:9px;font-family:var(--mono);color:var(--muted)">${s.t}</div></div>
-      <div style="width:7px;height:7px;border-radius:50%;background:#22c55e;flex-shrink:0"></div></div>`).join('');
-  }
-  // BGP table size
+
+  // ── 2. RIPE stat — BGP update activity ──────────────────
   try {
-    safe('net-vol','~950K'); safe('net-vol-sub','IPv4 routes · global BGP table');
-  } catch(e){}
+    const ripeUrl = `https://stat.ripe.net/data/bgp-update-activity/data.json?resource=0.0.0.0%2F0&starttime=${new Date(from7d*1000).toISOString().slice(0,10)}&endtime=${new Date(now*1000).toISOString().slice(0,10)}`;
+    const rd = await fetch(ripeUrl, {signal: AbortSignal.timeout(12000)}).then(r => r.json());
+    const pts = rd.data?.stats || [];
+    if (pts.length > 1) {
+      const labels = pts.map(p => p.timestamp?.slice(5,10) || '');
+      const anns   = pts.map(p => (p.announcements||0) + (p.withdrawals||0));
+      const avg    = anns.reduce((a,b)=>a+b,0) / anns.length;
+      const last   = anns[anns.length-1];
+      const pct    = Math.round((last - avg) / avg * 100);
+      mkChart('chart-bgp-activity', {
+        labels,
+        datasets: [{
+          data: anns,
+          borderColor: pct > 30 ? '#ff5a20' : '#22d3ee',
+          borderWidth: 1.5, fill: true,
+          backgroundColor: pct > 30 ? 'rgba(255,90,32,.08)' : 'rgba(34,211,238,.05)',
+          pointRadius: 0, tension: .3
+        }]
+      }, CD);
+      safe('net-bgp-status',
+        `Dernière heure: ${last.toLocaleString()} updates` +
+        (Math.abs(pct) > 20 ? ` · ${pct > 0 ? '⚠️ +' : '↓'}${Math.abs(pct)}% vs moy.` : ' · Activité normale')
+      );
+    }
+  } catch(e) {
+    safe('net-bgp-status', 'RIPE stat inaccessible');
+    console.warn('RIPE:', e);
+  }
+
+  // ── 3. APNIC — adoption IPv6 global + par région ────────
+  try {
+    // Global: stats.labs.apnic.net/ipv6/XA (CSV/JSON)
+    const apnicUrl = 'https://stats.labs.apnic.net/cgi-bin/plotcache/'+
+      new Date().toISOString().slice(0,10).replace(/-/g,'')+'/v6cc.cgi?type=ip6&r=XA&f=json';
+    let ipv6Pct = null;
+    try {
+      const ag = await fetch(apnicUrl, {signal: AbortSignal.timeout(8000)}).then(r => r.json());
+      ipv6Pct = ag?.pct || ag?.v6pct || null;
+    } catch {}
+
+    // Fallback: RIPE stat country-routing-stats per RIR region
+    // Use known APNIC published figure if API fails
+    if (ipv6Pct !== null) {
+      safe('net-ipv6', ipv6Pct.toFixed(1) + '%');
+      safe('net-ipv6-sub', 'des utilisateurs · APNIC Labs');
+    }
+
+    // Données par région via APNIC JSON (codes RIR)
+    const regions = [
+      { code:'XA', name:'Monde',   color:'#22d3ee' },
+      { code:'US', name:'Amériq.', color:'#3baaff' },
+      { code:'EU', name:'Europe',  color:'#a855f7' },
+      { code:'IN', name:'Inde',    color:'#f59e0b' },
+      { code:'CN', name:'Chine',   color:'#ff5a20' },
+      { code:'JP', name:'Japon',   color:'#22c55e' },
+    ];
+    const dateStr = new Date().toISOString().slice(0,10).replace(/-/g,'');
+    const regionData = await Promise.allSettled(
+      regions.map(r => fetch(
+        `https://stats.labs.apnic.net/cgi-bin/plotcache/${dateStr}/v6cc.cgi?type=ip6&r=${r.code}&f=json`,
+        {signal: AbortSignal.timeout(8000)}
+      ).then(res => res.json()))
+    );
+
+    const bars = document.getElementById('net-ipv6-bars');
+    if (bars) {
+      let html = '';
+      regionData.forEach((res, i) => {
+        const pct = res.status === 'fulfilled'
+          ? (res.value?.pct || res.value?.v6pct || null)
+          : null;
+        const r = regions[i];
+        if (pct !== null) {
+          if (i === 0) { safe('net-ipv6', pct.toFixed(1)+'%'); safe('net-ipv6-sub','utilisateurs mondiaux · APNIC Labs'); }
+          html += `<div style="display:flex;align-items:center;gap:8px;font-size:11px">
+            <div style="width:64px;color:var(--muted);font-family:var(--mono);font-size:10px;flex-shrink:0">${r.name}</div>
+            <div style="flex:1;height:6px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden">
+              <div style="height:100%;width:${Math.min(pct,100)}%;background:${r.color};border-radius:3px;transition:width .6s"></div>
+            </div>
+            <div style="width:38px;text-align:right;font-family:var(--mono);color:${r.color}">${pct.toFixed(1)}%</div>
+          </div>`;
+        }
+      });
+      if (html) bars.innerHTML = html;
+      else bars.innerHTML = '<div style="color:var(--muted);font-size:11px">Données APNIC non disponibles</div>';
+    }
+  } catch(e) {
+    safe('net-ipv6', '—');
+    console.warn('APNIC:', e);
+  }
+}
+
+// Dessine les points de coupure sur le canvas monde (section Internet)
+function drawNetOutagesMap(activeEvents) {
+  const canvas = document.getElementById('net-outages-canvas');
+  if (!canvas) return;
+  const W = canvas.width, H = canvas.height;
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, W, H);
+
+  // Fond carte (réutilise drawFiresMap pour le contour des continents)
+  if (typeof drawFiresMap === 'function') drawFiresMap(false, canvas);
+
+  // Coordonnées approximatives par nom de pays (IODA retourne le nom anglais)
+  const COUNTRY_COORDS = {
+    'Iran':'32,53','Iraq':'33,44','Sudan':'15,30','Ethiopia':'9,40','Myanmar':'19,97',
+    'Venezuela':'8,-66','Cuba':'22,-80','Russia':'60,90','Belarus':'53,28','Syria':'35,38',
+    'Yemen':'15,48','Libya':'27,17','Cameroon':'4,12','Chad':'15,19','Niger':'17,8',
+    'Senegal':'14,-14','Guinea':'11,-11','DRC':'0,25','Mozambique':'-18,35',
+    'Kazakhstan':'48,67','Uzbekistan':'41,64','Tajikistan':'39,71','India':'21,79',
+    'Pakistan':'30,70','Bangladesh':'24,90','Sri Lanka':'7,81','Indonesia':'-5,120',
+    'Kenya':'-1,37','Tanzania':'-6,35','Zimbabwe':'-20,30','Zambia':'-13,28',
+    'Nigeria':'10,8','Ghana':'8,-1','Ivory Coast':'8,-6','Burkina Faso':'12,-2',
+    'Mali':'17,-4','Algeria':'28,3','Tunisia':'34,9','Egypt':'26,30','Morocco':'32,-6',
+    'Turkey':'39,35','Ukraine':'49,32','Georgia':'42,43','Azerbaijan':'40,48',
+    'Afghanistan':'33,66','Nepal':'28,84','Bhutan':'27,90','Cambodia':'12,105',
+    'Laos':'17,103','Vietnam':'16,108','Thailand':'15,101','Philippines':'13,122',
+    'Malaysia':'4,110','Haiti':'19,-72','Congo':'0,18','Rwanda':'-2,30',
+  };
+
+  activeEvents.forEach(e => {
+    const name = e.entity?.name || e.entityName || '';
+    const score = e.overallScore || e.score || 100;
+    const coords = COUNTRY_COORDS[name];
+    if (!coords) return;
+    const [lat, lon] = coords.split(',').map(Number);
+    const {x, y} = project(lon, lat, W, H);
+    const r = score > 700 ? 12 : score > 200 ? 8 : 5;
+    const col = score > 700 ? [255,50,50] : score > 200 ? [255,90,32] : [245,158,11];
+    // Halo
+    const g = ctx.createRadialGradient(x,y,0,x,y,r*3);
+    g.addColorStop(0, `rgba(${col.join(',')},0.25)`);
+    g.addColorStop(1, `rgba(${col.join(',')},0)`);
+    ctx.beginPath(); ctx.arc(x,y,r*3,0,Math.PI*2);
+    ctx.fillStyle = g; ctx.fill();
+    // Point
+    ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2);
+    ctx.fillStyle = `rgba(${col.join(',')},0.9)`; ctx.fill();
+    // Pulse ring
+    ctx.beginPath(); ctx.arc(x,y,r+3,0,Math.PI*2);
+    ctx.strokeStyle = `rgba(${col.join(',')},0.4)`; ctx.lineWidth = 1.5; ctx.stroke();
+  });
 }
 
 // ═══════════════════════════════════════════════════════
