@@ -1298,8 +1298,13 @@ async function loadUSGS(computeScore=true){
       return `<div class="fi"><div class="fi-mag" style="color:${c}">M${m.toFixed(1)}</div><div class="fi-dot" style="background:${c}"></div><div class="fi-body">${f.properties.place||'Unknown'}</div><div class="fi-time">${timeAgo(f.properties.time)}</div></div>`;
     }).join('');
 
-    // Canvas map — no external tiles
-    setTimeout(() => drawQuakeMap(feats), 50);
+    // Canvas map — extraire lon/lat depuis GeoJSON geometry
+    const quakePoints = feats.map(f => ({
+      lon: f.geometry?.coordinates?.[0],
+      lat: f.geometry?.coordinates?.[1],
+      mag: f.properties?.mag || 3
+    })).filter(q => q.lon != null && q.lat != null);
+    setTimeout(() => drawQuakeMap(quakePoints), 50);
   }catch(e){safe('q-total','Err');console.error('USGS:',e);}
 }
 
@@ -2602,7 +2607,14 @@ function renderAurora(){}
 
 
 // ═══ TAB INIT CALLBACKS ═══
-onTab('nat',     () => { loadUSGS(false); initFiresMap(); loadFAO('all',null); });
+onTab('nat',     () => {
+  loadUSGS(false);
+  initFiresMap();
+  loadFAO('all',null);
+  // Init grippe avec le bouton "Global" par défaut
+  const fluDefaultBtn = document.querySelector('#flu-btns .hz');
+  setFluRegion('global', fluDefaultBtn);
+});
 onTab('wthr',    () => { loadCO2(); showSST('1y',null); loadAirQuality(); loadDrought(); loadRiver(); });
 onTab('above',   () => { initISS(); loadKp(); loadSolarWind(); });
 onTab('trade',   () => { initFlightMap(); initMaritimeMap(); loadBDI('6m',null); loadTruck(); });
