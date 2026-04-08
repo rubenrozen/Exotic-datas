@@ -1,32 +1,282 @@
 {
   "cs.AI": {
     "label": "AI / Machine Learning",
-    "papers": [],
-    "error": "The read operation timed out"
+    "papers": [
+      {
+        "title": "In-Place Test-Time Training",
+        "summary": "The static ``train then deploy\" paradigm fundamentally limits Large Language Models (LLMs) from dynamically adapting their weights in response to continuous streams of new information inherent in real",
+        "link": "http://arxiv.org/abs/2604.06169v1",
+        "date": "2026-04-07",
+        "authors": [
+          "Guhao Feng",
+          "Shengjie Luo",
+          "Kai Hua"
+        ]
+      },
+      {
+        "title": "DiffHDR: Re-Exposing LDR Videos with Video Diffusion Models",
+        "summary": "Most digital videos are stored in 8-bit low dynamic range (LDR) formats, where much of the original high dynamic range (HDR) scene radiance is lost due to saturation and quantization. This loss of hig",
+        "link": "http://arxiv.org/abs/2604.06161v1",
+        "date": "2026-04-07",
+        "authors": [
+          "Zhengming Yu",
+          "Li Ma",
+          "Mingming He"
+        ]
+      },
+      {
+        "title": "MMEmb-R1: Reasoning-Enhanced Multimodal Embedding with Pair-Aware Selection and Adaptive Control",
+        "summary": "MLLMs have been successfully applied to multimodal embedding tasks, yet their generative reasoning capabilities remain underutilized. Directly incorporating chain-of-thought reasoning into embedding l",
+        "link": "http://arxiv.org/abs/2604.06156v1",
+        "date": "2026-04-07",
+        "authors": [
+          "Yuchi Wang",
+          "Haiyang Yu",
+          "Weikang Bian"
+        ]
+      },
+      {
+        "title": "Toward Consistent World Models with Multi-Token Prediction and Latent Semantic Enhancement",
+        "summary": "Whether Large Language Models (LLMs) develop coherent internal world models remains a core debate. While conventional Next-Token Prediction (NTP) focuses on one-step-ahead supervision, Multi-Token Pre",
+        "link": "http://arxiv.org/abs/2604.06155v1",
+        "date": "2026-04-07",
+        "authors": [
+          "Qimin Zhong",
+          "Hao Liao",
+          "Haiming Qin"
+        ]
+      },
+      {
+        "title": "Who Governs the Machine? A Machine Identity Governance Taxonomy (MIGT) for AI Systems Operating Across Enterprise and Geopolitical Boundaries",
+        "summary": "The governance of artificial intelligence has a blind spot: the machine identities that AI systems use to act. AI agents, service accounts, API tokens, and automated workflows now outnumber human iden",
+        "link": "http://arxiv.org/abs/2604.06148v1",
+        "date": "2026-04-07",
+        "authors": [
+          "Andrew Kurtz",
+          "Klaudia Krawiecka"
+        ]
+      },
+      {
+        "title": "Generating Synthetic Doctor-Patient Conversations for Long-form Audio Summarization",
+        "summary": "Long-context audio reasoning is underserved in both training data and evaluation. Existing benchmarks target short-context tasks, and the open-ended generation tasks most relevant to long-context reas",
+        "link": "http://arxiv.org/abs/2604.06138v1",
+        "date": "2026-04-07",
+        "authors": [
+          "Yanis Labrak",
+          "David Gr\u00fcnert",
+          "S\u00e9verin Baroudi"
+        ]
+      },
+      {
+        "title": "Shot-Based Quantum Encoding: A Data-Loading Paradigm for Quantum Neural Networks",
+        "summary": "Efficient data loading remains a bottleneck for near-term quantum machine-learning. Existing schemes (angle, amplitude, and basis encoding) either underuse the exponential Hilbert-space capacity or re",
+        "link": "http://arxiv.org/abs/2604.06135v1",
+        "date": "2026-04-07",
+        "authors": [
+          "Basil Kyriacou",
+          "Viktoria Patapovich",
+          "Maniraman Periyasamy"
+        ]
+      },
+      {
+        "title": "Claw-Eval: Toward Trustworthy Evaluation of Autonomous Agents",
+        "summary": "Large language models are increasingly deployed as autonomous agents executing multi-step workflows in real-world software environments. However, existing agent benchmarks suffer from three critical l",
+        "link": "http://arxiv.org/abs/2604.06132v1",
+        "date": "2026-04-07",
+        "authors": [
+          "Bowen Ye",
+          "Rang Li",
+          "Qibin Yang"
+        ]
+      }
+    ],
+    "updated": "2026-04-08T22:56:54.317620Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "updated": "2026-04-08T22:56:54.317620Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "updated": "2026-04-08T22:56:54.317620Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "updated": "2026-04-08T22:56:54.317620Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
-    "papers": [],
-    "error": "The read operation timed out"
+    "papers": [
+      {
+        "title": "Who Governs the Machine? A Machine Identity Governance Taxonomy (MIGT) for AI Systems Operating Across Enterprise and Geopolitical Boundaries",
+        "summary": "The governance of artificial intelligence has a blind spot: the machine identities that AI systems use to act. AI agents, service accounts, API tokens, and automated workflows now outnumber human iden",
+        "link": "http://arxiv.org/abs/2604.06148v1",
+        "date": "2026-04-07",
+        "authors": [
+          "Andrew Kurtz",
+          "Klaudia Krawiecka"
+        ]
+      },
+      {
+        "title": "Towards Securing IIoT: An Innovative Privacy-Preserving Anomaly Detector Based on Federated Learning",
+        "summary": "In the light of the growing connectivity and sensitivity of industrial data,   cyberattacks and data breaches are becoming more common in the Industrial Internet of Things (IIoT). To cope with such th",
+        "link": "http://arxiv.org/abs/2604.06101v1",
+        "date": "2026-04-07",
+        "authors": [
+          "Samira Kamali Poorazad",
+          "Chafika Benza\u00efd",
+          "Tarik Taleb"
+        ]
+      },
+      {
+        "title": "Signature Placement in Post-Quantum TLS Certificate Hierarchies: An Experimental Study of ML-DSA and SLH-DSA in TLS 1.3 Authentication",
+        "summary": "Post-quantum migration in TLS 1.3 should not be understood as a flat substitution problem in which one signature algorithm is replaced by another and deployment cost is inferred directly from primitiv",
+        "link": "http://arxiv.org/abs/2604.06100v1",
+        "date": "2026-04-07",
+        "authors": [
+          "Jos\u00e9 Luis Delgado Jim\u00e9nez"
+        ]
+      },
+      {
+        "title": "LLM4CodeRE: Generative AI for Code Decompilation Analysis and Reverse Engineering",
+        "summary": "Code decompilation analysis is a fundamental yet challenging task in malware reverse engineering, particularly due to the pervasive use of sophisticated obfuscation techniques. Although recent large l",
+        "link": "http://arxiv.org/abs/2604.06095v1",
+        "date": "2026-04-07",
+        "authors": [
+          "Hamed Jelodar",
+          "Samita Bai",
+          "Tochukwu Emmanuel Nwankwo"
+        ]
+      },
+      {
+        "title": "Inertial Mining: Equilibrium Implementation of the Bitcoin Protocol",
+        "summary": "The value of proof-of-work cryptocurrencies critically depends on miners having incentives to follow the protocol. However, the Bitcoin mining protocol proposed by Nakamoto (2008) and implemented in p",
+        "link": "http://arxiv.org/abs/2604.06092v1",
+        "date": "2026-04-07",
+        "authors": [
+          "Manuel Mueller-Frank",
+          "Minghao Pan",
+          "Omer Tamuz"
+        ]
+      },
+      {
+        "title": "CritBench: A Framework for Evaluating Cybersecurity Capabilities of Large Language Models in IEC 61850 Digital Substation Environments",
+        "summary": "The advancement of Large Language Models (LLMs) has raised concerns regarding their dual-use potential in cybersecurity. Existing evaluation frameworks overwhelmingly focus on Information Technology (",
+        "link": "http://arxiv.org/abs/2604.06019v1",
+        "date": "2026-04-07",
+        "authors": [
+          "Gustav Keppler",
+          "Moritz Gst\u00fcr",
+          "Veit Hagenmeyer"
+        ]
+      },
+      {
+        "title": "A Formal Security Framework for MCP-Based AI Agents: Threat Taxonomy, Verification Models, and Defense Mechanisms",
+        "summary": "The Model Context Protocol (MCP), introduced by Anthropic in November 2024 and now governed by the Linux Foundation's Agentic AI Foundation, has rapidly become the de facto standard for connecting lar",
+        "link": "http://arxiv.org/abs/2604.05969v1",
+        "date": "2026-04-07",
+        "authors": [
+          "Nirajan Acharya",
+          "Gaurav Kumar Gupta"
+        ]
+      },
+      {
+        "title": "Swiss-Bench 003: Evaluating LLM Reliability and Adversarial Security for Swiss Regulatory Contexts",
+        "summary": "The deployment of large language models (LLMs) in Swiss financial and regulatory contexts demands empirical evidence of both production reliability and adversarial security, dimensions not jointly ope",
+        "link": "http://arxiv.org/abs/2604.05872v1",
+        "date": "2026-04-07",
+        "authors": [
+          "Fatih Uenal"
+        ]
+      }
+    ],
+    "updated": "2026-04-08T22:56:54.317620Z"
   },
   "q-bio": {
     "label": "Biology",
-    "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "papers": [
+      {
+        "title": "Synchronization of active mechanical oscillators by an inertial load",
+        "summary": "Motivated by the operation of myogenic (self-oscillatory) insect flight muscle, we study a model consisting of a large number of identical oscillatory contractile elements joined in a chain, whose end",
+        "link": "http://arxiv.org/abs/physics/0307155v1",
+        "date": "2003-07-31",
+        "authors": [
+          "Andrej Vilfan",
+          "Thomas Duke"
+        ]
+      },
+      {
+        "title": "Towards the Understanding of Stability Puzzles in Phage lambda",
+        "summary": "We discuss two aspects, the in vivo and in vitro difference and the modeling of noise, of integrative modeling of network dynamics in biology, using phage lambda as an example. We believe those two as",
+        "link": "http://arxiv.org/abs/cond-mat/0307747v1",
+        "date": "2003-07-30",
+        "authors": [
+          "P. Ao",
+          "L. Yin"
+        ]
+      },
+      {
+        "title": "A Growth Model for Multicellular Tumor Spheroids",
+        "summary": "Most organisms grow according to simple laws, which in principle can be derived from energy conservation and scaling arguments, critically dependent on the relation between the metabolic rate B of ene",
+        "link": "http://arxiv.org/abs/physics/0307136v1",
+        "date": "2003-07-29",
+        "authors": [
+          "Pier Paolo Delsanto",
+          "Caterina Guiot",
+          "Piero Giorgio Degiorgis"
+        ]
+      },
+      {
+        "title": "Bidirectional communication in neural networks moderated by a Hebb-like learning rule",
+        "summary": "We demonstrate that our recently introduced stochastic Hebb-like learning rule is capable of learning the problem of timing in general network topologies generated by an algorithm of Watts and Strogat",
+        "link": "http://arxiv.org/abs/cond-mat/0307667v1",
+        "date": "2003-07-28",
+        "authors": [
+          "Frank Emmert-Streib"
+        ]
+      },
+      {
+        "title": "A novel stochastic Hebb-like learning rule for neural networks",
+        "summary": "We present a novel stochastic Hebb-like learning rule for neural networks. This learning rule is stochastic with respect to the selection of the time points when a synaptic modification is induced by ",
+        "link": "http://arxiv.org/abs/cond-mat/0307666v1",
+        "date": "2003-07-28",
+        "authors": [
+          "Frank Emmert-Streib"
+        ]
+      },
+      {
+        "title": "Free Energy Transduction in a Chemical Motor Model",
+        "summary": "Motor enzymes catalyze chemical reactions, like the hydrolysis of ATP, and in the process they also perform work. Recent studies indicate that motor enzymes perform work with specific intermediate ste",
+        "link": "http://arxiv.org/abs/physics/0307121v1",
+        "date": "2003-07-24",
+        "authors": [
+          "Josh E. Baker"
+        ]
+      },
+      {
+        "title": "Maximisation Principles and Daisyworld",
+        "summary": "We investigate whether the equilibrium time averaged state of a self-organising system with many internal degrees of freedom, 2D- daisyworld, can be described by optimising a single quantity. Unlike p",
+        "link": "http://arxiv.org/abs/cond-mat/0307567v1",
+        "date": "2003-07-23",
+        "authors": [
+          "G. J. Ackland"
+        ]
+      },
+      {
+        "title": "Xerogel Protein Substrates for Far Infrared Studies",
+        "summary": "A number of researchers are attempting to develop a biosensor based on terahertz sensing. Key to the realization of any biosensor system is the access of the target molecules to the sensor. In the cas",
+        "link": "http://arxiv.org/abs/cond-mat/0307558v1",
+        "date": "2003-07-23",
+        "authors": [
+          "J. -Y. Chen",
+          "W. Cox",
+          "E. Tehan"
+        ]
+      }
+    ],
+    "updated": "2026-04-08T22:56:54.317620Z"
   }
 }
