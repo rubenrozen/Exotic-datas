@@ -480,7 +480,8 @@ try:
             else: by_reg["Other"]+=1
     # Save with states for browser to use directly (thin down to 5000 for file size)
     import random
-    states_sample = states if len(states) <= 5000 else random.sample(states, 5000)
+    # Cap à 8000 pour la taille fichier, priorité aux avions récemment actifs
+    states_sample = states if len(states) <= 8000 else random.sample(states, 8000)
     save("air_traffic.json",{
         "total": len(states),
         "states": states_sample,
