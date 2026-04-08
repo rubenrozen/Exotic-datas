@@ -447,41 +447,35 @@ else:
 # ── [8] OpenSky ───────────────────────────────────────────
 print("[8/9] Air Traffic — OpenSky...")
 try:
-    # Primary: adsb.fi — global endpoint, no auth, no rate limit
+    # Primary: adsb.lol — no auth, server-side has no CORS issues
     states = []
     try:
-        d = fetch_json("https://api.adsb.fi/v1/flights")
-        ac = d.get("flights") or d.get("ac") or d.get("aircraft") or []
-        states = [[a.get("hex",""), (a.get("callsign") or a.get("flight","") or "").strip(), "",
+        d = fetch_json("https://api.adsb.lol/v2/point/0/0/20000")
+        ac = d.get("ac") or d.get("aircraft") or []
+        states = [[a.get("hex",""), (a.get("flight","") or "").strip(), "",
                    None, None, a.get("lon"), a.get("lat"),
-                   (a.get("alt_baro") or a.get("altitude") or 0)*0.3048, False,
-                   (a.get("gs") or a.get("speed") or 0)*0.514444, a.get("track") or 0,
+                   (a.get("alt_baro") or 0)*0.3048, False,
+                   (a.get("gs") or 0)*0.514444, a.get("track") or 0,
                    None,None,None,"",False,0,None]
                   for a in ac if a.get("lat") and a.get("lon")]
-        print(f"  adsb.fi: {len(states)} aircraft")
+        print(f"  adsb.lol: {len(states)} aircraft")
     except Exception as e:
-        print(f"  adsb.fi failed: {e}, trying OpenSky...")
-    # Fallback: OpenSky (rate-limited but works server-side)
+        print(f"  adsb.lol failed: {e}, trying OpenSky...")
     if not states:
-        try:
-            d = fetch_json("https://opensky-network.org/api/states/all")
-            states = d.get("states",[])
-            print(f"  OpenSky: {len(states)} aircraft")
-        except Exception as e2:
-            print(f"  OpenSky failed: {e2}")
+        d = fetch_json("https://opensky-network.org/api/states/all")
+        states = d.get("states",[])
     by_reg = {"Europe":0,"North America":0,"Asia-Pacific":0,"Middle East":0,"Other":0}
     for s in states:
         lon=s[5]; lat=s[6]
         if lat and lon:
             if 35<lat<72 and -10<lon<40: by_reg["Europe"]+=1
             elif 15<lat<72 and -130<lon<-60: by_reg["North America"]+=1
-            elif -50<lat<60 and 60<lon<180: by_reg["Asia-Pacific"]+=1  # Asie + Australie + Océanie
+            elif -15<lat<60 and 60<lon<150: by_reg["Asia-Pacific"]+=1
             elif 10<lat<40 and 35<lon<65: by_reg["Middle East"]+=1
             else: by_reg["Other"]+=1
     # Save with states for browser to use directly (thin down to 5000 for file size)
     import random
-    # Cap à 8000 pour la taille fichier, priorité aux avions récemment actifs
-    states_sample = states if len(states) <= 8000 else random.sample(states, 8000)
+    states_sample = states if len(states) <= 5000 else random.sample(states, 5000)
     save("air_traffic.json",{
         "total": len(states),
         "states": states_sample,
@@ -886,6 +880,77 @@ save("electricity.json", {"regions": elec, "updated": NOW})
 print(f"  Saved electricity.json: {list(elec.keys())}")
 
 # ── META ──────────────────────────────────────────────────
+# ── [IODA] Internet outages ───────────────────────────────
+print("[IODA] Internet outages...")
+try:
+    import time as _time
+    now_ts = int(_time.time())
+    from7d  = now_ts - 7*86400
+    url = f"https://api.ioda.inetintel.cc.gatech.edu/v2/outages/events?from={from7d}&until={now_ts}&limit=100&meta=country"
+    d = fetch_json(url)
+    events = d.get("data") or []
+    from24h = now_ts - 86400
+    active = [e for e in events if (e.get("end") or e.get("until") or now_ts) > from24h]
+    countries_active = list({e.get("entity",{}).get("name") or e.get("entityName","?") for e in active})
+    save("ioda_outages.json", {
+        "total_7d":   len(events),
+        "active_24h": len(countries_active),
+        "countries":  countries_active,
+        "events":     events[:40],
+        "updated":    NOW
+    })
+    print(f"  ✓ IODA: {len(events)} events, {len(countries_active)} countries active")
+except Exception as e:
+    errors.append(f"IODA: {e}"); print(f"  ✗ IODA: {e}")
+
+# ── [APNIC] IPv6 adoption ─────────────────────────────────
+print("[APNIC] IPv6 adoption...")
+try:
+    import datetime as _dt
+    date_str = _dt.datetime.utcnow().strftime("%Y%m%d")
+    # Global + 6 major countries/regions
+    regions = [
+        ("XA","World"), ("US","United States"), ("IN","India"),
+        ("CN","China"),  ("DE","Germany"),       ("BR","Brazil"), ("JP","Japan")
+    ]
+    ipv6_data = {}
+    for code, name in regions:
+        try:
+            url_r = f"https://stats.labs.apnic.net/cgi-bin/plotcache/{date_str}/v6cc.cgi?type=ip6&r={code}&f=json"
+            rd = fetch_json(url_r)
+            pct = rd.get("pct") or rd.get("v6pct")
+            if pct is not None:
+                ipv6_data[code] = {"name": name, "pct": round(float(pct), 1)}
+        except: pass
+    if ipv6_data:
+        save("ipv6_adoption.json", {"regions": ipv6_data, "updated": NOW})
+        print(f"  ✓ APNIC IPv6: {len(ipv6_data)} regions")
+    else:
+        print("  ⚠ APNIC: no data returned")
+except Exception as e:
+    errors.append(f"APNIC: {e}"); print(f"  ✗ APNIC: {e}")
+
+# ── [RIPE] BGP activity ───────────────────────────────────
+print("[RIPE] BGP update activity...")
+try:
+    import datetime as _dt
+    today = _dt.datetime.utcnow().strftime("%Y-%m-%d")
+    week_ago = (_dt.datetime.utcnow() - _dt.timedelta(days=7)).strftime("%Y-%m-%d")
+    url_bgp = f"https://stat.ripe.net/data/bgp-update-activity/data.json?resource=0.0.0.0%2F0&starttime={week_ago}&endtime={today}"
+    bd = fetch_json(url_bgp)
+    stats = bd.get("data", {}).get("stats") or []
+    if stats:
+        save("bgp_activity.json", {
+            "stats":   [{"t": s.get("timestamp","")[:10], "n": (s.get("announcements",0) or 0) + (s.get("withdrawals",0) or 0)} for s in stats],
+            "updated": NOW
+        })
+        print(f"  ✓ RIPE BGP: {len(stats)} data points")
+    else:
+        print("  ⚠ RIPE BGP: no stats returned")
+except Exception as e:
+    errors.append(f"RIPE BGP: {e}"); print(f"  ✗ RIPE BGP: {e}")
+
+
 save("meta.json",{"last_run":NOW,"errors":errors,"datasets":["co2","bdi","gas_storage","oil_stocks","fao","conflicts","refugees","air_traffic","opentable"],"acled_ok":bool(acled_email and acled_password),"eia_ok":bool(os.environ.get("EIA_API_KEY")),"agsi_ok":bool(os.environ.get("AGSI_KEY"))})
 
 print(f"\n{'═'*42}")
