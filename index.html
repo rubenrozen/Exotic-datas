@@ -2245,185 +2245,168 @@ function updateFlightDots(states) {
 // ═══════════════════════════════════════════════════════
 
 async function loadInternet(){
-  // ── 1. IODA outages ──────────────────────────────────
-  try {
-    const d = await loadJSON('ioda_outages.json');
-    if (!d) throw new Error('no ioda_outages.json');
+  const d = await loadJSON('cloudflare_internet.json');
 
-    const events  = d.events || [];
-    const active  = d.active_24h ?? 0;
-    const total7d = d.total_7d ?? 0;
-    const countries = d.countries || [];
-
-    safe('net-out', active || '0');
-    safe('net-out-sub', countries.length > 0
-      ? countries.slice(0,3).join(', ') + (countries.length > 3 ? ` +${countries.length-3}` : '')
-      : 'Aucune coupure active');
-    safe('net-events', total7d);
-    safe('net-events-sub', `${active} actifs · ${total7d - active} résolus (7j)`);
-
-    // Feed
+  if (!d) {
+    // Fichier pas encore généré — guide clair
+    safe('net-out', '—');
+    safe('net-events', '—');
+    safe('net-ipv6', '—');
     const feed = document.getElementById('net-outage-feed');
-    if (feed) {
-      if (events.length > 0) {
-        const now = Math.floor(Date.now()/1000);
-        const sorted = [...events].sort((a,b) => (b.start||b.from||0) - (a.start||a.from||0));
-        feed.innerHTML = sorted.slice(0,12).map(e => {
-          const name  = e.entity?.name || e.entityName || '?';
-          const score = e.overallScore || e.score || 0;
-          const src   = (e.datasource || 'multi').replace('merit-nt','telescope');
-          const ts    = e.start || e.from || 0;
-          const ended = (e.end || e.until || 0) > 0 && (e.end || e.until) < now - 300;
-          const col   = score > 700 ? '#ff3232' : score > 200 ? '#ff5a20' : '#f59e0b';
-          return `<div class="fi">
-            <div class="fi-dot" style="background:${ended?'#4b5778':col}"></div>
-            <div class="fi-body"><b>${name}</b><span style="color:var(--muted);font-size:10px"> · ${src}${score?' · '+Math.round(score/10)+'%':''}</span></div>
-            <div class="fi-time">${ended?'résolu':ts?timeAgo(ts*1000):'récent'}</div>
-          </div>`;
-        }).join('');
-      } else {
-        feed.innerHTML = `<div class="fi"><div class="fi-dot" style="background:#22c55e"></div>
-          <div class="fi-body">Aucune perturbation majeure détectée (7 jours)</div></div>`;
-      }
-    }
-
-    // Carte
-    drawNetOutagesMap(events.filter(e => {
-      const now2 = Math.floor(Date.now()/1000);
-      return (e.end || e.until || now2) > now2 - 86400;
-    }));
-
-    SCORES.net = active > 8 ? 38 : active > 3 ? 58 : 80;
-    updateEPI();
-    addTick(`🌐 IODA: ${total7d} événements · ${active} pays coupés`);
-  } catch(e) {
-    console.warn('IODA:', e);
-    safe('net-out', '—'); safe('net-events', '—');
-    safe('net-out-sub', 'Relance le workflow pour générer ioda_outages.json');
-    const feed = document.getElementById('net-outage-feed');
-    if (feed) feed.innerHTML = `<div class="fi"><div class="fi-dot" style="background:#f59e0b"></div>
-      <div class="fi-body">ioda_outages.json manquant · <a href="https://ioda.inetintel.cc.gatech.edu/dashboard" target="_blank" style="color:var(--c-net)">voir live ↗</a></div></div>`;
+    if (feed) feed.innerHTML = `<div style="color:var(--muted);font-size:11px;line-height:1.7">
+      <b style="color:var(--txt)">Données manquantes</b><br>
+      Le fichier <code>data/cloudflare_internet.json</code> n'existe pas encore.<br>
+      → Relance le workflow GitHub Actions pour le générer.<br><br>
+      <span style="opacity:.6">Nécessite le secret <code>CF_RADAR_KEY</code> dans GitHub Secrets</span>
+    </div>`;
+    const b = document.getElementById('net-ipv6-bars');
+    if (b) b.innerHTML = '';
+    return;
   }
 
-  // ── 2. RIPE BGP activity ──────────────────────────────
-  try {
-    const bd = await loadJSON('bgp_activity.json');
-    if (bd?.stats?.length > 1) {
-      const pts   = bd.stats;
-      const labels= pts.map(p => p.t?.slice(5) || '');
-      const vals  = pts.map(p => p.n || 0);
-      const avg   = vals.reduce((a,b)=>a+b,0) / vals.length;
-      const last  = vals[vals.length-1];
-      const pct   = Math.round((last - avg) / Math.max(avg,1) * 100);
-      mkChart('chart-bgp-activity', {
-        labels,
-        datasets: [{
-          data: vals,
-          borderColor: pct > 30 ? '#ff5a20' : '#22d3ee',
-          borderWidth: 1.5, fill: true,
-          backgroundColor: pct > 30 ? 'rgba(255,90,32,.08)' : 'rgba(34,211,238,.05)',
-          pointRadius: 0, tension: .3
-        }]
-      }, CD);
-      safe('net-bgp-status',
-        `${last.toLocaleString()} updates · ${Math.abs(pct) > 20
-          ? (pct > 0 ? '⚠️ +' : '↓') + Math.abs(pct) + '% vs moy.'
-          : 'Activité normale'}`
-      );
-    }
-  } catch(e) {
-    safe('net-bgp-status', 'bgp_activity.json manquant');
+  // ── KPIs ────────────────────────────────────────────────
+  const ipv6 = d.ipv6_pct;
+  if (ipv6 != null) {
+    safe('net-ipv6', ipv6.toFixed(1) + '%');
+    safe('net-ipv6-sub', 'du trafic HTTP mondial · Cloudflare');
   }
 
-  // ── 3. APNIC IPv6 ─────────────────────────────────────
-  try {
-    const ad = await loadJSON('ipv6_adoption.json');
-    const regions = ad?.regions;
-    if (!regions) throw new Error('no ipv6_adoption.json');
+  const annotations = d.annotations || [];
+  const active = annotations.filter(a => a.outageStatus === 'ongoing' || !a.outageStatus);
+  safe('net-out', active.length || annotations.length || '0');
+  safe('net-out-sub', active.length > 0
+    ? active.slice(0,3).map(a => a.locations?.[0]?.country || a.description?.slice(0,20) || '?').join(', ')
+    : 'Aucune anomalie active');
+  safe('net-events', annotations.length);
+  safe('net-events-sub', `Anomalies vérifiées par Cloudflare (7j)`);
 
-    const world = regions['XA'];
-    if (world) {
-      safe('net-ipv6', world.pct.toFixed(1) + '%');
-      safe('net-ipv6-sub', 'des utilisateurs · APNIC Labs');
-    }
-
-    const bars = document.getElementById('net-ipv6-bars');
-    if (bars) {
-      const COLORS = {XA:'#22d3ee',US:'#3baaff',IN:'#f59e0b',CN:'#ff5a20',DE:'#a855f7',BR:'#22c55e',JP:'#ec4899'};
-      const order = ['XA','US','IN','CN','DE','BR','JP'];
-      bars.innerHTML = order.filter(k => regions[k]).map(k => {
-        const r = regions[k];
-        const col = COLORS[k] || '#22d3ee';
-        return `<div style="display:flex;align-items:center;gap:8px;font-size:11px">
-          <div style="width:60px;color:var(--muted);font-family:var(--mono);font-size:10px;flex-shrink:0">${r.name.split(' ')[0]}</div>
-          <div style="flex:1;height:5px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden">
-            <div style="height:100%;width:${Math.min(r.pct,100)}%;background:${col};border-radius:3px"></div>
-          </div>
-          <div style="width:36px;text-align:right;font-family:var(--mono);color:${col};font-size:11px">${r.pct}%</div>
+  // ── Feed ─────────────────────────────────────────────────
+  const feed = document.getElementById('net-outage-feed');
+  if (feed) {
+    if (annotations.length > 0) {
+      feed.innerHTML = annotations.slice(0, 12).map(a => {
+        const loc = a.locations?.map(l => l.country).join(', ') || 'Mondial';
+        const desc = a.description || a.title || 'Anomalie réseau';
+        const ts = a.startDate ? new Date(a.startDate).getTime() : 0;
+        const ongoing = a.outageStatus === 'ongoing' || !a.endDate;
+        const col = ongoing ? '#ff5a20' : '#f59e0b';
+        return `<div class="fi">
+          <div class="fi-dot" style="background:${ongoing ? col : '#4b5778'}"></div>
+          <div class="fi-body"><b>${loc}</b><span style="color:var(--muted);font-size:10px"> · ${desc.slice(0,50)}</span></div>
+          <div class="fi-time">${ongoing ? 'en cours' : ts ? timeAgo(ts) : 'résolu'}</div>
         </div>`;
       }).join('');
+    } else {
+      feed.innerHTML = `<div class="fi">
+        <div class="fi-dot" style="background:#22c55e"></div>
+        <div class="fi-body">Aucune anomalie détectée par Cloudflare (7 jours)</div>
+      </div>`;
     }
-  } catch(e) {
-    safe('net-ipv6', '—');
-    const b = document.getElementById('net-ipv6-bars');
-    if (b) b.innerHTML = '<div style="color:var(--muted);font-size:11px">ipv6_adoption.json manquant · relance le workflow</div>';
   }
+
+  // ── Carte outages ─────────────────────────────────────────
+  drawNetOutagesMap(annotations);
+
+  // ── Graphique trafic 7j ───────────────────────────────────
+  const ts = d.traffic_ts;
+  if (ts?.timestamps?.length > 1 && ts?.values?.length > 1) {
+    const labels = ts.timestamps.map(t => t.slice(5, 10));
+    mkChart('chart-bgp-activity', {
+      labels,
+      datasets: [{
+        data: ts.values.map(v => parseFloat(v) || 0),
+        borderColor: '#22d3ee', borderWidth: 1.5, fill: true,
+        backgroundColor: 'rgba(34,211,238,.05)', pointRadius: 0, tension: .3
+      }]
+    }, CD);
+    safe('net-bgp-status', `Trafic HTTP mondial · Cloudflare Radar · ${new Date(d.updated||Date.now()).toLocaleDateString('fr')}`);
+  }
+
+  // ── IPv6 bars ─────────────────────────────────────────────
+  const bars = document.getElementById('net-ipv6-bars');
+  if (bars && ipv6 != null) {
+    const ipv4 = d.ipv4_pct || (100 - ipv6);
+    bars.innerHTML = [
+      {name:'IPv6', pct: ipv6, col:'#22d3ee'},
+      {name:'IPv4', pct: ipv4, col:'#3baaff'},
+    ].map(r => `<div style="display:flex;align-items:center;gap:8px;font-size:11px">
+      <div style="width:40px;color:var(--muted);font-family:var(--mono);font-size:10px;flex-shrink:0">${r.name}</div>
+      <div style="flex:1;height:5px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden">
+        <div style="height:100%;width:${Math.min(r.pct,100)}%;background:${r.col};border-radius:3px"></div>
+      </div>
+      <div style="width:40px;text-align:right;font-family:var(--mono);color:${r.col};font-size:11px">${r.pct.toFixed(1)}%</div>
+    </div>`).join('');
+
+    // DDoS vectors si disponibles
+    const ddos = d.ddos_vectors;
+    if (ddos && Object.keys(ddos).length > 0) {
+      const top = Object.entries(ddos).sort((a,b) => parseFloat(b[1])-parseFloat(a[1])).slice(0,3);
+      bars.innerHTML += `<div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,.06)">
+        <div style="font-size:9px;color:var(--muted);font-family:var(--mono);margin-bottom:6px">VECTEURS D'ATTAQUE L3/L4 (7j)</div>
+        ${top.map(([k,v]) => `<div style="display:flex;justify-content:space-between;font-size:10px;font-family:var(--mono);margin-bottom:3px">
+          <span style="color:var(--muted)">${k.replace(/_/g,' ')}</span>
+          <span style="color:#ff5a20">${parseFloat(v).toFixed(1)}%</span>
+        </div>`).join('')}
+      </div>`;
+    }
+  }
+
+  SCORES.net = active.length > 5 ? 40 : active.length > 2 ? 60 : 82;
+  updateEPI();
+  if (annotations.length > 0) addTick(`🌐 Cloudflare: ${annotations.length} anomalies · IPv6 ${ipv6?.toFixed(1)}%`);
 }
 
-// Points de coupure sur canvas monde (Internet tab)
-function drawNetOutagesMap(activeEvents) {
+function drawNetOutagesMap(annotations) {
   const canvas = document.getElementById('net-outages-canvas');
   if (!canvas) return;
   const W = canvas.width, H = canvas.height;
   const ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, W, H);
-
-  // Fond carte
   if (typeof drawFiresMap === 'function') drawFiresMap(false, canvas);
 
   const COORDS = {
-    'Iran':[32,53],'Iraq':[33,44],'Sudan':[15,30],'Ethiopia':[9,40],'Myanmar':[19,97],
-    'Venezuela':[8,-66],'Cuba':[22,-80],'Russia':[60,90],'Belarus':[53,28],'Syria':[35,38],
-    'Yemen':[15,48],'Libya':[27,17],'Cameroon':[4,12],'Chad':[15,19],'Niger':[17,8],
-    'Congo':[0,18],'DRC':[-3,24],'Mozambique':[-18,35],'Kazakhstan':[48,67],
-    'Uzbekistan':[41,64],'Tajikistan':[39,71],'India':[21,79],'Pakistan':[30,70],
-    'Bangladesh':[24,90],'Sri Lanka':[7,81],'Indonesia':[-5,120],'Kenya':[-1,37],
-    'Tanzania':[-6,35],'Nigeria':[10,8],'Ghana':[8,-1],'Mali':[17,-4],
-    'Algeria':[28,3],'Egypt':[26,30],'Morocco':[32,-6],'Turkey':[39,35],
-    'Ukraine':[49,32],'Afghanistan':[33,66],'Cambodia':[12,105],'Vietnam':[16,108],
-    'Haiti':[19,-72],'Cuba':[22,-80],'Colombia':[4,-74],'Bolivia':[-17,-65],
-    'Zimbabwe':[-20,30],'Zambia':[-13,28],'Burkina Faso':[12,-2],'Senegal':[14,-14],
-    'Guinea':[11,-11],'Ivory Coast':[7,-6],'Liberia':[6,-10],'Rwanda':[-2,30],
+    'US':[38,-97],'GB':[55,-3],'FR':[46,2],'DE':[51,10],'JP':[36,138],'CN':[35,105],
+    'IN':[21,79],'RU':[61,90],'BR':[-10,-53],'AU':[-25,133],'CA':[56,-106],
+    'IR':[32,53],'IQ':[33,44],'SD':[15,30],'ET':[9,40],'MM':[19,97],
+    'VE':[8,-66],'CU':[22,-80],'BY':[53,28],'SY':[35,38],'YE':[15,48],
+    'LY':[27,17],'TN':[34,9],'EG':[26,30],'MA':[32,-6],'DZ':[28,3],
+    'NG':[10,8],'GH':[8,-1],'ML':[17,-4],'TR':[39,35],'UA':[49,32],
+    'AF':[33,66],'PK':[30,70],'BD':[24,90],'KH':[12,105],'VN':[16,108],
+    'HT':[19,-72],'CO':[4,-74],'MX':[24,-102],'AR':[-34,-64],'ZW':[-20,30],
+    'KZ':[48,67],'UZ':[41,64],'KE':[-1,37],'TZ':[-6,35]
   };
 
-  if (!activeEvents.length) {
-    ctx.fillStyle = 'rgba(34,211,238,0.4)';
+  const items = annotations.filter(a => {
+    const locs = a.locations || [];
+    return locs.some(l => COORDS[l.country]);
+  });
+
+  if (!items.length) {
+    ctx.fillStyle = 'rgba(34,211,238,0.35)';
     ctx.font = '11px monospace';
-    ctx.fillText('Aucune coupure active détectée', W/2 - 120, H/2);
+    ctx.textAlign = 'center';
+    ctx.fillText('Aucune anomalie géolocalisée', W/2, H/2);
+    ctx.textAlign = 'left';
     return;
   }
 
-  activeEvents.forEach(e => {
-    const name  = e.entity?.name || e.entityName || '';
-    const score = e.overallScore || e.score || 100;
-    const coord = COORDS[name];
-    if (!coord) return;
-    const [lat, lon] = coord;
-    const {x, y} = project(lon, lat, W, H);
-    const r   = score > 700 ? 11 : score > 200 ? 7 : 4;
-    const col = score > 700 ? [255,50,50] : score > 200 ? [255,90,32] : [245,158,11];
-    const grd = ctx.createRadialGradient(x,y,0,x,y,r*3);
-    grd.addColorStop(0, `rgba(${col.join(',')},0.3)`);
-    grd.addColorStop(1, `rgba(${col.join(',')},0)`);
-    ctx.beginPath(); ctx.arc(x,y,r*3,0,Math.PI*2);
-    ctx.fillStyle = grd; ctx.fill();
-    ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2);
-    ctx.fillStyle = `rgba(${col.join(',')},0.9)`; ctx.fill();
-    ctx.beginPath(); ctx.arc(x,y,r+2,0,Math.PI*2);
-    ctx.strokeStyle = `rgba(${col.join(',')},0.4)`; ctx.lineWidth = 1.5; ctx.stroke();
+  items.forEach(a => {
+    const locs = (a.locations || []).filter(l => COORDS[l.country]);
+    const ongoing = a.outageStatus === 'ongoing' || !a.endDate;
+    locs.forEach(l => {
+      const [lat, lon] = COORDS[l.country];
+      const {x, y} = project(lon, lat, W, H);
+      const r = ongoing ? 8 : 5;
+      const col = ongoing ? [255,90,32] : [245,158,11];
+      const grd = ctx.createRadialGradient(x,y,0,x,y,r*3);
+      grd.addColorStop(0, `rgba(${col.join(',')},0.3)`);
+      grd.addColorStop(1, `rgba(${col.join(',')},0)`);
+      ctx.beginPath(); ctx.arc(x,y,r*3,0,Math.PI*2); ctx.fillStyle=grd; ctx.fill();
+      ctx.beginPath(); ctx.arc(x,y,r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(${col.join(',')},0.9)`; ctx.fill();
+    });
   });
-}
-// ═══════════════════════════════════════════════════════
+}// ═══════════════════════════════════════════════════════
 // ENERGY TAB
 // ═══════════════════════════════════════════════════════
 
