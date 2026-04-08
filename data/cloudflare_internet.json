@@ -1,0 +1,11 @@
+{
+  "annotations": [],
+  "ipv6_pct": null,
+  "ipv4_pct": null,
+  "traffic_ts": {
+    "timestamps": [],
+    "values": []
+  },
+  "ddos_vectors": {},
+  "updated": "2026-04-08T23:58:48.672763Z"
+}
