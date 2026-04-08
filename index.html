@@ -1920,7 +1920,7 @@ async function refreshFlights(silent=false){
   updateEPI();
   if (!silent) addTick(`✈️ ${states.length.toLocaleString()} active flights`);
   const upd = document.getElementById('flights-updated');
-  if (upd) upd.textContent = 'Last updated: ' + new Date().toLocaleTimeString();
+  if (upd) upd.textContent = 'Live · ' + new Date().toLocaleTimeString();
 }
 
 
@@ -2488,66 +2488,68 @@ async function loadOpenTable(){
 }
 
 async function loadBDI(period,btn){
-  // Highlight active button
   if(btn){
     const par=btn.closest('.hzs')||btn.parentNode;
     if(par) par.querySelectorAll('.hz').forEach(b=>b.classList.remove('on'));
     btn.classList.add('on');
   }
-  const d=await loadJSON('bdi.json').catch(()=>null);
-  if(!d){
-    // Fallback: show static known value with explanation
-    safe('bdi-value','1 823');
-    safe('bdi-delta','Requires data/bdi.json → Run workflow');
-    safe('bdi-sub','Baltic Dry Index · Baltic Exchange');
+  const d = await loadJSON('bdi.json').catch(()=>null);
+  const block = document.getElementById('bdi-block');
+  if(!block) return;
+  if(!d || !d.current){
+    block.innerHTML = '<div class="nodata"><div class="nodata-ico">⚓</div><div>Requires <code>data/bdi.json</code><br>→ Run GitHub Actions</div></div>';
     return;
   }
-  safe('bdi-value',(d.current||d.value||0).toLocaleString());
-  safe('bdi-delta',d.delta_week_pct?(d.delta_week_pct>0?'↑+':'↓')+Math.abs(d.delta_week_pct).toFixed(1)+'% WoW':'—');
-  safe('bdi-sub','Baltic Dry Index · Baltic Exchange · Live');
+  const val = (d.current||0).toLocaleString();
+  const delta = d.delta_week_pct ? (d.delta_week_pct>0?'<span class="dn">↑+':'<span class="up">↓')+Math.abs(d.delta_week_pct).toFixed(1)+'% WoW</span>' : '';
+  block.innerHTML = `<div class="big" style="color:var(--c-trade)">${val}</div>
+    <div class="unit" style="margin-top:2px">Baltic Dry Index pts ${delta}</div>`;
   const series=(period==='1y'?d.series?.slice(-52):period==='2y'?d.series:d.series?.slice(-26))||[];
   if(series.length>1)
     mkChart('chart-bdi',{labels:series.map(x=>x.date),datasets:[{data:series.map(x=>x.value),borderColor:'#f59e0b',borderWidth:1.5,fill:true,backgroundColor:'rgba(245,158,11,.06)',pointRadius:0,tension:.4}]},CD);
-  addTick(`⚓ BDI: ${(d.current||0).toLocaleString()}`);
+  addTick(`⚓ BDI: ${val}`);
 }
 
 async function loadTruck(){
+  // 1. Essayer truck_tonnage.json (généré par workflow)
+  const d = await loadJSON('truck_tonnage.json').catch(()=>null);
+  if(d && d.current){
+    safe('truck-val', d.current.toFixed(1));
+    safe('truck-mom', d.delta_pct!=null ? (d.delta_pct>0?'+':'')+d.delta_pct.toFixed(1)+'%' : '—');
+    safe('truck-yoy', d.delta_year_pct!=null ? (d.delta_year_pct>0?'+':'')+d.delta_year_pct.toFixed(1)+'%' : '—');
+    const td=document.getElementById('truck-delta');
+    if(td && d.delta_pct!=null)
+      td.innerHTML=`<span class="${d.delta_pct>0?'dn':'up'}">${d.delta_pct>0?'↑+':'↓'}${Math.abs(d.delta_pct).toFixed(1)}% MoM</span>`;
+    if(d.series?.length>1)
+      mkChart('chart-truck',{labels:d.series.map(x=>x.date),datasets:[{data:d.series.map(x=>x.value),borderColor:'#22d3ee',borderWidth:1.5,fill:true,backgroundColor:'rgba(34,211,238,.05)',pointRadius:0,tension:.4}]},CD);
+    addTick(`🚛 ATA: ${d.current.toFixed(1)}`);
+    return;
+  }
+  // 2. Fetch FRED directement (CSV public, via corsproxy)
   try{
-    const cfg = await loadJSON('config.json').catch(()=>null);
-    const fredKey = cfg?.fred_api_key;
-    const url = fredKey
-      ? `https://api.stlouisfed.org/fred/series/observations?series_id=TRUCKD11&sort_order=desc&limit=13&api_key=${fredKey}&file_type=json`
-      : 'https://corsproxy.io/?url='+encodeURIComponent('https://fred.stlouisfed.org/graph/fredgraph.csv?id=TRUCKD11');
-    
-    let vals=[], labels=[];
-    if(fredKey){
-      const d=await fetch(url,{signal:AbortSignal.timeout(10000)}).then(r=>r.json());
-      const obs=(d.observations||[]).filter(o=>o.value!=='.').reverse();
-      vals=obs.map(o=>parseFloat(o.value));
-      labels=obs.map(o=>o.date.slice(0,7));
-    } else {
-      const txt=await fetch(url,{signal:AbortSignal.timeout(10000)}).then(r=>r.text());
-      const lines=txt.split('\n').filter(l=>l&&!l.startsWith('DATE')).slice(-13);
-      vals=lines.map(l=>parseFloat(l.split(',')[1])).filter(v=>!isNaN(v));
-      labels=lines.map(l=>l.split(',')[0].slice(0,7));
-    }
-    if(vals.length){
-      const cur=vals[vals.length-1];
-      const prev=vals[vals.length-2]||cur;
-      const prevY=vals[vals.length-13]||cur;
-      safe('truck-val',cur.toFixed(1));
+    const url='https://corsproxy.io/?url='+encodeURIComponent('https://fred.stlouisfed.org/graph/fredgraph.csv?id=TRUCKD11');
+    const txt=await fetch(url,{signal:AbortSignal.timeout(12000)}).then(r=>r.text());
+    const lines=txt.split('\n').filter(l=>l&&!l.startsWith('DATE'));
+    const vals=lines.map(l=>parseFloat(l.split(',')[1])).filter(v=>!isNaN(v));
+    const labels=lines.map(l=>l.split(',')[0].slice(0,7));
+    if(vals.length>=2){
+      const cur=vals[vals.length-1], prev=vals[vals.length-2];
+      const prevY=vals.length>=13?vals[vals.length-13]:null;
       const mom=((cur-prev)/prev*100);
-      const yoy=((cur-prevY)/prevY*100);
+      const yoy=prevY?((cur-prevY)/prevY*100):null;
+      safe('truck-val', cur.toFixed(1));
+      safe('truck-mom', (mom>0?'+':'')+mom.toFixed(1)+'%');
+      safe('truck-yoy', yoy!=null?(yoy>0?'+':'')+yoy.toFixed(1)+'%':'—');
       const td=document.getElementById('truck-delta');
-      if(td) td.innerHTML=`<span class="${mom>0?'dn':'up'}">${mom>0?'↑':'↓'}${Math.abs(mom).toFixed(1)}% MoM</span>`;
-      safe('truck-mom',(mom>0?'+':'')+mom.toFixed(1)+'%');
-      safe('truck-yoy',(yoy>0?'+':'')+yoy.toFixed(1)+'%');
-      addTick(`🚛 ATA Truck Tonnage: ${cur.toFixed(1)}`);
+      if(td) td.innerHTML=`<span class="${mom>0?'dn':'up'}">${mom>0?'↑+':'↓'}${Math.abs(mom).toFixed(1)}% MoM</span>`;
+      if(vals.length>2)
+        mkChart('chart-truck',{labels:labels.slice(-26),datasets:[{data:vals.slice(-26),borderColor:'#22d3ee',borderWidth:1.5,fill:true,backgroundColor:'rgba(34,211,238,.05)',pointRadius:0,tension:.4}]},CD);
+      addTick(`🚛 ATA Truck Tonnage: ${cur.toFixed(1)} (2015=100)`);
     }
   }catch(e){
     safe('truck-val','—');
     const td=document.getElementById('truck-delta');
-    if(td) td.textContent='Via FRED · add FRED_API_KEY secret';
+    if(td) td.textContent='FRED unavailable';
   }
 }
 
