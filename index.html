@@ -2074,26 +2074,35 @@ function drawMaritimeMap() {
 
 // Auto-connect: try config.json first, then localStorage fallback
 
+let maritimeMapDone = false;
 async function initMaritimeMap() {
+  if (maritimeMapDone) return;
+  maritimeMapDone = true;
+
   const statusEl = document.getElementById('ais-status');
+  if (statusEl) { statusEl.textContent = '⟳  loading key…'; statusEl.style.color = '#f59e0b'; }
+
+  // 1. Try config.json (written by GitHub Actions with AIS_KEY secret)
   try {
     const cfg = await loadJSON('config.json');
     const key = cfg?.ais_key;
     if (key && key !== 'null' && key.length > 10) {
-      // Save to localStorage so it works even before next Actions run
       localStorage.setItem('ais_key', key);
       startAISStream(key);
       return;
     }
   } catch {}
-  // Fallback: check localStorage (key may have been set previously)
+
+  // 2. Try localStorage (key set in a previous session)
   const stored = localStorage.getItem('ais_key');
-  if (stored) {
+  if (stored && stored.length > 10) {
     startAISStream(stored);
     return;
   }
+
+  // 3. No key found
   if (statusEl) {
-    statusEl.innerHTML = '●  add <code>AIS_KEY</code> secret → run workflow';
+    statusEl.innerHTML = '●  clé AIS manquante — ajoute <code>AIS_KEY</code> dans GitHub Secrets';
     statusEl.style.color = '#f59e0b';
   }
 }
