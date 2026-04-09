@@ -3,197 +3,199 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "In-Place Test-Time Training",
-        "summary": "The static ``train then deploy\" paradigm fundamentally limits Large Language Models (LLMs) from dynamically adapting their weights in response to continuous streams of new information inherent in real",
-        "link": "http://arxiv.org/abs/2604.06169v1",
-        "date": "2026-04-07",
+        "title": "Toward a Tractability Frontier for Exact Relevance Certification",
+        "summary": "Exact relevance certification asks which coordinates are necessary to determine the optimal action in a coordinate-structured decision problem. The tractable families treated here admit a finite primi",
+        "link": "http://arxiv.org/abs/2604.07349v1",
+        "date": "2026-04-08",
         "authors": [
-          "Guhao Feng",
-          "Shengjie Luo",
-          "Kai Hua"
+          "Tristan Simas"
         ]
       },
       {
-        "title": "DiffHDR: Re-Exposing LDR Videos with Video Diffusion Models",
-        "summary": "Most digital videos are stored in 8-bit low dynamic range (LDR) formats, where much of the original high dynamic range (HDR) scene radiance is lost due to saturation and quantization. This loss of hig",
-        "link": "http://arxiv.org/abs/2604.06161v1",
-        "date": "2026-04-07",
+        "title": "MoRight: Motion Control Done Right",
+        "summary": "Generating motion-controlled videos--where user-specified actions drive physically plausible scene dynamics under freely chosen viewpoints--demands two capabilities: (1) disentangled motion control, a",
+        "link": "http://arxiv.org/abs/2604.07348v1",
+        "date": "2026-04-08",
         "authors": [
-          "Zhengming Yu",
-          "Li Ma",
-          "Mingming He"
+          "Shaowei Liu",
+          "Xuanchi Ren",
+          "Tianchang Shen"
         ]
       },
       {
-        "title": "MMEmb-R1: Reasoning-Enhanced Multimodal Embedding with Pair-Aware Selection and Adaptive Control",
-        "summary": "MLLMs have been successfully applied to multimodal embedding tasks, yet their generative reasoning capabilities remain underutilized. Directly incorporating chain-of-thought reasoning into embedding l",
-        "link": "http://arxiv.org/abs/2604.06156v1",
-        "date": "2026-04-07",
+        "title": "RoSHI: A Versatile Robot-oriented Suit for Human Data In-the-Wild",
+        "summary": "Scaling up robot learning will likely require human data containing rich and long-horizon interactions in the wild. Existing approaches for collecting such data trade off portability, robustness to oc",
+        "link": "http://arxiv.org/abs/2604.07331v1",
+        "date": "2026-04-08",
         "authors": [
-          "Yuchi Wang",
-          "Haiyang Yu",
-          "Weikang Bian"
+          "Wenjing Margaret Mao",
+          "Jefferson Ng",
+          "Luyang Hu"
         ]
       },
       {
-        "title": "Toward Consistent World Models with Multi-Token Prediction and Latent Semantic Enhancement",
-        "summary": "Whether Large Language Models (LLMs) develop coherent internal world models remains a core debate. While conventional Next-Token Prediction (NTP) focuses on one-step-ahead supervision, Multi-Token Pre",
-        "link": "http://arxiv.org/abs/2604.06155v1",
-        "date": "2026-04-07",
+        "title": "Syntax Is Easy, Semantics Is Hard: Evaluating LLMs for LTL Translation",
+        "summary": "Propositional Linear Temporal Logic (LTL) is a popular formalism for specifying desirable requirements and security and privacy policies for software, networks, and systems. Yet expressing such requir",
+        "link": "http://arxiv.org/abs/2604.07321v1",
+        "date": "2026-04-08",
         "authors": [
-          "Qimin Zhong",
-          "Hao Liao",
-          "Haiming Qin"
+          "Priscilla Kyei Danso",
+          "Mohammad Saqib Hasan",
+          "Niranjan Balasubramanian"
         ]
       },
       {
-        "title": "Who Governs the Machine? A Machine Identity Governance Taxonomy (MIGT) for AI Systems Operating Across Enterprise and Geopolitical Boundaries",
-        "summary": "The governance of artificial intelligence has a blind spot: the machine identities that AI systems use to act. AI agents, service accounts, API tokens, and automated workflows now outnumber human iden",
-        "link": "http://arxiv.org/abs/2604.06148v1",
-        "date": "2026-04-07",
+        "title": "Evaluating In-Context Translation with Synchronous Context-Free Grammar Transduction",
+        "summary": "Low-resource languages pose a challenge for machine translation with large language models (LLMs), which require large amounts of training data. One potential way to circumvent this data dependence is",
+        "link": "http://arxiv.org/abs/2604.07320v1",
+        "date": "2026-04-08",
         "authors": [
-          "Andrew Kurtz",
-          "Klaudia Krawiecka"
+          "Jackson Petty",
+          "Jaulie Goe",
+          "Tal Linzen"
         ]
       },
       {
-        "title": "Generating Synthetic Doctor-Patient Conversations for Long-form Audio Summarization",
-        "summary": "Long-context audio reasoning is underserved in both training data and evaluation. Existing benchmarks target short-context tasks, and the open-ended generation tasks most relevant to long-context reas",
-        "link": "http://arxiv.org/abs/2604.06138v1",
-        "date": "2026-04-07",
+        "title": "Chatbot-Based Assessment of Code Understanding in Automated Programming Assessment Systems",
+        "summary": "Large Language Models (LLMs) challenge conventional automated programming assessment because students can now produce functionally correct code without demonstrating corresponding understanding. This ",
+        "link": "http://arxiv.org/abs/2604.07304v1",
+        "date": "2026-04-08",
         "authors": [
-          "Yanis Labrak",
-          "David Gr\u00fcnert",
-          "S\u00e9verin Baroudi"
+          "Eduard Frankford",
+          "Erik Cikalleshi",
+          "Ruth Breu"
         ]
       },
       {
-        "title": "Shot-Based Quantum Encoding: A Data-Loading Paradigm for Quantum Neural Networks",
-        "summary": "Efficient data loading remains a bottleneck for near-term quantum machine-learning. Existing schemes (angle, amplitude, and basis encoding) either underuse the exponential Hilbert-space capacity or re",
-        "link": "http://arxiv.org/abs/2604.06135v1",
-        "date": "2026-04-07",
+        "title": "Region-Graph Optimal Transport Routing for Mixture-of-Experts Whole-Slide Image Classification",
+        "summary": "Multiple Instance Learning (MIL) is the dominant framework for gigapixel whole-slide image (WSI) classification in computational pathology. However, current MIL aggregators route all instances through",
+        "link": "http://arxiv.org/abs/2604.07298v1",
+        "date": "2026-04-08",
         "authors": [
-          "Basil Kyriacou",
-          "Viktoria Patapovich",
-          "Maniraman Periyasamy"
+          "Xin Tian",
+          "Jiuliu Lu",
+          "Ephraim Tsalik"
         ]
       },
       {
-        "title": "Claw-Eval: Toward Trustworthy Evaluation of Autonomous Agents",
-        "summary": "Large language models are increasingly deployed as autonomous agents executing multi-step workflows in real-world software environments. However, existing agent benchmarks suffer from three critical l",
-        "link": "http://arxiv.org/abs/2604.06132v1",
-        "date": "2026-04-07",
+        "title": "CADENCE: Context-Adaptive Depth Estimation for Navigation and Computational Efficiency",
+        "summary": "Autonomous vehicles deployed in remote environments typically rely on embedded processors, compact batteries, and lightweight sensors. These hardware limitations conflict with the need to derive robus",
+        "link": "http://arxiv.org/abs/2604.07286v1",
+        "date": "2026-04-08",
         "authors": [
-          "Bowen Ye",
-          "Rang Li",
-          "Qibin Yang"
+          "Timothy K Johnsen",
+          "Marco Levorato"
         ]
       }
     ],
-    "updated": "2026-04-08T23:58:48.672763Z"
+    "updated": "2026-04-09T04:35:31.341082Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-04-08T23:58:48.672763Z"
+    "updated": "2026-04-09T04:35:31.341082Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-04-08T23:58:48.672763Z"
+    "updated": "2026-04-09T04:35:31.341082Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-04-08T23:58:48.672763Z"
+    "updated": "2026-04-09T04:35:31.341082Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Who Governs the Machine? A Machine Identity Governance Taxonomy (MIGT) for AI Systems Operating Across Enterprise and Geopolitical Boundaries",
-        "summary": "The governance of artificial intelligence has a blind spot: the machine identities that AI systems use to act. AI agents, service accounts, API tokens, and automated workflows now outnumber human iden",
-        "link": "http://arxiv.org/abs/2604.06148v1",
-        "date": "2026-04-07",
+        "title": "Validated Intent Compilation for Constrained Routing in LEO Mega-Constellations",
+        "summary": "Operating LEO mega-constellations requires translating high-level operator intents (\"reroute financial traffic away from polar links under 80 ms\") into low-level routing constraints -- a task that dem",
+        "link": "http://arxiv.org/abs/2604.07264v1",
+        "date": "2026-04-08",
         "authors": [
-          "Andrew Kurtz",
-          "Klaudia Krawiecka"
+          "Yuanhang Li"
         ]
       },
       {
-        "title": "Towards Securing IIoT: An Innovative Privacy-Preserving Anomaly Detector Based on Federated Learning",
-        "summary": "In the light of the growing connectivity and sensitivity of industrial data,   cyberattacks and data breaches are becoming more common in the Industrial Internet of Things (IIoT). To cope with such th",
-        "link": "http://arxiv.org/abs/2604.06101v1",
-        "date": "2026-04-07",
+        "title": "On the Price of Privacy for Language Identification and Generation",
+        "summary": "As large language models (LLMs) are increasingly trained on sensitive user data, understanding the fundamental cost of privacy in language learning becomes essential. We initiate the study of differen",
+        "link": "http://arxiv.org/abs/2604.07238v1",
+        "date": "2026-04-08",
         "authors": [
-          "Samira Kamali Poorazad",
-          "Chafika Benza\u00efd",
-          "Tarik Taleb"
+          "Xiaoyu Li",
+          "Andi Han",
+          "Jiaojiao Jiang"
         ]
       },
       {
-        "title": "Signature Placement in Post-Quantum TLS Certificate Hierarchies: An Experimental Study of ML-DSA and SLH-DSA in TLS 1.3 Authentication",
-        "summary": "Post-quantum migration in TLS 1.3 should not be understood as a flat substitution problem in which one signature algorithm is replaced by another and deployment cost is inferred directly from primitiv",
-        "link": "http://arxiv.org/abs/2604.06100v1",
-        "date": "2026-04-07",
+        "title": "TraceSafe: A Systematic Assessment of LLM Guardrails on Multi-Step Tool-Calling Trajectories",
+        "summary": "As large language models (LLMs) evolve from static chatbots into autonomous agents, the primary vulnerability surface shifts from final outputs to intermediate execution traces. While safety guardrail",
+        "link": "http://arxiv.org/abs/2604.07223v1",
+        "date": "2026-04-08",
         "authors": [
-          "Jos\u00e9 Luis Delgado Jim\u00e9nez"
+          "Yen-Shan Chen",
+          "Sian-Yao Huang",
+          "Cheng-Lin Yang"
         ]
       },
       {
-        "title": "LLM4CodeRE: Generative AI for Code Decompilation Analysis and Reverse Engineering",
-        "summary": "Code decompilation analysis is a fundamental yet challenging task in malware reverse engineering, particularly due to the pervasive use of sophisticated obfuscation techniques. Although recent large l",
-        "link": "http://arxiv.org/abs/2604.06095v1",
-        "date": "2026-04-07",
+        "title": "DDP-SA: Scalable Privacy-Preserving Federated Learning via Distributed Differential Privacy and Secure Aggregation",
+        "summary": "This article presents DDP-SA, a scalable privacy-preserving federated learning framework that jointly leverages client-side local differential privacy (LDP) and full-threshold additive secret sharing ",
+        "link": "http://arxiv.org/abs/2604.07125v1",
+        "date": "2026-04-08",
         "authors": [
-          "Hamed Jelodar",
-          "Samita Bai",
-          "Tochukwu Emmanuel Nwankwo"
+          "Wenjing Wei",
+          "Farid Nait-Abdesselam",
+          "Alla Jammine"
         ]
       },
       {
-        "title": "Inertial Mining: Equilibrium Implementation of the Bitcoin Protocol",
-        "summary": "The value of proof-of-work cryptocurrencies critically depends on miners having incentives to follow the protocol. However, the Bitcoin mining protocol proposed by Nakamoto (2008) and implemented in p",
-        "link": "http://arxiv.org/abs/2604.06092v1",
-        "date": "2026-04-07",
+        "title": "BioMoTouch: Touch-Based Behavioral Authentication via Biometric-Motion Interaction Modeling",
+        "summary": "Touch-based authentication is widely deployed on mobile devices due to its convenience and seamless user experience. However, existing systems largely model touch interaction as a purely behavioral si",
+        "link": "http://arxiv.org/abs/2604.07071v1",
+        "date": "2026-04-08",
         "authors": [
-          "Manuel Mueller-Frank",
-          "Minghao Pan",
-          "Omer Tamuz"
+          "Zijian Ling",
+          "Jianbang Chen",
+          "Hongwei Li"
         ]
       },
       {
-        "title": "CritBench: A Framework for Evaluating Cybersecurity Capabilities of Large Language Models in IEC 61850 Digital Substation Environments",
-        "summary": "The advancement of Large Language Models (LLMs) has raised concerns regarding their dual-use potential in cybersecurity. Existing evaluation frameworks overwhelmingly focus on Information Technology (",
-        "link": "http://arxiv.org/abs/2604.06019v1",
-        "date": "2026-04-07",
+        "title": "CAAP: Capture-Aware Adversarial Patch Attacks on Palmprint Recognition Models",
+        "summary": "Palmprint recognition is deployed in security-critical applications, including access control and palm-based payment, due to its contactless acquisition and highly discriminative ridge-and-crease text",
+        "link": "http://arxiv.org/abs/2604.06987v1",
+        "date": "2026-04-08",
         "authors": [
-          "Gustav Keppler",
-          "Moritz Gst\u00fcr",
-          "Veit Hagenmeyer"
+          "Renyang Liu",
+          "Jiale Li",
+          "Jie Zhang"
         ]
       },
       {
-        "title": "A Formal Security Framework for MCP-Based AI Agents: Threat Taxonomy, Verification Models, and Defense Mechanisms",
-        "summary": "The Model Context Protocol (MCP), introduced by Anthropic in November 2024 and now governed by the Linux Foundation's Agentic AI Foundation, has rapidly become the de facto standard for connecting lar",
-        "link": "http://arxiv.org/abs/2604.05969v1",
-        "date": "2026-04-07",
+        "title": "PSR2: A Phase-based Semantic Reasoning Framework for Atomicity Violation Detection via Contract Refinement",
+        "summary": "With the rapid advancement of decentralized applications, smart contract security faces severe challenges, particularly regarding atomicity violations in complex logic such as Oracle and NFT contracts",
+        "link": "http://arxiv.org/abs/2604.06975v1",
+        "date": "2026-04-08",
         "authors": [
-          "Nirajan Acharya",
-          "Gaurav Kumar Gupta"
+          "Xiaoqi Li",
+          "Xin Wang",
+          "Wenkai Li"
         ]
       },
       {
-        "title": "Swiss-Bench 003: Evaluating LLM Reliability and Adversarial Security for Swiss Regulatory Contexts",
-        "summary": "The deployment of large language models (LLMs) in Swiss financial and regulatory contexts demands empirical evidence of both production reliability and adversarial security, dimensions not jointly ope",
-        "link": "http://arxiv.org/abs/2604.05872v1",
-        "date": "2026-04-07",
+        "title": "VulGD: A LLM-Powered Dynamic Open-Access Vulnerability Graph Database",
+        "summary": "Software vulnerabilities continue to pose significant threats to modern information systems, requiring a timely and accurate risk assessment. Public repositories, such as the National Vulnerability Da",
+        "link": "http://arxiv.org/abs/2604.06967v1",
+        "date": "2026-04-08",
         "authors": [
-          "Fatih Uenal"
+          "Luat Do",
+          "Jiao Yin",
+          "Jinli Cao"
         ]
       }
     ],
-    "updated": "2026-04-08T23:58:48.672763Z"
+    "updated": "2026-04-09T04:35:31.341082Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -277,6 +279,6 @@
         ]
       }
     ],
-    "updated": "2026-04-08T23:58:48.672763Z"
+    "updated": "2026-04-09T04:35:31.341082Z"
   }
 }
