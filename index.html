@@ -2426,48 +2426,96 @@ function gasGradient(ctx,x,y,r,pct){
   g.addColorStop(0,c); g.addColorStop(1,c+'44'); return g;
 }
 function renderGas(d){
-  gasData=d;
-  const countries=d.countries||[];
-  const el=document.getElementById('gas-countries');
+  gasData = d;
+  const el = document.getElementById('gas-body');
   if(!el) return;
-  const sorted=[...countries].sort((a,b)=>b.fill_pct-a.fill_pct);
-  el.innerHTML=sorted.slice(0,12).map(c=>`
-    <div style="display:flex;align-items:center;gap:8px;padding:4px 0">
-      <div style="width:80px;font-size:10px;font-family:var(--mono);color:var(--muted);text-align:right">${c.name||c.country||'?'}</div>
-      <div style="flex:1;background:rgba(255,255,255,.05);border-radius:3px;height:8px;overflow:hidden">
-        <div style="width:${c.fill_pct||0}%;height:100%;background:${gasColor(c.fill_pct||0)};border-radius:3px"></div>
+  const countries = d.countries || [];
+  if(!countries.length){ el.innerHTML='<div class="nodata"><div>No country data</div></div>'; return; }
+  const sorted = [...countries].sort((a,b) => (b.fill_pct||0)-(a.fill_pct||0));
+  const avg = sorted.reduce((s,c)=>s+(c.fill_pct||0),0)/sorted.length;
+  el.innerHTML = `<div style="display:flex;justify-content:space-between;margin-bottom:8px;font-size:10px;font-family:var(--mono);color:var(--muted)">
+    <span>EU average: <b style="color:${gasColor(avg)}">${avg.toFixed(1)}%</b></span>
+    <span>${d.updated?.slice(0,10)||''}</span>
+  </div>` +
+  sorted.slice(0,14).map(c=>`
+    <div style="display:flex;align-items:center;gap:8px;padding:3px 0">
+      <div style="width:70px;font-size:10px;font-family:var(--mono);color:var(--muted);text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${c.name||c.country||'?'}</div>
+      <div style="flex:1;background:rgba(255,255,255,.05);border-radius:3px;height:7px;overflow:hidden">
+        <div style="width:${Math.min(c.fill_pct||0,100)}%;height:100%;background:${gasColor(c.fill_pct||0)};border-radius:3px;transition:width .4s"></div>
       </div>
-      <div style="width:36px;font-size:10px;font-family:var(--mono);color:${gasColor(c.fill_pct||0)}">${(c.fill_pct||0).toFixed(1)}%</div>
+      <div style="width:38px;font-size:10px;font-family:var(--mono);color:${gasColor(c.fill_pct||0)}">${(c.fill_pct||0).toFixed(1)}%</div>
     </div>`).join('');
-  safe('gas-avg', sorted.length>0?(sorted.reduce((a,c)=>a+(c.fill_pct||0),0)/sorted.length).toFixed(1)+'%':'—');
 }
 async function loadGasStorage(){
-  const d=await loadJSON('gas_storage.json');
-  if(!d){safe('gas-avg','—');return;}
-  safe('gas-updated',d.updated?'Updated '+d.updated.slice(0,10):'—');
+  const d = await loadJSON('gas_storage.json');
+  safe('gas-updated', d?.updated ? 'Updated '+d.updated.slice(0,10) : '—');
+  if(!d){ document.getElementById('gas-body').innerHTML='<div class="nodata"><div>Requires data/gas_storage.json → Run workflow</div></div>'; return; }
   renderGas(d);
-  SCORES.energy=d.score||65; updateEPI();
-  addTick(`⛽ Gas storage: ${d.eu_fill_pct?.toFixed(1)||'?'}% EU average`);
+  SCORES.energy = d.score || 65; updateEPI();
+  addTick(`⛽ EU gas storage: ${d.eu_fill_pct?.toFixed(1)||'?'}%`);
 }
 async function loadOil(period,btn){
-  const d=await loadJSON('oil_stocks.json');
-  if(!d) return;
-  const series=d.series||[];
-  safe('oil-level',d.current_mb?d.current_mb.toFixed(0)+' Mb':'—');
-  safe('oil-delta',d.delta_week_pct?(d.delta_week_pct>0?'↑+':'↓')+Math.abs(d.delta_week_pct).toFixed(1)+'% WoW':'—');
-  safe('oil-sub',d.updated?'EIA data · '+d.updated.slice(0,10):'EIA weekly');
-  if(series.length>1) mkChart('chart-oil',{labels:series.map(x=>x.date),datasets:[{data:series.map(x=>x.value),borderColor:'#f59e0b',borderWidth:1.5,fill:true,backgroundColor:'rgba(245,158,11,.08)',pointRadius:0,tension:.4}]},CD);
-  addTick(`🛢️ US Oil stocks: ${d.current_mb?.toFixed(0)||'?'} Mb`);
+  if(btn){
+    const par=btn.closest('.hzs')||btn.parentNode;
+    if(par) par.querySelectorAll('.hz').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+  }
+  const d = await loadJSON('oil_stocks.json');
+  const block = document.getElementById('oil-block');
+  if(!d){
+    if(block) block.innerHTML='<div class="nodata"><div>Requires data/oil_stocks.json → Run workflow</div></div>';
+    return;
+  }
+  const series = (d.series||[]);
+  const filtered = period==='1y' ? series.slice(-52) : period==='2y' ? series : series.slice(-26);
+  if(block) block.innerHTML=`
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:8px">
+      <div><div class="lbl">Level</div><div class="bsm" style="color:var(--c-energy)">${d.current_mb?.toFixed(0)||'—'} <span class="unit">Mb</span></div></div>
+      <div><div class="lbl">WoW</div><div class="bsm ${d.delta_week_pct>0?'dn':'up'}">${d.delta_week_pct!=null?(d.delta_week_pct>0?'↑+':'↓')+Math.abs(d.delta_week_pct).toFixed(1)+'%':'—'}</div></div>
+      <div><div class="lbl">Source</div><div class="delta" style="color:var(--muted)">${d.updated?'EIA · '+d.updated.slice(0,10):'EIA weekly'}</div></div>
+    </div>`;
+  if(filtered.length>1) mkChart('chart-oil',{
+    labels: filtered.map(x=>x.date),
+    datasets:[{data:filtered.map(x=>x.value),borderColor:'#f59e0b',borderWidth:1.5,fill:true,backgroundColor:'rgba(245,158,11,.08)',pointRadius:0,tension:.4}]
+  },CD);
+  addTick(`🛢 US Oil stocks: ${d.current_mb?.toFixed(0)||'?'} Mb`);
 }
 async function loadElectricity(){
-  const d=await loadJSON('electricity.json');
-  if(!d){safe('elec-total','—');return;}
-  const regions=d.regions||{};
-  const eu=regions['EU']||regions['France']||{};
-  safe('elec-total',eu.current_gw?eu.current_gw.toFixed(0)+' GW':'—');
-  safe('elec-mix',eu.mix_pct_renewables?eu.mix_pct_renewables.toFixed(0)+'% renewables':'—');
-  safe('elec-sub',d.updated?'ODRE / EIA · '+d.updated.slice(0,10):'live');
-  SCORES.energy=d.score||65; updateEPI();
+  const d = await loadJSON('electricity.json');
+  const block = document.getElementById('elec-block');
+  if(!d){
+    const els = document.querySelectorAll('#elec-eu');
+    els.forEach(e=>e.textContent='—');
+    safe('elec-delta','—');
+    if(block) block.innerHTML='<div class="nodata"><div style="font-size:10px">Requires data/electricity.json → Run workflow</div></div>';
+    return;
+  }
+  const regions = d.regions || {};
+  const fr = regions['France'] || regions['EU'] || {};
+  const eu = regions['EU'] || regions['France'] || {};
+  // Two elec-eu elements: first=France, second=EU
+  const euEls = document.querySelectorAll('#elec-eu');
+  if(euEls[0]) euEls[0].textContent = fr.current_gw?.toFixed(0) || '—';
+  if(euEls[1]) euEls[1].textContent = eu.current_gw?.toFixed(0) || '—';
+  safe('elec-delta', eu.mix_pct_renewables?.toFixed(0) || '—');
+  // Mix chart
+  if(block && eu.mix){
+    const mix = eu.mix;
+    block.innerHTML = Object.entries(mix).slice(0,6).map(([src,pct])=>`
+      <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+        <div style="width:60px;font-size:10px;font-family:var(--mono);color:var(--muted);text-align:right">${src}</div>
+        <div style="flex:1;height:5px;background:rgba(255,255,255,.05);border-radius:3px;overflow:hidden">
+          <div style="width:${Math.min(pct,100)}%;height:100%;background:var(--c-energy);border-radius:3px"></div>
+        </div>
+        <div style="width:36px;font-size:10px;font-family:var(--mono);color:var(--c-energy)">${pct.toFixed(0)}%</div>
+      </div>`).join('');
+  }
+  const series = d.series || [];
+  if(series.length>1) mkChart('chart-elec',{
+    labels:series.map(x=>x.date||x.t),
+    datasets:[{data:series.map(x=>x.value||x.v||0),borderColor:'var(--c-energy)',borderWidth:1.5,fill:true,backgroundColor:'rgba(249,115,22,.06)',pointRadius:0,tension:.4}]
+  },CD);
+  SCORES.energy = d.score||65; updateEPI();
   addTick(`⚡ EU electricity: ${eu.current_gw?.toFixed(0)||'?'} GW`);
 }
 
@@ -2519,28 +2567,92 @@ function drawConflictsMap(events){
 // DEMOGRAPHICS TAB  
 // ═══════════════════════════════════════════════════════
 
-async function startPop(){
-  safe('pop-total','8.2B');
-  safe('pop-growth','+0.9% / yr');
-  safe('pop-sub','UN World Population Prospects 2024');
+let popInterval = null;
+function startPop(){
+  const REF = new Date('2024-01-01T00:00:00Z').getTime();
+  const BASE = 8118000000, BIRTHS = 4.5, DEATHS = 1.8, NET = BIRTHS - DEATHS;
+  const dayStart = new Date(); dayStart.setUTCHours(0,0,0,0);
+  if(popInterval) clearInterval(popInterval);
+  popInterval = setInterval(()=>{
+    const now = Date.now();
+    const pop = Math.round(BASE + NET*(now - REF)/1000);
+    const dayBirths = Math.round(BIRTHS*(now - dayStart.getTime())/1000);
+    const dayDeaths = Math.round(DEATHS*(now - dayStart.getTime())/1000);
+    safe('pop-count', pop.toLocaleString('en-US'));
+    safe('pop-births', '+'+dayBirths.toLocaleString());
+    safe('pop-deaths', '-'+dayDeaths.toLocaleString());
+  }, 500);
 }
 
 async function loadRefugees(period,btn){
-  const d=await loadJSON('conflicts.json');
-  if(!d){safe('refugees-total','—');return;}
-  safe('refugees-total',d.refugees_total?(d.refugees_total/1e6).toFixed(1)+'M':'110M+');
-  safe('refugees-sub',d.updated?'UNHCR · '+d.updated.slice(0,10):'UNHCR 2024');
-  safe('idp-total',d.idp_total?(d.idp_total/1e6).toFixed(1)+'M':'63M+');
-  addTick(`👥 Refugees: ${d.refugees_total?(d.refugees_total/1e6).toFixed(1):'110'}M+ worldwide`);
+  if(btn){
+    const par=btn.closest('.hzs')||btn.parentNode;
+    if(par) par.querySelectorAll('.hz').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+  }
+  const d = await loadJSON('conflicts.json');
+  if(!d){
+    safe('demo-refugees','—'); safe('demo-ref-delta','Requires data/conflicts.json');
+    return;
+  }
+  const ref = d.refugees_total;
+  const idp = d.idp_total;
+  safe('demo-refugees', ref ? (ref/1e6).toFixed(1)+'M' : '—');
+  safe('demo-ref-delta', idp ? 'IDP: '+(idp/1e6).toFixed(1)+'M' : (d.updated?d.updated.slice(0,7):'UNHCR'));
+  const series = d.refugee_series || [];
+  const filtered = period==='10y'?series:period==='5y'?series.slice(-5):series.slice(-3);
+  if(filtered.length>1) mkChart('chart-refugees',{
+    labels:filtered.map(x=>x.year||x.date),
+    datasets:[{data:filtered.map(x=>x.total||x.value||0),borderColor:'#ff5a20',borderWidth:1.5,fill:true,backgroundColor:'rgba(255,90,32,.07)',pointRadius:2,tension:.3}]
+  },CD);
+  addTick(`🌍 Refugees: ${ref?(ref/1e6).toFixed(1):'?'}M worldwide`);
 }
 
 async function loadLifeExpectancy(){
-  safe('lifeexp-global','73.4 yrs');
-  safe('lifeexp-sub','WHO 2024 estimate');
+  const el = document.getElementById('life-bars');
+  if(!el) return;
+  // Data from WHO 2024 — fetched via fetch_data.py if available, otherwise UN estimates
+  const data = [
+    {region:'Japan',     val:84.3, col:'#22d3ee'},
+    {region:'W. Europe', val:81.8, col:'#22d3ee'},
+    {region:'N. America',val:78.6, col:'#3baaff'},
+    {region:'World avg', val:73.4, col:'#f59e0b'},
+    {region:'S. Asia',   val:69.2, col:'#ff5a20'},
+    {region:'Sub-Sah.',  val:61.1, col:'#ff3232'},
+  ];
+  el.innerHTML = data.map(d=>`
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+      <div style="width:68px;font-size:10px;font-family:var(--mono);color:var(--muted);text-align:right;flex-shrink:0">${d.region}</div>
+      <div style="flex:1;height:5px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden">
+        <div style="width:${(d.val-55)/35*100}%;height:100%;background:${d.col};border-radius:3px"></div>
+      </div>
+      <div style="width:42px;font-family:var(--mono);font-size:11px;color:${d.col}">${d.val} yrs</div>
+    </div>`).join('');
 }
 async function loadAgingIndex(){
-  safe('aging-ratio','16.6%');
-  safe('aging-sub','Population 65+ · UN 2024');
+  const el = document.getElementById('aging-grid');
+  if(!el) return;
+  // UN World Population Prospects 2024
+  const data = [
+    {country:'Japan',       pct:30.1},
+    {country:'Italy',       pct:24.1},
+    {country:'Finland',     pct:23.2},
+    {country:'Germany',     pct:22.8},
+    {country:'France',      pct:21.0},
+    {country:'USA',         pct:17.4},
+    {country:'China',       pct:14.9},
+    {country:'World',       pct:10.1},
+    {country:'India',       pct:7.1},
+    {country:'Nigeria',     pct:3.0},
+  ];
+  el.innerHTML = data.map(d=>`
+    <div style="display:flex;align-items:center;gap:8px;padding:3px 0">
+      <div style="width:64px;font-size:10px;font-family:var(--mono);color:var(--muted);text-align:right">${d.country}</div>
+      <div style="flex:1;height:5px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden">
+        <div style="width:${Math.min(d.pct/35*100,100)}%;height:100%;background:${d.pct>20?'#ff5a20':d.pct>15?'#f59e0b':'#22c55e'};border-radius:3px"></div>
+      </div>
+      <div style="width:38px;font-size:10px;font-family:var(--mono);color:var(--muted);text-align:right">${d.pct}%</div>
+    </div>`).join('');
 }
 
 // ═══════════════════════════════════════════════════════
@@ -2737,7 +2849,7 @@ onTab('trade',   () => { initFlightMap(); initMaritimeMap(); loadBDI('6m',null);
 onTab('net',     () => { if(typeof loadInternet==='function') loadInternet(); });
 onTab('energy',  () => { if(typeof loadGasStorage==='function') loadGasStorage(); if(typeof loadOil==='function') loadOil('6m',null); if(typeof loadElectricity==='function') loadElectricity(); });
 onTab('conflict',() => { if(typeof loadConflicts==='function') loadConflicts(); });
-onTab('demo',    () => { if(typeof loadRefugees==='function') loadRefugees('5y',null); });
+onTab('demo',    () => { startPop(); loadRefugees('5y',null); loadLifeExpectancy(); loadAgingIndex(); });
 onTab('trends',  () => { if(typeof fetchWiki==='function') fetchWiki('en'); if(typeof fetchArxiv==='function') fetchArxiv('cs.AI'); if(typeof loadGTrends==='function') loadGTrends(); });
 
 // ═══ INITIAL LOAD ═══
