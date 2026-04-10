@@ -3,199 +3,202 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Toward a Tractability Frontier for Exact Relevance Certification",
-        "summary": "Exact relevance certification asks which coordinates are necessary to determine the optimal action in a coordinate-structured decision problem. The tractable families treated here admit a finite primi",
-        "link": "http://arxiv.org/abs/2604.07349v1",
-        "date": "2026-04-08",
+        "title": "Act Wisely: Cultivating Meta-Cognitive Tool Use in Agentic Multimodal Models",
+        "summary": "The advent of agentic multimodal models has empowered systems to actively interact with external environments. However, current agents suffer from a profound meta-cognitive deficit: they struggle to a",
+        "link": "http://arxiv.org/abs/2604.08545v1",
+        "date": "2026-04-09",
         "authors": [
-          "Tristan Simas"
+          "Shilin Yan",
+          "Jintao Tong",
+          "Hongwei Xue"
         ]
       },
       {
-        "title": "MoRight: Motion Control Done Right",
-        "summary": "Generating motion-controlled videos--where user-specified actions drive physically plausible scene dynamics under freely chosen viewpoints--demands two capabilities: (1) disentangled motion control, a",
-        "link": "http://arxiv.org/abs/2604.07348v1",
-        "date": "2026-04-08",
+        "title": "SIM1: Physics-Aligned Simulator as Zero-Shot Data Scaler in Deformable Worlds",
+        "summary": "Robotic manipulation with deformable objects represents a data-intensive regime in embodied learning, where shape, contact, and topology co-evolve in ways that far exceed the variability of rigids. Al",
+        "link": "http://arxiv.org/abs/2604.08544v1",
+        "date": "2026-04-09",
         "authors": [
-          "Shaowei Liu",
-          "Xuanchi Ren",
-          "Tianchang Shen"
+          "Yunsong Zhou",
+          "Hangxu Liu",
+          "Xuekun Jiang"
         ]
       },
       {
-        "title": "RoSHI: A Versatile Robot-oriented Suit for Human Data In-the-Wild",
-        "summary": "Scaling up robot learning will likely require human data containing rich and long-horizon interactions in the wild. Existing approaches for collecting such data trade off portability, robustness to oc",
-        "link": "http://arxiv.org/abs/2604.07331v1",
-        "date": "2026-04-08",
+        "title": "Seeing but Not Thinking: Routing Distraction in Multimodal Mixture-of-Experts",
+        "summary": "Multimodal Mixture-of-Experts (MoE) models have achieved remarkable performance on vision-language tasks. However, we identify a puzzling phenomenon termed Seeing but Not Thinking: models accurately p",
+        "link": "http://arxiv.org/abs/2604.08541v1",
+        "date": "2026-04-09",
         "authors": [
-          "Wenjing Margaret Mao",
-          "Jefferson Ng",
-          "Luyang Hu"
+          "Haolei Xu",
+          "Haiwen Hong",
+          "Hongxing Li"
         ]
       },
       {
-        "title": "Syntax Is Easy, Semantics Is Hard: Evaluating LLMs for LTL Translation",
-        "summary": "Propositional Linear Temporal Logic (LTL) is a popular formalism for specifying desirable requirements and security and privacy policies for software, networks, and systems. Yet expressing such requir",
-        "link": "http://arxiv.org/abs/2604.07321v1",
-        "date": "2026-04-08",
+        "title": "AVGen-Bench: A Task-Driven Benchmark for Multi-Granular Evaluation of Text-to-Audio-Video Generation",
+        "summary": "Text-to-Audio-Video (T2AV) generation is rapidly becoming a core interface for media creation, yet its evaluation remains fragmented. Existing benchmarks largely assess audio and video in isolation or",
+        "link": "http://arxiv.org/abs/2604.08540v1",
+        "date": "2026-04-09",
         "authors": [
-          "Priscilla Kyei Danso",
-          "Mohammad Saqib Hasan",
-          "Niranjan Balasubramanian"
+          "Ziwei Zhou",
+          "Zeyuan Lai",
+          "Rui Wang"
         ]
       },
       {
-        "title": "Evaluating In-Context Translation with Synchronous Context-Free Grammar Transduction",
-        "summary": "Low-resource languages pose a challenge for machine translation with large language models (LLMs), which require large amounts of training data. One potential way to circumvent this data dependence is",
-        "link": "http://arxiv.org/abs/2604.07320v1",
-        "date": "2026-04-08",
+        "title": "OpenVLThinkerV2: A Generalist Multimodal Reasoning Model for Multi-domain Visual Tasks",
+        "summary": "Group Relative Policy Optimization (GRPO) has emerged as the de facto Reinforcement Learning (RL) objective driving recent advancements in Multimodal Large Language Models. However, extending this suc",
+        "link": "http://arxiv.org/abs/2604.08539v1",
+        "date": "2026-04-09",
         "authors": [
-          "Jackson Petty",
-          "Jaulie Goe",
-          "Tal Linzen"
+          "Wenbo Hu",
+          "Xin Chen",
+          "Yan Gao-Tian"
         ]
       },
       {
-        "title": "Chatbot-Based Assessment of Code Understanding in Automated Programming Assessment Systems",
-        "summary": "Large Language Models (LLMs) challenge conventional automated programming assessment because students can now produce functionally correct code without demonstrating corresponding understanding. This ",
-        "link": "http://arxiv.org/abs/2604.07304v1",
-        "date": "2026-04-08",
+        "title": "RewardFlow: Generate Images by Optimizing What You Reward",
+        "summary": "We introduce RewardFlow, an inversion-free framework that steers pretrained diffusion and flow-matching models at inference time through multi-reward Langevin dynamics. RewardFlow unifies complementar",
+        "link": "http://arxiv.org/abs/2604.08536v1",
+        "date": "2026-04-09",
         "authors": [
-          "Eduard Frankford",
-          "Erik Cikalleshi",
-          "Ruth Breu"
+          "Onkar Susladkar",
+          "Dong-Hwan Jang",
+          "Tushar Prakash"
         ]
       },
       {
-        "title": "Region-Graph Optimal Transport Routing for Mixture-of-Experts Whole-Slide Image Classification",
-        "summary": "Multiple Instance Learning (MIL) is the dominant framework for gigapixel whole-slide image (WSI) classification in computational pathology. However, current MIL aggregators route all instances through",
-        "link": "http://arxiv.org/abs/2604.07298v1",
-        "date": "2026-04-08",
+        "title": "PSI: Shared State as the Missing Layer for Coherent AI-Generated Instruments in Personal AI Agents",
+        "summary": "Personal AI tools can now be generated from natural-language requests, but they often remain isolated after creation. We present PSI, a shared-state architecture that turns independently generated mod",
+        "link": "http://arxiv.org/abs/2604.08529v1",
+        "date": "2026-04-09",
         "authors": [
-          "Xin Tian",
-          "Jiuliu Lu",
-          "Ephraim Tsalik"
+          "Zhiyuan Wang",
+          "Erzhen Hu",
+          "Mark Rucker"
         ]
       },
       {
-        "title": "CADENCE: Context-Adaptive Depth Estimation for Navigation and Computational Efficiency",
-        "summary": "Autonomous vehicles deployed in remote environments typically rely on embedded processors, compact batteries, and lightweight sensors. These hardware limitations conflict with the need to derive robus",
-        "link": "http://arxiv.org/abs/2604.07286v1",
-        "date": "2026-04-08",
+        "title": "Ads in AI Chatbots? An Analysis of How Large Language Models Navigate Conflicts of Interest",
+        "summary": "Today's large language models (LLMs) are trained to align with user preferences through methods such as reinforcement learning. Yet models are beginning to be deployed not merely to satisfy users, but",
+        "link": "http://arxiv.org/abs/2604.08525v1",
+        "date": "2026-04-09",
         "authors": [
-          "Timothy K Johnsen",
-          "Marco Levorato"
+          "Addison J. Wu",
+          "Ryan Liu",
+          "Shuyue Stella Li"
         ]
       }
     ],
-    "updated": "2026-04-09T04:35:31.341082Z"
+    "updated": "2026-04-10T04:48:54.950828Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-04-09T04:35:31.341082Z"
+    "updated": "2026-04-10T04:48:54.950828Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-04-09T04:35:31.341082Z"
+    "updated": "2026-04-10T04:48:54.950828Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-04-09T04:35:31.341082Z"
+    "updated": "2026-04-10T04:48:54.950828Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Validated Intent Compilation for Constrained Routing in LEO Mega-Constellations",
-        "summary": "Operating LEO mega-constellations requires translating high-level operator intents (\"reroute financial traffic away from polar links under 80 ms\") into low-level routing constraints -- a task that dem",
-        "link": "http://arxiv.org/abs/2604.07264v1",
-        "date": "2026-04-08",
+        "title": "PIArena: A Platform for Prompt Injection Evaluation",
+        "summary": "Prompt injection attacks pose serious security risks across a wide range of real-world applications. While receiving increasing attention, the community faces a critical gap: the lack of a unified pla",
+        "link": "http://arxiv.org/abs/2604.08499v1",
+        "date": "2026-04-09",
         "authors": [
-          "Yuanhang Li"
+          "Runpeng Geng",
+          "Chenlong Yin",
+          "Yanting Wang"
         ]
       },
       {
-        "title": "On the Price of Privacy for Language Identification and Generation",
-        "summary": "As large language models (LLMs) are increasingly trained on sensitive user data, understanding the fundamental cost of privacy in language learning becomes essential. We initiate the study of differen",
-        "link": "http://arxiv.org/abs/2604.07238v1",
-        "date": "2026-04-08",
+        "title": "Post-Quantum Cryptographic Analysis of Message Transformations Across the Network Stack",
+        "summary": "When a user sends a message over a wireless network, the message does not travel as-is. It is encrypted, authenticated, encapsulated, and transformed as it descends the protocol stack from the applica",
+        "link": "http://arxiv.org/abs/2604.08480v1",
+        "date": "2026-04-09",
         "authors": [
-          "Xiaoyu Li",
-          "Andi Han",
-          "Jiaojiao Jiang"
+          "Ashish Kundu",
+          "Vishal Chakraborty",
+          "Ramana Kompella"
         ]
       },
       {
-        "title": "TraceSafe: A Systematic Assessment of LLM Guardrails on Multi-Step Tool-Calling Trajectories",
-        "summary": "As large language models (LLMs) evolve from static chatbots into autonomous agents, the primary vulnerability surface shifts from final outputs to intermediate execution traces. While safety guardrail",
-        "link": "http://arxiv.org/abs/2604.07223v1",
-        "date": "2026-04-08",
+        "title": "Vulnerability Detection with Interprocedural Context in Multiple Languages: Assessing Effectiveness and Cost of Modern LLMs",
+        "summary": "Large Language Models (LLMs) have been a promising way for automated vulnerability detection. However, most prior studies have explored the use of LLMs to detect vulnerabilities only within single fun",
+        "link": "http://arxiv.org/abs/2604.08417v1",
+        "date": "2026-04-09",
         "authors": [
-          "Yen-Shan Chen",
-          "Sian-Yao Huang",
-          "Cheng-Lin Yang"
+          "Kevin Lira",
+          "Baldoino Fonseca",
+          "Davy Ba\u00eda"
         ]
       },
       {
-        "title": "DDP-SA: Scalable Privacy-Preserving Federated Learning via Distributed Differential Privacy and Secure Aggregation",
-        "summary": "This article presents DDP-SA, a scalable privacy-preserving federated learning framework that jointly leverages client-side local differential privacy (LDP) and full-threshold additive secret sharing ",
-        "link": "http://arxiv.org/abs/2604.07125v1",
-        "date": "2026-04-08",
+        "title": "Your Agent Is Mine: Measuring Malicious Intermediary Attacks on the LLM Supply Chain",
+        "summary": "Large language model (LLM) agents increasingly rely on third-party API routers to dispatch tool-calling requests across multiple upstream providers. These routers operate as application-layer proxies ",
+        "link": "http://arxiv.org/abs/2604.08407v1",
+        "date": "2026-04-09",
         "authors": [
-          "Wenjing Wei",
-          "Farid Nait-Abdesselam",
-          "Alla Jammine"
+          "Hanzhi Liu",
+          "Chaofan Shou",
+          "Hongbo Wen"
         ]
       },
       {
-        "title": "BioMoTouch: Touch-Based Behavioral Authentication via Biometric-Motion Interaction Modeling",
-        "summary": "Touch-based authentication is widely deployed on mobile devices due to its convenience and seamless user experience. However, existing systems largely model touch interaction as a purely behavioral si",
-        "link": "http://arxiv.org/abs/2604.07071v1",
-        "date": "2026-04-08",
+        "title": "Security Concerns in Generative AI Coding Assistants: Insights from Online Discussions on GitHub Copilot",
+        "summary": "Generative Artificial Intelligence (GenAI) has become a central component of many development tools (e.g., GitHub Copilot) that support software practitioners across multiple programming tasks, includ",
+        "link": "http://arxiv.org/abs/2604.08352v1",
+        "date": "2026-04-09",
         "authors": [
-          "Zijian Ling",
-          "Jianbang Chen",
-          "Hongwei Li"
+          "Nicol\u00e1s E. D\u00edaz Ferreyra",
+          "Monika Swetha Gurupathi",
+          "Zadia Codabux"
         ]
       },
       {
-        "title": "CAAP: Capture-Aware Adversarial Patch Attacks on Palmprint Recognition Models",
-        "summary": "Palmprint recognition is deployed in security-critical applications, including access control and palm-based payment, due to its contactless acquisition and highly discriminative ridge-and-crease text",
-        "link": "http://arxiv.org/abs/2604.06987v1",
-        "date": "2026-04-08",
+        "title": "Securing Retrieval-Augmented Generation: A Taxonomy of Attacks, Defenses, and Future Directions",
+        "summary": "Retrieval-augmented generation (RAG) significantly enhances large language models (LLMs) but introduces novel security risks through external knowledge access. While existing studies cover various RAG",
+        "link": "http://arxiv.org/abs/2604.08304v1",
+        "date": "2026-04-09",
         "authors": [
-          "Renyang Liu",
-          "Jiale Li",
-          "Jie Zhang"
+          "Yuming Xu",
+          "Mingtao Zhang",
+          "Zhuohan Ge"
         ]
       },
       {
-        "title": "PSR2: A Phase-based Semantic Reasoning Framework for Atomicity Violation Detection via Contract Refinement",
-        "summary": "With the rapid advancement of decentralized applications, smart contract security faces severe challenges, particularly regarding atomicity violations in complex logic such as Oracle and NFT contracts",
-        "link": "http://arxiv.org/abs/2604.06975v1",
-        "date": "2026-04-08",
+        "title": "Towards Identification and Intervention of Safety-Critical Parameters in Large Language Models",
+        "summary": "Ensuring Large Language Model (LLM) safety is crucial, yet the lack of a clear understanding about safety mechanisms hinders the development of precise and reliable methodologies for safety interventi",
+        "link": "http://arxiv.org/abs/2604.08297v1",
+        "date": "2026-04-09",
         "authors": [
-          "Xiaoqi Li",
-          "Xin Wang",
-          "Wenkai Li"
+          "Weiwei Qi",
+          "Zefeng Wu",
+          "Tianhang Zheng"
         ]
       },
       {
-        "title": "VulGD: A LLM-Powered Dynamic Open-Access Vulnerability Graph Database",
-        "summary": "Software vulnerabilities continue to pose significant threats to modern information systems, requiring a timely and accurate risk assessment. Public repositories, such as the National Vulnerability Da",
-        "link": "http://arxiv.org/abs/2604.06967v1",
-        "date": "2026-04-08",
+        "title": "VCAO: Verifier-Centered Agentic Orchestration for Strategic OS Vulnerability Discovery",
+        "summary": "We formulate operating-system vulnerability discovery as a \\emph{repeated Bayesian Stackelberg search game} in which a Large Reasoning Model (LRM) orchestrator allocates analysis budget across kernel ",
+        "link": "http://arxiv.org/abs/2604.08291v1",
+        "date": "2026-04-09",
         "authors": [
-          "Luat Do",
-          "Jiao Yin",
-          "Jinli Cao"
+          "Suyash Mishra"
         ]
       }
     ],
-    "updated": "2026-04-09T04:35:31.341082Z"
+    "updated": "2026-04-10T04:48:54.950828Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -279,6 +282,6 @@
         ]
       }
     ],
-    "updated": "2026-04-09T04:35:31.341082Z"
+    "updated": "2026-04-10T04:48:54.950828Z"
   }
 }
