@@ -3,202 +3,198 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Act Wisely: Cultivating Meta-Cognitive Tool Use in Agentic Multimodal Models",
-        "summary": "The advent of agentic multimodal models has empowered systems to actively interact with external environments. However, current agents suffer from a profound meta-cognitive deficit: they struggle to a",
-        "link": "http://arxiv.org/abs/2604.08545v1",
-        "date": "2026-04-09",
+        "title": "Large Language Models Generate Harmful Content Using a Distinct, Unified Mechanism",
+        "summary": "Large language models (LLMs) undergo alignment training to avoid harmful behaviors, yet the resulting safeguards remain brittle: jailbreaks routinely bypass them, and fine-tuning on narrow domains can",
+        "link": "http://arxiv.org/abs/2604.09544v1",
+        "date": "2026-04-10",
         "authors": [
-          "Shilin Yan",
-          "Jintao Tong",
-          "Hongwei Xue"
+          "Hadas Orgad",
+          "Boyi Wei",
+          "Kaden Zheng"
         ]
       },
       {
-        "title": "SIM1: Physics-Aligned Simulator as Zero-Shot Data Scaler in Deformable Worlds",
-        "summary": "Robotic manipulation with deformable objects represents a data-intensive regime in embodied learning, where shape, contact, and topology co-evolve in ways that far exceed the variability of rigids. Al",
-        "link": "http://arxiv.org/abs/2604.08544v1",
-        "date": "2026-04-09",
+        "title": "Case-Grounded Evidence Verification: A Framework for Constructing Evidence-Sensitive Supervision",
+        "summary": "Evidence-grounded reasoning requires more than attaching retrieved text to a prediction: a model should make decisions that depend on whether the provided evidence supports the target claim. In practi",
+        "link": "http://arxiv.org/abs/2604.09537v1",
+        "date": "2026-04-10",
         "authors": [
-          "Yunsong Zhou",
-          "Hangxu Liu",
-          "Xuekun Jiang"
+          "Soroosh Tayebi Arasteh",
+          "Mehdi Joodaki",
+          "Mahshad Lotfinia"
         ]
       },
       {
-        "title": "Seeing but Not Thinking: Routing Distraction in Multimodal Mixture-of-Experts",
-        "summary": "Multimodal Mixture-of-Experts (MoE) models have achieved remarkable performance on vision-language tasks. However, we identify a puzzling phenomenon termed Seeing but Not Thinking: models accurately p",
-        "link": "http://arxiv.org/abs/2604.08541v1",
-        "date": "2026-04-09",
+        "title": "Seeing is Believing: Robust Vision-Guided Cross-Modal Prompt Learning under Label Noise",
+        "summary": "Prompt learning is a parameter-efficient approach for vision-language models, yet its robustness under label noise is less investigated. Visual content contains richer and more reliable semantic infor",
+        "link": "http://arxiv.org/abs/2604.09532v1",
+        "date": "2026-04-10",
         "authors": [
-          "Haolei Xu",
-          "Haiwen Hong",
-          "Hongxing Li"
+          "Zibin Geng",
+          "Xuefeng Jiang",
+          "Jia Li"
         ]
       },
       {
-        "title": "AVGen-Bench: A Task-Driven Benchmark for Multi-Granular Evaluation of Text-to-Audio-Video Generation",
-        "summary": "Text-to-Audio-Video (T2AV) generation is rapidly becoming a core interface for media creation, yet its evaluation remains fragmented. Existing benchmarks largely assess audio and video in isolation or",
-        "link": "http://arxiv.org/abs/2604.08540v1",
-        "date": "2026-04-09",
+        "title": "VisionFoundry: Teaching VLMs Visual Perception with Synthetic Images",
+        "summary": "Vision-language models (VLMs) still struggle with visual perception tasks such as spatial understanding and viewpoint recognition. One plausible contributing factor is that natural image datasets prov",
+        "link": "http://arxiv.org/abs/2604.09531v1",
+        "date": "2026-04-10",
         "authors": [
-          "Ziwei Zhou",
-          "Zeyuan Lai",
-          "Rui Wang"
+          "Guanyu Zhou",
+          "Yida Yin",
+          "Wenhao Chai"
         ]
       },
       {
-        "title": "OpenVLThinkerV2: A Generalist Multimodal Reasoning Model for Multi-domain Visual Tasks",
-        "summary": "Group Relative Policy Optimization (GRPO) has emerged as the de facto Reinforcement Learning (RL) objective driving recent advancements in Multimodal Large Language Models. However, extending this suc",
-        "link": "http://arxiv.org/abs/2604.08539v1",
-        "date": "2026-04-09",
+        "title": "VL-Calibration: Decoupled Confidence Calibration for Large Vision-Language Models Reasoning",
+        "summary": "Large Vision Language Models (LVLMs) achieve strong multimodal reasoning but frequently exhibit hallucinations and incorrect responses with high certainty, which hinders their usage in high-stakes dom",
+        "link": "http://arxiv.org/abs/2604.09529v1",
+        "date": "2026-04-10",
         "authors": [
-          "Wenbo Hu",
-          "Xin Chen",
-          "Yan Gao-Tian"
+          "Wenyi Xiao",
+          "Xinchi Xu",
+          "Leilei Gan"
         ]
       },
       {
-        "title": "RewardFlow: Generate Images by Optimizing What You Reward",
-        "summary": "We introduce RewardFlow, an inversion-free framework that steers pretrained diffusion and flow-matching models at inference time through multi-reward Langevin dynamics. RewardFlow unifies complementar",
-        "link": "http://arxiv.org/abs/2604.08536v1",
-        "date": "2026-04-09",
+        "title": "Envisioning the Future, One Step at a Time",
+        "summary": "Accurately anticipating how complex, diverse scenes will evolve requires models that represent uncertainty, simulate along extended interaction chains, and efficiently explore many plausible futures. ",
+        "link": "http://arxiv.org/abs/2604.09527v1",
+        "date": "2026-04-10",
         "authors": [
-          "Onkar Susladkar",
-          "Dong-Hwan Jang",
-          "Tushar Prakash"
+          "Stefan Andreas Baumann",
+          "Jannik Wiese",
+          "Tommaso Martorella"
         ]
       },
       {
-        "title": "PSI: Shared State as the Missing Layer for Coherent AI-Generated Instruments in Personal AI Agents",
-        "summary": "Personal AI tools can now be generated from natural-language requests, but they often remain isolated after creation. We present PSI, a shared-state architecture that turns independently generated mod",
-        "link": "http://arxiv.org/abs/2604.08529v1",
-        "date": "2026-04-09",
+        "title": "Semantic Rate-Distortion for Bounded Multi-Agent Communication: Capacity-Derived Semantic Spaces and the Communication Cost of Alignment",
+        "summary": "When two agents of different computational capacities interact with the same environment, they need not compress a common semantic alphabet differently; they can induce different semantic alphabets al",
+        "link": "http://arxiv.org/abs/2604.09521v1",
+        "date": "2026-04-10",
         "authors": [
-          "Zhiyuan Wang",
-          "Erzhen Hu",
-          "Mark Rucker"
+          "Anthony T. Nixon"
         ]
       },
       {
-        "title": "Ads in AI Chatbots? An Analysis of How Large Language Models Navigate Conflicts of Interest",
-        "summary": "Today's large language models (LLMs) are trained to align with user preferences through methods such as reinforcement learning. Yet models are beginning to be deployed not merely to satisfy users, but",
-        "link": "http://arxiv.org/abs/2604.08525v1",
-        "date": "2026-04-09",
+        "title": "VISOR: Agentic Visual Retrieval-Augmented Generation via Iterative Search and Over-horizon Reasoning",
+        "summary": "Visual Retrieval-Augmented Generation (VRAG) empowers Vision-Language Models to retrieve and reason over visually rich documents. To tackle complex queries requiring multi-step reasoning, agentic VRAG",
+        "link": "http://arxiv.org/abs/2604.09508v1",
+        "date": "2026-04-10",
         "authors": [
-          "Addison J. Wu",
-          "Ryan Liu",
-          "Shuyue Stella Li"
+          "Yucheng Shen",
+          "Jiulong Wu",
+          "Jizhou Huang"
         ]
       }
     ],
-    "updated": "2026-04-12T04:48:18.580015Z"
+    "updated": "2026-04-13T05:15:12.030644Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-04-12T04:48:18.580015Z"
+    "updated": "2026-04-13T05:15:12.030644Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-04-12T04:48:18.580015Z"
+    "updated": "2026-04-13T05:15:12.030644Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-04-12T04:48:18.580015Z"
+    "updated": "2026-04-13T05:15:12.030644Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "PIArena: A Platform for Prompt Injection Evaluation",
-        "summary": "Prompt injection attacks pose serious security risks across a wide range of real-world applications. While receiving increasing attention, the community faces a critical gap: the lack of a unified pla",
-        "link": "http://arxiv.org/abs/2604.08499v1",
-        "date": "2026-04-09",
+        "title": "Trans-RAG: Query-Centric Vector Transformation for Secure Cross-Organizational Retrieval",
+        "summary": "Retrieval Augmented Generation (RAG) systems deployed across organizational boundaries face fundamental tensions between security, accuracy, and efficiency. Current encryption methods expose plaintext",
+        "link": "http://arxiv.org/abs/2604.09541v1",
+        "date": "2026-04-10",
         "authors": [
-          "Runpeng Geng",
-          "Chenlong Yin",
-          "Yanting Wang"
+          "Yu Liu",
+          "Kun Peng",
+          "Wenxiao Zhang"
         ]
       },
       {
-        "title": "Post-Quantum Cryptographic Analysis of Message Transformations Across the Network Stack",
-        "summary": "When a user sends a message over a wireless network, the message does not travel as-is. It is encrypted, authenticated, encapsulated, and transformed as it descends the protocol stack from the applica",
-        "link": "http://arxiv.org/abs/2604.08480v1",
-        "date": "2026-04-09",
+        "title": "XFED: Non-Collusive Model Poisoning Attack Against Byzantine-Robust Federated Classifiers",
+        "summary": "Model poisoning attacks pose a significant security threat to Federated Learning (FL). Most existing model poisoning attacks rely on collusion, requiring adversarial clients to coordinate by exchangin",
+        "link": "http://arxiv.org/abs/2604.09489v1",
+        "date": "2026-04-10",
         "authors": [
-          "Ashish Kundu",
-          "Vishal Chakraborty",
-          "Ramana Kompella"
+          "Israt Jahan Mouri",
+          "Muhammad Ridowan",
+          "Muhammad Abdullah Adnan"
         ]
       },
       {
-        "title": "Vulnerability Detection with Interprocedural Context in Multiple Languages: Assessing Effectiveness and Cost of Modern LLMs",
-        "summary": "Large Language Models (LLMs) have been a promising way for automated vulnerability detection. However, most prior studies have explored the use of LLMs to detect vulnerabilities only within single fun",
-        "link": "http://arxiv.org/abs/2604.08417v1",
-        "date": "2026-04-09",
+        "title": "BadSkill: Backdoor Attacks on Agent Skills via Model-in-Skill Poisoning",
+        "summary": "Agent ecosystems increasingly rely on installable skills to extend functionality, and some skills bundle learned model artifacts as part of their execution logic. This creates a supply-chain risk that",
+        "link": "http://arxiv.org/abs/2604.09378v1",
+        "date": "2026-04-10",
         "authors": [
-          "Kevin Lira",
-          "Baldoino Fonseca",
-          "Davy Ba\u00eda"
+          "Guiyao Tie",
+          "Jiawen Shi",
+          "Pan Zhou"
         ]
       },
       {
-        "title": "Your Agent Is Mine: Measuring Malicious Intermediary Attacks on the LLM Supply Chain",
-        "summary": "Large language model (LLM) agents increasingly rely on third-party API routers to dispatch tool-calling requests across multiple upstream providers. These routers operate as application-layer proxies ",
-        "link": "http://arxiv.org/abs/2604.08407v1",
-        "date": "2026-04-09",
+        "title": "ChatGPT, is this real? The influence of generative AI on writing style in top-tier cybersecurity papers",
+        "summary": "With the release of ChatGPT in 2022, generative AI has significantly lowered the cost of polishing and rewriting text. Due to its widespread usage, conference organizers instated specific requirements",
+        "link": "http://arxiv.org/abs/2604.09316v1",
+        "date": "2026-04-10",
         "authors": [
-          "Hanzhi Liu",
-          "Chaofan Shou",
-          "Hongbo Wen"
+          "Daan Vansteenhuyse"
         ]
       },
       {
-        "title": "Security Concerns in Generative AI Coding Assistants: Insights from Online Discussions on GitHub Copilot",
-        "summary": "Generative Artificial Intelligence (GenAI) has become a central component of many development tools (e.g., GitHub Copilot) that support software practitioners across multiple programming tasks, includ",
-        "link": "http://arxiv.org/abs/2604.08352v1",
-        "date": "2026-04-09",
+        "title": "Cross-Paradigm Models of Restricted Syndrome Decoding with Application to CROSS",
+        "summary": "Restricted Syndrome Decoding (ResSD) is a variant of linear code decoding problem where each of the error's entries must belong to a fixed small set of values. This problem underlies the security of C",
+        "link": "http://arxiv.org/abs/2604.09292v1",
+        "date": "2026-04-10",
         "authors": [
-          "Nicol\u00e1s E. D\u00edaz Ferreyra",
-          "Monika Swetha Gurupathi",
-          "Zadia Codabux"
+          "\u00c9tienne Burle",
+          "Aleksei Udovenko"
         ]
       },
       {
-        "title": "Securing Retrieval-Augmented Generation: A Taxonomy of Attacks, Defenses, and Future Directions",
-        "summary": "Retrieval-augmented generation (RAG) significantly enhances large language models (LLMs) but introduces novel security risks through external knowledge access. While existing studies cover various RAG",
-        "link": "http://arxiv.org/abs/2604.08304v1",
-        "date": "2026-04-09",
+        "title": "Unreal Thinking: Chain-of-Thought Hijacking via Two-stage Backdoor",
+        "summary": "Large Language Models (LLMs) are increasingly deployed in settings where Chain-of-Thought (CoT) is interpreted by users. This creates a new safety risk: attackers may manipulate the model's observable",
+        "link": "http://arxiv.org/abs/2604.09235v1",
+        "date": "2026-04-10",
         "authors": [
-          "Yuming Xu",
-          "Mingtao Zhang",
-          "Zhuohan Ge"
+          "Wenhan Chang",
+          "Tianqing Zhu",
+          "Ping Xiong"
         ]
       },
       {
-        "title": "Towards Identification and Intervention of Safety-Critical Parameters in Large Language Models",
-        "summary": "Ensuring Large Language Model (LLM) safety is crucial, yet the lack of a clear understanding about safety mechanisms hinders the development of precise and reliable methodologies for safety interventi",
-        "link": "http://arxiv.org/abs/2604.08297v1",
-        "date": "2026-04-09",
+        "title": "A Deductive System for Contract Satisfaction Proofs",
+        "summary": "Hardware-software contracts are abstract specifications of a CPU's leakage behavior. They enable verifying the security of high-level programs against side-channel attacks without having to explicitly",
+        "link": "http://arxiv.org/abs/2604.09165v1",
+        "date": "2026-04-10",
         "authors": [
-          "Weiwei Qi",
-          "Zefeng Wu",
-          "Tianhang Zheng"
+          "Arthur Correnson",
+          "Haoyi Zeng",
+          "Jana Hofmann"
         ]
       },
       {
-        "title": "VCAO: Verifier-Centered Agentic Orchestration for Strategic OS Vulnerability Discovery",
-        "summary": "We formulate operating-system vulnerability discovery as a \\emph{repeated Bayesian Stackelberg search game} in which a Large Reasoning Model (LRM) orchestrator allocates analysis budget across kernel ",
-        "link": "http://arxiv.org/abs/2604.08291v1",
-        "date": "2026-04-09",
+        "title": "Hagenberg Risk Management Process (Part 3): Operationalization, Probabilities, and Causal Analysis",
+        "summary": "For risks that cannot be accepted, sufficiently mitigated, or eliminated, continuous observation is a viable approach but requires a model that can be operationalized. The Hagenberg Risk Management Pr",
+        "link": "http://arxiv.org/abs/2604.09153v1",
+        "date": "2026-04-10",
         "authors": [
-          "Suyash Mishra"
+          "Eckehard Hermann",
+          "Harald Lampesberger"
         ]
       }
     ],
-    "updated": "2026-04-12T04:48:18.580015Z"
+    "updated": "2026-04-13T05:15:12.030644Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -282,6 +278,6 @@
         ]
       }
     ],
-    "updated": "2026-04-12T04:48:18.580015Z"
+    "updated": "2026-04-13T05:15:12.030644Z"
   }
 }
