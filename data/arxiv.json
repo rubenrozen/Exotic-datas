@@ -3,196 +3,198 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Visual Preference Optimization with Rubric Rewards",
-        "summary": "The effectiveness of Direct Preference Optimization (DPO) depends on preference data that reflect the quality differences that matter in multimodal tasks. Existing pipelines often rely on off-policy p",
-        "link": "http://arxiv.org/abs/2604.13029v1",
-        "date": "2026-04-14",
+        "title": "From $P(y|x)$ to $P(y)$: Investigating Reinforcement Learning in Pre-train Space",
+        "summary": "While reinforcement learning with verifiable rewards (RLVR) significantly enhances LLM reasoning by optimizing the conditional distribution P(y|x), its potential is fundamentally bounded by the base m",
+        "link": "http://arxiv.org/abs/2604.14142v1",
+        "date": "2026-04-15",
         "authors": [
-          "Ya-Qi Yu",
-          "Fangyu Hong",
-          "Xiangyang Qu"
+          "Yuqiao Tan",
+          "Minzheng Wang",
+          "Bo Liu"
         ]
       },
       {
-        "title": "Representation geometry shapes task performance in vision-language modeling for CT enterography",
-        "summary": "Computed tomography (CT) enterography is a primary imaging modality for assessing inflammatory bowel disease (IBD), yet the representational choices that best support automated analysis of this modali",
-        "link": "http://arxiv.org/abs/2604.13021v1",
-        "date": "2026-04-14",
+        "title": "LongCoT: Benchmarking Long-Horizon Chain-of-Thought Reasoning",
+        "summary": "As language models are increasingly deployed for complex autonomous tasks, their ability to reason accurately over longer horizons becomes critical. An essential component of this ability is planning ",
+        "link": "http://arxiv.org/abs/2604.14140v1",
+        "date": "2026-04-15",
         "authors": [
-          "Cristian Minoccheri",
-          "Emily Wittrup",
-          "Kayvan Najarian"
+          "Sumeet Ramesh Motwani",
+          "Daniel Nichols",
+          "Charles London"
         ]
       },
       {
-        "title": "PAL: Personal Adaptive Learner",
-        "summary": "AI-driven education platforms have made some progress in personalisation, yet most remain constrained to static adaptation--predefined quizzes, uniform pacing, or generic feedback--limiting their abil",
-        "link": "http://arxiv.org/abs/2604.13017v1",
-        "date": "2026-04-14",
+        "title": "From Feelings to Metrics: Understanding and Formalizing How Users Vibe-Test LLMs",
+        "summary": "Evaluating LLMs is challenging, as benchmark scores often fail to capture models' real-world usefulness. Instead, users often rely on ``vibe-testing'': informal experience-based evaluation, such as co",
+        "link": "http://arxiv.org/abs/2604.14137v1",
+        "date": "2026-04-15",
         "authors": [
-          "Megha Chakraborty",
-          "Darssan L. Eswaramoorthi",
-          "Madhur Thareja"
+          "Itay Itzhak",
+          "Eliya Habba",
+          "Gabriel Stanovsky"
         ]
       },
       {
-        "title": "Rethinking On-Policy Distillation of Large Language Models: Phenomenology, Mechanism, and Recipe",
-        "summary": "On-policy distillation (OPD) has become a core technique in the post-training of large language models, yet its training dynamics remain poorly understood. This paper provides a systematic investigati",
-        "link": "http://arxiv.org/abs/2604.13016v1",
-        "date": "2026-04-14",
+        "title": "Rhetorical Questions in LLM Representations: A Linear Probing Study",
+        "summary": "Rhetorical questions are asked not to seek information but to persuade or signal stance. How large language models internally represent them remains unclear. We analyze rhetorical questions in LLM rep",
+        "link": "http://arxiv.org/abs/2604.14128v1",
+        "date": "2026-04-15",
         "authors": [
-          "Yaxuan Li",
-          "Yuxin Zuo",
-          "Bingxiang He"
+          "Louie Hong Yao",
+          "Vishesh Anand",
+          "Yuan Zhuang"
         ]
       },
       {
-        "title": "Bilevel Late Acceptance Hill Climbing for the Electric Capacitated Vehicle Routing Problem",
-        "summary": "This paper tackles the Electric Capacitated Vehicle Routing Problem (E-CVRP) through a bilevel optimization framework that handles routing and charging decisions separately or jointly depending on the",
-        "link": "http://arxiv.org/abs/2604.13013v1",
-        "date": "2026-04-14",
+        "title": "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System",
+        "summary": "While end-to-end Vision-Language-Action (VLA) models offer a promising paradigm for robotic manipulation, fine-tuning them on narrow control data often compromises the profound reasoning capabilities ",
+        "link": "http://arxiv.org/abs/2604.14125v1",
+        "date": "2026-04-15",
         "authors": [
-          "Yinghao Qin",
-          "Mosab Bazargani",
-          "Edmund K. Burke"
+          "Tianshuo Yang",
+          "Guanyu Chen",
+          "Yutian Chen"
         ]
       },
       {
-        "title": "Lightning OPD: Efficient Post-Training for Large Reasoning Models with Offline On-Policy Distillation",
-        "summary": "On-policy distillation (OPD) has emerged as an efficient post-training paradigm for large language models. However, standard OPD requires a live teacher inference server throughout training, resulting",
-        "link": "http://arxiv.org/abs/2604.13010v1",
-        "date": "2026-04-14",
+        "title": "TREX: Automating LLM Fine-tuning via Agent-Driven Tree-based Exploration",
+        "summary": "While Large Language Models (LLMs) have empowered AI research agents to perform isolated scientific tasks, automating complex, real-world workflows, such as LLM training, remains a significant challen",
+        "link": "http://arxiv.org/abs/2604.14116v1",
+        "date": "2026-04-15",
         "authors": [
-          "Yecheng Wu",
-          "Song Han",
-          "Hai Cai"
+          "Zerun Ma",
+          "Guoqiang Wang",
+          "Xinchen Xie"
         ]
       },
       {
-        "title": "One Token Away from Collapse: The Fragility of Instruction-Tuned Helpfulness",
-        "summary": "Instruction-tuned large language models produce helpful, structured responses, but how robust is this helpfulness when trivially constrained? We show that simple lexical constraints (banning a single ",
-        "link": "http://arxiv.org/abs/2604.13006v1",
-        "date": "2026-04-14",
+        "title": "UI-Zoomer: Uncertainty-Driven Adaptive Zoom-In for GUI Grounding",
+        "summary": "GUI grounding, which localizes interface elements from screenshots given natural language queries, remains challenging for small icons and dense layouts. Test-time zoom-in methods improve localization",
+        "link": "http://arxiv.org/abs/2604.14113v1",
+        "date": "2026-04-15",
         "authors": [
-          "Erfan Baghaei Potraghloo",
-          "Seyedarmin Azizi",
-          "Souvik Kundu"
+          "Fei Tang",
+          "Bofan Chen",
+          "Zhengxi Lu"
         ]
       },
       {
-        "title": "LogicEval: A Systematic Framework for Evaluating Automated Repair Techniques for Logical Vulnerabilities in Real-World Software",
-        "summary": "Logical vulnerabilities in software stem from flaws in program logic rather than memory safety, which can lead to critical security failures. Although existing automated program repair techniques prim",
-        "link": "http://arxiv.org/abs/2604.12994v1",
-        "date": "2026-04-14",
+        "title": "UMI-3D: Extending Universal Manipulation Interface from Vision-Limited to 3D Spatial Perception",
+        "summary": "We present UMI-3D, a multimodal extension of the Universal Manipulation Interface (UMI) for robust and scalable data collection in embodied manipulation. While UMI enables portable, wrist-mounted data",
+        "link": "http://arxiv.org/abs/2604.14089v1",
+        "date": "2026-04-15",
         "authors": [
-          "Syed Md Mukit Rashid",
-          "Abdullah Al Ishtiaq",
-          "Kai Tu"
+          "Ziming Wang"
         ]
       }
     ],
-    "updated": "2026-04-15T04:46:50.345109Z"
+    "updated": "2026-04-16T04:52:30.320882Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-04-15T04:46:50.345109Z"
+    "updated": "2026-04-16T04:52:30.320882Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-04-15T04:46:50.345109Z"
+    "updated": "2026-04-16T04:52:30.320882Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-04-15T04:46:50.345109Z"
+    "updated": "2026-04-16T04:52:30.320882Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "LogicEval: A Systematic Framework for Evaluating Automated Repair Techniques for Logical Vulnerabilities in Real-World Software",
-        "summary": "Logical vulnerabilities in software stem from flaws in program logic rather than memory safety, which can lead to critical security failures. Although existing automated program repair techniques prim",
-        "link": "http://arxiv.org/abs/2604.12994v1",
-        "date": "2026-04-14",
+        "title": "Temporary Power Adjusting Withholding Attack",
+        "summary": "We consider the block withholding attacks on pools, more specifically the state-of-the-art Power Adjusting Withholding (PAW) attack. We propose a generalization called Temporary PAW (T-PAW) where the ",
+        "link": "http://arxiv.org/abs/2604.14135v1",
+        "date": "2026-04-15",
         "authors": [
-          "Syed Md Mukit Rashid",
-          "Abdullah Al Ishtiaq",
-          "Kai Tu"
+          "Mustafa Doger",
+          "Sennur Ulukus"
         ]
       },
       {
-        "title": "Parallax: Why AI Agents That Think Must Never Act",
-        "summary": "Autonomous AI agents are rapidly transitioning from experimental tools to operational infrastructure, with projections that 80% of enterprise applications will embed AI copilots by the end of 2026. As",
-        "link": "http://arxiv.org/abs/2604.12986v1",
-        "date": "2026-04-14",
+        "title": "KindHML: formal verification of smart contracts based on Hennessy-Milner logic",
+        "summary": "Smart contracts deployed on blockchains such as Ethereum routinely manage large amounts of assets, making their security critical. Empirical studies show that real-world attacks often exploit flaws in",
+        "link": "http://arxiv.org/abs/2604.14038v1",
+        "date": "2026-04-15",
         "authors": [
-          "Joel Fokou"
+          "Massimo Bartoletti",
+          "Angelo Ferrando",
+          "Enrico Lipparini"
         ]
       },
       {
-        "title": "Distinguishers for Skew and Linearized Reed-Solomon Codes",
-        "summary": "Generalized Reed-Solomon (GRS) and Gabidulin codes have been proposed for various code-based cryptosystems, though most such schemes without elaborate disguising techniques have been successfully atta",
-        "link": "http://arxiv.org/abs/2604.12954v1",
-        "date": "2026-04-14",
+        "title": "Analysis of Commit Signing on Github",
+        "summary": "Commit signing is widely promoted as a foundation of software supply-chain security, yet prior work has studied it through the lens of individual repositories or curated project samples, missing the b",
+        "link": "http://arxiv.org/abs/2604.14014v1",
+        "date": "2026-04-15",
         "authors": [
-          "Felicitas H\u00f6rmann",
-          "Anna-Lena Horlemann"
+          "Abubakar Sadiq Shittu",
+          "John Sadik",
+          "Farzin Gholamrezae"
         ]
       },
       {
-        "title": "CoDe-R: Refining Decompiler Output with LLMs via Rationale Guidance and Adaptive Inference",
-        "summary": "Binary decompilation is a critical reverse engineering task aimed at reconstructing high-level source code from stripped executables. Although Large Language Models (LLMs) have recently shown promise,",
-        "link": "http://arxiv.org/abs/2604.12913v1",
-        "date": "2026-04-14",
+        "title": "Towards Personalizing Secure Programming Education with LLM-Injected Vulnerabilities",
+        "summary": "According to constructivist theory, students learn software security more effectively when examples are grounded in their own code. Generic examples often fail to connect with students' prior work, li",
+        "link": "http://arxiv.org/abs/2604.13955v1",
+        "date": "2026-04-15",
         "authors": [
-          "Qiang Zhang",
-          "Zhongnian Li"
+          "Matthew Frazier",
+          "Kostadin Damevski"
         ]
       },
       {
-        "title": "EXTree: Towards Supporting Explainability in Attribute-based Access Control",
-        "summary": "With increasing emphasis on transparency in digital governance, users expect more than silence when their access requests are denied by a system. However, authorization methods are notorious for their",
-        "link": "http://arxiv.org/abs/2604.12850v1",
-        "date": "2026-04-14",
+        "title": "MCPThreatHive: Automated Threat Intelligence for Model Context Protocol Ecosystems",
+        "summary": "The rapid proliferation of Model Context Protocol (MCP)-based agentic systems has introduced a new category of security threats that existing frameworks are inadequately equipped to address. We presen",
+        "link": "http://arxiv.org/abs/2604.13849v1",
+        "date": "2026-04-15",
         "authors": [
-          "Shanampudi Pranaya Chowdary",
-          "Shamik Sural"
+          "Yi Ting Shen",
+          "Kentaroh Toyoda",
+          "Alex Leung"
         ]
       },
       {
-        "title": "Rapid LoRA Aggregation for Wireless Channel Adaptation in Open-Set Radio Frequency Fingerprinting",
-        "summary": "Radio frequency fingerprints (RFFs) enable secure wireless authentication but struggle in open-set scenarios with unknown devices and varying channels. Existing methods face challenges in generalizati",
-        "link": "http://arxiv.org/abs/2604.12834v1",
-        "date": "2026-04-14",
+        "title": "Who Gets Flagged? The Pluralistic Evaluation Gap in AI Content Watermarking",
+        "summary": "Watermarking is becoming the default mechanism for AI content authentication, with governance policies and frameworks referencing it as infrastructure for content provenance. Yet across text, image, a",
+        "link": "http://arxiv.org/abs/2604.13776v1",
+        "date": "2026-04-15",
         "authors": [
-          "Mingxi Zhang",
-          "Renjie Xie",
-          "Jincheng Wang"
+          "Alexander Nemecek",
+          "Osama Zafar",
+          "Yuqiao Xu"
         ]
       },
       {
-        "title": "Understanding and Improving Continuous Adversarial Training for LLMs via In-context Learning Theory",
-        "summary": "Adversarial training (AT) is an effective defense for large language models (LLMs) against jailbreak attacks, but performing AT on LLMs is costly. To improve the efficiency of AT for LLMs, recent stud",
-        "link": "http://arxiv.org/abs/2604.12817v1",
-        "date": "2026-04-14",
+        "title": "RealVuln: Benchmarking Rule-Based, General-Purpose LLM, and Security-Specialized Scanners on Real-World Code",
+        "summary": "How do security scanners perform on real-world code? We present RealVuln, the first open-source benchmark comparing Rule-Based SAST, General-Purpose LLMs, and Security-Specialized scanners on 26 inten",
+        "link": "http://arxiv.org/abs/2604.13764v1",
+        "date": "2026-04-15",
         "authors": [
-          "Shaopeng Fu",
-          "Di Wang"
+          "John Pellew",
+          "Faizan Raza"
         ]
       },
       {
-        "title": "Evaluating Differential Privacy Against Membership Inference in Federated Learning: Insights from the NIST Genomics Red Team Challenge",
-        "summary": "While Federated Learning (FL) mitigates direct data exposure, the resulting trained models remain susceptible to membership inference attacks (MIAs). This paper presents an empirical evaluation of Dif",
-        "link": "http://arxiv.org/abs/2604.12737v1",
-        "date": "2026-04-14",
+        "title": "Erlang Binary and Source Code Obfuscation",
+        "summary": "This paper studies obfuscation techniques for Erlang programs at the source, abstract syntax tree, BEAM assembly, and BEAM bytecode levels. We focus on transformations that complicate reverse engineer",
+        "link": "http://arxiv.org/abs/2604.13675v1",
+        "date": "2026-04-15",
         "authors": [
-          "Gustavo de Carvalho Bertoli"
+          "Gregory Morse",
+          "Tam\u00e1s Kozsik"
         ]
       }
     ],
-    "updated": "2026-04-15T04:46:50.345109Z"
+    "updated": "2026-04-16T04:52:30.320882Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -276,6 +278,6 @@
         ]
       }
     ],
-    "updated": "2026-04-15T04:46:50.345109Z"
+    "updated": "2026-04-16T04:52:30.320882Z"
   }
 }
