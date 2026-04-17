@@ -1,13 +1,7 @@
 {
   "eu_avg": 29.6,
-  "trend": -0.0,
+  "trend": 0.05,
   "series": [
-    {
-      "date": "2025-06-19",
-      "pct": 55.1,
-      "gasInStorage": 624.4,
-      "trend": 0.34
-    },
     {
       "date": "2025-06-20",
       "pct": 55.4,
@@ -1732,13 +1726,13 @@
     },
     {
       "date": "2026-04-03",
-      "pct": 28.0,
+      "pct": 27.9,
       "gasInStorage": 316.3,
       "trend": 0.05
     },
     {
       "date": "2026-04-04",
-      "pct": 28.2,
+      "pct": 28.1,
       "gasInStorage": 318.7,
       "trend": 0.21
     },
@@ -1756,7 +1750,7 @@
     },
     {
       "date": "2026-04-07",
-      "pct": 28.8,
+      "pct": 28.7,
       "gasInStorage": 325.4,
       "trend": 0.16
     },
@@ -1774,13 +1768,13 @@
     },
     {
       "date": "2026-04-10",
-      "pct": 29.2,
+      "pct": 29.1,
       "gasInStorage": 330.0,
       "trend": 0.12
     },
     {
       "date": "2026-04-11",
-      "pct": 29.4,
+      "pct": 29.3,
       "gasInStorage": 332.1,
       "trend": 0.19
     },
@@ -1792,70 +1786,76 @@
     },
     {
       "date": "2026-04-13",
-      "pct": 29.6,
+      "pct": 29.5,
       "gasInStorage": 334.4,
       "trend": 0.01
     },
     {
       "date": "2026-04-14",
+      "pct": 29.5,
+      "gasInStorage": 334.2,
+      "trend": -0.01
+    },
+    {
+      "date": "2026-04-15",
       "pct": 29.6,
-      "gasInStorage": 334.4,
-      "trend": -0.0
+      "gasInStorage": 334.9,
+      "trend": 0.05
     }
   ],
   "countries": {
     "DE": {
-      "pct": 23.1,
-      "trend": -0.14,
-      "gasInStorage": 57.1
+      "pct": 23.0,
+      "trend": -0.06,
+      "gasInStorage": 57.0
     },
     "FR": {
-      "pct": 26.1,
-      "trend": 0.15,
-      "gasInStorage": 32.3
+      "pct": 26.3,
+      "trend": 0.23,
+      "gasInStorage": 32.6
     },
     "IT": {
-      "pct": 44.8,
-      "trend": 0.08,
-      "gasInStorage": 91.4
+      "pct": 45.0,
+      "trend": 0.17,
+      "gasInStorage": 91.7
     },
     "ES": {
-      "pct": 62.5,
-      "trend": 0.37,
-      "gasInStorage": 22.4
+      "pct": 62.8,
+      "trend": 0.32,
+      "gasInStorage": 22.5
     },
     "NL": {
-      "pct": 6.4,
-      "trend": 0.12,
-      "gasInStorage": 9.3
+      "pct": 6.6,
+      "trend": 0.2,
+      "gasInStorage": 9.5
     },
     "AT": {
-      "pct": 35.9,
-      "trend": -0.13,
-      "gasInStorage": 36.0
+      "pct": 35.7,
+      "trend": -0.15,
+      "gasInStorage": 35.8
     },
     "BE": {
       "pct": 23.7,
-      "trend": -0.21,
+      "trend": 0.02,
       "gasInStorage": 1.8
     },
     "PL": {
-      "pct": 44.0,
-      "trend": -0.58,
-      "gasInStorage": 16.0
+      "pct": 43.1,
+      "trend": -0.28,
+      "gasInStorage": 15.9
     },
     "CZ": {
-      "pct": 28.6,
-      "trend": -0.14,
-      "gasInStorage": 13.0
+      "pct": 28.4,
+      "trend": -0.24,
+      "gasInStorage": 12.9
     },
     "HU": {
-      "pct": 33.3,
-      "trend": 0.05,
-      "gasInStorage": 22.6
+      "pct": 33.4,
+      "trend": 0.11,
+      "gasInStorage": 22.7
     }
   },
   "alert_threshold": 20.0,
   "score": 30,
-  "updated": "2026-04-16T04:52:30.320882Z"
+  "updated": "2026-04-17T04:50:35.278893Z"
 }

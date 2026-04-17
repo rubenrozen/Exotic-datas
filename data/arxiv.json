@@ -3,198 +3,202 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "From $P(y|x)$ to $P(y)$: Investigating Reinforcement Learning in Pre-train Space",
-        "summary": "While reinforcement learning with verifiable rewards (RLVR) significantly enhances LLM reasoning by optimizing the conditional distribution P(y|x), its potential is fundamentally bounded by the base m",
-        "link": "http://arxiv.org/abs/2604.14142v1",
-        "date": "2026-04-15",
+        "title": "MM-WebAgent: A Hierarchical Multimodal Web Agent for Webpage Generation",
+        "summary": "The rapid progress of Artificial Intelligence Generated Content (AIGC) tools enables images, videos, and visualizations to be created on demand for webpage design, offering a flexible and increasingly",
+        "link": "http://arxiv.org/abs/2604.15309v1",
+        "date": "2026-04-16",
         "authors": [
-          "Yuqiao Tan",
-          "Minzheng Wang",
-          "Bo Liu"
+          "Yan Li",
+          "Zezi Zeng",
+          "Yifan Yang"
         ]
       },
       {
-        "title": "LongCoT: Benchmarking Long-Horizon Chain-of-Thought Reasoning",
-        "summary": "As language models are increasingly deployed for complex autonomous tasks, their ability to reason accurately over longer horizons becomes critical. An essential component of this ability is planning ",
-        "link": "http://arxiv.org/abs/2604.14140v1",
-        "date": "2026-04-15",
+        "title": "Generalization in LLM Problem Solving: The Case of the Shortest Path",
+        "summary": "Whether language models can systematically generalize remains actively debated. Yet empirical performance is jointly shaped by multiple factors such as training data, training paradigms, and inference",
+        "link": "http://arxiv.org/abs/2604.15306v1",
+        "date": "2026-04-16",
         "authors": [
-          "Sumeet Ramesh Motwani",
-          "Daniel Nichols",
-          "Charles London"
+          "Yao Tong",
+          "Jiayuan Ye",
+          "Anastasia Borovykh"
         ]
       },
       {
-        "title": "From Feelings to Metrics: Understanding and Formalizing How Users Vibe-Test LLMs",
-        "summary": "Evaluating LLMs is challenging, as benchmark scores often fail to capture models' real-world usefulness. Instead, users often rely on ``vibe-testing'': informal experience-based evaluation, such as co",
-        "link": "http://arxiv.org/abs/2604.14137v1",
-        "date": "2026-04-15",
+        "title": "Diagnosing LLM Judge Reliability: Conformal Prediction Sets and Transitivity Violations",
+        "summary": "LLM-as-judge frameworks are increasingly used for automatic NLG evaluation, yet their per-instance reliability remains poorly understood. We present a two-pronged diagnostic toolkit applied to SummEva",
+        "link": "http://arxiv.org/abs/2604.15302v1",
+        "date": "2026-04-16",
         "authors": [
-          "Itay Itzhak",
-          "Eliya Habba",
-          "Gabriel Stanovsky"
+          "Manan Gupta",
+          "Dhruv Kumar"
         ]
       },
       {
-        "title": "Rhetorical Questions in LLM Representations: A Linear Probing Study",
-        "summary": "Rhetorical questions are asked not to seek information but to persuade or signal stance. How large language models internally represent them remains unclear. We analyze rhetorical questions in LLM rep",
-        "link": "http://arxiv.org/abs/2604.14128v1",
-        "date": "2026-04-15",
+        "title": "How Do LLMs and VLMs Understand Viewpoint Rotation Without Vision? An Interpretability Study",
+        "summary": "Over the past year, spatial intelligence has drawn increasing attention. Many prior works study it from the perspective of visual-spatial intelligence, where models have access to visuospatial informa",
+        "link": "http://arxiv.org/abs/2604.15294v1",
+        "date": "2026-04-16",
         "authors": [
-          "Louie Hong Yao",
-          "Vishesh Anand",
-          "Yuan Zhuang"
+          "Zhen Yang",
+          "Ping Jian",
+          "Zhongbin Guo"
         ]
       },
       {
-        "title": "HiVLA: A Visual-Grounded-Centric Hierarchical Embodied Manipulation System",
-        "summary": "While end-to-end Vision-Language-Action (VLA) models offer a promising paradigm for robotic manipulation, fine-tuning them on narrow control data often compromises the profound reasoning capabilities ",
-        "link": "http://arxiv.org/abs/2604.14125v1",
-        "date": "2026-04-15",
+        "title": "AD4AD: Benchmarking Visual Anomaly Detection Models for Safer Autonomous Driving",
+        "summary": "The reliability of a machine vision system for autonomous driving depends heavily on its training data distribution. When a vehicle encounters significantly different conditions, such as atypical obst",
+        "link": "http://arxiv.org/abs/2604.15291v1",
+        "date": "2026-04-16",
         "authors": [
-          "Tianshuo Yang",
-          "Guanyu Chen",
-          "Yutian Chen"
+          "Fabrizio Genilotti",
+          "Arianna Stropeni",
+          "Gionata Grotto"
         ]
       },
       {
-        "title": "TREX: Automating LLM Fine-tuning via Agent-Driven Tree-based Exploration",
-        "summary": "While Large Language Models (LLMs) have empowered AI research agents to perform isolated scientific tasks, automating complex, real-world workflows, such as LLM training, remains a significant challen",
-        "link": "http://arxiv.org/abs/2604.14116v1",
-        "date": "2026-04-15",
+        "title": "Why Do Vision Language Models Struggle To Recognize Human Emotions?",
+        "summary": "Understanding emotions is a fundamental ability for intelligent systems to be able to interact with humans. Vision-language models (VLMs) have made tremendous progress in the last few years for many v",
+        "link": "http://arxiv.org/abs/2604.15280v1",
+        "date": "2026-04-16",
         "authors": [
-          "Zerun Ma",
-          "Guoqiang Wang",
-          "Xinchen Xie"
+          "Madhav Agarwal",
+          "Sotirios A. Tsaftaris",
+          "Laura Sevilla-Lara"
         ]
       },
       {
-        "title": "UI-Zoomer: Uncertainty-Driven Adaptive Zoom-In for GUI Grounding",
-        "summary": "GUI grounding, which localizes interface elements from screenshots given natural language queries, remains challenging for small icons and dense layouts. Test-time zoom-in methods improve localization",
-        "link": "http://arxiv.org/abs/2604.14113v1",
-        "date": "2026-04-15",
+        "title": "Prism: Symbolic Superoptimization of Tensor Programs",
+        "summary": "This paper presents Prism, the first symbolic superoptimizer for tensor programs. The key idea is sGraph, a symbolic, hierarchical representation that compactly encodes large classes of tensor program",
+        "link": "http://arxiv.org/abs/2604.15272v1",
+        "date": "2026-04-16",
         "authors": [
-          "Fei Tang",
-          "Bofan Chen",
-          "Zhengxi Lu"
+          "Mengdi Wu",
+          "Xiaoyu Jiang",
+          "Oded Padon"
         ]
       },
       {
-        "title": "UMI-3D: Extending Universal Manipulation Interface from Vision-Limited to 3D Spatial Perception",
-        "summary": "We present UMI-3D, a multimodal extension of the Universal Manipulation Interface (UMI) for robust and scalable data collection in embodied manipulation. While UMI enables portable, wrist-mounted data",
-        "link": "http://arxiv.org/abs/2604.14089v1",
-        "date": "2026-04-15",
+        "title": "SegWithU: Uncertainty as Perturbation Energy for Single-Forward-Pass Risk-Aware Medical Image Segmentation",
+        "summary": "Reliable uncertainty estimation is critical for medical image segmentation, where automated contours feed downstream quantification and clinical decision support. Many strong uncertainty methods requi",
+        "link": "http://arxiv.org/abs/2604.15271v1",
+        "date": "2026-04-16",
         "authors": [
-          "Ziming Wang"
+          "Tianhao Fu",
+          "Austin Wang",
+          "Charles Chen"
         ]
       }
     ],
-    "updated": "2026-04-16T04:52:30.320882Z"
+    "updated": "2026-04-17T04:50:35.278893Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-04-16T04:52:30.320882Z"
+    "updated": "2026-04-17T04:50:35.278893Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-04-16T04:52:30.320882Z"
+    "updated": "2026-04-17T04:50:35.278893Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-04-16T04:52:30.320882Z"
+    "updated": "2026-04-17T04:50:35.278893Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Temporary Power Adjusting Withholding Attack",
-        "summary": "We consider the block withholding attacks on pools, more specifically the state-of-the-art Power Adjusting Withholding (PAW) attack. We propose a generalization called Temporary PAW (T-PAW) where the ",
-        "link": "http://arxiv.org/abs/2604.14135v1",
-        "date": "2026-04-15",
+        "title": "Structural Dependency Analysis for Masked NTT Hardware: Scalable Pre-Silicon Verification of Post-Quantum Cryptographic Accelerators",
+        "summary": "Post-quantum cryptographic accelerators require side-channel resistance evidence for FIPS 140-3 certification. However, exact masking-verification tools scale only to gadgets of a few thousand cells. ",
+        "link": "http://arxiv.org/abs/2604.15249v1",
+        "date": "2026-04-16",
         "authors": [
-          "Mustafa Doger",
-          "Sennur Ulukus"
+          "Ray Iskander",
+          "Khaled Kirah"
         ]
       },
       {
-        "title": "KindHML: formal verification of smart contracts based on Hennessy-Milner logic",
-        "summary": "Smart contracts deployed on blockchains such as Ethereum routinely manage large amounts of assets, making their security critical. Empirical studies show that real-world attacks often exploit flaws in",
-        "link": "http://arxiv.org/abs/2604.14038v1",
-        "date": "2026-04-15",
+        "title": "Feedback-Driven Execution for LLM-Based Binary Analysis",
+        "summary": "Binary analysis increasingly relies on large language models (LLMs) to perform semantic reasoning over complex program behaviors. However, existing approaches largely adopt a one-pass execution paradi",
+        "link": "http://arxiv.org/abs/2604.15136v1",
+        "date": "2026-04-16",
         "authors": [
-          "Massimo Bartoletti",
-          "Angelo Ferrando",
-          "Enrico Lipparini"
+          "XiangRui Zhang",
+          "Qiang Li",
+          "Haining Wang"
         ]
       },
       {
-        "title": "Analysis of Commit Signing on Github",
-        "summary": "Commit signing is widely promoted as a foundation of software supply-chain security, yet prior work has studied it through the lens of individual repositories or curated project samples, missing the b",
-        "link": "http://arxiv.org/abs/2604.14014v1",
-        "date": "2026-04-15",
+        "title": "NFTDELTA: Detecting Permission Control Vulnerabilities in NFT Contracts through Multi-View Learning",
+        "summary": "Permission control vulnerabilities in Non-fungible token (NFT) contracts can result in significant financial losses, as attackers may exploit these weaknesses to gain unauthorized access or circumvent",
+        "link": "http://arxiv.org/abs/2604.15118v1",
+        "date": "2026-04-16",
         "authors": [
-          "Abubakar Sadiq Shittu",
-          "John Sadik",
-          "Farzin Gholamrezae"
+          "Hailu Kuang",
+          "Xiaoqi Li",
+          "Wenkai Li"
         ]
       },
       {
-        "title": "Towards Personalizing Secure Programming Education with LLM-Injected Vulnerabilities",
-        "summary": "According to constructivist theory, students learn software security more effectively when examples are grounded in their own code. Generic examples often fail to connect with students' prior work, li",
-        "link": "http://arxiv.org/abs/2604.13955v1",
-        "date": "2026-04-15",
+        "title": "FedIDM: Achieving Fast and Stable Convergence in Byzantine Federated Learning through Iterative Distribution Matching",
+        "summary": "Most existing Byzantine-robust federated learning (FL) methods suffer from slow and unstable convergence. Moreover, when handling a substantial proportion of colluded malicious clients, achieving robu",
+        "link": "http://arxiv.org/abs/2604.15115v1",
+        "date": "2026-04-16",
         "authors": [
-          "Matthew Frazier",
-          "Kostadin Damevski"
+          "He Yang",
+          "Dongyi Lv",
+          "Wei Xi"
         ]
       },
       {
-        "title": "MCPThreatHive: Automated Threat Intelligence for Model Context Protocol Ecosystems",
-        "summary": "The rapid proliferation of Model Context Protocol (MCP)-based agentic systems has introduced a new category of security threats that existing frameworks are inadequately equipped to address. We presen",
-        "link": "http://arxiv.org/abs/2604.13849v1",
-        "date": "2026-04-15",
+        "title": "Emulation-based System-on-Chip Security Verification: Challenges and Opportunities",
+        "summary": "Increasing system-on-chip (SoC) heterogeneity, deep hardware/software integration, and the proliferation of third-party intellectual property (IP) have brought security validation to the forefront of ",
+        "link": "http://arxiv.org/abs/2604.15073v1",
+        "date": "2026-04-16",
         "authors": [
-          "Yi Ting Shen",
-          "Kentaroh Toyoda",
-          "Alex Leung"
+          "Tanvir Rahman",
+          "Shuvagata Saha",
+          "Ahmed Y. Alhurubi"
         ]
       },
       {
-        "title": "Who Gets Flagged? The Pluralistic Evaluation Gap in AI Content Watermarking",
-        "summary": "Watermarking is becoming the default mechanism for AI content authentication, with governance policies and frameworks referencing it as infrastructure for content provenance. Yet across text, image, a",
-        "link": "http://arxiv.org/abs/2604.13776v1",
-        "date": "2026-04-15",
+        "title": "No More Guessing: a Verifiable Gradient Inversion Attack in Federated Learning",
+        "summary": "Gradient inversion attacks threaten client privacy in federated learning by reconstructing training samples from clients' shared gradients. Gradients aggregate contributions from multiple records and ",
+        "link": "http://arxiv.org/abs/2604.15063v1",
+        "date": "2026-04-16",
         "authors": [
-          "Alexander Nemecek",
-          "Osama Zafar",
-          "Yuqiao Xu"
+          "Francesco Diana",
+          "Chuan Xu",
+          "Andr\u00e9 Nusser"
         ]
       },
       {
-        "title": "RealVuln: Benchmarking Rule-Based, General-Purpose LLM, and Security-Specialized Scanners on Real-World Code",
-        "summary": "How do security scanners perform on real-world code? We present RealVuln, the first open-source benchmark comparing Rule-Based SAST, General-Purpose LLMs, and Security-Specialized scanners on 26 inten",
-        "link": "http://arxiv.org/abs/2604.13764v1",
-        "date": "2026-04-15",
+        "title": "Route to Rome Attack: Directing LLM Routers to Expensive Models via Adversarial Suffix Optimization",
+        "summary": "Cost-aware routing dynamically dispatches user queries to models of varying capability to balance performance and inference cost. However, the routing strategy introduces a new security concern that a",
+        "link": "http://arxiv.org/abs/2604.15022v1",
+        "date": "2026-04-16",
         "authors": [
-          "John Pellew",
-          "Faizan Raza"
+          "Haochun Tang",
+          "Yuliang Yan",
+          "Jiahua Lu"
         ]
       },
       {
-        "title": "Erlang Binary and Source Code Obfuscation",
-        "summary": "This paper studies obfuscation techniques for Erlang programs at the source, abstract syntax tree, BEAM assembly, and BEAM bytecode levels. We focus on transformations that complicate reverse engineer",
-        "link": "http://arxiv.org/abs/2604.13675v1",
-        "date": "2026-04-15",
+        "title": "ConGISATA: A Framework for Continuous Gamified Information Security Awareness Training and Assessment",
+        "summary": "The incidence of cybersecurity attacks utilizing social engineering techniques has increased. Such attacks exploit the fact that in every secure system, there is at least one individual with the means",
+        "link": "http://arxiv.org/abs/2604.14996v1",
+        "date": "2026-04-16",
         "authors": [
-          "Gregory Morse",
-          "Tam\u00e1s Kozsik"
+          "Ofir Cohen",
+          "Ron Bitton",
+          "Asaf Shabtai"
         ]
       }
     ],
-    "updated": "2026-04-16T04:52:30.320882Z"
+    "updated": "2026-04-17T04:50:35.278893Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -278,6 +282,6 @@
         ]
       }
     ],
-    "updated": "2026-04-16T04:52:30.320882Z"
+    "updated": "2026-04-17T04:50:35.278893Z"
   }
 }
