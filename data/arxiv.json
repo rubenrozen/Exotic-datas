@@ -3,202 +3,199 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "MM-WebAgent: A Hierarchical Multimodal Web Agent for Webpage Generation",
-        "summary": "The rapid progress of Artificial Intelligence Generated Content (AIGC) tools enables images, videos, and visualizations to be created on demand for webpage design, offering a flexible and increasingly",
-        "link": "http://arxiv.org/abs/2604.15309v1",
-        "date": "2026-04-16",
+        "title": "ASMR-Bench: Auditing for Sabotage in ML Research",
+        "summary": "As AI systems are increasingly used to conduct research autonomously, misaligned systems could introduce subtle flaws that produce misleading results while evading detection. We introduce ASMR-Bench (",
+        "link": "http://arxiv.org/abs/2604.16286v1",
+        "date": "2026-04-17",
         "authors": [
-          "Yan Li",
-          "Zezi Zeng",
-          "Yifan Yang"
+          "Eric Gan",
+          "Aryan Bhatt",
+          "Buck Shlegeris"
         ]
       },
       {
-        "title": "Generalization in LLM Problem Solving: The Case of the Shortest Path",
-        "summary": "Whether language models can systematically generalize remains actively debated. Yet empirical performance is jointly shaped by multiple factors such as training data, training paradigms, and inference",
-        "link": "http://arxiv.org/abs/2604.15306v1",
-        "date": "2026-04-16",
+        "title": "Using Large Language Models and Knowledge Graphs to Improve the Interpretability of Machine Learning Models in Manufacturing",
+        "summary": "Explaining Machine Learning (ML) results in a transparent and user-friendly manner remains a challenging task of Explainable Artificial Intelligence (XAI). In this paper, we present a method to enhanc",
+        "link": "http://arxiv.org/abs/2604.16280v1",
+        "date": "2026-04-17",
         "authors": [
-          "Yao Tong",
-          "Jiayuan Ye",
-          "Anastasia Borovykh"
+          "Thomas Bayer",
+          "Alexander Lohr",
+          "Sarah Wei\u00df"
         ]
       },
       {
-        "title": "Diagnosing LLM Judge Reliability: Conformal Prediction Sets and Transitivity Violations",
-        "summary": "LLM-as-judge frameworks are increasingly used for automatic NLG evaluation, yet their per-instance reliability remains poorly understood. We present a two-pronged diagnostic toolkit applied to SummEva",
-        "link": "http://arxiv.org/abs/2604.15302v1",
-        "date": "2026-04-16",
+        "title": "Learning to Reason with Insight for Informal Theorem Proving",
+        "summary": "Although most of the automated theorem-proving approaches depend on formal proof systems, informal theorem proving can align better with large language models' (LLMs) strength in natural language proc",
+        "link": "http://arxiv.org/abs/2604.16278v1",
+        "date": "2026-04-17",
         "authors": [
-          "Manan Gupta",
-          "Dhruv Kumar"
+          "Yunhe Li",
+          "Hao Shi",
+          "Bowen Deng"
         ]
       },
       {
-        "title": "How Do LLMs and VLMs Understand Viewpoint Rotation Without Vision? An Interpretability Study",
-        "summary": "Over the past year, spatial intelligence has drawn increasing attention. Many prior works study it from the perspective of visual-spatial intelligence, where models have access to visuospatial informa",
-        "link": "http://arxiv.org/abs/2604.15294v1",
-        "date": "2026-04-16",
+        "title": "VEFX-Bench: A Holistic Benchmark for Generic Video Editing and Visual Effects",
+        "summary": "As AI-assisted video creation becomes increasingly practical, instruction-guided video editing has become essential for refining generated or captured footage to meet professional requirements. Yet th",
+        "link": "http://arxiv.org/abs/2604.16272v1",
+        "date": "2026-04-17",
         "authors": [
-          "Zhen Yang",
-          "Ping Jian",
-          "Zhongbin Guo"
+          "Xiangbo Gao",
+          "Sicong Jiang",
+          "Bangya Liu"
         ]
       },
       {
-        "title": "AD4AD: Benchmarking Visual Anomaly Detection Models for Safer Autonomous Driving",
-        "summary": "The reliability of a machine vision system for autonomous driving depends heavily on its training data distribution. When a vehicle encounters significantly different conditions, such as atypical obst",
-        "link": "http://arxiv.org/abs/2604.15291v1",
-        "date": "2026-04-16",
+        "title": "From Benchmarking to Reasoning: A Dual-Aspect, Large-Scale Evaluation of LLMs on Vietnamese Legal Text",
+        "summary": "The complexity of Vietnam's legal texts presents a significant barrier to public access to justice. While Large Language Models offer a promising solution for legal text simplification, evaluating the",
+        "link": "http://arxiv.org/abs/2604.16270v1",
+        "date": "2026-04-17",
         "authors": [
-          "Fabrizio Genilotti",
-          "Arianna Stropeni",
-          "Gionata Grotto"
+          "Van-Truong Le"
         ]
       },
       {
-        "title": "Why Do Vision Language Models Struggle To Recognize Human Emotions?",
-        "summary": "Understanding emotions is a fundamental ability for intelligent systems to be able to interact with humans. Vision-language models (VLMs) have made tremendous progress in the last few years for many v",
-        "link": "http://arxiv.org/abs/2604.15280v1",
-        "date": "2026-04-16",
+        "title": "Beyond Distribution Sharpening: The Importance of Task Rewards",
+        "summary": "Frontier models have demonstrated exceptional capabilities following the integration of task-reward-based reinforcement learning (RL) into their training pipelines, enabling systems to evolve from pur",
+        "link": "http://arxiv.org/abs/2604.16259v1",
+        "date": "2026-04-17",
         "authors": [
-          "Madhav Agarwal",
-          "Sotirios A. Tsaftaris",
-          "Laura Sevilla-Lara"
+          "Sarthak Mittal",
+          "Leo Gagnon",
+          "Guillaume Lajoie"
         ]
       },
       {
-        "title": "Prism: Symbolic Superoptimization of Tensor Programs",
-        "summary": "This paper presents Prism, the first symbolic superoptimizer for tensor programs. The key idea is sGraph, a symbolic, hierarchical representation that compactly encodes large classes of tensor program",
-        "link": "http://arxiv.org/abs/2604.15272v1",
-        "date": "2026-04-16",
+        "title": "Characterising LLM-Generated Competency Questions: a Cross-Domain Empirical Study using Open and Closed Models",
+        "summary": "Competency Questions (CQs) are a cornerstone of requirement elicitation in ontology engineering. CQs represent requirements as a set of natural language questions that an ontology should satisfy; they",
+        "link": "http://arxiv.org/abs/2604.16258v1",
+        "date": "2026-04-17",
         "authors": [
-          "Mengdi Wu",
-          "Xiaoyu Jiang",
-          "Oded Padon"
+          "Reham Alharbi",
+          "Valentina Tamma",
+          "Terry R. Payne"
         ]
       },
       {
-        "title": "SegWithU: Uncertainty as Perturbation Energy for Single-Forward-Pass Risk-Aware Medical Image Segmentation",
-        "summary": "Reliable uncertainty estimation is critical for medical image segmentation, where automated contours feed downstream quantification and clinical decision support. Many strong uncertainty methods requi",
-        "link": "http://arxiv.org/abs/2604.15271v1",
-        "date": "2026-04-16",
+        "title": "Joint-Centric Dual Contrastive Alignment with Structure-Preserving and Information-Balanced Regularization",
+        "summary": "We propose HILBERT (HIerarchical Long-sequence Balanced Embedding with Reciprocal contrastive Training), a cross-attentive multimodal framework for learning document-level audio-text representations f",
+        "link": "http://arxiv.org/abs/2604.16247v1",
+        "date": "2026-04-17",
         "authors": [
-          "Tianhao Fu",
-          "Austin Wang",
-          "Charles Chen"
+          "Habibeh Naderi",
+          "Behrouz Haji Soleimani",
+          "Stan Matwin"
         ]
       }
     ],
-    "updated": "2026-04-19T04:52:23.834599Z"
+    "updated": "2026-04-20T05:14:37.200813Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-04-19T04:52:23.834599Z"
+    "updated": "2026-04-20T05:14:37.200813Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-04-19T04:52:23.834599Z"
+    "updated": "2026-04-20T05:14:37.200813Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-04-19T04:52:23.834599Z"
+    "updated": "2026-04-20T05:14:37.200813Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Structural Dependency Analysis for Masked NTT Hardware: Scalable Pre-Silicon Verification of Post-Quantum Cryptographic Accelerators",
-        "summary": "Post-quantum cryptographic accelerators require side-channel resistance evidence for FIPS 140-3 certification. However, exact masking-verification tools scale only to gadgets of a few thousand cells. ",
-        "link": "http://arxiv.org/abs/2604.15249v1",
-        "date": "2026-04-16",
+        "title": "PolicyGapper: Automated Detection of Inconsistencies Between Google Play Data Safety Sections and Privacy Policies Using LLMs",
+        "summary": "Mobile application developers are required to disclose how they collect, use, and share user data in compliance with privacy regulations. To support transparency, major app marketplaces have introduce",
+        "link": "http://arxiv.org/abs/2604.16128v1",
+        "date": "2026-04-17",
         "authors": [
-          "Ray Iskander",
-          "Khaled Kirah"
+          "Luca Ferrari",
+          "Billel Habbati",
+          "Meriem Guerar"
         ]
       },
       {
-        "title": "Feedback-Driven Execution for LLM-Based Binary Analysis",
-        "summary": "Binary analysis increasingly relies on large language models (LLMs) to perform semantic reasoning over complex program behaviors. However, existing approaches largely adopt a one-pass execution paradi",
-        "link": "http://arxiv.org/abs/2604.15136v1",
-        "date": "2026-04-16",
+        "title": "Quantum-Resistant Quantum Teleportation",
+        "summary": "We propose a quantum-resistant quantum teleportation (QRQT) framework protected by post-quantum cryptography (PQC) to secure the classical correction channel, which is vulnerable to quantum adversarie",
+        "link": "http://arxiv.org/abs/2604.16101v1",
+        "date": "2026-04-17",
         "authors": [
-          "XiangRui Zhang",
-          "Qiang Li",
-          "Haining Wang"
+          "Xin Jin",
+          "Nitish Kumar Chandra",
+          "Mohadeseh Azari"
         ]
       },
       {
-        "title": "NFTDELTA: Detecting Permission Control Vulnerabilities in NFT Contracts through Multi-View Learning",
-        "summary": "Permission control vulnerabilities in Non-fungible token (NFT) contracts can result in significant financial losses, as attackers may exploit these weaknesses to gain unauthorized access or circumvent",
-        "link": "http://arxiv.org/abs/2604.15118v1",
-        "date": "2026-04-16",
+        "title": "ProcRoute: Process-Scoped Authorization of Split-Tunnel Routes",
+        "summary": "In most split-tunnel VPN/ZTNA deployments, installing an internal route authorizes the entire device, not a specific application, to use it. An unprivileged malicious process can therefore reach inter",
+        "link": "http://arxiv.org/abs/2604.16080v1",
+        "date": "2026-04-17",
         "authors": [
-          "Hailu Kuang",
-          "Xiaoqi Li",
-          "Wenkai Li"
+          "Arul Thileeban Sagayam"
         ]
       },
       {
-        "title": "FedIDM: Achieving Fast and Stable Convergence in Byzantine Federated Learning through Iterative Distribution Matching",
-        "summary": "Most existing Byzantine-robust federated learning (FL) methods suffer from slow and unstable convergence. Moreover, when handling a substantial proportion of colluded malicious clients, achieving robu",
-        "link": "http://arxiv.org/abs/2604.15115v1",
-        "date": "2026-04-16",
+        "title": "A Novel Framework for Transmitter Privacy in Integrated Sensing and Communication",
+        "summary": "ISAC systems introduce new privacy risks because an unintended sensing node may exploit the shared radio waveform to infer transmitter-related information even when the communication payload remains s",
+        "link": "http://arxiv.org/abs/2604.16068v1",
+        "date": "2026-04-17",
         "authors": [
-          "He Yang",
-          "Dongyi Lv",
-          "Wei Xi"
+          "Vaibhav Kumar",
+          "Ahmad Bazzi",
+          "Christina P\u00f6pper"
         ]
       },
       {
-        "title": "Emulation-based System-on-Chip Security Verification: Challenges and Opportunities",
-        "summary": "Increasing system-on-chip (SoC) heterogeneity, deep hardware/software integration, and the proliferation of third-party intellectual property (IP) have brought security validation to the forefront of ",
-        "link": "http://arxiv.org/abs/2604.15073v1",
-        "date": "2026-04-16",
+        "title": "Modeling Sparse and Bursty Vulnerability Sightings: Forecasting Under Data Constraints",
+        "summary": "Understanding and anticipating vulnerability-related activity is a major challenge in cyber threat intelligence. This work investigates whether vulnerability sightings, such as proof-of-concept releas",
+        "link": "http://arxiv.org/abs/2604.16038v1",
+        "date": "2026-04-17",
         "authors": [
-          "Tanvir Rahman",
-          "Shuvagata Saha",
-          "Ahmed Y. Alhurubi"
+          "Cedric Bonhomme",
+          "Alexandre Dulaunoy"
         ]
       },
       {
-        "title": "No More Guessing: a Verifiable Gradient Inversion Attack in Federated Learning",
-        "summary": "Gradient inversion attacks threaten client privacy in federated learning by reconstructing training samples from clients' shared gradients. Gradients aggregate contributions from multiple records and ",
-        "link": "http://arxiv.org/abs/2604.15063v1",
-        "date": "2026-04-16",
+        "title": "MATRIX: Multi-Layer Code Watermarking via Dual-Channel Constrained Parity-Check Encoding",
+        "summary": "Code Large Language Models (Code LLMs) have revolutionized software development but raised critical concerns regarding code provenance, copyright protection, and security. Existing code watermarking a",
+        "link": "http://arxiv.org/abs/2604.16001v1",
+        "date": "2026-04-17",
         "authors": [
-          "Francesco Diana",
-          "Chuan Xu",
-          "Andr\u00e9 Nusser"
+          "Yuqing Nie",
+          "Chong Wang",
+          "Guosheng Xu"
         ]
       },
       {
-        "title": "Route to Rome Attack: Directing LLM Routers to Expensive Models via Adversarial Suffix Optimization",
-        "summary": "Cost-aware routing dynamically dispatches user queries to models of varying capability to balance performance and inference cost. However, the routing strategy introduces a new security concern that a",
-        "link": "http://arxiv.org/abs/2604.15022v1",
-        "date": "2026-04-16",
+        "title": "Where Does MEV Really Come From? Revisiting CEXDEX Arbitrage on Ethereum",
+        "summary": "A central question of the Ethereum ecosystem is where Maximal Extractable Value (MEV)revenue originates and to what extent it stems from harming unsuspecting users. It is acceptable if MEV arises from",
+        "link": "http://arxiv.org/abs/2604.15973v1",
+        "date": "2026-04-17",
         "authors": [
-          "Haochun Tang",
-          "Yuliang Yan",
-          "Jiahua Lu"
+          "Bence Lad\u00f3czk",
+          "Mikl\u00f3s R\u00e1sonyi",
+          "J\u00e1nos Tapolcai"
         ]
       },
       {
-        "title": "ConGISATA: A Framework for Continuous Gamified Information Security Awareness Training and Assessment",
-        "summary": "The incidence of cybersecurity attacks utilizing social engineering techniques has increased. Such attacks exploit the fact that in every secure system, there is at least one individual with the means",
-        "link": "http://arxiv.org/abs/2604.14996v1",
-        "date": "2026-04-16",
+        "title": "TwoHamsters: Benchmarking Multi-Concept Compositional Unsafety in Text-to-Image Models",
+        "summary": "Despite the remarkable synthesis capabilities of text-to-image (T2I) models, safeguarding them against content violations remains a persistent challenge. Existing safety alignments primarily focus on ",
+        "link": "http://arxiv.org/abs/2604.15967v1",
+        "date": "2026-04-17",
         "authors": [
-          "Ofir Cohen",
-          "Ron Bitton",
-          "Asaf Shabtai"
+          "Chaoshuo Zhang",
+          "Yibo Liang",
+          "Mengke Tian"
         ]
       }
     ],
-    "updated": "2026-04-19T04:52:23.834599Z"
+    "updated": "2026-04-20T05:14:37.200813Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -282,6 +279,6 @@
         ]
       }
     ],
-    "updated": "2026-04-19T04:52:23.834599Z"
+    "updated": "2026-04-20T05:14:37.200813Z"
   }
 }
