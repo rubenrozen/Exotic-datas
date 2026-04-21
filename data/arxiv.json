@@ -3,199 +3,196 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "ASMR-Bench: Auditing for Sabotage in ML Research",
-        "summary": "As AI systems are increasingly used to conduct research autonomously, misaligned systems could introduce subtle flaws that produce misleading results while evading detection. We introduce ASMR-Bench (",
-        "link": "http://arxiv.org/abs/2604.16286v1",
-        "date": "2026-04-17",
+        "title": "MathNet: a Global Multimodal Benchmark for Mathematical Reasoning and Retrieval",
+        "summary": "Mathematical problem solving remains a challenging test of reasoning for large language and multimodal models, yet existing benchmarks are limited in size, language coverage, and task diversity. We in",
+        "link": "http://arxiv.org/abs/2604.18584v1",
+        "date": "2026-04-20",
         "authors": [
-          "Eric Gan",
-          "Aryan Bhatt",
-          "Buck Shlegeris"
+          "Shaden Alshammari",
+          "Kevin Wen",
+          "Abrar Zainal"
         ]
       },
       {
-        "title": "Using Large Language Models and Knowledge Graphs to Improve the Interpretability of Machine Learning Models in Manufacturing",
-        "summary": "Explaining Machine Learning (ML) results in a transparent and user-friendly manner remains a challenging task of Explainable Artificial Intelligence (XAI). In this paper, we present a method to enhanc",
-        "link": "http://arxiv.org/abs/2604.16280v1",
-        "date": "2026-04-17",
+        "title": "Sessa: Selective State Space Attention",
+        "summary": "Modern sequence models are dominated by Transformers, where self-attention mixes information from the visible context in an input-dependent way. However, when retrieval is not sharp and attention rema",
+        "link": "http://arxiv.org/abs/2604.18580v1",
+        "date": "2026-04-20",
         "authors": [
-          "Thomas Bayer",
-          "Alexander Lohr",
-          "Sarah Wei\u00df"
+          "Liubomyr Horbatko"
         ]
       },
       {
-        "title": "Learning to Reason with Insight for Informal Theorem Proving",
-        "summary": "Although most of the automated theorem-proving approaches depend on formal proof systems, informal theorem proving can align better with large language models' (LLMs) strength in natural language proc",
-        "link": "http://arxiv.org/abs/2604.16278v1",
-        "date": "2026-04-17",
+        "title": "Bounded Ratio Reinforcement Learning",
+        "summary": "Proximal Policy Optimization (PPO) has become the predominant algorithm for on-policy reinforcement learning due to its scalability and empirical robustness across domains. However, there is a signifi",
+        "link": "http://arxiv.org/abs/2604.18578v1",
+        "date": "2026-04-20",
         "authors": [
-          "Yunhe Li",
-          "Hao Shi",
-          "Bowen Deng"
+          "Yunke Ao",
+          "Le Chen",
+          "Bruce D. Lee"
         ]
       },
       {
-        "title": "VEFX-Bench: A Holistic Benchmark for Generic Video Editing and Visual Effects",
-        "summary": "As AI-assisted video creation becomes increasingly practical, instruction-guided video editing has become essential for refining generated or captured footage to meet professional requirements. Yet th",
-        "link": "http://arxiv.org/abs/2604.16272v1",
-        "date": "2026-04-17",
+        "title": "Agentic Forecasting using Sequential Bayesian Updating of Linguistic Beliefs",
+        "summary": "We present BLF (Bayesian Linguistic Forecaster), an agentic system for binary forecasting that achieves state-of-the-art performance on the ForecastBench benchmark. The system is built on three ideas.",
+        "link": "http://arxiv.org/abs/2604.18576v1",
+        "date": "2026-04-20",
         "authors": [
-          "Xiangbo Gao",
-          "Sicong Jiang",
-          "Bangya Liu"
+          "Kevin Murphy"
         ]
       },
       {
-        "title": "From Benchmarking to Reasoning: A Dual-Aspect, Large-Scale Evaluation of LLMs on Vietnamese Legal Text",
-        "summary": "The complexity of Vietnam's legal texts presents a significant barrier to public access to justice. While Large Language Models offer a promising solution for legal text simplification, evaluating the",
-        "link": "http://arxiv.org/abs/2604.16270v1",
-        "date": "2026-04-17",
+        "title": "When Can LLMs Learn to Reason with Weak Supervision?",
+        "summary": "Large language models have achieved significant reasoning improvements through reinforcement learning with verifiable rewards (RLVR). Yet as model capabilities grow, constructing high-quality reward s",
+        "link": "http://arxiv.org/abs/2604.18574v1",
+        "date": "2026-04-20",
         "authors": [
-          "Van-Truong Le"
+          "Salman Rahman",
+          "Jingyan Shen",
+          "Anna Mordvina"
         ]
       },
       {
-        "title": "Beyond Distribution Sharpening: The Importance of Task Rewards",
-        "summary": "Frontier models have demonstrated exceptional capabilities following the integration of task-reward-based reinforcement learning (RL) into their training pipelines, enabling systems to evolve from pur",
-        "link": "http://arxiv.org/abs/2604.16259v1",
-        "date": "2026-04-17",
+        "title": "Back into Plato's Cave: Examining Cross-modal Representational Convergence at Scale",
+        "summary": "The Platonic Representation Hypothesis suggests that neural networks trained on different modalities (e.g., text and images) align and eventually converge toward the same representation of reality. If",
+        "link": "http://arxiv.org/abs/2604.18572v1",
+        "date": "2026-04-20",
         "authors": [
-          "Sarthak Mittal",
-          "Leo Gagnon",
-          "Guillaume Lajoie"
+          "A. Sophia Koepke",
+          "Daniil Zverev",
+          "Shiry Ginosar"
         ]
       },
       {
-        "title": "Characterising LLM-Generated Competency Questions: a Cross-Domain Empirical Study using Open and Closed Models",
-        "summary": "Competency Questions (CQs) are a cornerstone of requirement elicitation in ontology engineering. CQs represent requirements as a set of natural language questions that an ontology should satisfy; they",
-        "link": "http://arxiv.org/abs/2604.16258v1",
-        "date": "2026-04-17",
+        "title": "A multimodal and temporal foundation model for virtual patient representations at healthcare system scale",
+        "summary": "Modern medicine generates vast multimodal data across siloed systems, yet no existing model integrates the full breadth and temporal depth of the clinical record into a unified patient representation.",
+        "link": "http://arxiv.org/abs/2604.18570v1",
+        "date": "2026-04-20",
         "authors": [
-          "Reham Alharbi",
-          "Valentina Tamma",
-          "Terry R. Payne"
+          "Andrew Zhang",
+          "Tong Ding",
+          "Sophia J. Wagner"
         ]
       },
       {
-        "title": "Joint-Centric Dual Contrastive Alignment with Structure-Preserving and Information-Balanced Regularization",
-        "summary": "We propose HILBERT (HIerarchical Long-sequence Balanced Embedding with Reciprocal contrastive Training), a cross-attentive multimodal framework for learning document-level audio-text representations f",
-        "link": "http://arxiv.org/abs/2604.16247v1",
-        "date": "2026-04-17",
+        "title": "Latent Phase-Shift Rollback: Inference-Time Error Correction via Residual Stream Monitoring and KV-Cache Steering",
+        "summary": "Large language models frequently commit unrecoverable reasoning errors mid-generation: once a wrong step is taken, subsequent tokens compound the mistake rather than correct it. We introduce $\\textbf{",
+        "link": "http://arxiv.org/abs/2604.18567v1",
+        "date": "2026-04-20",
         "authors": [
-          "Habibeh Naderi",
-          "Behrouz Haji Soleimani",
-          "Stan Matwin"
+          "Manan Gupta",
+          "Dhruv Kumar"
         ]
       }
     ],
-    "updated": "2026-04-20T05:14:37.200813Z"
+    "updated": "2026-04-21T04:49:49.653877Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-04-20T05:14:37.200813Z"
+    "updated": "2026-04-21T04:49:49.653877Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-04-20T05:14:37.200813Z"
+    "updated": "2026-04-21T04:49:49.653877Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-04-20T05:14:37.200813Z"
+    "updated": "2026-04-21T04:49:49.653877Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "PolicyGapper: Automated Detection of Inconsistencies Between Google Play Data Safety Sections and Privacy Policies Using LLMs",
-        "summary": "Mobile application developers are required to disclose how they collect, use, and share user data in compliance with privacy regulations. To support transparency, major app marketplaces have introduce",
-        "link": "http://arxiv.org/abs/2604.16128v1",
-        "date": "2026-04-17",
+        "title": "Do Privacy Policies Match with the Logs? An Empirical Study of Privacy Disclosure in Android Application Logs",
+        "summary": "Privacy policies are intended to inform users about how software systems collect and handle data, yet they often remain vague or incomplete. This paper presents an empirical study of patterns in log-r",
+        "link": "http://arxiv.org/abs/2604.18552v1",
+        "date": "2026-04-20",
         "authors": [
-          "Luca Ferrari",
-          "Billel Habbati",
-          "Meriem Guerar"
+          "Zhiyuan Chen",
+          "Love Jayesh Ahir",
+          "Ahmad Suleiman"
         ]
       },
       {
-        "title": "Quantum-Resistant Quantum Teleportation",
-        "summary": "We propose a quantum-resistant quantum teleportation (QRQT) framework protected by post-quantum cryptography (PQC) to secure the classical correction channel, which is vulnerable to quantum adversarie",
-        "link": "http://arxiv.org/abs/2604.16101v1",
-        "date": "2026-04-17",
+        "title": "Different Paths to Harmful Compliance: Behavioral Side Effects and Mechanistic Divergence Across LLM Jailbreaks",
+        "summary": "Open-weight language models can be rendered unsafe through several distinct interventions, but the resulting models may differ substantially in capabilities, behavioral profile, and internal failure m",
+        "link": "http://arxiv.org/abs/2604.18510v1",
+        "date": "2026-04-20",
         "authors": [
-          "Xin Jin",
-          "Nitish Kumar Chandra",
-          "Mohadeseh Azari"
+          "Md Rysul Kabir",
+          "Zoran Tiganj"
         ]
       },
       {
-        "title": "ProcRoute: Process-Scoped Authorization of Split-Tunnel Routes",
-        "summary": "In most split-tunnel VPN/ZTNA deployments, installing an internal route authorizes the entire device, not a specific application, to use it. An unprivileged malicious process can therefore reach inter",
-        "link": "http://arxiv.org/abs/2604.16080v1",
-        "date": "2026-04-17",
+        "title": "Capturing Monetarily Exploitable Vulnerability in Smart Contracts via Auditor Knowledge-Learning Fuzzing",
+        "summary": "Smart contracts extended blockchain functionality beyond simple transactions, powering complex applications like decentralized finance (DeFi). However, this complexity introduces serious security chal",
+        "link": "http://arxiv.org/abs/2604.18395v1",
+        "date": "2026-04-20",
         "authors": [
-          "Arul Thileeban Sagayam"
+          "Bowen Cai",
+          "Weiheng Bai",
+          "Hangyun Tang"
         ]
       },
       {
-        "title": "A Novel Framework for Transmitter Privacy in Integrated Sensing and Communication",
-        "summary": "ISAC systems introduce new privacy risks because an unintended sensing node may exploit the shared radio waveform to infer transmitter-related information even when the communication payload remains s",
-        "link": "http://arxiv.org/abs/2604.16068v1",
-        "date": "2026-04-17",
+        "title": "Tight Auditing of Differential Privacy in MST and AIM",
+        "summary": "State-of-the-art Differentially Private (DP) synthetic data generators such as MST and AIM are widely used, yet tightly auditing their privacy guarantees remains challenging. We introduce a Gaussian D",
+        "link": "http://arxiv.org/abs/2604.18352v1",
+        "date": "2026-04-20",
         "authors": [
-          "Vaibhav Kumar",
-          "Ahmad Bazzi",
-          "Christina P\u00f6pper"
+          "Georgi Ganev",
+          "Meenatchi Sundaram Muthu Selva Annamalai",
+          "Bogdan Kulynych"
         ]
       },
       {
-        "title": "Modeling Sparse and Bursty Vulnerability Sightings: Forecasting Under Data Constraints",
-        "summary": "Understanding and anticipating vulnerability-related activity is a major challenge in cyber threat intelligence. This work investigates whether vulnerability sightings, such as proof-of-concept releas",
-        "link": "http://arxiv.org/abs/2604.16038v1",
-        "date": "2026-04-17",
+        "title": "Compositional security definitions for higher-order where declassification",
+        "summary": "To ensure programs do not leak private data, we often want to be able to provide formal guarantees ensuring such data is handled correctly. Often, we cannot keep such data secret entirely; instead pro",
+        "link": "http://arxiv.org/abs/2604.18300v1",
+        "date": "2026-04-20",
         "authors": [
-          "Cedric Bonhomme",
-          "Alexandre Dulaunoy"
+          "Jan Menz",
+          "Andrew K. Hirsch",
+          "Peixuan Li"
         ]
       },
       {
-        "title": "MATRIX: Multi-Layer Code Watermarking via Dual-Channel Constrained Parity-Check Encoding",
-        "summary": "Code Large Language Models (Code LLMs) have revolutionized software development but raised critical concerns regarding code provenance, copyright protection, and security. Existing code watermarking a",
-        "link": "http://arxiv.org/abs/2604.16001v1",
-        "date": "2026-04-17",
+        "title": "Subcodes of Lambda-Gabidulin Codes for Compact-Ciphertext Cryptography",
+        "summary": "This paper investigates subcodes of lambda-Gabidulin codes, viewed as rank-metric analogues of generalized Reed--Solomon codes, and their applications to compact-ciphertext cryptosystems. We first ana",
+        "link": "http://arxiv.org/abs/2604.18282v1",
+        "date": "2026-04-20",
         "authors": [
-          "Yuqing Nie",
-          "Chong Wang",
-          "Guosheng Xu"
+          "Freddy Lend\u00e9 Metouk\u00e9",
+          "Herv\u00e9 Tal\u00e9 Kalachi",
+          "Hermann Tchatchiem Kamche"
         ]
       },
       {
-        "title": "Where Does MEV Really Come From? Revisiting CEXDEX Arbitrage on Ethereum",
-        "summary": "A central question of the Ethereum ecosystem is where Maximal Extractable Value (MEV)revenue originates and to what extent it stems from harming unsuspecting users. It is acceptable if MEV arises from",
-        "link": "http://arxiv.org/abs/2604.15973v1",
-        "date": "2026-04-17",
+        "title": "Beyond Pattern Matching: Seven Cross-Domain Techniques for Prompt Injection Detection",
+        "summary": "Current open-source prompt-injection detectors converge on two architectural choices: regular-expression pattern matching and fine-tuned transformer classifiers. Both share failure modes that recent w",
+        "link": "http://arxiv.org/abs/2604.18248v1",
+        "date": "2026-04-20",
         "authors": [
-          "Bence Lad\u00f3czk",
-          "Mikl\u00f3s R\u00e1sonyi",
-          "J\u00e1nos Tapolcai"
+          "Thamilvendhan Munirathinam"
         ]
       },
       {
-        "title": "TwoHamsters: Benchmarking Multi-Concept Compositional Unsafety in Text-to-Image Models",
-        "summary": "Despite the remarkable synthesis capabilities of text-to-image (T2I) models, safeguarding them against content violations remains a persistent challenge. Existing safety alignments primarily focus on ",
-        "link": "http://arxiv.org/abs/2604.15967v1",
-        "date": "2026-04-17",
+        "title": "AgenTEE: Confidential LLM Agent Execution on Edge Devices",
+        "summary": "Large Language Model (LLM) agents provide powerful automation capabilities, but they also create a substantially broader attack surface than traditional applications due to their tight integration wit",
+        "link": "http://arxiv.org/abs/2604.18231v1",
+        "date": "2026-04-20",
         "authors": [
-          "Chaoshuo Zhang",
-          "Yibo Liang",
-          "Mengke Tian"
+          "Sina Abdollahi",
+          "Mohammad M Maheri",
+          "Javad Forough"
         ]
       }
     ],
-    "updated": "2026-04-20T05:14:37.200813Z"
+    "updated": "2026-04-21T04:49:49.653877Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -279,6 +276,6 @@
         ]
       }
     ],
-    "updated": "2026-04-20T05:14:37.200813Z"
+    "updated": "2026-04-21T04:49:49.653877Z"
   }
 }
