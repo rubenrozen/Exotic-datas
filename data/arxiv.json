@@ -3,196 +3,199 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "MathNet: a Global Multimodal Benchmark for Mathematical Reasoning and Retrieval",
-        "summary": "Mathematical problem solving remains a challenging test of reasoning for large language and multimodal models, yet existing benchmarks are limited in size, language coverage, and task diversity. We in",
-        "link": "http://arxiv.org/abs/2604.18584v1",
-        "date": "2026-04-20",
+        "title": "Generalization at the Edge of Stability",
+        "summary": "Training modern neural networks often relies on large learning rates, operating at the edge of stability, where the optimization dynamics exhibit oscillatory and chaotic behavior. Empirically, this re",
+        "link": "http://arxiv.org/abs/2604.19740v1",
+        "date": "2026-04-21",
         "authors": [
-          "Shaden Alshammari",
-          "Kevin Wen",
-          "Abrar Zainal"
+          "Mario Tuci",
+          "Caner Korkmaz",
+          "Umut \u015eim\u015fekli"
         ]
       },
       {
-        "title": "Sessa: Selective State Space Attention",
-        "summary": "Modern sequence models are dominated by Transformers, where self-attention mixes information from the visible context in an input-dependent way. However, when retrieval is not sharp and attention rema",
-        "link": "http://arxiv.org/abs/2604.18580v1",
-        "date": "2026-04-20",
+        "title": "UniT: Toward a Unified Physical Language for Human-to-Humanoid Policy Learning and World Modeling",
+        "summary": "Scaling humanoid foundation models is bottlenecked by the scarcity of robotic data. While massive egocentric human data offers a scalable alternative, bridging the cross-embodiment chasm remains a fun",
+        "link": "http://arxiv.org/abs/2604.19734v1",
+        "date": "2026-04-21",
         "authors": [
-          "Liubomyr Horbatko"
+          "Boyu Chen",
+          "Yi Chen",
+          "Lu Qiu"
         ]
       },
       {
-        "title": "Bounded Ratio Reinforcement Learning",
-        "summary": "Proximal Policy Optimization (PPO) has become the predominant algorithm for on-policy reinforcement learning due to its scalability and empirical robustness across domains. However, there is a signifi",
-        "link": "http://arxiv.org/abs/2604.18578v1",
-        "date": "2026-04-20",
+        "title": "FASTER: Value-Guided Sampling for Fast RL",
+        "summary": "Some of the most performant reinforcement learning algorithms today can be prohibitively expensive as they use test-time scaling methods such as sampling multiple action candidates and selecting the b",
+        "link": "http://arxiv.org/abs/2604.19730v1",
+        "date": "2026-04-21",
         "authors": [
-          "Yunke Ao",
-          "Le Chen",
-          "Bruce D. Lee"
+          "Perry Dong",
+          "Alexander Swerdlow",
+          "Dorsa Sadigh"
         ]
       },
       {
-        "title": "Agentic Forecasting using Sequential Bayesian Updating of Linguistic Beliefs",
-        "summary": "We present BLF (Bayesian Linguistic Forecaster), an agentic system for binary forecasting that achieves state-of-the-art performance on the ForecastBench benchmark. The system is built on three ideas.",
-        "link": "http://arxiv.org/abs/2604.18576v1",
-        "date": "2026-04-20",
+        "title": "VLA Foundry: A Unified Framework for Training Vision-Language-Action Models",
+        "summary": "We present VLA Foundry, an open-source framework that unifies LLM, VLM, and VLA training in a single codebase. Most open-source VLA efforts specialize on the action training stage, often stitching tog",
+        "link": "http://arxiv.org/abs/2604.19728v1",
+        "date": "2026-04-21",
         "authors": [
-          "Kevin Murphy"
+          "Jean Mercat",
+          "Sedrick Keh",
+          "Kushal Arora"
         ]
       },
       {
-        "title": "When Can LLMs Learn to Reason with Weak Supervision?",
-        "summary": "Large language models have achieved significant reasoning improvements through reinforcement learning with verifiable rewards (RLVR). Yet as model capabilities grow, constructing high-quality reward s",
-        "link": "http://arxiv.org/abs/2604.18574v1",
-        "date": "2026-04-20",
+        "title": "Benign Overfitting in Adversarial Training for Vision Transformers",
+        "summary": "Despite the remarkable success of Vision Transformers (ViTs) across a wide range of vision tasks, recent studies have revealed that they remain vulnerable to adversarial examples, much like Convolutio",
+        "link": "http://arxiv.org/abs/2604.19724v1",
+        "date": "2026-04-21",
         "authors": [
-          "Salman Rahman",
-          "Jingyan Shen",
-          "Anna Mordvina"
+          "Jiaming Zhang",
+          "Meng Ding",
+          "Shaopeng Fu"
         ]
       },
       {
-        "title": "Back into Plato's Cave: Examining Cross-modal Representational Convergence at Scale",
-        "summary": "The Platonic Representation Hypothesis suggests that neural networks trained on different modalities (e.g., text and images) align and eventually converge toward the same representation of reality. If",
-        "link": "http://arxiv.org/abs/2604.18572v1",
-        "date": "2026-04-20",
+        "title": "Adaptive MSD-Splitting: Enhancing C4.5 and Random Forests for Skewed Continuous Attributes",
+        "summary": "The discretization of continuous numerical attributes remains a persistent computational bottleneck in the induction of decision trees, particularly as dataset dimensions scale. Building upon the rece",
+        "link": "http://arxiv.org/abs/2604.19722v1",
+        "date": "2026-04-21",
         "authors": [
-          "A. Sophia Koepke",
-          "Daniil Zverev",
-          "Shiry Ginosar"
+          "Jake Lee"
         ]
       },
       {
-        "title": "A multimodal and temporal foundation model for virtual patient representations at healthcare system scale",
-        "summary": "Modern medicine generates vast multimodal data across siloed systems, yet no existing model integrates the full breadth and temporal depth of the clinical record into a unified patient representation.",
-        "link": "http://arxiv.org/abs/2604.18570v1",
-        "date": "2026-04-20",
+        "title": "A-MAR: Agent-based Multimodal Art Retrieval for Fine-Grained Artwork Understanding",
+        "summary": "Understanding artworks requires multi-step reasoning over visual content and cultural, historical, and stylistic context. While recent multimodal large language models show promise in artwork explanat",
+        "link": "http://arxiv.org/abs/2604.19689v1",
+        "date": "2026-04-21",
         "authors": [
-          "Andrew Zhang",
-          "Tong Ding",
-          "Sophia J. Wagner"
+          "Shuai Wang",
+          "Hongyi Zhu",
+          "Jia-Hong Huang"
         ]
       },
       {
-        "title": "Latent Phase-Shift Rollback: Inference-Time Error Correction via Residual Stream Monitoring and KV-Cache Steering",
-        "summary": "Large language models frequently commit unrecoverable reasoning errors mid-generation: once a wrong step is taken, subsequent tokens compound the mistake rather than correct it. We introduce $\\textbf{",
-        "link": "http://arxiv.org/abs/2604.18567v1",
-        "date": "2026-04-20",
+        "title": "Learning Hybrid-Control Policies for High-Precision In-Contact Manipulation Under Uncertainty",
+        "summary": "Reinforcement learning-based control policies have been frequently demonstrated to be more effective than analytical techniques for many manipulation tasks. Commonly, these methods learn neural contro",
+        "link": "http://arxiv.org/abs/2604.19677v1",
+        "date": "2026-04-21",
         "authors": [
-          "Manan Gupta",
-          "Dhruv Kumar"
+          "Hunter L. Brown",
+          "Geoffrey Hollinger",
+          "Stefan Lee"
         ]
       }
     ],
-    "updated": "2026-04-21T04:49:49.653877Z"
+    "updated": "2026-04-22T04:47:46.784078Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-04-21T04:49:49.653877Z"
+    "updated": "2026-04-22T04:47:46.784078Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-04-21T04:49:49.653877Z"
+    "updated": "2026-04-22T04:47:46.784078Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-04-21T04:49:49.653877Z"
+    "updated": "2026-04-22T04:47:46.784078Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Do Privacy Policies Match with the Logs? An Empirical Study of Privacy Disclosure in Android Application Logs",
-        "summary": "Privacy policies are intended to inform users about how software systems collect and handle data, yet they often remain vague or incomplete. This paper presents an empirical study of patterns in log-r",
-        "link": "http://arxiv.org/abs/2604.18552v1",
-        "date": "2026-04-20",
+        "title": "\"We are currently clean on OPSEC\": Why JD Can't Encrypt",
+        "summary": "We analyse the 2025 Signalgate leak of sensitive US military information by the Trump administration, addressing why confidentiality was violated (messages leaked to the press) in spite of encryption ",
+        "link": "http://arxiv.org/abs/2604.19711v1",
+        "date": "2026-04-21",
         "authors": [
-          "Zhiyuan Chen",
-          "Love Jayesh Ahir",
-          "Ahmad Suleiman"
+          "Maurice Chiodo",
+          "Toni Erskine",
+          "Dennis M\u00fcller"
         ]
       },
       {
-        "title": "Different Paths to Harmful Compliance: Behavioral Side Effects and Mechanistic Divergence Across LLM Jailbreaks",
-        "summary": "Open-weight language models can be rendered unsafe through several distinct interventions, but the resulting models may differ substantially in capabilities, behavioral profile, and internal failure m",
-        "link": "http://arxiv.org/abs/2604.18510v1",
-        "date": "2026-04-20",
+        "title": "An AI Agent Execution Environment to Safeguard User Data",
+        "summary": "AI agents promise to serve as general-purpose personal assistants for their users, which requires them to have access to private user data (e.g., personal and financial information). This poses a seri",
+        "link": "http://arxiv.org/abs/2604.19657v1",
+        "date": "2026-04-21",
         "authors": [
-          "Md Rysul Kabir",
-          "Zoran Tiganj"
+          "Robert Stanley",
+          "Avi Verma",
+          "Lillian Tsai"
         ]
       },
       {
-        "title": "Capturing Monetarily Exploitable Vulnerability in Smart Contracts via Auditor Knowledge-Learning Fuzzing",
-        "summary": "Smart contracts extended blockchain functionality beyond simple transactions, powering complex applications like decentralized finance (DeFi). However, this complexity introduces serious security chal",
-        "link": "http://arxiv.org/abs/2604.18395v1",
-        "date": "2026-04-20",
+        "title": "Adding Compilation Metadata To Binaries To Make Disassembly Decidable",
+        "summary": "The binary executable format is the standard method for distributing and executing software. Yet, it is also as opaque a representation of software as can be. If the binary format were augmented with ",
+        "link": "http://arxiv.org/abs/2604.19628v1",
+        "date": "2026-04-21",
         "authors": [
-          "Bowen Cai",
-          "Weiheng Bai",
-          "Hangyun Tang"
+          "Daniel Engel",
+          "Freek Verbeek",
+          "Pranav Kumar"
         ]
       },
       {
-        "title": "Tight Auditing of Differential Privacy in MST and AIM",
-        "summary": "State-of-the-art Differentially Private (DP) synthetic data generators such as MST and AIM are widely used, yet tightly auditing their privacy guarantees remains challenging. We introduce a Gaussian D",
-        "link": "http://arxiv.org/abs/2604.18352v1",
-        "date": "2026-04-20",
+        "title": "Cyber Defense Benchmark: Agentic Threat Hunting Evaluation for LLMs in SecOps",
+        "summary": "We introduce the Cyber Defense Benchmark, a benchmark for measuring how well large language model (LLM) agents perform the core SOC analyst task of threat hunting: given a database of raw Windows even",
+        "link": "http://arxiv.org/abs/2604.19533v1",
+        "date": "2026-04-21",
         "authors": [
-          "Georgi Ganev",
-          "Meenatchi Sundaram Muthu Selva Annamalai",
-          "Bogdan Kulynych"
+          "Alankrit Chona",
+          "Igor Kozlov",
+          "Ambuj Kumar"
         ]
       },
       {
-        "title": "Compositional security definitions for higher-order where declassification",
-        "summary": "To ensure programs do not leak private data, we often want to be able to provide formal guarantees ensuring such data is handled correctly. Often, we cannot keep such data secret entirely; instead pro",
-        "link": "http://arxiv.org/abs/2604.18300v1",
-        "date": "2026-04-20",
+        "title": "Evaluating LLM-Generated Obfuscated XSS Payloads for Machine Learning-Based Detection",
+        "summary": "Cross-site scripting (XSS) remains a persistent web security vulnerability, especially because obfuscation can change the surface form of a malicious payload while preserving its behavior. These trans",
+        "link": "http://arxiv.org/abs/2604.19526v1",
+        "date": "2026-04-21",
         "authors": [
-          "Jan Menz",
-          "Andrew K. Hirsch",
-          "Peixuan Li"
+          "Divyesh Gabbireddy",
+          "Suman Saha"
         ]
       },
       {
-        "title": "Subcodes of Lambda-Gabidulin Codes for Compact-Ciphertext Cryptography",
-        "summary": "This paper investigates subcodes of lambda-Gabidulin codes, viewed as rank-metric analogues of generalized Reed--Solomon codes, and their applications to compact-ciphertext cryptosystems. We first ana",
-        "link": "http://arxiv.org/abs/2604.18282v1",
-        "date": "2026-04-20",
+        "title": "When Graph Structure Becomes a Liability: A Critical Re-Evaluation of Graph Neural Networks for Bitcoin Fraud Detection under Temporal Distribution Shift",
+        "summary": "The consensus that GCN, GraphSAGE, GAT, and EvolveGCN outperform feature-only baselines on the Elliptic Bitcoin Dataset is widely cited but has not been rigorously stress-tested under a leakage-free e",
+        "link": "http://arxiv.org/abs/2604.19514v1",
+        "date": "2026-04-21",
         "authors": [
-          "Freddy Lend\u00e9 Metouk\u00e9",
-          "Herv\u00e9 Tal\u00e9 Kalachi",
-          "Hermann Tchatchiem Kamche"
+          "Saket Maganti"
         ]
       },
       {
-        "title": "Beyond Pattern Matching: Seven Cross-Domain Techniques for Prompt Injection Detection",
-        "summary": "Current open-source prompt-injection detectors converge on two architectural choices: regular-expression pattern matching and fine-tuned transformer classifiers. Both share failure modes that recent w",
-        "link": "http://arxiv.org/abs/2604.18248v1",
-        "date": "2026-04-20",
+        "title": "Cyclic Equalizability Characterized by Parikh Vectors",
+        "summary": "Cyclic equalizability is a notion introduced by Shinagawa and Nuida in 2025, in the study of card-based cryptography. Informally, a collection of words is cyclically equalizable if, by inserting the s",
+        "link": "http://arxiv.org/abs/2604.19504v1",
+        "date": "2026-04-21",
         "authors": [
-          "Thamilvendhan Munirathinam"
+          "Sarunyu Thongjarast",
+          "Sarit Pasiphol",
+          "Suthee Ruangwises"
         ]
       },
       {
-        "title": "AgenTEE: Confidential LLM Agent Execution on Edge Devices",
-        "summary": "Large Language Model (LLM) agents provide powerful automation capabilities, but they also create a substantially broader attack surface than traditional applications due to their tight integration wit",
-        "link": "http://arxiv.org/abs/2604.18231v1",
-        "date": "2026-04-20",
+        "title": "EvoPatch-IoT: Evolution-Aware Cross-Architecture Vulnerability Retrieval and Patch-State Profiling for BusyBox-Based IoT Firmware",
+        "summary": "BusyBox is one of the most widely reused userland components in Linux-based Internet-of-Things (IoT) firmware, yet its security assessment remains difficult because firmware images are frequently stri",
+        "link": "http://arxiv.org/abs/2604.19496v1",
+        "date": "2026-04-21",
         "authors": [
-          "Sina Abdollahi",
-          "Mohammad M Maheri",
-          "Javad Forough"
+          "Yinhao Xiao",
+          "Huixi Li",
+          "Yongluo Shen"
         ]
       }
     ],
-    "updated": "2026-04-21T04:49:49.653877Z"
+    "updated": "2026-04-22T04:47:46.784078Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -276,6 +279,6 @@
         ]
       }
     ],
-    "updated": "2026-04-21T04:49:49.653877Z"
+    "updated": "2026-04-22T04:47:46.784078Z"
   }
 }
