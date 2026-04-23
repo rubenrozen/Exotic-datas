@@ -1,13 +1,7 @@
 {
-  "eu_avg": 30.6,
-  "trend": 0.15,
+  "eu_avg": 30.7,
+  "trend": 0.09,
   "series": [
-    {
-      "date": "2025-06-25",
-      "pct": 57.2,
-      "gasInStorage": 648.3,
-      "trend": 0.26
-    },
     {
       "date": "2025-06-26",
       "pct": 57.4,
@@ -1801,61 +1795,67 @@
       "pct": 30.6,
       "gasInStorage": 346.7,
       "trend": 0.15
+    },
+    {
+      "date": "2026-04-21",
+      "pct": 30.7,
+      "gasInStorage": 347.8,
+      "trend": 0.09
     }
   ],
   "countries": {
     "DE": {
       "pct": 23.8,
-      "trend": 0.05,
-      "gasInStorage": 59.1
+      "trend": -0.03,
+      "gasInStorage": 59.0
     },
     "FR": {
-      "pct": 28.3,
-      "trend": 0.3,
-      "gasInStorage": 35.0
+      "pct": 28.5,
+      "trend": 0.2,
+      "gasInStorage": 35.3
     },
     "IT": {
-      "pct": 46.6,
-      "trend": 0.26,
-      "gasInStorage": 94.9
+      "pct": 46.9,
+      "trend": 0.29,
+      "gasInStorage": 95.5
     },
     "ES": {
       "pct": 63.4,
-      "trend": -0.0,
+      "trend": 0.0,
       "gasInStorage": 22.7
     },
     "NL": {
-      "pct": 7.9,
-      "trend": 0.22,
-      "gasInStorage": 11.3
+      "pct": 8.1,
+      "trend": 0.2,
+      "gasInStorage": 11.6
     },
     "AT": {
-      "pct": 36.6,
-      "trend": 0.18,
-      "gasInStorage": 36.7
+      "pct": 36.7,
+      "trend": 0.09,
+      "gasInStorage": 36.8
     },
     "BE": {
       "pct": 23.8,
-      "trend": -0.06,
+      "trend": -0.07,
       "gasInStorage": 1.8
     },
     "PL": {
-      "pct": 43.5,
-      "trend": 0.15,
-      "gasInStorage": 16.0
+      "pct": 43.0,
+      "trend": -0.5,
+      "gasInStorage": 15.8
     },
     "CZ": {
       "pct": 28.6,
-      "trend": 0.07,
+      "trend": -0.01,
       "gasInStorage": 13.0
     },
     "HU": {
-      "pct": 34.1,
-      "trend": 0.11,
-      "gasInStorage": 23.2
+      "pct": 34.2,
+      "trend": 0.09,
+      "gasInStorage": 23.3
     }
   },
   "alert_threshold": 20.0,
   "score": 31,
-  "updated": "2026-04-22T04:47:46.784078Z"
+  "updated": "2026-04-23T04:51:46.540861Z"
 }

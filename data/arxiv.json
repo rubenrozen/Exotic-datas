@@ -3,199 +3,197 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Generalization at the Edge of Stability",
-        "summary": "Training modern neural networks often relies on large learning rates, operating at the edge of stability, where the optimization dynamics exhibit oscillatory and chaotic behavior. Empirically, this re",
-        "link": "http://arxiv.org/abs/2604.19740v1",
-        "date": "2026-04-21",
+        "title": "SpeechParaling-Bench: A Comprehensive Benchmark for Paralinguistic-Aware Speech Generation",
+        "summary": "Paralinguistic cues are essential for natural human-computer interaction, yet their evaluation in Large Audio-Language Models (LALMs) remains limited by coarse feature coverage and the inherent subjec",
+        "link": "http://arxiv.org/abs/2604.20842v1",
+        "date": "2026-04-22",
         "authors": [
-          "Mario Tuci",
-          "Caner Korkmaz",
-          "Umut \u015eim\u015fekli"
+          "Ruohan Liu",
+          "Shukang Yin",
+          "Tao Wang"
         ]
       },
       {
-        "title": "UniT: Toward a Unified Physical Language for Human-to-Humanoid Policy Learning and World Modeling",
-        "summary": "Scaling humanoid foundation models is bottlenecked by the scarcity of robotic data. While massive egocentric human data offers a scalable alternative, bridging the cross-embodiment chasm remains a fun",
-        "link": "http://arxiv.org/abs/2604.19734v1",
-        "date": "2026-04-21",
+        "title": "AVISE: Framework for Evaluating the Security of AI Systems",
+        "summary": "As artificial intelligence (AI) systems are increasingly deployed across critical domains, their security vulnerabilities pose growing risks of high-profile exploits and consequential system failures.",
+        "link": "http://arxiv.org/abs/2604.20833v1",
+        "date": "2026-04-22",
         "authors": [
-          "Boyu Chen",
-          "Yi Chen",
-          "Lu Qiu"
+          "Mikko Lempinen",
+          "Joni Kemppainen",
+          "Niklas Raesalmi"
         ]
       },
       {
-        "title": "FASTER: Value-Guided Sampling for Fast RL",
-        "summary": "Some of the most performant reinforcement learning algorithms today can be prohibitively expensive as they use test-time scaling methods such as sampling multiple action candidates and selecting the b",
-        "link": "http://arxiv.org/abs/2604.19730v1",
-        "date": "2026-04-21",
+        "title": "FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels",
+        "summary": "Federated learning (FL) enables collaborative model training without sharing raw data; however, the presence of noisy labels across distributed clients can severely degrade the learning performance. I",
+        "link": "http://arxiv.org/abs/2604.20825v1",
+        "date": "2026-04-22",
         "authors": [
-          "Perry Dong",
-          "Alexander Swerdlow",
-          "Dorsa Sadigh"
+          "Sina Gholami",
+          "Abdulmoneam Ali",
+          "Tania Haghighi"
         ]
       },
       {
-        "title": "VLA Foundry: A Unified Framework for Training Vision-Language-Action Models",
-        "summary": "We present VLA Foundry, an open-source framework that unifies LLM, VLM, and VLA training in a single codebase. Most open-source VLA efforts specialize on the action training stage, often stitching tog",
-        "link": "http://arxiv.org/abs/2604.19728v1",
-        "date": "2026-04-21",
+        "title": "Convergent Evolution: How Different Language Models Learn Similar Number Representations",
+        "summary": "Language models trained on natural text learn to represent numbers using periodic features with dominant periods at $T=2, 5, 10$. In this paper, we identify a two-tiered hierarchy of these features: w",
+        "link": "http://arxiv.org/abs/2604.20817v1",
+        "date": "2026-04-22",
         "authors": [
-          "Jean Mercat",
-          "Sedrick Keh",
-          "Kushal Arora"
+          "Deqing Fu",
+          "Tianyi Zhou",
+          "Mikhail Belkin"
         ]
       },
       {
-        "title": "Benign Overfitting in Adversarial Training for Vision Transformers",
-        "summary": "Despite the remarkable success of Vision Transformers (ViTs) across a wide range of vision tasks, recent studies have revealed that they remain vulnerable to adversarial examples, much like Convolutio",
-        "link": "http://arxiv.org/abs/2604.19724v1",
-        "date": "2026-04-21",
+        "title": "Diagnosing CFG Interpretation in LLMs",
+        "summary": "As LLMs are increasingly integrated into agentic systems, they must adhere to dynamically defined, machine-interpretable interfaces. We evaluate LLMs as in-context interpreters: given a novel context-",
+        "link": "http://arxiv.org/abs/2604.20811v1",
+        "date": "2026-04-22",
         "authors": [
-          "Jiaming Zhang",
-          "Meng Ding",
-          "Shaopeng Fu"
+          "Hanqi Li",
+          "Lu Chen",
+          "Kai Yu"
         ]
       },
       {
-        "title": "Adaptive MSD-Splitting: Enhancing C4.5 and Random Forests for Skewed Continuous Attributes",
-        "summary": "The discretization of continuous numerical attributes remains a persistent computational bottleneck in the induction of decision trees, particularly as dataset dimensions scale. Building upon the rece",
-        "link": "http://arxiv.org/abs/2604.19722v1",
-        "date": "2026-04-21",
+        "title": "OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model",
+        "summary": "Large vision-language models (LVLMs) have made substantial advances in reasoning tasks at the Olympiad level. Nevertheless, current Olympiad-level multimodal reasoning benchmarks for these models ofte",
+        "link": "http://arxiv.org/abs/2604.20806v1",
+        "date": "2026-04-22",
         "authors": [
-          "Jake Lee"
+          "Qiguang Chen",
+          "Chengyu Luan",
+          "Jiajun Wu"
         ]
       },
       {
-        "title": "A-MAR: Agent-based Multimodal Art Retrieval for Fine-Grained Artwork Understanding",
-        "summary": "Understanding artworks requires multi-step reasoning over visual content and cultural, historical, and stylistic context. While recent multimodal large language models show promise in artwork explanat",
-        "link": "http://arxiv.org/abs/2604.19689v1",
-        "date": "2026-04-21",
+        "title": "Relative Principals, Pluralistic Alignment, and the Structural Value Alignment Problem",
+        "summary": "The value alignment problem for artificial intelligence (AI) is often framed as a purely technical or normative challenge, sometimes focused on hypothetical future systems. I argue that the problem is",
+        "link": "http://arxiv.org/abs/2604.20805v1",
+        "date": "2026-04-22",
         "authors": [
-          "Shuai Wang",
-          "Hongyi Zhu",
-          "Jia-Hong Huang"
+          "Travis LaCroix"
         ]
       },
       {
-        "title": "Learning Hybrid-Control Policies for High-Precision In-Contact Manipulation Under Uncertainty",
-        "summary": "Reinforcement learning-based control policies have been frequently demonstrated to be more effective than analytical techniques for many manipulation tasks. Commonly, these methods learn neural contro",
-        "link": "http://arxiv.org/abs/2604.19677v1",
-        "date": "2026-04-21",
+        "title": "Automatic Ontology Construction Using LLMs as an External Layer of Memory, Verification, and Planning for Hybrid Intelligent Systems",
+        "summary": "This paper presents a hybrid architecture for intelligent systems in which large language models (LLMs) are extended with an external ontological memory layer. Instead of relying solely on parametric ",
+        "link": "http://arxiv.org/abs/2604.20795v1",
+        "date": "2026-04-22",
         "authors": [
-          "Hunter L. Brown",
-          "Geoffrey Hollinger",
-          "Stefan Lee"
+          "Pavel Salovskii",
+          "Iuliia Gorshkova"
         ]
       }
     ],
-    "updated": "2026-04-22T04:47:46.784078Z"
+    "updated": "2026-04-23T04:51:46.540861Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-04-22T04:47:46.784078Z"
+    "updated": "2026-04-23T04:51:46.540861Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-04-22T04:47:46.784078Z"
+    "updated": "2026-04-23T04:51:46.540861Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-04-22T04:47:46.784078Z"
+    "updated": "2026-04-23T04:51:46.540861Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "\"We are currently clean on OPSEC\": Why JD Can't Encrypt",
-        "summary": "We analyse the 2025 Signalgate leak of sensitive US military information by the Trump administration, addressing why confidentiality was violated (messages leaked to the press) in spite of encryption ",
-        "link": "http://arxiv.org/abs/2604.19711v1",
-        "date": "2026-04-21",
+        "title": "AVISE: Framework for Evaluating the Security of AI Systems",
+        "summary": "As artificial intelligence (AI) systems are increasingly deployed across critical domains, their security vulnerabilities pose growing risks of high-profile exploits and consequential system failures.",
+        "link": "http://arxiv.org/abs/2604.20833v1",
+        "date": "2026-04-22",
         "authors": [
-          "Maurice Chiodo",
-          "Toni Erskine",
-          "Dennis M\u00fcller"
+          "Mikko Lempinen",
+          "Joni Kemppainen",
+          "Niklas Raesalmi"
         ]
       },
       {
-        "title": "An AI Agent Execution Environment to Safeguard User Data",
-        "summary": "AI agents promise to serve as general-purpose personal assistants for their users, which requires them to have access to private user data (e.g., personal and financial information). This poses a seri",
-        "link": "http://arxiv.org/abs/2604.19657v1",
-        "date": "2026-04-21",
+        "title": "An Analysis of Attack Vectors Against FIDO2 Authentication",
+        "summary": "Phishing attacks remain one of the most prevalent threats to online security, with the Anti-Phishing Working Group reporting over 890,000 attacks in Q3 2025 alone. Traditional password-based authentic",
+        "link": "http://arxiv.org/abs/2604.20826v1",
+        "date": "2026-04-22",
         "authors": [
-          "Robert Stanley",
-          "Avi Verma",
-          "Lillian Tsai"
+          "Alexander Berladskyy",
+          "Andreas A\u00dfmuth"
         ]
       },
       {
-        "title": "Adding Compilation Metadata To Binaries To Make Disassembly Decidable",
-        "summary": "The binary executable format is the standard method for distributing and executing software. Yet, it is also as opaque a representation of software as can be. If the binary format were augmented with ",
-        "link": "http://arxiv.org/abs/2604.19628v1",
-        "date": "2026-04-21",
+        "title": "Synthesizing Multi-Agent Harnesses for Vulnerability Discovery",
+        "summary": "LLM agents have begun to find real security vulnerabilities that human auditors and automated fuzzers missed for decades, in source-available targets where the analyst can build and instrument the cod",
+        "link": "http://arxiv.org/abs/2604.20801v1",
+        "date": "2026-04-22",
         "authors": [
-          "Daniel Engel",
-          "Freek Verbeek",
-          "Pranav Kumar"
+          "Hanzhi Liu",
+          "Chaofan Shou",
+          "Xiaonan Liu"
         ]
       },
       {
-        "title": "Cyber Defense Benchmark: Agentic Threat Hunting Evaluation for LLMs in SecOps",
-        "summary": "We introduce the Cyber Defense Benchmark, a benchmark for measuring how well large language model (LLM) agents perform the core SOC analyst task of threat hunting: given a database of raw Windows even",
-        "link": "http://arxiv.org/abs/2604.19533v1",
-        "date": "2026-04-21",
+        "title": "Fresh Masking Makes NTT Pipelines Composable: Machine-Checked Proofs for Arithmetic Masking in PQC Hardware",
+        "summary": "Post-quantum cryptographic (PQC) accelerators for ML-KEM (FIPS 203) and ML-DSA (FIPS 204) rely on pipelined Number Theoretic Transform (NTT) stages over $\\mathbb{Z}_q$. Our prior work established stru",
+        "link": "http://arxiv.org/abs/2604.20793v1",
+        "date": "2026-04-22",
         "authors": [
-          "Alankrit Chona",
-          "Igor Kozlov",
-          "Ambuj Kumar"
+          "Ray Iskander",
+          "Khaled Kirah"
         ]
       },
       {
-        "title": "Evaluating LLM-Generated Obfuscated XSS Payloads for Machine Learning-Based Detection",
-        "summary": "Cross-site scripting (XSS) remains a persistent web security vulnerability, especially because obfuscation can change the surface form of a malicious payload while preserving its behavior. These trans",
-        "link": "http://arxiv.org/abs/2604.19526v1",
-        "date": "2026-04-21",
+        "title": "DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles",
+        "summary": "The Internet of Vehicles (IoV) is advancing modern transportation by improving safety, efficiency, and intelligence. However, the reliance on the Controller Area Network (CAN) introduces critical secu",
+        "link": "http://arxiv.org/abs/2604.20771v1",
+        "date": "2026-04-22",
         "authors": [
-          "Divyesh Gabbireddy",
-          "Suman Saha"
+          "Shahid Alam",
+          "Amina Jameel",
+          "Zahida Parveen"
         ]
       },
       {
-        "title": "When Graph Structure Becomes a Liability: A Critical Re-Evaluation of Graph Neural Networks for Bitcoin Fraud Detection under Temporal Distribution Shift",
-        "summary": "The consensus that GCN, GraphSAGE, GAT, and EvolveGCN outperform feature-only baselines on the Elliptic Bitcoin Dataset is widely cited but has not been rigorously stress-tested under a leakage-free e",
-        "link": "http://arxiv.org/abs/2604.19514v1",
-        "date": "2026-04-21",
+        "title": "CVEs With a CVSS Score Greater Than or Equal to 9",
+        "summary": "Critical vulnerabilities with Common Vulnerability Scoring System scores of 9.0 or higher pose severe risks to organisations' information systems. Timely detection and remediation are essential to min",
+        "link": "http://arxiv.org/abs/2604.20765v1",
+        "date": "2026-04-22",
         "authors": [
-          "Saket Maganti"
+          "Lena Sinterhauf",
+          "Andreas A\u00dfmuth",
+          "Roland Kaltefleiter"
         ]
       },
       {
-        "title": "Cyclic Equalizability Characterized by Parikh Vectors",
-        "summary": "Cyclic equalizability is a notion introduced by Shinagawa and Nuida in 2025, in the study of card-based cryptography. Informally, a collection of words is cyclically equalizable if, by inserting the s",
-        "link": "http://arxiv.org/abs/2604.19504v1",
-        "date": "2026-04-21",
+        "title": "Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing",
+        "summary": "Adversarial robustness evaluation underpins every claim of trustworthy ML deployment, yet the field suffers from fragmented protocols and undetected gradient masking. We make two contributions. (1) St",
+        "link": "http://arxiv.org/abs/2604.20704v1",
+        "date": "2026-04-22",
         "authors": [
-          "Sarunyu Thongjarast",
-          "Sarit Pasiphol",
-          "Suthee Ruangwises"
+          "Abhijit Talluri"
         ]
       },
       {
-        "title": "EvoPatch-IoT: Evolution-Aware Cross-Architecture Vulnerability Retrieval and Patch-State Profiling for BusyBox-Based IoT Firmware",
-        "summary": "BusyBox is one of the most widely reused userland components in Linux-based Internet-of-Things (IoT) firmware, yet its security assessment remains difficult because firmware images are frequently stri",
-        "link": "http://arxiv.org/abs/2604.19496v1",
-        "date": "2026-04-21",
+        "title": "SoK: The Next Frontier in AV Security: Systematizing Perception Attacks and the Emerging Threat of Multi-Sensor Fusion",
+        "summary": "Autonomous vehicles (AVs) increasingly rely on multi-sensor perception pipelines that combine data from cameras, lidar, radar, and other modalities to interpret the environment. This SoK systematizes ",
+        "link": "http://arxiv.org/abs/2604.20621v1",
+        "date": "2026-04-22",
         "authors": [
-          "Yinhao Xiao",
-          "Huixi Li",
-          "Yongluo Shen"
+          "Shahriar Rahman Khan",
+          "Tariqul Islam",
+          "Raiful Hasan"
         ]
       }
     ],
-    "updated": "2026-04-22T04:47:46.784078Z"
+    "updated": "2026-04-23T04:51:46.540861Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -279,6 +277,6 @@
         ]
       }
     ],
-    "updated": "2026-04-22T04:47:46.784078Z"
+    "updated": "2026-04-23T04:51:46.540861Z"
   }
 }
