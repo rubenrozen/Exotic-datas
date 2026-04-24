@@ -3,197 +3,200 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "SpeechParaling-Bench: A Comprehensive Benchmark for Paralinguistic-Aware Speech Generation",
-        "summary": "Paralinguistic cues are essential for natural human-computer interaction, yet their evaluation in Large Audio-Language Models (LALMs) remains limited by coarse feature coverage and the inherent subjec",
-        "link": "http://arxiv.org/abs/2604.20842v1",
-        "date": "2026-04-22",
+        "title": "Seeing Fast and Slow: Learning the Flow of Time in Videos",
+        "summary": "How can we tell whether a video has been sped up or slowed down? How can we generate videos at different speeds? Although videos have been central to modern computer vision research, little attention ",
+        "link": "http://arxiv.org/abs/2604.21931v1",
+        "date": "2026-04-23",
         "authors": [
-          "Ruohan Liu",
-          "Shukang Yin",
-          "Tao Wang"
+          "Yen-Siang Wu",
+          "Rundong Luo",
+          "Jingsen Zhu"
         ]
       },
       {
-        "title": "AVISE: Framework for Evaluating the Security of AI Systems",
-        "summary": "As artificial intelligence (AI) systems are increasingly deployed across critical domains, their security vulnerabilities pose growing risks of high-profile exploits and consequential system failures.",
-        "link": "http://arxiv.org/abs/2604.20833v1",
-        "date": "2026-04-22",
+        "title": "When Prompts Override Vision: Prompt-Induced Hallucinations in LVLMs",
+        "summary": "Despite impressive progress in capabilities of large vision-language models (LVLMs), these systems remain vulnerable to hallucinations, i.e., outputs that are not grounded in the visual input. Prior w",
+        "link": "http://arxiv.org/abs/2604.21911v1",
+        "date": "2026-04-23",
         "authors": [
-          "Mikko Lempinen",
-          "Joni Kemppainen",
-          "Niklas Raesalmi"
+          "Pegah Khayatan",
+          "Jayneel Parekh",
+          "Arnaud Dapogny"
         ]
       },
       {
-        "title": "FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels",
-        "summary": "Federated learning (FL) enables collaborative model training without sharing raw data; however, the presence of noisy labels across distributed clients can severely degrade the learning performance. I",
-        "link": "http://arxiv.org/abs/2604.20825v1",
-        "date": "2026-04-22",
+        "title": "From Research Question to Scientific Workflow: Leveraging Agentic AI for Science Automation",
+        "summary": "Scientific workflow systems automate execution -- scheduling, fault tolerance, resource management -- but not the semantic translation that precedes it. Scientists still manually convert research ques",
+        "link": "http://arxiv.org/abs/2604.21910v1",
+        "date": "2026-04-23",
         "authors": [
-          "Sina Gholami",
-          "Abdulmoneam Ali",
-          "Tania Haghighi"
+          "Bartosz Balis",
+          "Michal Orzechowski",
+          "Piotr Kica"
         ]
       },
       {
-        "title": "Convergent Evolution: How Different Language Models Learn Similar Number Representations",
-        "summary": "Language models trained on natural text learn to represent numbers using periodic features with dominant periods at $T=2, 5, 10$. In this paper, we identify a two-tiered hierarchy of these features: w",
-        "link": "http://arxiv.org/abs/2604.20817v1",
-        "date": "2026-04-22",
+        "title": "A Scale-Adaptive Framework for Joint Spatiotemporal Super-Resolution with Diffusion Models",
+        "summary": "Deep-learning video super-resolution has progressed rapidly, but climate applications typically super-resolve (increase resolution) either space or time, and joint spatiotemporal models are often desi",
+        "link": "http://arxiv.org/abs/2604.21903v1",
+        "date": "2026-04-23",
         "authors": [
-          "Deqing Fu",
-          "Tianyi Zhou",
-          "Mikhail Belkin"
+          "Max Defez",
+          "Filippo Quarenghi",
+          "Mathieu Vrac"
         ]
       },
       {
-        "title": "Diagnosing CFG Interpretation in LLMs",
-        "summary": "As LLMs are increasingly integrated into agentic systems, they must adhere to dynamically defined, machine-interpretable interfaces. We evaluate LLMs as in-context interpreters: given a novel context-",
-        "link": "http://arxiv.org/abs/2604.20811v1",
-        "date": "2026-04-22",
+        "title": "GiVA: Gradient-Informed Bases for Vector-Based Adaptation",
+        "summary": "As model sizes continue to grow, parameter-efficient fine-tuning has emerged as a powerful alternative to full fine-tuning. While LoRA is widely adopted among these methods, recent research has explor",
+        "link": "http://arxiv.org/abs/2604.21901v1",
+        "date": "2026-04-23",
         "authors": [
-          "Hanqi Li",
-          "Lu Chen",
-          "Kai Yu"
+          "Neeraj Gangwar",
+          "Rishabh Deshmukh",
+          "Michael Shavlovsky"
         ]
       },
       {
-        "title": "OMIBench: Benchmarking Olympiad-Level Multi-Image Reasoning in Large Vision-Language Model",
-        "summary": "Large vision-language models (LVLMs) have made substantial advances in reasoning tasks at the Olympiad level. Nevertheless, current Olympiad-level multimodal reasoning benchmarks for these models ofte",
-        "link": "http://arxiv.org/abs/2604.20806v1",
-        "date": "2026-04-22",
+        "title": "Nemobot Games: Crafting Strategic AI Gaming Agents for Interactive Learning with Large Language Models",
+        "summary": "This paper introduces a new paradigm for AI game programming, leveraging large language models (LLMs) to extend and operationalize Claude Shannon's taxonomy of game-playing machines. Central to this p",
+        "link": "http://arxiv.org/abs/2604.21896v1",
+        "date": "2026-04-23",
         "authors": [
-          "Qiguang Chen",
-          "Chengyu Luan",
-          "Jiajun Wu"
+          "Chee Wei Tan",
+          "Yuchen Wang",
+          "Shangxin Guo"
         ]
       },
       {
-        "title": "Relative Principals, Pluralistic Alignment, and the Structural Value Alignment Problem",
-        "summary": "The value alignment problem for artificial intelligence (AI) is often framed as a purely technical or normative challenge, sometimes focused on hypothetical future systems. I argue that the problem is",
-        "link": "http://arxiv.org/abs/2604.20805v1",
-        "date": "2026-04-22",
+        "title": "A Multi-Stage Warm-Start Deep Learning Framework for Unit Commitment",
+        "summary": "Maintaining instantaneous balance between electricity supply and demand is critical for reliability and grid instability. System operators achieve this through solving the task of Unit Commitment (UC)",
+        "link": "http://arxiv.org/abs/2604.21891v1",
+        "date": "2026-04-23",
         "authors": [
-          "Travis LaCroix"
+          "Muhy Eddin Za'ter",
+          "Anna Van Boven",
+          "Bri-Mathias Hodge"
         ]
       },
       {
-        "title": "Automatic Ontology Construction Using LLMs as an External Layer of Memory, Verification, and Planning for Hybrid Intelligent Systems",
-        "summary": "This paper presents a hybrid architecture for intelligent systems in which large language models (LLMs) are extended with an external ontological memory layer. Instead of relying solely on parametric ",
-        "link": "http://arxiv.org/abs/2604.20795v1",
-        "date": "2026-04-22",
+        "title": "TingIS: Real-time Risk Event Discovery from Noisy Customer Incidents at Enterprise Scale",
+        "summary": "Real-time detection and mitigation of technical anomalies are critical for large-scale cloud-native services, where even minutes of downtime can result in massive financial losses and diminished user ",
+        "link": "http://arxiv.org/abs/2604.21889v1",
+        "date": "2026-04-23",
         "authors": [
-          "Pavel Salovskii",
-          "Iuliia Gorshkova"
+          "Jun Wang",
+          "Ziyin Zhang",
+          "Rui Wang"
         ]
       }
     ],
-    "updated": "2026-04-23T04:51:46.540861Z"
+    "updated": "2026-04-24T04:55:57.801724Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-04-23T04:51:46.540861Z"
+    "updated": "2026-04-24T04:55:57.801724Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-04-23T04:51:46.540861Z"
+    "updated": "2026-04-24T04:55:57.801724Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-04-23T04:51:46.540861Z"
+    "updated": "2026-04-24T04:55:57.801724Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "AVISE: Framework for Evaluating the Security of AI Systems",
-        "summary": "As artificial intelligence (AI) systems are increasingly deployed across critical domains, their security vulnerabilities pose growing risks of high-profile exploits and consequential system failures.",
-        "link": "http://arxiv.org/abs/2604.20833v1",
-        "date": "2026-04-22",
+        "title": "CrossCommitVuln-Bench: A Dataset of Multi-Commit Python Vulnerabilities Invisible to Per-Commit Static Analysis",
+        "summary": "We present CrossCommitVuln-Bench, a curated benchmark of 15 real-world Python vulnerabilities (CVEs) in which the exploitable condition was introduced across multiple commits - each individually benig",
+        "link": "http://arxiv.org/abs/2604.21917v1",
+        "date": "2026-04-23",
         "authors": [
-          "Mikko Lempinen",
-          "Joni Kemppainen",
-          "Niklas Raesalmi"
+          "Arunabh Majumdar"
         ]
       },
       {
-        "title": "An Analysis of Attack Vectors Against FIDO2 Authentication",
-        "summary": "Phishing attacks remain one of the most prevalent threats to online security, with the Anti-Phishing Working Group reporting over 890,000 attacks in Q3 2025 alone. Traditional password-based authentic",
-        "link": "http://arxiv.org/abs/2604.20826v1",
-        "date": "2026-04-22",
+        "title": "Transient Turn Injection: Exposing Stateless Multi-Turn Vulnerabilities in Large Language Models",
+        "summary": "Large language models (LLMs) are increasingly integrated into sensitive workflows, raising the stakes for adversarial robustness and safety. This paper introduces Transient Turn Injection(TTI), a new ",
+        "link": "http://arxiv.org/abs/2604.21860v1",
+        "date": "2026-04-23",
         "authors": [
-          "Alexander Berladskyy",
-          "Andreas A\u00dfmuth"
+          "Naheed Rayhan",
+          "Sohely Jahan"
         ]
       },
       {
-        "title": "Synthesizing Multi-Agent Harnesses for Vulnerability Discovery",
-        "summary": "LLM agents have begun to find real security vulnerabilities that human auditors and automated fuzzers missed for decades, in source-available targets where the analyst can build and instrument the cod",
-        "link": "http://arxiv.org/abs/2604.20801v1",
-        "date": "2026-04-22",
-        "authors": [
-          "Hanzhi Liu",
-          "Chaofan Shou",
-          "Xiaonan Liu"
-        ]
-      },
-      {
-        "title": "Fresh Masking Makes NTT Pipelines Composable: Machine-Checked Proofs for Arithmetic Masking in PQC Hardware",
-        "summary": "Post-quantum cryptographic (PQC) accelerators for ML-KEM (FIPS 203) and ML-DSA (FIPS 204) rely on pipelined Number Theoretic Transform (NTT) stages over $\\mathbb{Z}_q$. Our prior work established stru",
-        "link": "http://arxiv.org/abs/2604.20793v1",
-        "date": "2026-04-22",
-        "authors": [
-          "Ray Iskander",
-          "Khaled Kirah"
-        ]
-      },
-      {
-        "title": "DAIRE: A lightweight AI model for real-time detection of Controller Area Network attacks in the Internet of Vehicles",
-        "summary": "The Internet of Vehicles (IoV) is advancing modern transportation by improving safety, efficiency, and intelligence. However, the reliance on the Controller Area Network (CAN) introduces critical secu",
-        "link": "http://arxiv.org/abs/2604.20771v1",
-        "date": "2026-04-22",
-        "authors": [
-          "Shahid Alam",
-          "Amina Jameel",
-          "Zahida Parveen"
-        ]
-      },
-      {
-        "title": "CVEs With a CVSS Score Greater Than or Equal to 9",
-        "summary": "Critical vulnerabilities with Common Vulnerability Scoring System scores of 9.0 or higher pose severe risks to organisations' information systems. Timely detection and remediation are essential to min",
-        "link": "http://arxiv.org/abs/2604.20765v1",
-        "date": "2026-04-22",
-        "authors": [
-          "Lena Sinterhauf",
-          "Andreas A\u00dfmuth",
-          "Roland Kaltefleiter"
-        ]
-      },
-      {
-        "title": "Auto-ART: Structured Literature Synthesis and Automated Adversarial Robustness Testing",
-        "summary": "Adversarial robustness evaluation underpins every claim of trustworthy ML deployment, yet the field suffers from fragmented protocols and undetected gradient masking. We make two contributions. (1) St",
-        "link": "http://arxiv.org/abs/2604.20704v1",
-        "date": "2026-04-22",
-        "authors": [
-          "Abhijit Talluri"
-        ]
-      },
-      {
-        "title": "SoK: The Next Frontier in AV Security: Systematizing Perception Attacks and the Emerging Threat of Multi-Sensor Fusion",
-        "summary": "Autonomous vehicles (AVs) increasingly rely on multi-sensor perception pipelines that combine data from cameras, lidar, radar, and other modalities to interpret the environment. This SoK systematizes ",
-        "link": "http://arxiv.org/abs/2604.20621v1",
-        "date": "2026-04-22",
+        "title": "Cross-Modal Phantom: Coordinated Camera-LiDAR Spoofing Against Multi-Sensor Fusion in Autonomous Vehicles",
+        "summary": "Autonomous Vehicles (AVs) increasingly depend on Multi-Sensor Fusion (MSF) to combine complementary modalities such as cameras and LiDAR for robust perception. While this redundancy is intended to saf",
+        "link": "http://arxiv.org/abs/2604.21841v1",
+        "date": "2026-04-23",
         "authors": [
           "Shahriar Rahman Khan",
-          "Tariqul Islam",
           "Raiful Hasan"
+        ]
+      },
+      {
+        "title": "TraceScope: Interactive URL Triage via Decoupled Checklist Adjudication",
+        "summary": "Modern phishing campaigns increasingly evade snapshot-based URL classifiers using interaction gates (e.g., checkbox/slider challenges), delayed content rendering, and logo-less credential harvesters. ",
+        "link": "http://arxiv.org/abs/2604.21840v1",
+        "date": "2026-04-23",
+        "authors": [
+          "Haolin Zhang",
+          "William Reber",
+          "Yuxuan Zhang"
+        ]
+      },
+      {
+        "title": "Black-Box Skill Stealing Attack from Proprietary LLM Agents: An Empirical Study",
+        "summary": "LLM agents increasingly rely on skills to encapsulate reusable capabilities via progressively disclosed instructions. High-quality skills inject expert knowledge into general-purpose models, improving",
+        "link": "http://arxiv.org/abs/2604.21829v1",
+        "date": "2026-04-23",
+        "authors": [
+          "Zihan Wang",
+          "Rui Zhang",
+          "Yu Liu"
+        ]
+      },
+      {
+        "title": "Adversarial Robustness of Near-Field Millimeter-Wave Imaging under Waveform-Domain Attacks",
+        "summary": "Near-field millimeter-wave (mmWave) imaging is widely deployed in safety-critical applications such as airport passenger screening, yet its own security remains largely unexplored. This paper presents",
+        "link": "http://arxiv.org/abs/2604.21774v1",
+        "date": "2026-04-23",
+        "authors": [
+          "Lhamo Dorje",
+          "Jordan Madden",
+          "Soamar Homsi"
+        ]
+      },
+      {
+        "title": "Stealthy Backdoor Attacks against LLMs Based on Natural Style Triggers",
+        "summary": "The growing application of large language models (LLMs) in safety-critical domains has raised urgent concerns about their security. Many recent studies have demonstrated the feasibility of backdoor at",
+        "link": "http://arxiv.org/abs/2604.21700v1",
+        "date": "2026-04-23",
+        "authors": [
+          "Jiali Wei",
+          "Ming Fan",
+          "Guoheng Sun"
+        ]
+      },
+      {
+        "title": "A Sociotechnical, Practitioner-Centered Approach to Technology Adoption in Cybersecurity Operations: An LLM Case",
+        "summary": "Technology for security operations centers (SOCs) has a storied history of slow adoption due to concerns about trust and reliability. These concerns are amplified with artificial intelligence, particu",
+        "link": "http://arxiv.org/abs/2604.21679v1",
+        "date": "2026-04-23",
+        "authors": [
+          "Francis Hahn",
+          "Mohd Mamoon",
+          "Alexandru G. Bardas"
         ]
       }
     ],
-    "updated": "2026-04-23T04:51:46.540861Z"
+    "updated": "2026-04-24T04:55:57.801724Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -277,6 +280,6 @@
         ]
       }
     ],
-    "updated": "2026-04-23T04:51:46.540861Z"
+    "updated": "2026-04-24T04:55:57.801724Z"
   }
 }
