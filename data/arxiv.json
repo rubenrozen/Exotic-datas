@@ -3,200 +3,200 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond",
-        "summary": "As AI systems move from generating text to accomplishing goals through sustained interaction, the ability to model environment dynamics becomes a central bottleneck. Agents that manipulate objects, na",
-        "link": "http://arxiv.org/abs/2604.22748v1",
-        "date": "2026-04-24",
+        "title": "Personalized Worked Example Generation from Student Code Submissions using Pattern-based Knowledge Components",
+        "summary": "Adaptive programming practice often relies on fixed libraries of worked examples and practice problems, which require substantial authoring effort and may not correspond well to the logical errors and",
+        "link": "http://arxiv.org/abs/2604.24758v1",
+        "date": "2026-04-27",
         "authors": [
-          "Meng Chu",
-          "Xuan Billy Zhang",
-          "Kevin Qinghong Lin"
+          "Griffin Pitts",
+          "Muntasir Hoq",
+          "Peter Brusilovsky"
         ]
       },
       {
-        "title": "An Undecidability Proof for the Plan Existence Problem",
-        "summary": "The plan existence problem asks, given a goal in the form of a formula in modal logic, an initial epistemic state (a pointed Kripke model), and a set of epistemic actions, whether there exists a seque",
-        "link": "http://arxiv.org/abs/2604.22736v1",
-        "date": "2026-04-24",
+        "title": "Learning to Think from Multiple Thinkers",
+        "summary": "We study learning with Chain-of-Thought (CoT) supervision from multiple thinkers, all of whom provide correct but possibly systematically different solutions, e.g., step-by-step solutions to math prob",
+        "link": "http://arxiv.org/abs/2604.24737v1",
+        "date": "2026-04-27",
         "authors": [
-          "Antonis Achilleos"
+          "Nirmit Joshi",
+          "Roey Magen",
+          "Nathan Srebro"
         ]
       },
       {
-        "title": "Aligning Dense Retrievers with LLM Utility via DistillationAligning Dense Retrievers with LLM Utility via Distillation",
-        "summary": "Dense vector retrieval is the practical backbone of Retrieval- Augmented Generation (RAG), but similarity search can suffer from precision limitations. Conversely, utility-based approaches leveraging ",
-        "link": "http://arxiv.org/abs/2604.22722v1",
-        "date": "2026-04-24",
+        "title": "Learning to Rotate: Temporal and Semantic Rotary Encoding for Sequential Modeling",
+        "summary": "Every Transformer architecture dedicates enormous capacity to learning rich representations in semantic embedding space -- yet the rotation manifold acted upon by Rotary Positional Embeddings (RoPE) h",
+        "link": "http://arxiv.org/abs/2604.24717v1",
+        "date": "2026-04-27",
         "authors": [
-          "Rajinder Sandhu",
-          "Di Mu",
-          "Cheng Chang"
+          "Hailing Cheng",
+          "Daqi Sun",
+          "Xinyu Lu"
         ]
       },
       {
-        "title": "CRAFT: Clustered Regression for Adaptive Filtering of Training data",
-        "summary": "Selecting a small, high-quality subset from a large corpus for fine-tuning is increasingly important as corpora grow to tens of millions of datapoints, making full fine-tuning expensive and often unne",
-        "link": "http://arxiv.org/abs/2604.22693v1",
-        "date": "2026-04-24",
+        "title": "Case-Specific Rubrics for Clinical AI Evaluation: Methodology, Validation, and LLM-Clinician Agreement Across 823 Encounters",
+        "summary": "Objective. Clinical AI documentation systems require evaluation methodologies that are clinically valid, economically viable, and sensitive to iterative changes. Methods requiring expert review per sc",
+        "link": "http://arxiv.org/abs/2604.24710v1",
+        "date": "2026-04-27",
         "authors": [
-          "Parthasarathi Panda",
-          "Asheswari Swain",
-          "Subhrakanta Panda"
+          "Aaryan Shah",
+          "Andrew Hines",
+          "Alexia Downs"
         ]
       },
       {
-        "title": "How Supply Chain Dependencies Complicate Bias Measurement and Accountability Attribution in AI Hiring Applications",
-        "summary": "The increasing adoption of AI systems in hiring has raised concerns about algorithmic bias and accountability, prompting regulatory responses including the EU AI Act, NYC Local Law 144, and Colorado's",
-        "link": "http://arxiv.org/abs/2604.22679v1",
-        "date": "2026-04-24",
+        "title": "Scalable Hyperparameter-Divergent Ensemble Training with Automatic Learning Rate Exploration for Large Models",
+        "summary": "Training large neural networks with data-parallel stochastic gradient descent allocates N GPU replicas to compute effectively identical updates -- a practice that leaves the rich space of learning rat",
+        "link": "http://arxiv.org/abs/2604.24708v1",
+        "date": "2026-04-27",
         "authors": [
-          "Gauri Sharma",
-          "Maryam Molamohammadi"
+          "Hailing Cheng",
+          "Tao Huang",
+          "Chen Zhu"
         ]
       },
       {
-        "title": "Rethinking XAI Evaluation: A Human-Centered Audit of Shapley Benchmarks in High-Stakes Settings",
-        "summary": "Shapley values are a cornerstone of explainable AI, yet their proliferation into competing formulations has created a fragmented landscape with little consensus on practical deployment. While theoreti",
-        "link": "http://arxiv.org/abs/2604.22662v1",
-        "date": "2026-04-24",
+        "title": "Defective Task Descriptions in LLM-Based Code Generation: Detection and Analysis",
+        "summary": "Large language models are widely used for code generation, yet they rely on an implicit assumption that the task descriptions are sufficiently detailed and well-formed. However, in practice, users may",
+        "link": "http://arxiv.org/abs/2604.24703v1",
+        "date": "2026-04-27",
         "authors": [
-          "In\u00eas Oliveira e Silva",
-          "S\u00e9rgio Jesus",
-          "Iker Perez"
+          "Amal Akli",
+          "Mike Papadakis",
+          "Maxime Cordy"
         ]
       },
       {
-        "title": "From Natural Language to Verified Code: Toward AI Assisted Problem-to-Code Generation with Dafny-Based Formal Verification",
-        "summary": "Large Language Models (LLMs) show promise in automated software engineering, yet their guarantee of correctness is frequently undermined by erroneous or hallucinated code. To enforce model honesty, fo",
-        "link": "http://arxiv.org/abs/2604.22601v1",
-        "date": "2026-04-24",
+        "title": "Green Shielding: A User-Centric Approach Towards Trustworthy AI",
+        "summary": "Large language models (LLMs) are increasingly deployed, yet their outputs can be highly sensitive to routine, non-adversarial variation in how users phrase queries, a gap not well addressed by existin",
+        "link": "http://arxiv.org/abs/2604.24700v1",
+        "date": "2026-04-27",
         "authors": [
-          "Md Erfan",
-          "Md Kamal Hossain Chowdhury",
-          "Ahmed Ryan"
+          "Aaron J. Li",
+          "Nicolas Sanchez",
+          "Hao Huang"
         ]
       },
       {
-        "title": "Rethinking Math Reasoning Evaluation: A Robust LLM-as-a-Judge Framework Beyond Symbolic Rigidity",
-        "summary": "Recent advancements in large language models have led to significant improvements across various tasks, including mathematical reasoning, which is used to assess models' intelligence in logical reason",
-        "link": "http://arxiv.org/abs/2604.22597v1",
-        "date": "2026-04-24",
+        "title": "Can Current Agents Close the Discovery-to-Application Gap? A Case Study in Minecraft",
+        "summary": "Discovering causal regularities and applying them to build functional systems--the discovery-to-application loop--is a hallmark of general intelligence, yet evaluating this capacity has been hindered ",
+        "link": "http://arxiv.org/abs/2604.24697v1",
+        "date": "2026-04-27",
         "authors": [
-          "Erez Yosef",
-          "Oron Anschel",
-          "Shunit Haviv Hakimi"
+          "Zhou Ziheng",
+          "Huacong Tang",
+          "Jinyuan Zhang"
         ]
       }
     ],
-    "updated": "2026-04-27T05:26:17.153686Z"
+    "updated": "2026-04-28T05:32:27.512491Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-04-27T05:26:17.153686Z"
+    "updated": "2026-04-28T05:32:27.512491Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-04-27T05:26:17.153686Z"
+    "updated": "2026-04-28T05:32:27.512491Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-04-27T05:26:17.153686Z"
+    "updated": "2026-04-28T05:32:27.512491Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Adversarial Malware Generation in Linux ELF Binaries via Semantic-Preserving Transformations",
-        "summary": "Malware development and detection have undergone significant changes in recent years as modern concepts, such as machine learning, have been used for both adversarial attacks and defense. Despite inte",
-        "link": "http://arxiv.org/abs/2604.22639v1",
-        "date": "2026-04-24",
+        "title": "Profiling Resilient to Change in Probe Position",
+        "summary": "Side Channel Analysis (SCA) relaxes the black-box assumption of conventional cryptanalysis by incorporating physical measurements acquired during cryptographic operations. Electro-magnetic (EM) emissi",
+        "link": "http://arxiv.org/abs/2604.24701v1",
+        "date": "2026-04-27",
         "authors": [
-          "Luk\u00e1\u0161 Hrdonka",
-          "Martin Jure\u010dek"
+          "Elie Bursztein",
+          "Michael Gruber",
+          "Karel Kr\u00e1l"
         ]
       },
       {
-        "title": "Detecting Concept Drift in Evolving Malware Families Using Rule-Based Classifier Representations",
-        "summary": "This work proposes a structural approach to concept drift detection in malware classification using decision tree rulesets. Classifiers are trained across temporal windows on the EMBER2024 dataset, an",
-        "link": "http://arxiv.org/abs/2604.22629v1",
-        "date": "2026-04-24",
+        "title": "Machine-Checked Cardinality Bounds for Masked Barrett Reduction: A 1-Bit Side-Channel Leakage Barrier in Post-Quantum Cryptographic Hardware",
+        "summary": "Barrett reduction is the nonlinear core of every practical NTT-based post-quantum cryptography implementation. Existing composition frameworks (ISW, t-SNI, PINI, DOM) address Boolean masking over GF(2",
+        "link": "http://arxiv.org/abs/2604.24670v1",
+        "date": "2026-04-27",
         "authors": [
-          "Tom\u00e1\u0161 Kaln\u00fd",
-          "Martin Jure\u010dek",
-          "Mark Stamp"
+          "Ray Iskander",
+          "Khaled Kirah"
         ]
       },
       {
-        "title": "PASS: A Provenanced Access Subaccount System for Blockchain Wallets",
-        "summary": "Blockchain wallets conventionally follow an ownership model where possession of a private key grants unilateral control. However, this assumption is brittle for emerging settings such as AI agent wall",
-        "link": "http://arxiv.org/abs/2604.22602v1",
-        "date": "2026-04-24",
+        "title": "AgentWard: A Lifecycle Security Architecture for Autonomous AI Agents",
+        "summary": "Autonomous AI agents extend large language models into full runtime systems that load skills, ingest external content, maintain memory, plan multi-step actions, and invoke privileged tools. In such sy",
+        "link": "http://arxiv.org/abs/2604.24657v1",
+        "date": "2026-04-27",
         "authors": [
-          "Jay Yu",
-          "Shunfan Zhou",
-          "Hang Yin"
+          "Yixiang Zhang",
+          "Xinhao Deng",
+          "Jiaqing Wu"
         ]
       },
       {
-        "title": "Adversarial Co-Evolution of Malware and Detection Models: A Bilevel Optimization Perspective",
-        "summary": "Machine learning-based malware detectors are increasingly vulnerable to adversarial examples. Traditional defenses, such as one-shot adversarial training, often fail against adaptive attackers who use",
-        "link": "http://arxiv.org/abs/2604.22569v1",
-        "date": "2026-04-24",
+        "title": "ARCANE: Cross-Campaign Attacker Re-identification via Passive Beacon Telemetry -- A Bayesian Network Framework for Longitudinal Cyber Attribution",
+        "summary": "Current cyber attribution approaches typically operate on a per-incident basis, leaving open whether aggregating evidence across campaigns improves adversary identification. We investigate whether cro",
+        "link": "http://arxiv.org/abs/2604.24644v1",
+        "date": "2026-04-27",
         "authors": [
-          "Olha Jure\u010dkov\u00e1",
-          "Martin Jure\u010dek",
-          "Matou\u0161 Koz\u00e1k"
+          "Abraham Itzhak Weinberg"
         ]
       },
       {
-        "title": "ArmSSL: Adversarial Robust Black-Box Watermarking for Self-Supervised Learning Pre-trained Encoders",
-        "summary": "Self-supervised learning (SSL) encoders are invaluable intellectual property (IP). However, no existing SSL watermarking for IP protection can concurrently satisfy the following two practical requirem",
-        "link": "http://arxiv.org/abs/2604.22550v1",
-        "date": "2026-04-24",
+        "title": "DETOUR: A Practical Backdoor Attack against Object Detection",
+        "summary": "Object detection (OD) is critical to real-world vision systems, yet existing backdoor attacks on detection transformers (DETRs) for OD tasks rely on patch-wise triggers optimized at fixed locations wi",
+        "link": "http://arxiv.org/abs/2604.24599v1",
+        "date": "2026-04-27",
         "authors": [
-          "Yongqi Jiang",
-          "Yansong Gao",
-          "Boyu Kuang"
+          "Dazhuang Liu",
+          "Yanqi Qiao",
+          "Rui Wang"
         ]
       },
       {
-        "title": "Information-Theoretic Authenticated PIR: From PIR-RV To APIR",
-        "summary": "Private Information Retrieval (PIR) allows clients to retrieve database entries without leaking retrieval indices, yet malicious servers seriously compromise retrieval correctness. Existing Authentica",
-        "link": "http://arxiv.org/abs/2604.22505v1",
-        "date": "2026-04-24",
+        "title": "Layerwise Convergence Fingerprints for Runtime Misbehavior Detection in Large Language Models",
+        "summary": "Large language models deployed at runtime can misbehave in ways that clean-data validation cannot anticipate: training-time backdoors lie dormant until triggered, jailbreaks subvert safety alignment, ",
+        "link": "http://arxiv.org/abs/2604.24542v1",
+        "date": "2026-04-27",
         "authors": [
-          "Pengzhen Ke",
-          "Yuxuan Qin",
-          "Liang Feng Zhang"
+          "Nay Myat Min",
+          "Long H. Pham",
+          "Jun Sun"
         ]
       },
       {
-        "title": "SSG: Logit-Balanced Vocabulary Partitioning for LLM Watermarking",
-        "summary": "Watermarking has emerged as a promising technique for tracing the authorship of content generated by large language models (LLMs). Among existing approaches, the KGW scheme is particularly attractive ",
-        "link": "http://arxiv.org/abs/2604.22438v1",
-        "date": "2026-04-24",
+        "title": "GAMMAF: A Common Framework for Graph-Based Anomaly Monitoring Benchmarking in LLM Multi-Agent Systems",
+        "summary": "The rapid integration of Large Language Models (LLMs) into Multi-Agent Systems (MAS) has significantly enhanced their collaborative problem-solving capabilities, but it has also expanded their attack ",
+        "link": "http://arxiv.org/abs/2604.24477v1",
+        "date": "2026-04-27",
         "authors": [
-          "Chenxi Gu",
-          "Xiaoning Du",
-          "John Grundy"
+          "Pablo Mateo-Torrej\u00f3n",
+          "Alfonso S\u00e1nchez-Maci\u00e1n"
         ]
       },
       {
-        "title": "Horizontal SCA Attacks on Binary kP Algorithms using Chevallier-Mames Atomic Blocks",
-        "summary": "Scalar multiplication kP is the operation most frequently targeted in Elliptic Curve (EC) cryptosystems. To protect against single-trace Side-Channel Analysis (SCA) attacks, the atomicity principle an",
-        "link": "http://arxiv.org/abs/2604.22429v1",
-        "date": "2026-04-24",
+        "title": "A Survey on Split Learning for LLM Fine-Tuning: Models, Systems, and Privacy Optimizations",
+        "summary": "Fine-tuning unlocks large language models (LLMs) for specialized applications, but its high computational cost often puts it out of reach for resource-constrained organizations. While cloud platforms ",
+        "link": "http://arxiv.org/abs/2604.24468v1",
+        "date": "2026-04-27",
         "authors": [
-          "Gerald Isheanesu Matungamire",
-          "Alkistis Aikaterini Sigourou",
-          "Gerrit Schrock"
+          "Zihan Liu",
+          "Yizhen Wang",
+          "Rui Wang"
         ]
       }
     ],
-    "updated": "2026-04-27T05:26:17.153686Z"
+    "updated": "2026-04-28T05:32:27.512491Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -280,6 +280,6 @@
         ]
       }
     ],
-    "updated": "2026-04-27T05:26:17.153686Z"
+    "updated": "2026-04-28T05:32:27.512491Z"
   }
 }
