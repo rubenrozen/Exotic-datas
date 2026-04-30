@@ -3,193 +3,200 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Recursive Multi-Agent Systems",
-        "summary": "Recursive or looped language models have recently emerged as a new scaling axis by iteratively refining the same model computation over latent states to deepen reasoning. We extend such scaling princi",
-        "link": "http://arxiv.org/abs/2604.25917v1",
-        "date": "2026-04-28",
+        "title": "Turning the TIDE: Cross-Architecture Distillation for Diffusion Large Language Models",
+        "summary": "Diffusion large language models (dLLMs) offer parallel decoding and bidirectional context, but state-of-the-art dLLMs require billions of parameters for competitive performance. While existing distill",
+        "link": "http://arxiv.org/abs/2604.26951v1",
+        "date": "2026-04-29",
         "authors": [
-          "Xiyuan Yang",
-          "Jiaru Zou",
-          "Rui Pan"
+          "Gongbo Zhang",
+          "Wen Wang",
+          "Ye Tian"
         ]
       },
       {
-        "title": "How Fast Should a Model Commit to Supervision? Training Reasoning Models on the Tsallis Loss Continuum",
-        "summary": "Adapting reasoning models to new tasks during post-training with only output-level supervision stalls under reinforcement learning from verifiable rewards (RLVR) when the initial success probability $",
-        "link": "http://arxiv.org/abs/2604.25907v1",
-        "date": "2026-04-28",
+        "title": "Causal Learning with Neural Assemblies",
+        "summary": "Can Neural Assemblies -- groups of neurons that fire together and strengthen through co-activation -- learn the direction of causal influence between variables? While established as a computationally ",
+        "link": "http://arxiv.org/abs/2604.26919v1",
+        "date": "2026-04-29",
         "authors": [
-          "Chu-Cheng Lin",
-          "Eugene Ie"
+          "Evangelia Kopadi",
+          "Dimitris Kalles"
         ]
       },
       {
-        "title": "Toward a Functional Geometric Algebra for Natural Language Semantics",
-        "summary": "Distributional and neural approaches to natural language semantics have been built almost exclusively on conventional linear algebra: vectors, matrices, tensors, and the operations that accompany them",
-        "link": "http://arxiv.org/abs/2604.25902v1",
-        "date": "2026-04-28",
+        "title": "ClawGym: A Scalable Framework for Building Effective Claw Agents",
+        "summary": "Claw-style environments support multi-step workflows over local files, tools, and persistent workspace states. However, scalable development around these environments remains constrained by the absenc",
+        "link": "http://arxiv.org/abs/2604.26904v1",
+        "date": "2026-04-29",
         "authors": [
-          "James Pustejovsky"
+          "Fei Bai",
+          "Huatong Song",
+          "Shuang Sun"
         ]
       },
       {
-        "title": "TSN-Affinity: Similarity-Driven Parameter Reuse for Continual Offline Reinforcement Learning",
-        "summary": "Continual offline reinforcement learning (CORL) aims to learn a sequence of tasks from datasets collected over time while preserving performance on previously learned tasks. This setting corresponds t",
-        "link": "http://arxiv.org/abs/2604.25898v1",
-        "date": "2026-04-28",
+        "title": "Recent Advances in mm-Wave and Sub-THz/THz Oscillators for FutureG Technologies",
+        "summary": "This paper provides a concise yet comprehensive review of recent advancements in millimeter-wave (mm-wave) oscillators below 100 GHz and sub-terahertz (sub-THz/THz) oscillators above 100 GHz for next-",
+        "link": "http://arxiv.org/abs/2604.26903v1",
+        "date": "2026-04-29",
         "authors": [
-          "Dominik \u017burek",
-          "Kamil Faber",
-          "Marcin Pietron"
+          "Baktash Behmanesh",
+          "Ahmad Rezvanitabar"
         ]
       },
       {
-        "title": "Three Models of RLHF Annotation: Extension, Evidence, and Authority",
-        "summary": "Preference-based alignment methods, most prominently Reinforcement Learning with Human Feedback (RLHF), use the judgments of human annotators to shape large language model behaviour. However, the norm",
-        "link": "http://arxiv.org/abs/2604.25895v1",
-        "date": "2026-04-28",
+        "title": "Resume-ing Control: (Mis)Perceptions of Agency Around GenAI Use in Recruiting Workflows",
+        "summary": "When generative AI (genAI) systems are used in high-stakes decision-making, its recommended role is to aid, rather than replace, human decision-making. However, there is little empirical exploration o",
+        "link": "http://arxiv.org/abs/2604.26851v1",
+        "date": "2026-04-29",
         "authors": [
-          "Steve Coyne"
+          "Sajel Surati",
+          "Rosanna Bellini",
+          "Emily Black"
         ]
       },
       {
-        "title": "Conditional misalignment: common interventions can hide emergent misalignment behind contextual triggers",
-        "summary": "Finetuning a language model can lead to emergent misalignment (EM) [Betley et al., 2025b]. Models trained on a narrow distribution of misaligned behavior generalize to more egregious behaviors when te",
-        "link": "http://arxiv.org/abs/2604.25891v1",
-        "date": "2026-04-28",
+        "title": "Language Diffusion Models are Associative Memories Capable of Retrieving Unseen Data",
+        "summary": "When do language diffusion models memorize their training data, and how to quantitatively assess their true generative regime? We address these questions by showing that Uniform-based Discrete Diffusi",
+        "link": "http://arxiv.org/abs/2604.26841v1",
+        "date": "2026-04-29",
         "authors": [
-          "Jan Dubi\u0144ski",
-          "Jan Betley",
-          "Anna Sztyber-Betley"
+          "Bao Pham",
+          "Mohammed J. Zaki",
+          "Luca Ambrogioni"
         ]
       },
       {
-        "title": "No Pedestrian Left Behind: Real-Time Detection and Tracking of Vulnerable Road Users for Adaptive Traffic Signal Control",
-        "summary": "Current pedestrian crossing signals operate on fixed timing without adjustment to pedestrian behavior, which can leave vulnerable road users (VRUs) such as the elderly, disabled, or distracted pedestr",
-        "link": "http://arxiv.org/abs/2604.25887v1",
-        "date": "2026-04-28",
+        "title": "HalluCiteChecker: A Lightweight Toolkit for Hallucinated Citation Detection and Verification in the Era of AI Scientists",
+        "summary": "We introduce HalluCiteChecker, a toolkit for detecting and verifying hallucinated citations in scientific papers. While AI assistant technologies have transformed the academic writing process, includi",
+        "link": "http://arxiv.org/abs/2604.26835v1",
+        "date": "2026-04-29",
         "authors": [
-          "Anas Gamal Aly",
-          "Hala ElAarag"
+          "Yusuke Sakai",
+          "Hidetaka Kamigaito",
+          "Taro Watanabe"
         ]
       },
       {
-        "title": "When Errors Can Be Beneficial: A Categorization of Imperfect Rewards for Policy Gradient",
-        "summary": "Training language models via reinforcement learning often relies on imperfect proxy rewards, since ground truth rewards that precisely define the intended behavior are rarely available. Standard metri",
-        "link": "http://arxiv.org/abs/2604.25872v1",
-        "date": "2026-04-28",
+        "title": "Rule-based High-Level Coaching for Goal-Conditioned Reinforcement Learning in Search-and-Rescue UAV Missions Under Limited-Simulation Training",
+        "summary": "This paper presents a hierarchical decision-making framework for unmanned aerial vehicle (UAV) missions motivated by search-and-rescue (SAR) scenarios under limited simulation training. The framework ",
+        "link": "http://arxiv.org/abs/2604.26833v1",
+        "date": "2026-04-29",
         "authors": [
-          "Shuning Shang",
-          "Hubert Strauss",
-          "Stanley Wei"
+          "Mahya Ramezani",
+          "Holger Voos"
         ]
       }
     ],
-    "updated": "2026-04-29T05:28:11.528678Z"
+    "updated": "2026-04-30T05:32:22.624261Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-04-29T05:28:11.528678Z"
+    "updated": "2026-04-30T05:32:22.624261Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-04-29T05:28:11.528678Z"
+    "updated": "2026-04-30T05:32:22.624261Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-04-29T05:28:11.528678Z"
+    "updated": "2026-04-30T05:32:22.624261Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Credit Limits beyond Full Collateralization in Decentralized Micropayments: Incentive Conditions",
-        "summary": "In decentralized non-custodial micropayments, the central challenge is not whether payments can be executed directly, but under what conditions such systems can offer credit limits without requiring f",
-        "link": "http://arxiv.org/abs/2604.25913v1",
-        "date": "2026-04-28",
+        "title": "Catching the Fly: Practical Challenges in Making Blockchain FlyClient Real",
+        "summary": "FlyClient is a lightweight blockchain verification protocol that enables proof-of-work validation using minimal data, making it ideal for resource-constrained environments like mobile wallets, Interne",
+        "link": "http://arxiv.org/abs/2604.26736v1",
+        "date": "2026-04-29",
         "authors": [
-          "Chien-Chih Chen",
-          "Wojciech Golab"
+          "Pericle Perazzo",
+          "Dario Capecchi"
         ]
       },
       {
-        "title": "Conditional misalignment: common interventions can hide emergent misalignment behind contextual triggers",
-        "summary": "Finetuning a language model can lead to emergent misalignment (EM) [Betley et al., 2025b]. Models trained on a narrow distribution of misaligned behavior generalize to more egregious behaviors when te",
-        "link": "http://arxiv.org/abs/2604.25891v1",
-        "date": "2026-04-28",
+        "title": "Preventing Distinguishability between Multiplication and Squaring Operations",
+        "summary": "Scalar multiplication kP is a critical operation in Elliptic Curve Cryptosystems (ECC), often targeted by Side-Channel Analysis (SCA). Despite strategies based on atomic patterns to enhance security, ",
+        "link": "http://arxiv.org/abs/2604.26536v1",
+        "date": "2026-04-29",
         "authors": [
-          "Jan Dubi\u0144ski",
-          "Jan Betley",
-          "Anna Sztyber-Betley"
+          "Alkistis Aikaterini Sigourou",
+          "Zoya Dyka",
+          "Peter Langendoerfer"
         ]
       },
       {
-        "title": "Prime-Field PINI: Machine-Checked Composition Theorems for Post-Quantum NTT Masking",
-        "summary": "This is Paper 6 of a series of formally-verified analyses of masked NTT hardware for post-quantum cryptography; Paper 1 [1] established structural dependency analysis of the QANARY platform, and Paper",
-        "link": "http://arxiv.org/abs/2604.25878v1",
-        "date": "2026-04-28",
+        "title": "PRAG End-to-End Privacy-Preserving Retrieval-Augmented Generation",
+        "summary": "Retrieval-Augmented Generation (RAG) is essential for enhancing Large Language Models (LLMs) with external knowledge, but its reliance on cloud environments exposes sensitive data to privacy risks. Ex",
+        "link": "http://arxiv.org/abs/2604.26525v1",
+        "date": "2026-04-29",
         "authors": [
-          "Ray Iskander",
-          "Khaled Kirah"
+          "Zhijun Li",
+          "Minghui Xu",
+          "Huayi Qi"
         ]
       },
       {
-        "title": "Towards Agentic Investigation of Security Alerts",
-        "summary": "Security analysts are overwhelmed by the volume of alerts and the low context provided by many detection systems. Early-stage investigations typically require manual correlation across multiple log so",
-        "link": "http://arxiv.org/abs/2604.25846v1",
-        "date": "2026-04-28",
+        "title": "Tatemae: Detecting Alignment Faking via Tool Selection in LLMs",
+        "summary": "Alignment faking (AF) occurs when an LLM strategically complies with training objectives to avoid value modification, reverting to prior preferences once monitoring is lifted. Current detection method",
+        "link": "http://arxiv.org/abs/2604.26511v1",
+        "date": "2026-04-29",
         "authors": [
-          "Even Eilertsen",
-          "Vasileios Mavroeidis",
-          "Gudmund Grov"
+          "Matteo Leonesi",
+          "Francesco Belardinelli",
+          "Flavio Corradini"
         ]
       },
       {
-        "title": "Threat-Oriented Digital Twinning for Security Evaluation of Autonomous Platforms",
-        "summary": "Open, unclassified research on secure autonomy is constrained by limited access to operational platforms, contested communications infrastructure, and representative adversarial test conditions. This ",
-        "link": "http://arxiv.org/abs/2604.25757v1",
-        "date": "2026-04-28",
+        "title": "SafeReview: Defending LLM-based Review Systems Against Adversarial Hidden Prompts",
+        "summary": "As Large Language Models (LLMs) are increasingly integrated into academic peer review, their vulnerability to adversarial prompts -- adversarial instructions embedded in submissions to manipulate outc",
+        "link": "http://arxiv.org/abs/2604.26506v1",
+        "date": "2026-04-29",
         "authors": [
-          "Thomas J. Neubert",
-          "Laxima Niure Kandel",
-          "Berker Pek\u00f6z"
+          "Yuan Xin",
+          "Yixuan Weng",
+          "Minjun Zhu"
         ]
       },
       {
-        "title": "The Surprising Universality of LLM Outputs: A Real-Time Verification Primitive",
-        "summary": "We report a striking statistical regularity in frontier LLM outputs that enables a CPU-only scoring primitive running at 2.6 microseconds per token, with estimated latency up to 100,000$\\times$ (five ",
-        "link": "http://arxiv.org/abs/2604.25634v1",
-        "date": "2026-04-28",
+        "title": "Quantamination: Dynamic Quantization Leaks Your Data Across the Batch",
+        "summary": "Dynamic quantization emerged as a practical approach to increase the utilization and efficiency of the machine learning serving flow. Unlike static quantization, which applies quantization offline, dy",
+        "link": "http://arxiv.org/abs/2604.26505v1",
+        "date": "2026-04-29",
         "authors": [
-          "Alex Bogdan",
-          "Adrian de Valois-Franklin"
+          "Hanna Foerster",
+          "Ilia Shumailov",
+          "Cheng Zhang"
         ]
       },
       {
-        "title": "SnapGuard: Lightweight Prompt Injection Detection for Screenshot-Based Web Agents",
-        "summary": "Web agents have emerged as an effective paradigm for automating interactions with complex web environments, yet remain vulnerable to prompt injection attacks that embed malicious instructions into web",
-        "link": "http://arxiv.org/abs/2604.25562v1",
-        "date": "2026-04-28",
+        "title": "Beyond Code Reasoning: A Specification-Anchored Audit Framework for Expert-Augmented Security Verification",
+        "summary": "Security-critical software is routinely audited by tools that reason about vulnerabilities as repository-local code patterns. Yet specification-governed systems -- protocol stacks, consensus implement",
+        "link": "http://arxiv.org/abs/2604.26495v1",
+        "date": "2026-04-29",
         "authors": [
-          "Mengyao Du",
-          "Han Fang",
-          "Haokai Ma"
+          "Masato Kamba",
+          "Hirotake Murakami",
+          "Akiyoshi Sannai"
         ]
       },
       {
-        "title": "From CRUD to Autonomous Agents: Formal Validation and Zero-Trust Security for Semantic Gateways in AI-Native Enterprise Systems",
-        "summary": "Enterprise software engineering is shifting away from deterministic CRUD/REST architectures toward AI-native systems where large language models act as cognitive orchestrators. This transition introdu",
-        "link": "http://arxiv.org/abs/2604.25555v1",
-        "date": "2026-04-28",
+        "title": "Differentially Private Contrastive Learning via Bounding Group-level Contribution",
+        "summary": "Differentially private (DP) contrastive learning aims to learn general-purpose representations from sensitive data, alleviating the privacy leakage concerns of organizations deploying or sharing embed",
+        "link": "http://arxiv.org/abs/2604.26467v1",
+        "date": "2026-04-29",
         "authors": [
-          "Ignacio Peyrano"
+          "Kecen Li",
+          "Chen Gong",
+          "Zinan Lin"
         ]
       }
     ],
-    "updated": "2026-04-29T05:28:11.528678Z"
+    "updated": "2026-04-30T05:32:22.624261Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -273,6 +280,6 @@
         ]
       }
     ],
-    "updated": "2026-04-29T05:28:11.528678Z"
+    "updated": "2026-04-30T05:32:22.624261Z"
   }
 }
