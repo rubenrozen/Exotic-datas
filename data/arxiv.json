@@ -3,200 +3,200 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Turning the TIDE: Cross-Architecture Distillation for Diffusion Large Language Models",
-        "summary": "Diffusion large language models (dLLMs) offer parallel decoding and bidirectional context, but state-of-the-art dLLMs require billions of parameters for competitive performance. While existing distill",
-        "link": "http://arxiv.org/abs/2604.26951v1",
-        "date": "2026-04-29",
+        "title": "Computing Equilibrium beyond Unilateral Deviation",
+        "summary": "Most familiar equilibrium concepts, such as Nash and correlated equilibrium, guarantee only that no single player can improve their utility by deviating unilaterally. They offer no guarantees against ",
+        "link": "http://arxiv.org/abs/2604.28186v1",
+        "date": "2026-04-30",
         "authors": [
-          "Gongbo Zhang",
-          "Wen Wang",
-          "Ye Tian"
+          "Mingyang Liu",
+          "Gabriele Farina",
+          "Asuman Ozdaglar"
         ]
       },
       {
-        "title": "Causal Learning with Neural Assemblies",
-        "summary": "Can Neural Assemblies -- groups of neurons that fire together and strengthen through co-activation -- learn the direction of causal influence between variables? While established as a computationally ",
-        "link": "http://arxiv.org/abs/2604.26919v1",
-        "date": "2026-04-29",
+        "title": "Synthetic Computers at Scale for Long-Horizon Productivity Simulation",
+        "summary": "Realistic long-horizon productivity work is strongly conditioned on user-specific computer environments, where much of the work context is stored and organized through directory structures and content",
+        "link": "http://arxiv.org/abs/2604.28181v1",
+        "date": "2026-04-30",
         "authors": [
-          "Evangelia Kopadi",
-          "Dimitris Kalles"
+          "Tao Ge",
+          "Baolin Peng",
+          "Hao Cheng"
         ]
       },
       {
-        "title": "ClawGym: A Scalable Framework for Building Effective Claw Agents",
-        "summary": "Claw-style environments support multi-step workflows over local files, tools, and persistent workspace states. However, scalable development around these environments remains constrained by the absenc",
-        "link": "http://arxiv.org/abs/2604.26904v1",
-        "date": "2026-04-29",
+        "title": "LLM as Clinical Graph Structure Refiner: Enhancing Representation Learning in EEG Seizure Diagnosis",
+        "summary": "Electroencephalogram (EEG) signals are vital for automated seizure detection, but their inherent noise makes robust representation learning challenging. Existing graph construction methods, whether co",
+        "link": "http://arxiv.org/abs/2604.28178v1",
+        "date": "2026-04-30",
         "authors": [
-          "Fei Bai",
-          "Huatong Song",
-          "Shuang Sun"
+          "Lincan Li",
+          "Zheng Chen",
+          "Yushun Dong"
         ]
       },
       {
-        "title": "Recent Advances in mm-Wave and Sub-THz/THz Oscillators for FutureG Technologies",
-        "summary": "This paper provides a concise yet comprehensive review of recent advancements in millimeter-wave (mm-wave) oscillators below 100 GHz and sub-terahertz (sub-THz/THz) oscillators above 100 GHz for next-",
-        "link": "http://arxiv.org/abs/2604.26903v1",
-        "date": "2026-04-29",
+        "title": "PhyCo: Learning Controllable Physical Priors for Generative Motion",
+        "summary": "Modern video diffusion models excel at appearance synthesis but still struggle with physical consistency: objects drift, collisions lack realistic rebound, and material responses seldom match their un",
+        "link": "http://arxiv.org/abs/2604.28169v1",
+        "date": "2026-04-30",
         "authors": [
-          "Baktash Behmanesh",
-          "Ahmad Rezvanitabar"
+          "Sriram Narayanan",
+          "Ziyu Jiang",
+          "Srinivasa Narasimhan"
         ]
       },
       {
-        "title": "Resume-ing Control: (Mis)Perceptions of Agency Around GenAI Use in Recruiting Workflows",
-        "summary": "When generative AI (genAI) systems are used in high-stakes decision-making, its recommended role is to aid, rather than replace, human decision-making. However, there is little empirical exploration o",
-        "link": "http://arxiv.org/abs/2604.26851v1",
-        "date": "2026-04-29",
+        "title": "Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists",
+        "summary": "Existing research infrastructure is fundamentally document-centric, providing citation links between papers but lacking explicit representations of methodological evolution. In particular, it does not",
+        "link": "http://arxiv.org/abs/2604.28158v1",
+        "date": "2026-04-30",
         "authors": [
-          "Sajel Surati",
-          "Rosanna Bellini",
-          "Emily Black"
+          "Yujun Wu",
+          "Dongxu Zhang",
+          "Xinchen Li"
         ]
       },
       {
-        "title": "Language Diffusion Models are Associative Memories Capable of Retrieving Unseen Data",
-        "summary": "When do language diffusion models memorize their training data, and how to quantitatively assess their true generative regime? We address these questions by showing that Uniform-based Discrete Diffusi",
-        "link": "http://arxiv.org/abs/2604.26841v1",
-        "date": "2026-04-29",
+        "title": "FlexiTac: A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic Systems",
+        "summary": "We present FlexiTac, a low-cost, open-source, and scalable piezoresistive tactile sensing solution designed for robotic end-effectors. FlexiTac is a practical \"plug-in\" module consisting of (i) thin, ",
+        "link": "http://arxiv.org/abs/2604.28156v1",
+        "date": "2026-04-30",
         "authors": [
-          "Bao Pham",
-          "Mohammed J. Zaki",
-          "Luca Ambrogioni"
+          "Binghao Huang",
+          "Yunzhu Li"
         ]
       },
       {
-        "title": "HalluCiteChecker: A Lightweight Toolkit for Hallucinated Citation Detection and Verification in the Era of AI Scientists",
-        "summary": "We introduce HalluCiteChecker, a toolkit for detecting and verifying hallucinated citations in scientific papers. While AI assistant technologies have transformed the academic writing process, includi",
-        "link": "http://arxiv.org/abs/2604.26835v1",
-        "date": "2026-04-29",
+        "title": "Claw-Eval-Live: A Live Agent Benchmark for Evolving Real-World Workflows",
+        "summary": "LLM agents are expected to complete end-to-end units of work across software tools, business services, and local workspaces. Yet many agent benchmarks freeze a curated task set at release time and gra",
+        "link": "http://arxiv.org/abs/2604.28139v1",
+        "date": "2026-04-30",
         "authors": [
-          "Yusuke Sakai",
-          "Hidetaka Kamigaito",
-          "Taro Watanabe"
+          "Chenxin Li",
+          "Zhengyang Tang",
+          "Huangxin Lin"
         ]
       },
       {
-        "title": "Rule-based High-Level Coaching for Goal-Conditioned Reinforcement Learning in Search-and-Rescue UAV Missions Under Limited-Simulation Training",
-        "summary": "This paper presents a hierarchical decision-making framework for unmanned aerial vehicle (UAV) missions motivated by search-and-rescue (SAR) scenarios under limited simulation training. The framework ",
-        "link": "http://arxiv.org/abs/2604.26833v1",
-        "date": "2026-04-29",
+        "title": "Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes",
+        "summary": "Autonomous agents act through sandboxed containers and microVMs whose state spans filesystems, processes, and runtime artifacts. Checkpoint and restore (C/R) of this state is needed for fault toleranc",
+        "link": "http://arxiv.org/abs/2604.28138v1",
+        "date": "2026-04-30",
         "authors": [
-          "Mahya Ramezani",
-          "Holger Voos"
+          "Tianyuan Wu",
+          "Chaokun Chang",
+          "Lunxi Cao"
         ]
       }
     ],
-    "updated": "2026-04-30T05:32:22.624261Z"
+    "updated": "2026-05-01T05:43:07.246719Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-04-30T05:32:22.624261Z"
+    "updated": "2026-05-01T05:43:07.246719Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-04-30T05:32:22.624261Z"
+    "updated": "2026-05-01T05:43:07.246719Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-04-30T05:32:22.624261Z"
+    "updated": "2026-05-01T05:43:07.246719Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Catching the Fly: Practical Challenges in Making Blockchain FlyClient Real",
-        "summary": "FlyClient is a lightweight blockchain verification protocol that enables proof-of-work validation using minimal data, making it ideal for resource-constrained environments like mobile wallets, Interne",
-        "link": "http://arxiv.org/abs/2604.26736v1",
-        "date": "2026-04-29",
+        "title": "FlashRT: Towards Computationally and Memory Efficient Red-Teaming for Prompt Injection and Knowledge Corruption",
+        "summary": "Long-context large language models (LLMs)-for example, Gemini-3.1-Pro and Qwen-3.5-are widely used to empower many real-world applications, such as retrieval-augmented generation, autonomous agents, a",
+        "link": "http://arxiv.org/abs/2604.28157v1",
+        "date": "2026-04-30",
         "authors": [
-          "Pericle Perazzo",
-          "Dario Capecchi"
+          "Yanting Wang",
+          "Chenlong Yin",
+          "Ying Chen"
         ]
       },
       {
-        "title": "Preventing Distinguishability between Multiplication and Squaring Operations",
-        "summary": "Scalar multiplication kP is a critical operation in Elliptic Curve Cryptosystems (ECC), often targeted by Side-Channel Analysis (SCA). Despite strategies based on atomic patterns to enhance security, ",
-        "link": "http://arxiv.org/abs/2604.26536v1",
-        "date": "2026-04-29",
+        "title": "Latent Adversarial Detection: Adaptive Probing of LLM Activations for Multi-Turn Attack Detection",
+        "summary": "Multi-turn prompt injection follows a known attack path -- trust-building, pivoting, escalation but text-level defenses miss covert attacks where individual turns appear benign. We show this attack pa",
+        "link": "http://arxiv.org/abs/2604.28129v1",
+        "date": "2026-04-30",
         "authors": [
-          "Alkistis Aikaterini Sigourou",
-          "Zoya Dyka",
-          "Peter Langendoerfer"
+          "Prashant Kulkarni"
         ]
       },
       {
-        "title": "PRAG End-to-End Privacy-Preserving Retrieval-Augmented Generation",
-        "summary": "Retrieval-Augmented Generation (RAG) is essential for enhancing Large Language Models (LLMs) with external knowledge, but its reliance on cloud environments exposes sensitive data to privacy risks. Ex",
-        "link": "http://arxiv.org/abs/2604.26525v1",
-        "date": "2026-04-29",
+        "title": "TwinGate: Stateful Defense against Decompositional Jailbreaks in Untraceable Traffic via Asymmetric Contrastive Learning",
+        "summary": "Decompositional jailbreaks pose a critical threat to large language models (LLMs) by allowing adversaries to fragment a malicious objective into a sequence of individually benign queries that collecti",
+        "link": "http://arxiv.org/abs/2604.27861v1",
+        "date": "2026-04-30",
         "authors": [
-          "Zhijun Li",
-          "Minghui Xu",
-          "Huayi Qi"
+          "Bowen Sun",
+          "Chaozhuo Li",
+          "Yaodong Yang"
         ]
       },
       {
-        "title": "Tatemae: Detecting Alignment Faking via Tool Selection in LLMs",
-        "summary": "Alignment faking (AF) occurs when an LLM strategically complies with training objectives to avoid value modification, reverting to prior preferences once monitoring is lifted. Current detection method",
-        "link": "http://arxiv.org/abs/2604.26511v1",
-        "date": "2026-04-29",
+        "title": "WOOTdroid: Whole-system Online On-device Tracing for Android",
+        "summary": "System auditing on Android faces two problems. First, existing syscall tracers lose events under load, silently overwriting entries faster than a user space reader can drain them. Second, security-rel",
+        "link": "http://arxiv.org/abs/2604.27830v1",
+        "date": "2026-04-30",
         "authors": [
-          "Matteo Leonesi",
-          "Francesco Belardinelli",
-          "Flavio Corradini"
+          "Simon Althaus",
+          "Nikolaos Alexopoulos",
+          "Max M\u00fchlh\u00e4user"
         ]
       },
       {
-        "title": "SafeReview: Defending LLM-based Review Systems Against Adversarial Hidden Prompts",
-        "summary": "As Large Language Models (LLMs) are increasingly integrated into academic peer review, their vulnerability to adversarial prompts -- adversarial instructions embedded in submissions to manipulate outc",
-        "link": "http://arxiv.org/abs/2604.26506v1",
-        "date": "2026-04-29",
+        "title": "MASCing: Configurable Mixture-of-Experts Behavior via Activation Steering Masks",
+        "summary": "Mixture-of-Experts (MoE) architectures in Large Language Models (LLMs) have significantly reduced inference costs through sparse activation. However, this sparse activation paradigm also introduces ne",
+        "link": "http://arxiv.org/abs/2604.27818v1",
+        "date": "2026-04-30",
         "authors": [
-          "Yuan Xin",
-          "Yixuan Weng",
-          "Minjun Zhu"
+          "Jona te Lintelo",
+          "Lichao Wu",
+          "Marina Kr\u010dek"
         ]
       },
       {
-        "title": "Quantamination: Dynamic Quantization Leaks Your Data Across the Batch",
-        "summary": "Dynamic quantization emerged as a practical approach to increase the utilization and efficiency of the machine learning serving flow. Unlike static quantization, which applies quantization offline, dy",
-        "link": "http://arxiv.org/abs/2604.26505v1",
-        "date": "2026-04-29",
+        "title": "Machine Unlearning for Class Removal through SISA-based Deep Neural Network Architectures",
+        "summary": "The rapid proliferation of image generation models and other artificial intelligence (AI) systems has intensified concerns regarding data privacy and user consent. As the availability of public datase",
+        "link": "http://arxiv.org/abs/2604.27804v1",
+        "date": "2026-04-30",
         "authors": [
-          "Hanna Foerster",
-          "Ilia Shumailov",
-          "Cheng Zhang"
+          "Ishrak Hamim Mahi",
+          "Siam Ferdous",
+          "Md Sakib Sadman Badhon"
         ]
       },
       {
-        "title": "Beyond Code Reasoning: A Specification-Anchored Audit Framework for Expert-Augmented Security Verification",
-        "summary": "Security-critical software is routinely audited by tools that reason about vulnerabilities as repository-local code patterns. Yet specification-governed systems -- protocol stacks, consensus implement",
-        "link": "http://arxiv.org/abs/2604.26495v1",
-        "date": "2026-04-29",
+        "title": "Variational and Majorization Principles in Lattice Reduction",
+        "summary": "Lattice reduction smooths the Gram-Schmidt profile, and we use majorization to describe the local swap mechanism behind that smoothing. In this language, each non-degenerate Lov\u00e1sz swap acts as a T-tr",
+        "link": "http://arxiv.org/abs/2604.27801v1",
+        "date": "2026-04-30",
         "authors": [
-          "Masato Kamba",
-          "Hirotake Murakami",
-          "Akiyoshi Sannai"
+          "Javier Blanco-Romero",
+          "Florina Almenares Mendoza"
         ]
       },
       {
-        "title": "Differentially Private Contrastive Learning via Bounding Group-level Contribution",
-        "summary": "Differentially private (DP) contrastive learning aims to learn general-purpose representations from sensitive data, alleviating the privacy leakage concerns of organizations deploying or sharing embed",
-        "link": "http://arxiv.org/abs/2604.26467v1",
-        "date": "2026-04-29",
+        "title": "How Code Representation Shapes False-Positive Dynamics in Cross-Language LLM Vulnerability Detection",
+        "summary": "How code representation format shapes false positive behaviour in cross-language LLM vulnerability detection remains poorly understood. We systematically vary training intensity and code representatio",
+        "link": "http://arxiv.org/abs/2604.27714v1",
+        "date": "2026-04-30",
         "authors": [
-          "Kecen Li",
-          "Chen Gong",
-          "Zinan Lin"
+          "Maofei Chen",
+          "Laifu Wang",
+          "Yue Qin"
         ]
       }
     ],
-    "updated": "2026-04-30T05:32:22.624261Z"
+    "updated": "2026-05-01T05:43:07.246719Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -280,6 +280,6 @@
         ]
       }
     ],
-    "updated": "2026-04-30T05:32:22.624261Z"
+    "updated": "2026-05-01T05:43:07.246719Z"
   }
 }
