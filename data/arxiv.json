@@ -3,200 +3,201 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Computing Equilibrium beyond Unilateral Deviation",
-        "summary": "Most familiar equilibrium concepts, such as Nash and correlated equilibrium, guarantee only that no single player can improve their utility by deviating unilaterally. They offer no guarantees against ",
-        "link": "http://arxiv.org/abs/2604.28186v1",
-        "date": "2026-04-30",
+        "title": "Persistent Visual Memory: Sustaining Perception for Deep Generation in LVLMs",
+        "summary": "While autoregressive Large Vision-Language Models (LVLMs) demonstrate remarkable proficiency in multimodal tasks, they face a \"Visual Signal Dilution\" phenomenon, where the accumulation of textual his",
+        "link": "http://arxiv.org/abs/2605.00814v1",
+        "date": "2026-05-01",
         "authors": [
-          "Mingyang Liu",
-          "Gabriele Farina",
-          "Asuman Ozdaglar"
+          "Siyuan Huang",
+          "Xiaoye Qu",
+          "Yafu Li"
         ]
       },
       {
-        "title": "Synthetic Computers at Scale for Long-Horizon Productivity Simulation",
-        "summary": "Realistic long-horizon productivity work is strongly conditioned on user-specific computer environments, where much of the work context is stored and organized through directory structures and content",
-        "link": "http://arxiv.org/abs/2604.28181v1",
-        "date": "2026-04-30",
+        "title": "Can Coding Agents Reproduce Findings in Computational Materials Science?",
+        "summary": "Large language models are increasingly deployed as autonomous coding agents and have achieved remarkably strong performance on software engineering benchmarks. However, it is unclear whether such succ",
+        "link": "http://arxiv.org/abs/2605.00803v1",
+        "date": "2026-05-01",
         "authors": [
-          "Tao Ge",
-          "Baolin Peng",
-          "Hao Cheng"
+          "Ziyang Huang",
+          "Yi Cao",
+          "Ali K. Shargh"
         ]
       },
       {
-        "title": "LLM as Clinical Graph Structure Refiner: Enhancing Representation Learning in EEG Seizure Diagnosis",
-        "summary": "Electroencephalogram (EEG) signals are vital for automated seizure detection, but their inherent noise makes robust representation learning challenging. Existing graph construction methods, whether co",
-        "link": "http://arxiv.org/abs/2604.28178v1",
-        "date": "2026-04-30",
+        "title": "When RAG Chatbots Expose Their Backend: An Anonymized Case Study of Privacy and Security Risks in Patient-Facing Medical AI",
+        "summary": "Background: Patient-facing medical chatbots based on retrieval-augmented generation (RAG) are increasingly promoted to deliver accessible, grounded health information. AI-assisted development lowers t",
+        "link": "http://arxiv.org/abs/2605.00796v1",
+        "date": "2026-05-01",
         "authors": [
-          "Lincan Li",
-          "Zheng Chen",
-          "Yushun Dong"
+          "Alfredo Madrid-Garc\u00eda",
+          "Miguel Rujas"
         ]
       },
       {
-        "title": "PhyCo: Learning Controllable Physical Priors for Generative Motion",
-        "summary": "Modern video diffusion models excel at appearance synthesis but still struggle with physical consistency: objects drift, collisions lack realistic rebound, and material responses seldom match their un",
-        "link": "http://arxiv.org/abs/2604.28169v1",
-        "date": "2026-04-30",
+        "title": "Unsupervised Denoising of Real Clinical Low Dose Liver CT with Perceptual Attention Networks",
+        "summary": "With the development of deep learning, medical image processing has been widely used to assist clinical research. This paper focuses on the denoising problem of low-dose computed tomography using deep",
+        "link": "http://arxiv.org/abs/2605.00793v1",
+        "date": "2026-05-01",
         "authors": [
-          "Sriram Narayanan",
-          "Ziyu Jiang",
-          "Srinivasa Narasimhan"
+          "Jingxi Pu",
+          "Tonghua Liu",
+          "Zhilin Guan"
         ]
       },
       {
-        "title": "Intern-Atlas: A Methodological Evolution Graph as Research Infrastructure for AI Scientists",
-        "summary": "Existing research infrastructure is fundamentally document-centric, providing citation links between papers but lacking explicit representations of methodological evolution. In particular, it does not",
-        "link": "http://arxiv.org/abs/2604.28158v1",
-        "date": "2026-04-30",
+        "title": "Make Your LVLM KV Cache More Lightweight",
+        "summary": "Key-Value (KV) cache has become a de facto component of modern Large Vision-Language Models (LVLMs) for inference. While it enhances decoding efficiency in Large Language Models (LLMs), its direct ado",
+        "link": "http://arxiv.org/abs/2605.00789v1",
+        "date": "2026-05-01",
         "authors": [
-          "Yujun Wu",
-          "Dongxu Zhang",
-          "Xinchen Li"
+          "Xihao Chen",
+          "Yangyang Guo",
+          "Roger Zimmermann"
         ]
       },
       {
-        "title": "FlexiTac: A Low-Cost, Open-Source, Scalable Tactile Sensing Solution for Robotic Systems",
-        "summary": "We present FlexiTac, a low-cost, open-source, and scalable piezoresistive tactile sensing solution designed for robotic end-effectors. FlexiTac is a practical \"plug-in\" module consisting of (i) thin, ",
-        "link": "http://arxiv.org/abs/2604.28156v1",
-        "date": "2026-04-30",
+        "title": "GeoContra: From Fluent GIS Code to Verifiable Spatial Analysis with Geography-Grounded Repair",
+        "summary": "Reliable spatial analysis in GIScience requires preserving coordinate semantics, topology, units, and geographic plausibility. Current LLM-based GIS systems generate fluent scripts but rarely enforce ",
+        "link": "http://arxiv.org/abs/2605.00782v1",
+        "date": "2026-05-01",
         "authors": [
-          "Binghao Huang",
-          "Yunzhu Li"
+          "Yinhao Xiao",
+          "Rongbo Xiao",
+          "Yihan Zhang"
         ]
       },
       {
-        "title": "Claw-Eval-Live: A Live Agent Benchmark for Evolving Real-World Workflows",
-        "summary": "LLM agents are expected to complete end-to-end units of work across software tools, business services, and local workspaces. Yet many agent benchmarks freeze a curated task set at release time and gra",
-        "link": "http://arxiv.org/abs/2604.28139v1",
-        "date": "2026-04-30",
+        "title": "Directed Social Regard: Surfacing Targeted Advocacy, Opposition, Aid, Harms, and Victimization in Online Media",
+        "summary": "The language in online platforms, influence operations, and political rhetoric frequently directs a mix of pro-social sentiment (e.g., advocacy, helpfulness, compassion) and anti-social sentiment (e.g",
+        "link": "http://arxiv.org/abs/2605.00776v1",
+        "date": "2026-05-01",
         "authors": [
-          "Chenxin Li",
-          "Zhengyang Tang",
-          "Huangxin Lin"
+          "Scott Friedman",
+          "Ruta Wheelock",
+          "Sonja Schmer-Galunder"
         ]
       },
       {
-        "title": "Crab: A Semantics-Aware Checkpoint/Restore Runtime for Agent Sandboxes",
-        "summary": "Autonomous agents act through sandboxed containers and microVMs whose state spans filesystems, processes, and runtime artifacts. Checkpoint and restore (C/R) of this state is needed for fault toleranc",
-        "link": "http://arxiv.org/abs/2604.28138v1",
-        "date": "2026-04-30",
+        "title": "Meritocratic Fairness in Budgeted Combinatorial Multi-armed Bandits via Shapley Values",
+        "summary": "We propose a new framework for meritocratic fairness in budgeted combinatorial multi-armed bandits with full-bandit feedback (BCMAB-FBF). Unlike semi-bandit feedback, the contribution of individual ar",
+        "link": "http://arxiv.org/abs/2605.00762v1",
+        "date": "2026-05-01",
         "authors": [
-          "Tianyuan Wu",
-          "Chaokun Chang",
-          "Lunxi Cao"
+          "Shradha Sharma",
+          "Swapnil Dhamal",
+          "Shweta Jain"
         ]
       }
     ],
-    "updated": "2026-05-03T05:32:07.159343Z"
+    "updated": "2026-05-04T05:36:19.149982Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-05-03T05:32:07.159343Z"
+    "updated": "2026-05-04T05:36:19.149982Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-05-03T05:32:07.159343Z"
+    "updated": "2026-05-04T05:36:19.149982Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-05-03T05:32:07.159343Z"
+    "updated": "2026-05-04T05:36:19.149982Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "FlashRT: Towards Computationally and Memory Efficient Red-Teaming for Prompt Injection and Knowledge Corruption",
-        "summary": "Long-context large language models (LLMs)-for example, Gemini-3.1-Pro and Qwen-3.5-are widely used to empower many real-world applications, such as retrieval-augmented generation, autonomous agents, a",
-        "link": "http://arxiv.org/abs/2604.28157v1",
-        "date": "2026-04-30",
+        "title": "When RAG Chatbots Expose Their Backend: An Anonymized Case Study of Privacy and Security Risks in Patient-Facing Medical AI",
+        "summary": "Background: Patient-facing medical chatbots based on retrieval-augmented generation (RAG) are increasingly promoted to deliver accessible, grounded health information. AI-assisted development lowers t",
+        "link": "http://arxiv.org/abs/2605.00796v1",
+        "date": "2026-05-01",
         "authors": [
-          "Yanting Wang",
-          "Chenlong Yin",
-          "Ying Chen"
+          "Alfredo Madrid-Garc\u00eda",
+          "Miguel Rujas"
         ]
       },
       {
-        "title": "Latent Adversarial Detection: Adaptive Probing of LLM Activations for Multi-Turn Attack Detection",
-        "summary": "Multi-turn prompt injection follows a known attack path -- trust-building, pivoting, escalation but text-level defenses miss covert attacks where individual turns appear benign. We show this attack pa",
-        "link": "http://arxiv.org/abs/2604.28129v1",
-        "date": "2026-04-30",
+        "title": "Repurposing Image Diffusion Models for Adversarial Synthetic Structured Data: A Case Study of Ground Truth Drift",
+        "summary": "Public image diffusion models are now powerful enough that an attacker without the resources to train a tabular-specific generator may repurpose one off the shelf. This study tests that possibility di",
+        "link": "http://arxiv.org/abs/2605.00788v1",
+        "date": "2026-05-01",
         "authors": [
-          "Prashant Kulkarni"
+          "Adam Arthur",
+          "Christopher Schwartz"
         ]
       },
       {
-        "title": "TwinGate: Stateful Defense against Decompositional Jailbreaks in Untraceable Traffic via Asymmetric Contrastive Learning",
-        "summary": "Decompositional jailbreaks pose a critical threat to large language models (LLMs) by allowing adversaries to fragment a malicious objective into a sequence of individually benign queries that collecti",
-        "link": "http://arxiv.org/abs/2604.27861v1",
-        "date": "2026-04-30",
+        "title": "Self-Adaptive Multi-Agent LLM-Based Security Pattern Selection for IoT Systems",
+        "summary": "The adoption of Internet of Things (IoT) systems at the network edge of smart architectures is increasing rapidly, intensifying the need for security mechanisms that are both adaptive and resource-eff",
+        "link": "http://arxiv.org/abs/2605.00741v1",
+        "date": "2026-05-01",
         "authors": [
-          "Bowen Sun",
-          "Chaozhuo Li",
-          "Yaodong Yang"
+          "Saeid Jamshidi",
+          "Foutse Khomh",
+          "Carol Fung"
         ]
       },
       {
-        "title": "WOOTdroid: Whole-system Online On-device Tracing for Android",
-        "summary": "System auditing on Android faces two problems. First, existing syscall tracers lose events under load, silently overwriting entries faster than a user space reader can drain them. Second, security-rel",
-        "link": "http://arxiv.org/abs/2604.27830v1",
-        "date": "2026-04-30",
+        "title": "STARE: Step-wise Temporal Alignment and Red-teaming Engine for Multi-modal Toxicity Attack",
+        "summary": "Red-teaming Vision-Language Models is essential for identifying vulnerabilities where adversarial image-text inputs trigger toxic outputs. Existing approaches treat image generation as a black box, re",
+        "link": "http://arxiv.org/abs/2605.00699v1",
+        "date": "2026-05-01",
         "authors": [
-          "Simon Althaus",
-          "Nikolaos Alexopoulos",
-          "Max M\u00fchlh\u00e4user"
+          "Xutao Mao",
+          "Liangjie Zhao",
+          "Tao Liu"
         ]
       },
       {
-        "title": "MASCing: Configurable Mixture-of-Experts Behavior via Activation Steering Masks",
-        "summary": "Mixture-of-Experts (MoE) architectures in Large Language Models (LLMs) have significantly reduced inference costs through sparse activation. However, this sparse activation paradigm also introduces ne",
-        "link": "http://arxiv.org/abs/2604.27818v1",
-        "date": "2026-04-30",
+        "title": "ML-Bench&Guard: Policy-Grounded Multilingual Safety Benchmark and Guardrail for Large Language Models",
+        "summary": "As Large Language Models (LLMs) are increasingly deployed in cross-linguistic contexts, ensuring safety in diverse regulatory and cultural environments has become a critical challenge. However, existi",
+        "link": "http://arxiv.org/abs/2605.00689v1",
+        "date": "2026-05-01",
         "authors": [
-          "Jona te Lintelo",
-          "Lichao Wu",
-          "Marina Kr\u010dek"
+          "Yunhan Zhao",
+          "Zhaorun Chen",
+          "Xingjun Ma"
         ]
       },
       {
-        "title": "Machine Unlearning for Class Removal through SISA-based Deep Neural Network Architectures",
-        "summary": "The rapid proliferation of image generation models and other artificial intelligence (AI) systems has intensified concerns regarding data privacy and user consent. As the availability of public datase",
-        "link": "http://arxiv.org/abs/2604.27804v1",
-        "date": "2026-04-30",
+        "title": "Defense against Poisoning Attacks under Shuffle-DP",
+        "summary": "Differential Privacy (DP) has become the gold standard for protecting individual privacy in data analytics, and the shuffle-DP model has attracted significant attention from both academia and industry",
+        "link": "http://arxiv.org/abs/2605.00625v1",
+        "date": "2026-05-01",
         "authors": [
-          "Ishrak Hamim Mahi",
-          "Siam Ferdous",
-          "Md Sakib Sadman Badhon"
+          "Siyi Wang",
+          "Qiyao Luo",
+          "Yihua Hu"
         ]
       },
       {
-        "title": "Variational and Majorization Principles in Lattice Reduction",
-        "summary": "Lattice reduction smooths the Gram-Schmidt profile, and we use majorization to describe the local swap mechanism behind that smoothing. In this language, each non-degenerate Lov\u00e1sz swap acts as a T-tr",
-        "link": "http://arxiv.org/abs/2604.27801v1",
-        "date": "2026-04-30",
+        "title": "KingsGuard: Enclave Data Protection Under Real-World TEE Vulnerabilities",
+        "summary": "Trusted Execution Environments (TEEs) have emerged as a cornerstone for securing sensitive computations by providing isolated enclaves protected from untrusted software. However, their security guaran",
+        "link": "http://arxiv.org/abs/2605.00613v1",
+        "date": "2026-05-01",
         "authors": [
-          "Javier Blanco-Romero",
-          "Florina Almenares Mendoza"
+          "Saltanat Firdous Allaqband",
+          "Deepanjali S",
+          "Rohit Srinivas R G"
         ]
       },
       {
-        "title": "How Code Representation Shapes False-Positive Dynamics in Cross-Language LLM Vulnerability Detection",
-        "summary": "How code representation format shapes false positive behaviour in cross-language LLM vulnerability detection remains poorly understood. We systematically vary training intensity and code representatio",
-        "link": "http://arxiv.org/abs/2604.27714v1",
-        "date": "2026-04-30",
+        "title": "Pick and Sort for Graphical Authentication",
+        "summary": "We propose a graphical authentication scheme that follows a simple ``Pick and Sort'' design in which users choose visual elements and arrange them within a grid. Both the number of selected elements a",
+        "link": "http://arxiv.org/abs/2605.00558v1",
+        "date": "2026-05-01",
         "authors": [
-          "Maofei Chen",
-          "Laifu Wang",
-          "Yue Qin"
+          "Argianto Rahartomo",
+          "AmirHossein Jamshidipoor",
+          "Mohammad Ghafari"
         ]
       }
     ],
-    "updated": "2026-05-03T05:32:07.159343Z"
+    "updated": "2026-05-04T05:36:19.149982Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -280,6 +281,6 @@
         ]
       }
     ],
-    "updated": "2026-05-03T05:32:07.159343Z"
+    "updated": "2026-05-04T05:36:19.149982Z"
   }
 }
