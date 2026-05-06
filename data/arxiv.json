@@ -3,199 +3,200 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "SpecKV: Adaptive Speculative Decoding with Compression-Aware Gamma Selection",
-        "summary": "Speculative decoding accelerates large language model (LLM) inference by using a small draft model to propose candidate tokens that a larger target model verifies. A critical hyperparameter in this pr",
-        "link": "http://arxiv.org/abs/2605.02888v1",
-        "date": "2026-05-04",
+        "title": "Safety and accuracy follow different scaling laws in clinical large language models",
+        "summary": "Clinical LLMs are often scaled by increasing model size, context length, retrieval complexity, or inference-time compute, with the implicit expectation that higher accuracy implies safer behavior. Thi",
+        "link": "http://arxiv.org/abs/2605.04039v1",
+        "date": "2026-05-05",
         "authors": [
-          "Shikhar Shukla"
+          "Sebastian Wind",
+          "Tri-Thien Nguyen",
+          "Jeta Sopa"
         ]
       },
       {
-        "title": "Enhancing RL Generalizability in Robotics through SHAP Analysis of Algorithms and Hyperparameters",
-        "summary": "Despite significant advances in Reinforcement Learning (RL), model performance remains highly sensitive to algorithm and hyperparameter configurations, while generalization gaps across environments co",
-        "link": "http://arxiv.org/abs/2605.02867v1",
-        "date": "2026-05-04",
+        "title": "OpenSeeker-v2: Pushing the Limits of Search Agents with Informative and High-Difficulty Trajectories",
+        "summary": "Deep search capabilities have become an indispensable competency for frontier Large Language Model (LLM) agents, yet their development remains dominated by industrial giants. The typical industry reci",
+        "link": "http://arxiv.org/abs/2605.04036v1",
+        "date": "2026-05-05",
         "authors": [
-          "Lingxiao Kong",
-          "Cong Yang",
-          "Oya Deniz Beyan"
+          "Yuwen Du",
+          "Rui Ye",
+          "Shuo Tang"
         ]
       },
       {
-        "title": "Standing on the Shoulders of Giants: Stabilized Knowledge Distillation for Cross--Language Code Clone Detection",
-        "summary": "Cross-language code clone detection (X-CCD) is challenging because semantically equivalent programs written in different languages often share little surface similarity. Although large language models",
-        "link": "http://arxiv.org/abs/2605.02860v1",
-        "date": "2026-05-04",
+        "title": "Redefining AI Red Teaming in the Agentic Era: From Weeks to Hours",
+        "summary": "AI systems are entering critical domains like healthcare, finance, and defense, yet remain vulnerable to adversarial attacks. While AI red teaming is a primary defense, current approaches force operat",
+        "link": "http://arxiv.org/abs/2605.04019v1",
+        "date": "2026-05-05",
         "authors": [
-          "Mohamad Khajezade",
-          "Fatemeh H. Fard",
-          "Mohamed Sami Shehata"
+          "Raja Sekhar Rao Dheekonda",
+          "Will Pearce",
+          "Nick Landers"
         ]
       },
       {
-        "title": "From Sensors to Insight: Rapid, Edge-to-Core Application Development for Sensor-Driven Applications",
-        "summary": "Scientists increasingly rely on sensor-based data, yet transforming raw streams into insights across the edge-to-cloud continuum remains difficult. Provisioning heterogeneous infrastructure and managi",
-        "link": "http://arxiv.org/abs/2605.02859v1",
-        "date": "2026-05-04",
+        "title": "SymptomAI: Towards a Conversational AI Agent for Everyday Symptom Assessment",
+        "summary": "Language models excel at diagnostic assessments on currated medical case-studies and vignettes, performing on par with, or better than, clinical professionals. However, existing studies focus on compl",
+        "link": "http://arxiv.org/abs/2605.04012v1",
+        "date": "2026-05-05",
         "authors": [
-          "Komal Thareja",
-          "Anirban Mandal",
-          "Ewa Deelman"
+          "Joseph Breda",
+          "Fadi Yousif",
+          "Beszel Hawkins"
         ]
       },
       {
-        "title": "(POSTER) From Sensors to Insight: Rapid, Edge-to-Core Application Development for Sensor-Driven Applications",
-        "summary": "Scientists increasingly rely on sensor-based data; however transforming raw streams into insights across the edge-to-cloud continuum remains difficult due to the breadth of expertise required to coord",
-        "link": "http://arxiv.org/abs/2605.02844v1",
-        "date": "2026-05-04",
+        "title": "Physics-Grounded Multi-Agent Architecture for Traceable, Risk-Aware Human-AI Decision Support in Manufacturing",
+        "summary": "High-precision CNC machining of free-form aerospace components requires bounded compensations informed by inspection, simulation, and process knowledge. Off-the-shelf large language model (LLM) assist",
+        "link": "http://arxiv.org/abs/2605.04003v1",
+        "date": "2026-05-05",
         "authors": [
-          "Komal Thareja",
-          "Anirban Mandal",
-          "Ewa Deelman"
+          "Danny Hoang",
+          "Ryan Matthiessen",
+          "Christopher Miller"
         ]
       },
       {
-        "title": "A second-order method on the Stiefel manifold via Newton$\\unicode{x2013}$Schulz",
-        "summary": "Retraction-free approaches offer attractive low-cost alternatives to Riemannian methods on the Stiefel manifold, but they are often first-order, which may limit the efficiency under high-accuracy requ",
-        "link": "http://arxiv.org/abs/2605.02838v1",
-        "date": "2026-05-04",
+        "title": "An Agent-Oriented Pluggable Experience-RAG Skill for Experience-Driven Retrieval Strategy Orchestration",
+        "summary": "Retrieval-augmented generation systems often assume that one fixed retrieval pipeline is sufficient across heterogeneous tasks, yet factoid question answering, multi-hop reasoning, and scientific veri",
+        "link": "http://arxiv.org/abs/2605.03989v1",
+        "date": "2026-05-05",
         "authors": [
-          "Xinhui Xiong",
-          "Bin Gao",
-          "P. -A. Absil"
+          "Dutao Zhang",
+          "Tian Liao"
         ]
       },
       {
-        "title": "HAAS: A Policy-Aware Framework for Adaptive Task Allocation Between Humans and Artificial Intelligence Systems",
-        "summary": "Deciding how to distribute work between humans and AI systems is a central challenge in organisational design. Most approaches treat this as a binary choice, yet the operational reality is richer: hum",
-        "link": "http://arxiv.org/abs/2605.02832v1",
-        "date": "2026-05-04",
+        "title": "From Intent to Execution: Composing Agentic Workflows with Agent Recommendation",
+        "summary": "Multi-Agent Systems (MAS) built using AI agents fulfill a variety of user intents that may be used to design and build a family of related applications. However, the creation of such MAS currently inv",
+        "link": "http://arxiv.org/abs/2605.03986v1",
+        "date": "2026-05-05",
         "authors": [
-          "Vicente Pelechanoa",
-          "Antoni Mestre",
-          "Manoli Albert"
+          "Kishan Athrey",
+          "Ramin Pishehvar",
+          "Brian Riordan"
         ]
       },
       {
-        "title": "Compress Then Adapt? No, Do It Together via Task-aware Union of Subspaces",
-        "summary": "Adapting large pretrained models to diverse tasks is now routine, yet the two dominant strategies of parameter-efficient fine-tuning (PEFT) and low-rank compression are typically composed in sequence.",
-        "link": "http://arxiv.org/abs/2605.02829v1",
-        "date": "2026-05-04",
+        "title": "Flow Sampling: Learning to Sample from Unnormalized Densities via Denoising Conditional Processes",
+        "summary": "Sampling from unnormalized densities is analogous to the generative modeling problem, but the target distribution is defined by a known energy function instead of data samples. Because evaluating the ",
+        "link": "http://arxiv.org/abs/2605.03984v1",
+        "date": "2026-05-05",
         "authors": [
-          "Jingze Ge",
-          "Yun Liu",
-          "Xue Geng"
+          "Aaron Havens",
+          "Brian Karrer",
+          "Neta Shaul"
         ]
       }
     ],
-    "updated": "2026-05-05T05:16:23.811657Z"
+    "updated": "2026-05-06T05:30:50.759469Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-05-05T05:16:23.811657Z"
+    "updated": "2026-05-06T05:30:50.759469Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-05-05T05:16:23.811657Z"
+    "updated": "2026-05-06T05:30:50.759469Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-05-05T05:16:23.811657Z"
+    "updated": "2026-05-06T05:30:50.759469Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "EvoPoC: Automated Exploit Synthesis for DeFi Smart Contracts via Hierarchical Knowledge Graphs",
-        "summary": "Smart contract vulnerabilities in Decentralized Finance caused over billions of dollars losses every year, yet the security community faces a critical bottleneck: identifying a vulnerability is not th",
-        "link": "http://arxiv.org/abs/2605.02868v1",
-        "date": "2026-05-04",
+        "title": "Probabilistic-bit Guided CDCL for SAT Solving using Ising Consensus Assumptions",
+        "summary": "Boolean satisfiability (SAT) solvers are widely used in hardware verification, cryptanalysis, automatic test-pattern generation, and side-channel reasoning workflows. Modern conflict-driven clause-lea",
+        "link": "http://arxiv.org/abs/2605.04033v1",
+        "date": "2026-05-05",
         "authors": [
-          "Ruichao Liang",
-          "Jing Chen",
-          "Xianglong Li"
+          "Melki Bino"
         ]
       },
       {
-        "title": "The 1-Bit Barrier is Universal: k-Stage Pipeline Composition and Unified Leakage Bounds for Standard Modular Reductions in PQC Hardware",
-        "summary": "This is Paper 7 of a series of formally-verified analyses of masked NTT hardware for post-quantum cryptography; Paper 1 [1] established structural dependency analysis of the QANARY platform, and Paper",
-        "link": "http://arxiv.org/abs/2605.02856v1",
-        "date": "2026-05-04",
+        "title": "Redefining AI Red Teaming in the Agentic Era: From Weeks to Hours",
+        "summary": "AI systems are entering critical domains like healthcare, finance, and defense, yet remain vulnerable to adversarial attacks. While AI red teaming is a primary defense, current approaches force operat",
+        "link": "http://arxiv.org/abs/2605.04019v1",
+        "date": "2026-05-05",
         "authors": [
-          "Ray Iskander",
-          "Khaled Kirah"
+          "Raja Sekhar Rao Dheekonda",
+          "Will Pearce",
+          "Nick Landers"
         ]
       },
       {
-        "title": "InsureConnect: Blockchain and Digital Identity for the Property Insurance Market",
-        "summary": "This paper presents InsureConnect, a blockchain-based system for improving transparency, authentication, and auditability in property-insurance workflows after natural disasters. The system combines S",
-        "link": "http://arxiv.org/abs/2605.02824v1",
-        "date": "2026-05-04",
+        "title": "LIPPEN: A Lightweight In-Place Pointer Encryption Architecture for Pointer Integrity",
+        "summary": "Memory-safety violations in C and C++ programs continue to enable sophisticated exploitation techniques such as control-flow hijacking and data-oriented attacks. Existing hardware defenses either rely",
+        "link": "http://arxiv.org/abs/2605.03974v1",
+        "date": "2026-05-05",
         "authors": [
-          "Jo\u00e3o Eduardo Travassos",
-          "Miguel Correia"
+          "Erfan Iravani",
+          "Lalit Prasad Peri",
+          "Mohannad Ismail"
         ]
       },
       {
-        "title": "Autonomous LLM Agent Worms: Cross-Platform Propagation, Automated Discovery and Temporal Re-Entry Defense",
-        "summary": "Autonomous LLM agents operate as long-running processes with persistent workspaces, memory files, scheduled task state, and messaging integrations. These features create a new propagation risk: attack",
-        "link": "http://arxiv.org/abs/2605.02812v1",
-        "date": "2026-05-04",
+        "title": "Generating Proof-of-Vulnerability Tests to Help Enhance the Security of Complex Software",
+        "summary": "Developers create modern software applications (Apps) on top of third-party libraries (Libs). When library vulnerabilities are reachable through application code, the applications can be vulnerable to",
+        "link": "http://arxiv.org/abs/2605.03956v1",
+        "date": "2026-05-05",
         "authors": [
-          "Mingming Zha",
-          "Xiaofeng Wang"
+          "Shravya Kanchi",
+          "Xiaoyan Zang",
+          "Ying Zhang"
         ]
       },
       {
-        "title": "Analyzing Unsolicited Internet Traffic: Measuring IoT Security Threats via Network Telescopes",
-        "summary": "Network telescopes serve as a critical passive monitoring tool for capturing unsolicited Internet traffic, providing insights into global scanning and reconnaissance behavior. This study analyzes a 10",
-        "link": "http://arxiv.org/abs/2605.02795v1",
-        "date": "2026-05-04",
+        "title": "MOSAIC-Bench: Measuring Compositional Vulnerability Induction in Coding Agents",
+        "summary": "Coding agents often pass per-prompt safety review yet ship exploitable code when their tasks are decomposed into routine engineering tickets. The challenge is structural: existing safety alignment eva",
+        "link": "http://arxiv.org/abs/2605.03952v1",
+        "date": "2026-05-05",
         "authors": [
-          "Shereen Ismail",
-          "Taelyn Dyer",
-          "Raul Martinez"
+          "Jonathan Steinberg",
+          "Oren Gal"
         ]
       },
       {
-        "title": "FunFuzz: An LLM-Powered Evolutionary Fuzzing Framework",
-        "summary": "Modern fuzzers increasingly use Large Language Models (LLMs) to generate structured inputs, but LLM-driven fuzzing is sensitive to prompt initialization and sampling variance, which can reduce explora",
-        "link": "http://arxiv.org/abs/2605.02789v1",
-        "date": "2026-05-04",
+        "title": "HELO Cryptography: A Lightweight Cryptographic System for Enhancing IoT Security in P2P Data Transmission",
+        "summary": "The recent surge in security concerns for IoT devices highlights the increasing threat of cryptographic vulnerabilities. These weaknesses can lead to unauthorized access, data breaches, and manipulati",
+        "link": "http://arxiv.org/abs/2605.03948v1",
+        "date": "2026-05-05",
         "authors": [
-          "Mario Rodr\u00edguez B\u00e9jar",
-          "B. Romera-Paredes",
-          "Jose L. Hern\u00e1ndez-Ramos"
+          "Tahsin Ahmed",
+          "Arjita Saha",
+          "Arian Nuhan"
         ]
       },
       {
-        "title": "Dimensionality-Aware Anomaly Detection in Learned Representations of Self-Supervised Speech Models",
-        "summary": "Self-supervised speech models (S3Ms) achieve strong downstream performance, yet their learned representations remain poorly understood under natural and adversarial perturbations. Prior studies rely o",
-        "link": "http://arxiv.org/abs/2605.02715v1",
-        "date": "2026-05-04",
+        "title": "A Deeper Dive into the Irreversibility of PolyProtect: Making Protected Face Templates Harder to Invert",
+        "summary": "This work presents a deeper analysis of the \"irreversibility\" property of PolyProtect, a biometric template protection method initially proposed for securing face embeddings. PolyProtect transforms em",
+        "link": "http://arxiv.org/abs/2605.03857v1",
+        "date": "2026-05-05",
         "authors": [
-          "Sandra Arcos-Holzinger",
-          "Sarah M. Erfani",
-          "James Bailey"
+          "Vedrana Krivoku\u0107a Hahn",
+          "J\u00e9r\u00e9my Maceiras",
+          "S\u00e9bastien Marcel"
         ]
       },
       {
-        "title": "Reflecthernet: Exfiltrating 100BASE-TX Ethernet Traffic Using a Retroreflector Hardware Trojan",
-        "summary": "Electromagnetic eavesdropping is a well-established attack vector for remotely monitoring a target activity, most notably displays, over considerable ranges. Other targets have been considered resista",
-        "link": "http://arxiv.org/abs/2605.02702v1",
-        "date": "2026-05-04",
+        "title": "KVerus: Scalable and Resilient Formal Verification Proof Generation for Rust Code",
+        "summary": "Formal verification provides the highest assurance of software correctness and security, but its application to large-scale, evolving systems remains a major challenge. While large language models (LL",
+        "link": "http://arxiv.org/abs/2605.03822v1",
+        "date": "2026-05-05",
         "authors": [
-          "Pierre Granier",
-          "Matthieu Davy",
-          "Philippe Besnier"
+          "Yuwei Liu",
+          "Xinyi Wan",
+          "Yanhao Wang"
         ]
       }
     ],
-    "updated": "2026-05-05T05:16:23.811657Z"
+    "updated": "2026-05-06T05:30:50.759469Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -279,6 +280,6 @@
         ]
       }
     ],
-    "updated": "2026-05-05T05:16:23.811657Z"
+    "updated": "2026-05-06T05:30:50.759469Z"
   }
 }
