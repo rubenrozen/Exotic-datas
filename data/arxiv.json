@@ -1,284 +1,32 @@
 {
   "cs.AI": {
     "label": "AI / Machine Learning",
-    "papers": [
-      {
-        "title": "Taming Outlier Tokens in Diffusion Transformers",
-        "summary": "We study outlier tokens in Diffusion Transformers (DiTs) for image generation. Prior work has shown that Vision Transformers (ViTs) can produce a small number of high-norm tokens that attract dispropo",
-        "link": "http://arxiv.org/abs/2605.05206v1",
-        "date": "2026-05-06",
-        "authors": [
-          "Xiaoyu Wu",
-          "Yifei Wang",
-          "Tsu-Jui Fu"
-        ]
-      },
-      {
-        "title": "Grokability in five inequalities",
-        "summary": "In this note, we report five mathematical discoveries made in collaboration with Grok, all of which have been subsequently verified by the authors. These include an improved lower bound on the maximal",
-        "link": "http://arxiv.org/abs/2605.05193v1",
-        "date": "2026-05-06",
-        "authors": [
-          "Paata Ivanisvili",
-          "Xinyuan Xie"
-        ]
-      },
-      {
-        "title": "Almost-Orthogonality in Lp Spaces: A Case Study with Grok",
-        "summary": "Carbery proposed the following sharpened form of triangle inequality for many functions: for any $p\\ge 2$ and any finite sequence $(f_j)_j\\subset L^p$ we have \\[ \\Big\\|\\sum_j f_j\\Big\\|_p \\ \\le\\ \\left(",
-        "link": "http://arxiv.org/abs/2605.05192v1",
-        "date": "2026-05-06",
-        "authors": [
-          "Ziang Chen",
-          "Jaume de Dios Pont",
-          "Paata Ivanisvili"
-        ]
-      },
-      {
-        "title": "LongSeeker: Elastic Context Orchestration for Long-Horizon Search Agents",
-        "summary": "Long-horizon search agents must manage a rapidly growing working context as they reason, call tools, and observe information. Naively accumulating all intermediate content can overwhelm the agent, inc",
-        "link": "http://arxiv.org/abs/2605.05191v1",
-        "date": "2026-05-06",
-        "authors": [
-          "Yijun Lu",
-          "Rui Ye",
-          "Yuwen Du"
-        ]
-      },
-      {
-        "title": "When Life Gives You BC, Make Q-functions: Extracting Q-values from Behavior Cloning for On-Robot Reinforcement Learning",
-        "summary": "Behavior Cloning (BC) has emerged as a highly effective paradigm for robot learning. However, BC lacks a self-guided mechanism for online improvement after demonstrations have been collected. Existing",
-        "link": "http://arxiv.org/abs/2605.05172v1",
-        "date": "2026-05-06",
-        "authors": [
-          "Lakshita Dodeja",
-          "Ondrej Biza",
-          "Shivam Vats"
-        ]
-      },
-      {
-        "title": "Design Conductor 2.0: An agent builds a TurboQuant inference accelerator in 80 hours",
-        "summary": "Driven by a rapid co-evolution of both harness and underlying models, LLM agents are improving at a dizzying pace. In our prior work (performed in Dec. 2025), we introduced \"Design Conductor\" (or just",
-        "link": "http://arxiv.org/abs/2605.05170v1",
-        "date": "2026-05-06",
-        "authors": [
-          " The Verkor Team",
-          "Ravi Krishna",
-          "Suresh Krishna"
-        ]
-      },
-      {
-        "title": "The First Token Knows: Single-Decode Confidence for Hallucination Detection",
-        "summary": "Self-consistency detects hallucinations by generating multiple sampled answers to a question and measuring agreement, but this requires repeated decoding and can be sensitive to lexical variation. Sem",
-        "link": "http://arxiv.org/abs/2605.05166v1",
-        "date": "2026-05-06",
-        "authors": [
-          "Mina Gabriel"
-        ]
-      },
-      {
-        "title": "Geometry-Aware State Space Model: A New Paradigm for Whole-Slide Image Representation",
-        "summary": "Accurate analysis of histopathological images is critical for disease diagnosis and treatment planning. Whole-slide images (WSIs), which digitize tissue specimens at gigapixel resolution, are fundamen",
-        "link": "http://arxiv.org/abs/2605.05164v1",
-        "date": "2026-05-06",
-        "authors": [
-          "Enhui Chai",
-          "Sicheng Chen",
-          "Tianyi Zhang"
-        ]
-      }
-    ],
-    "updated": "2026-05-07T05:33:15.407552Z"
+    "papers": [],
+    "error": "The read operation timed out"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-05-07T05:33:15.407552Z"
+    "error": "The read operation timed out"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-05-07T05:33:15.407552Z"
+    "error": "The read operation timed out"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-05-07T05:33:15.407552Z"
+    "updated": "2026-05-08T04:54:25.117108Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
-    "papers": [
-      {
-        "title": "Toward a Risk Assessment Framework for Institutional DeFi: A Nine-Dimension Approach",
-        "summary": "Decentralized finance (DeFi) protocols now intermediate over USD 100 billion in value, including regulated stablecoins and tokenized assets deployed as collateral, yet no widely adopted framework oper",
-        "link": "http://arxiv.org/abs/2605.05145v1",
-        "date": "2026-05-06",
-        "authors": [
-          "Eva Oberholzer",
-          "Valeriy Zamaraiev"
-        ]
-      },
-      {
-        "title": "SoK: Robustness in Large Language Models against Jailbreak Attacks",
-        "summary": "Large Language Models (LLMs) have achieved remarkable success but remain highly susceptible to jailbreak attacks, in which adversarial prompts coerce models into generating harmful, unethical, or poli",
-        "link": "http://arxiv.org/abs/2605.05058v1",
-        "date": "2026-05-06",
-        "authors": [
-          "Feiyue Xu",
-          "Hongsheng Hu",
-          "Chaoxiang He"
-        ]
-      },
-      {
-        "title": "Agentic Vulnerability Reasoning on Windows COM Binaries",
-        "summary": "Windows Component Object Model (COM) services run with elevated privileges and are widely accessible to authenticated users, making race conditions in these binaries a critical surface for local privi",
-        "link": "http://arxiv.org/abs/2605.05000v1",
-        "date": "2026-05-06",
-        "authors": [
-          "Hwiwon Lee",
-          "Jongseong Kim",
-          "Lingming Zhang"
-        ]
-      },
-      {
-        "title": "You Snooze, You Lose: Automatic Safety Alignment Restoration through Neural Weight Translation",
-        "summary": "The open-source ecosystem has accelerated the democratization of Large Language Models (LLMs) through the public distribution of specialized Low-Rank Adaptation (LoRA) modules. However, integrating th",
-        "link": "http://arxiv.org/abs/2605.04992v1",
-        "date": "2026-05-06",
-        "authors": [
-          "Marco Arazzi",
-          "Vignesh Kumar Kembu",
-          "Antonino Nocera"
-        ]
-      },
-      {
-        "title": "Probabilistic Atomic Swaps for Bitcoin and Friends",
-        "summary": "Atomic swaps are a fundamental primitive for the trustless exchange of digital assets across blockchains: they guarantee that either both parties receive the agreed assets or neither party transfers. ",
-        "link": "http://arxiv.org/abs/2605.04975v1",
-        "date": "2026-05-06",
-        "authors": [
-          "Paul Gerhart",
-          "Jay Taylor",
-          "Sri Aravinda Krishnan Thyagarajan"
-        ]
-      },
-      {
-        "title": "On the (In-)Security of the Shuffling Defense in the Transformer Secure Inference",
-        "summary": "For Transformer models, cryptographically secure inference ensures that the client learns only the final output, while the server learns nothing about the client's input. However, securely computing n",
-        "link": "http://arxiv.org/abs/2605.04901v1",
-        "date": "2026-05-06",
-        "authors": [
-          "Zhengyi Li",
-          "Yakai Wang",
-          "Kang Yang"
-        ]
-      },
-      {
-        "title": "A Pragmatic Comparison of Cryptographic Computation Technologies for Machine Learning",
-        "summary": "As security demands increase, the importance of secure computation technologies grows, yet these technologies can often seem overwhelming to practitioners. Furthermore, many approaches focus only on a",
-        "link": "http://arxiv.org/abs/2605.04858v1",
-        "date": "2026-05-06",
-        "authors": [
-          "Marcus Taubert",
-          "Adam Skuta",
-          "Thomas Loruenser"
-        ]
-      },
-      {
-        "title": "Data anonymization in the presence of outliers via invariant coordinate selection",
-        "summary": "Protecting confidential data while preserving utility is particularly challenging when data sets contain outlying observations. Existing latent space anonymization methods, such as spectral anonymizat",
-        "link": "http://arxiv.org/abs/2605.04833v1",
-        "date": "2026-05-06",
-        "authors": [
-          "Katariina Perkonoja",
-          "Joni Virta"
-        ]
-      }
-    ],
-    "updated": "2026-05-07T05:33:15.407552Z"
+    "papers": [],
+    "error": "The read operation timed out"
   },
   "q-bio": {
     "label": "Biology",
-    "papers": [
-      {
-        "title": "Synchronization of active mechanical oscillators by an inertial load",
-        "summary": "Motivated by the operation of myogenic (self-oscillatory) insect flight muscle, we study a model consisting of a large number of identical oscillatory contractile elements joined in a chain, whose end",
-        "link": "http://arxiv.org/abs/physics/0307155v1",
-        "date": "2003-07-31",
-        "authors": [
-          "Andrej Vilfan",
-          "Thomas Duke"
-        ]
-      },
-      {
-        "title": "Towards the Understanding of Stability Puzzles in Phage lambda",
-        "summary": "We discuss two aspects, the in vivo and in vitro difference and the modeling of noise, of integrative modeling of network dynamics in biology, using phage lambda as an example. We believe those two as",
-        "link": "http://arxiv.org/abs/cond-mat/0307747v1",
-        "date": "2003-07-30",
-        "authors": [
-          "P. Ao",
-          "L. Yin"
-        ]
-      },
-      {
-        "title": "A Growth Model for Multicellular Tumor Spheroids",
-        "summary": "Most organisms grow according to simple laws, which in principle can be derived from energy conservation and scaling arguments, critically dependent on the relation between the metabolic rate B of ene",
-        "link": "http://arxiv.org/abs/physics/0307136v1",
-        "date": "2003-07-29",
-        "authors": [
-          "Pier Paolo Delsanto",
-          "Caterina Guiot",
-          "Piero Giorgio Degiorgis"
-        ]
-      },
-      {
-        "title": "Bidirectional communication in neural networks moderated by a Hebb-like learning rule",
-        "summary": "We demonstrate that our recently introduced stochastic Hebb-like learning rule is capable of learning the problem of timing in general network topologies generated by an algorithm of Watts and Strogat",
-        "link": "http://arxiv.org/abs/cond-mat/0307667v1",
-        "date": "2003-07-28",
-        "authors": [
-          "Frank Emmert-Streib"
-        ]
-      },
-      {
-        "title": "A novel stochastic Hebb-like learning rule for neural networks",
-        "summary": "We present a novel stochastic Hebb-like learning rule for neural networks. This learning rule is stochastic with respect to the selection of the time points when a synaptic modification is induced by ",
-        "link": "http://arxiv.org/abs/cond-mat/0307666v1",
-        "date": "2003-07-28",
-        "authors": [
-          "Frank Emmert-Streib"
-        ]
-      },
-      {
-        "title": "Free Energy Transduction in a Chemical Motor Model",
-        "summary": "Motor enzymes catalyze chemical reactions, like the hydrolysis of ATP, and in the process they also perform work. Recent studies indicate that motor enzymes perform work with specific intermediate ste",
-        "link": "http://arxiv.org/abs/physics/0307121v1",
-        "date": "2003-07-24",
-        "authors": [
-          "Josh E. Baker"
-        ]
-      },
-      {
-        "title": "Maximisation Principles and Daisyworld",
-        "summary": "We investigate whether the equilibrium time averaged state of a self-organising system with many internal degrees of freedom, 2D- daisyworld, can be described by optimising a single quantity. Unlike p",
-        "link": "http://arxiv.org/abs/cond-mat/0307567v1",
-        "date": "2003-07-23",
-        "authors": [
-          "G. J. Ackland"
-        ]
-      },
-      {
-        "title": "Xerogel Protein Substrates for Far Infrared Studies",
-        "summary": "A number of researchers are attempting to develop a biosensor based on terahertz sensing. Key to the realization of any biosensor system is the access of the target molecules to the sensor. In the cas",
-        "link": "http://arxiv.org/abs/cond-mat/0307558v1",
-        "date": "2003-07-23",
-        "authors": [
-          "J. -Y. Chen",
-          "W. Cox",
-          "E. Tehan"
-        ]
-      }
-    ],
-    "updated": "2026-05-07T05:33:15.407552Z"
+    "papers": [],
+    "error": "HTTP Error 429: Unknown Error"
   }
 }
