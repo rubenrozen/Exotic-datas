@@ -1,32 +1,287 @@
 {
   "cs.AI": {
     "label": "AI / Machine Learning",
-    "papers": [],
-    "error": "The read operation timed out"
+    "papers": [
+      {
+        "title": "ActCam: Zero-Shot Joint Camera and 3D Motion Control for Video Generation",
+        "summary": "For artistic applications, video generation requires fine-grained control over both performance and cinematography, i.e., the actor's motion and the camera trajectory. We present ActCam, a zero-shot m",
+        "link": "http://arxiv.org/abs/2605.06667v1",
+        "date": "2026-05-07",
+        "authors": [
+          "Omar El Khalifi",
+          "Thomas Rossi",
+          "Oscar Fossey"
+        ]
+      },
+      {
+        "title": "UniPool: A Globally Shared Expert Pool for Mixture-of-Experts",
+        "summary": "Modern Mixture-of-Experts (MoE) architectures allocate expert capacity through a rigid per-layer rule: each transformer layer owns a separate expert set. This convention couples depth scaling with lin",
+        "link": "http://arxiv.org/abs/2605.06665v1",
+        "date": "2026-05-07",
+        "authors": [
+          "Minbin Huang",
+          "Han Shi",
+          "Chuanyang Zheng"
+        ]
+      },
+      {
+        "title": "BAMI: Training-Free Bias Mitigation in GUI Grounding",
+        "summary": "GUI grounding is a critical capability for enabling GUI agents to execute tasks such as clicking and dragging. However, in complex scenarios like the ScreenSpot-Pro benchmark, existing models often su",
+        "link": "http://arxiv.org/abs/2605.06664v1",
+        "date": "2026-05-07",
+        "authors": [
+          "Borui Zhang",
+          "Bo Zhang",
+          "Bo Wang"
+        ]
+      },
+      {
+        "title": "Verifier-Backed Hard Problem Generation for Mathematical Reasoning",
+        "summary": "Large Language Models (LLMs) demonstrate strong capabilities for solving scientific and mathematical problems, yet they struggle to produce valid, challenging, and novel problems - an essential compon",
+        "link": "http://arxiv.org/abs/2605.06660v1",
+        "date": "2026-05-07",
+        "authors": [
+          "Yuhang Lai",
+          "Jiazhan Feng",
+          "Yee Whye Teh"
+        ]
+      },
+      {
+        "title": "Optimizer-Model Consistency: Full Finetuning with the Same Optimizer as Pretraining Forgets Less",
+        "summary": "Optimizers play an important role in both pretraining and finetuning stages when training large language models (LLMs). In this paper, we present an observation that full finetuning with the same opti",
+        "link": "http://arxiv.org/abs/2605.06654v1",
+        "date": "2026-05-07",
+        "authors": [
+          "Yuxing Liu",
+          "Jianyu Wang",
+          "Tong Zhang"
+        ]
+      },
+      {
+        "title": "When No Benchmark Exists: Validating Comparative LLM Safety Scoring Without Ground-Truth Labels",
+        "summary": "Many deployments must compare candidate language models for safety before a labeled benchmark exists for the relevant language, sector, or regulatory regime. We formalize this setting as benchmarkless",
+        "link": "http://arxiv.org/abs/2605.06652v1",
+        "date": "2026-05-07",
+        "authors": [
+          "Sushant Gautam",
+          "Finn Schwall",
+          "Annika Willoch Olstad"
+        ]
+      },
+      {
+        "title": "AI Co-Mathematician: Accelerating Mathematicians with Agentic AI",
+        "summary": "We introduce the AI co-mathematician, a workbench for mathematicians to interactively leverage AI agents to pursue open-ended research. The AI co-mathematician is optimized to provide holistic support",
+        "link": "http://arxiv.org/abs/2605.06651v1",
+        "date": "2026-05-07",
+        "authors": [
+          "Daniel Zheng",
+          "Ingrid von Glehn",
+          "Yori Zwols"
+        ]
+      },
+      {
+        "title": "Superintelligent Retrieval Agent: The Next Frontier of Information Retrieval",
+        "summary": "Retrieval-augmented agents are increasingly the interface to large organizational knowledge bases, yet most still treat retrieval as a black box: they issue exploratory queries, inspect returned snipp",
+        "link": "http://arxiv.org/abs/2605.06647v1",
+        "date": "2026-05-07",
+        "authors": [
+          "Zeyu Yang",
+          "Qi Ma",
+          "Jason Chen"
+        ]
+      }
+    ],
+    "updated": "2026-05-09T05:23:18.654686Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "error": "The read operation timed out"
+    "updated": "2026-05-09T05:23:18.654686Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "error": "The read operation timed out"
+    "updated": "2026-05-09T05:23:18.654686Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-05-08T04:54:25.117108Z"
+    "updated": "2026-05-09T05:23:18.654686Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
-    "papers": [],
-    "error": "The read operation timed out"
+    "papers": [
+      {
+        "title": "Patch2Vuln: Agentic Reconstruction of Vulnerabilities from Linux Distribution Binary Patches",
+        "summary": "Security updates create a short but important window in which defenders and attackers can compare vulnerable and patched software. Yet in many operational settings, the most accessible artifacts are b",
+        "link": "http://arxiv.org/abs/2605.06601v1",
+        "date": "2026-05-07",
+        "authors": [
+          "Isaac David",
+          "Arthur Gervais"
+        ]
+      },
+      {
+        "title": "FedAttr: Towards Privacy-preserving Client-Level Attribution in Federated LLM Fine-tuning",
+        "summary": "Watermark radioactivity testing type of methods can detect whether a model was trained on watermarked documents, and have become key tools for protecting data ownership in the fine-tuning of large lan",
+        "link": "http://arxiv.org/abs/2605.06596v1",
+        "date": "2026-05-07",
+        "authors": [
+          "Su Zhang",
+          "Junfeng Guo",
+          "Heng Huang"
+        ]
+      },
+      {
+        "title": "CLAD: A Clustered Label-Agnostic Federated Learning Framework for Joint Anomaly Detection and Attack Classification",
+        "summary": "The rapid expansion of the Internet of Things (IoT) and Industrial IoT (IIoT) has created a massive, heterogeneous attack surface that challenges traditional network security mechanisms. While Federat",
+        "link": "http://arxiv.org/abs/2605.06571v1",
+        "date": "2026-05-07",
+        "authors": [
+          "Iason Ofeidis",
+          "Nikos Papadis",
+          "Randeep Bhatia"
+        ]
+      },
+      {
+        "title": "On the Security of Research Artifacts",
+        "summary": "Research artifacts are widely shared to support reproducibility, and artifact evaluation (AE) has become common at many leading conferences. However, AE mainly checks whether artifacts work as claimed",
+        "link": "http://arxiv.org/abs/2605.06508v1",
+        "date": "2026-05-07",
+        "authors": [
+          "Nanda Rani",
+          "Christian Rossow"
+        ]
+      },
+      {
+        "title": "PACZero: PAC-Private Fine-Tuning of Language Models via Sign Quantization",
+        "summary": "We introduce PACZero, a family of PAC-private zeroth-order mechanisms for fine-tuning large language models that delivers usable utility at $I(S^*; Y_{1:T})=0$. This privacy regime bounds the membersh",
+        "link": "http://arxiv.org/abs/2605.06505v1",
+        "date": "2026-05-07",
+        "authors": [
+          "Murat Bilgehan Ertan",
+          "Xiaochen Zhu",
+          "Phuong Ha Nguyen"
+        ]
+      },
+      {
+        "title": "Privacy by Postprocessing the Discrete Laplace Mechanism",
+        "summary": "We show that an \"old dog\", the classical discrete Laplace (aka.~geometric) mechanism, can \"perform new tricks\":   1. It can be post-processed to yield a simple, unbiased estimator of any subexponentia",
+        "link": "http://arxiv.org/abs/2605.06502v1",
+        "date": "2026-05-07",
+        "authors": [
+          "Quentin Hillebrand",
+          "Jacob Imola",
+          "Rasmus Pagh"
+        ]
+      },
+      {
+        "title": "Autonomous Adversary: Red-Teaming in the age of LLM",
+        "summary": "Language Model Agents (LMAs) are emerging as a powerful primitive for augmenting red-team operations. They can support attack planning, adversary emulation, and the orchestration of multi-step activit",
+        "link": "http://arxiv.org/abs/2605.06486v1",
+        "date": "2026-05-07",
+        "authors": [
+          "Mohammad Mamun",
+          "Mohamed Gaber",
+          "Scott Buffett"
+        ]
+      },
+      {
+        "title": "Pop Quiz Attack: Black-box Membership Inference Attacks Against Large Language Models",
+        "summary": "Large language models (LLMs) show strong performance across many applications, but their ability to memorize and potentially reveal training data raises serious privacy concerns. We introduce the PopQ",
+        "link": "http://arxiv.org/abs/2605.06423v1",
+        "date": "2026-05-07",
+        "authors": [
+          "Zeyuan Chen",
+          "Yihan Ma",
+          "Xinyue Shen"
+        ]
+      }
+    ],
+    "updated": "2026-05-09T05:23:18.654686Z"
   },
   "q-bio": {
     "label": "Biology",
-    "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "papers": [
+      {
+        "title": "Synchronization of active mechanical oscillators by an inertial load",
+        "summary": "Motivated by the operation of myogenic (self-oscillatory) insect flight muscle, we study a model consisting of a large number of identical oscillatory contractile elements joined in a chain, whose end",
+        "link": "http://arxiv.org/abs/physics/0307155v1",
+        "date": "2003-07-31",
+        "authors": [
+          "Andrej Vilfan",
+          "Thomas Duke"
+        ]
+      },
+      {
+        "title": "Towards the Understanding of Stability Puzzles in Phage lambda",
+        "summary": "We discuss two aspects, the in vivo and in vitro difference and the modeling of noise, of integrative modeling of network dynamics in biology, using phage lambda as an example. We believe those two as",
+        "link": "http://arxiv.org/abs/cond-mat/0307747v1",
+        "date": "2003-07-30",
+        "authors": [
+          "P. Ao",
+          "L. Yin"
+        ]
+      },
+      {
+        "title": "A Growth Model for Multicellular Tumor Spheroids",
+        "summary": "Most organisms grow according to simple laws, which in principle can be derived from energy conservation and scaling arguments, critically dependent on the relation between the metabolic rate B of ene",
+        "link": "http://arxiv.org/abs/physics/0307136v1",
+        "date": "2003-07-29",
+        "authors": [
+          "Pier Paolo Delsanto",
+          "Caterina Guiot",
+          "Piero Giorgio Degiorgis"
+        ]
+      },
+      {
+        "title": "Bidirectional communication in neural networks moderated by a Hebb-like learning rule",
+        "summary": "We demonstrate that our recently introduced stochastic Hebb-like learning rule is capable of learning the problem of timing in general network topologies generated by an algorithm of Watts and Strogat",
+        "link": "http://arxiv.org/abs/cond-mat/0307667v1",
+        "date": "2003-07-28",
+        "authors": [
+          "Frank Emmert-Streib"
+        ]
+      },
+      {
+        "title": "A novel stochastic Hebb-like learning rule for neural networks",
+        "summary": "We present a novel stochastic Hebb-like learning rule for neural networks. This learning rule is stochastic with respect to the selection of the time points when a synaptic modification is induced by ",
+        "link": "http://arxiv.org/abs/cond-mat/0307666v1",
+        "date": "2003-07-28",
+        "authors": [
+          "Frank Emmert-Streib"
+        ]
+      },
+      {
+        "title": "Free Energy Transduction in a Chemical Motor Model",
+        "summary": "Motor enzymes catalyze chemical reactions, like the hydrolysis of ATP, and in the process they also perform work. Recent studies indicate that motor enzymes perform work with specific intermediate ste",
+        "link": "http://arxiv.org/abs/physics/0307121v1",
+        "date": "2003-07-24",
+        "authors": [
+          "Josh E. Baker"
+        ]
+      },
+      {
+        "title": "Maximisation Principles and Daisyworld",
+        "summary": "We investigate whether the equilibrium time averaged state of a self-organising system with many internal degrees of freedom, 2D- daisyworld, can be described by optimising a single quantity. Unlike p",
+        "link": "http://arxiv.org/abs/cond-mat/0307567v1",
+        "date": "2003-07-23",
+        "authors": [
+          "G. J. Ackland"
+        ]
+      },
+      {
+        "title": "Xerogel Protein Substrates for Far Infrared Studies",
+        "summary": "A number of researchers are attempting to develop a biosensor based on terahertz sensing. Key to the realization of any biosensor system is the access of the target molecules to the sensor. In the cas",
+        "link": "http://arxiv.org/abs/cond-mat/0307558v1",
+        "date": "2003-07-23",
+        "authors": [
+          "J. -Y. Chen",
+          "W. Cox",
+          "E. Tehan"
+        ]
+      }
+    ],
+    "updated": "2026-05-09T05:23:18.654686Z"
   }
 }
