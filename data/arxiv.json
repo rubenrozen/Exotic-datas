@@ -91,22 +91,22 @@
         ]
       }
     ],
-    "updated": "2026-05-09T05:23:18.654686Z"
+    "updated": "2026-05-10T05:38:37.626959Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-05-09T05:23:18.654686Z"
+    "updated": "2026-05-10T05:38:37.626959Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-05-09T05:23:18.654686Z"
+    "updated": "2026-05-10T05:38:37.626959Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-05-09T05:23:18.654686Z"
+    "updated": "2026-05-10T05:38:37.626959Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
@@ -198,7 +198,7 @@
         ]
       }
     ],
-    "updated": "2026-05-09T05:23:18.654686Z"
+    "updated": "2026-05-10T05:38:37.626959Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -282,6 +282,6 @@
         ]
       }
     ],
-    "updated": "2026-05-09T05:23:18.654686Z"
+    "updated": "2026-05-10T05:38:37.626959Z"
   }
 }
