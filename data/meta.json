@@ -1,9 +1,11 @@
 {
-  "last_run": "2026-05-10T05:38:37.626959Z",
+  "last_run": "2026-05-11T06:00:18.366247Z",
   "errors": [
+    "CO2: <urlopen error [Errno 101] Network is unreachable>",
     "BDI: No BDI data from any source",
     "ACLED OAuth: HTTP Error 403: Forbidden",
-    "Restaurant: HTTP Error 400: Bad Request",
+    "Truck: HTTP Error 500: Internal Server Error",
+    "Restaurant: HTTP Error 500: Internal Server Error",
     "Population: HTTP Error 401: Unauthorized"
   ],
   "datasets": [

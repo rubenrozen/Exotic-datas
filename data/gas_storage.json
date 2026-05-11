@@ -1,13 +1,7 @@
 {
-  "eu_avg": 34.7,
-  "trend": 0.22,
+  "eu_avg": 35.0,
+  "trend": 0.3,
   "series": [
-    {
-      "date": "2025-07-13",
-      "pct": 63.0,
-      "gasInStorage": 714.6,
-      "trend": 0.39
-    },
     {
       "date": "2025-07-14",
       "pct": 63.3,
@@ -1801,61 +1795,67 @@
       "pct": 34.7,
       "gasInStorage": 393.2,
       "trend": 0.22
+    },
+    {
+      "date": "2026-05-09",
+      "pct": 35.0,
+      "gasInStorage": 396.6,
+      "trend": 0.3
     }
   ],
   "countries": {
     "DE": {
-      "pct": 27.3,
-      "trend": 0.1,
-      "gasInStorage": 67.7
+      "pct": 27.6,
+      "trend": 0.28,
+      "gasInStorage": 68.4
     },
     "FR": {
-      "pct": 35.4,
-      "trend": 0.41,
-      "gasInStorage": 43.8
+      "pct": 35.8,
+      "trend": 0.43,
+      "gasInStorage": 44.4
     },
     "IT": {
-      "pct": 52.3,
-      "trend": 0.28,
-      "gasInStorage": 106.6
+      "pct": 52.6,
+      "trend": 0.36,
+      "gasInStorage": 107.3
     },
     "ES": {
-      "pct": 65.8,
+      "pct": 65.9,
       "trend": 0.11,
       "gasInStorage": 23.6
     },
     "NL": {
-      "pct": 11.1,
-      "trend": 0.12,
-      "gasInStorage": 16.0
+      "pct": 11.4,
+      "trend": 0.24,
+      "gasInStorage": 16.4
     },
     "AT": {
-      "pct": 41.2,
-      "trend": 0.31,
-      "gasInStorage": 41.4
+      "pct": 41.6,
+      "trend": 0.35,
+      "gasInStorage": 41.7
     },
     "BE": {
-      "pct": 23.9,
-      "trend": 0.19,
+      "pct": 23.8,
+      "trend": -0.11,
       "gasInStorage": 1.8
     },
     "PL": {
-      "pct": 47.5,
-      "trend": 0.27,
-      "gasInStorage": 17.5
+      "pct": 47.9,
+      "trend": 0.4,
+      "gasInStorage": 17.7
     },
     "CZ": {
-      "pct": 31.4,
-      "trend": 0.26,
-      "gasInStorage": 14.2
+      "pct": 31.7,
+      "trend": 0.28,
+      "gasInStorage": 14.4
     },
     "HU": {
-      "pct": 37.0,
+      "pct": 37.5,
       "trend": 0.3,
-      "gasInStorage": 25.2
+      "gasInStorage": 25.4
     }
   },
   "alert_threshold": 20.0,
   "score": 35,
-  "updated": "2026-05-10T05:38:37.626959Z"
+  "updated": "2026-05-11T06:00:18.366247Z"
 }
