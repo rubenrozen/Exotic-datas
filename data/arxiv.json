@@ -1,95 +1,8 @@
 {
   "cs.AI": {
     "label": "AI / Machine Learning",
-    "papers": [
-      {
-        "title": "EmambaIR: Efficient Visual State Space Model for Event-guided Image Reconstruction",
-        "summary": "Recent event-based image reconstruction methods predominantly rely on Convolutional Neural Networks (CNNs) and Vision Transformers (ViTs) to process complementary event information. However, these arc",
-        "link": "http://arxiv.org/abs/2605.08073v1",
-        "date": "2026-05-08",
-        "authors": [
-          "Wei Yu",
-          "Yunhang Qian"
-        ]
-      },
-      {
-        "title": "VecCISC: Improving Confidence-Informed Self-Consistency with Reasoning Trace Clustering and Candidate Answer Selection",
-        "summary": "A standard technique for scaling inference-time reasoning is Self-Consistency, whereby multiple candidate answers are sampled from an LLM and the most common answer is selected. More recently, it has ",
-        "link": "http://arxiv.org/abs/2605.08070v1",
-        "date": "2026-05-08",
-        "authors": [
-          "James Petullo",
-          "Sonny George",
-          "Dylan Cashman"
-        ]
-      },
-      {
-        "title": "Flow-OPD: On-Policy Distillation for Flow Matching Models",
-        "summary": "Existing Flow Matching (FM) text-to-image models suffer from two critical bottlenecks under multi-task alignment: the reward sparsity induced by scalar-valued rewards, and the gradient interference ar",
-        "link": "http://arxiv.org/abs/2605.08063v1",
-        "date": "2026-05-08",
-        "authors": [
-          "Zhen Fang",
-          "Wenxuan Huang",
-          "Yu Zeng"
-        ]
-      },
-      {
-        "title": "Rubric-Grounded RL: Structured Judge Rewards for Generalizable Reasoning",
-        "summary": "We argue that decomposing reward into weighted, verifiable criteria and using an LLM judge to score them provides a partial-credit optimization signal: instead of a binary outcome or a single holistic",
-        "link": "http://arxiv.org/abs/2605.08061v1",
-        "date": "2026-05-08",
-        "authors": [
-          "Manish Bhattarai",
-          "Ismael Boureima",
-          "Nishath Rajiv Ranasinghe"
-        ]
-      },
-      {
-        "title": "The Memory Curse: How Expanded Recall Erodes Cooperative Intent in LLM Agents",
-        "summary": "Context window expansion is often treated as a straightforward capability upgrade for LLMs, but we find it systematically fails in multi-agent social dilemmas. Across 7 LLMs and 4 games over 500 round",
-        "link": "http://arxiv.org/abs/2605.08060v1",
-        "date": "2026-05-08",
-        "authors": [
-          "Jiayuan Liu",
-          "Tianqin Li",
-          "Shiyi Du"
-        ]
-      },
-      {
-        "title": "CA-SQL: Complexity-Aware Inference Time Reasoning for Text-to-SQL via Exploration and Compute Budget Allocation",
-        "summary": "While recent advancements in inference-time learning have improved LLM reasoning on Text-to-SQL tasks, current solutions still struggle to perform well on the most challenging tasks in the Bird-Bench ",
-        "link": "http://arxiv.org/abs/2605.08057v1",
-        "date": "2026-05-08",
-        "authors": [
-          "James Petullo",
-          "Nianwen Xue"
-        ]
-      },
-      {
-        "title": "Fast Byte Latent Transformer",
-        "summary": "Recent byte-level language models (LMs) match the performance of token-level models without relying on subword vocabularies, yet their utility is limited by slow, byte-by-byte autoregressive generatio",
-        "link": "http://arxiv.org/abs/2605.08044v1",
-        "date": "2026-05-08",
-        "authors": [
-          "Julie Kallini",
-          "Artidoro Pagnoni",
-          "Tomasz Limisiewicz"
-        ]
-      },
-      {
-        "title": "SCOPE: Structured Decomposition and Conditional Skill Orchestration for Complex Image Generation",
-        "summary": "While text-to-image models have made strong progress in visual fidelity, faithfully realizing complex visual intents remains challenging because many requirements must be tracked across grounding, gen",
-        "link": "http://arxiv.org/abs/2605.08043v1",
-        "date": "2026-05-08",
-        "authors": [
-          "Tianfei Ren",
-          "Zhipeng Yan",
-          "Yiming Zhao"
-        ]
-      }
-    ],
-    "updated": "2026-05-11T06:00:18.366247Z"
+    "papers": [],
+    "error": "HTTP Error 429: Unknown Error"
   },
   "q-fin": {
     "label": "Quantitative Finance",
@@ -109,7 +22,7 @@
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [],
-    "error": "The read operation timed out"
+    "error": "HTTP Error 429: Unknown Error"
   },
   "q-bio": {
     "label": "Biology",
