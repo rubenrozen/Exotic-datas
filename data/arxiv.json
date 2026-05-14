@@ -3,280 +3,116 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "AlphaGRPO: Unlocking Self-Reflective Multimodal Generation in UMMs via Decompositional Verifiable Reward",
-        "summary": "In this paper, we propose AlphaGRPO, a novel framework that applies Group Relative Policy Optimization (GRPO) to AR-Diffusion Unified Multimodal Models (UMMs) to enhance multimodal generation capabili",
-        "link": "http://arxiv.org/abs/2605.12495v1",
-        "date": "2026-05-12",
+        "title": "WARDEN: Endangered Indigenous Language Transcription and Translation with 6 Hours of Training Data",
+        "summary": "This paper introduces WARDEN, an early language model system capable of transcribing and translating Wardaman, an endangered Australian indigenous language into English. The significant challenge we f",
+        "link": "http://arxiv.org/abs/2605.13846v1",
+        "date": "2026-05-13",
         "authors": [
-          "Runhui Huang",
-          "Jie Wu",
-          "Rui Yang"
+          "Ziheng Zhang",
+          "Yunzhong Hou",
+          "Naijing Liu"
         ]
       },
       {
-        "title": "Learning, Fast and Slow: Towards LLMs That Adapt Continually",
-        "summary": "Large language models (LLMs) are trained for downstream tasks by updating their parameters (e.g., via RL). However, updating parameters forces them to absorb task-specific information, which can resul",
-        "link": "http://arxiv.org/abs/2605.12484v1",
-        "date": "2026-05-12",
+        "title": "EVA-Bench: A New End-to-end Framework for Evaluating Voice Agents",
+        "summary": "Voice agents, artificial intelligence systems that conduct spoken conversations to complete tasks, are increasingly deployed across enterprise applications. However, no existing benchmark jointly addr",
+        "link": "http://arxiv.org/abs/2605.13841v1",
+        "date": "2026-05-13",
         "authors": [
-          "Rishabh Tiwari",
-          "Kusha Sareen",
-          "Lakshya A Agrawal"
+          "Tara Bogavelli",
+          "Gabrielle Gauthier Melan\u00e7on",
+          "Katrina Stankiewicz"
         ]
       },
       {
-        "title": "Beyond GRPO and On-Policy Distillation: An Empirical Sparse-to-Dense Reward Principle for Language-Model Post-Training",
-        "summary": "In settings where labeled verifiable training data is the binding constraint, each checked example should be allocated carefully. The standard practice is to use this data directly on the model that w",
-        "link": "http://arxiv.org/abs/2605.12483v1",
-        "date": "2026-05-12",
+        "title": "Topology-Preserving Neural Operator Learning via Hodge Decomposition",
+        "summary": "In this paper, we study solution operators of physical field equations on geometric meshes from a function-space perspective. We reveal that Hodge orthogonality fundamentally resolves spectral interfe",
+        "link": "http://arxiv.org/abs/2605.13834v1",
+        "date": "2026-05-13",
         "authors": [
-          "Yuanda Xu",
-          "Hejian Sang",
-          "Zhengze Zhou"
+          "Dongzhe Zheng",
+          "Tao Zhong",
+          "Christine Allen-Blanchette"
         ]
       },
       {
-        "title": "ToolCUA: Towards Optimal GUI-Tool Path Orchestration for Computer Use Agents",
-        "summary": "Computer Use Agents (CUAs) can act through both atomic GUI actions, such as click and type, and high-level tool calls, such as API-based file operations, but this hybrid action space often leaves them",
-        "link": "http://arxiv.org/abs/2605.12481v1",
-        "date": "2026-05-12",
+        "title": "Quantifying Sensitivity for Tree Ensembles: A symbolic and compositional approach",
+        "summary": "Decision tree ensembles (DTE) are a popular model for a wide range of AI classification tasks, used in multiple safety critical domains, and hence verifying properties on these models has been an acti",
+        "link": "http://arxiv.org/abs/2605.13830v1",
+        "date": "2026-05-13",
         "authors": [
-          "Xuhao Hu",
-          "Xi Zhang",
-          "Haiyang Xu"
+          "S. Akshay",
+          "Chaitanya Garg",
+          "Ashutosh Gupta"
         ]
       },
       {
-        "title": "OmniNFT: Modality-wise Omni Diffusion Reinforcement for Joint Audio-Video Generation",
-        "summary": "Recent advances in joint audio-video generation have been remarkable, yet real-world applications demand strong per-modality fidelity, cross-modal alignment, and fine-grained synchronization. Reinforc",
-        "link": "http://arxiv.org/abs/2605.12480v1",
-        "date": "2026-05-12",
+        "title": "Negation Neglect: When models fail to learn negations in training",
+        "summary": "We introduce Negation Neglect, where finetuning LLMs on documents that flag a claim as false makes them believe the claim is true. For example, models are finetuned on documents that convey \"Ed Sheera",
+        "link": "http://arxiv.org/abs/2605.13829v1",
+        "date": "2026-05-13",
         "authors": [
-          "Guohui Zhang",
-          "XiaoXiao Ma",
-          "Jie Huang"
+          "Harry Mayne",
+          "Lev McKinney",
+          "Jan Dubi\u0144ski"
         ]
       },
       {
-        "title": "Reward Hacking in Rubric-Based Reinforcement Learning",
-        "summary": "Reinforcement learning with verifiable rewards has enabled strong post-training gains in domains such as math and coding, though many open-ended settings rely on rubric-based rewards. We study reward ",
-        "link": "http://arxiv.org/abs/2605.12474v1",
-        "date": "2026-05-12",
+        "title": "History Anchors: How Prior Behavior Steers LLM Decisions Toward Unsafe Actions",
+        "summary": "Frontier LLMs are increasingly deployed as agents that pick the next action after a long log of prior tool calls produced by the same or a different model. We ask a simple safety question: if a prior ",
+        "link": "http://arxiv.org/abs/2605.13825v1",
+        "date": "2026-05-13",
         "authors": [
-          "Anas Mahmoud",
-          "MohammadHossein Rezaei",
-          "Zihao Wang"
+          "Alberto G. Rodr\u00edguez Salgado"
         ]
       },
       {
-        "title": "KV-Fold: One-Step KV-Cache Recurrence for Long-Context Inference",
-        "summary": "We introduce KV-Fold, a simple, training-free long-context inference protocol that treats the key-value (KV) cache as the accumulator in a left fold over sequence chunks. At each step, the model proce",
-        "link": "http://arxiv.org/abs/2605.12471v1",
-        "date": "2026-05-12",
+        "title": "Harnessing Agentic Evolution",
+        "summary": "Agentic evolution has emerged as a powerful paradigm for improving programs, workflows, and scientific solutions by iteratively generating candidates, evaluating them, and using feedback to guide futu",
+        "link": "http://arxiv.org/abs/2605.13821v1",
+        "date": "2026-05-13",
         "authors": [
-          "Alireza Nadali",
-          "Patrick Cooper",
-          "Ashutosh Trivedi"
+          "Jiayi Zhang",
+          "Yongfeng Gu",
+          "Jianhao Ruan"
         ]
       },
       {
-        "title": "Solve the Loop: Attractor Models for Language and Reasoning",
-        "summary": "Looped Transformers offer a promising alternative to purely feed-forward computation by iteratively refining latent representations, improving language modeling and reasoning. Yet recurrent architectu",
-        "link": "http://arxiv.org/abs/2605.12466v1",
-        "date": "2026-05-12",
+        "title": "Neurosymbolic Auditing of Natural-Language Software Requirements",
+        "summary": "Natural-language software requirements are often ambiguous, inconsistent, and underspecified; in safety-critical domains, these defects propagate into formal models that verify the wrong specification",
+        "link": "http://arxiv.org/abs/2605.13817v1",
+        "date": "2026-05-13",
         "authors": [
-          "Jacob Fein-Ashley",
-          "Paria Rashidinejad"
+          "Bethel Hall",
+          "William Eiers"
         ]
       }
     ],
-    "updated": "2026-05-13T05:50:48.407333Z"
+    "updated": "2026-05-14T05:49:52.546298Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-05-13T05:50:48.407333Z"
+    "error": "HTTP Error 406: Not Acceptable"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-05-13T05:50:48.407333Z"
+    "error": "HTTP Error 406: Not Acceptable"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-05-13T05:50:48.407333Z"
+    "error": "HTTP Error 406: Not Acceptable"
   },
   "cs.CR": {
     "label": "Cybersecurity",
-    "papers": [
-      {
-        "title": "TextSeal: A Localized LLM Watermark for Provenance & Distillation Protection",
-        "summary": "We introduce TextSeal, a state-of-the-art watermark for large language models. Building on Gumbel-max sampling, TextSeal introduces dual-key generation to restore output diversity, along with entropy-",
-        "link": "http://arxiv.org/abs/2605.12456v1",
-        "date": "2026-05-12",
-        "authors": [
-          "Tom Sander",
-          "Hongyan Chang",
-          "Tom\u00e1\u0161 Sou\u010dek"
-        ]
-      },
-      {
-        "title": "Attacks and Mitigations for Distributed Governance of Agentic AI under Byzantine Adversaries",
-        "summary": "Agentic AI governance is a critical component of agentic AI infrastructure ensuring that agents follow their owner's communication and interaction policies, and providing protection against attacks fr",
-        "link": "http://arxiv.org/abs/2605.12364v1",
-        "date": "2026-05-12",
-        "authors": [
-          "Matthew D. Laws",
-          "Alina Oprea",
-          "Cristina Nita-Rotaru"
-        ]
-      },
-      {
-        "title": "Reconstruction of Personally Identifiable Information from Supervised Finetuned Models",
-        "summary": "Supervised Finetuning (SFT) has become one of the primary methods for adapting a large language model (LLM) with extensive pre-trained knowledge to domain-specific, instruction-following tasks. SFT da",
-        "link": "http://arxiv.org/abs/2605.12264v1",
-        "date": "2026-05-12",
-        "authors": [
-          "Sae Furukawa",
-          "Alina Oprea"
-        ]
-      },
-      {
-        "title": "No More, No Less: Task Alignment in Terminal Agents",
-        "summary": "Terminal agents are increasingly capable of executing complex, long-horizon tasks autonomously from a single user prompt. To do so, they must interpret instructions encountered in the environment (e.g",
-        "link": "http://arxiv.org/abs/2605.12233v1",
-        "date": "2026-05-12",
-        "authors": [
-          "Sina Mavali",
-          "David Pape",
-          "Jonathan Evertz"
-        ]
-      },
-      {
-        "title": "ORCHID: Orchestrated Reduction Consensus for Hash-based Integrity in Distributed Ledgers",
-        "summary": "We present \\textbf{ORCHID} (\\textit{Orchestrated Reduction Consensus for Hash-based Integrity in Distributed Ledgers}), a novel bio-inspired consensus protocol that maps the neuroscientific \\emph{bind",
-        "link": "http://arxiv.org/abs/2605.12211v1",
-        "date": "2026-05-12",
-        "authors": [
-          "Abraham Itzhak Weinberg"
-        ]
-      },
-      {
-        "title": "ACTING: A Platform for Cyber Ranges Federation",
-        "summary": "Cyber Defence (CD) training requires interoperable cyber-range environments capable of supporting complex, multidomain exercises across distributed infrastructures. This paper presents three main cont",
-        "link": "http://arxiv.org/abs/2605.12170v1",
-        "date": "2026-05-12",
-        "authors": [
-          "Kyriakos Christou",
-          "Maria Michalopoulou",
-          "Stefano Taggi"
-        ]
-      },
-      {
-        "title": "PrivacySIM: Evaluating LLM Simulation of User Privacy Behavior",
-        "summary": "Large language models (LLMs) are increasingly used to simulate human behavior, but their ability to simulate $individual$ privacy decisions is not well understood. In this paper, we address the proble",
-        "link": "http://arxiv.org/abs/2605.12147v1",
-        "date": "2026-05-12",
-        "authors": [
-          "James Flemings",
-          "Murali Annavaram"
-        ]
-      },
-      {
-        "title": "The Deepfakes We Missed: We Built Detectors for a Threat That Didn't Arrive",
-        "summary": "Nearly a decade of Machine Learning (ML) research on deepfake detection has been organized around a threat model inherited from 2017--2019, revolving around face-swap and talking-head manipulation of ",
-        "link": "http://arxiv.org/abs/2605.12075v1",
-        "date": "2026-05-12",
-        "authors": [
-          "Shaina Raza"
-        ]
-      }
-    ],
-    "updated": "2026-05-13T05:50:48.407333Z"
+    "papers": [],
+    "error": "HTTP Error 406: Not Acceptable"
   },
   "q-bio": {
     "label": "Biology",
-    "papers": [
-      {
-        "title": "Synchronization of active mechanical oscillators by an inertial load",
-        "summary": "Motivated by the operation of myogenic (self-oscillatory) insect flight muscle, we study a model consisting of a large number of identical oscillatory contractile elements joined in a chain, whose end",
-        "link": "http://arxiv.org/abs/physics/0307155v1",
-        "date": "2003-07-31",
-        "authors": [
-          "Andrej Vilfan",
-          "Thomas Duke"
-        ]
-      },
-      {
-        "title": "Towards the Understanding of Stability Puzzles in Phage lambda",
-        "summary": "We discuss two aspects, the in vivo and in vitro difference and the modeling of noise, of integrative modeling of network dynamics in biology, using phage lambda as an example. We believe those two as",
-        "link": "http://arxiv.org/abs/cond-mat/0307747v1",
-        "date": "2003-07-30",
-        "authors": [
-          "P. Ao",
-          "L. Yin"
-        ]
-      },
-      {
-        "title": "A Growth Model for Multicellular Tumor Spheroids",
-        "summary": "Most organisms grow according to simple laws, which in principle can be derived from energy conservation and scaling arguments, critically dependent on the relation between the metabolic rate B of ene",
-        "link": "http://arxiv.org/abs/physics/0307136v1",
-        "date": "2003-07-29",
-        "authors": [
-          "Pier Paolo Delsanto",
-          "Caterina Guiot",
-          "Piero Giorgio Degiorgis"
-        ]
-      },
-      {
-        "title": "Bidirectional communication in neural networks moderated by a Hebb-like learning rule",
-        "summary": "We demonstrate that our recently introduced stochastic Hebb-like learning rule is capable of learning the problem of timing in general network topologies generated by an algorithm of Watts and Strogat",
-        "link": "http://arxiv.org/abs/cond-mat/0307667v1",
-        "date": "2003-07-28",
-        "authors": [
-          "Frank Emmert-Streib"
-        ]
-      },
-      {
-        "title": "A novel stochastic Hebb-like learning rule for neural networks",
-        "summary": "We present a novel stochastic Hebb-like learning rule for neural networks. This learning rule is stochastic with respect to the selection of the time points when a synaptic modification is induced by ",
-        "link": "http://arxiv.org/abs/cond-mat/0307666v1",
-        "date": "2003-07-28",
-        "authors": [
-          "Frank Emmert-Streib"
-        ]
-      },
-      {
-        "title": "Free Energy Transduction in a Chemical Motor Model",
-        "summary": "Motor enzymes catalyze chemical reactions, like the hydrolysis of ATP, and in the process they also perform work. Recent studies indicate that motor enzymes perform work with specific intermediate ste",
-        "link": "http://arxiv.org/abs/physics/0307121v1",
-        "date": "2003-07-24",
-        "authors": [
-          "Josh E. Baker"
-        ]
-      },
-      {
-        "title": "Maximisation Principles and Daisyworld",
-        "summary": "We investigate whether the equilibrium time averaged state of a self-organising system with many internal degrees of freedom, 2D- daisyworld, can be described by optimising a single quantity. Unlike p",
-        "link": "http://arxiv.org/abs/cond-mat/0307567v1",
-        "date": "2003-07-23",
-        "authors": [
-          "G. J. Ackland"
-        ]
-      },
-      {
-        "title": "Xerogel Protein Substrates for Far Infrared Studies",
-        "summary": "A number of researchers are attempting to develop a biosensor based on terahertz sensing. Key to the realization of any biosensor system is the access of the target molecules to the sensor. In the cas",
-        "link": "http://arxiv.org/abs/cond-mat/0307558v1",
-        "date": "2003-07-23",
-        "authors": [
-          "J. -Y. Chen",
-          "W. Cox",
-          "E. Tehan"
-        ]
-      }
-    ],
-    "updated": "2026-05-13T05:50:48.407333Z"
+    "papers": [],
+    "error": "HTTP Error 406: Not Acceptable"
   }
 }
