@@ -1,118 +1,32 @@
 {
   "cs.AI": {
     "label": "AI / Machine Learning",
-    "papers": [
-      {
-        "title": "WARDEN: Endangered Indigenous Language Transcription and Translation with 6 Hours of Training Data",
-        "summary": "This paper introduces WARDEN, an early language model system capable of transcribing and translating Wardaman, an endangered Australian indigenous language into English. The significant challenge we f",
-        "link": "http://arxiv.org/abs/2605.13846v1",
-        "date": "2026-05-13",
-        "authors": [
-          "Ziheng Zhang",
-          "Yunzhong Hou",
-          "Naijing Liu"
-        ]
-      },
-      {
-        "title": "EVA-Bench: A New End-to-end Framework for Evaluating Voice Agents",
-        "summary": "Voice agents, artificial intelligence systems that conduct spoken conversations to complete tasks, are increasingly deployed across enterprise applications. However, no existing benchmark jointly addr",
-        "link": "http://arxiv.org/abs/2605.13841v1",
-        "date": "2026-05-13",
-        "authors": [
-          "Tara Bogavelli",
-          "Gabrielle Gauthier Melan\u00e7on",
-          "Katrina Stankiewicz"
-        ]
-      },
-      {
-        "title": "Topology-Preserving Neural Operator Learning via Hodge Decomposition",
-        "summary": "In this paper, we study solution operators of physical field equations on geometric meshes from a function-space perspective. We reveal that Hodge orthogonality fundamentally resolves spectral interfe",
-        "link": "http://arxiv.org/abs/2605.13834v1",
-        "date": "2026-05-13",
-        "authors": [
-          "Dongzhe Zheng",
-          "Tao Zhong",
-          "Christine Allen-Blanchette"
-        ]
-      },
-      {
-        "title": "Quantifying Sensitivity for Tree Ensembles: A symbolic and compositional approach",
-        "summary": "Decision tree ensembles (DTE) are a popular model for a wide range of AI classification tasks, used in multiple safety critical domains, and hence verifying properties on these models has been an acti",
-        "link": "http://arxiv.org/abs/2605.13830v1",
-        "date": "2026-05-13",
-        "authors": [
-          "S. Akshay",
-          "Chaitanya Garg",
-          "Ashutosh Gupta"
-        ]
-      },
-      {
-        "title": "Negation Neglect: When models fail to learn negations in training",
-        "summary": "We introduce Negation Neglect, where finetuning LLMs on documents that flag a claim as false makes them believe the claim is true. For example, models are finetuned on documents that convey \"Ed Sheera",
-        "link": "http://arxiv.org/abs/2605.13829v1",
-        "date": "2026-05-13",
-        "authors": [
-          "Harry Mayne",
-          "Lev McKinney",
-          "Jan Dubi\u0144ski"
-        ]
-      },
-      {
-        "title": "History Anchors: How Prior Behavior Steers LLM Decisions Toward Unsafe Actions",
-        "summary": "Frontier LLMs are increasingly deployed as agents that pick the next action after a long log of prior tool calls produced by the same or a different model. We ask a simple safety question: if a prior ",
-        "link": "http://arxiv.org/abs/2605.13825v1",
-        "date": "2026-05-13",
-        "authors": [
-          "Alberto G. Rodr\u00edguez Salgado"
-        ]
-      },
-      {
-        "title": "Harnessing Agentic Evolution",
-        "summary": "Agentic evolution has emerged as a powerful paradigm for improving programs, workflows, and scientific solutions by iteratively generating candidates, evaluating them, and using feedback to guide futu",
-        "link": "http://arxiv.org/abs/2605.13821v1",
-        "date": "2026-05-13",
-        "authors": [
-          "Jiayi Zhang",
-          "Yongfeng Gu",
-          "Jianhao Ruan"
-        ]
-      },
-      {
-        "title": "Neurosymbolic Auditing of Natural-Language Software Requirements",
-        "summary": "Natural-language software requirements are often ambiguous, inconsistent, and underspecified; in safety-critical domains, these defects propagate into formal models that verify the wrong specification",
-        "link": "http://arxiv.org/abs/2605.13817v1",
-        "date": "2026-05-13",
-        "authors": [
-          "Bethel Hall",
-          "William Eiers"
-        ]
-      }
-    ],
-    "updated": "2026-05-14T05:49:52.546298Z"
+    "papers": [],
+    "error": "The read operation timed out"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "error": "HTTP Error 406: Not Acceptable"
+    "updated": "2026-05-15T05:56:18.882472Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "error": "HTTP Error 406: Not Acceptable"
+    "error": "HTTP Error 429: Unknown Error"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "error": "HTTP Error 406: Not Acceptable"
+    "error": "HTTP Error 429: Unknown Error"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [],
-    "error": "HTTP Error 406: Not Acceptable"
+    "error": "The read operation timed out"
   },
   "q-bio": {
     "label": "Biology",
     "papers": [],
-    "error": "HTTP Error 406: Not Acceptable"
+    "error": "HTTP Error 429: Unknown Error"
   }
 }
