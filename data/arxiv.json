@@ -1,32 +1,287 @@
 {
   "cs.AI": {
     "label": "AI / Machine Learning",
-    "papers": [],
-    "error": "The read operation timed out"
+    "papers": [
+      {
+        "title": "EntityBench: Towards Entity-Consistent Long-Range Multi-Shot Video Generation",
+        "summary": "Multi-shot video generation extends single-shot generation to coherent visual narratives, yet maintaining consistent characters, objects, and locations across shots remains a challenge over long seque",
+        "link": "http://arxiv.org/abs/2605.15199v1",
+        "date": "2026-05-14",
+        "authors": [
+          "Ruozhen He",
+          "Meng Wei",
+          "Ziyan Yang"
+        ]
+      },
+      {
+        "title": "ATLAS: Agentic or Latent Visual Reasoning? One Word is Enough for Both",
+        "summary": "Visual reasoning, often interleaved with intermediate visual states, has emerged as a promising direction in the field. A straightforward approach is to directly generate images via unified models dur",
+        "link": "http://arxiv.org/abs/2605.15198v1",
+        "date": "2026-05-14",
+        "authors": [
+          "Ziyu Guo",
+          "Rain Liu",
+          "Xinyan Chen"
+        ]
+      },
+      {
+        "title": "FutureSim: Replaying World Events to Evaluate Adaptive Agents",
+        "summary": "AI agents are being increasingly deployed in dynamic, open-ended environments that require adapting to new information as it arrives. To efficiently measure this capability for realistic use-cases, we",
+        "link": "http://arxiv.org/abs/2605.15188v1",
+        "date": "2026-05-14",
+        "authors": [
+          "Shashwat Goel",
+          "Nikhil Chandak",
+          "Arvindh Arun"
+        ]
+      },
+      {
+        "title": "VGGT-Edit: Feed-forward Native 3D Scene Editing with Residual Field Prediction",
+        "summary": "High-quality 3D scene reconstruction has recently advanced toward generalizable feed-forward architectures, enabling the generation of complex environments in a single forward pass. However, despite t",
+        "link": "http://arxiv.org/abs/2605.15186v1",
+        "date": "2026-05-14",
+        "authors": [
+          "Kaixin Zhu",
+          "Yiwen Tang",
+          "Yifan Yang"
+        ]
+      },
+      {
+        "title": "Quantitative Video World Model Evaluation for Geometric-Consistency",
+        "summary": "Generative video models are increasingly studied as implicit world models, yet evaluating whether they produce physically plausible 3D structure and motion remains challenging. Most existing video eva",
+        "link": "http://arxiv.org/abs/2605.15185v1",
+        "date": "2026-05-14",
+        "authors": [
+          "Jiaxin Wu",
+          "Yihao Pi",
+          "Yinling Zhang"
+        ]
+      },
+      {
+        "title": "Eradicating Negative Transfer in Multi-Physics Foundation Models via Sparse Mixture-of-Experts Routing",
+        "summary": "Scaling Scientific Machine Learning (SciML) toward universal foundation models is bottlenecked by negative transfer: the simultaneous co-training of disparate partial differential equation (PDE) regim",
+        "link": "http://arxiv.org/abs/2605.15179v1",
+        "date": "2026-05-14",
+        "authors": [
+          "Ellwil Sharma",
+          "Arastu Sharma"
+        ]
+      },
+      {
+        "title": "OpenDeepThink: Parallel Reasoning via Bradley--Terry Aggregation",
+        "summary": "Test-time compute scaling is a primary axis for improving LLM reasoning. Existing methods primarily scale depth by extending a single reasoning trace. Scaling breadth by sampling multiple candidates i",
+        "link": "http://arxiv.org/abs/2605.15177v1",
+        "date": "2026-05-14",
+        "authors": [
+          "Shang Zhou",
+          "Wenhao Chai",
+          "Kaiyuan Liu"
+        ]
+      },
+      {
+        "title": "Evidential Reasoning Advances Interpretable Real-World Disease Screening",
+        "summary": "Disease screening is critical for early detection and timely intervention in clinical practice. However, most current screening models for medical images suffer from limited interpretability and subop",
+        "link": "http://arxiv.org/abs/2605.15171v1",
+        "date": "2026-05-14",
+        "authors": [
+          "Chenyu Lian",
+          "Hong-Yu Zhou",
+          "Jing Qin"
+        ]
+      }
+    ],
+    "updated": "2026-05-16T05:28:42.725769Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-05-15T05:56:18.882472Z"
+    "updated": "2026-05-16T05:28:42.725769Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "updated": "2026-05-16T05:28:42.725769Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "updated": "2026-05-16T05:28:42.725769Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
-    "papers": [],
-    "error": "The read operation timed out"
+    "papers": [
+      {
+        "title": "MetaBackdoor: Exploiting Positional Encoding as a Backdoor Attack Surface in LLMs",
+        "summary": "Backdoor attacks pose a serious security threat to large language models (LLMs), which are increasingly deployed as general-purpose assistants in safety- and privacy-critical applications. Existing LL",
+        "link": "http://arxiv.org/abs/2605.15172v1",
+        "date": "2026-05-14",
+        "authors": [
+          "Rui Wen",
+          "Mark Russinovich",
+          "Andrew Paverd"
+        ]
+      },
+      {
+        "title": "Talk is (Not) Cheap: A Taxonomy and Benchmark Coverage Audit for LLM Attacks",
+        "summary": "We introduce a reusable framework for auditing whether LLM attack benchmarks collectively cover the threat surface: a 4$\\times$6 Target $\\times$ Technique matrix grounded in STRIDE, constructed from a",
+        "link": "http://arxiv.org/abs/2605.15118v1",
+        "date": "2026-05-14",
+        "authors": [
+          "Karthik Raghu Iyer",
+          "Yazdan Jamshidi",
+          "Nicholas Bray"
+        ]
+      },
+      {
+        "title": "Veritas: A Semantically Grounded Agentic Framework for Memory Corruption Vulnerability Detection in Binaries",
+        "summary": "Detecting memory corruption vulnerabilities in stripped binaries requires recovering object semantics, interprocedural propagation, and feasible triggers from low-level, lossy representations. Recent ",
+        "link": "http://arxiv.org/abs/2605.15097v1",
+        "date": "2026-05-14",
+        "authors": [
+          "Xinran Zheng",
+          "Alfredo Pesoli",
+          "Marco Valleri"
+        ]
+      },
+      {
+        "title": "PickleFuzzer: A Case Study in Fuzzing for Discrepancies Between Python Pickle Implementations",
+        "summary": "Python's native serialization protocol, pickle, is a powerful but insecure format for transferring untrusted data. It is frequently used, especially for saving machine learning models, despite known s",
+        "link": "http://arxiv.org/abs/2605.15084v1",
+        "date": "2026-05-14",
+        "authors": [
+          "Justin Applegate",
+          "Andreas Kellas"
+        ]
+      },
+      {
+        "title": "Analyzing Codes of Conduct for Online Safety in Video Games at Scale",
+        "summary": "Online video games have become major online social spaces where users interact, compete, and create together. These spaces, however, expose users to a wide spectrum of online harms, including harassme",
+        "link": "http://arxiv.org/abs/2605.15047v1",
+        "date": "2026-05-14",
+        "authors": [
+          "Jiuming Jiang",
+          "Shidong Pan",
+          "Daniel W Woods"
+        ]
+      },
+      {
+        "title": "WARD: Adversarially Robust Defense of Web Agents Against Prompt Injections",
+        "summary": "Web agents can autonomously complete online tasks by interacting with websites, but their exposure to open web environments makes them vulnerable to prompt injection attacks embedded in HTML content o",
+        "link": "http://arxiv.org/abs/2605.15030v1",
+        "date": "2026-05-14",
+        "authors": [
+          "Tri Cao",
+          "Yulin Chen",
+          "Hieu Cao"
+        ]
+      },
+      {
+        "title": "Toward Securing AI Agents Like Operating Systems",
+        "summary": "Autonomous agents based on large language models (LLMs) are rapidly emerging as a general-purpose technology, with recent systems such as OpenClaw extending their capabilities through broad tool use, ",
+        "link": "http://arxiv.org/abs/2605.14932v1",
+        "date": "2026-05-14",
+        "authors": [
+          "Lukas Pirch",
+          "Micha Horlboge",
+          "Patrick Gro\u00dfmann"
+        ]
+      },
+      {
+        "title": "Do Coding Agents Understand Least-Privilege Authorization?",
+        "summary": "As coding agents gain access to shells, repositories, and user files, least-privilege authorization becomes a prerequisite for safe deployment: an agent should receive enough authority to complete the",
+        "link": "http://arxiv.org/abs/2605.14859v1",
+        "date": "2026-05-14",
+        "authors": [
+          "Zheng Yan",
+          "Jingxiang Weng",
+          "Charles Chen"
+        ]
+      }
+    ],
+    "updated": "2026-05-16T05:28:42.725769Z"
   },
   "q-bio": {
     "label": "Biology",
-    "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "papers": [
+      {
+        "title": "Synchronization of active mechanical oscillators by an inertial load",
+        "summary": "Motivated by the operation of myogenic (self-oscillatory) insect flight muscle, we study a model consisting of a large number of identical oscillatory contractile elements joined in a chain, whose end",
+        "link": "http://arxiv.org/abs/physics/0307155v1",
+        "date": "2003-07-31",
+        "authors": [
+          "Andrej Vilfan",
+          "Thomas Duke"
+        ]
+      },
+      {
+        "title": "Towards the Understanding of Stability Puzzles in Phage lambda",
+        "summary": "We discuss two aspects, the in vivo and in vitro difference and the modeling of noise, of integrative modeling of network dynamics in biology, using phage lambda as an example. We believe those two as",
+        "link": "http://arxiv.org/abs/cond-mat/0307747v1",
+        "date": "2003-07-30",
+        "authors": [
+          "P. Ao",
+          "L. Yin"
+        ]
+      },
+      {
+        "title": "A Growth Model for Multicellular Tumor Spheroids",
+        "summary": "Most organisms grow according to simple laws, which in principle can be derived from energy conservation and scaling arguments, critically dependent on the relation between the metabolic rate B of ene",
+        "link": "http://arxiv.org/abs/physics/0307136v1",
+        "date": "2003-07-29",
+        "authors": [
+          "Pier Paolo Delsanto",
+          "Caterina Guiot",
+          "Piero Giorgio Degiorgis"
+        ]
+      },
+      {
+        "title": "Bidirectional communication in neural networks moderated by a Hebb-like learning rule",
+        "summary": "We demonstrate that our recently introduced stochastic Hebb-like learning rule is capable of learning the problem of timing in general network topologies generated by an algorithm of Watts and Strogat",
+        "link": "http://arxiv.org/abs/cond-mat/0307667v1",
+        "date": "2003-07-28",
+        "authors": [
+          "Frank Emmert-Streib"
+        ]
+      },
+      {
+        "title": "A novel stochastic Hebb-like learning rule for neural networks",
+        "summary": "We present a novel stochastic Hebb-like learning rule for neural networks. This learning rule is stochastic with respect to the selection of the time points when a synaptic modification is induced by ",
+        "link": "http://arxiv.org/abs/cond-mat/0307666v1",
+        "date": "2003-07-28",
+        "authors": [
+          "Frank Emmert-Streib"
+        ]
+      },
+      {
+        "title": "Free Energy Transduction in a Chemical Motor Model",
+        "summary": "Motor enzymes catalyze chemical reactions, like the hydrolysis of ATP, and in the process they also perform work. Recent studies indicate that motor enzymes perform work with specific intermediate ste",
+        "link": "http://arxiv.org/abs/physics/0307121v1",
+        "date": "2003-07-24",
+        "authors": [
+          "Josh E. Baker"
+        ]
+      },
+      {
+        "title": "Maximisation Principles and Daisyworld",
+        "summary": "We investigate whether the equilibrium time averaged state of a self-organising system with many internal degrees of freedom, 2D- daisyworld, can be described by optimising a single quantity. Unlike p",
+        "link": "http://arxiv.org/abs/cond-mat/0307567v1",
+        "date": "2003-07-23",
+        "authors": [
+          "G. J. Ackland"
+        ]
+      },
+      {
+        "title": "Xerogel Protein Substrates for Far Infrared Studies",
+        "summary": "A number of researchers are attempting to develop a biosensor based on terahertz sensing. Key to the realization of any biosensor system is the access of the target molecules to the sensor. In the cas",
+        "link": "http://arxiv.org/abs/cond-mat/0307558v1",
+        "date": "2003-07-23",
+        "authors": [
+          "J. -Y. Chen",
+          "W. Cox",
+          "E. Tehan"
+        ]
+      }
+    ],
+    "updated": "2026-05-16T05:28:42.725769Z"
   }
 }
