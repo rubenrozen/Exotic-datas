@@ -1,13 +1,7 @@
 {
-  "eu_avg": 36.1,
-  "trend": 0.15,
+  "eu_avg": 36.3,
+  "trend": 0.19,
   "series": [
-    {
-      "date": "2025-07-20",
-      "pct": 65.1,
-      "gasInStorage": 737.9,
-      "trend": 0.37
-    },
     {
       "date": "2025-07-21",
       "pct": 65.4,
@@ -1801,61 +1795,67 @@
       "pct": 36.1,
       "gasInStorage": 409.0,
       "trend": 0.15
+    },
+    {
+      "date": "2026-05-16",
+      "pct": 36.3,
+      "gasInStorage": 411.2,
+      "trend": 0.19
     }
   ],
   "countries": {
     "DE": {
-      "pct": 28.1,
-      "trend": 0.06,
-      "gasInStorage": 69.7
+      "pct": 28.2,
+      "trend": 0.11,
+      "gasInStorage": 69.9
     },
     "FR": {
-      "pct": 37.2,
-      "trend": 0.09,
-      "gasInStorage": 46.0
+      "pct": 37.3,
+      "trend": 0.18,
+      "gasInStorage": 46.3
     },
     "IT": {
-      "pct": 54.3,
-      "trend": 0.22,
-      "gasInStorage": 110.6
+      "pct": 54.5,
+      "trend": 0.26,
+      "gasInStorage": 111.1
     },
     "ES": {
       "pct": 66.5,
-      "trend": 0.11,
+      "trend": -0.0,
       "gasInStorage": 23.8
     },
     "NL": {
-      "pct": 12.1,
+      "pct": 12.3,
       "trend": 0.17,
-      "gasInStorage": 17.4
+      "gasInStorage": 17.6
     },
     "AT": {
-      "pct": 42.6,
-      "trend": 0.12,
+      "pct": 42.7,
+      "trend": 0.09,
       "gasInStorage": 42.8
     },
     "BE": {
-      "pct": 22.8,
-      "trend": -0.24,
+      "pct": 22.6,
+      "trend": -0.26,
       "gasInStorage": 1.7
     },
     "PL": {
-      "pct": 49.5,
-      "trend": 0.23,
-      "gasInStorage": 18.2
+      "pct": 49.8,
+      "trend": 0.38,
+      "gasInStorage": 18.4
     },
     "CZ": {
-      "pct": 33.0,
-      "trend": 0.19,
-      "gasInStorage": 14.9
+      "pct": 33.2,
+      "trend": 0.23,
+      "gasInStorage": 15.0
     },
     "HU": {
-      "pct": 39.0,
-      "trend": 0.25,
-      "gasInStorage": 26.4
+      "pct": 39.3,
+      "trend": 0.29,
+      "gasInStorage": 26.6
     }
   },
   "alert_threshold": 20.0,
   "score": 36,
-  "updated": "2026-05-17T05:50:19.575474Z"
+  "updated": "2026-05-18T06:16:24.803005Z"
 }
