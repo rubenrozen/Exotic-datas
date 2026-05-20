@@ -1,107 +1,18 @@
 {
   "cs.AI": {
     "label": "AI / Machine Learning",
-    "papers": [
-      {
-        "title": "DashAttention: Differentiable and Adaptive Sparse Hierarchical Attention",
-        "summary": "Current hierarchical attention methods, such as NSA and InfLLMv2, select the top-k relevant key-value (KV) blocks based on coarse attention scores and subsequently apply fine-grained softmax attention",
-        "link": "http://arxiv.org/abs/2605.18753v1",
-        "date": "2026-05-18",
-        "authors": [
-          "Yuxiang Huang",
-          "Nuno M. T. Gon\u00e7alves",
-          "Federico Alvetreti"
-        ]
-      },
-      {
-        "title": "Code as Agent Harness",
-        "summary": "Recent large language models (LLMs) have demonstrated strong capabilities in understanding and generating code, from competitive programming to repository-level software engineering. In emerging agent",
-        "link": "http://arxiv.org/abs/2605.18747v1",
-        "date": "2026-05-18",
-        "authors": [
-          "Xuying Ning",
-          "Katherine Tieu",
-          "Dongqi Fu"
-        ]
-      },
-      {
-        "title": "ESI-Bench: Towards Embodied Spatial Intelligence that Closes the Perception-Action Loop",
-        "summary": "Spatial intelligence unfolds through a perception-action loop: agents act to acquire observations, and reason about how observations vary as a function of action. Rather than passively processing what",
-        "link": "http://arxiv.org/abs/2605.18746v1",
-        "date": "2026-05-18",
-        "authors": [
-          "Yining Hong",
-          "Jiageng Liu",
-          "Han Yin"
-        ]
-      },
-      {
-        "title": "Actionable World Representation",
-        "summary": "Inspired by the emergent behaviors in large language models that generalized human intelligence, the research community is pursuing similar emergent capabilities within world models, with a emphasis o",
-        "link": "http://arxiv.org/abs/2605.18743v1",
-        "date": "2026-05-18",
-        "authors": [
-          "Kunqi Xu",
-          "Jitao Li",
-          "Jianglong Ye"
-        ]
-      },
-      {
-        "title": "Vision-OPD: Learning to See Fine Details for Multimodal LLMs via On-Policy Self-Distillation",
-        "summary": "Multimodal Large Language Models (MLLMs) still struggle with fine-grained visual understanding, where answers often depend on small but decisive evidence in the full image. We observe a regional-to-gl",
-        "link": "http://arxiv.org/abs/2605.18740v1",
-        "date": "2026-05-18",
-        "authors": [
-          "Qianhao Yuan",
-          "Jie Lou",
-          "Xing Yu"
-        ]
-      },
-      {
-        "title": "What Does the AI Doctor Value? Auditing Pluralism in the Clinical Ethics of Language Models",
-        "summary": "Medicine is inherently pluralistic. Principles such as autonomy, beneficence, nonmaleficence, and justice routinely conflict, and such ethical dilemmas often sharply divide reasonable physicians. Good",
-        "link": "http://arxiv.org/abs/2605.18738v1",
-        "date": "2026-05-18",
-        "authors": [
-          "Payal Chandak",
-          "Victoria Alkin",
-          "David Wu"
-        ]
-      },
-      {
-        "title": "Predictable Confabulations: Factual Recall by LLMs Scales with Model Size and Topic Frequency",
-        "summary": "While scaling laws govern aggregate large language model performance, no scaling law has linked factual recall to both model size and training-data composition. We evaluated 38 models on over 8,900 sc",
-        "link": "http://arxiv.org/abs/2605.18732v1",
-        "date": "2026-05-18",
-        "authors": [
-          "Matthew L. Smith",
-          "Jonathan P. Shock",
-          "Samuel T. Segun"
-        ]
-      },
-      {
-        "title": "DexHoldem: Playing Texas Hold'em with Dexterous Embodied System",
-        "summary": "Evaluating embodied systems on real dexterous hardware requires more than isolated primitive skills: an agent must perceive a changing tabletop scene, choose a context-appropriate action, execute it w",
-        "link": "http://arxiv.org/abs/2605.18727v1",
-        "date": "2026-05-18",
-        "authors": [
-          "Feng Chen",
-          "Tianzhe Chu",
-          "Li Sun"
-        ]
-      }
-    ],
-    "updated": "2026-05-19T06:09:44.408060Z"
+    "papers": [],
+    "error": "HTTP Error 429: Unknown Error"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-05-19T06:09:44.408060Z"
+    "error": "The read operation timed out"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "error": "The read operation timed out"
   },
   "econ": {
     "label": "Economics",
@@ -111,7 +22,7 @@
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "error": "The read operation timed out"
   },
   "q-bio": {
     "label": "Biology",
