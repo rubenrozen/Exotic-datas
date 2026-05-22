@@ -1,8 +1,93 @@
 {
   "cs.AI": {
     "label": "AI / Machine Learning",
-    "papers": [],
-    "error": "The read operation timed out"
+    "papers": [
+      {
+        "title": "Vector Policy Optimization: Training for Diversity Improves Test-Time Search",
+        "summary": "Language models must now generalize out of the box to novel environments and work inside inference-scaling search procedures, such as AlphaEvolve, that select rollouts with a variety of task-specific ",
+        "link": "http://arxiv.org/abs/2605.22817v1",
+        "date": "2026-05-21",
+        "authors": [
+          "Ryan Bahlous-Boldi",
+          "Isha Puri",
+          "Idan Shenfeld"
+        ]
+      },
+      {
+        "title": "The Matching Principle: A Geometric Theory of Loss Functions for Nuisance-Robust Representation Learning",
+        "summary": "Robustness, domain adaptation, photometric and occlusion invariance, compositional generalisation, temporal robustness, alignment safety, and classical anisotropic regularisation are usually treated a",
+        "link": "http://arxiv.org/abs/2605.22800v1",
+        "date": "2026-05-21",
+        "authors": [
+          "Vishal Rajput"
+        ]
+      },
+      {
+        "title": "Finite-Particle Convergence Rates for Conservative and Non-Conservative Drifting Models",
+        "summary": "We propose and analyze a conservative drifting method for one-step generative modeling. The method replaces the original displacement-based drifting velocity by a kernel density estimator (KDE)-gradie",
+        "link": "http://arxiv.org/abs/2605.22795v1",
+        "date": "2026-05-21",
+        "authors": [
+          "Krishnakumar Balasubramanian"
+        ]
+      },
+      {
+        "title": "MOSS: Self-Evolution through Source-Level Rewriting in Autonomous Agent Systems",
+        "summary": "Autonomous agentic systems are largely static after deployment: they do not learn from user interactions, and recurring failures persist until the next human-driven update ships a fix. Self-evolving a",
+        "link": "http://arxiv.org/abs/2605.22794v1",
+        "date": "2026-05-21",
+        "authors": [
+          "Qianshu Cai",
+          "Yonggang Zhang",
+          "Xianzhang Jia"
+        ]
+      },
+      {
+        "title": "Gated DeltaNet-2: Decoupling Erase and Write in Linear Attention",
+        "summary": "Linear attention replaces the unbounded cache of softmax attention with a fixed-size recurrent state, reducing sequence mixing to linear time and decoding to constant memory. The hard part is not just",
+        "link": "http://arxiv.org/abs/2605.22791v1",
+        "date": "2026-05-21",
+        "authors": [
+          "Ali Hatamizadeh",
+          "Yejin Choi",
+          "Jan Kautz"
+        ]
+      },
+      {
+        "title": "LCGuard: Latent Communication Guard for Safe KV Sharing in Multi-Agent Systems",
+        "summary": "Large language model (LLM)-based multi-agent systems increasingly rely on intermediate communication to coordinate complex tasks. While most existing systems communicate through natural language, rece",
+        "link": "http://arxiv.org/abs/2605.22786v1",
+        "date": "2026-05-21",
+        "authors": [
+          "Sadia Asif",
+          "Mohammad Mohammadi Amiri",
+          "Momin Abbas"
+        ]
+      },
+      {
+        "title": "DeltaBox: Scaling Stateful AI Agents with Millisecond-Level Sandbox Checkpoint/Rollback",
+        "summary": "LLM-powered AI agents require high-frequency state exploration (e.g., test-time tree search and reinforcement learning), relying on rapid checkpoint and rollback (C/R) of the complete sandbox state, i",
+        "link": "http://arxiv.org/abs/2605.22781v1",
+        "date": "2026-05-21",
+        "authors": [
+          "Yunpeng Dong",
+          "Jingkai He",
+          "Yuze Hou"
+        ]
+      },
+      {
+        "title": "SDPM: Survival Diffusion Probabilistic Model for Continuous-Time Survival Analysis",
+        "summary": "Survival analysis aims to estimate a time-to-event distribution from data with censored observations. Many existing methods either impose structural assumptions on the hazard function or discretize th",
+        "link": "http://arxiv.org/abs/2605.22776v1",
+        "date": "2026-05-21",
+        "authors": [
+          "Stanislav R. Kirpichenko",
+          "Andrei V. Konstantinov",
+          "Lev V. Utkin"
+        ]
+      }
+    ],
+    "updated": "2026-05-22T06:09:12.831544Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
@@ -12,12 +97,12 @@
   "physics": {
     "label": "Physics",
     "papers": [],
-    "error": "The read operation timed out"
+    "error": "HTTP Error 429: Unknown Error"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "error": "The read operation timed out"
   },
   "cs.CR": {
     "label": "Cybersecurity",
@@ -27,6 +112,6 @@
   "q-bio": {
     "label": "Biology",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "error": "The read operation timed out"
   }
 }
