@@ -1,23 +1,110 @@
 {
   "cs.AI": {
     "label": "AI / Machine Learning",
-    "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "papers": [
+      {
+        "title": "MobileGym: A Verifiable and Highly Parallel Simulation Platform for Mobile GUI Agent Research",
+        "summary": "We present MobileGym, a browser-hosted, lightweight, fully controllable environment for everyday mobile use, targeting interaction fidelity without replicating proprietary backends. It enables two cap",
+        "link": "http://arxiv.org/abs/2605.26114v1",
+        "date": "2026-05-25",
+        "authors": [
+          "Dingbang Wu",
+          "Rui Hao",
+          "Haiyang Wang"
+        ]
+      },
+      {
+        "title": "From Model Scaling to System Scaling: Scaling the Harness in Agentic AI",
+        "summary": "This paper studies the next major bottleneck in agentic AI as system scaling, not only model scaling: the design of auditable, persistent, modular, and verifiable architectures around foundation model",
+        "link": "http://arxiv.org/abs/2605.26112v1",
+        "date": "2026-05-25",
+        "authors": [
+          "Shangding Gu"
+        ]
+      },
+      {
+        "title": "Squeezing Capacity from Multimodal Large Language Models for Subject-driven Generation",
+        "summary": "Subject-driven image generation aims to synthesize new images that preserve the identity of the given subject while following textual instructions. Existing approaches often encode text and reference ",
+        "link": "http://arxiv.org/abs/2605.26111v1",
+        "date": "2026-05-25",
+        "authors": [
+          "Shuhong Zheng",
+          "Aashish Kumar Misraa",
+          "Yu-Teng Li"
+        ]
+      },
+      {
+        "title": "Beyond Summaries: Structure-Aware Labeling of Code Changes with Large Language Models",
+        "summary": "Code review is a critical practice in software engineering, yet the growing scale and frequency of code patches in modern projects, together with the widespread adoption of AI code assistants, make ma",
+        "link": "http://arxiv.org/abs/2605.26100v1",
+        "date": "2026-05-25",
+        "authors": [
+          "Bar Weiss",
+          "Antonio Abu-Nassar",
+          "Adi Sosnovich"
+        ]
+      },
+      {
+        "title": "Language Models Need Sleep",
+        "summary": "Transformer-based large language models are increasingly used for long-horizon tasks; however, their attention mechanism scales poorly with context length. To handle this, we study a sleep-like consol",
+        "link": "http://arxiv.org/abs/2605.26099v1",
+        "date": "2026-05-25",
+        "authors": [
+          "Sangyun Lee",
+          "Sean McLeish",
+          "Tom Goldstein"
+        ]
+      },
+      {
+        "title": "OrpQuant: Geometric Orthogonal Residual Projection for Multiplier-Free Power-of-Two Transformer Quantization",
+        "summary": "The deployment of Large Language Models (LLMs) and Vision Transformers (ViTs) on edge devices is significantly constrained by memory limitations and the critical timing bottlenecks introduced by dense",
+        "link": "http://arxiv.org/abs/2605.26092v1",
+        "date": "2026-05-25",
+        "authors": [
+          "Maoyang Xiang",
+          "Bo Wang",
+          "Tao Luo"
+        ]
+      },
+      {
+        "title": "Channel-wise Vector Quantization",
+        "summary": "We present Channel-wise Vector Quantization (CVQ), a novel image tokenization paradigm that replaces patch-wise tokens with channel-wise tokens. Unlike conventional vector quantization, which assigns ",
+        "link": "http://arxiv.org/abs/2605.26089v1",
+        "date": "2026-05-25",
+        "authors": [
+          "Wei Song",
+          "Tianhang Wang",
+          "Yitong Chen"
+        ]
+      },
+      {
+        "title": "Claw-Anything: Benchmarking Always-On Personal Assistants with Broader Access to User's Digital World",
+        "summary": "Large language model agents are increasingly envisioned as always-on personal assistants with access to anything relevant in the user's digital world. Yet current systems operate over only narrow slic",
+        "link": "http://arxiv.org/abs/2605.26086v1",
+        "date": "2026-05-25",
+        "authors": [
+          "Yusong Lin",
+          "Xinyuan Liang",
+          "Haiyang Wang"
+        ]
+      }
+    ],
+    "updated": "2026-05-26T06:08:43.549135Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "error": "The read operation timed out"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "error": "The read operation timed out"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "error": "The read operation timed out"
+    "error": "HTTP Error 429: Unknown Error"
   },
   "cs.CR": {
     "label": "Cybersecurity",
@@ -27,6 +114,6 @@
   "q-bio": {
     "label": "Biology",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "error": "The read operation timed out"
   }
 }
