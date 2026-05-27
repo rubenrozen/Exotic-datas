@@ -1,95 +1,8 @@
 {
   "cs.AI": {
     "label": "AI / Machine Learning",
-    "papers": [
-      {
-        "title": "MobileGym: A Verifiable and Highly Parallel Simulation Platform for Mobile GUI Agent Research",
-        "summary": "We present MobileGym, a browser-hosted, lightweight, fully controllable environment for everyday mobile use, targeting interaction fidelity without replicating proprietary backends. It enables two cap",
-        "link": "http://arxiv.org/abs/2605.26114v1",
-        "date": "2026-05-25",
-        "authors": [
-          "Dingbang Wu",
-          "Rui Hao",
-          "Haiyang Wang"
-        ]
-      },
-      {
-        "title": "From Model Scaling to System Scaling: Scaling the Harness in Agentic AI",
-        "summary": "This paper studies the next major bottleneck in agentic AI as system scaling, not only model scaling: the design of auditable, persistent, modular, and verifiable architectures around foundation model",
-        "link": "http://arxiv.org/abs/2605.26112v1",
-        "date": "2026-05-25",
-        "authors": [
-          "Shangding Gu"
-        ]
-      },
-      {
-        "title": "Squeezing Capacity from Multimodal Large Language Models for Subject-driven Generation",
-        "summary": "Subject-driven image generation aims to synthesize new images that preserve the identity of the given subject while following textual instructions. Existing approaches often encode text and reference ",
-        "link": "http://arxiv.org/abs/2605.26111v1",
-        "date": "2026-05-25",
-        "authors": [
-          "Shuhong Zheng",
-          "Aashish Kumar Misraa",
-          "Yu-Teng Li"
-        ]
-      },
-      {
-        "title": "Beyond Summaries: Structure-Aware Labeling of Code Changes with Large Language Models",
-        "summary": "Code review is a critical practice in software engineering, yet the growing scale and frequency of code patches in modern projects, together with the widespread adoption of AI code assistants, make ma",
-        "link": "http://arxiv.org/abs/2605.26100v1",
-        "date": "2026-05-25",
-        "authors": [
-          "Bar Weiss",
-          "Antonio Abu-Nassar",
-          "Adi Sosnovich"
-        ]
-      },
-      {
-        "title": "Language Models Need Sleep",
-        "summary": "Transformer-based large language models are increasingly used for long-horizon tasks; however, their attention mechanism scales poorly with context length. To handle this, we study a sleep-like consol",
-        "link": "http://arxiv.org/abs/2605.26099v1",
-        "date": "2026-05-25",
-        "authors": [
-          "Sangyun Lee",
-          "Sean McLeish",
-          "Tom Goldstein"
-        ]
-      },
-      {
-        "title": "OrpQuant: Geometric Orthogonal Residual Projection for Multiplier-Free Power-of-Two Transformer Quantization",
-        "summary": "The deployment of Large Language Models (LLMs) and Vision Transformers (ViTs) on edge devices is significantly constrained by memory limitations and the critical timing bottlenecks introduced by dense",
-        "link": "http://arxiv.org/abs/2605.26092v1",
-        "date": "2026-05-25",
-        "authors": [
-          "Maoyang Xiang",
-          "Bo Wang",
-          "Tao Luo"
-        ]
-      },
-      {
-        "title": "Channel-wise Vector Quantization",
-        "summary": "We present Channel-wise Vector Quantization (CVQ), a novel image tokenization paradigm that replaces patch-wise tokens with channel-wise tokens. Unlike conventional vector quantization, which assigns ",
-        "link": "http://arxiv.org/abs/2605.26089v1",
-        "date": "2026-05-25",
-        "authors": [
-          "Wei Song",
-          "Tianhang Wang",
-          "Yitong Chen"
-        ]
-      },
-      {
-        "title": "Claw-Anything: Benchmarking Always-On Personal Assistants with Broader Access to User's Digital World",
-        "summary": "Large language model agents are increasingly envisioned as always-on personal assistants with access to anything relevant in the user's digital world. Yet current systems operate over only narrow slic",
-        "link": "http://arxiv.org/abs/2605.26086v1",
-        "date": "2026-05-25",
-        "authors": [
-          "Yusong Lin",
-          "Xinyuan Liang",
-          "Haiyang Wang"
-        ]
-      }
-    ],
-    "updated": "2026-05-26T06:08:43.549135Z"
+    "papers": [],
+    "error": "The read operation timed out"
   },
   "q-fin": {
     "label": "Quantitative Finance",
@@ -104,12 +17,96 @@
   "econ": {
     "label": "Economics",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "updated": "2026-05-27T06:22:38.201136Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
-    "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "papers": [
+      {
+        "title": "Shortest Path Problem with Subnormal Gaussian Fuzzy Costs",
+        "summary": "This paper addresses the fuzzy shortest path problem in directed graphs, where edge costs are modeled as generalized fuzzy numbers with Gaussian membership functions. We interpret height as an indicat",
+        "link": "http://arxiv.org/abs/2605.27317v1",
+        "date": "2026-05-26",
+        "authors": [
+          "Murat Moran",
+          "Hande G\u00fcnay Akdemir"
+        ]
+      },
+      {
+        "title": "Risk Averse Alert Prioritization for IDS Using Subnormal Gaussian Fuzzy Models",
+        "summary": "Modern intrusion detection systems generate thousands of alerts daily, but alert fatigue severely limits security operations effectiveness due to too many false positives or low-impact events. We addr",
+        "link": "http://arxiv.org/abs/2605.27299v1",
+        "date": "2026-05-26",
+        "authors": [
+          "Murat Moran"
+        ]
+      },
+      {
+        "title": "Landseer: Exploring the Machine Learning Defense Landscape",
+        "summary": "Machine learning systems face diverse threats that undermine robustness, privacy, and fairness. Although many defenses have been proposed, each typically addresses a single risk in isolation. Real-wor",
+        "link": "http://arxiv.org/abs/2605.27148v1",
+        "date": "2026-05-26",
+        "authors": [
+          "Ayushi Sharma",
+          "Rosemary Agbozo",
+          "Santiago Torres-Arias"
+        ]
+      },
+      {
+        "title": "Do Modern Post-Hoc Watermarking Methods Beat Broken-Arrows?",
+        "summary": "With the rapid proliferation of generative models, such as diffusion models, digital watermarking has emerged as a crucial solution for identifying AI-generated images. Modern post-hoc watermarking sc",
+        "link": "http://arxiv.org/abs/2605.27135v1",
+        "date": "2026-05-26",
+        "authors": [
+          "Enoal Gesny",
+          "Eva Giboulot"
+        ]
+      },
+      {
+        "title": "BAIT: Boundary-Guided Disclosure Escalation via Self-Conditioned Reasoning",
+        "summary": "In this work, we propose BAIT (Boundary-Aware Iterative Trap), a three-step jailbreak framework that approaches malicious goals through internal disclosure. BAIT first asks the model to identify the p",
+        "link": "http://arxiv.org/abs/2605.27110v1",
+        "date": "2026-05-26",
+        "authors": [
+          "Xuan Luo",
+          "Yue Wang",
+          "Geng Tu"
+        ]
+      },
+      {
+        "title": "On the Hidden Costs of Counterfactual Knowledge Training in LLM Unlearning",
+        "summary": "Counterfactual tuning (CFT) has emerged as a promising paradigm for Large Language Model (LLM) unlearning by training models to generate alternative fictitious knowledge in place of undesired content.",
+        "link": "http://arxiv.org/abs/2605.27083v1",
+        "date": "2026-05-26",
+        "authors": [
+          "Xiaotian Ye",
+          "Xiaohan Wang",
+          "Mengqi Zhang"
+        ]
+      },
+      {
+        "title": "Lessons from Penetration Tests on Large-Scale Agent Systems",
+        "summary": "As AI systems gain increasing autonomy and execution capability, the number of discovered security vulnerabilities continues to rise. However, many of these vulnerabilities are not fundamentally novel",
+        "link": "http://arxiv.org/abs/2605.27042v1",
+        "date": "2026-05-26",
+        "authors": [
+          "Kevin Eykholt",
+          "Dhilung Kirat",
+          "Xiaokui Shu"
+        ]
+      },
+      {
+        "title": "Prompt Injection Detection is Regime-Dependent: A Deployment-Aware Evaluation with Interpretable Structural Signals",
+        "summary": "Prompt injection poses a critical threat to the safe deployment of large language models, yet existing detection approaches are typically evaluated under limited settings that do not reflect real-worl",
+        "link": "http://arxiv.org/abs/2605.26999v1",
+        "date": "2026-05-26",
+        "authors": [
+          "Akindoyin Akinrele",
+          "Shreyank N Gowda"
+        ]
+      }
+    ],
+    "updated": "2026-05-27T06:22:38.201136Z"
   },
   "q-bio": {
     "label": "Biology",
