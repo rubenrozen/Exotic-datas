@@ -3,94 +3,90 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Beyond Binary: Sim-to-Real Dexterous Manipulation with Physics-Grounded Contact Representation",
-        "summary": "A primary bottleneck in contact-rich manipulation is the difficulty of collecting real-world data. Sim-to-real reinforcement learning offers a scalable alternative, but the simulation-reality gap prev",
-        "link": "http://arxiv.org/abs/2605.28812v1",
-        "date": "2026-05-27",
+        "title": "Physics Is All You Need? A Case Study in Physicist-Supervised AI Development of Scientific Software",
+        "summary": "Are AI agents tools, co-authors, or researchers? We present a quantified case study ($N=1$): a physicist supervising an AI coding agent (Claude Code, Sonnet and Opus models) over 12 work days and 57 s",
+        "link": "http://arxiv.org/abs/2605.30353v1",
+        "date": "2026-05-28",
         "authors": [
-          "Jiahe Pan",
-          "Stelian Coros",
-          "Jitendra Malik"
+          "Nhat-Minh Nguyen"
         ]
       },
       {
-        "title": "Calibrating Conservatism for Scalable Oversight",
-        "summary": "Agentic AI systems capable of autonomous planning and extended environmental interaction pose a fundamental control problem: how can humans maintain meaningful oversight of systems that may exceed the",
-        "link": "http://arxiv.org/abs/2605.28807v1",
-        "date": "2026-05-27",
+        "title": "VideoMLA: Low-Rank Latent KV Cache for Minute-Scale Autoregressive Video Diffusion",
+        "summary": "Long-rollout causal video diffusion has converged on a fixed-size sliding-window KV cache, with recent progress innovating within this layout by changing which tokens occupy the window or how their po",
+        "link": "http://arxiv.org/abs/2605.30351v1",
+        "date": "2026-05-28",
         "authors": [
-          "William Overman",
-          "Mohsen Bayati"
+          "Hidir Yesiltepe",
+          "Jiazhen Hu",
+          "Tuna Han Salih Meral"
         ]
       },
       {
-        "title": "OmniVerifier-M1: Multimodal Meta-Verifier with Explicit Structured Recalibration",
-        "summary": "Visual outcomes are increasingly central to multimodal large language models, making reliable and fine-grained verification essential for scaling generalist foundation models. In this work, we investi",
-        "link": "http://arxiv.org/abs/2605.28805v1",
-        "date": "2026-05-27",
+        "title": "LLMSurgeon: Diagnosing Data Mixture of Large Language Models",
+        "summary": "The pretraining data mixture of Large Language Models (LLMs) constitutes their \"digital DNA\", shaping model behaviors, capabilities, and failure modes. Yet this composition is rarely disclosed, making",
+        "link": "http://arxiv.org/abs/2605.30348v1",
+        "date": "2026-05-28",
         "authors": [
-          "Xinchen Zhang",
-          "Bowei Liu",
-          "Jiale Liu"
+          "Yaxin Luo",
+          "Jiacheng Cui",
+          "Xiaohan Zhao"
         ]
       },
       {
-        "title": "CaMBRAIN: Real-time, Continuous EEG Inference with Causal State Space Models",
-        "summary": "Electroencephalography (EEG) is a critical, non-invasive method to monitor electrical brain activity. EEGs can span anywhere from a couple seconds to multiple hours, posing a major hurdle for existing",
-        "link": "http://arxiv.org/abs/2605.28792v1",
-        "date": "2026-05-27",
+        "title": "SchGen: PCB Schematic Generation with Semantic-Grounded Code Representations",
+        "summary": "Printed circuit board (PCB) schematic design defines nearly all electronic hardware, but it remains manual and expertise-intensive. While generative AI has advanced digital and analog IC design, PCB s",
+        "link": "http://arxiv.org/abs/2605.30345v1",
+        "date": "2026-05-28",
         "authors": [
-          "Abhilash Durgam",
-          "Nyle Siddiqui",
-          "Jeffrey A. Chan-Santiago"
+          "Qinpei Luo",
+          "Ruichun Ma",
+          "Xinyu Zhang"
         ]
       },
       {
-        "title": "Skill-Conditioned Gated Self-Distillation for LLM Reasoning",
-        "summary": "On-policy self-distillation (SD) improves LLM reasoning by using teacher-side privileged information (PI) to turn sparse verifier outcomes into dense token-level supervision. Existing methods usually ",
-        "link": "http://arxiv.org/abs/2605.28791v1",
-        "date": "2026-05-27",
+        "title": "Tiny but Trusted: Efficient Vision-Language Reasoning for Time-Series Anomaly Detection",
+        "summary": "Recent advances in Vision-Language Models (VLMs) have achieved impressive performance across many tasks, yet prior studies report unsatisfactory performance when applying large language or multimodal ",
+        "link": "http://arxiv.org/abs/2605.30344v1",
+        "date": "2026-05-28",
         "authors": [
-          "Jiazhen Huang",
-          "Xiao Chen",
-          "Xiao Luo"
+          "Xiaona Zhou",
+          "Muntasir Wahed",
+          "Tianjiao Yu"
         ]
       },
       {
-        "title": "Do Agents Need Semantic Metadata? A Comparative Study in Agentic Data Retrieval",
-        "summary": "In the era of autonomous agents, machine-actionable data is critical for data-driven workflows. For more than a decade, semantic metadata like schema.org has anchored the FAIR principles (Findable, Ac",
-        "link": "http://arxiv.org/abs/2605.28787v1",
-        "date": "2026-05-27",
+        "title": "Unlocking the Working Memory of Large Language Models for Latent Reasoning",
+        "summary": "To improve the reasoning capabilities of large language models, test-time compute is typically scaled by generating intermediate tokens before the final answer. However, this couples reasoning to auto",
+        "link": "http://arxiv.org/abs/2605.30343v1",
+        "date": "2026-05-28",
         "authors": [
-          "Shiyu Chen",
-          "Tarfah Alrashed",
-          "Alon Halevy"
+          "Lukas Aichberger",
+          "Sepp Hochreiter"
         ]
       },
       {
-        "title": "Learn from Weaknesses: Automated Domain Specialization for Small Computer-Use Agents",
-        "summary": "Computer-use agents (CUAs) have recently made substantial progress, but deploying a separate large expert for each software domain remains expensive. Small open computer-use agents are more practical ",
-        "link": "http://arxiv.org/abs/2605.28775v1",
-        "date": "2026-05-27",
+        "title": "GPIC: A Giant Permissive Image Corpus for Visual Generation",
+        "summary": "Studying scalable methods for visual generative modeling requires large, accessible, and stable datasets. We introduce GPIC, a Giant Permissive Image Corpus of approximately 28 trillion pixels. GPIC c",
+        "link": "http://arxiv.org/abs/2605.30341v1",
+        "date": "2026-05-28",
         "authors": [
-          "Suji Kim",
-          "Kangsan Kim",
-          "Sung Ju Hwang"
+          "Keshigeyan Chandrasegaran",
+          "Kyle Sargent",
+          "Suchir Agarwal"
         ]
       },
       {
-        "title": "Rethinking Memory as Continuously Evolving Connectivity",
-        "summary": "Existing memory-augmented LLM agents often treat memory as a static repository with pre-defined representations and fixed retrieval pipelines, which is brittle in dynamic agentic environments where fe",
-        "link": "http://arxiv.org/abs/2605.28773v1",
-        "date": "2026-05-27",
+        "title": "Locally Coherent, Globally Incoherent: Bounding Compositional Incoherence in Multi-Component LLM Agents",
+        "summary": "Multi-component LLM agents assemble probabilistic claims from components that each see only part of a joint problem; the composition can violate basic probability axioms even when every component is l",
+        "link": "http://arxiv.org/abs/2605.30335v1",
+        "date": "2026-05-28",
         "authors": [
-          "Jizhan Fang",
-          "Buqiang Xu",
-          "Zhixian Wang"
+          "Anany Kotawala"
         ]
       }
     ],
-    "updated": "2026-05-28T06:14:34.492811Z"
+    "updated": "2026-05-29T06:15:45.203628Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
@@ -100,187 +96,21 @@
   "physics": {
     "label": "Physics",
     "papers": [],
-    "error": "The read operation timed out"
+    "error": "HTTP Error 429: Unknown Error"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "error": "The read operation timed out"
+    "error": "HTTP Error 429: Unknown Error"
   },
   "cs.CR": {
     "label": "Cybersecurity",
-    "papers": [
-      {
-        "title": "Code as a Weapon: A Consensus-Labeled Prompt Bank for Measuring Coding-Model Compliance with Malicious-Code Requests",
-        "summary": "A general-purpose language model that answers a harmful question returns text; a coding model that complies with a malicious request can return a working weapon -- a keylogger, a ransomware stub, an e",
-        "link": "http://arxiv.org/abs/2605.28734v1",
-        "date": "2026-05-27",
-        "authors": [
-          "Richard J. Young",
-          "Gregory D. Moody"
-        ]
-      },
-      {
-        "title": "Efficient and Quantum-safe Internet Key Exchange Protocols for Satellite Communications",
-        "summary": "This paper studies cryptographic key exchange in satellite communications, which requires specific solutions because the satellite context presents unique challenges, particularly concerning onboard r",
-        "link": "http://arxiv.org/abs/2605.28660v1",
-        "date": "2026-05-27",
-        "authors": [
-          "Davide De Zuane",
-          "Marco Baldi",
-          "Paolo Santini"
-        ]
-      },
-      {
-        "title": "MaskClaw: Edge-Side Personalized Privacy Arbitration for GUI Agents with Behavior-Driven Skill Evolution",
-        "summary": "GUI agents rely on screenshots to infer intent and operate across applications, but these screenshots often contain private messages, medical records, payment credentials, and workplace-specific workf",
-        "link": "http://arxiv.org/abs/2605.28646v1",
-        "date": "2026-05-27",
-        "authors": [
-          "Yanqiu Zhao",
-          "Dongying Zheng",
-          "Kaibo Huang"
-        ]
-      },
-      {
-        "title": "GraphSteal: Structural Knowledge Stealing from Graph RAG via Traversal Reconstruction",
-        "summary": "Retrieval-Augmented Generation (RAG) enhances LLMs by grounding generation in query-relevant external evidence. Beyond unstructured text corpora, Graph RAG integrates knowledge graphs into the retriev",
-        "link": "http://arxiv.org/abs/2605.28645v1",
-        "date": "2026-05-27",
-        "authors": [
-          "Jinze Gu",
-          "Qinghua Mao",
-          "Xi Lin"
-        ]
-      },
-      {
-        "title": "Blind PRNG Hijacking: An Undetectable Integrity-Preserving Attack Against LLM Watermarking",
-        "summary": "Cryptographic watermarking is a leading defense for attributing text generated by large language models (LLMs). Existing schemes, including KGW, Unigram, and DipMark, derive their security guarantees ",
-        "link": "http://arxiv.org/abs/2605.28632v1",
-        "date": "2026-05-27",
-        "authors": [
-          "Ziyang You",
-          "Huilong He",
-          "Xiaoke Yang"
-        ]
-      },
-      {
-        "title": "Position: Retire the \"Positive Backdoor\" Label -- Secret Alignment Requires Strict and Systematic Evaluation",
-        "summary": "This position paper argues that the AI/ML community should stop overclaiming and retire the label \"positive backdoor,\" and instead treat trigger-activated hidden behaviors as Secret Alignment. Crucial",
-        "link": "http://arxiv.org/abs/2605.28597v1",
-        "date": "2026-05-27",
-        "authors": [
-          "Jianwei Li",
-          "Jung-Eun Kim"
-        ]
-      },
-      {
-        "title": "Technical Report: Exploring the Emerging Threats of the Agent Skill Ecosystem",
-        "summary": "We analyzed 3,984 AI agent skills from major marketplaces and found 76 confirmed malicious payloads, including credential theft, backdoor installation, and data exfiltration. 13.4% of all skills conta",
-        "link": "http://arxiv.org/abs/2605.28588v1",
-        "date": "2026-05-27",
-        "authors": [
-          "Luca Beurer-Kellner",
-          "Aleksei Kudrinskii",
-          "Marco Milanta"
-        ]
-      },
-      {
-        "title": "Refusal Before Decoding: Detecting and Exploiting Refusal Signals in Intermediate LLM Activations",
-        "summary": "In this paper, we investigate whether refusal behavior can be predicted from LLM intermediate activations before decoding using linear probes trained on residual stream activations at each transformer",
-        "link": "http://arxiv.org/abs/2605.28553v1",
-        "date": "2026-05-27",
-        "authors": [
-          "Matteo Gioele Collu",
-          "Riccardo Conte",
-          "Alberto Giaretta"
-        ]
-      }
-    ],
-    "updated": "2026-05-28T06:14:34.492811Z"
+    "papers": [],
+    "error": "The read operation timed out"
   },
   "q-bio": {
     "label": "Biology",
-    "papers": [
-      {
-        "title": "Synchronization of active mechanical oscillators by an inertial load",
-        "summary": "Motivated by the operation of myogenic (self-oscillatory) insect flight muscle, we study a model consisting of a large number of identical oscillatory contractile elements joined in a chain, whose end",
-        "link": "http://arxiv.org/abs/physics/0307155v1",
-        "date": "2003-07-31",
-        "authors": [
-          "Andrej Vilfan",
-          "Thomas Duke"
-        ]
-      },
-      {
-        "title": "Towards the Understanding of Stability Puzzles in Phage lambda",
-        "summary": "We discuss two aspects, the in vivo and in vitro difference and the modeling of noise, of integrative modeling of network dynamics in biology, using phage lambda as an example. We believe those two as",
-        "link": "http://arxiv.org/abs/cond-mat/0307747v1",
-        "date": "2003-07-30",
-        "authors": [
-          "P. Ao",
-          "L. Yin"
-        ]
-      },
-      {
-        "title": "A Growth Model for Multicellular Tumor Spheroids",
-        "summary": "Most organisms grow according to simple laws, which in principle can be derived from energy conservation and scaling arguments, critically dependent on the relation between the metabolic rate B of ene",
-        "link": "http://arxiv.org/abs/physics/0307136v1",
-        "date": "2003-07-29",
-        "authors": [
-          "Pier Paolo Delsanto",
-          "Caterina Guiot",
-          "Piero Giorgio Degiorgis"
-        ]
-      },
-      {
-        "title": "Bidirectional communication in neural networks moderated by a Hebb-like learning rule",
-        "summary": "We demonstrate that our recently introduced stochastic Hebb-like learning rule is capable of learning the problem of timing in general network topologies generated by an algorithm of Watts and Strogat",
-        "link": "http://arxiv.org/abs/cond-mat/0307667v1",
-        "date": "2003-07-28",
-        "authors": [
-          "Frank Emmert-Streib"
-        ]
-      },
-      {
-        "title": "A novel stochastic Hebb-like learning rule for neural networks",
-        "summary": "We present a novel stochastic Hebb-like learning rule for neural networks. This learning rule is stochastic with respect to the selection of the time points when a synaptic modification is induced by ",
-        "link": "http://arxiv.org/abs/cond-mat/0307666v1",
-        "date": "2003-07-28",
-        "authors": [
-          "Frank Emmert-Streib"
-        ]
-      },
-      {
-        "title": "Free Energy Transduction in a Chemical Motor Model",
-        "summary": "Motor enzymes catalyze chemical reactions, like the hydrolysis of ATP, and in the process they also perform work. Recent studies indicate that motor enzymes perform work with specific intermediate ste",
-        "link": "http://arxiv.org/abs/physics/0307121v1",
-        "date": "2003-07-24",
-        "authors": [
-          "Josh E. Baker"
-        ]
-      },
-      {
-        "title": "Maximisation Principles and Daisyworld",
-        "summary": "We investigate whether the equilibrium time averaged state of a self-organising system with many internal degrees of freedom, 2D- daisyworld, can be described by optimising a single quantity. Unlike p",
-        "link": "http://arxiv.org/abs/cond-mat/0307567v1",
-        "date": "2003-07-23",
-        "authors": [
-          "G. J. Ackland"
-        ]
-      },
-      {
-        "title": "Xerogel Protein Substrates for Far Infrared Studies",
-        "summary": "A number of researchers are attempting to develop a biosensor based on terahertz sensing. Key to the realization of any biosensor system is the access of the target molecules to the sensor. In the cas",
-        "link": "http://arxiv.org/abs/cond-mat/0307558v1",
-        "date": "2003-07-23",
-        "authors": [
-          "J. -Y. Chen",
-          "W. Cox",
-          "E. Tehan"
-        ]
-      }
-    ],
-    "updated": "2026-05-28T06:14:34.492811Z"
+    "papers": [],
+    "error": "HTTP Error 429: Unknown Error"
   }
 }
