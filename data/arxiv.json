@@ -3,116 +3,283 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Lumos-Nexus: Efficient Frequency Bridging with Homogeneous Latent Space for Video Unified Models",
-        "summary": "Connector-based video unified models have demonstrated strong capability in instruction-grounded video synthesis, but integrating a large high-fidelity generator into the unified training loop is comp",
-        "link": "http://arxiv.org/abs/2605.31603v1",
-        "date": "2026-05-29",
+        "title": "Mitigating Perceptual Judgment Bias in Multimodal LLM-as-a-Judge via Perceptual Perturbation and Reward Modeling",
+        "summary": "Recent multimodal large language models have demonstrated strong reasoning ability, yet their reliability as automated evaluators remains limited by a critical weakness: when visual evidence conflicts",
+        "link": "http://arxiv.org/abs/2606.02578v1",
+        "date": "2026-06-01",
         "authors": [
-          "Jiazheng Xing",
-          "Hangjie Yuan",
-          "Lingling Cai"
+          "Seojeong Park",
+          "Jiho Choi",
+          "Junyong Kang"
         ]
       },
       {
-        "title": "Stateful Online Monitoring Catches Distributed Agent Attacks",
-        "summary": "Language models can find thousands of severe software vulnerabilities, and agents are increasingly being misused for cyberattacks. To avoid detection, attackers frequently distribute their misuse, spl",
-        "link": "http://arxiv.org/abs/2605.31593v1",
-        "date": "2026-05-29",
+        "title": "AdaCodec: A Predictive Visual Code for Video MLLMs",
+        "summary": "Video is temporally redundant: adjacent frames usually share most objects, background, and layout. Yet existing video multimodal large language models (video MLLMs) usually encode each sampled frame a",
+        "link": "http://arxiv.org/abs/2606.02569v1",
+        "date": "2026-06-01",
         "authors": [
-          "Davis Brown",
-          "Samarth Bhargav",
-          "Arav Santhanam"
+          "Haowen Hou",
+          "Zhen Huang",
+          "Zheming Liang"
         ]
       },
       {
-        "title": "TunerDiT: Training-free Progressive Steering of Diffusion Transformer for Multi-Event Video Generation",
-        "summary": "Text-to-video (T2V) generation faces challenging questions when generating videos with long horizons containing multiple events. Inspired by the intrinsics of the diffusion process, we probe video dif",
-        "link": "http://arxiv.org/abs/2605.31590v1",
-        "date": "2026-05-29",
+        "title": "ClinEnv: An Interactive Multi-Stage Long Horizon EHR Environment for Agents",
+        "summary": "Clinical practice is not the selection of an answer from enumerated options: a physician gathers heterogeneous information incrementally and commits to sequential, irreversible decisions under uncerta",
+        "link": "http://arxiv.org/abs/2606.02568v1",
+        "date": "2026-06-01",
         "authors": [
-          "Ruotong Liao",
-          "Guowen Huang",
-          "Qing Cheng"
+          "Yuxing Lu",
+          "Yushuhong Lin",
+          "Wenqi Shi"
         ]
       },
       {
-        "title": "Language Models Learn Constructional Semantics, Not To Mention Syntax: Investigating LM Understanding of Paired-Focus Constructions",
-        "summary": "Grasping the semantics of rare constructions (form-meaning pairings) has been shown to be a challenging problem that has currently only been solved by the largest LLMs. It remains an open question if ",
-        "link": "http://arxiv.org/abs/2605.31586v1",
-        "date": "2026-05-29",
+        "title": "Permissive Safety Through Trusted Inference: Verifiable Belief-Space Neural Safety Filters for Assured Interactive Robotics",
+        "summary": "Autonomous robots that interact with people must make safe and efficient decisions under human-induced uncertainty, such as their preferences, goals, competency, and willingness to cooperate. Safety f",
+        "link": "http://arxiv.org/abs/2606.02562v1",
+        "date": "2026-06-01",
         "authors": [
-          "Wesley Scivetti",
-          "Ethan Wilcox",
-          "Nathan Schneider"
+          "Haimin Hu"
         ]
       },
       {
-        "title": "LongTraceRL: Learning Long-Context Reasoning from Search Agent Trajectories with Rubric Rewards",
-        "summary": "Long-context reasoning remains a central challenge for large language models, which often fail to locate and integrate key information in extensive distracting content. Reinforcement learning with ver",
-        "link": "http://arxiv.org/abs/2605.31584v1",
-        "date": "2026-05-29",
+        "title": "From Layers to Submodules: Rethinking Granularity in Replacement-Based LLM Compression",
+        "summary": "Post-training compression of Large Language Models (LLMs) removes entire architectural components, either deleting them or replacing them with fitted modules. Existing replacement-based methods share ",
+        "link": "http://arxiv.org/abs/2606.02559v1",
+        "date": "2026-06-01",
         "authors": [
-          "Nianyi Lin",
-          "Jiajie Zhang",
-          "Lei Hou"
+          "Elia Cunegatti",
+          "Marcus Vukojevic",
+          "Erik Nielsen"
         ]
       },
       {
-        "title": "Choosing the Lens: Strategic Perspective Activation in Context-Dependent Argumentation",
-        "summary": "The same arguments often need to be evaluated under different external regimes. An agent with influence over the regime has a strategic lever that standard formalisms do not directly capture. We intro",
-        "link": "http://arxiv.org/abs/2605.31581v1",
-        "date": "2026-05-29",
+        "title": "Modeling Depth Ambiguity: A Mixture-Density Representation for Flying-Point-Free Depth Estimation",
+        "summary": "Despite advances in depth estimation, flying points remain a persistent failure mode: near object boundaries, depth estimators often predict spurious 3D points in the empty space between foreground an",
+        "link": "http://arxiv.org/abs/2606.02552v1",
+        "date": "2026-06-01",
         "authors": [
-          "Albert Sadowski",
-          "Jaros\u0142aw A. Chudziak"
+          "Siyuan Bian",
+          "Congrong Xu",
+          "Jun Gao"
         ]
       },
       {
-        "title": "SPECTRA: Synthetic IR Test Collections with Relevance Oracles and Controlled Distractor Diagnostics",
-        "summary": "Scalable information retrieval testing needs corpora that are large enough to stress index construction, ranking latency, query routing, and evaluation tooling, yet human-judged test collections remai",
-        "link": "http://arxiv.org/abs/2605.31575v1",
-        "date": "2026-05-29",
+        "title": "SimSD: Simple Speculative Decoding in Diffusion Language Models",
+        "summary": "Diffusion large language models (dLLMs) have recently emerged as a promising alternative to autoregressive (AR) LLMs, offering faster inference through parallel or blockwise decoding. However, their m",
+        "link": "http://arxiv.org/abs/2606.02544v1",
+        "date": "2026-06-01",
         "authors": [
-          "Eric Liang"
+          "Junxia Cui",
+          "Haotian Ye",
+          "Runchu Tian"
         ]
       },
       {
-        "title": "What Gets Unmasked First? Trajectory Analysis of Diffusion Models for Graph-to-Text Generation",
-        "summary": "We present the first systematic study of masked diffusion language models (MDLMs) for graph-to-text generation. We analyze MDLM generation trajectories -- the order in which tokens are unmasked during",
-        "link": "http://arxiv.org/abs/2605.31564v1",
-        "date": "2026-05-29",
+        "title": "Tracking the Behavioral Trajectories of Adapting Agents",
+        "summary": "Text files such as skill files, memory files, and behavioral configuration files play a central role in defining how modern agents act. Through edits by humans or the agents themselves, these files ma",
+        "link": "http://arxiv.org/abs/2606.02536v1",
+        "date": "2026-06-01",
         "authors": [
-          "Qing Wang",
-          "Jacob Devasier",
-          "Chengkai Li"
+          "Jonah Leshin",
+          "Manish Shah",
+          "Ian Timmis"
         ]
       }
     ],
-    "updated": "2026-06-01T06:58:54.746633Z"
+    "updated": "2026-06-02T06:43:20.030042Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "error": "The read operation timed out"
+    "updated": "2026-06-02T06:43:20.030042Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "error": "The read operation timed out"
+    "updated": "2026-06-02T06:43:20.030042Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "error": "The read operation timed out"
+    "updated": "2026-06-02T06:43:20.030042Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
-    "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "papers": [
+      {
+        "title": "IntraShuffler: A Privacy Preserving Framework for Heterogeneous DP Federated Learning",
+        "summary": "Heterogeneous Differential Privacy (HDP) in Federated Learning (FL) allows clients to select individual privacy budgets ($\\varepsilon_i$) according to institutional policies and data sensitivity. In p",
+        "link": "http://arxiv.org/abs/2606.02563v1",
+        "date": "2026-06-01",
+        "authors": [
+          "Farhin Farhad Riya",
+          "Olivera Kotevska",
+          "Jinyuan Stella Sun"
+        ]
+      },
+      {
+        "title": "Ghost Tool Calls: Issue-Time Privacy for Speculative Agent Tools",
+        "summary": "Tool-augmented language agents speculatively issue likely future tool calls to hide latency, but those calls leak inferred user intent to external services before the agent commits to the branch. Ever",
+        "link": "http://arxiv.org/abs/2606.02483v1",
+        "date": "2026-06-01",
+        "authors": [
+          "Bardia Mohammadi",
+          "Lars Klein",
+          "Akhil Arora"
+        ]
+      },
+      {
+        "title": "Poking Around in the Dark: Why a Shared Understanding of Components Matters",
+        "summary": "By listing the components included in an application, Software Bills of Materials (SBOMs) are intended to support the timely identification of vulnerable components and ensure the security of the soft",
+        "link": "http://arxiv.org/abs/2606.02442v1",
+        "date": "2026-06-01",
+        "authors": [
+          "Felix Reichmann",
+          "Wolfgang Krane",
+          "Alena Naiakshina"
+        ]
+      },
+      {
+        "title": "Privacy-preserving Information Sharing in Oligopoly Competitions",
+        "summary": "Information sharing among competing suppliers can improve decision-making under uncertainty, yet strategic concerns regarding rival exploitation often deter voluntary disclosure. We study information-",
+        "link": "http://arxiv.org/abs/2606.02348v1",
+        "date": "2026-06-01",
+        "authors": [
+          "Yuxin Liu",
+          "M. Amin Rahimian"
+        ]
+      },
+      {
+        "title": "I-(OT)^2: A Client-optimal Oblivious Transfer Protocol for IoT Devices",
+        "summary": "Oblivious Transfer (OT) is a fundamental cryptographic primitive enabling privacy-preserving computation and constitutes a core building block for secure multi-party computation while supporting a wid",
+        "link": "http://arxiv.org/abs/2606.02344v1",
+        "date": "2026-06-01",
+        "authors": [
+          "Elia Onofri",
+          "Andrea Ciccotelli",
+          "Roberto Di Pietro"
+        ]
+      },
+      {
+        "title": "Multidimensional Reconciliation in Continuous-Variable QKD: Review, Coding Schemes, and Open Source Simulation",
+        "summary": "Continuous-variable quantum key distribution (CV-QKD) requires highly efficient reconciliation techniques to operate at low signal-to-noise ratios and long distances. Multidimensional reconciliation a",
+        "link": "http://arxiv.org/abs/2606.02323v1",
+        "date": "2026-06-01",
+        "authors": [
+          "Martial Lucien",
+          "Rosio Alexis",
+          "Diamanti Eleni"
+        ]
+      },
+      {
+        "title": "SeClaw: Spec-Driven Security Task Synthesis for Evaluating Autonomous Agents",
+        "summary": "Autonomous LLM agents increasingly operate in stateful environments where they access tools, files, memory, and external services. While such capabilities enable complex real-world workflows, they als",
+        "link": "http://arxiv.org/abs/2606.02302v1",
+        "date": "2026-06-01",
+        "authors": [
+          "Hao Cheng",
+          "Changtao Miao",
+          "Tianle Song"
+        ]
+      },
+      {
+        "title": "AgentRedBench: Dynamic Redteaming and Integration-Aware Defense for LLM Agents over SaaS Integrations",
+        "summary": "Indirect prompt injection in tool-use agents is a concrete production threat: LLM agents read from integrations (third-party services such as Gmail, Salesforce, or Jira accessed through tool calls) wh",
+        "link": "http://arxiv.org/abs/2606.02240v1",
+        "date": "2026-06-01",
+        "authors": [
+          "Hiskias Dingeto",
+          "Will Leeney"
+        ]
+      }
+    ],
+    "updated": "2026-06-02T06:43:20.030042Z"
   },
   "q-bio": {
     "label": "Biology",
-    "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "papers": [
+      {
+        "title": "Synchronization of active mechanical oscillators by an inertial load",
+        "summary": "Motivated by the operation of myogenic (self-oscillatory) insect flight muscle, we study a model consisting of a large number of identical oscillatory contractile elements joined in a chain, whose end",
+        "link": "http://arxiv.org/abs/physics/0307155v1",
+        "date": "2003-07-31",
+        "authors": [
+          "Andrej Vilfan",
+          "Thomas Duke"
+        ]
+      },
+      {
+        "title": "Towards the Understanding of Stability Puzzles in Phage lambda",
+        "summary": "We discuss two aspects, the in vivo and in vitro difference and the modeling of noise, of integrative modeling of network dynamics in biology, using phage lambda as an example. We believe those two as",
+        "link": "http://arxiv.org/abs/cond-mat/0307747v1",
+        "date": "2003-07-30",
+        "authors": [
+          "P. Ao",
+          "L. Yin"
+        ]
+      },
+      {
+        "title": "A Growth Model for Multicellular Tumor Spheroids",
+        "summary": "Most organisms grow according to simple laws, which in principle can be derived from energy conservation and scaling arguments, critically dependent on the relation between the metabolic rate B of ene",
+        "link": "http://arxiv.org/abs/physics/0307136v1",
+        "date": "2003-07-29",
+        "authors": [
+          "Pier Paolo Delsanto",
+          "Caterina Guiot",
+          "Piero Giorgio Degiorgis"
+        ]
+      },
+      {
+        "title": "Bidirectional communication in neural networks moderated by a Hebb-like learning rule",
+        "summary": "We demonstrate that our recently introduced stochastic Hebb-like learning rule is capable of learning the problem of timing in general network topologies generated by an algorithm of Watts and Strogat",
+        "link": "http://arxiv.org/abs/cond-mat/0307667v1",
+        "date": "2003-07-28",
+        "authors": [
+          "Frank Emmert-Streib"
+        ]
+      },
+      {
+        "title": "A novel stochastic Hebb-like learning rule for neural networks",
+        "summary": "We present a novel stochastic Hebb-like learning rule for neural networks. This learning rule is stochastic with respect to the selection of the time points when a synaptic modification is induced by ",
+        "link": "http://arxiv.org/abs/cond-mat/0307666v1",
+        "date": "2003-07-28",
+        "authors": [
+          "Frank Emmert-Streib"
+        ]
+      },
+      {
+        "title": "Free Energy Transduction in a Chemical Motor Model",
+        "summary": "Motor enzymes catalyze chemical reactions, like the hydrolysis of ATP, and in the process they also perform work. Recent studies indicate that motor enzymes perform work with specific intermediate ste",
+        "link": "http://arxiv.org/abs/physics/0307121v1",
+        "date": "2003-07-24",
+        "authors": [
+          "Josh E. Baker"
+        ]
+      },
+      {
+        "title": "Maximisation Principles and Daisyworld",
+        "summary": "We investigate whether the equilibrium time averaged state of a self-organising system with many internal degrees of freedom, 2D- daisyworld, can be described by optimising a single quantity. Unlike p",
+        "link": "http://arxiv.org/abs/cond-mat/0307567v1",
+        "date": "2003-07-23",
+        "authors": [
+          "G. J. Ackland"
+        ]
+      },
+      {
+        "title": "Xerogel Protein Substrates for Far Infrared Studies",
+        "summary": "A number of researchers are attempting to develop a biosensor based on terahertz sensing. Key to the realization of any biosensor system is the access of the target molecules to the sensor. In the cas",
+        "link": "http://arxiv.org/abs/cond-mat/0307558v1",
+        "date": "2003-07-23",
+        "authors": [
+          "J. -Y. Chen",
+          "W. Cox",
+          "E. Tehan"
+        ]
+      }
+    ],
+    "updated": "2026-06-02T06:43:20.030042Z"
   }
 }
