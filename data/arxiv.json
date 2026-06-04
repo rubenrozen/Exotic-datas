@@ -3,99 +3,99 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Imaginative Perception Tokens Enhance Spatial Reasoning in Multimodal Language Models",
-        "summary": "Vision language models (VLMs) excel at many tasks but still struggle with spatial reasoning when critical information is not directly observable. Many such problems require imaginative perception: inf",
-        "link": "http://arxiv.org/abs/2606.03988v1",
-        "date": "2026-06-02",
+        "title": "Streaming Communication in Multi-Agent Reasoning",
+        "summary": "Multi-agent reasoning systems adopt a \"generate-then-transfer\" paradigm that forces end-to-end latency to scale linearly with pipeline depth. We introduce StreamMA, a multi-agent reasoning system that",
+        "link": "http://arxiv.org/abs/2606.05158v1",
+        "date": "2026-06-03",
         "authors": [
-          "Mahtab Bigverdi",
-          "Lindsey Li",
-          "Weikai Huang"
+          "Zhen Yang",
+          "Xiaogang Xu",
+          "Wen Wang"
         ]
       },
       {
-        "title": "Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking",
-        "summary": "We introduce Humanoid-GPT, a GPT-style Transformer with causal attention trained on a billion-scale motion corpus for whole-body control. Unlike prior shallow MLP trackers constrained by scarce data a",
-        "link": "http://arxiv.org/abs/2606.03985v1",
-        "date": "2026-06-02",
+        "title": "Reinforcement Learning from Rich Feedback with Distributional DAgger",
+        "summary": "Reasoning models have advanced rapidly, but the dominant reinforcement learning from verifiable rewards (RLVR) recipe remains surprisingly narrow: sample many responses and reward each with a single b",
+        "link": "http://arxiv.org/abs/2606.05152v1",
+        "date": "2026-06-03",
         "authors": [
-          "Zekun Qi",
-          "Xuchuan Chen",
-          "Dairu Liu"
+          "Rishabh Agrawal",
+          "Jacob Fein-Ashley",
+          "Paria Rashidinejad"
         ]
       },
       {
-        "title": "Language Models Need Sleep: Learning to Self-Modify and Consolidate Memories",
-        "summary": "The past few decades have witnessed significant advances in the design of machine learning algorithms, from early studies on task-specific shallow models to more general deep Large Language Models (LL",
-        "link": "http://arxiv.org/abs/2606.03979v1",
-        "date": "2026-06-02",
+        "title": "Multi-Column RBF Neural Network Using Adaptive and Non-Adaptive Particle Swarm Optimization",
+        "summary": "The radial basis function neural network (RBFN) trained with a gradient descending algorithm provides an effective fully connected structure in both shallow and deep networks. The error correction (Er",
+        "link": "http://arxiv.org/abs/2606.05150v1",
+        "date": "2026-06-03",
         "authors": [
-          "Ali Behrouz",
-          "Farnoosh Hashemi",
-          "Vahab Mirrokni"
+          "Ammar Hoori",
+          "Yuichi Motai"
         ]
       },
       {
-        "title": "Formalizing the Binding Problem",
-        "summary": "Representations of the world, arguably, contain information about features (e.g. something is blue, something is a circle) but also information about which features are part of the same object (e.g. t",
-        "link": "http://arxiv.org/abs/2606.03976v1",
-        "date": "2026-06-02",
+        "title": "Failed Reasoning Traces Tell You What Is Fixable (But Not by Reading Them)",
+        "summary": "When post-trained language models fail on reasoning problems, the common test-time-scaling response is to spend more compute on additional attempts, and the failed traces play no further role. We argu",
+        "link": "http://arxiv.org/abs/2606.05145v1",
+        "date": "2026-06-03",
         "authors": [
-          "Lianghuan Huang",
-          "Yihao Li",
-          "Saeed Salehi"
+          "Nizar Islah",
+          "Istabrak Abbes",
+          "Irina Rish"
         ]
       },
       {
-        "title": "Quantifying Faithful Confidence Expression in Large Reasoning Models",
-        "summary": "Reliable uncertainty communication is critical to the trustworthiness of LLMs, yet faithful calibration (FC)--the alignment between models' intrinsic and (linguistically) expressed confidence--is a pe",
-        "link": "http://arxiv.org/abs/2606.03969v1",
-        "date": "2026-06-02",
+        "title": "GeM-NR: Geometry-Aware Multi-View Editing for Nonrigid Scene Changes",
+        "summary": "Recent developments in multi-view image editing with generative models have brought us a step closer toward general 3D content generation and customization. Most existing works focus on rigid or appea",
+        "link": "http://arxiv.org/abs/2606.05142v1",
+        "date": "2026-06-03",
         "authors": [
-          "Areeb Gani",
-          "Asal Meskin",
-          "Gabrielle Kaili-May Liu"
+          "Josef Bengtson",
+          "Yaroslava Lochman",
+          "Fredrik Kahl"
         ]
       },
       {
-        "title": "QUBRIC: Co-Designing Queries and Rubrics for RL Beyond Verifiable Rewards",
-        "summary": "Rubric-based RL is a promising route for extending reinforcement learning beyond verifiable rewards, yet existing methods optimize rubrics while treating the query distribution as fixed. We identify a",
-        "link": "http://arxiv.org/abs/2606.03968v1",
-        "date": "2026-06-02",
+        "title": "Towards Efficient and Evidence-grounded Mobility Prediction with LLM-Driven Agent",
+        "summary": "Individual-level mobility prediction is central to urban simulation, transportation planning, and policy analysis. Supervised sequence models achieve strong accuracy but require task-specific training",
+        "link": "http://arxiv.org/abs/2606.05130v1",
+        "date": "2026-06-03",
         "authors": [
-          "Rongzhi Zhang",
-          "Rui Feng",
-          "Zhihan Zhang"
+          "Linyao Chen",
+          "Qinlao Zhao",
+          "Zechen Li"
         ]
       },
       {
-        "title": "AlignAtt4LLM: Fast AlignAtt for Decoder-Only LLMs at IWSLT 2026 Simultaneous Speech Translation Task",
-        "summary": "We describe AlignAtt4LLM, an IWSLT 2026 simultaneous speech translation system for English to German, Italian, and Chinese. The system is a synchronous cascade: Qwen3-ASR with forced alignment produce",
-        "link": "http://arxiv.org/abs/2606.03967v1",
-        "date": "2026-06-02",
+        "title": "Audio Interaction Model",
+        "summary": "Audio is an inherently interactive modality, yet today's Large Audio Language Models (LALMs) are offline, and streaming audio models each handle only a single task such as streaming ASR or voice chatt",
+        "link": "http://arxiv.org/abs/2606.05121v1",
+        "date": "2026-06-03",
         "authors": [
-          "Quentin Fuxa",
-          "Dominik Mach\u00e1\u010dek"
+          "Zhifei Xie",
+          "Zihang Liu",
+          "Ze An"
         ]
       },
       {
-        "title": "Agentic Chain-of-Thought Steering for Efficient and Controllable LLM Reasoning",
-        "summary": "Large language models improve final-answer accuracy through extended chain-of-thought reasoning, but often spend tokens inefficiently and offer little inference-time control. Existing efficient reason",
-        "link": "http://arxiv.org/abs/2606.03965v1",
-        "date": "2026-06-02",
+        "title": "Continual Visual and Verbal Learning Through a Child's Egocentric Input",
+        "summary": "Children learn the meanings of words from a continuous, temporally structured stream of egocentric experience. Recent work shows that neural networks can also learn word-referent mappings from a child",
+        "link": "http://arxiv.org/abs/2606.05115v1",
+        "date": "2026-06-03",
         "authors": [
-          "Yu Xia",
-          "Zhouhang Xie",
-          "Xin Xu"
+          "Xiaoyang Jiang",
+          "Yanlai Yang",
+          "Kenneth A. Norman"
         ]
       }
     ],
-    "updated": "2026-06-03T06:54:21.518441Z"
+    "updated": "2026-06-04T06:44:07.519278Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "error": "The read operation timed out"
   },
   "physics": {
     "label": "Physics",
@@ -105,101 +105,103 @@
   "econ": {
     "label": "Economics",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "error": "The read operation timed out"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Agent libOS: A Library-OS-Inspired Runtime for Long-Running, Capability-Controlled LLM Agents",
-        "summary": "Large language model (LLM) agents are evolving from request-response assistants into long-running software actors: they maintain state across model calls, fork subtasks, wait for external events, requ",
-        "link": "http://arxiv.org/abs/2606.03895v1",
-        "date": "2026-06-02",
+        "title": "Preserving Data Privacy in Learning Causal Structure with Fully Homomorphic Encryption",
+        "summary": "Preserving data privacy is an important topic in structural data management and data mining. However, the issue of privacy leakage in distributed causal structure learning is a persistent challenge, e",
+        "link": "http://arxiv.org/abs/2606.05129v1",
+        "date": "2026-06-03",
         "authors": [
-          "Yingqi Zhang"
+          "Jian Yang",
+          "Yuan Tong",
+          "Qinbin Li"
         ]
       },
       {
-        "title": "AI Agents Enable Adaptive Computer Worms",
-        "summary": "A computer worm is malware that spreads on a network by replicating itself from one machine to another. Traditional worms, like WannaCry, exploited predetermined vulnerabilities, and their spread can ",
-        "link": "http://arxiv.org/abs/2606.03811v1",
-        "date": "2026-06-02",
+        "title": "A-Live: Passive Liveness Detection via Neuromuscular Micro-Motion Signatures on Commodity Sensors",
+        "summary": "Liveness detection has evolved from a safeguard against presentation and replay attacks in biometric authentication to a broader requirement for distinguishing human users from non-human agents in mod",
+        "link": "http://arxiv.org/abs/2606.05126v1",
+        "date": "2026-06-03",
         "authors": [
-          "Jonas Guan",
-          "Tom Blanchard",
-          "Hanna Foerster"
+          "Mohammed Gharib",
+          "Sam Burns",
+          "Martin Zizi"
         ]
       },
       {
-        "title": "PURGE: Projected Unlearning via Retain-Guided Erasure",
-        "summary": "We propose PURGE, a machine unlearning algorithm built on a simple but an under-exploited observation: continual learning (CL) and machine unlearning (MU) which are fundamentally dual problems. CL tri",
-        "link": "http://arxiv.org/abs/2606.03808v1",
-        "date": "2026-06-02",
+        "title": "Bernoulli CUSUM and Bayes-Optimal Detection Ceilings for Trust Fraud in Sparse Rating Networks",
+        "summary": "Sequential trust detection in rating networks relies on continuous observation models that fail on real data. On Bitcoin-OTC, 56\\% of ratings take a single value under standard mapping, breaking the d",
+        "link": "http://arxiv.org/abs/2606.05090v1",
+        "date": "2026-06-03",
         "authors": [
-          "Vedant Jawandhia",
-          "Daksh Ahuja",
-          "Ghufran Alam Siddiqui"
+          "Talal Ashraf Butt"
         ]
       },
       {
-        "title": "Collision Resistance of Single-Layer Neural Nets",
-        "summary": "We initiate the study of the algorithmic complexity of finding collisions in single-layer binary neural networks. Given a random matrix $\\mathbf{A} \\in \\mathbb{R}^{m\\times n}$, an input $\\mathbf{x} \\i",
-        "link": "http://arxiv.org/abs/2606.03807v1",
-        "date": "2026-06-02",
+        "title": "Attention-Augmented LSTMs for Automatic Homophonic Ciphertext Decipherment",
+        "summary": "Homophonic substitution ciphers replace each plaintext letter with one of several possible ciphertext codes, deliberately weakening letter-frequency patterns and making automated decipherment difficul",
+        "link": "http://arxiv.org/abs/2606.05078v1",
+        "date": "2026-06-03",
         "authors": [
-          "Marco Benedetti",
-          "Andrej Bogdanov",
-          "Enrico M. Malatesta"
+          "Micaella Bruton",
+          "Meriem Beloucif",
+          "Be\u00e1ta Megyesi"
         ]
       },
       {
-        "title": "From Control Boundary to Insurance Claim: Reconstructing AI-Mediated Losses Through the CER Framework",
-        "summary": "AI losses that arise through an insured organization's generative or agentic AI system require state reconstruction, not merely event reconstruction, because the relevant state changes as the system r",
-        "link": "http://arxiv.org/abs/2606.03777v1",
-        "date": "2026-06-02",
+        "title": "SharedRequest: Privacy-Preserving Model-Agnostic Inference for Large Language Models",
+        "summary": "With the widespread deployment of public large language models (LLMs) such as ChatGPT, protecting user prompt privacy has become an increasingly critical issue. Existing privacy-preserving inference m",
+        "link": "http://arxiv.org/abs/2606.05004v1",
+        "date": "2026-06-03",
         "authors": [
-          "Alex Leung",
-          "Rex Zhang",
-          "Kentaroh Toyoda"
+          "Peihua Mai",
+          "Xuanrong Gao",
+          "Youlong Ding"
         ]
       },
       {
-        "title": "$\u03c0$Creds: Privately Inferred Credentials",
-        "summary": "Decentralized verifiable credential systems have seen limited deployment in practice. Existing constructions, built on zero-knowledge proofs, are complex, application-specific, and largely restricted ",
-        "link": "http://arxiv.org/abs/2606.03771v1",
-        "date": "2026-06-02",
+        "title": "From Agent Traces to Trust: Evidence Tracing and Execution Provenance in LLM Agents",
+        "summary": "Large language model (LLM)-based agents increasingly solve complex tasks by interacting with external tools, retrieval systems, memory modules, environments, and other agents. These capabilities expan",
+        "link": "http://arxiv.org/abs/2606.04990v1",
+        "date": "2026-06-03",
         "authors": [
-          "Samuel Breckenridge",
-          "Dani Vilardell",
-          "Derek Leung"
+          "Yiqi Wang",
+          "Jiaqi Zhang",
+          "Taotao Cai"
         ]
       },
       {
-        "title": "Same Weights, Different Robot: A Deployment Safety View of VLA Policies",
-        "summary": "Vision-language-action (VLA) policies are often treated as checkpoint-defined objects: if the weights, prompt, and benchmark suite match, the deployment is assumed to be the same policy. Robot executi",
-        "link": "http://arxiv.org/abs/2606.03724v1",
-        "date": "2026-06-02",
+        "title": "NLLog: Lightweight, Explainable SOC Anomaly Detection via Log-to-Language Rewriting",
+        "summary": "System-generated logs underpin security monitoring, yet their rigid template-based format hinders both automated analysis and human comprehension. We present NLLog (Natural-Language Log), a lightweigh",
+        "link": "http://arxiv.org/abs/2606.04957v1",
+        "date": "2026-06-03",
         "authors": [
-          "Jianwei Tai"
+          "Samuel Ndichu",
+          "Tao Ban",
+          "Seiichi Ozawa"
         ]
       },
       {
-        "title": "Don't Trust Us: A privacy-by-design android malware detection pipeline",
-        "summary": "Android malware detection increasingly relies on collecting and processing sensitive user data, including device identifiers, network artifacts, and runtime traces, while privacy is too often treated ",
-        "link": "http://arxiv.org/abs/2606.03714v1",
-        "date": "2026-06-02",
+        "title": "Sequential Data Poisoning in LLM Post-Training",
+        "summary": "LLM post-training proceeds through multiple stages, e.g., supervised fine-tuning (SFT) followed by reinforcement learning from human feedback (RLHF) or direct preference optimization (DPO), where each",
+        "link": "http://arxiv.org/abs/2606.04929v1",
+        "date": "2026-06-03",
         "authors": [
-          "Emmanuele Massidda",
-          "Diego Soi",
-          "Giorgio Giacinto"
+          "Jack Sanderson",
+          "Yihan Wang",
+          "Xiaoqian Lu"
         ]
       }
     ],
-    "updated": "2026-06-03T06:54:21.518441Z"
+    "updated": "2026-06-04T06:44:07.519278Z"
   },
   "q-bio": {
     "label": "Biology",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "error": "The read operation timed out"
   }
 }
