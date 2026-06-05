@@ -1,96 +1,8 @@
 {
   "cs.AI": {
     "label": "AI / Machine Learning",
-    "papers": [
-      {
-        "title": "Streaming Communication in Multi-Agent Reasoning",
-        "summary": "Multi-agent reasoning systems adopt a \"generate-then-transfer\" paradigm that forces end-to-end latency to scale linearly with pipeline depth. We introduce StreamMA, a multi-agent reasoning system that",
-        "link": "http://arxiv.org/abs/2606.05158v1",
-        "date": "2026-06-03",
-        "authors": [
-          "Zhen Yang",
-          "Xiaogang Xu",
-          "Wen Wang"
-        ]
-      },
-      {
-        "title": "Reinforcement Learning from Rich Feedback with Distributional DAgger",
-        "summary": "Reasoning models have advanced rapidly, but the dominant reinforcement learning from verifiable rewards (RLVR) recipe remains surprisingly narrow: sample many responses and reward each with a single b",
-        "link": "http://arxiv.org/abs/2606.05152v1",
-        "date": "2026-06-03",
-        "authors": [
-          "Rishabh Agrawal",
-          "Jacob Fein-Ashley",
-          "Paria Rashidinejad"
-        ]
-      },
-      {
-        "title": "Multi-Column RBF Neural Network Using Adaptive and Non-Adaptive Particle Swarm Optimization",
-        "summary": "The radial basis function neural network (RBFN) trained with a gradient descending algorithm provides an effective fully connected structure in both shallow and deep networks. The error correction (Er",
-        "link": "http://arxiv.org/abs/2606.05150v1",
-        "date": "2026-06-03",
-        "authors": [
-          "Ammar Hoori",
-          "Yuichi Motai"
-        ]
-      },
-      {
-        "title": "Failed Reasoning Traces Tell You What Is Fixable (But Not by Reading Them)",
-        "summary": "When post-trained language models fail on reasoning problems, the common test-time-scaling response is to spend more compute on additional attempts, and the failed traces play no further role. We argu",
-        "link": "http://arxiv.org/abs/2606.05145v1",
-        "date": "2026-06-03",
-        "authors": [
-          "Nizar Islah",
-          "Istabrak Abbes",
-          "Irina Rish"
-        ]
-      },
-      {
-        "title": "GeM-NR: Geometry-Aware Multi-View Editing for Nonrigid Scene Changes",
-        "summary": "Recent developments in multi-view image editing with generative models have brought us a step closer toward general 3D content generation and customization. Most existing works focus on rigid or appea",
-        "link": "http://arxiv.org/abs/2606.05142v1",
-        "date": "2026-06-03",
-        "authors": [
-          "Josef Bengtson",
-          "Yaroslava Lochman",
-          "Fredrik Kahl"
-        ]
-      },
-      {
-        "title": "Towards Efficient and Evidence-grounded Mobility Prediction with LLM-Driven Agent",
-        "summary": "Individual-level mobility prediction is central to urban simulation, transportation planning, and policy analysis. Supervised sequence models achieve strong accuracy but require task-specific training",
-        "link": "http://arxiv.org/abs/2606.05130v1",
-        "date": "2026-06-03",
-        "authors": [
-          "Linyao Chen",
-          "Qinlao Zhao",
-          "Zechen Li"
-        ]
-      },
-      {
-        "title": "Audio Interaction Model",
-        "summary": "Audio is an inherently interactive modality, yet today's Large Audio Language Models (LALMs) are offline, and streaming audio models each handle only a single task such as streaming ASR or voice chatt",
-        "link": "http://arxiv.org/abs/2606.05121v1",
-        "date": "2026-06-03",
-        "authors": [
-          "Zhifei Xie",
-          "Zihang Liu",
-          "Ze An"
-        ]
-      },
-      {
-        "title": "Continual Visual and Verbal Learning Through a Child's Egocentric Input",
-        "summary": "Children learn the meanings of words from a continuous, temporally structured stream of egocentric experience. Recent work shows that neural networks can also learn word-referent mappings from a child",
-        "link": "http://arxiv.org/abs/2606.05115v1",
-        "date": "2026-06-03",
-        "authors": [
-          "Xiaoyang Jiang",
-          "Yanlai Yang",
-          "Kenneth A. Norman"
-        ]
-      }
-    ],
-    "updated": "2026-06-04T06:44:07.519278Z"
+    "papers": [],
+    "error": "HTTP Error 429: Unknown Error"
   },
   "q-fin": {
     "label": "Quantitative Finance",
@@ -100,7 +12,7 @@
   "physics": {
     "label": "Physics",
     "papers": [],
-    "error": "The read operation timed out"
+    "error": "HTTP Error 429: Unknown Error"
   },
   "econ": {
     "label": "Economics",
@@ -109,95 +21,8 @@
   },
   "cs.CR": {
     "label": "Cybersecurity",
-    "papers": [
-      {
-        "title": "Preserving Data Privacy in Learning Causal Structure with Fully Homomorphic Encryption",
-        "summary": "Preserving data privacy is an important topic in structural data management and data mining. However, the issue of privacy leakage in distributed causal structure learning is a persistent challenge, e",
-        "link": "http://arxiv.org/abs/2606.05129v1",
-        "date": "2026-06-03",
-        "authors": [
-          "Jian Yang",
-          "Yuan Tong",
-          "Qinbin Li"
-        ]
-      },
-      {
-        "title": "A-Live: Passive Liveness Detection via Neuromuscular Micro-Motion Signatures on Commodity Sensors",
-        "summary": "Liveness detection has evolved from a safeguard against presentation and replay attacks in biometric authentication to a broader requirement for distinguishing human users from non-human agents in mod",
-        "link": "http://arxiv.org/abs/2606.05126v1",
-        "date": "2026-06-03",
-        "authors": [
-          "Mohammed Gharib",
-          "Sam Burns",
-          "Martin Zizi"
-        ]
-      },
-      {
-        "title": "Bernoulli CUSUM and Bayes-Optimal Detection Ceilings for Trust Fraud in Sparse Rating Networks",
-        "summary": "Sequential trust detection in rating networks relies on continuous observation models that fail on real data. On Bitcoin-OTC, 56\\% of ratings take a single value under standard mapping, breaking the d",
-        "link": "http://arxiv.org/abs/2606.05090v1",
-        "date": "2026-06-03",
-        "authors": [
-          "Talal Ashraf Butt"
-        ]
-      },
-      {
-        "title": "Attention-Augmented LSTMs for Automatic Homophonic Ciphertext Decipherment",
-        "summary": "Homophonic substitution ciphers replace each plaintext letter with one of several possible ciphertext codes, deliberately weakening letter-frequency patterns and making automated decipherment difficul",
-        "link": "http://arxiv.org/abs/2606.05078v1",
-        "date": "2026-06-03",
-        "authors": [
-          "Micaella Bruton",
-          "Meriem Beloucif",
-          "Be\u00e1ta Megyesi"
-        ]
-      },
-      {
-        "title": "SharedRequest: Privacy-Preserving Model-Agnostic Inference for Large Language Models",
-        "summary": "With the widespread deployment of public large language models (LLMs) such as ChatGPT, protecting user prompt privacy has become an increasingly critical issue. Existing privacy-preserving inference m",
-        "link": "http://arxiv.org/abs/2606.05004v1",
-        "date": "2026-06-03",
-        "authors": [
-          "Peihua Mai",
-          "Xuanrong Gao",
-          "Youlong Ding"
-        ]
-      },
-      {
-        "title": "From Agent Traces to Trust: Evidence Tracing and Execution Provenance in LLM Agents",
-        "summary": "Large language model (LLM)-based agents increasingly solve complex tasks by interacting with external tools, retrieval systems, memory modules, environments, and other agents. These capabilities expan",
-        "link": "http://arxiv.org/abs/2606.04990v1",
-        "date": "2026-06-03",
-        "authors": [
-          "Yiqi Wang",
-          "Jiaqi Zhang",
-          "Taotao Cai"
-        ]
-      },
-      {
-        "title": "NLLog: Lightweight, Explainable SOC Anomaly Detection via Log-to-Language Rewriting",
-        "summary": "System-generated logs underpin security monitoring, yet their rigid template-based format hinders both automated analysis and human comprehension. We present NLLog (Natural-Language Log), a lightweigh",
-        "link": "http://arxiv.org/abs/2606.04957v1",
-        "date": "2026-06-03",
-        "authors": [
-          "Samuel Ndichu",
-          "Tao Ban",
-          "Seiichi Ozawa"
-        ]
-      },
-      {
-        "title": "Sequential Data Poisoning in LLM Post-Training",
-        "summary": "LLM post-training proceeds through multiple stages, e.g., supervised fine-tuning (SFT) followed by reinforcement learning from human feedback (RLHF) or direct preference optimization (DPO), where each",
-        "link": "http://arxiv.org/abs/2606.04929v1",
-        "date": "2026-06-03",
-        "authors": [
-          "Jack Sanderson",
-          "Yihan Wang",
-          "Xiaoqian Lu"
-        ]
-      }
-    ],
-    "updated": "2026-06-04T06:44:07.519278Z"
+    "papers": [],
+    "error": "The read operation timed out"
   },
   "q-bio": {
     "label": "Biology",
