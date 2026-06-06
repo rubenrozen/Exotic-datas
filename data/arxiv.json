@@ -1,32 +1,286 @@
 {
   "cs.AI": {
     "label": "AI / Machine Learning",
-    "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "papers": [
+      {
+        "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
+        "summary": "For a humanoid robot to be deployed in the real world, the choice of command space (i.e., the interface between task planning and whole-body control) is crucial. Existing whole-body controllers typica",
+        "link": "http://arxiv.org/abs/2606.06493v1",
+        "date": "2026-06-04",
+        "authors": [
+          "Lizhi Yang",
+          "Junheng Li",
+          "Nehar Poddar"
+        ]
+      },
+      {
+        "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+        "summary": "Code language models need repository-level context to resolve imports, APIs, and project conventions. Existing methods inject this knowledge as long inputs (retrieved through RAG or dependency analysi",
+        "link": "http://arxiv.org/abs/2606.06492v1",
+        "date": "2026-06-04",
+        "authors": [
+          "Liliana Hotsko",
+          "Yinxi Li",
+          "Yuntian Deng"
+        ]
+      },
+      {
+        "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
+        "summary": "Robot manipulation alternates between low-risk transit phases that call for fast execution and high-risk contact stages that demand slow, precise motion. Yet existing Vision-Language-Action models (VL",
+        "link": "http://arxiv.org/abs/2606.06491v1",
+        "date": "2026-06-04",
+        "authors": [
+          "Dong Jing",
+          "Jingchen Nie",
+          "Tianqi Zhang"
+        ]
+      },
+      {
+        "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
+        "summary": "In this paper, we study regret minimization in repeated games with \\emph{adaptive} opponents who can respond based on histories of play. The standard metric of \\emph{external regret} in online learnin",
+        "link": "http://arxiv.org/abs/2606.06486v1",
+        "date": "2026-06-04",
+        "authors": [
+          "Mingyang Liu",
+          "Asuman Ozdaglar",
+          "Tiancheng Yu"
+        ]
+      },
+      {
+        "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
+        "summary": "As AI writing assistants become increasingly integrated into real-world drafting and revision workflows, many documents are no longer purely human-written or AI-generated, but instead result from prog",
+        "link": "http://arxiv.org/abs/2606.06481v1",
+        "date": "2026-06-04",
+        "authors": [
+          "Sondos Mahmoud Bsharat",
+          "Jiacheng Liu",
+          "Xiaohan Zhao"
+        ]
+      },
+      {
+        "title": "Pretraining Recurrent Networks without Recurrence",
+        "summary": "Training recurrent neural networks (RNNs) requires assigning credit across long sequences of computations. Standard backpropagation through time (BPTT) addresses this problem poorly: it is sequential ",
+        "link": "http://arxiv.org/abs/2606.06479v1",
+        "date": "2026-06-04",
+        "authors": [
+          "Akarsh Kumar",
+          "Phillip Isola"
+        ]
+      },
+      {
+        "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
+        "summary": "Recent advancements in reasoning language models have been driven by Reinforcement Learning (RL) fine-tuning. Most often, these rely on the Group Relative Policy Optimization (GRPO) algorithm or modif",
+        "link": "http://arxiv.org/abs/2606.06475v1",
+        "date": "2026-06-04",
+        "authors": [
+          "Mykyta Ielanskyi",
+          "Kajetan Schweighofer",
+          "Lukas Aichberger"
+        ]
+      },
+      {
+        "title": "Self-Augmenting Retrieval for Diffusion Language Models",
+        "summary": "Discrete diffusion language models generate text by iteratively denoising an entire response in parallel. At each step, they predict tentative tokens for every masked position, committing the confiden",
+        "link": "http://arxiv.org/abs/2606.06474v1",
+        "date": "2026-06-04",
+        "authors": [
+          "Paul J\u00fcnger",
+          "Justin Lovelace",
+          "Linxi Zhao"
+        ]
+      }
+    ],
+    "updated": "2026-06-06T05:55:12.741868Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "error": "The read operation timed out"
+    "updated": "2026-06-06T05:55:12.741868Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "error": "HTTP Error 429: Unknown Error"
+    "updated": "2026-06-06T05:55:12.741868Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "error": "The read operation timed out"
+    "updated": "2026-06-06T05:55:12.741868Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
-    "papers": [],
-    "error": "The read operation timed out"
+    "papers": [
+      {
+        "title": "Will the Agent Recuse Itself? Measuring LLM-Agent Compliance with In-Band Access-Deny Signals",
+        "summary": "As autonomous LLM agents increasingly hold real credentials and operate infrastructure without a human in the loop, operators have no standard way to tell an agent that a resource is off-limits. Acces",
+        "link": "http://arxiv.org/abs/2606.06460v1",
+        "date": "2026-06-04",
+        "authors": [
+          "Thamilvendhan Munirathinam"
+        ]
+      },
+      {
+        "title": "WebMCP Tool Surface Poisoning: Runtime Manipulation Attacks on LLM Agents",
+        "summary": "WebMCP is a newly emerging protocol that enables websites to expose tools directly to AI agents, bypassing traditional user interfaces and introducing new security risks. The dynamic exposure of agent",
+        "link": "http://arxiv.org/abs/2606.06387v1",
+        "date": "2026-06-04",
+        "authors": [
+          "Lin-Fa Lee",
+          "Yi-Yu Chang",
+          "Chia-Mu Yu"
+        ]
+      },
+      {
+        "title": "Credential Disclosure in (EU) Digital Identity Wallets: Privacy Risks and Practical Mitigations",
+        "summary": "The European Union will introduce the EUDI Wallet by late 2026, which allows users to hold digital credentials (i.e., representations of physical official identity documents) on their devices. This wi",
+        "link": "http://arxiv.org/abs/2606.06354v1",
+        "date": "2026-06-04",
+        "authors": [
+          "Sheila Zingg",
+          "Daniele Lain",
+          "Yoshimichi Nakatsuka"
+        ]
+      },
+      {
+        "title": "Robust Ensemble of Selectively Strengthened and Augmented Predictors",
+        "summary": "Evasion attacks present a significant challenge to the robustness of machine learning (ML)-based classifiers, particularly in critical applications such as fraud detection and cybersecurity. Although ",
+        "link": "http://arxiv.org/abs/2606.06265v1",
+        "date": "2026-06-04",
+        "authors": [
+          "Parsa Memarzadehsaghezi",
+          "Zahra Hashemi",
+          "Pooria Madani"
+        ]
+      },
+      {
+        "title": "SecRL-Prune: Structured Reinforcement Learning-Based Pruning of CodeLLMs for Preserving Adversarial Code Mutation",
+        "summary": "Large code language models (CodeLLMs) can generate and rewrite programs, enabling functionality-preserving code mutation that may be used to create diverse malware variants and evade signature-based d",
+        "link": "http://arxiv.org/abs/2606.06254v1",
+        "date": "2026-06-04",
+        "authors": [
+          "Parsa Memarzadehsaghezi",
+          "Pooria Madani",
+          "Khalil El-Khatib"
+        ]
+      },
+      {
+        "title": "Steering LLM Viewpoints through Fabricated Evidence Injection",
+        "summary": "As chatbots increasingly influence daily decision-making, their potential to produce misleading responses poses substantial risks to users. This paper investigates a critical cognitive vulnerability i",
+        "link": "http://arxiv.org/abs/2606.06244v1",
+        "date": "2026-06-04",
+        "authors": [
+          "Xi Yang",
+          "Chang Liu",
+          "Zhenglin Huang"
+        ]
+      },
+      {
+        "title": "Opportunities and Challenges in Securely Reusing and Repurposing Mobile Devices",
+        "summary": "An estimated 5.3 billion mobile phones became electronic waste in 2022. Many of these devices can be repurposed and used in different contexts to extend their lifetime and to reduce ecological impacts",
+        "link": "http://arxiv.org/abs/2606.06181v1",
+        "date": "2026-06-04",
+        "authors": [
+          "Adelin Roty",
+          "Jan Tobias M\u00fchlberg",
+          "Jean-Fran\u00e7ois Determe"
+        ]
+      },
+      {
+        "title": "RedEdit: Agentic Red-Teaming of Image Safety Classifiers via MCTS-Guided Photo-Editing",
+        "summary": "Image safety classifiers serve as a critical component of contemporary content moderation systems on the internet. However, their resilience against user-style malicious image editing remains underexp",
+        "link": "http://arxiv.org/abs/2606.06140v1",
+        "date": "2026-06-04",
+        "authors": [
+          "Weilin Lin",
+          "Ziqi Lin",
+          "Zhenxing Zhou"
+        ]
+      }
+    ],
+    "updated": "2026-06-06T05:55:12.741868Z"
   },
   "q-bio": {
     "label": "Biology",
-    "papers": [],
-    "error": "The read operation timed out"
+    "papers": [
+      {
+        "title": "Synchronization of active mechanical oscillators by an inertial load",
+        "summary": "Motivated by the operation of myogenic (self-oscillatory) insect flight muscle, we study a model consisting of a large number of identical oscillatory contractile elements joined in a chain, whose end",
+        "link": "http://arxiv.org/abs/physics/0307155v1",
+        "date": "2003-07-31",
+        "authors": [
+          "Andrej Vilfan",
+          "Thomas Duke"
+        ]
+      },
+      {
+        "title": "Towards the Understanding of Stability Puzzles in Phage lambda",
+        "summary": "We discuss two aspects, the in vivo and in vitro difference and the modeling of noise, of integrative modeling of network dynamics in biology, using phage lambda as an example. We believe those two as",
+        "link": "http://arxiv.org/abs/cond-mat/0307747v1",
+        "date": "2003-07-30",
+        "authors": [
+          "P. Ao",
+          "L. Yin"
+        ]
+      },
+      {
+        "title": "A Growth Model for Multicellular Tumor Spheroids",
+        "summary": "Most organisms grow according to simple laws, which in principle can be derived from energy conservation and scaling arguments, critically dependent on the relation between the metabolic rate B of ene",
+        "link": "http://arxiv.org/abs/physics/0307136v1",
+        "date": "2003-07-29",
+        "authors": [
+          "Pier Paolo Delsanto",
+          "Caterina Guiot",
+          "Piero Giorgio Degiorgis"
+        ]
+      },
+      {
+        "title": "Bidirectional communication in neural networks moderated by a Hebb-like learning rule",
+        "summary": "We demonstrate that our recently introduced stochastic Hebb-like learning rule is capable of learning the problem of timing in general network topologies generated by an algorithm of Watts and Strogat",
+        "link": "http://arxiv.org/abs/cond-mat/0307667v1",
+        "date": "2003-07-28",
+        "authors": [
+          "Frank Emmert-Streib"
+        ]
+      },
+      {
+        "title": "A novel stochastic Hebb-like learning rule for neural networks",
+        "summary": "We present a novel stochastic Hebb-like learning rule for neural networks. This learning rule is stochastic with respect to the selection of the time points when a synaptic modification is induced by ",
+        "link": "http://arxiv.org/abs/cond-mat/0307666v1",
+        "date": "2003-07-28",
+        "authors": [
+          "Frank Emmert-Streib"
+        ]
+      },
+      {
+        "title": "Free Energy Transduction in a Chemical Motor Model",
+        "summary": "Motor enzymes catalyze chemical reactions, like the hydrolysis of ATP, and in the process they also perform work. Recent studies indicate that motor enzymes perform work with specific intermediate ste",
+        "link": "http://arxiv.org/abs/physics/0307121v1",
+        "date": "2003-07-24",
+        "authors": [
+          "Josh E. Baker"
+        ]
+      },
+      {
+        "title": "Maximisation Principles and Daisyworld",
+        "summary": "We investigate whether the equilibrium time averaged state of a self-organising system with many internal degrees of freedom, 2D- daisyworld, can be described by optimising a single quantity. Unlike p",
+        "link": "http://arxiv.org/abs/cond-mat/0307567v1",
+        "date": "2003-07-23",
+        "authors": [
+          "G. J. Ackland"
+        ]
+      },
+      {
+        "title": "Xerogel Protein Substrates for Far Infrared Studies",
+        "summary": "A number of researchers are attempting to develop a biosensor based on terahertz sensing. Key to the realization of any biosensor system is the access of the target molecules to the sensor. In the cas",
+        "link": "http://arxiv.org/abs/cond-mat/0307558v1",
+        "date": "2003-07-23",
+        "authors": [
+          "J. -Y. Chen",
+          "W. Cox",
+          "E. Tehan"
+        ]
+      }
+    ],
+    "updated": "2026-06-06T05:55:12.741868Z"
   }
 }
