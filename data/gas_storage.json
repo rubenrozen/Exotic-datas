@@ -1,13 +1,7 @@
 {
-  "eu_avg": 41.5,
-  "trend": 0.28,
+  "eu_avg": 41.8,
+  "trend": 0.26,
   "series": [
-    {
-      "date": "2025-08-09",
-      "pct": 71.6,
-      "gasInStorage": 812.6,
-      "trend": 0.36
-    },
     {
       "date": "2025-08-10",
       "pct": 72.0,
@@ -1801,53 +1795,59 @@
       "pct": 41.5,
       "gasInStorage": 469.9,
       "trend": 0.28
+    },
+    {
+      "date": "2026-06-05",
+      "pct": 41.8,
+      "gasInStorage": 472.8,
+      "trend": 0.26
     }
   ],
   "countries": {
     "DE": {
-      "pct": 33.6,
-      "trend": 0.39,
-      "gasInStorage": 83.3
+      "pct": 33.9,
+      "trend": 0.29,
+      "gasInStorage": 84.0
     },
     "FR": {
-      "pct": 42.6,
+      "pct": 42.8,
       "trend": 0.2,
-      "gasInStorage": 52.8
+      "gasInStorage": 53.0
     },
     "IT": {
-      "pct": 60.0,
+      "pct": 60.3,
       "trend": 0.27,
-      "gasInStorage": 122.1
+      "gasInStorage": 122.6
     },
     "ES": {
-      "pct": 71.4,
+      "pct": 71.7,
       "trend": 0.25,
-      "gasInStorage": 25.6
+      "gasInStorage": 25.7
     },
     "NL": {
-      "pct": 17.1,
-      "trend": 0.39,
-      "gasInStorage": 24.6
+      "pct": 17.5,
+      "trend": 0.38,
+      "gasInStorage": 25.2
     },
     "AT": {
-      "pct": 47.5,
-      "trend": 0.2,
-      "gasInStorage": 47.6
+      "pct": 47.6,
+      "trend": 0.11,
+      "gasInStorage": 47.7
     },
     "BE": {
-      "pct": 21.9,
-      "trend": -0.02,
+      "pct": 22.0,
+      "trend": 0.04,
       "gasInStorage": 1.7
     },
     "PL": {
-      "pct": 57.1,
-      "trend": 0.24,
-      "gasInStorage": 21.0
+      "pct": 57.7,
+      "trend": 0.64,
+      "gasInStorage": 21.3
     },
     "CZ": {
-      "pct": 38.9,
-      "trend": 0.35,
-      "gasInStorage": 17.6
+      "pct": 39.2,
+      "trend": 0.3,
+      "gasInStorage": 17.8
     },
     "HU": {
       "pct": 44.3,
@@ -1857,5 +1857,5 @@
   },
   "alert_threshold": 20.0,
   "score": 42,
-  "updated": "2026-06-06T05:55:12.741868Z"
+  "updated": "2026-06-07T06:26:18.827373Z"
 }
