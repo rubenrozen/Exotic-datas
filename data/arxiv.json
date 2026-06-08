@@ -3,201 +3,201 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers",
-        "summary": "For a humanoid robot to be deployed in the real world, the choice of command space (i.e., the interface between task planning and whole-body control) is crucial. Existing whole-body controllers typica",
-        "link": "http://arxiv.org/abs/2606.06493v1",
-        "date": "2026-06-04",
+        "title": "How reliable are LLMs when it comes to playing dice?",
+        "summary": "We investigate the probabilistic reasoning capabilities of large language models through a controlled benchmarking study on discrete probability problems. We constructed two datasets, respectively a s",
+        "link": "http://arxiv.org/abs/2606.07515v1",
+        "date": "2026-06-05",
         "authors": [
-          "Lizhi Yang",
-          "Junheng Li",
-          "Nehar Poddar"
+          "Luca Avena",
+          "Gianmarco Bet",
+          "Bernardo Busoni"
         ]
       },
       {
-        "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
-        "summary": "Code language models need repository-level context to resolve imports, APIs, and project conventions. Existing methods inject this knowledge as long inputs (retrieved through RAG or dependency analysi",
-        "link": "http://arxiv.org/abs/2606.06492v1",
-        "date": "2026-06-04",
+        "title": "MemDreamer: Decoupling Perception and Reasoning for Long Video Understanding via Hierarchical Graph Memory and Agentic Retrieval Mechanism",
+        "summary": "Current Vision-Language Models struggle with hours-long videos because processing full-length visual sequences induces prohibitive token explosion and attention dilution. To overcome this, we introduc",
+        "link": "http://arxiv.org/abs/2606.07512v1",
+        "date": "2026-06-05",
         "authors": [
-          "Liliana Hotsko",
-          "Yinxi Li",
-          "Yuntian Deng"
+          "Cong Chen",
+          "Guo Gan",
+          "Kaixiang Ji"
         ]
       },
       {
-        "title": "TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies",
-        "summary": "Robot manipulation alternates between low-risk transit phases that call for fast execution and high-risk contact stages that demand slow, precise motion. Yet existing Vision-Language-Action models (VL",
-        "link": "http://arxiv.org/abs/2606.06491v1",
-        "date": "2026-06-04",
+        "title": "Sparse Subspace-to-Expert Sharing for Task-Agnostic Continual Learning",
+        "summary": "Continual learning in Large Language Models (LLMs) is hindered by the plasticity-stability dilemma, where acquiring new capabilities often leads to catastrophic forgetting of previous knowledge. Exist",
+        "link": "http://arxiv.org/abs/2606.07500v1",
+        "date": "2026-06-05",
         "authors": [
-          "Dong Jing",
-          "Jingchen Nie",
-          "Tianqi Zhang"
+          "Fatema Siddika",
+          "Md Anwar Hossen",
+          "Tanwi Mallick"
         ]
       },
       {
-        "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
-        "summary": "In this paper, we study regret minimization in repeated games with \\emph{adaptive} opponents who can respond based on histories of play. The standard metric of \\emph{external regret} in online learnin",
-        "link": "http://arxiv.org/abs/2606.06486v1",
-        "date": "2026-06-04",
+        "title": "Twelve quick tips for designing AI-driven HPC workflows",
+        "summary": "High-performance computing (HPC) clusters remain the backbone of large-scale scientific computation, traditionally executing deterministic, linear pipelines optimised for predictable performance. Howe",
+        "link": "http://arxiv.org/abs/2606.07491v1",
+        "date": "2026-06-05",
         "authors": [
-          "Mingyang Liu",
-          "Asuman Ozdaglar",
-          "Tiancheng Yu"
+          "Jamie J. Alnasir"
         ]
       },
       {
-        "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
-        "summary": "As AI writing assistants become increasingly integrated into real-world drafting and revision workflows, many documents are no longer purely human-written or AI-generated, but instead result from prog",
-        "link": "http://arxiv.org/abs/2606.06481v1",
-        "date": "2026-06-04",
+        "title": "How AI Agents Reshape Knowledge Work: Autonomy, Efficiency, and Scope",
+        "summary": "Frontier AI systems are bridging the gap between intelligence and utility by shifting from conversational assistants to autonomous agents that execute tasks end to end. Using production data from Perp",
+        "link": "http://arxiv.org/abs/2606.07489v1",
+        "date": "2026-06-05",
         "authors": [
-          "Sondos Mahmoud Bsharat",
-          "Jiacheng Liu",
-          "Xiaohan Zhao"
+          "Jeremy Yang",
+          "Kate Zyskowski",
+          "Noah Yonack"
         ]
       },
       {
-        "title": "Pretraining Recurrent Networks without Recurrence",
-        "summary": "Training recurrent neural networks (RNNs) requires assigning credit across long sequences of computations. Standard backpropagation through time (BPTT) addresses this problem poorly: it is sequential ",
-        "link": "http://arxiv.org/abs/2606.06479v1",
-        "date": "2026-06-04",
+        "title": "Supervision versus Demonstration-Based In-Context Learning for Multiword Expression Classification",
+        "summary": "Turkish idiomatic light verb constructions (LVCs) are challenging for multiword expression processing because they often share the same surface form as fully literal verb-object combinations while fun",
+        "link": "http://arxiv.org/abs/2606.07479v1",
+        "date": "2026-06-05",
         "authors": [
-          "Akarsh Kumar",
-          "Phillip Isola"
+          "Sercan Karaka\u015f",
+          "Yusuf \u015eim\u015fek"
         ]
       },
       {
-        "title": "RREDCoT: Segment-Level Reward Redistribution for Reasoning Models",
-        "summary": "Recent advancements in reasoning language models have been driven by Reinforcement Learning (RL) fine-tuning. Most often, these rely on the Group Relative Policy Optimization (GRPO) algorithm or modif",
-        "link": "http://arxiv.org/abs/2606.06475v1",
-        "date": "2026-06-04",
+        "title": "Graph Neural Network leveraging Higher-order Class Label Connectivity for Heterophilous Graphs",
+        "summary": "Node classification in graph neural networks (GNNs) has been widely applied in various fields of graph analysis. GNNs achieve high-accuracy node classification in homophilous graphs, where nodes with ",
+        "link": "http://arxiv.org/abs/2606.07475v1",
+        "date": "2026-06-05",
         "authors": [
-          "Mykyta Ielanskyi",
-          "Kajetan Schweighofer",
-          "Lukas Aichberger"
+          "Takuto Takahashi",
+          "Itsuki Nakayama",
+          "Takahiro Mitani"
         ]
       },
       {
-        "title": "Self-Augmenting Retrieval for Diffusion Language Models",
-        "summary": "Discrete diffusion language models generate text by iteratively denoising an entire response in parallel. At each step, they predict tentative tokens for every masked position, committing the confiden",
-        "link": "http://arxiv.org/abs/2606.06474v1",
-        "date": "2026-06-04",
+        "title": "Whisper Hallucination Detection and Mitigation via Hidden Representation Steering and Sparse AutoEncoders",
+        "summary": "Whisper, a widely adopted ASR model, is known to suffer from hallucinations - coherent transcriptions generated for non-speech audio entirely disconnected from the input. We investigate whether halluc",
+        "link": "http://arxiv.org/abs/2606.07473v1",
+        "date": "2026-06-05",
         "authors": [
-          "Paul J\u00fcnger",
-          "Justin Lovelace",
-          "Linxi Zhao"
+          "Georgii Aparin",
+          "Vadim Popov",
+          "Tasnima Sadekova"
         ]
       }
     ],
-    "updated": "2026-06-07T06:26:18.827373Z"
+    "updated": "2026-06-08T06:45:04.204386Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-06-07T06:26:18.827373Z"
+    "updated": "2026-06-08T06:45:04.204386Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-06-07T06:26:18.827373Z"
+    "updated": "2026-06-08T06:45:04.204386Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-06-07T06:26:18.827373Z"
+    "updated": "2026-06-08T06:45:04.204386Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Will the Agent Recuse Itself? Measuring LLM-Agent Compliance with In-Band Access-Deny Signals",
-        "summary": "As autonomous LLM agents increasingly hold real credentials and operate infrastructure without a human in the loop, operators have no standard way to tell an agent that a resource is off-limits. Acces",
-        "link": "http://arxiv.org/abs/2606.06460v1",
-        "date": "2026-06-04",
+        "title": "Verifiable and Confidential DNN Inference on Low-End Edge Devices",
+        "summary": "Deploying deep neural network (DNN) inference on low-end edge devices raises two key challenges: protecting model confidentiality against a potentially compromised edge system and enabling verifiable ",
+        "link": "http://arxiv.org/abs/2606.07470v1",
+        "date": "2026-06-05",
         "authors": [
-          "Thamilvendhan Munirathinam"
+          "Mohamed Khalil Kiri",
+          "Ivan De Oliveira Nunes",
+          "Aur\u00e9lien Francillon"
         ]
       },
       {
-        "title": "WebMCP Tool Surface Poisoning: Runtime Manipulation Attacks on LLM Agents",
-        "summary": "WebMCP is a newly emerging protocol that enables websites to expose tools directly to AI agents, bypassing traditional user interfaces and introducing new security risks. The dynamic exposure of agent",
-        "link": "http://arxiv.org/abs/2606.06387v1",
-        "date": "2026-06-04",
+        "title": "Sort, Partition, Randomize: Optimal Binary Hypothesis Testing under Local Differential Privacy",
+        "summary": "We study optimal design of $\\varepsilon$-locally differentially private mechanisms for binary hypothesis testing. Each observation is drawn from one of two known distributions $P_0,P_1$ on a finite al",
+        "link": "http://arxiv.org/abs/2606.07443v1",
+        "date": "2026-06-05",
         "authors": [
-          "Lin-Fa Lee",
-          "Yi-Yu Chang",
-          "Chia-Mu Yu"
+          "Elena Ghazi",
+          "Jawad Nasser",
+          "Flavio Calmon"
         ]
       },
       {
-        "title": "Credential Disclosure in (EU) Digital Identity Wallets: Privacy Risks and Practical Mitigations",
-        "summary": "The European Union will introduce the EUDI Wallet by late 2026, which allows users to hold digital credentials (i.e., representations of physical official identity documents) on their devices. This wi",
-        "link": "http://arxiv.org/abs/2606.06354v1",
-        "date": "2026-06-04",
+        "title": "Lost in Migration: Exposing Android Framework Vulnerabilities in Parallel Java-Kotlin Implementations",
+        "summary": "Android has adopted Kotlin alongside Java across apps and core system components. During this shift, we observe parallel implementations in the Android Open Source Project (AOSP) where the same compon",
+        "link": "http://arxiv.org/abs/2606.07420v1",
+        "date": "2026-06-05",
         "authors": [
-          "Sheila Zingg",
-          "Daniele Lain",
-          "Yoshimichi Nakatsuka"
+          "Rui Li",
+          "Wenrui Diao",
+          "Debin Gao"
         ]
       },
       {
-        "title": "Robust Ensemble of Selectively Strengthened and Augmented Predictors",
-        "summary": "Evasion attacks present a significant challenge to the robustness of machine learning (ML)-based classifiers, particularly in critical applications such as fraud detection and cybersecurity. Although ",
-        "link": "http://arxiv.org/abs/2606.06265v1",
-        "date": "2026-06-04",
+        "title": "An End-to-End Encrypted Control Pipeline for Multi-Agent Coordination via CKKS Homomorphic Encryption",
+        "summary": "Cloud-based coordination of multi-agent systems requires sharing state with a central server, creating a conflict between coordination and privacy. Fully homomorphic encryption (FHE) resolves this in ",
+        "link": "http://arxiv.org/abs/2606.07375v1",
+        "date": "2026-06-05",
         "authors": [
-          "Parsa Memarzadehsaghezi",
-          "Zahra Hashemi",
-          "Pooria Madani"
+          "Sai Sandeep Damera",
+          "Maria Charitidou",
+          "Asim Zoulkarni"
         ]
       },
       {
-        "title": "SecRL-Prune: Structured Reinforcement Learning-Based Pruning of CodeLLMs for Preserving Adversarial Code Mutation",
-        "summary": "Large code language models (CodeLLMs) can generate and rewrite programs, enabling functionality-preserving code mutation that may be used to create diverse malware variants and evade signature-based d",
-        "link": "http://arxiv.org/abs/2606.06254v1",
-        "date": "2026-06-04",
+        "title": "On the Shoulders of Giants: Empowering Automated Smart Contract Auditing via the GiAnt Corpus",
+        "summary": "High-quality smart contract auditing datasets are crucial for evaluating security tools and advancing smart contract security research. Two major limitations of existing datasets are the manual-induce",
+        "link": "http://arxiv.org/abs/2606.07363v1",
+        "date": "2026-06-05",
         "authors": [
-          "Parsa Memarzadehsaghezi",
-          "Pooria Madani",
-          "Khalil El-Khatib"
+          "Xiaoting Zhang",
+          "Zhipeng Gao",
+          "Yiran Lv"
         ]
       },
       {
-        "title": "Steering LLM Viewpoints through Fabricated Evidence Injection",
-        "summary": "As chatbots increasingly influence daily decision-making, their potential to produce misleading responses poses substantial risks to users. This paper investigates a critical cognitive vulnerability i",
-        "link": "http://arxiv.org/abs/2606.06244v1",
-        "date": "2026-06-04",
+        "title": "Empirical Evaluation of Large Language Models for Migration of Code Fragments to Post-Quantum Cryptography",
+        "summary": "The transition to post-quantum cryptography (PQC) requires not only replacing vulnerable cryptographic primitives, but also refactoring the surrounding software logic. While existing PQC migration fra",
+        "link": "http://arxiv.org/abs/2606.07341v1",
+        "date": "2026-06-05",
         "authors": [
-          "Xi Yang",
-          "Chang Liu",
-          "Zhenglin Huang"
+          "Javier Pallar\u00e9s de Bonrostro",
+          "Ana I. Gonz\u00e1lez-Tablas",
+          "Mar\u00eda Isabel Gonz\u00e1lez Vasco"
         ]
       },
       {
-        "title": "Opportunities and Challenges in Securely Reusing and Repurposing Mobile Devices",
-        "summary": "An estimated 5.3 billion mobile phones became electronic waste in 2022. Many of these devices can be repurposed and used in different contexts to extend their lifetime and to reduce ecological impacts",
-        "link": "http://arxiv.org/abs/2606.06181v1",
-        "date": "2026-06-04",
+        "title": "Defending Jailbreak Attacks on Large Language Models via Manifold Trajectory Kinetics",
+        "summary": "Jailbreak prompts can bypass alignment guardrails in large language models (LLMs) and elicit unsafe outputs, making reliable deployment-time detection critical. Prior detection approaches largely rely",
+        "link": "http://arxiv.org/abs/2606.07335v1",
+        "date": "2026-06-05",
         "authors": [
-          "Adelin Roty",
-          "Jan Tobias M\u00fchlberg",
-          "Jean-Fran\u00e7ois Determe"
+          "Hangtao Zhang",
+          "Yucheng Zhao",
+          "Sishun Liu"
         ]
       },
       {
-        "title": "RedEdit: Agentic Red-Teaming of Image Safety Classifiers via MCTS-Guided Photo-Editing",
-        "summary": "Image safety classifiers serve as a critical component of contemporary content moderation systems on the internet. However, their resilience against user-style malicious image editing remains underexp",
-        "link": "http://arxiv.org/abs/2606.06140v1",
-        "date": "2026-06-04",
+        "title": "Authorized and Verifiable Searchable Encryption Based on Public Key Equality Test for Cloud Storage",
+        "summary": "Cloud storage revolutionizes data management but raises conflicts between functionality and privacy. Public Key Encryption with Equality Test (PKEET), an advanced cryptographic technique, can enable m",
+        "link": "http://arxiv.org/abs/2606.07319v1",
+        "date": "2026-06-05",
         "authors": [
-          "Weilin Lin",
-          "Ziqi Lin",
-          "Zhenxing Zhou"
+          "Xiuping Li",
+          "Kaiwen Wang",
+          "Xiaolin Chang"
         ]
       }
     ],
-    "updated": "2026-06-07T06:26:18.827373Z"
+    "updated": "2026-06-08T06:45:04.204386Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -281,6 +281,6 @@
         ]
       }
     ],
-    "updated": "2026-06-07T06:26:18.827373Z"
+    "updated": "2026-06-08T06:45:04.204386Z"
   }
 }
