@@ -3,201 +3,197 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "How reliable are LLMs when it comes to playing dice?",
-        "summary": "We investigate the probabilistic reasoning capabilities of large language models through a controlled benchmarking study on discrete probability problems. We constructed two datasets, respectively a s",
-        "link": "http://arxiv.org/abs/2606.07515v1",
-        "date": "2026-06-05",
+        "title": "OmniGameArena: A Unified UE5 Benchmark for VLM Game Agents with Improvement Dynamics",
+        "summary": "Vision-language model (VLM) agents are increasingly deployed in interactive game environments. Yet game benchmarks for VLM agents typically report a single first-attempt score per (agent, game) pair, ",
+        "link": "http://arxiv.org/abs/2606.09826v1",
+        "date": "2026-06-08",
         "authors": [
-          "Luca Avena",
-          "Gianmarco Bet",
-          "Bernardo Busoni"
+          "Mingxian Lin",
+          "Shengju Qian",
+          "Yuqi Liu"
         ]
       },
       {
-        "title": "MemDreamer: Decoupling Perception and Reasoning for Long Video Understanding via Hierarchical Graph Memory and Agentic Retrieval Mechanism",
-        "summary": "Current Vision-Language Models struggle with hours-long videos because processing full-length visual sequences induces prohibitive token explosion and attention dilution. To overcome this, we introduc",
-        "link": "http://arxiv.org/abs/2606.07512v1",
-        "date": "2026-06-05",
+        "title": "An Agency-Transferring Model-Free Policy Enhancement Technique",
+        "summary": "Training reinforcement learning (RL) policies from scratch is   costly: it requires careful reward and environment design,   extensive tuning, and substantial computation.   Yet many control problems ",
+        "link": "http://arxiv.org/abs/2606.09825v1",
+        "date": "2026-06-08",
         "authors": [
-          "Cong Chen",
-          "Guo Gan",
-          "Kaixiang Ji"
+          "Anton Bolychev",
+          "Georgiy Malaniya",
+          "Sinan Ibrahim"
         ]
       },
       {
-        "title": "Sparse Subspace-to-Expert Sharing for Task-Agnostic Continual Learning",
-        "summary": "Continual learning in Large Language Models (LLMs) is hindered by the plasticity-stability dilemma, where acquiring new capabilities often leads to catastrophic forgetting of previous knowledge. Exist",
-        "link": "http://arxiv.org/abs/2606.07500v1",
-        "date": "2026-06-05",
+        "title": "PTL-Diffusion: Manifold-Aware Diffusion with Periodic Terminal Laws",
+        "summary": "Standard diffusion models typically use a single time-homogeneous Gaussian terminal distribution as the reference law for generation. While this choice is analytically convenient and empirically power",
+        "link": "http://arxiv.org/abs/2606.09816v1",
+        "date": "2026-06-08",
         "authors": [
-          "Fatema Siddika",
-          "Md Anwar Hossen",
-          "Tanwi Mallick"
+          "Danqi Zhuang",
+          "Jisui Huang",
+          "Xiaoyue Xi"
         ]
       },
       {
-        "title": "Twelve quick tips for designing AI-driven HPC workflows",
-        "summary": "High-performance computing (HPC) clusters remain the backbone of large-scale scientific computation, traditionally executing deterministic, linear pipelines optimised for predictable performance. Howe",
-        "link": "http://arxiv.org/abs/2606.07491v1",
-        "date": "2026-06-05",
+        "title": "AHA-WAM:Asynchronous Horizon-Adaptive World-Action Modeling with Observation-Guided Context Routing",
+        "summary": "World-action models have emerged as a promising paradigm for robot manipulation, jointly modeling visual scene dynamics and actions to inject physical priors into policy learning. However, existing wo",
+        "link": "http://arxiv.org/abs/2606.09811v1",
+        "date": "2026-06-08",
         "authors": [
-          "Jamie J. Alnasir"
+          "Jisong Cai",
+          "Long Ling",
+          "Shiwei Chu"
         ]
       },
       {
-        "title": "How AI Agents Reshape Knowledge Work: Autonomy, Efficiency, and Scope",
-        "summary": "Frontier AI systems are bridging the gap between intelligence and utility by shifting from conversational assistants to autonomous agents that execute tasks end to end. Using production data from Perp",
-        "link": "http://arxiv.org/abs/2606.07489v1",
-        "date": "2026-06-05",
+        "title": "Evaluation Cards: An Interpretive Layer for AI Evaluation Reporting",
+        "summary": "AI evaluation results are produced at scale but reported inconsistently across leaderboards, model cards, benchmark papers, and company blogs. The cost is interpretive: readers cannot reliably compare",
+        "link": "http://arxiv.org/abs/2606.09809v1",
+        "date": "2026-06-08",
         "authors": [
-          "Jeremy Yang",
-          "Kate Zyskowski",
-          "Noah Yonack"
+          "Avijit Ghosh",
+          "Anka Reuel",
+          "Jenny Chim"
         ]
       },
       {
-        "title": "Supervision versus Demonstration-Based In-Context Learning for Multiword Expression Classification",
-        "summary": "Turkish idiomatic light verb constructions (LVCs) are challenging for multiword expression processing because they often share the same surface form as fully literal verb-object combinations while fun",
-        "link": "http://arxiv.org/abs/2606.07479v1",
-        "date": "2026-06-05",
+        "title": "Topological Neural Operators",
+        "summary": "We introduce Topological Neural Operators (TNOs), a principled framework for operator learning on cell complexes that lifts neural operators (NOs) from functions on points and/or edges to topological ",
+        "link": "http://arxiv.org/abs/2606.09806v1",
+        "date": "2026-06-08",
         "authors": [
-          "Sercan Karaka\u015f",
-          "Yusuf \u015eim\u015fek"
+          "Lennart Bastian",
+          "Samuel Leventhal",
+          "Mustafa Hajij"
         ]
       },
       {
-        "title": "Graph Neural Network leveraging Higher-order Class Label Connectivity for Heterophilous Graphs",
-        "summary": "Node classification in graph neural networks (GNNs) has been widely applied in various fields of graph analysis. GNNs achieve high-accuracy node classification in homophilous graphs, where nodes with ",
-        "link": "http://arxiv.org/abs/2606.07475v1",
-        "date": "2026-06-05",
+        "title": "Bandits for Efficient Experimentation: Adapting to Control Group, Preferences, and Context Drifts",
+        "summary": "We consider a variant of the linear contextual stochastic multi-armed bandits, where the learner must provide recommendations to a group of users, each having its personalized preference vector, and i",
+        "link": "http://arxiv.org/abs/2606.09802v1",
+        "date": "2026-06-08",
         "authors": [
-          "Takuto Takahashi",
-          "Itsuki Nakayama",
-          "Takahiro Mitani"
+          "Udvas Das",
+          "Waris Radji",
+          "Debabrota Basu"
         ]
       },
       {
-        "title": "Whisper Hallucination Detection and Mitigation via Hidden Representation Steering and Sparse AutoEncoders",
-        "summary": "Whisper, a widely adopted ASR model, is known to suffer from hallucinations - coherent transcriptions generated for non-speech audio entirely disconnected from the input. We investigate whether halluc",
-        "link": "http://arxiv.org/abs/2606.07473v1",
-        "date": "2026-06-05",
+        "title": "FASE: Fast Adaptive Semantic Entropy for Code Quality",
+        "summary": "Multi-agent code generation offers a promising paradigm for autonomous software development by simulating the human software engineering lifecycle. However, system reliability remains hindered by LLM ",
+        "link": "http://arxiv.org/abs/2606.09800v1",
+        "date": "2026-06-08",
         "authors": [
-          "Georgii Aparin",
-          "Vadim Popov",
-          "Tasnima Sadekova"
+          "Shizhe Lin",
+          "Ladan Tahvildari"
         ]
       }
     ],
-    "updated": "2026-06-08T06:45:04.204386Z"
+    "updated": "2026-06-09T06:11:09.187421Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-06-08T06:45:04.204386Z"
+    "updated": "2026-06-09T06:11:09.187421Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-06-08T06:45:04.204386Z"
+    "updated": "2026-06-09T06:11:09.187421Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-06-08T06:45:04.204386Z"
+    "updated": "2026-06-09T06:11:09.187421Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Verifiable and Confidential DNN Inference on Low-End Edge Devices",
-        "summary": "Deploying deep neural network (DNN) inference on low-end edge devices raises two key challenges: protecting model confidentiality against a potentially compromised edge system and enabling verifiable ",
-        "link": "http://arxiv.org/abs/2606.07470v1",
-        "date": "2026-06-05",
+        "title": "Human-Centred Risk Mitigation for AI-Mediated Information Manipulation: A SOCMINT Framework Based on Information Manipulation Sets",
+        "summary": "AI-mediated information manipulation increasingly takes the form of social cyber attacks that target trust, attention, credibility, reputation, and decision-making rather than only technical infrastru",
+        "link": "http://arxiv.org/abs/2606.09754v1",
+        "date": "2026-06-08",
         "authors": [
-          "Mohamed Khalil Kiri",
-          "Ivan De Oliveira Nunes",
-          "Aur\u00e9lien Francillon"
+          "Antonio Scala"
         ]
       },
       {
-        "title": "Sort, Partition, Randomize: Optimal Binary Hypothesis Testing under Local Differential Privacy",
-        "summary": "We study optimal design of $\\varepsilon$-locally differentially private mechanisms for binary hypothesis testing. Each observation is drawn from one of two known distributions $P_0,P_1$ on a finite al",
-        "link": "http://arxiv.org/abs/2606.07443v1",
-        "date": "2026-06-05",
+        "title": "A Bell-State Extension of Loop-Back Quantum Key Distribution",
+        "summary": "Bidirectional quantum key distribution (QKD) protocols face persistent challenges related to classical disclosure, confinement of the signal space to predictable subspaces, and limited detectability u",
+        "link": "http://arxiv.org/abs/2606.09723v1",
+        "date": "2026-06-08",
         "authors": [
-          "Elena Ghazi",
-          "Jawad Nasser",
-          "Flavio Calmon"
+          "Luis Adri\u00e1n Lizama-P\u00e9rez"
         ]
       },
       {
-        "title": "Lost in Migration: Exposing Android Framework Vulnerabilities in Parallel Java-Kotlin Implementations",
-        "summary": "Android has adopted Kotlin alongside Java across apps and core system components. During this shift, we observe parallel implementations in the Android Open Source Project (AOSP) where the same compon",
-        "link": "http://arxiv.org/abs/2606.07420v1",
-        "date": "2026-06-05",
+        "title": "What the Eyes See, the LLMs Miss: Exploiting Human Perception for Adversarial Text Attacks",
+        "summary": "Large language model (LLM)-powered content moderation systems have become a critical defense against harmful online content. However, these systems primarily operate on tokenized text and largely igno",
+        "link": "http://arxiv.org/abs/2606.09700v1",
+        "date": "2026-06-08",
         "authors": [
-          "Rui Li",
-          "Wenrui Diao",
-          "Debin Gao"
+          "Qin Yang",
+          "Lu Malloy",
+          "Joshua Lee"
         ]
       },
       {
-        "title": "An End-to-End Encrypted Control Pipeline for Multi-Agent Coordination via CKKS Homomorphic Encryption",
-        "summary": "Cloud-based coordination of multi-agent systems requires sharing state with a central server, creating a conflict between coordination and privacy. Fully homomorphic encryption (FHE) resolves this in ",
-        "link": "http://arxiv.org/abs/2606.07375v1",
-        "date": "2026-06-05",
+        "title": "Observability for Delegated Execution in Agentic AI Systems",
+        "summary": "Delegation-scoped execution is not identifiable from standard observables: audit logs and execution traces can be identical under multiple incompatible delegation assignments. This gap is especially a",
+        "link": "http://arxiv.org/abs/2606.09692v1",
+        "date": "2026-06-08",
         "authors": [
-          "Sai Sandeep Damera",
-          "Maria Charitidou",
-          "Asim Zoulkarni"
+          "Abhinav Mishra",
+          "Kumar Sharad"
         ]
       },
       {
-        "title": "On the Shoulders of Giants: Empowering Automated Smart Contract Auditing via the GiAnt Corpus",
-        "summary": "High-quality smart contract auditing datasets are crucial for evaluating security tools and advancing smart contract security research. Two major limitations of existing datasets are the manual-induce",
-        "link": "http://arxiv.org/abs/2606.07363v1",
-        "date": "2026-06-05",
+        "title": "Parent-Hash DAG: A Cost Analysis of Constant-Time Append for On-Chain Registries",
+        "summary": "Provenance trees are append-only directed acyclic graphs of artifact registrations anchored on a public blockchain, recently introduced as the data substrate of operator-gated provenance infrastructur",
+        "link": "http://arxiv.org/abs/2606.09593v1",
+        "date": "2026-06-08",
         "authors": [
-          "Xiaoting Zhang",
-          "Zhipeng Gao",
-          "Yiran Lv"
+          "Ian C. Moore",
+          "Fernando Paredes Garcia"
         ]
       },
       {
-        "title": "Empirical Evaluation of Large Language Models for Migration of Code Fragments to Post-Quantum Cryptography",
-        "summary": "The transition to post-quantum cryptography (PQC) requires not only replacing vulnerable cryptographic primitives, but also refactoring the surrounding software logic. While existing PQC migration fra",
-        "link": "http://arxiv.org/abs/2606.07341v1",
-        "date": "2026-06-05",
+        "title": "Clinically Grounded Privacy Evaluation of Medical LMs",
+        "summary": "Medical language models (LMs) can memorize and reproduce protected health information, but privacy evaluations often focus on recovery of training text rather than disclosure under realistic threat mo",
+        "link": "http://arxiv.org/abs/2606.09590v1",
+        "date": "2026-06-08",
         "authors": [
-          "Javier Pallar\u00e9s de Bonrostro",
-          "Ana I. Gonz\u00e1lez-Tablas",
-          "Mar\u00eda Isabel Gonz\u00e1lez Vasco"
+          "Sasha Ronaghi",
+          "Sana Tonekaboni",
+          "Lena Stempfle"
         ]
       },
       {
-        "title": "Defending Jailbreak Attacks on Large Language Models via Manifold Trajectory Kinetics",
-        "summary": "Jailbreak prompts can bypass alignment guardrails in large language models (LLMs) and elicit unsafe outputs, making reliable deployment-time detection critical. Prior detection approaches largely rely",
-        "link": "http://arxiv.org/abs/2606.07335v1",
-        "date": "2026-06-05",
+        "title": "Safe-RULE: Safe Reinforcement UnLEarning",
+        "summary": "Offline safe reinforcement learning (Safe RL) enables policy learning without online interactions, making it suitable for safety-critical systems such as robotics systems. However, its reliance on sta",
+        "link": "http://arxiv.org/abs/2606.09559v1",
+        "date": "2026-06-08",
         "authors": [
-          "Hangtao Zhang",
-          "Yucheng Zhao",
-          "Sishun Liu"
+          "Shixiong Jiang",
+          "Taozheng Zhu",
+          "Fanxin Kong"
         ]
       },
       {
-        "title": "Authorized and Verifiable Searchable Encryption Based on Public Key Equality Test for Cloud Storage",
-        "summary": "Cloud storage revolutionizes data management but raises conflicts between functionality and privacy. Public Key Encryption with Equality Test (PKEET), an advanced cryptographic technique, can enable m",
-        "link": "http://arxiv.org/abs/2606.07319v1",
-        "date": "2026-06-05",
+        "title": "FuseFSS: Efficient Secure LLM Inference with Function Secret Sharing",
+        "summary": "Two-server secure inference allows a client to query a hosted large language model (LLM) without revealing prompts or embeddings. Recent GPU systems based on function secret sharing (FSS) make linear ",
+        "link": "http://arxiv.org/abs/2606.09551v1",
+        "date": "2026-06-08",
         "authors": [
-          "Xiuping Li",
-          "Kaiwen Wang",
-          "Xiaolin Chang"
+          "Yuhan Ma",
+          "Yong Li",
+          "Stefan Schmid"
         ]
       }
     ],
-    "updated": "2026-06-08T06:45:04.204386Z"
+    "updated": "2026-06-09T06:11:09.187421Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -281,6 +277,6 @@
         ]
       }
     ],
-    "updated": "2026-06-08T06:45:04.204386Z"
+    "updated": "2026-06-09T06:11:09.187421Z"
   }
 }
