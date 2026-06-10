@@ -3,197 +3,199 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "OmniGameArena: A Unified UE5 Benchmark for VLM Game Agents with Improvement Dynamics",
-        "summary": "Vision-language model (VLM) agents are increasingly deployed in interactive game environments. Yet game benchmarks for VLM agents typically report a single first-attempt score per (agent, game) pair, ",
-        "link": "http://arxiv.org/abs/2606.09826v1",
-        "date": "2026-06-08",
+        "title": "A Unifying Lens on Supervised Fine-Tuning Through Target Distribution Design",
+        "summary": "Supervised fine-tuning (SFT) typically maximizes the likelihood of every token in a demonstrated trajectory. However, an observed token can be non-unique, noisy, or misaligned with the model prior. St",
+        "link": "http://arxiv.org/abs/2606.11189v1",
+        "date": "2026-06-09",
         "authors": [
-          "Mingxian Lin",
-          "Shengju Qian",
-          "Yuqi Liu"
+          "Tong Xie",
+          "Yuanhao Ban",
+          "Yunqi Hong"
         ]
       },
       {
-        "title": "An Agency-Transferring Model-Free Policy Enhancement Technique",
-        "summary": "Training reinforcement learning (RL) policies from scratch is   costly: it requires careful reward and environment design,   extensive tuning, and substantial computation.   Yet many control problems ",
-        "link": "http://arxiv.org/abs/2606.09825v1",
-        "date": "2026-06-08",
+        "title": "EEVEE: Towards Test-time Prompt Learning in the Real World for Self-Improving Agents",
+        "summary": "In this paper, we propose EEVEE, the first multi-dataset test-time prompt learning framework for LLM agents, enabling test-time prompt learning under real-world task streams. Existing methods are larg",
+        "link": "http://arxiv.org/abs/2606.11182v1",
+        "date": "2026-06-09",
         "authors": [
-          "Anton Bolychev",
-          "Georgiy Malaniya",
-          "Sinan Ibrahim"
+          "Weixian Xu",
+          "Shilong Liu",
+          "Mengdi Wang"
         ]
       },
       {
-        "title": "PTL-Diffusion: Manifold-Aware Diffusion with Periodic Terminal Laws",
-        "summary": "Standard diffusion models typically use a single time-homogeneous Gaussian terminal distribution as the reference law for generation. While this choice is analytically convenient and empirically power",
-        "link": "http://arxiv.org/abs/2606.09816v1",
-        "date": "2026-06-08",
+        "title": "The Role of Feedback Alignment in Self-Distillation",
+        "summary": "Conditioning a language model on additional context, such as feedback on a previous attempt, typically improves its response. Self-distillation trains the model to retain this improvement when the con",
+        "link": "http://arxiv.org/abs/2606.11173v1",
+        "date": "2026-06-09",
         "authors": [
-          "Danqi Zhuang",
-          "Jisui Huang",
-          "Xiaoyue Xi"
+          "Semih Kara",
+          "O\u011fuzhan Ersoy"
         ]
       },
       {
-        "title": "AHA-WAM:Asynchronous Horizon-Adaptive World-Action Modeling with Observation-Guided Context Routing",
-        "summary": "World-action models have emerged as a promising paradigm for robot manipulation, jointly modeling visual scene dynamics and actions to inject physical priors into policy learning. However, existing wo",
-        "link": "http://arxiv.org/abs/2606.09811v1",
-        "date": "2026-06-08",
+        "title": "Piper: A Programmable Distributed Training System",
+        "summary": "Large-scale model training increasingly relies on composing multiple parallelism strategies, such as data, pipeline, and expert parallelism, together with memory-saving optimizations like ZeRO. Deploy",
+        "link": "http://arxiv.org/abs/2606.11169v1",
+        "date": "2026-06-09",
         "authors": [
-          "Jisong Cai",
-          "Long Ling",
-          "Shiwei Chu"
+          "Megan Frisella",
+          "Shubham Tiwari",
+          "Andy Ruan"
         ]
       },
       {
-        "title": "Evaluation Cards: An Interpretive Layer for AI Evaluation Reporting",
-        "summary": "AI evaluation results are produced at scale but reported inconsistently across leaderboards, model cards, benchmark papers, and company blogs. The cost is interpretive: readers cannot reliably compare",
-        "link": "http://arxiv.org/abs/2606.09809v1",
-        "date": "2026-06-08",
+        "title": "Flaws in the LLM Automation Narrative",
+        "summary": "Large Language Models (LLMs) are increasingly described as performing at the level of human experts on knowledge economy tasks. These claims are primarily based on how LLMs perform on benchmarking tas",
+        "link": "http://arxiv.org/abs/2606.11166v1",
+        "date": "2026-06-09",
         "authors": [
-          "Avijit Ghosh",
-          "Anka Reuel",
-          "Jenny Chim"
+          "George Perrett",
+          "Javae Elliott",
+          "Jennifer Hill"
         ]
       },
       {
-        "title": "Topological Neural Operators",
-        "summary": "We introduce Topological Neural Operators (TNOs), a principled framework for operator learning on cell complexes that lifts neural operators (NOs) from functions on points and/or edges to topological ",
-        "link": "http://arxiv.org/abs/2606.09806v1",
-        "date": "2026-06-08",
+        "title": "ReasonAlloc: Hierarchical Decoding-Time KV Cache Budget Allocation for Reasoning Models",
+        "summary": "Long chain-of-thought (CoT) trajectories in large language model (LLM) reasoning cause severe inference bottlenecks due to rapid key-value (KV) cache growth. Current decoding-time compression methods ",
+        "link": "http://arxiv.org/abs/2606.11164v1",
+        "date": "2026-06-09",
         "authors": [
-          "Lennart Bastian",
-          "Samuel Leventhal",
-          "Mustafa Hajij"
+          "Wenhao Liu",
+          "Hao Shi",
+          "Yunhe Li"
         ]
       },
       {
-        "title": "Bandits for Efficient Experimentation: Adapting to Control Group, Preferences, and Context Drifts",
-        "summary": "We consider a variant of the linear contextual stochastic multi-armed bandits, where the learner must provide recommendations to a group of users, each having its personalized preference vector, and i",
-        "link": "http://arxiv.org/abs/2606.09802v1",
-        "date": "2026-06-08",
+        "title": "ABC-Bench: An Agentic Bio-Capabilities Benchmark for Biosecurity",
+        "summary": "Large language models (LLMs) are rapidly acquiring capabilities relevant to biological research, from literature synthesis to interpretation of experimental data. Increasingly, LLM agents can also per",
+        "link": "http://arxiv.org/abs/2606.11150v1",
+        "date": "2026-06-09",
         "authors": [
-          "Udvas Das",
-          "Waris Radji",
-          "Debabrota Basu"
+          "Andrew Bo Liu",
+          "Samira Nedungadi",
+          "Bryce Cai"
         ]
       },
       {
-        "title": "FASE: Fast Adaptive Semantic Entropy for Code Quality",
-        "summary": "Multi-agent code generation offers a promising paradigm for autonomous software development by simulating the human software engineering lifecycle. However, system reliability remains hindered by LLM ",
-        "link": "http://arxiv.org/abs/2606.09800v1",
-        "date": "2026-06-08",
+        "title": "Data assimilation for subsurface flow using latent diffusion model parameterization: performance of ensemble-Kalman and Monte Carlo techniques",
+        "summary": "Data assimilation (DA) in subsurface flow entails calibrating model parameters to match observed data, typically at wells, while preserving geological realism. Latent diffusion models (LDMs) provide e",
+        "link": "http://arxiv.org/abs/2606.11140v1",
+        "date": "2026-06-09",
         "authors": [
-          "Shizhe Lin",
-          "Ladan Tahvildari"
+          "Guido Di Federico",
+          "Wenchao Teng",
+          "Louis J. Durlofsky"
         ]
       }
     ],
-    "updated": "2026-06-09T06:11:09.187421Z"
+    "updated": "2026-06-10T06:25:38.717069Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-06-09T06:11:09.187421Z"
+    "updated": "2026-06-10T06:25:38.717069Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-06-09T06:11:09.187421Z"
+    "updated": "2026-06-10T06:25:38.717069Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-06-09T06:11:09.187421Z"
+    "updated": "2026-06-10T06:25:38.717069Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Human-Centred Risk Mitigation for AI-Mediated Information Manipulation: A SOCMINT Framework Based on Information Manipulation Sets",
-        "summary": "AI-mediated information manipulation increasingly takes the form of social cyber attacks that target trust, attention, credibility, reputation, and decision-making rather than only technical infrastru",
-        "link": "http://arxiv.org/abs/2606.09754v1",
-        "date": "2026-06-08",
+        "title": "Anchors that Don't Lift: Understanding Supply Chain Driven Kernel Lock-In and Governance-Mediated Mitigation Strategies in SOHO Devices",
+        "summary": "Small Office/Home Office (SOHO) devices are widely popular, yet often attacked due to security vulnerabilities in their firmware, affecting thousands of devices. These security vulnerabilities often s",
+        "link": "http://arxiv.org/abs/2606.11175v1",
+        "date": "2026-06-09",
         "authors": [
-          "Antonio Scala"
+          "Ritwik Badola",
+          "Rajdeep Ghosh",
+          "Ashita Gupta"
         ]
       },
       {
-        "title": "A Bell-State Extension of Loop-Back Quantum Key Distribution",
-        "summary": "Bidirectional quantum key distribution (QKD) protocols face persistent challenges related to classical disclosure, confinement of the signal space to predictable subspaces, and limited detectability u",
-        "link": "http://arxiv.org/abs/2606.09723v1",
-        "date": "2026-06-08",
+        "title": "OpenPCC: Open and Confidential LLM Serving on Commodity TEEs",
+        "summary": "Generative AI applications such as personal AI agents, image generators, and chat assistants offer advanced capabilities to improve user experience. Behind the scenes, Large Language Models (LLMs) tha",
+        "link": "http://arxiv.org/abs/2606.11145v1",
+        "date": "2026-06-09",
         "authors": [
-          "Luis Adri\u00e1n Lizama-P\u00e9rez"
+          "Haoling Zhou",
+          "Shixuan Zhao",
+          "Chao Wang"
         ]
       },
       {
-        "title": "What the Eyes See, the LLMs Miss: Exploiting Human Perception for Adversarial Text Attacks",
-        "summary": "Large language model (LLM)-powered content moderation systems have become a critical defense against harmful online content. However, these systems primarily operate on tokenized text and largely igno",
-        "link": "http://arxiv.org/abs/2606.09700v1",
-        "date": "2026-06-08",
+        "title": "A Longitudinal Study of Recently Observed Malicious Domains: Characteristics, Infrastructure, and Abuse Patterns",
+        "summary": "We present a longitudinal study of approximately 1.52 million malicious domains observed on VirusTotal (VT) between January and May 2026. Domains were selected on the basis of detection by at least fi",
+        "link": "http://arxiv.org/abs/2606.11111v1",
+        "date": "2026-06-09",
         "authors": [
-          "Qin Yang",
-          "Lu Malloy",
-          "Joshua Lee"
+          "Fathima Mashood",
+          "Mohamed Nabeel"
         ]
       },
       {
-        "title": "Observability for Delegated Execution in Agentic AI Systems",
-        "summary": "Delegation-scoped execution is not identifiable from standard observables: audit logs and execution traces can be identical under multiple incompatible delegation assignments. This gap is especially a",
-        "link": "http://arxiv.org/abs/2606.09692v1",
-        "date": "2026-06-08",
+        "title": "Do Transformers Actually Help Intrusion Detection? A Temporal Sequence Evaluation on CIC-IDS2017",
+        "summary": "Recent deep learning approaches for network intrusion detection increasingly incorporate temporal architectures such as recurrent networks and Transformers, often reporting near-perfect performance on",
+        "link": "http://arxiv.org/abs/2606.11098v1",
+        "date": "2026-06-09",
         "authors": [
-          "Abhinav Mishra",
-          "Kumar Sharad"
+          "Zach Moczkodan",
+          "Hany Ragab"
         ]
       },
       {
-        "title": "Parent-Hash DAG: A Cost Analysis of Constant-Time Append for On-Chain Registries",
-        "summary": "Provenance trees are append-only directed acyclic graphs of artifact registrations anchored on a public blockchain, recently introduced as the data substrate of operator-gated provenance infrastructur",
-        "link": "http://arxiv.org/abs/2606.09593v1",
-        "date": "2026-06-08",
+        "title": "When Discovery Outpaces Remediation: Modeling AI-Accelerated Vulnerability Discovery in Interconnected Systems",
+        "summary": "Advanced AI systems for code analysis, binary analysis, fuzzing orchestration, and penetration-test planningmay significantly increase the rate at which latent vulnerabilities are discovered. While im",
+        "link": "http://arxiv.org/abs/2606.11022v1",
+        "date": "2026-06-09",
         "authors": [
-          "Ian C. Moore",
-          "Fernando Paredes Garcia"
+          "Mohamamad Reza Faghani"
         ]
       },
       {
-        "title": "Clinically Grounded Privacy Evaluation of Medical LMs",
-        "summary": "Medical language models (LMs) can memorize and reproduce protected health information, but privacy evaluations often focus on recovery of training text rather than disclosure under realistic threat mo",
-        "link": "http://arxiv.org/abs/2606.09590v1",
-        "date": "2026-06-08",
+        "title": "Understanding and mitigating the risks of OpenClaw for non-technical users: A practical guide with Skill",
+        "summary": "OpenClaw has rapidly emerged as a transformative artificial intelligence (AI) agent framework, and its ability to autonomously execute complex, multi-step tasks has attracted an ever-growing and diver",
+        "link": "http://arxiv.org/abs/2606.11007v1",
+        "date": "2026-06-09",
         "authors": [
-          "Sasha Ronaghi",
-          "Sana Tonekaboni",
-          "Lena Stempfle"
+          "Junchang Zheng",
+          "Junfeng Tan",
+          "Jialiang Lin"
         ]
       },
       {
-        "title": "Safe-RULE: Safe Reinforcement UnLEarning",
-        "summary": "Offline safe reinforcement learning (Safe RL) enables policy learning without online interactions, making it suitable for safety-critical systems such as robotics systems. However, its reliance on sta",
-        "link": "http://arxiv.org/abs/2606.09559v1",
-        "date": "2026-06-08",
+        "title": "Context-Based Adversarial Attacks on AI Code Generators: Vulnerability Analysis and Implications",
+        "summary": "AI-powered code generation systems have transformed software development but introduce critical inference-time security vulnerabilities. This research presents a systematic investigation of context-ba",
+        "link": "http://arxiv.org/abs/2606.10945v1",
+        "date": "2026-06-09",
         "authors": [
-          "Shixiong Jiang",
-          "Taozheng Zhu",
-          "Fanxin Kong"
+          "Walther A. Del Orbe",
+          "John D. Hastings",
+          "Varghese Vaidyan"
         ]
       },
       {
-        "title": "FuseFSS: Efficient Secure LLM Inference with Function Secret Sharing",
-        "summary": "Two-server secure inference allows a client to query a hosted large language model (LLM) without revealing prompts or embeddings. Recent GPU systems based on function secret sharing (FSS) make linear ",
-        "link": "http://arxiv.org/abs/2606.09551v1",
-        "date": "2026-06-08",
+        "title": "What Do Deepfake Speech Detectors Actually Hear?",
+        "summary": "Deepfake speech detectors often output a single score without explaining why an audio sample is flagged, where in the signal the evidence lies, or what cues drive the decision. We propose an audio-nat",
+        "link": "http://arxiv.org/abs/2606.10912v1",
+        "date": "2026-06-09",
         "authors": [
-          "Yuhan Ma",
-          "Yong Li",
-          "Stefan Schmid"
+          "Vojt\u011bch Stan\u011bk",
+          "Veronika Jirmusov\u00e1",
+          "Anton Firc"
         ]
       }
     ],
-    "updated": "2026-06-09T06:11:09.187421Z"
+    "updated": "2026-06-10T06:25:38.717069Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -277,6 +279,6 @@
         ]
       }
     ],
-    "updated": "2026-06-09T06:11:09.187421Z"
+    "updated": "2026-06-10T06:25:38.717069Z"
   }
 }
