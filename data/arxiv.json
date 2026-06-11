@@ -3,199 +3,199 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "A Unifying Lens on Supervised Fine-Tuning Through Target Distribution Design",
-        "summary": "Supervised fine-tuning (SFT) typically maximizes the likelihood of every token in a demonstrated trajectory. However, an observed token can be non-unique, noisy, or misaligned with the model prior. St",
-        "link": "http://arxiv.org/abs/2606.11189v1",
-        "date": "2026-06-09",
+        "title": "Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models",
+        "summary": "Vision-language models (VLMs) project images into hundreds to thousands of visual tokens, making decoder inference expensive in both attention computation and KV-cache memory. Existing visual-token re",
+        "link": "http://arxiv.org/abs/2606.12412v1",
+        "date": "2026-06-10",
         "authors": [
-          "Tong Xie",
-          "Yuanhao Ban",
-          "Yunqi Hong"
+          "Cheng-Yu Yang",
+          "Shao-Yuan Lo",
+          "Yu-Lun Liu"
         ]
       },
       {
-        "title": "EEVEE: Towards Test-time Prompt Learning in the Real World for Self-Improving Agents",
-        "summary": "In this paper, we propose EEVEE, the first multi-dataset test-time prompt learning framework for LLM agents, enabling test-time prompt learning under real-world task streams. Existing methods are larg",
-        "link": "http://arxiv.org/abs/2606.11182v1",
-        "date": "2026-06-09",
+        "title": "FACTR 2: Learning External Force Sensing for Commodity Robot Arms Improves Policy Learning",
+        "summary": "Contact-rich manipulation requires force sensitivity, but many robot arms lack dedicated force sensors due to their high cost. We present Neural External Torque Estimation (NEXT), a data-driven method",
+        "link": "http://arxiv.org/abs/2606.12406v1",
+        "date": "2026-06-10",
         "authors": [
-          "Weixian Xu",
-          "Shilong Liu",
-          "Mengdi Wang"
+          "Steven Oh",
+          "Jason Jingzhou Liu",
+          "Tony Tao"
         ]
       },
       {
-        "title": "The Role of Feedback Alignment in Self-Distillation",
-        "summary": "Conditioning a language model on additional context, such as feedback on a previous attempt, typically improves its response. Self-distillation trains the model to retain this improvement when the con",
-        "link": "http://arxiv.org/abs/2606.11173v1",
-        "date": "2026-06-09",
+        "title": "DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners?",
+        "summary": "Vision-Language Models (VLMs) are increasingly deployed as high-level planners for embodied agents, with an emerging strategy of scaling test-time compute to improve capability. However, we observe th",
+        "link": "http://arxiv.org/abs/2606.12402v1",
+        "date": "2026-06-10",
         "authors": [
-          "Semih Kara",
-          "O\u011fuzhan Ersoy"
+          "Jadelynn Dao",
+          "Milan Ganai",
+          "Yasmina Abukhadra"
         ]
       },
       {
-        "title": "Piper: A Programmable Distributed Training System",
-        "summary": "Large-scale model training increasingly relies on composing multiple parallelism strategies, such as data, pipeline, and expert parallelism, together with memory-saving optimizations like ZeRO. Deploy",
-        "link": "http://arxiv.org/abs/2606.11169v1",
-        "date": "2026-06-09",
+        "title": "Redesign Mixture-of-Experts Routers with Manifold Power Iteration",
+        "summary": "Router is the cornerstone component to the Mixture-of-Experts models. Serving as expert proxies, the rows of the router matrix compute their similarity to the MoE inputs to determine which subset of e",
+        "link": "http://arxiv.org/abs/2606.12397v1",
+        "date": "2026-06-10",
         "authors": [
-          "Megan Frisella",
-          "Shubham Tiwari",
-          "Andy Ruan"
+          "Songhao Wu",
+          "Ang Lv",
+          "Ruobing Xie"
         ]
       },
       {
-        "title": "Flaws in the LLM Automation Narrative",
-        "summary": "Large Language Models (LLMs) are increasingly described as performing at the level of human experts on knowledge economy tasks. These claims are primarily based on how LLMs perform on benchmarking tas",
-        "link": "http://arxiv.org/abs/2606.11166v1",
-        "date": "2026-06-09",
+        "title": "System Report for CCL25-Eval Task 5: New Dataset and LoRA-Fine-Tuned Qwen2.5",
+        "summary": "Recently, large language models (LLMs) have achieved promising progress in the fields of classical Chinese translation and the generation of classical poetry. However, domain-specific research on prec",
+        "link": "http://arxiv.org/abs/2606.12392v1",
+        "date": "2026-06-10",
         "authors": [
-          "George Perrett",
-          "Javae Elliott",
-          "Jennifer Hill"
+          "Haotao Xie"
         ]
       },
       {
-        "title": "ReasonAlloc: Hierarchical Decoding-Time KV Cache Budget Allocation for Reasoning Models",
-        "summary": "Long chain-of-thought (CoT) trajectories in large language model (LLM) reasoning cause severe inference bottlenecks due to rapid key-value (KV) cache growth. Current decoding-time compression methods ",
-        "link": "http://arxiv.org/abs/2606.11164v1",
-        "date": "2026-06-09",
+        "title": "TAHOE: Text-to-SQL with Automated Hint Optimization from Experience",
+        "summary": "Large Language Models (LLMs) have democratized database access through Text-to-SQL, but moving from prototypes to production remains difficult. Real deployments must handle strict SQL dialects, massiv",
+        "link": "http://arxiv.org/abs/2606.12387v1",
+        "date": "2026-06-10",
         "authors": [
-          "Wenhao Liu",
-          "Hao Shi",
-          "Yunhe Li"
+          "Zhiyi Chen",
+          "Jie Song",
+          "Peng Li"
         ]
       },
       {
-        "title": "ABC-Bench: An Agentic Bio-Capabilities Benchmark for Biosecurity",
-        "summary": "Large language models (LLMs) are rapidly acquiring capabilities relevant to biological research, from literature synthesis to interpretation of experimental data. Increasingly, LLM agents can also per",
-        "link": "http://arxiv.org/abs/2606.11150v1",
-        "date": "2026-06-09",
+        "title": "ATLAS: Active Theory Learning for Automated Science",
+        "summary": "Advancing scientific understanding through mechanistic modeling requires posing the right experimental questions to yield maximally informative data. To automate this pursuit within cognitive science,",
+        "link": "http://arxiv.org/abs/2606.12386v1",
+        "date": "2026-06-10",
         "authors": [
-          "Andrew Bo Liu",
-          "Samira Nedungadi",
-          "Bryce Cai"
+          "No\u00e9mi \u00c9ltet\u0151",
+          "Nathaniel D. Daw",
+          "Kimberly L. Stachenfeld"
         ]
       },
       {
-        "title": "Data assimilation for subsurface flow using latent diffusion model parameterization: performance of ensemble-Kalman and Monte Carlo techniques",
-        "summary": "Data assimilation (DA) in subsurface flow entails calibrating model parameters to match observed data, typically at wells, while preserving geological realism. Latent diffusion models (LDMs) provide e",
-        "link": "http://arxiv.org/abs/2606.11140v1",
-        "date": "2026-06-09",
+        "title": "APPO: Agentic Procedural Policy Optimization",
+        "summary": "Recent advances in agentic Reinforcement Learning (RL) have substantially improved the multi-turn tool-use capabilities of large language model agents. However, most existing methods assign credit ove",
+        "link": "http://arxiv.org/abs/2606.12384v1",
+        "date": "2026-06-10",
         "authors": [
-          "Guido Di Federico",
-          "Wenchao Teng",
-          "Louis J. Durlofsky"
+          "Xucong Wang",
+          "Ziyu Ma",
+          "Yong Wang"
         ]
       }
     ],
-    "updated": "2026-06-10T06:25:38.717069Z"
+    "updated": "2026-06-11T06:50:49.960273Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-06-10T06:25:38.717069Z"
+    "updated": "2026-06-11T06:50:49.960273Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-06-10T06:25:38.717069Z"
+    "updated": "2026-06-11T06:50:49.960273Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-06-10T06:25:38.717069Z"
+    "updated": "2026-06-11T06:50:49.960273Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Anchors that Don't Lift: Understanding Supply Chain Driven Kernel Lock-In and Governance-Mediated Mitigation Strategies in SOHO Devices",
-        "summary": "Small Office/Home Office (SOHO) devices are widely popular, yet often attacked due to security vulnerabilities in their firmware, affecting thousands of devices. These security vulnerabilities often s",
-        "link": "http://arxiv.org/abs/2606.11175v1",
-        "date": "2026-06-09",
+        "title": "MARCIM-WG: A cyber wargame proposal based on math modeling applied in a naval scenario",
+        "summary": "As maritime operations increasingly depend on interconnected digital ecosystems, cyber incidents can propagate across maritime networks and degrade critical services. Strengthening strategic Cyber Sit",
+        "link": "http://arxiv.org/abs/2606.12395v1",
+        "date": "2026-06-10",
         "authors": [
-          "Ritwik Badola",
-          "Rajdeep Ghosh",
-          "Ashita Gupta"
+          "Diego Cabuya-Padilla",
+          "Daniel D\u00edaz-L\u00f3pez",
+          "Carlos Castaneda-Marroqu\u00edn"
         ]
       },
       {
-        "title": "OpenPCC: Open and Confidential LLM Serving on Commodity TEEs",
-        "summary": "Generative AI applications such as personal AI agents, image generators, and chat assistants offer advanced capabilities to improve user experience. Behind the scenes, Large Language Models (LLMs) tha",
-        "link": "http://arxiv.org/abs/2606.11145v1",
-        "date": "2026-06-09",
+        "title": "ECYSAP EYE: From Cyber Situational Awareness to Mission-Centric Decision Support for Enhanced Cyberspace Operations",
+        "summary": "Operational organizations increasingly require Cyber Situational Awareness (CySA) capabilities that go beyond isolated technical alerts, providing mission-relevant artefacts that can be embedded into ",
+        "link": "http://arxiv.org/abs/2606.12354v1",
+        "date": "2026-06-10",
         "authors": [
-          "Haoling Zhou",
-          "Shixuan Zhao",
-          "Chao Wang"
+          "Pantaleone Nespoli",
+          "Daniel D\u00edaz-L\u00f3pez",
+          "Sergio Lopez Bernal"
         ]
       },
       {
-        "title": "A Longitudinal Study of Recently Observed Malicious Domains: Characteristics, Infrastructure, and Abuse Patterns",
-        "summary": "We present a longitudinal study of approximately 1.52 million malicious domains observed on VirusTotal (VT) between January and May 2026. Domains were selected on the basis of detection by at least fi",
-        "link": "http://arxiv.org/abs/2606.11111v1",
-        "date": "2026-06-09",
+        "title": "OCELOT: Inference-Leakage Budgets for Privacy-Preserving LLM Agents",
+        "summary": "Large language model (LLM) agents increasingly act on a user's behalf -- reading personal files, calling tools, transacting with external services -- possibly leaking personally identifiable informati",
+        "link": "http://arxiv.org/abs/2606.12341v1",
+        "date": "2026-06-10",
         "authors": [
-          "Fathima Mashood",
-          "Mohamed Nabeel"
+          "Jin Xie",
+          "Songze Li"
         ]
       },
       {
-        "title": "Do Transformers Actually Help Intrusion Detection? A Temporal Sequence Evaluation on CIC-IDS2017",
-        "summary": "Recent deep learning approaches for network intrusion detection increasingly incorporate temporal architectures such as recurrent networks and Transformers, often reporting near-perfect performance on",
-        "link": "http://arxiv.org/abs/2606.11098v1",
-        "date": "2026-06-09",
+        "title": "A Five-Plane Reference Architecture for Runtime Governance of Production AI Agents",
+        "summary": "Enterprise security was built to govern data boundaries: the protected surface was data at rest and in transit, and the controls -- access control, data-loss prevention, perimeter inspection -- govern",
+        "link": "http://arxiv.org/abs/2606.12320v1",
+        "date": "2026-06-10",
         "authors": [
-          "Zach Moczkodan",
-          "Hany Ragab"
+          "Krti Tallam"
         ]
       },
       {
-        "title": "When Discovery Outpaces Remediation: Modeling AI-Accelerated Vulnerability Discovery in Interconnected Systems",
-        "summary": "Advanced AI systems for code analysis, binary analysis, fuzzing orchestration, and penetration-test planningmay significantly increase the rate at which latent vulnerabilities are discovered. While im",
-        "link": "http://arxiv.org/abs/2606.11022v1",
-        "date": "2026-06-09",
+        "title": "Selection Integrity for LLM Graph Memory: An Accumulability Criterion for Information-Flow-Blind Retrieval",
+        "summary": "Agent memory is moving to graphs, and the provenance defenses now being built for it all check one thing: the provenance of the records an agent retrieves. We show that this entire class of defense is",
+        "link": "http://arxiv.org/abs/2606.12290v1",
+        "date": "2026-06-10",
         "authors": [
-          "Mohamamad Reza Faghani"
+          "Zeming Fei",
+          "Hongming Fei",
+          "Xiaoyang Wang"
         ]
       },
       {
-        "title": "Understanding and mitigating the risks of OpenClaw for non-technical users: A practical guide with Skill",
-        "summary": "OpenClaw has rapidly emerged as a transformative artificial intelligence (AI) agent framework, and its ability to autonomously execute complex, multi-step tasks has attracted an ever-growing and diver",
-        "link": "http://arxiv.org/abs/2606.11007v1",
-        "date": "2026-06-09",
+        "title": "Partitioned Tags, Shared Data: Reconciling Strict Cache Isolation with Write-Shared Coherence",
+        "summary": "Cache partitioning is among the strongest structural defenses against eviction-based cache side channels, yet a decade-old design issue has blocked its widespread deployment in secure shared-OS settin",
+        "link": "http://arxiv.org/abs/2606.12259v1",
+        "date": "2026-06-10",
         "authors": [
-          "Junchang Zheng",
-          "Junfeng Tan",
-          "Jialiang Lin"
+          "Kartik Ramkrishnan",
+          "Stephen McCamant",
+          "Antonia Zhai"
         ]
       },
       {
-        "title": "Context-Based Adversarial Attacks on AI Code Generators: Vulnerability Analysis and Implications",
-        "summary": "AI-powered code generation systems have transformed software development but introduce critical inference-time security vulnerabilities. This research presents a systematic investigation of context-ba",
-        "link": "http://arxiv.org/abs/2606.10945v1",
-        "date": "2026-06-09",
+        "title": "Reinforcement Learning Disrupts Gradient-Based Adversarial Optimization",
+        "summary": "Gradient-based adversarial attacks remain a dominant threat to deep neural networks (DNNs), as they exploit gradient information to efficiently optimize adversarial perturbations. To address this, we ",
+        "link": "http://arxiv.org/abs/2606.12251v1",
+        "date": "2026-06-10",
         "authors": [
-          "Walther A. Del Orbe",
+          "Xinhai Zou",
+          "Chang Zhao",
+          "Alireza Aghabagherloo"
+        ]
+      },
+      {
+        "title": "Bridging the Smart City Cybersecurity Data Gap Through AI-Driven Synthetic Dataset Generation",
+        "summary": "Smart cities rely on interconnected cyber-physical systems that integrate sensors, IoT devices, cloud platforms, and AI-driven services and decision-making. While these systems enhance city services, ",
+        "link": "http://arxiv.org/abs/2606.12225v1",
+        "date": "2026-06-10",
+        "authors": [
+          "Stephanie Polczynski",
           "John D. Hastings",
           "Varghese Vaidyan"
         ]
-      },
-      {
-        "title": "What Do Deepfake Speech Detectors Actually Hear?",
-        "summary": "Deepfake speech detectors often output a single score without explaining why an audio sample is flagged, where in the signal the evidence lies, or what cues drive the decision. We propose an audio-nat",
-        "link": "http://arxiv.org/abs/2606.10912v1",
-        "date": "2026-06-09",
-        "authors": [
-          "Vojt\u011bch Stan\u011bk",
-          "Veronika Jirmusov\u00e1",
-          "Anton Firc"
-        ]
       }
     ],
-    "updated": "2026-06-10T06:25:38.717069Z"
+    "updated": "2026-06-11T06:50:49.960273Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -279,6 +279,6 @@
         ]
       }
     ],
-    "updated": "2026-06-10T06:25:38.717069Z"
+    "updated": "2026-06-11T06:50:49.960273Z"
   }
 }

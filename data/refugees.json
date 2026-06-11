@@ -1,14 +1,14 @@
 {
-  "current_millions": 102.8,
+  "current_millions": 101.7,
   "prev_year_millions": 107.4,
-  "total_millions": 102.8,
-  "delta": -4.6,
+  "total_millions": 101.7,
+  "delta": -5.7,
   "breakdown": {
     "year": "2025",
-    "refugees": 30.5,
-    "idps": 63.9,
-    "asylum": 8.4,
-    "total": 102.8
+    "refugees": 28.5,
+    "idps": 64.2,
+    "asylum": 9.0,
+    "total": 101.7
   },
   "series": [
     {
@@ -65,9 +65,9 @@
     },
     {
       "year": "2025",
-      "total": 102.8
+      "total": 101.7
     }
   ],
-  "score": 43,
-  "updated": "2026-06-10T06:25:38.717069Z"
+  "score": 44,
+  "updated": "2026-06-11T06:50:49.960273Z"
 }
