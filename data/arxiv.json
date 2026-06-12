@@ -3,199 +3,200 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Reroute, Don't Remove: Recoverable Visual Token Routing for Vision-Language Models",
-        "summary": "Vision-language models (VLMs) project images into hundreds to thousands of visual tokens, making decoder inference expensive in both attention computation and KV-cache memory. Existing visual-token re",
-        "link": "http://arxiv.org/abs/2606.12412v1",
-        "date": "2026-06-10",
+        "title": "Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning",
+        "summary": "Retrieval-augmented generation (RAG) has become a standard mechanism for grounding language models in external knowledge, yet conventional retrieval based on lexical or semantic similarity is poorly s",
+        "link": "http://arxiv.org/abs/2606.13680v1",
+        "date": "2026-06-11",
         "authors": [
-          "Cheng-Yu Yang",
-          "Shao-Yuan Lo",
-          "Yu-Lun Liu"
+          "Zilin Xiao",
+          "Qi Ma",
+          "Chun-cheng Jason Chen"
         ]
       },
       {
-        "title": "FACTR 2: Learning External Force Sensing for Commodity Robot Arms Improves Policy Learning",
-        "summary": "Contact-rich manipulation requires force sensitivity, but many robot arms lack dedicated force sensors due to their high cost. We present Neural External Torque Estimation (NEXT), a data-driven method",
-        "link": "http://arxiv.org/abs/2606.12406v1",
-        "date": "2026-06-10",
+        "title": "Mana: Dexterous Manipulation of Articulated Tools",
+        "summary": "Articulated tool manipulation remains a major challenge in dexterous robotics due to the need to coordinate internal degrees of freedom and contact-rich interactions. While prior work has largely focu",
+        "link": "http://arxiv.org/abs/2606.13677v1",
+        "date": "2026-06-11",
         "authors": [
-          "Steven Oh",
-          "Jason Jingzhou Liu",
-          "Tony Tao"
+          "Zhao-Heng Yin",
+          "Guanya Shi",
+          "Pieter Abbeel"
         ]
       },
       {
-        "title": "DIRECT: When and Where Should You Allocate Test-Time Compute in Embodied Planners?",
-        "summary": "Vision-Language Models (VLMs) are increasingly deployed as high-level planners for embodied agents, with an emerging strategy of scaling test-time compute to improve capability. However, we observe th",
-        "link": "http://arxiv.org/abs/2606.12402v1",
-        "date": "2026-06-10",
+        "title": "SpatialClaw: Rethinking Action Interface for Agentic Spatial Reasoning",
+        "summary": "Spatial reasoning, the ability to determine where objects are, how they relate, and how they move in 3D, remains a fundamental challenge for vision-language models (VLMs). Tool-augmented agents attemp",
+        "link": "http://arxiv.org/abs/2606.13673v1",
+        "date": "2026-06-11",
         "authors": [
-          "Jadelynn Dao",
-          "Milan Ganai",
-          "Yasmina Abukhadra"
+          "Seokju Cho",
+          "Ryo Hachiuma",
+          "Abhishek Badki"
         ]
       },
       {
-        "title": "Redesign Mixture-of-Experts Routers with Manifold Power Iteration",
-        "summary": "Router is the cornerstone component to the Mixture-of-Experts models. Serving as expert proxies, the rows of the router matrix compute their similarity to the MoE inputs to determine which subset of e",
-        "link": "http://arxiv.org/abs/2606.12397v1",
-        "date": "2026-06-10",
+        "title": "Automated reproducibility assessments in the social and behavioral sciences using large language models",
+        "summary": "Reproducibility in the social and behavioral sciences is typically evaluated by independent researchers who reanalyze the original data to assess whether the published findings can be recovered. Howev",
+        "link": "http://arxiv.org/abs/2606.13670v1",
+        "date": "2026-06-11",
         "authors": [
-          "Songhao Wu",
-          "Ang Lv",
-          "Ruobing Xie"
+          "Tobias Holtdirk",
+          "Pietro Marcolongo",
+          "Anna Steinberg Schulten"
         ]
       },
       {
-        "title": "System Report for CCL25-Eval Task 5: New Dataset and LoRA-Fine-Tuned Qwen2.5",
-        "summary": "Recently, large language models (LLMs) have achieved promising progress in the fields of classical Chinese translation and the generation of classical poetry. However, domain-specific research on prec",
-        "link": "http://arxiv.org/abs/2606.12392v1",
-        "date": "2026-06-10",
+        "title": "Agents-K1: Towards Agent-native Knowledge Orchestration",
+        "summary": "Current LLM-based research agents have advanced through agent orchestration, yet largely overlook scientific knowledge orchestration. Existing works often reduce papers to abstracts, surface mentions,",
+        "link": "http://arxiv.org/abs/2606.13669v1",
+        "date": "2026-06-11",
         "authors": [
-          "Haotao Xie"
+          "Zongsheng Cao",
+          "Bihao Zhan",
+          "Jinxin Shi"
         ]
       },
       {
-        "title": "TAHOE: Text-to-SQL with Automated Hint Optimization from Experience",
-        "summary": "Large Language Models (LLMs) have democratized database access through Text-to-SQL, but moving from prototypes to production remains difficult. Real deployments must handle strict SQL dialects, massiv",
-        "link": "http://arxiv.org/abs/2606.12387v1",
-        "date": "2026-06-10",
+        "title": "EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery",
+        "summary": "LLM-based agents have shown increasing potential in automating scientific discovery. Given an optimizable metric and an execution environment, they can propose, validate, and iterate scientific soluti",
+        "link": "http://arxiv.org/abs/2606.13662v1",
+        "date": "2026-06-11",
         "authors": [
-          "Zhiyi Chen",
-          "Jie Song",
-          "Peng Li"
+          "Amy Xin",
+          "Jiening Siow",
+          "Junjie Wang"
         ]
       },
       {
-        "title": "ATLAS: Active Theory Learning for Automated Science",
-        "summary": "Advancing scientific understanding through mechanistic modeling requires posing the right experimental questions to yield maximally informative data. To automate this pursuit within cognitive science,",
-        "link": "http://arxiv.org/abs/2606.12386v1",
-        "date": "2026-06-10",
+        "title": "Before You Think: System 0, AI-Mediated Cognition and Cognitive Colonization",
+        "summary": "This paper examines three recent frameworks for understanding the cognitive and epistemic consequences of artificial intelligence: Tri-System Theory, Thinkframes, and System 0. It argues that while th",
+        "link": "http://arxiv.org/abs/2606.13658v1",
+        "date": "2026-06-11",
         "authors": [
-          "No\u00e9mi \u00c9ltet\u0151",
-          "Nathaniel D. Daw",
-          "Kimberly L. Stachenfeld"
+          "Marianna Bergamaschi Ganapini",
+          "Massimo Chiriatti",
+          "Enrico Panai"
         ]
       },
       {
-        "title": "APPO: Agentic Procedural Policy Optimization",
-        "summary": "Recent advances in agentic Reinforcement Learning (RL) have substantially improved the multi-turn tool-use capabilities of large language model agents. However, most existing methods assign credit ove",
-        "link": "http://arxiv.org/abs/2606.12384v1",
-        "date": "2026-06-10",
+        "title": "SkMTEB: Slovak Massive Text Embedding Benchmark and Model Adaptation",
+        "summary": "We introduce SkMTEB, the first comprehensive MTEB-style text embedding benchmark for Slovak, a low-resource West Slavic language, comprising 31 datasets across 7 task types -- nearly 4$\\times$ the dep",
+        "link": "http://arxiv.org/abs/2606.13647v1",
+        "date": "2026-06-11",
         "authors": [
-          "Xucong Wang",
-          "Ziyu Ma",
-          "Yong Wang"
+          "Marek \u0160uppa",
+          "Andrej Ridzik",
+          "Daniel Hl\u00e1dek"
         ]
       }
     ],
-    "updated": "2026-06-11T06:50:49.960273Z"
+    "updated": "2026-06-12T06:43:47.523072Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-06-11T06:50:49.960273Z"
+    "updated": "2026-06-12T06:43:47.523072Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-06-11T06:50:49.960273Z"
+    "updated": "2026-06-12T06:43:47.523072Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-06-11T06:50:49.960273Z"
+    "updated": "2026-06-12T06:43:47.523072Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "MARCIM-WG: A cyber wargame proposal based on math modeling applied in a naval scenario",
-        "summary": "As maritime operations increasingly depend on interconnected digital ecosystems, cyber incidents can propagate across maritime networks and degrade critical services. Strengthening strategic Cyber Sit",
-        "link": "http://arxiv.org/abs/2606.12395v1",
-        "date": "2026-06-10",
+        "title": "Beyond Runtime Enforcement: Shield Synthesis as Defensibility Analysis for Adversarial Networks",
+        "summary": "Shielded reinforcement learning is typically presented as a runtime safety mechanism that compiles temporal-logic specifications into automata restricting an agent's actions. We argue this is the wron",
+        "link": "http://arxiv.org/abs/2606.13621v1",
+        "date": "2026-06-11",
         "authors": [
-          "Diego Cabuya-Padilla",
-          "Daniel D\u00edaz-L\u00f3pez",
-          "Carlos Castaneda-Marroqu\u00edn"
+          "Achraf Hsain",
+          "Sultan Almuhammadi"
         ]
       },
       {
-        "title": "ECYSAP EYE: From Cyber Situational Awareness to Mission-Centric Decision Support for Enhanced Cyberspace Operations",
-        "summary": "Operational organizations increasingly require Cyber Situational Awareness (CySA) capabilities that go beyond isolated technical alerts, providing mission-relevant artefacts that can be embedded into ",
-        "link": "http://arxiv.org/abs/2606.12354v1",
-        "date": "2026-06-10",
+        "title": "Beyond the IT Checklist: Engineering a Reasonable Standard of Care for Cyber Safety",
+        "summary": "Current U.S. cyber policy, centered on security, often treats documentation of controls and incident reports as a proxy for safety in the built environment. This paper argues that such an approach is ",
+        "link": "http://arxiv.org/abs/2606.13612v1",
+        "date": "2026-06-11",
         "authors": [
-          "Pantaleone Nespoli",
-          "Daniel D\u00edaz-L\u00f3pez",
-          "Sergio Lopez Bernal"
+          "Matthew E. Jablonski",
+          "Linton Wells",
+          "Kathryn B. Laskey"
         ]
       },
       {
-        "title": "OCELOT: Inference-Leakage Budgets for Privacy-Preserving LLM Agents",
-        "summary": "Large language model (LLM) agents increasingly act on a user's behalf -- reading personal files, calling tools, transacting with external services -- possibly leaking personally identifiable informati",
-        "link": "http://arxiv.org/abs/2606.12341v1",
-        "date": "2026-06-10",
+        "title": "Differentially Private Hierarchical Heavy Hitters",
+        "summary": "The task of finding _Hierarchical_ Heavy Hitters (HHH) was introduced by Cormode et al. [VLDB 2003] as a generalisation of the heavy hitter problem. While finding HHH in data streams has been studied ",
+        "link": "http://arxiv.org/abs/2606.13563v1",
+        "date": "2026-06-11",
         "authors": [
-          "Jin Xie",
-          "Songze Li"
+          "Ari Biswas",
+          "Graham Cormode",
+          "Yaron Kanza"
         ]
       },
       {
-        "title": "A Five-Plane Reference Architecture for Runtime Governance of Production AI Agents",
-        "summary": "Enterprise security was built to govern data boundaries: the protected surface was data at rest and in transit, and the controls -- access control, data-loss prevention, perimeter inspection -- govern",
-        "link": "http://arxiv.org/abs/2606.12320v1",
-        "date": "2026-06-10",
+        "title": "Intent-Based Cryptographic API Design for Cryptographic Agility",
+        "summary": "As organizations move toward post-quantum cryptography, they face the major challenge of updating cryptographic algorithms across large, complex software portfolios. However, most cryptographic APIs i",
+        "link": "http://arxiv.org/abs/2606.13445v1",
+        "date": "2026-06-11",
         "authors": [
-          "Krti Tallam"
+          "Navaneeth Rameshan",
+          "Gregoire Messmer"
         ]
       },
       {
-        "title": "Selection Integrity for LLM Graph Memory: An Accumulability Criterion for Information-Flow-Blind Retrieval",
-        "summary": "Agent memory is moving to graphs, and the provenance defenses now being built for it all check one thing: the provenance of the records an agent retrieves. We show that this entire class of defense is",
-        "link": "http://arxiv.org/abs/2606.12290v1",
-        "date": "2026-06-10",
+        "title": "An Assessment Framework for Application-Level Cryptographic Agility",
+        "summary": "The impending post-quantum transition to new cryptography will require complete replacement of algorithms within all software. The cryptographic APIs used today make this transition challenging becaus",
+        "link": "http://arxiv.org/abs/2606.13425v1",
+        "date": "2026-06-11",
         "authors": [
-          "Zeming Fei",
-          "Hongming Fei",
-          "Xiaoyang Wang"
+          "Navaneeth Rameshan",
+          "Gregoire Messmer"
         ]
       },
       {
-        "title": "Partitioned Tags, Shared Data: Reconciling Strict Cache Isolation with Write-Shared Coherence",
-        "summary": "Cache partitioning is among the strongest structural defenses against eviction-based cache side channels, yet a decade-old design issue has blocked its widespread deployment in secure shared-OS settin",
-        "link": "http://arxiv.org/abs/2606.12259v1",
-        "date": "2026-06-10",
+        "title": "Who Pays the Price? Stakeholder-Centric Prompt Injection Benchmarking for Real-world Web Agents",
+        "summary": "Web agents driven by large language models (LLMs) are increasingly deployed in real-world environments, where they operate over untrusted web content and execute actions with direct consequences. This",
+        "link": "http://arxiv.org/abs/2606.13385v1",
+        "date": "2026-06-11",
         "authors": [
-          "Kartik Ramkrishnan",
-          "Stephen McCamant",
-          "Antonia Zhai"
+          "Zihao Wang",
+          "Yiming Li",
+          "Yutong Wu"
         ]
       },
       {
-        "title": "Reinforcement Learning Disrupts Gradient-Based Adversarial Optimization",
-        "summary": "Gradient-based adversarial attacks remain a dominant threat to deep neural networks (DNNs), as they exploit gradient information to efficiently optimize adversarial perturbations. To address this, we ",
-        "link": "http://arxiv.org/abs/2606.12251v1",
-        "date": "2026-06-10",
+        "title": "Split Tallies: A Discrete Certificate Calculus for Auditing Dynamic Ordered Sets in Constant Memory",
+        "summary": "We study retrospective auditing for dynamic ordered sets maintained by an untrusted party. A passive auditor watches insert, delete, membership, predecessor, successor, min, and max operations, stores",
+        "link": "http://arxiv.org/abs/2606.13272v1",
+        "date": "2026-06-11",
         "authors": [
-          "Xinhai Zou",
-          "Chang Zhao",
-          "Alireza Aghabagherloo"
+          "Faruk Alpay",
+          "Levent Sarioglu"
         ]
       },
       {
-        "title": "Bridging the Smart City Cybersecurity Data Gap Through AI-Driven Synthetic Dataset Generation",
-        "summary": "Smart cities rely on interconnected cyber-physical systems that integrate sensors, IoT devices, cloud platforms, and AI-driven services and decision-making. While these systems enhance city services, ",
-        "link": "http://arxiv.org/abs/2606.12225v1",
-        "date": "2026-06-10",
+        "title": "The Invisible Ink of the Android Malware World: A Longitudinal Study on the Usage of Covert Communication Channels",
+        "summary": "Proxies, VPNs and Tor have long helped the privacy community and users in censored regions to fight censorship. However, the same tools can be maliciously exploited by malware and botnets to conceal t",
+        "link": "http://arxiv.org/abs/2606.13107v1",
+        "date": "2026-06-11",
         "authors": [
-          "Stephanie Polczynski",
-          "John D. Hastings",
-          "Varghese Vaidyan"
+          "Zeya Umayya",
+          "Manan Aggarwal",
+          "Manan Chugh"
         ]
       }
     ],
-    "updated": "2026-06-11T06:50:49.960273Z"
+    "updated": "2026-06-12T06:43:47.523072Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -279,6 +280,6 @@
         ]
       }
     ],
-    "updated": "2026-06-11T06:50:49.960273Z"
+    "updated": "2026-06-12T06:43:47.523072Z"
   }
 }
