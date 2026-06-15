@@ -3,200 +3,199 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning",
-        "summary": "Retrieval-augmented generation (RAG) has become a standard mechanism for grounding language models in external knowledge, yet conventional retrieval based on lexical or semantic similarity is poorly s",
-        "link": "http://arxiv.org/abs/2606.13680v1",
-        "date": "2026-06-11",
+        "title": "ClinHallu: A Benchmark for Diagnosing Stage-Wise Hallucinations in Medical MLLM Reasoning",
+        "summary": "Building trustworthy medical multimodal large language models (MLLMs) is critical for reliable clinical decision support. Existing medical hallucination benchmarks mainly focus on data collection, but",
+        "link": "http://arxiv.org/abs/2606.14697v1",
+        "date": "2026-06-12",
         "authors": [
-          "Zilin Xiao",
-          "Qi Ma",
-          "Chun-cheng Jason Chen"
+          "Sicheng Yang",
+          "Hangjie Yuan",
+          "Wenjun Zhang"
         ]
       },
       {
-        "title": "Mana: Dexterous Manipulation of Articulated Tools",
-        "summary": "Articulated tool manipulation remains a major challenge in dexterous robotics due to the need to coordinate internal degrees of freedom and contact-rich interactions. While prior work has largely focu",
-        "link": "http://arxiv.org/abs/2606.13677v1",
-        "date": "2026-06-11",
+        "title": "Learning Coordinated Preference for Multi-Objective Multi-Agent Reinforcement Learning",
+        "summary": "Cooperative multi-objective multi-agent reinforcement learning (MOMARL) models team decision making under multiple, potentially conflicting objectives. In this setting, conflicts arise not only across",
+        "link": "http://arxiv.org/abs/2606.14693v1",
+        "date": "2026-06-12",
         "authors": [
-          "Zhao-Heng Yin",
-          "Guanya Shi",
-          "Pieter Abbeel"
+          "Pengxin Wang",
+          "Lihao Guo",
+          "Yi Xie"
         ]
       },
       {
-        "title": "SpatialClaw: Rethinking Action Interface for Agentic Spatial Reasoning",
-        "summary": "Spatial reasoning, the ability to determine where objects are, how they relate, and how they move in 3D, remains a fundamental challenge for vision-language models (VLMs). Tool-augmented agents attemp",
-        "link": "http://arxiv.org/abs/2606.13673v1",
-        "date": "2026-06-11",
+        "title": "Flood and Harvest: The Provable Necessity of Trivia for Generating Valuable Mathematics via the Lens of Language Generation in the Limit",
+        "summary": "AI systems coupled to proof assistants now generate formal mathematics at scale, and the gap between what a checker can verify and what a mathematician would value has become the binding constraint. W",
+        "link": "http://arxiv.org/abs/2606.14688v1",
+        "date": "2026-06-12",
         "authors": [
-          "Seokju Cho",
-          "Ryo Hachiuma",
-          "Abhishek Badki"
+          "Xiaoyu Li",
+          "Andi Han",
+          "Dai Shi"
         ]
       },
       {
-        "title": "Automated reproducibility assessments in the social and behavioral sciences using large language models",
-        "summary": "Reproducibility in the social and behavioral sciences is typically evaluated by independent researchers who reanalyze the original data to assess whether the published findings can be recovered. Howev",
-        "link": "http://arxiv.org/abs/2606.13670v1",
-        "date": "2026-06-11",
+        "title": "CottonLeafVision: An Explainable and Robust Deep Learning Framework for Cotton Leaf Disease Classification",
+        "summary": "Globally, cotton is a highly economically beneficial crop, as the textile industry heavily depends on it. So, the precise identification and detection of cotton leaf disease is crucial for economic st",
+        "link": "http://arxiv.org/abs/2606.14686v1",
+        "date": "2026-06-12",
         "authors": [
-          "Tobias Holtdirk",
-          "Pietro Marcolongo",
-          "Anna Steinberg Schulten"
+          "Rafi Ahamed",
+          "Md. Abir Rahman",
+          "Tasnia Tarannum Roza"
         ]
       },
       {
-        "title": "Agents-K1: Towards Agent-native Knowledge Orchestration",
-        "summary": "Current LLM-based research agents have advanced through agent orchestration, yet largely overlook scientific knowledge orchestration. Existing works often reduce papers to abstracts, surface mentions,",
-        "link": "http://arxiv.org/abs/2606.13669v1",
-        "date": "2026-06-11",
+        "title": "Towards Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows",
+        "summary": "Large language models increasingly serve as execution engines for agentic systems, yet they still consume context through a sequential text interface. This creates a mismatch with modern structured ag",
+        "link": "http://arxiv.org/abs/2606.14672v1",
+        "date": "2026-06-12",
         "authors": [
-          "Zongsheng Cao",
-          "Bihao Zhan",
-          "Jinxin Shi"
+          "Shikun Liu",
+          "Mufei Li",
+          "Dongqi Fu"
         ]
       },
       {
-        "title": "EurekAgent: Agent Environment Engineering is All You Need For Autonomous Scientific Discovery",
-        "summary": "LLM-based agents have shown increasing potential in automating scientific discovery. Given an optimizable metric and an execution environment, they can propose, validate, and iterate scientific soluti",
-        "link": "http://arxiv.org/abs/2606.13662v1",
-        "date": "2026-06-11",
+        "title": "Giving AI a Headache: Acoustic Adversarial Attacks to Computer Vision Applications",
+        "summary": "Artificial Intelligence (AI) is increasingly used to automate a variety of real-world computer vision (CV) applications, such as autonomous vehicle control, facial recognition, and security cameras. R",
+        "link": "http://arxiv.org/abs/2606.14658v1",
+        "date": "2026-06-12",
         "authors": [
-          "Amy Xin",
-          "Jiening Siow",
-          "Junjie Wang"
+          "Nicole Villavicencio-Gardu\u00f1o",
+          "Maksim Ekin Eren",
+          "Milo Prisbrey"
         ]
       },
       {
-        "title": "Before You Think: System 0, AI-Mediated Cognition and Cognitive Colonization",
-        "summary": "This paper examines three recent frameworks for understanding the cognitive and epistemic consequences of artificial intelligence: Tri-System Theory, Thinkframes, and System 0. It argues that while th",
-        "link": "http://arxiv.org/abs/2606.13658v1",
-        "date": "2026-06-11",
+        "title": "Abstracting Cross-Domain Action Sequences into Interpretable Workflows",
+        "summary": "Sequential or time-stamped interaction logs provide objective records of digital application usage, yet their granularity and noise often obscure meaningful insights into people's work. Such insights ",
+        "link": "http://arxiv.org/abs/2606.14654v1",
+        "date": "2026-06-12",
         "authors": [
-          "Marianna Bergamaschi Ganapini",
-          "Massimo Chiriatti",
-          "Enrico Panai"
+          "Gaurav Verma",
+          "Scott Counts"
         ]
       },
       {
-        "title": "SkMTEB: Slovak Massive Text Embedding Benchmark and Model Adaptation",
-        "summary": "We introduce SkMTEB, the first comprehensive MTEB-style text embedding benchmark for Slovak, a low-resource West Slavic language, comprising 31 datasets across 7 task types -- nearly 4$\\times$ the dep",
-        "link": "http://arxiv.org/abs/2606.13647v1",
-        "date": "2026-06-11",
+        "title": "Listening with Attention: Entropy-Guided Explainability for Transformer-Based Audio Models",
+        "summary": "Transformer-based automatic speech recognition (ASR) models such as Whisper are highly accurate, but their predictions remain difficult to interpret. Existing explainable AI (XAI) methods often lack f",
+        "link": "http://arxiv.org/abs/2606.14647v1",
+        "date": "2026-06-12",
         "authors": [
-          "Marek \u0160uppa",
-          "Andrej Ridzik",
-          "Daniel Hl\u00e1dek"
+          "Ravi Ranjan",
+          "Utkarsh Grover",
+          "Xiaomin Lin"
         ]
       }
     ],
-    "updated": "2026-06-14T06:42:50.552134Z"
+    "updated": "2026-06-15T07:22:46.440783Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-06-14T06:42:50.552134Z"
+    "updated": "2026-06-15T07:22:46.440783Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-06-14T06:42:50.552134Z"
+    "updated": "2026-06-15T07:22:46.440783Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-06-14T06:42:50.552134Z"
+    "updated": "2026-06-15T07:22:46.440783Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Beyond Runtime Enforcement: Shield Synthesis as Defensibility Analysis for Adversarial Networks",
-        "summary": "Shielded reinforcement learning is typically presented as a runtime safety mechanism that compiles temporal-logic specifications into automata restricting an agent's actions. We argue this is the wron",
-        "link": "http://arxiv.org/abs/2606.13621v1",
-        "date": "2026-06-11",
+        "title": "When Good Verifiers Go Bad: Self-Improving VLMs Can Regress on New Tasks",
+        "summary": "Verifier-driven self-DPO is a common recipe for self-improving production visual-language models. In this setup, a frozen verifier scores candidate generations, the top- and bottom-scoring candidates ",
+        "link": "http://arxiv.org/abs/2606.14629v1",
+        "date": "2026-06-12",
         "authors": [
-          "Achraf Hsain",
-          "Sultan Almuhammadi"
+          "Jianzhe Lin"
         ]
       },
       {
-        "title": "Beyond the IT Checklist: Engineering a Reasonable Standard of Care for Cyber Safety",
-        "summary": "Current U.S. cyber policy, centered on security, often treats documentation of controls and incident reports as a proxy for safety in the built environment. This paper argues that such an approach is ",
-        "link": "http://arxiv.org/abs/2606.13612v1",
-        "date": "2026-06-11",
+        "title": "Security Threats and Their Impact on Blockchain Interoperability: Identification and Countermeasures",
+        "summary": "Blockchain interoperability enables independent blockchain systems to communicate and exchange assets across heterogeneous networks. However, the lack of comprehensive security mechanisms remains a cr",
+        "link": "http://arxiv.org/abs/2606.14554v1",
+        "date": "2026-06-12",
         "authors": [
-          "Matthew E. Jablonski",
-          "Linton Wells",
-          "Kathryn B. Laskey"
+          "Shawn M. Reynolds",
+          "Hassan Reza"
         ]
       },
       {
-        "title": "Differentially Private Hierarchical Heavy Hitters",
-        "summary": "The task of finding _Hierarchical_ Heavy Hitters (HHH) was introduced by Cormode et al. [VLDB 2003] as a generalisation of the heavy hitter problem. While finding HHH in data streams has been studied ",
-        "link": "http://arxiv.org/abs/2606.13563v1",
-        "date": "2026-06-11",
+        "title": "Detecting Bot Detection: Prevalence, Techniques, and Implications for Web Measurement Research",
+        "summary": "Browser automation frameworks are essential tools for security and privacy research on the web, yet bot detection scripts increasingly probe their artifacts, threatening measurement validity as automa",
+        "link": "http://arxiv.org/abs/2606.14525v1",
+        "date": "2026-06-12",
         "authors": [
-          "Ari Biswas",
-          "Graham Cormode",
-          "Yaron Kanza"
+          "Ralf Gundelach",
+          "Michael M\u00fchlhauser",
+          "Dominik Herrmann"
         ]
       },
       {
-        "title": "Intent-Based Cryptographic API Design for Cryptographic Agility",
-        "summary": "As organizations move toward post-quantum cryptography, they face the major challenge of updating cryptographic algorithms across large, complex software portfolios. However, most cryptographic APIs i",
-        "link": "http://arxiv.org/abs/2606.13445v1",
-        "date": "2026-06-11",
+        "title": "From Shield to Target: Denial-of-Service Attacks on LLM-Based Agent Guardrails",
+        "summary": "LLM-based guardrails have emerged as a highly effective defense against prompt injection and jailbreak attacks in autonomous agents. However, we reveal that the very reasoning and task-following capab",
+        "link": "http://arxiv.org/abs/2606.14517v1",
+        "date": "2026-06-12",
         "authors": [
-          "Navaneeth Rameshan",
-          "Gregoire Messmer"
+          "Yuguang Zhou",
+          "Xunguang Wang",
+          "Pingchuan Ma"
         ]
       },
       {
-        "title": "An Assessment Framework for Application-Level Cryptographic Agility",
-        "summary": "The impending post-quantum transition to new cryptography will require complete replacement of algorithms within all software. The cryptographic APIs used today make this transition challenging becaus",
-        "link": "http://arxiv.org/abs/2606.13425v1",
-        "date": "2026-06-11",
+        "title": "Securing the Future of IoMT in the Post-Quantum Era: An Edge-Native Federated Learning Approach",
+        "summary": "Internet of Medical Things (IoMT) devices operate under strict resource constraints while handling highly sensitive health data, making security and privacy critical concerns. Federated learning (FL) ",
+        "link": "http://arxiv.org/abs/2606.14515v1",
+        "date": "2026-06-12",
         "authors": [
-          "Navaneeth Rameshan",
-          "Gregoire Messmer"
+          "Taym Alshoghri",
+          "Deemah H. Tashman",
+          "Mohammad Reza Gerami"
         ]
       },
       {
-        "title": "Who Pays the Price? Stakeholder-Centric Prompt Injection Benchmarking for Real-world Web Agents",
-        "summary": "Web agents driven by large language models (LLMs) are increasingly deployed in real-world environments, where they operate over untrusted web content and execute actions with direct consequences. This",
-        "link": "http://arxiv.org/abs/2606.13385v1",
-        "date": "2026-06-11",
+        "title": "Breaking TinyML: Why Quantized Neural Networks Need Domain-Specific Security Analysis",
+        "summary": "Most TinyML hardware accelerators focus on supporting Quantized Neural Networks (QNNs) to meet stringent constraints on power consumption and size. Despite this, the security aspects of quantization w",
+        "link": "http://arxiv.org/abs/2606.14427v1",
+        "date": "2026-06-12",
         "authors": [
-          "Zihao Wang",
-          "Yiming Li",
-          "Yutong Wu"
+          "Jacob Huckelberry",
+          "Andrea Mattia Garavagno",
+          "Yuke Zhang"
         ]
       },
       {
-        "title": "Split Tallies: A Discrete Certificate Calculus for Auditing Dynamic Ordered Sets in Constant Memory",
-        "summary": "We study retrospective auditing for dynamic ordered sets maintained by an untrusted party. A passive auditor watches insert, delete, membership, predecessor, successor, min, and max operations, stores",
-        "link": "http://arxiv.org/abs/2606.13272v1",
-        "date": "2026-06-11",
+        "title": "REPOSE: Quantifying the Price of Security in Weakly-Hard Real-Time Cyber-Physical Systems",
+        "summary": "In contemporary IoT edge devices with real-time requirements, security is primarily enforced through design-time parameters associated with security tasks, leading to mechanisms that operate in an \\em",
+        "link": "http://arxiv.org/abs/2606.14395v1",
+        "date": "2026-06-12",
         "authors": [
-          "Faruk Alpay",
-          "Levent Sarioglu"
+          "Vijay Banerjee",
+          "Monowar Hasan"
         ]
       },
       {
-        "title": "The Invisible Ink of the Android Malware World: A Longitudinal Study on the Usage of Covert Communication Channels",
-        "summary": "Proxies, VPNs and Tor have long helped the privacy community and users in censored regions to fight censorship. However, the same tools can be maliciously exploited by malware and botnets to conceal t",
-        "link": "http://arxiv.org/abs/2606.13107v1",
-        "date": "2026-06-11",
+        "title": "AgentCyberRange: Benchmarking Frontier AI Systems in Realistic Cyber Ranges",
+        "summary": "Frontier AI systems are increasingly capable of cybersecurity tasks, including codebase inspection, vulnerability detection, and exploitation. However, evaluating their offensive capabilities remains ",
+        "link": "http://arxiv.org/abs/2606.14295v1",
+        "date": "2026-06-12",
         "authors": [
-          "Zeya Umayya",
-          "Manan Aggarwal",
-          "Manan Chugh"
+          "Fengyu Liu",
+          "Jiarun Dai",
+          "Yihe Fan"
         ]
       }
     ],
-    "updated": "2026-06-14T06:42:50.552134Z"
+    "updated": "2026-06-15T07:22:46.440783Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -280,6 +279,6 @@
         ]
       }
     ],
-    "updated": "2026-06-14T06:42:50.552134Z"
+    "updated": "2026-06-15T07:22:46.440783Z"
   }
 }
