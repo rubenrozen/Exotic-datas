@@ -3,196 +3,196 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "The Importance of Phase in Neural Representations: An Internal Oppenheim-Lim Test of Image Classifiers",
-        "summary": "Oppenheim and Lim (1981) showed that natural images stay recognizable when reconstructed from their Fourier phase alone, while the magnitude carries little of their identity. We ask whether trained im",
-        "link": "http://arxiv.org/abs/2606.17037v1",
-        "date": "2026-06-15",
+        "title": "Visual Verification Enables Inference-time Steering and Autonomous Policy Improvement",
+        "summary": "Robots deployed in the real world should learn from their experience and improve over time. This requires a mechanism of practicing and learning from feedback. In this paper, we propose VERITAS, a gen",
+        "link": "http://arxiv.org/abs/2606.18247v1",
+        "date": "2026-06-16",
         "authors": [
-          "Alper Y\u0131ld\u0131r\u0131m"
+          "Mingtong Zhang",
+          "Dhruv Shah"
         ]
       },
       {
-        "title": "HAMON: Passive Optical Sequence Mixing for Long-Horizon Forecasting",
-        "summary": "Simple linear and frequency-domain models remain surprisingly competitive in long-horizon time-series forecasting, and recent mechanistic evidence suggests that standard forecasting benchmarks may not",
-        "link": "http://arxiv.org/abs/2606.17028v1",
-        "date": "2026-06-15",
+        "title": "ReproRepo: Scaling Reproducibility Audits with GitHub Repository Issues",
+        "summary": "Reproducing research results from papers and released code is central to scientific progress. Existing works have introduced benchmarks to evaluate whether LLM agents can assist with reproducibility, ",
+        "link": "http://arxiv.org/abs/2606.18237v1",
+        "date": "2026-06-16",
         "authors": [
-          "Alper Y\u0131ld\u0131r\u0131m"
+          "Shanda Li",
+          "Qiuhong Anna Wei",
+          "Jingwu Tang"
         ]
       },
       {
-        "title": "FusionRS: A Large-Scale RGB-Infrared Remote Sensing Dataset for Dual-Modal Vision-Language Foundation Models",
-        "summary": "Remote sensing vision-language models have advanced Earth observation understanding, but most existing work remains centered on RGB imagery, leaving the complementary information in infrared data unde",
-        "link": "http://arxiv.org/abs/2606.17020v1",
-        "date": "2026-06-15",
+        "title": "EvolveNav: Proactive Preflection and Self-Evolving Memory for Zero-Shot Object Goal Navigation",
+        "summary": "Zero-Shot Object-Goal Navigation (ZS-OGN) requires embodied agents to explore and locate target objects without any prior training. To this end, recent methods leverage foundation models. But they typ",
+        "link": "http://arxiv.org/abs/2606.18235v1",
+        "date": "2026-06-16",
         "authors": [
-          "Jiaju Han",
-          "Ben Zhang",
-          "Xuemeng Sun"
+          "Qi Chai",
+          "Wenhao Shen",
+          "Nanjie Yao"
         ]
       },
       {
-        "title": "TokenPilot: Cache-Efficient Context Management for LLM Agents",
-        "summary": "As LLM agents are deployed in long-horizon sessions, context accumulation drives up inference costs. Existing approaches utilize text pruning or dynamic memory eviction to minimize token footprints; h",
-        "link": "http://arxiv.org/abs/2606.17016v1",
-        "date": "2026-06-15",
+        "title": "Learning Red Agent Policy from Observations for Neurosymbolic Autonomous Cyber Agents",
+        "summary": "With sophisticated cyber-attacks becoming increasingly prevalent, modern networks require intelligent autonomous cyber-defense agents trained via Reinforcement Learning (RL). These agents employ neuro",
+        "link": "http://arxiv.org/abs/2606.18223v1",
+        "date": "2026-06-16",
         "authors": [
-          "Buqiang Xu",
-          "Zirui Xue",
-          "Dianmou Chen"
+          "Ankita Samaddar",
+          "Sandeep Neema",
+          "Daniel Balasubramanian"
         ]
       },
       {
-        "title": "TuneJury: An Open Metric for Improving Music Generation Preference Alignment",
-        "summary": "We introduce TuneJury, an open, instance-level pairwise reward model for text-to-music that predicts a music preference score from a text prompt and an audio clip. The released checkpoint is trained o",
-        "link": "http://arxiv.org/abs/2606.17006v1",
-        "date": "2026-06-15",
+        "title": "Looped World Models",
+        "summary": "Current world models face a fundamental tension: faithful long-horizon simulation demands deep computation, but deeper models are expensive to deploy and prone to compounding errors. We resolve this b",
+        "link": "http://arxiv.org/abs/2606.18208v1",
+        "date": "2026-06-16",
         "authors": [
-          "Yonghyun Kim",
-          "Junwon Lee",
-          "Haiwen Xia"
+          "Hongyuan Adam Lu",
+          "Z. L. Victor Wei",
+          "Qun Zhang"
         ]
       },
       {
-        "title": "Bayesian Inference and Decision Audits for Public Archives of Frontier AI Evaluations",
-        "summary": "Public AI evaluations are often read as terminal leaderboards, yet the underlying evidence is a selective time series shaped by reporting rules, benchmark revisions, and missingness. Repeated public a",
-        "link": "http://arxiv.org/abs/2606.17005v1",
-        "date": "2026-06-15",
+        "title": "Fixed-Point Reasoners: Stable and Adaptive Deep Looped Transformers",
+        "summary": "Looped architectures provide an inductive bias toward learning step-by-step procedures for tasks that require compositional reasoning. The number of effective layers reached by looping determines the ",
+        "link": "http://arxiv.org/abs/2606.18206v1",
+        "date": "2026-06-16",
         "authors": [
-          "Yanan Long"
+          "Sajad Movahedi",
+          "Vera Milovanovi\u0107",
+          "Shlomo Libo Feigin"
         ]
       },
       {
-        "title": "ActiveSAM: Image-Conditional Class Pruning for Fast and Accurate Open-Vocabulary Segmentation",
-        "summary": "Segment Anything Model 3 (SAM 3) provides a strong frozen backbone for concept-prompted segmentation, but applying it directly to open-vocabulary semantic segmentation (OVSS) is inefficient: full-reso",
-        "link": "http://arxiv.org/abs/2606.16996v1",
-        "date": "2026-06-15",
+        "title": "RubricsTree: Scalable and Evolving Open-Ended Evaluation of Personal Health Agents across Health Memory and Medical Skills",
+        "summary": "The LLM-empowered personal health agents with user health (sensor) metrics have offered a promising pathway to alleviate global disparities in healthcare access. However, large-scale clinical deployme",
+        "link": "http://arxiv.org/abs/2606.18203v1",
+        "date": "2026-06-16",
         "authors": [
-          "Tran Dinh Tien",
-          "Zhiqiang Shen"
+          "Weizhi Zhang",
+          "Zechen Li",
+          "Hamid Palangi"
         ]
       },
       {
-        "title": "When in Doubt, Plan It Out: Committed Small Language Model Deliberation for Reactive Reinforcement Learning",
-        "summary": "Reinforcement Learning (RL) policies often degrade in unfamiliar environments because they lack explicit deliberation. We propose Plan, Align, Commit, Think (PACT), a hybrid architecture that combines",
-        "link": "http://arxiv.org/abs/2606.16995v1",
-        "date": "2026-06-15",
+        "title": "A Red-Team Study of Anthropic Fable 5 & Opus 4.8 Models",
+        "summary": "We evaluate the adversarial robustness of two frontier large language models (LLMs) developed by Anthropic, Fable 5 and Opus 4.8, against four families of automated jailbreak attack across 7 826 harmf",
+        "link": "http://arxiv.org/abs/2606.18193v1",
+        "date": "2026-06-16",
         "authors": [
-          "Nathan Gavenski",
-          "Juarez Monteiro",
-          "Francisco Galuppo"
+          "Nicola Franco"
         ]
       }
     ],
-    "updated": "2026-06-16T07:28:42.856386Z"
+    "updated": "2026-06-17T07:11:48.024544Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-06-16T07:28:42.856386Z"
+    "updated": "2026-06-17T07:11:48.024544Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-06-16T07:28:42.856386Z"
+    "updated": "2026-06-17T07:11:48.024544Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-06-16T07:28:42.856386Z"
+    "updated": "2026-06-17T07:11:48.024544Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Your Privacy My Cloak: Backdoor Attacks on Differentially Private Federated Learning",
-        "summary": "Prior research suggests that differential privacy (DP) inherently enhances the robustness of federated learning (FL) against backdoor attacks. In this paper, we challenge this assumption. Through an e",
-        "link": "http://arxiv.org/abs/2606.17035v1",
-        "date": "2026-06-15",
+        "title": "Learning Red Agent Policy from Observations for Neurosymbolic Autonomous Cyber Agents",
+        "summary": "With sophisticated cyber-attacks becoming increasingly prevalent, modern networks require intelligent autonomous cyber-defense agents trained via Reinforcement Learning (RL). These agents employ neuro",
+        "link": "http://arxiv.org/abs/2606.18223v1",
+        "date": "2026-06-16",
         "authors": [
-          "Xiaolin Li",
-          "Ning Wang",
-          "Ninghui Li"
+          "Ankita Samaddar",
+          "Sandeep Neema",
+          "Daniel Balasubramanian"
         ]
       },
       {
-        "title": "Di5Guise: 5G Privacy with vSIM",
-        "summary": "SIM cards have been the key building block of user authenticationand security in cellular networks. While they are meant to serve as privacy protecting elements in cellular communications, they can be",
-        "link": "http://arxiv.org/abs/2606.16943v1",
-        "date": "2026-06-15",
+        "title": "Gatling: Rapid-Fire Consensus from Parallel Composition",
+        "summary": "Consensus protocols form the core of blockchains and other replicated state machines, ensuring that all correct nodes process the same totally ordered log of input transactions. In fault-free executio",
+        "link": "http://arxiv.org/abs/2606.18220v1",
+        "date": "2026-06-16",
         "authors": [
-          "Shirin Ebadi",
-          "Zach Moolman",
-          "Eric Keller"
+          "Giulia Scaffino",
+          "Max Resnick",
+          "Joachim Neu"
         ]
       },
       {
-        "title": "The Ghosts of Polymarket: When Off-Chain Matches Meet On-Chain Reverts",
-        "summary": "Polymarket has emerged as a prominent prediction market platform and one of the fastest-growing applications in DeFi. To achieve low-latency trading, it adopts a hybrid architecture that matches order",
-        "link": "http://arxiv.org/abs/2606.16852v1",
-        "date": "2026-06-15",
+        "title": "Seeing Is Not Screening: Multimodal Hidden Instruction Attacks on Agent Skill Scanners",
+        "summary": "Agent skills are emerging as an important attack surface in LLM-based systems. Through an empirical study of existing skill scanners, we find that current defenses primarily rely on textual descriptio",
+        "link": "http://arxiv.org/abs/2606.18198v1",
+        "date": "2026-06-16",
         "authors": [
-          "Yiming Shen",
-          "Yuhan Jin",
-          "Shuohan Wu"
+          "Xiaojun Jia",
+          "Jie Liao",
+          "Simeng Qin"
         ]
       },
       {
-        "title": "How Much Can We Trust LLM Search Agents? Measuring Endorsement Vulnerability to Web Content Manipulation",
-        "summary": "Large language model (LLM)-based search agents synthesize open-web content into actionable recommendations on behalf of users, creating a risk that attacker-published pages are transformed into endors",
-        "link": "http://arxiv.org/abs/2606.16821v1",
-        "date": "2026-06-15",
+        "title": "A Red-Team Study of Anthropic Fable 5 & Opus 4.8 Models",
+        "summary": "We evaluate the adversarial robustness of two frontier large language models (LLMs) developed by Anthropic, Fable 5 and Opus 4.8, against four families of automated jailbreak attack across 7 826 harmf",
+        "link": "http://arxiv.org/abs/2606.18193v1",
+        "date": "2026-06-16",
         "authors": [
-          "Yimeng Chen",
-          "Zhe Ren",
-          "Firas Laakom"
+          "Nicola Franco"
         ]
       },
       {
-        "title": "Cross-Silo De-Anonymization Under Local Differential Privacy: Threat Model, Phase Transition, and Coordination Necessity",
-        "summary": "When a person's records appear in k independent data silos, each protected by (epsilon, delta)-differential privacy, standard composition yields a valid (k*epsilon, k*delta)-DP guarantee for the joint",
-        "link": "http://arxiv.org/abs/2606.16763v1",
-        "date": "2026-06-15",
+        "title": "Multi-Source Cybersecurity Logs: An ATT&CK-Labeled Dataset and SLM Evaluation",
+        "summary": "Multi-stage cyberattacks span system, network, and browser logs. Detecting them requires correlating events across all three sources. Machine learning methods can learn these cross-source patterns, bu",
+        "link": "http://arxiv.org/abs/2606.18190v1",
+        "date": "2026-06-16",
         "authors": [
-          "Ziniu Liu",
-          "Aiping Li"
+          "Abir Ashab Niloy",
+          "Ahmed Ryan",
+          "Imamul Hossain Rafi"
         ]
       },
       {
-        "title": "Automated jailbreak attack targeting multiple defense strategies",
-        "summary": "Large language models (LLMs) have demonstrated remarkable capabilities across a wide range of tasks. However, their safety remains a critical concern due to their susceptibility to adversarial prompt-",
-        "link": "http://arxiv.org/abs/2606.16751v1",
-        "date": "2026-06-15",
+        "title": "Evaluating Open-Source LLMs for Multi-Label ATT&CK Technique Classification on CTI Reports",
+        "summary": "Classifying Cyber Threat Intelligence (CTI) using MITRE Adversarial Tactics, Techniques, and Common Knowledge (ATT&CK) is essential for proactive defense, but historically required extensive human eff",
+        "link": "http://arxiv.org/abs/2606.18166v1",
+        "date": "2026-06-16",
         "authors": [
-          "Qi Wang",
-          "Chengcheng Wan",
-          "Weijia He"
+          "Ahmed Ryan",
+          "Saad Sakib Noor",
+          "Md Erfan"
         ]
       },
       {
-        "title": "Robust and Automated Reconfiguration of Byzantine Wide-Area Replication",
-        "summary": "Distributed systems handle adversarial nodes through redundancy, which imposes a significant performance overhead. In blockchain systems, Byzantine fault-tolerant state-machine replication (BFT-SMR) i",
-        "link": "http://arxiv.org/abs/2606.16740v1",
-        "date": "2026-06-15",
+        "title": "Structural Role Injection in Handlebars-Templated LLM Prompts: Triple-Brace Interpolation, Delimiter Family, and the Limits of HTML Auto-Escaping",
+        "summary": "Large language model applications build prompts from templates, and Handlebars is a widely used templating engine and the default prompt-template format in Microsoft Semantic Kernel. Its double-brace ",
+        "link": "http://arxiv.org/abs/2606.18120v1",
+        "date": "2026-06-16",
         "authors": [
-          "Rowdy Chotkan",
-          "Bulat Nasrulin",
-          "Johan Pouwelse"
+          "Mohammadreza Rashidi"
         ]
       },
       {
-        "title": "From Third-Party to First-Party: Measuring and Protecting Against Modern Web Tracking Mechanisms",
-        "summary": "Web user tracking has always been a cat-and-mouse game between privacy-conscious users and trackers. Recently, this conflict has driven a shift from third-party tracking toward first-party tracking (F",
-        "link": "http://arxiv.org/abs/2606.16720v1",
-        "date": "2026-06-15",
+        "title": "Verifiable computations for dynamic encrypted control",
+        "summary": "Encrypted control can preserve the privacy of data and parameters while the necessary computations can be outsourced to a cloud server. To ensure the integrity of the received values from the cloud, i",
+        "link": "http://arxiv.org/abs/2606.18109v1",
+        "date": "2026-06-16",
         "authors": [
-          "Christian B\u00f6ttger",
-          "Tareq Khouja",
-          "Norbert Pohlmann"
+          "Sebastian Schlor",
+          "Frank Allg\u00f6wer"
         ]
       }
     ],
-    "updated": "2026-06-16T07:28:42.856386Z"
+    "updated": "2026-06-17T07:11:48.024544Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -276,6 +276,6 @@
         ]
       }
     ],
-    "updated": "2026-06-16T07:28:42.856386Z"
+    "updated": "2026-06-17T07:11:48.024544Z"
   }
 }
