@@ -1,13 +1,7 @@
 {
-  "eu_avg": 46.4,
+  "eu_avg": 46.7,
   "trend": 0.31,
   "series": [
-    {
-      "date": "2025-08-25",
-      "pct": 76.2,
-      "gasInStorage": 866.4,
-      "trend": 0.25
-    },
     {
       "date": "2025-08-26",
       "pct": 76.5,
@@ -1799,63 +1793,69 @@
     {
       "date": "2026-06-20",
       "pct": 46.4,
-      "gasInStorage": 524.5,
+      "gasInStorage": 524.6,
+      "trend": 0.31
+    },
+    {
+      "date": "2026-06-21",
+      "pct": 46.7,
+      "gasInStorage": 528.1,
       "trend": 0.31
     }
   ],
   "countries": {
     "DE": {
-      "pct": 38.4,
-      "trend": 0.35,
-      "gasInStorage": 94.7
+      "pct": 38.7,
+      "trend": 0.36,
+      "gasInStorage": 95.6
     },
     "FR": {
-      "pct": 47.6,
-      "trend": 0.27,
-      "gasInStorage": 59.0
+      "pct": 47.9,
+      "trend": 0.26,
+      "gasInStorage": 59.3
     },
     "IT": {
-      "pct": 65.0,
-      "trend": 0.32,
-      "gasInStorage": 132.2
+      "pct": 65.3,
+      "trend": 0.33,
+      "gasInStorage": 132.9
     },
     "ES": {
-      "pct": 73.8,
-      "trend": 0.01,
-      "gasInStorage": 26.4
+      "pct": 73.9,
+      "trend": 0.05,
+      "gasInStorage": 26.5
     },
     "NL": {
-      "pct": 23.2,
-      "trend": 0.18,
-      "gasInStorage": 33.4
+      "pct": 23.4,
+      "trend": 0.19,
+      "gasInStorage": 33.6
     },
     "AT": {
-      "pct": 51.6,
-      "trend": 0.39,
-      "gasInStorage": 51.8
+      "pct": 52.0,
+      "trend": 0.41,
+      "gasInStorage": 52.2
     },
     "BE": {
-      "pct": 21.9,
+      "pct": 22.0,
       "trend": 0.18,
       "gasInStorage": 1.7
     },
     "PL": {
-      "pct": 66.3,
+      "pct": 67.0,
       "trend": 0.64,
-      "gasInStorage": 24.4
+      "gasInStorage": 24.7
     },
     "CZ": {
-      "pct": 44.8,
-      "trend": 0.44,
-      "gasInStorage": 20.3
+      "pct": 45.2,
+      "trend": 0.45,
+      "gasInStorage": 20.5
     },
     "HU": {
-      "pct": 48.1,
+      "pct": 48.4,
       "trend": 0.27,
-      "gasInStorage": 32.6
+      "gasInStorage": 32.8
     }
   },
   "alert_threshold": 20.0,
-  "score": 46,
-  "updated": "2026-06-22T07:26:02.493990Z"
+  "score": 47,
+  "updated": "2026-06-23T06:08:59.721047Z"
 }

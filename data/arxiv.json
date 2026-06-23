@@ -3,198 +3,202 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "How Transparent is DiffusionGemma?",
-        "summary": "LLM reasoning transparency is a critical affordance for understanding model decisions, mitigating misuse and misalignment, and debugging surprising model behaviors. However, DiffusionGemma performs a ",
-        "link": "http://arxiv.org/abs/2606.20560v1",
-        "date": "2026-06-18",
+        "title": "CoorDex: Coordinating Body and Hand Priors for Continuous Dexterous Humanoid Loco-Manipulation",
+        "summary": "Humanoid loco-manipulation is often simplified into a stop-and-go process: walking to an object, stopping to manipulate it, and then resuming locomotion. It also commonly relies on low degree-of-freed",
+        "link": "http://arxiv.org/abs/2606.23680v1",
+        "date": "2026-06-22",
         "authors": [
-          "Joshua Engels",
-          "Callum McDougall",
-          "Bilal Chughtai"
+          "Sikai Li",
+          "Shuning Li",
+          "Zhenyu Wei"
         ]
       },
       {
-        "title": "Structuring and Tokenizing Distributed User Interest Context for Generative Recommendation",
-        "summary": "Generative recommendation is an emerging paradigm that has shown promise in industrial recommendation systems, aiming to predict users' next interactions from their historical behaviors. At the core o",
-        "link": "http://arxiv.org/abs/2606.20554v1",
-        "date": "2026-06-18",
+        "title": "Semantic Browsing: Controllable Diversity for Image Generation",
+        "summary": "Modern text-to-image models excel in visual fidelity and prompt adherence. However, this strict adherence comes at the cost of diversity: generated samples tend to collapse into a single visual interp",
+        "link": "http://arxiv.org/abs/2606.23679v1",
+        "date": "2026-06-22",
         "authors": [
-          "Ruizhong Qiu",
-          "Yinglong Xia",
-          "Dongqi Fu"
+          "Sara Dorfman",
+          "Maya Vishnevsky",
+          "Omer Dahary"
         ]
       },
       {
-        "title": "Toward Calibrated Mixture-of-Experts Under Distribution Shift",
-        "summary": "Calibration aligns a model's predictive uncertainty with the frequencies of its empirical outcomes and is important for understanding and trusting reported probabilities. Recent work shows that enforc",
-        "link": "http://arxiv.org/abs/2606.20544v1",
-        "date": "2026-06-18",
+        "title": "AIR: Adaptive Interleaved Reasoning with Code in MLLMs",
+        "summary": "Following the paradigm shift initiated by OpenAI o3, interleaved reasoning with code to enhance multimodal large language models (MLLMs) has become a pivotal research frontier. The existing literature",
+        "link": "http://arxiv.org/abs/2606.23678v1",
+        "date": "2026-06-22",
         "authors": [
-          "Gina Wong",
-          "Drew Prinster",
-          "Suchi Saria"
+          "Cong Han",
+          "Xiaohan Lan",
+          "Haibo Qiu"
         ]
       },
       {
-        "title": "How Do Instructions Shape Speech? Cross-Attention Attribution for Style-Captioned Text-to-Speech",
-        "summary": "Style-captioned text-to-speech systems use natural language to control voice characteristics, but how individual words influence acoustic output remains unclear. Understanding this is critical for dia",
-        "link": "http://arxiv.org/abs/2606.20532v1",
-        "date": "2026-06-18",
+        "title": "Open Problem: Is AdamW Effective Under Heavy-Tailed Noise?",
+        "summary": "AdamW is the de facto optimizer for training large language models (LLMs), yet the theory behind it still lives mostly in finite-variance regimes. This is increasingly unsatisfying, as empirical evide",
+        "link": "http://arxiv.org/abs/2606.23676v1",
+        "date": "2026-06-22",
         "authors": [
-          "Nityanand Mathur",
-          "Hamees Sayed",
-          "Wasim Madha"
+          "Dingzhi Yu",
+          "Hongyi Tao",
+          "Yuanyu Wan"
         ]
       },
       {
-        "title": "LedgerAgent: Structured State for Policy-Adherent Tool-Calling Agents",
-        "summary": "Policy-adherent tool-calling agents in customer-service domains must maintain task states across turns while calling tools and obeying domain policies. Task states consist of relevant facts, identifie",
-        "link": "http://arxiv.org/abs/2606.20529v1",
-        "date": "2026-06-18",
+        "title": "PsyBridge: A Hybrid Intelligent Framework for Multi-Dimensional Mental Health Assessment and Decision Support",
+        "summary": "Mental health assessment commonly relies on isolated screening instruments or data-driven models that often lack interpretability and multi-dimensional integration. Existing approaches frequently focu",
+        "link": "http://arxiv.org/abs/2606.23673v1",
+        "date": "2026-06-22",
         "authors": [
-          "Md Nayem Uddin",
-          "Amir Saeidi",
-          "Eduardo Blanco"
+          "Sunil Wanjari",
+          "Manish Thakre",
+          "Aayushi Asole"
         ]
       },
       {
-        "title": "DeepSWIP: Quotient-WMC Counterfactuals for Neural Probabilistic Logic Programs",
-        "summary": "Neurosymbolic systems such as DeepProbLog combine neural perception with probabilistic logic, but standard inference is associational. Counterfactual reasoning additionally requires a causal semantics",
-        "link": "http://arxiv.org/abs/2606.20526v1",
-        "date": "2026-06-18",
+        "title": "Teaching LLMs String Matching, Backtracking, and Error Recovery to Deduce Bases and Truth Tables for the Combinatorially Exploding Bit Manipulation Puzzles",
+        "summary": "This paper presents our algorithmic innovations for the NVIDIA Nemotron Model Reasoning Challenge, focusing on Bit Manipulation Puzzles. In this task, the objective is to discover a hidden logical rul",
+        "link": "http://arxiv.org/abs/2606.23672v1",
+        "date": "2026-06-22",
         "authors": [
-          "Saimun Habib",
-          "Vaishak Belle",
-          "Fengxiang He"
+          "Prateek Agnihotri",
+          "Sanchit Jain",
+          "Prabhat Agnihotri"
         ]
       },
       {
-        "title": "SARLO-80: Worldwide Slant SAR Language Optic Dataset 80cm",
-        "summary": "Multimodal foundation models have advanced rapidly thanks to large optical benchmarks, but comparable resources for synthetic aperture radar (SAR) remain limited. Existing SAR--optical datasets largel",
-        "link": "http://arxiv.org/abs/2606.20523v1",
-        "date": "2026-06-18",
+        "title": "Tapered Language Models",
+        "summary": "Modern language models, including transformer, recurrent, and memory-based variants, share a common chassis: a stack of identical layers in which parameters are allocated uniformly across depth. This ",
+        "link": "http://arxiv.org/abs/2606.23670v1",
+        "date": "2026-06-22",
         "authors": [
-          "Sol\u00e8ne Debuys\u00e8re",
-          "Nicolas Trouv\u00e9",
-          "Nathan Letheule"
+          "Reza Bayat",
+          "Ali Behrouz",
+          "Aaron Courville"
         ]
       },
       {
-        "title": "Sovereign Execution Brokers: Enforcing Certificate-Bound Authority in Agentic Control Planes",
-        "summary": "Autonomous agents are increasingly connected to cloud, deployment, and data-control workflows, but production mutation authority should not reside inside non-deterministic reasoning processes. Existin",
-        "link": "http://arxiv.org/abs/2606.20520v1",
-        "date": "2026-06-18",
+        "title": "TailorMind: Towards Preference-Aligned Multimodal Content Generation",
+        "summary": "Personalized content systems depend on available UGC and struggle when suitable content is absent, delayed, or costly to create. Although multimodal generators can synthesize content on demand, how to",
+        "link": "http://arxiv.org/abs/2606.23643v1",
+        "date": "2026-06-22",
         "authors": [
-          "Jun He",
-          "Deying Yu"
+          "Hengji Zhou",
+          "Ye Liu",
+          "Yufeng Liu"
         ]
       }
     ],
-    "updated": "2026-06-22T07:26:02.493990Z"
+    "updated": "2026-06-23T06:08:59.721047Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-06-22T07:26:02.493990Z"
+    "updated": "2026-06-23T06:08:59.721047Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-06-22T07:26:02.493990Z"
+    "updated": "2026-06-23T06:08:59.721047Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-06-22T07:26:02.493990Z"
+    "updated": "2026-06-23T06:08:59.721047Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "From Efficiency to Leakage -- Privacy Backdoor in Federated Language Model Fine-Tuning",
-        "summary": "Federated learning (FL) enables multiple parties to collaboratively fine-tune language models for domain-specific tasks without sharing raw data. Since full model fine-tuning is often prohibitively ex",
-        "link": "http://arxiv.org/abs/2606.20553v1",
-        "date": "2026-06-18",
+        "title": "A quantum algorithm for one-shot signatures",
+        "summary": "We provide a pre-obfuscation circuit-level implementation of an efficient one shot signature scheme, which has known applications to delegated signatures, secured token transfer, and publicly verifiab",
+        "link": "http://arxiv.org/abs/2606.23612v1",
+        "date": "2026-06-22",
         "authors": [
-          "Shanghao Shi",
-          "Chaoyu Zhang",
-          "Heng Jin"
+          "Gopikrishnan Muraleedharan",
+          "Minh Thuy Truc Pham",
+          "Vir Pathak"
         ]
       },
       {
-        "title": "Sovereign Execution Brokers: Enforcing Certificate-Bound Authority in Agentic Control Planes",
-        "summary": "Autonomous agents are increasingly connected to cloud, deployment, and data-control workflows, but production mutation authority should not reside inside non-deterministic reasoning processes. Existin",
-        "link": "http://arxiv.org/abs/2606.20520v1",
-        "date": "2026-06-18",
+        "title": "Optimal Small Set Expanders and Their Codes",
+        "summary": "A left-regular bipartite graph $G$ of degree $d$ is called a $(t,\u03b1)$-small-set-expander if every subset $X$ of left vertices of size at most $t$ has at least $\u03b1|X|$ neighbors. Such a graph is an optim",
+        "link": "http://arxiv.org/abs/2606.23579v1",
+        "date": "2026-06-22",
         "authors": [
-          "Jun He",
-          "Deying Yu"
+          "Tristram Bogart",
+          "Marcelo Fiori",
+          "Pedro Raigorodsky"
         ]
       },
       {
-        "title": "Efficient and Sound Probabilistic Verification for AI Agents",
-        "summary": "Securing AI agents that operate in complex digital environments has become a critical need, and runtime monitoring approaches that formulate and enforce policies expressed in a formal language like Da",
-        "link": "http://arxiv.org/abs/2606.20510v1",
-        "date": "2026-06-18",
+        "title": "A Watermark for Vision-Language-Action and World Action Models",
+        "summary": "Vision-language-action (VLA) models and world-action models (WAM) are the generative models now driving general-purpose robot control, turning raw camera input directly into motor commands. They are i",
+        "link": "http://arxiv.org/abs/2606.23574v1",
+        "date": "2026-06-22",
         "authors": [
-          "Alaia Solko-Breslin",
-          "Pramod Kaushik Mudrakarta",
-          "Mihai Christodorescu"
+          "Yule Liu",
+          "Shuai Liu",
+          "Jiaheng Wei"
         ]
       },
       {
-        "title": "Calibration Without Comprehension: Diagnosing the Limits of Fine-Tuning LLMs for Vulnerability Detection in Systems Software",
-        "summary": "Whether LLMs scoring well on vulnerability benchmarks genuinely reason about security or merely pattern-match on contaminated data remains unresolved. We present CWE-Trace, a framework for LLM vulnera",
-        "link": "http://arxiv.org/abs/2606.20502v1",
-        "date": "2026-06-18",
+        "title": "TROPT: An Open Framework for Unifying and Advancing Discrete Text Optimization",
+        "summary": "Discrete text-trigger optimization -- searching for text sequences that, when ingested by a model, steer it toward a specified objective -- underpins model red-teaming (e.g., LLM jailbreaks), as well ",
+        "link": "http://arxiv.org/abs/2606.23496v1",
+        "date": "2026-06-22",
         "authors": [
-          "Arastoo Zibaeirad",
-          "Marco Vieira"
+          "Matan Ben-Tov",
+          "Mahmood Sharif"
         ]
       },
       {
-        "title": "A-COMPASS: Formal Foundations for Anonymity Analysis in Microdata",
-        "summary": "In the information age, one of the leading problems is how to ensure individual's privacy. Depending on the context in which privacy is considered, various data privacy models have emerged. However, t",
-        "link": "http://arxiv.org/abs/2606.20492v1",
-        "date": "2026-06-18",
+        "title": "An Automated Framework for Input Alphabet Construction in Stateful Protocol Implementation Learning",
+        "summary": "As a prevalent analytical technique for stateful protocol implementations, state machine learning suffers from a core bottleneck stemming from handcrafted input alphabets. Manual alphabet definition i",
+        "link": "http://arxiv.org/abs/2606.23464v1",
+        "date": "2026-06-22",
         "authors": [
-          "Tamara Tagliavia",
-          "Silvia Ghilezan"
+          "JiongHan Wang",
+          "WenChao Huang"
         ]
       },
       {
-        "title": "Analyzing Defensive Misdirection Against Model-Guided Automated Attacks on Agentic AI Systems",
-        "summary": "Agentic AI systems increasingly rely on language-model components to interpret instructions, process external data, invoke tools, and coordinate with other agents. These capabilities make prompt-injec",
-        "link": "http://arxiv.org/abs/2606.20470v1",
-        "date": "2026-06-18",
+        "title": "Detecting Malicious Agent Skills in the Wild using Attention",
+        "summary": "LLM agents increasingly load skills, file-based packages of natural-language instructions written by third parties and distributed through marketplaces, that execute with the user's privileges. A sing",
+        "link": "http://arxiv.org/abs/2606.23416v1",
+        "date": "2026-06-22",
         "authors": [
-          "Reza Soosahabi",
-          "Vivek Namsani"
+          "Bacem Etteib",
+          "Daniele Lunghi",
+          "T\u00e9gawend\u00e9 F. Bissyand\u00e9"
         ]
       },
       {
-        "title": "Image Encryption Algorithm Based on Convolutional Neural Networks and Dynamic S-Box Generation",
-        "summary": "The paper proposes a dynamic approach to image encryption, combining the use of Convolutional Neural Networks (CNNs) and classical cryptography to improve the security and flexibility of image encrypt",
-        "link": "http://arxiv.org/abs/2606.20444v1",
-        "date": "2026-06-18",
+        "title": "OptChain: Achieving Optimal Throughput of Permissionless Blockchains",
+        "summary": "We introduce \\textit{OptChain}, a permissionless blockchain state machine replication (SMR) protocol that achieves optimal throughput. We first establish a theoretical upper bound on the throughput of",
+        "link": "http://arxiv.org/abs/2606.23405v1",
+        "date": "2026-06-22",
         "authors": [
-          "Ans Ibrahim",
-          "Fadhil Abbas Fadhil",
-          "Mahameed Reza Feizi Derakhshi"
+          "Chunjiang Che",
+          "Songze Li",
+          "Xuechao Wang"
         ]
       },
       {
-        "title": "Multi-View Decompilation for LLM-Based Malware Classification",
-        "summary": "Malware analysts often inspect compiled binaries through decompiled pseudo-C, when source code is unavailable. Recent work suggests that large language models (LLMs) can assist this process by classif",
-        "link": "http://arxiv.org/abs/2606.20436v1",
-        "date": "2026-06-18",
+        "title": "FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation",
+        "summary": "Device-side Large Language Models (LLMs) have grown explosively, offering stronger privacy and higher availability than their cloud-side counterparts. During LLM inference, both the model weights and ",
+        "link": "http://arxiv.org/abs/2606.23370v1",
+        "date": "2026-06-22",
         "authors": [
-          "Bercan Turkmen",
-          "Vyas Raina"
+          "Yinpeng Wu",
+          "Yitong Chen",
+          "Lixiang Wang"
         ]
       }
     ],
-    "updated": "2026-06-22T07:26:02.493990Z"
+    "updated": "2026-06-23T06:08:59.721047Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -278,6 +282,6 @@
         ]
       }
     ],
-    "updated": "2026-06-22T07:26:02.493990Z"
+    "updated": "2026-06-23T06:08:59.721047Z"
   }
 }
