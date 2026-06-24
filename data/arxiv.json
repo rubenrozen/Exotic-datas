@@ -3,202 +3,201 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "CoorDex: Coordinating Body and Hand Priors for Continuous Dexterous Humanoid Loco-Manipulation",
-        "summary": "Humanoid loco-manipulation is often simplified into a stop-and-go process: walking to an object, stopping to manipulate it, and then resuming locomotion. It also commonly relies on low degree-of-freed",
-        "link": "http://arxiv.org/abs/2606.23680v1",
-        "date": "2026-06-22",
+        "title": "InSight: Self-Guided Skill Acquisition via Steerable VLAs",
+        "summary": "Vision-language-action (VLA) models can learn manipulation skills from demonstrations, but their capabilities are bounded by the skills in the training data. We present InSight, a framework that unloc",
+        "link": "http://arxiv.org/abs/2606.24884v1",
+        "date": "2026-06-23",
         "authors": [
-          "Sikai Li",
-          "Shuning Li",
-          "Zhenyu Wei"
+          "Maggie Wang",
+          "Lars Osterberg",
+          "Stephen Tian"
         ]
       },
       {
-        "title": "Semantic Browsing: Controllable Diversity for Image Generation",
-        "summary": "Modern text-to-image models excel in visual fidelity and prompt adherence. However, this strict adherence comes at the cost of diversity: generated samples tend to collapse into a single visual interp",
-        "link": "http://arxiv.org/abs/2606.23679v1",
-        "date": "2026-06-22",
+        "title": "FLUX3D: High-Fidelity 3D Gaussian Generation with Diffusion-Aligned Sparse Representation",
+        "summary": "Sparse voxel representation has emerged as a scalable foundation for image-to-3D Gaussian Splatting (3DGS) generation, yet current methods struggle to preserve high-frequency visual details of input i",
+        "link": "http://arxiv.org/abs/2606.24874v1",
+        "date": "2026-06-23",
         "authors": [
-          "Sara Dorfman",
-          "Maya Vishnevsky",
-          "Omer Dahary"
+          "Haorui Ji",
+          "Weizhe Liu",
+          "Hongdong Li"
         ]
       },
       {
-        "title": "AIR: Adaptive Interleaved Reasoning with Code in MLLMs",
-        "summary": "Following the paradigm shift initiated by OpenAI o3, interleaved reasoning with code to enhance multimodal large language models (MLLMs) has become a pivotal research frontier. The existing literature",
-        "link": "http://arxiv.org/abs/2606.23678v1",
-        "date": "2026-06-22",
+        "title": "OpenThoughts-Agent: Data Recipes for Agentic Models",
+        "summary": "Agentic language models dramatically expand the applications of AI yet little is publicly known about how to curate training data for broadly capable agents. Existing open efforts such as SWE-Smith, S",
+        "link": "http://arxiv.org/abs/2606.24855v1",
+        "date": "2026-06-23",
         "authors": [
-          "Cong Han",
-          "Xiaohan Lan",
-          "Haibo Qiu"
+          "Negin Raoof",
+          "Richard Zhuang",
+          "Marianna Nezhurina"
         ]
       },
       {
-        "title": "Open Problem: Is AdamW Effective Under Heavy-Tailed Noise?",
-        "summary": "AdamW is the de facto optimizer for training large language models (LLMs), yet the theory behind it still lives mostly in finite-variance regimes. This is increasingly unsatisfying, as empirical evide",
-        "link": "http://arxiv.org/abs/2606.23676v1",
-        "date": "2026-06-22",
+        "title": "It's Complicated: On the Design and Evaluation of AI-Powered AAC Interfaces",
+        "summary": "Artificial intelligence (AI) can enhance what people who use augmentative and alternative communication (AAC) are able to do with their systems. However, evaluating AI-powered AAC interfaces can be di",
+        "link": "http://arxiv.org/abs/2606.24854v1",
+        "date": "2026-06-23",
         "authors": [
-          "Dingzhi Yu",
-          "Hongyi Tao",
-          "Yuanyu Wan"
+          "Blade Frisch",
+          "Will Wade",
+          "Dylan Gaines"
         ]
       },
       {
-        "title": "PsyBridge: A Hybrid Intelligent Framework for Multi-Dimensional Mental Health Assessment and Decision Support",
-        "summary": "Mental health assessment commonly relies on isolated screening instruments or data-driven models that often lack interpretability and multi-dimensional integration. Existing approaches frequently focu",
-        "link": "http://arxiv.org/abs/2606.23673v1",
-        "date": "2026-06-22",
+        "title": "IV-CoT: Implicit Visual Chain-of-Thought for Structure-Aware Text-to-Image Generation",
+        "summary": "Unified multi-modal large language models (MLLMs) have achieved strong text-to-image generation quality, but still struggle with structure-aware prompt following, where object counts, spatial relation",
+        "link": "http://arxiv.org/abs/2606.24849v1",
+        "date": "2026-06-23",
         "authors": [
-          "Sunil Wanjari",
-          "Manish Thakre",
-          "Aayushi Asole"
+          "Zixuan Li",
+          "Haokun Lin",
+          "Yicheng Xiao"
         ]
       },
       {
-        "title": "Teaching LLMs String Matching, Backtracking, and Error Recovery to Deduce Bases and Truth Tables for the Combinatorially Exploding Bit Manipulation Puzzles",
-        "summary": "This paper presents our algorithmic innovations for the NVIDIA Nemotron Model Reasoning Challenge, focusing on Bit Manipulation Puzzles. In this task, the objective is to discover a hidden logical rul",
-        "link": "http://arxiv.org/abs/2606.23672v1",
-        "date": "2026-06-22",
+        "title": "World Models in Pieces: Structural Certification for General Agents",
+        "summary": "In the big-world regime, agents cannot be universally capable and their ability is inevitably specialized across a world model in pieces. Consequently, standard uniform guarantees fail to distinguish ",
+        "link": "http://arxiv.org/abs/2606.24842v1",
+        "date": "2026-06-23",
         "authors": [
-          "Prateek Agnihotri",
-          "Sanchit Jain",
-          "Prabhat Agnihotri"
+          "Yikai Lu",
+          "Yifei Wu",
+          "Xinyu Lu"
         ]
       },
       {
-        "title": "Tapered Language Models",
-        "summary": "Modern language models, including transformer, recurrent, and memory-based variants, share a common chassis: a stack of identical layers in which parameters are allocated uniformly across depth. This ",
-        "link": "http://arxiv.org/abs/2606.23670v1",
-        "date": "2026-06-22",
+        "title": "Matching Tasks to Objectives: Fine-Tuning and Prompt-Tuning Strategies for Encoder-Decoder Pre-trained Language Models",
+        "summary": "Prompt-based learning has emerged as a dominant paradigm in natural language processing. This study explores the impact of diverse pre-training objectives on the performance of encoder-decoder pre-tra",
+        "link": "http://arxiv.org/abs/2606.24841v1",
+        "date": "2026-06-23",
         "authors": [
-          "Reza Bayat",
-          "Ali Behrouz",
-          "Aaron Courville"
+          "Ahmad Pouramini",
+          "Hesham Faili"
         ]
       },
       {
-        "title": "TailorMind: Towards Preference-Aligned Multimodal Content Generation",
-        "summary": "Personalized content systems depend on available UGC and struggle when suitable content is absent, delayed, or costly to create. Although multimodal generators can synthesize content on demand, how to",
-        "link": "http://arxiv.org/abs/2606.23643v1",
-        "date": "2026-06-22",
+        "title": "Grading the Grader: Lessons from Evaluating an Agentic Data Analysis System",
+        "summary": "Agentic data analysis systems produce rich outputs, including code, numerical results, and verbal diagnostics. This makes them more challenging to evaluate than single-turn LLM responses. It is theref",
+        "link": "http://arxiv.org/abs/2606.24839v1",
+        "date": "2026-06-23",
         "authors": [
-          "Hengji Zhou",
-          "Ye Liu",
-          "Yufeng Liu"
+          "Tian Zheng",
+          "Kai-Tai Hsu"
         ]
       }
     ],
-    "updated": "2026-06-23T06:08:59.721047Z"
+    "updated": "2026-06-24T06:08:30.724190Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-06-23T06:08:59.721047Z"
+    "updated": "2026-06-24T06:08:30.724190Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-06-23T06:08:59.721047Z"
+    "updated": "2026-06-24T06:08:30.724190Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-06-23T06:08:59.721047Z"
+    "updated": "2026-06-24T06:08:30.724190Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "A quantum algorithm for one-shot signatures",
-        "summary": "We provide a pre-obfuscation circuit-level implementation of an efficient one shot signature scheme, which has known applications to delegated signatures, secured token transfer, and publicly verifiab",
-        "link": "http://arxiv.org/abs/2606.23612v1",
-        "date": "2026-06-22",
+        "title": "HelpBench: Assessing the Ability of LLMs to Provide Privacy, Safety, and Security Advice",
+        "summary": "This paper introduces HelpBench, a benchmark for assessing whether LLMs are capable of providing accurate help in response to questions about digital privacy, safety, and security. We curated 450 ques",
+        "link": "http://arxiv.org/abs/2606.24819v1",
+        "date": "2026-06-23",
         "authors": [
-          "Gopikrishnan Muraleedharan",
-          "Minh Thuy Truc Pham",
-          "Vir Pathak"
+          "Sarah Meiklejohn",
+          "Sunny Consolvo",
+          "Patrick Gage Kelley"
         ]
       },
       {
-        "title": "Optimal Small Set Expanders and Their Codes",
-        "summary": "A left-regular bipartite graph $G$ of degree $d$ is called a $(t,\u03b1)$-small-set-expander if every subset $X$ of left vertices of size at most $t$ has at least $\u03b1|X|$ neighbors. Such a graph is an optim",
-        "link": "http://arxiv.org/abs/2606.23579v1",
-        "date": "2026-06-22",
+        "title": "Burnyard: Future of Malware Analysis",
+        "summary": "Malware analysis is a critical aspect of modern cybersecurity. The prevailing industry practice, sandboxing, involves executing suspicious binaries within isolated virtual machines in large-scale data",
+        "link": "http://arxiv.org/abs/2606.24778v1",
+        "date": "2026-06-23",
         "authors": [
-          "Tristram Bogart",
-          "Marcelo Fiori",
-          "Pedro Raigorodsky"
+          "Rama Ramana Sharma Parnandi",
+          "Carter Yagemann"
         ]
       },
       {
-        "title": "A Watermark for Vision-Language-Action and World Action Models",
-        "summary": "Vision-language-action (VLA) models and world-action models (WAM) are the generative models now driving general-purpose robot control, turning raw camera input directly into motor commands. They are i",
-        "link": "http://arxiv.org/abs/2606.23574v1",
-        "date": "2026-06-22",
+        "title": "On the Limits of Stretching Quantum Pseudorandomness",
+        "summary": "Pseudorandom states, introduced by Ji, Liu, and Song (CRYPTO '18), are quantum analogues of classical pseudorandom generators. A fundamental property of classical pseudorandom generators is that their",
+        "link": "http://arxiv.org/abs/2606.24736v1",
+        "date": "2026-06-23",
         "authors": [
-          "Yule Liu",
-          "Shuai Liu",
-          "Jiaheng Wei"
+          "Boyang Chen",
+          "Andrea Coladangelo",
+          "Yao-Ting Lin"
         ]
       },
       {
-        "title": "TROPT: An Open Framework for Unifying and Advancing Discrete Text Optimization",
-        "summary": "Discrete text-trigger optimization -- searching for text sequences that, when ingested by a model, steer it toward a specified objective -- underpins model red-teaming (e.g., LLM jailbreaks), as well ",
-        "link": "http://arxiv.org/abs/2606.23496v1",
-        "date": "2026-06-22",
+        "title": "PowerFuzz: Power-Based Black-Box Firmware Fuzzing",
+        "summary": "Fuzzing is widely used for software and hardware verification, offering an effective alternative to random testing. While gray-box fuzzers benefit from full visibility into the system under test and c",
+        "link": "http://arxiv.org/abs/2606.24692v1",
+        "date": "2026-06-23",
         "authors": [
-          "Matan Ben-Tov",
-          "Mahmood Sharif"
+          "Dakshina Tharindu",
+          "Sahan Sanjaya",
+          "Philip Baptist"
         ]
       },
       {
-        "title": "An Automated Framework for Input Alphabet Construction in Stateful Protocol Implementation Learning",
-        "summary": "As a prevalent analytical technique for stateful protocol implementations, state machine learning suffers from a core bottleneck stemming from handcrafted input alphabets. Manual alphabet definition i",
-        "link": "http://arxiv.org/abs/2606.23464v1",
-        "date": "2026-06-22",
+        "title": "FirmCure:Towards Autonomous and Adaptive Rehosting of Linux-Based Firmware",
+        "summary": "Full-system rehosting plays a critical role in the security analysis of Linux-based firmware. It matches commonly deployed firmware with sufficient background knowledge. However, for custom devices, e",
+        "link": "http://arxiv.org/abs/2606.24549v1",
+        "date": "2026-06-23",
         "authors": [
-          "JiongHan Wang",
-          "WenChao Huang"
+          "Chuan Hong",
+          "Zheng Zhang",
+          "Lei Zhou"
         ]
       },
       {
-        "title": "Detecting Malicious Agent Skills in the Wild using Attention",
-        "summary": "LLM agents increasingly load skills, file-based packages of natural-language instructions written by third parties and distributed through marketplaces, that execute with the user's privileges. A sing",
-        "link": "http://arxiv.org/abs/2606.23416v1",
-        "date": "2026-06-22",
+        "title": "Red-Teaming the Agentic Red-Team",
+        "summary": "The use of agentic systems to perform offensive security operations has moved from a theoretical possibility to a commoditized capability. However, while the community has focused on creating more and",
+        "link": "http://arxiv.org/abs/2606.24496v1",
+        "date": "2026-06-23",
         "authors": [
-          "Bacem Etteib",
-          "Daniele Lunghi",
-          "T\u00e9gawend\u00e9 F. Bissyand\u00e9"
+          "Dario Pasquini",
+          "Michal Bazyli",
+          "Taras Fedynyshyn"
         ]
       },
       {
-        "title": "OptChain: Achieving Optimal Throughput of Permissionless Blockchains",
-        "summary": "We introduce \\textit{OptChain}, a permissionless blockchain state machine replication (SMR) protocol that achieves optimal throughput. We first establish a theoretical upper bound on the throughput of",
-        "link": "http://arxiv.org/abs/2606.23405v1",
-        "date": "2026-06-22",
+        "title": "Discrepancy for Random Linear Codes",
+        "summary": "We prove that random linear codes have nearly optimal discrepancy properties in a broad range of regimes. Our main results are two general theorems: one controlling all translates of a fixed test, and",
+        "link": "http://arxiv.org/abs/2606.24471v1",
+        "date": "2026-06-23",
         "authors": [
-          "Chunjiang Che",
-          "Songze Li",
-          "Xuechao Wang"
+          "Dean Doron",
+          "Tal Leonov",
+          "Jonathan Mosheiff"
         ]
       },
       {
-        "title": "FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation",
-        "summary": "Device-side Large Language Models (LLMs) have grown explosively, offering stronger privacy and higher availability than their cloud-side counterparts. During LLM inference, both the model weights and ",
-        "link": "http://arxiv.org/abs/2606.23370v1",
-        "date": "2026-06-22",
+        "title": "A Comparison of Kubernetes Compliance Standards and Configuration Scanners",
+        "summary": "Kubernetes has become the industry standard for orchestrating containers in microservice-based software architectures. While several hardening guidelines and scanning tools for securing Kubernetes clu",
+        "link": "http://arxiv.org/abs/2606.24438v1",
+        "date": "2026-06-23",
         "authors": [
-          "Yinpeng Wu",
-          "Yitong Chen",
-          "Lixiang Wang"
+          "Michael Krieger",
+          "Markus Gierlinger",
+          "Farooq Shaikh"
         ]
       }
     ],
-    "updated": "2026-06-23T06:08:59.721047Z"
+    "updated": "2026-06-24T06:08:30.724190Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -282,6 +281,6 @@
         ]
       }
     ],
-    "updated": "2026-06-23T06:08:59.721047Z"
+    "updated": "2026-06-24T06:08:30.724190Z"
   }
 }
