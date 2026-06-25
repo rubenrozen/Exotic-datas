@@ -3,201 +3,199 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "InSight: Self-Guided Skill Acquisition via Steerable VLAs",
-        "summary": "Vision-language-action (VLA) models can learn manipulation skills from demonstrations, but their capabilities are bounded by the skills in the training data. We present InSight, a framework that unloc",
-        "link": "http://arxiv.org/abs/2606.24884v1",
-        "date": "2026-06-23",
+        "title": "Learning Action Priors for Cross-embodiment Robot Manipulation",
+        "summary": "Most Vision-Language-Action (VLA) models build on a Vision-Language Model (VLM) backbone by attaching an action module and optimizing the full policy jointly. This design inherits strong visual and li",
+        "link": "http://arxiv.org/abs/2606.26095v1",
+        "date": "2026-06-24",
         "authors": [
-          "Maggie Wang",
-          "Lars Osterberg",
-          "Stephen Tian"
+          "Dong Jing",
+          "Tianqi Zhang",
+          "Jiaqi Liu"
         ]
       },
       {
-        "title": "FLUX3D: High-Fidelity 3D Gaussian Generation with Diffusion-Aligned Sparse Representation",
-        "summary": "Sparse voxel representation has emerged as a scalable foundation for image-to-3D Gaussian Splatting (3DGS) generation, yet current methods struggle to preserve high-frequency visual details of input i",
-        "link": "http://arxiv.org/abs/2606.24874v1",
-        "date": "2026-06-23",
+        "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
+        "summary": "On-policy self-distillation achieves strong pass@1 accuracy by using a single model as both teacher and student, with the teacher conditioned on a correct demonstration to provide dense token-level fe",
+        "link": "http://arxiv.org/abs/2606.26091v1",
+        "date": "2026-06-24",
         "authors": [
-          "Haorui Ji",
-          "Weizhe Liu",
-          "Hongdong Li"
+          "Andrei Liviu Nicolicioiu",
+          "Mohammad Pezeshki",
+          "Aaron Courville"
         ]
       },
       {
-        "title": "OpenThoughts-Agent: Data Recipes for Agentic Models",
-        "summary": "Agentic language models dramatically expand the applications of AI yet little is publicly known about how to curate training data for broadly capable agents. Existing open efforts such as SWE-Smith, S",
-        "link": "http://arxiv.org/abs/2606.24855v1",
-        "date": "2026-06-23",
+        "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
+        "summary": "Process reward models enable fine-grained, step-level evaluation of LLMs, yet building them for agentic settings remains prohibitively difficult: long-horizon interactions, irreversible actions, and s",
+        "link": "http://arxiv.org/abs/2606.26080v1",
+        "date": "2026-06-24",
         "authors": [
-          "Negin Raoof",
-          "Richard Zhuang",
-          "Marianna Nezhurina"
+          "Changdae Oh",
+          "Wendi Li",
+          "Seongheon Park"
         ]
       },
       {
-        "title": "It's Complicated: On the Design and Evaluation of AI-Powered AAC Interfaces",
-        "summary": "Artificial intelligence (AI) can enhance what people who use augmentative and alternative communication (AAC) are able to do with their systems. However, evaluating AI-powered AAC interfaces can be di",
-        "link": "http://arxiv.org/abs/2606.24854v1",
-        "date": "2026-06-23",
+        "title": "A cross-process welding penetration status prediction algorithm based on unsupervised domain adaptation in laser and TIG welding",
+        "summary": "Supervised deep learning has been widely used for weld penetration state classification; however, its performance often degrades significantly under domain shift, such as when transferring models betw",
+        "link": "http://arxiv.org/abs/2606.26078v1",
+        "date": "2026-06-24",
         "authors": [
-          "Blade Frisch",
-          "Will Wade",
-          "Dylan Gaines"
+          "Sen Li",
+          "Haichao Cui",
+          "Chendong Shao"
         ]
       },
       {
-        "title": "IV-CoT: Implicit Visual Chain-of-Thought for Structure-Aware Text-to-Image Generation",
-        "summary": "Unified multi-modal large language models (MLLMs) have achieved strong text-to-image generation quality, but still struggle with structure-aware prompt following, where object counts, spatial relation",
-        "link": "http://arxiv.org/abs/2606.24849v1",
-        "date": "2026-06-23",
+        "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
+        "summary": "A central goal of safety research is determining whether a model is misaligned. Prior work has largely focused on detecting concerning behavior. But behavior alone does not establish misalignment: a c",
+        "link": "http://arxiv.org/abs/2606.26071v1",
+        "date": "2026-06-24",
         "authors": [
-          "Zixuan Li",
-          "Haokun Lin",
-          "Yicheng Xiao"
+          "Aditya Singh",
+          "Gerson Kroiz",
+          "Senthooran Rajamanoharan"
         ]
       },
       {
-        "title": "World Models in Pieces: Structural Certification for General Agents",
-        "summary": "In the big-world regime, agents cannot be universally capable and their ability is inevitably specialized across a world model in pieces. Consequently, standard uniform guarantees fail to distinguish ",
-        "link": "http://arxiv.org/abs/2606.24842v1",
-        "date": "2026-06-23",
+        "title": "A welding penetration prediction model for laser welding process based on self-supervised learning using physics-informed neural networks",
+        "summary": "The laser welding full-penetration is of critical importance, as it constitutes one of the fundamental factors in achieving defect-free welded joints. Accurate prediction of the penetration state is t",
+        "link": "http://arxiv.org/abs/2606.26059v1",
+        "date": "2026-06-24",
         "authors": [
-          "Yikai Lu",
-          "Yifei Wu",
-          "Xinyu Lu"
+          "Sen Li",
+          "Xiaoying Liu",
+          "Xiaojian Xu"
         ]
       },
       {
-        "title": "Matching Tasks to Objectives: Fine-Tuning and Prompt-Tuning Strategies for Encoder-Decoder Pre-trained Language Models",
-        "summary": "Prompt-based learning has emerged as a dominant paradigm in natural language processing. This study explores the impact of diverse pre-training objectives on the performance of encoder-decoder pre-tra",
-        "link": "http://arxiv.org/abs/2606.24841v1",
-        "date": "2026-06-23",
+        "title": "The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems",
+        "summary": "AI agents are granted access to tools, APIs, and other infrastructure, making them active principals in those systems. The dominant approach places controls inside the agent's own runtime: system prom",
+        "link": "http://arxiv.org/abs/2606.26057v1",
+        "date": "2026-06-24",
         "authors": [
-          "Ahmad Pouramini",
-          "Hesham Faili"
+          "Seth Dobrin",
+          "\u0141ukasz Chmiel"
         ]
       },
       {
-        "title": "Grading the Grader: Lessons from Evaluating an Agentic Data Analysis System",
-        "summary": "Agentic data analysis systems produce rich outputs, including code, numerical results, and verbal diagnostics. This makes them more challenging to evaluate than single-turn LLM responses. It is theref",
-        "link": "http://arxiv.org/abs/2606.24839v1",
-        "date": "2026-06-23",
+        "title": "Natural Ungrokking: Asymmetric Control of Which Rules Survive Pretraining",
+        "summary": "Midway through an ordinary pretraining run, a small language model learns the pronoun-gender rule: cued with a girl's name (\"Sue cried because\"), it resolves the next pronoun to she, generalizing to h",
+        "link": "http://arxiv.org/abs/2606.26050v1",
+        "date": "2026-06-24",
         "authors": [
-          "Tian Zheng",
-          "Kai-Tai Hsu"
+          "Juliana Li",
+          "Diya Sreedhar"
         ]
       }
     ],
-    "updated": "2026-06-24T06:08:30.724190Z"
+    "updated": "2026-06-25T06:09:00.826071Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-06-24T06:08:30.724190Z"
+    "updated": "2026-06-25T06:09:00.826071Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-06-24T06:08:30.724190Z"
+    "updated": "2026-06-25T06:09:00.826071Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-06-24T06:08:30.724190Z"
+    "updated": "2026-06-25T06:09:00.826071Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "HelpBench: Assessing the Ability of LLMs to Provide Privacy, Safety, and Security Advice",
-        "summary": "This paper introduces HelpBench, a benchmark for assessing whether LLMs are capable of providing accurate help in response to questions about digital privacy, safety, and security. We curated 450 ques",
-        "link": "http://arxiv.org/abs/2606.24819v1",
-        "date": "2026-06-23",
+        "title": "The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems",
+        "summary": "AI agents are granted access to tools, APIs, and other infrastructure, making them active principals in those systems. The dominant approach places controls inside the agent's own runtime: system prom",
+        "link": "http://arxiv.org/abs/2606.26057v1",
+        "date": "2026-06-24",
         "authors": [
-          "Sarah Meiklejohn",
-          "Sunny Consolvo",
-          "Patrick Gage Kelley"
+          "Seth Dobrin",
+          "\u0141ukasz Chmiel"
         ]
       },
       {
-        "title": "Burnyard: Future of Malware Analysis",
-        "summary": "Malware analysis is a critical aspect of modern cybersecurity. The prevailing industry practice, sandboxing, involves executing suspicious binaries within isolated virtual machines in large-scale data",
-        "link": "http://arxiv.org/abs/2606.24778v1",
-        "date": "2026-06-23",
+        "title": "Detect, Unlearn, Restore: Defending Text Summarization Models Against Data Poisoning",
+        "summary": "Training-time data poisoning during fine-tuning poses a significant threat to large language models (LLMs) deployed for abstractive text summarization, where small task-specific datasets exert disprop",
+        "link": "http://arxiv.org/abs/2606.26036v1",
+        "date": "2026-06-24",
         "authors": [
-          "Rama Ramana Sharma Parnandi",
-          "Carter Yagemann"
+          "Poojitha Thota",
+          "Shirin Nilizadeh"
         ]
       },
       {
-        "title": "On the Limits of Stretching Quantum Pseudorandomness",
-        "summary": "Pseudorandom states, introduced by Ji, Liu, and Song (CRYPTO '18), are quantum analogues of classical pseudorandom generators. A fundamental property of classical pseudorandom generators is that their",
-        "link": "http://arxiv.org/abs/2606.24736v1",
-        "date": "2026-06-23",
+        "title": "Can Trustless Agents Be Trusted? An Empirical Study of the ERC-8004 Decentralized AI Agent Ecosystem",
+        "summary": "As autonomous AI agents increasingly transact across organizational boundaries, a fundamental trust challenge emerges: how can an agent assess whether an unknown counterpart is trustworthy? The ERC-80",
+        "link": "http://arxiv.org/abs/2606.26028v1",
+        "date": "2026-06-24",
         "authors": [
-          "Boyang Chen",
-          "Andrea Coladangelo",
-          "Yao-Ting Lin"
+          "Xihan Xiong",
+          "Zelin Li",
+          "Wei Wei"
         ]
       },
       {
-        "title": "PowerFuzz: Power-Based Black-Box Firmware Fuzzing",
-        "summary": "Fuzzing is widely used for software and hardware verification, offering an effective alternative to random testing. While gray-box fuzzers benefit from full visibility into the system under test and c",
-        "link": "http://arxiv.org/abs/2606.24692v1",
-        "date": "2026-06-23",
+        "title": "Privacy Vulnerabilities of Attention Layers in Tabular Foundation Models and Protection of High-Risk Queries",
+        "summary": "Tabular foundation models are commonly assumed to present limited privacy concerns as they are often pre-trained on large collections of synthetic data. However, these models leverage in-context learn",
+        "link": "http://arxiv.org/abs/2606.26021v1",
+        "date": "2026-06-24",
         "authors": [
-          "Dakshina Tharindu",
-          "Sahan Sanjaya",
-          "Philip Baptist"
+          "T\u00e2nia Carvalho",
+          "Maxime Cordy"
         ]
       },
       {
-        "title": "FirmCure:Towards Autonomous and Adaptive Rehosting of Linux-Based Firmware",
-        "summary": "Full-system rehosting plays a critical role in the security analysis of Linux-based firmware. It matches commonly deployed firmware with sufficient background knowledge. However, for custom devices, e",
-        "link": "http://arxiv.org/abs/2606.24549v1",
-        "date": "2026-06-23",
+        "title": "BlowLive: Blow-Based Multi-Factor Biometrics with Liveness Detection and Revocability",
+        "summary": "Biometric authentication systems are increasingly deployed in security-critical applications, yet existing physiological and behavioral biometrics suffer from fundamental limitations: 1) they are vuln",
+        "link": "http://arxiv.org/abs/2606.25998v1",
+        "date": "2026-06-24",
         "authors": [
-          "Chuan Hong",
-          "Zheng Zhang",
-          "Lei Zhou"
+          "Eyasu Getahun Chekole",
+          "Howard Halim",
+          "Dani\u00ebl Reijsbergen"
         ]
       },
       {
-        "title": "Red-Teaming the Agentic Red-Team",
-        "summary": "The use of agentic systems to perform offensive security operations has moved from a theoretical possibility to a commoditized capability. However, while the community has focused on creating more and",
-        "link": "http://arxiv.org/abs/2606.24496v1",
-        "date": "2026-06-23",
+        "title": "Do (Not) Tell Me About My Insecurities: Assessing the Status Quo of Coordinated Vulnerability Disclosure in Germany Amid New EU Cybersecurity Regulations",
+        "summary": "In our increasingly interconnected world, good IT security practices are necessary to prevent vulnerabilities and data breaches. Providing security contacts, e.g., via Coordinated Vulnerability Disclo",
+        "link": "http://arxiv.org/abs/2606.25950v1",
+        "date": "2026-06-24",
         "authors": [
-          "Dario Pasquini",
-          "Michal Bazyli",
-          "Taras Fedynyshyn"
+          "Sebastian Neef",
+          "Cenk Schlunke",
+          "Anne Hennig"
         ]
       },
       {
-        "title": "Discrepancy for Random Linear Codes",
-        "summary": "We prove that random linear codes have nearly optimal discrepancy properties in a broad range of regimes. Our main results are two general theorems: one controlling all translates of a fixed test, and",
-        "link": "http://arxiv.org/abs/2606.24471v1",
-        "date": "2026-06-23",
+        "title": "A Tattered Cloak of Invisibility: Measuring Anonymity Loss in Railgun on Ethereum",
+        "summary": "From a user's perspective, perhaps the most significant difference between traditional banking services and widely used blockchain-based financial systems is that, in the latter, transactions and, eit",
+        "link": "http://arxiv.org/abs/2606.25926v1",
+        "date": "2026-06-24",
         "authors": [
-          "Dean Doron",
-          "Tal Leonov",
-          "Jonathan Mosheiff"
+          "Kanan Huseynov",
+          "Ali Shahzaib",
+          "Istv\u00e1n Andr\u00e1s Seres"
         ]
       },
       {
-        "title": "A Comparison of Kubernetes Compliance Standards and Configuration Scanners",
-        "summary": "Kubernetes has become the industry standard for orchestrating containers in microservice-based software architectures. While several hardening guidelines and scanning tools for securing Kubernetes clu",
-        "link": "http://arxiv.org/abs/2606.24438v1",
-        "date": "2026-06-23",
+        "title": "The Web4 Agent Economy: A Large-Scale Empirical Study of the Landscape, Challenges, and Opportunities",
+        "summary": "The Internet is transitioning from Web3 toward Web4, where autonomous agents serve as independent economic actors. These agents can now hold crypto wallets, execute on-chain trades, and pay for extern",
+        "link": "http://arxiv.org/abs/2606.25876v1",
+        "date": "2026-06-24",
         "authors": [
-          "Michael Krieger",
-          "Markus Gierlinger",
-          "Farooq Shaikh"
+          "Yuhan Jin",
+          "Shuohan Wu",
+          "Chong Chen"
         ]
       }
     ],
-    "updated": "2026-06-24T06:08:30.724190Z"
+    "updated": "2026-06-25T06:09:00.826071Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -281,6 +279,6 @@
         ]
       }
     ],
-    "updated": "2026-06-24T06:08:30.724190Z"
+    "updated": "2026-06-25T06:09:00.826071Z"
   }
 }
