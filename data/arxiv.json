@@ -3,199 +3,194 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Learning Action Priors for Cross-embodiment Robot Manipulation",
-        "summary": "Most Vision-Language-Action (VLA) models build on a Vision-Language Model (VLM) backbone by attaching an action module and optimizing the full policy jointly. This design inherits strong visual and li",
-        "link": "http://arxiv.org/abs/2606.26095v1",
-        "date": "2026-06-24",
+        "title": "Autoregressive Boltzmann Generators",
+        "summary": "Efficient sampling of molecular systems at thermodynamic equilibrium is a hallmark challenge in statistical physics. This challenge has driven the development of Boltzmann Generators (BGs), which allo",
+        "link": "http://arxiv.org/abs/2606.27361v1",
+        "date": "2026-06-25",
         "authors": [
-          "Dong Jing",
-          "Tianqi Zhang",
-          "Jiaqi Liu"
+          "Danyal Rehman",
+          "Charlie B. Tan",
+          "Yoshua Bengio"
         ]
       },
       {
-        "title": "On-Policy Self-Distillation with Sampled Demonstrations Reduces Output Diversity",
-        "summary": "On-policy self-distillation achieves strong pass@1 accuracy by using a single model as both teacher and student, with the teacher conditioned on a correct demonstration to provide dense token-level fe",
-        "link": "http://arxiv.org/abs/2606.26091v1",
-        "date": "2026-06-24",
+        "title": "Error-Conditioned Neural Solvers",
+        "summary": "Neural surrogate models offer fast approximate mappings from PDE parameters to solutions, but they typically treat solving as a purely statistical task: once trained, they struggle to correct their ow",
+        "link": "http://arxiv.org/abs/2606.27354v1",
+        "date": "2026-06-25",
         "authors": [
-          "Andrei Liviu Nicolicioiu",
-          "Mohammad Pezeshki",
-          "Aaron Courville"
+          "Haina Jiang",
+          "Liam Wang",
+          "Peng-Chen Chen"
         ]
       },
       {
-        "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
-        "summary": "Process reward models enable fine-grained, step-level evaluation of LLMs, yet building them for agentic settings remains prohibitively difficult: long-horizon interactions, irreversible actions, and s",
-        "link": "http://arxiv.org/abs/2606.26080v1",
-        "date": "2026-06-24",
+        "title": "Understanding Domain-Aware Distribution Alignment in Budgeted Entity Matching",
+        "summary": "Entity Matching (EM) is a core operation in the data integration pipeline, where records from different sources are compared to determine whether they refer to the same real-world entity. Recent work ",
+        "link": "http://arxiv.org/abs/2606.27342v1",
+        "date": "2026-06-25",
         "authors": [
-          "Changdae Oh",
-          "Wendi Li",
-          "Seongheon Park"
+          "Nicholas Pulsone",
+          "Gregory Goren",
+          "Roee Shraga"
         ]
       },
       {
-        "title": "A cross-process welding penetration status prediction algorithm based on unsupervised domain adaptation in laser and TIG welding",
-        "summary": "Supervised deep learning has been widely used for weld penetration state classification; however, its performance often degrades significantly under domain shift, such as when transferring models betw",
-        "link": "http://arxiv.org/abs/2606.26078v1",
-        "date": "2026-06-24",
+        "title": "Language-Based Digital Twins for Elderly Cognitive Assistance",
+        "summary": "Digital twins have emerged as a promising paradigm for personalized healthcare, enabling modeling of individual behavior and health trajectories. In cognitive health, early detection of Mild Cognitive",
+        "link": "http://arxiv.org/abs/2606.27334v1",
+        "date": "2026-06-25",
         "authors": [
-          "Sen Li",
-          "Haichao Cui",
-          "Chendong Shao"
+          "Mohammad Mehdi Hosseini",
+          "Mohammad H. Mahoor",
+          "Hiroko H. Dodge"
         ]
       },
       {
-        "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
-        "summary": "A central goal of safety research is determining whether a model is misaligned. Prior work has largely focused on detecting concerning behavior. But behavior alone does not establish misalignment: a c",
-        "link": "http://arxiv.org/abs/2606.26071v1",
-        "date": "2026-06-24",
+        "title": "Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning",
+        "summary": "Multimodal web agents can assist humans in operating repetitive GUI tasks, where effective task planning is essential for decomposing complex tasks into executable actions. While small open source MLL",
+        "link": "http://arxiv.org/abs/2606.27330v1",
+        "date": "2026-06-25",
         "authors": [
-          "Aditya Singh",
-          "Gerson Kroiz",
-          "Senthooran Rajamanoharan"
+          "Tianyi Men",
+          "Zhuoran Jin",
+          "Pengfei Cao"
         ]
       },
       {
-        "title": "A welding penetration prediction model for laser welding process based on self-supervised learning using physics-informed neural networks",
-        "summary": "The laser welding full-penetration is of critical importance, as it constitutes one of the fundamental factors in achieving defect-free welded joints. Accurate prediction of the penetration state is t",
-        "link": "http://arxiv.org/abs/2606.26059v1",
-        "date": "2026-06-24",
+        "title": "Beyond the Hard Budget: Sparsity Regularizers for More Interpretable Top-k Sparse Autoencoders",
+        "summary": "Sparse autoencoders (SAEs) have become a leading tool for interpreting the representations of vision foundation models, decomposing their polysemantic activations into a larger set of sparse, more mon",
+        "link": "http://arxiv.org/abs/2606.27321v1",
+        "date": "2026-06-25",
         "authors": [
-          "Sen Li",
-          "Xiaoying Liu",
-          "Xiaojian Xu"
+          "Nathana\u00ebl Jacquier",
+          "Maria Vakalopoulou",
+          "Mahdi S. Hosseini"
         ]
       },
       {
-        "title": "The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems",
-        "summary": "AI agents are granted access to tools, APIs, and other infrastructure, making them active principals in those systems. The dominant approach places controls inside the agent's own runtime: system prom",
-        "link": "http://arxiv.org/abs/2606.26057v1",
-        "date": "2026-06-24",
+        "title": "AI Healthcare Chatbots as Information Infrastructure: A Large-Scale Study of User-Reported Breakdowns",
+        "summary": "AI healthcare chatbots are increasingly used to support health information seeking and self-management, yet their performance and impact on users remains to be studied. This study examines over 15,000",
+        "link": "http://arxiv.org/abs/2606.27302v1",
+        "date": "2026-06-25",
         "authors": [
-          "Seth Dobrin",
-          "\u0141ukasz Chmiel"
+          "Muhammad Hassan",
+          "Ramazan Yener",
+          "Ece Gumusel"
         ]
       },
       {
-        "title": "Natural Ungrokking: Asymmetric Control of Which Rules Survive Pretraining",
-        "summary": "Midway through an ordinary pretraining run, a small language model learns the pronoun-gender rule: cued with a girl's name (\"Sue cried because\"), it resolves the next pronoun to she, generalizing to h",
-        "link": "http://arxiv.org/abs/2606.26050v1",
-        "date": "2026-06-24",
+        "title": "When Does Combining Language Models Help? A Co-Failure Ceiling on Routing, Voting, and Mixture-of-Agents Across 67 Frontier Models",
+        "summary": "Multi-model LLM systems such as routing, voting, cascades, fusion, and mixture-of-agents are used to beat single-model accuracy. We show that their gain is capped by a quantity the field rarely report",
+        "link": "http://arxiv.org/abs/2606.27288v1",
+        "date": "2026-06-25",
         "authors": [
-          "Juliana Li",
-          "Diya Sreedhar"
+          "Josef Chen"
         ]
       }
     ],
-    "updated": "2026-06-25T06:09:00.826071Z"
+    "updated": "2026-06-26T06:12:39.033384Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-06-25T06:09:00.826071Z"
+    "updated": "2026-06-26T06:12:39.033384Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-06-25T06:09:00.826071Z"
+    "updated": "2026-06-26T06:12:39.033384Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-06-25T06:09:00.826071Z"
+    "updated": "2026-06-26T06:12:39.033384Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems",
-        "summary": "AI agents are granted access to tools, APIs, and other infrastructure, making them active principals in those systems. The dominant approach places controls inside the agent's own runtime: system prom",
-        "link": "http://arxiv.org/abs/2606.26057v1",
-        "date": "2026-06-24",
+        "title": "Tilikum: Transaction Fair Ordering on a DAG without Weak Edges",
+        "summary": "Decentralized Finance (DeFi) applications rely heavily on the order in which transactions are executed, making them susceptible to reordering attacks that enable adversaries to extract Blockchain Extr",
+        "link": "http://arxiv.org/abs/2606.27250v1",
+        "date": "2026-06-25",
         "authors": [
-          "Seth Dobrin",
-          "\u0141ukasz Chmiel"
+          "Giulio Segalini",
+          "Yigit \u00c7olako\u011flu",
+          "Marko Putnik"
         ]
       },
       {
-        "title": "Detect, Unlearn, Restore: Defending Text Summarization Models Against Data Poisoning",
-        "summary": "Training-time data poisoning during fine-tuning poses a significant threat to large language models (LLMs) deployed for abstractive text summarization, where small task-specific datasets exert disprop",
-        "link": "http://arxiv.org/abs/2606.26036v1",
-        "date": "2026-06-24",
+        "title": "The Observer World: A Cryptographic Extension of Impagliazzo's Five Worlds",
+        "summary": "Impagliazzo's five worlds classify computational assumptions along a single axis, the existence of cryptographic primitives. All five worlds implicitly assume that every party, including the adversary",
+        "link": "http://arxiv.org/abs/2606.27139v1",
+        "date": "2026-06-25",
         "authors": [
-          "Poojitha Thota",
-          "Shirin Nilizadeh"
+          "Fabio F. G. Buono"
         ]
       },
       {
-        "title": "Can Trustless Agents Be Trusted? An Empirical Study of the ERC-8004 Decentralized AI Agent Ecosystem",
-        "summary": "As autonomous AI agents increasingly transact across organizational boundaries, a fundamental trust challenge emerges: how can an agent assess whether an unknown counterpart is trustworthy? The ERC-80",
-        "link": "http://arxiv.org/abs/2606.26028v1",
-        "date": "2026-06-24",
+        "title": "PRISM: PE Relational Inter-Section Matrix. A 2D Section-Aware Dataset for Static PE Malware Detection",
+        "summary": "We introduce PRISM (PE Relational Inter-Section Matrix), an open dataset and feature representation for static Windows PE malware detection. Existing benchmarks such as EMBER, BODMAS, and SOREL-20M re",
+        "link": "http://arxiv.org/abs/2606.27109v1",
+        "date": "2026-06-25",
         "authors": [
-          "Xihan Xiong",
-          "Zelin Li",
-          "Wei Wei"
+          "Jos\u00e9 M. Sacrist\u00e1n",
+          "Ana I. Gonz\u00e1lez-Tablas"
         ]
       },
       {
-        "title": "Privacy Vulnerabilities of Attention Layers in Tabular Foundation Models and Protection of High-Risk Queries",
-        "summary": "Tabular foundation models are commonly assumed to present limited privacy concerns as they are often pre-trained on large collections of synthetic data. However, these models leverage in-context learn",
-        "link": "http://arxiv.org/abs/2606.26021v1",
-        "date": "2026-06-24",
+        "title": "Application of LLMs to Threat Assessment of Foreign Peacekeeping Missions",
+        "summary": "We present a novel approach for applying Large Language Models (LLMs) to threat assessment in the context of foreign peacekeeping missions. Building on the PINPOINT project and its use case, the EU Mo",
+        "link": "http://arxiv.org/abs/2606.27106v1",
+        "date": "2026-06-25",
         "authors": [
-          "T\u00e2nia Carvalho",
-          "Maxime Cordy"
+          "Gerhard Backfried",
+          "Christian Schmidt",
+          "Diego Pilutti"
         ]
       },
       {
-        "title": "BlowLive: Blow-Based Multi-Factor Biometrics with Liveness Detection and Revocability",
-        "summary": "Biometric authentication systems are increasingly deployed in security-critical applications, yet existing physiological and behavioral biometrics suffer from fundamental limitations: 1) they are vuln",
-        "link": "http://arxiv.org/abs/2606.25998v1",
-        "date": "2026-06-24",
+        "title": "zQR: A Verifiable QR-Driven zkSNARK Proof Verification Framework for Mobile Platforms",
+        "summary": "Privacy is one of the fundamental rights of individuals in modern societies. Yet, the practical adoption of privacy-preserving technologies in daily interactions remains limited. Zero-knowledge proofs",
+        "link": "http://arxiv.org/abs/2606.27092v1",
+        "date": "2026-06-25",
         "authors": [
-          "Eyasu Getahun Chekole",
-          "Howard Halim",
-          "Dani\u00ebl Reijsbergen"
+          "Goshgar Can Ismayilov"
         ]
       },
       {
-        "title": "Do (Not) Tell Me About My Insecurities: Assessing the Status Quo of Coordinated Vulnerability Disclosure in Germany Amid New EU Cybersecurity Regulations",
-        "summary": "In our increasingly interconnected world, good IT security practices are necessary to prevent vulnerabilities and data breaches. Providing security contacts, e.g., via Coordinated Vulnerability Disclo",
-        "link": "http://arxiv.org/abs/2606.25950v1",
-        "date": "2026-06-24",
+        "title": "Inherited Circuits, Learned Semantics: How Fine-Tuning Creates Evasion Vulnerabilities Invisible to Standard Evaluation",
+        "summary": "LLMs fine-tuned for security classification are usually evaluated on held-out examples from the same distribution as their training data. We show that this can miss vulnerabilities introduced by fine-",
+        "link": "http://arxiv.org/abs/2606.27091v1",
+        "date": "2026-06-25",
         "authors": [
-          "Sebastian Neef",
-          "Cenk Schlunke",
-          "Anne Hennig"
+          "Ryan Fetterman"
         ]
       },
       {
-        "title": "A Tattered Cloak of Invisibility: Measuring Anonymity Loss in Railgun on Ethereum",
-        "summary": "From a user's perspective, perhaps the most significant difference between traditional banking services and widely used blockchain-based financial systems is that, in the latter, transactions and, eit",
-        "link": "http://arxiv.org/abs/2606.25926v1",
-        "date": "2026-06-24",
+        "title": "Type-based information flow analysis for $\u03c0$-calculus with a dynamically extensible security lattice",
+        "summary": "We develop a type system for secure information flow where new security levels can be created and inserted into the security lattice dynamically, i.e., even in the middle of an execution of a system. ",
+        "link": "http://arxiv.org/abs/2606.27059v1",
+        "date": "2026-06-25",
         "authors": [
-          "Kanan Huseynov",
-          "Ali Shahzaib",
-          "Istv\u00e1n Andr\u00e1s Seres"
+          "Yukihiro Oda",
+          "Eijiro Sumii"
         ]
       },
       {
-        "title": "The Web4 Agent Economy: A Large-Scale Empirical Study of the Landscape, Challenges, and Opportunities",
-        "summary": "The Internet is transitioning from Web3 toward Web4, where autonomous agents serve as independent economic actors. These agents can now hold crypto wallets, execute on-chain trades, and pay for extern",
-        "link": "http://arxiv.org/abs/2606.25876v1",
-        "date": "2026-06-24",
+        "title": "Physical Layer Authentication With Channel Knowledge Maps in Indoor Environments",
+        "summary": "Physical layer authentication (PLA) allows to authenticate the user by comparing measurements over time, assuming their time consistency or by modeling their evolution. However, these assumptions beco",
+        "link": "http://arxiv.org/abs/2606.27044v1",
+        "date": "2026-06-25",
         "authors": [
-          "Yuhan Jin",
-          "Shuohan Wu",
-          "Chong Chen"
+          "Luca Bonaventura",
+          "Francesco Ardizzon",
+          "Stefano Tomasin"
         ]
       }
     ],
-    "updated": "2026-06-25T06:09:00.826071Z"
+    "updated": "2026-06-26T06:12:39.033384Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -279,6 +274,6 @@
         ]
       }
     ],
-    "updated": "2026-06-25T06:09:00.826071Z"
+    "updated": "2026-06-26T06:12:39.033384Z"
   }
 }
