@@ -3,7 +3,7 @@
     "total_events": 0,
     "total_fatalities": 0
   },
-  "error": "Expecting value: line 1 column 1 (char 0)",
+  "error": "HTTP Error 403: Forbidden",
   "score": 30,
-  "updated": "2026-06-26T06:12:39.033384Z"
+  "updated": "2026-06-27T05:54:40.529406Z"
 }
