@@ -1,13 +1,7 @@
 {
-  "eu_avg": 47.7,
-  "trend": 0.26,
+  "eu_avg": 48.0,
+  "trend": 0.28,
   "series": [
-    {
-      "date": "2025-08-30",
-      "pct": 77.4,
-      "gasInStorage": 879.4,
-      "trend": 0.3
-    },
     {
       "date": "2025-08-31",
       "pct": 77.7,
@@ -1801,23 +1795,29 @@
       "pct": 47.7,
       "gasInStorage": 539.1,
       "trend": 0.26
+    },
+    {
+      "date": "2026-06-26",
+      "pct": 48.0,
+      "gasInStorage": 542.2,
+      "trend": 0.28
     }
   ],
   "countries": {
     "DE": {
-      "pct": 39.9,
-      "trend": 0.37,
-      "gasInStorage": 98.5
+      "pct": 40.3,
+      "trend": 0.36,
+      "gasInStorage": 99.4
     },
     "FR": {
-      "pct": 48.4,
-      "trend": 0.12,
-      "gasInStorage": 59.9
+      "pct": 48.6,
+      "trend": 0.24,
+      "gasInStorage": 60.2
     },
     "IT": {
-      "pct": 66.1,
-      "trend": 0.17,
-      "gasInStorage": 134.4
+      "pct": 66.3,
+      "trend": 0.22,
+      "gasInStorage": 134.9
     },
     "ES": {
       "pct": 74.0,
@@ -1825,37 +1825,37 @@
       "gasInStorage": 26.5
     },
     "NL": {
-      "pct": 24.4,
-      "trend": 0.26,
-      "gasInStorage": 35.1
+      "pct": 24.7,
+      "trend": 0.28,
+      "gasInStorage": 35.5
     },
     "AT": {
-      "pct": 53.0,
-      "trend": 0.24,
-      "gasInStorage": 53.2
+      "pct": 53.2,
+      "trend": 0.18,
+      "gasInStorage": 53.4
     },
     "BE": {
       "pct": 22.5,
-      "trend": 0.09,
+      "trend": 0.02,
       "gasInStorage": 1.7
     },
     "PL": {
-      "pct": 69.0,
-      "trend": 0.48,
-      "gasInStorage": 25.4
+      "pct": 69.5,
+      "trend": 0.5,
+      "gasInStorage": 25.6
     },
     "CZ": {
-      "pct": 46.7,
-      "trend": 0.38,
-      "gasInStorage": 21.2
+      "pct": 47.1,
+      "trend": 0.46,
+      "gasInStorage": 21.4
     },
     "HU": {
-      "pct": 49.3,
-      "trend": 0.22,
-      "gasInStorage": 33.4
+      "pct": 49.6,
+      "trend": 0.23,
+      "gasInStorage": 33.6
     }
   },
   "alert_threshold": 20.0,
   "score": 48,
-  "updated": "2026-06-27T05:54:40.529406Z"
+  "updated": "2026-06-28T06:20:04.672744Z"
 }
