@@ -3,201 +3,200 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "DexCompose: Reusing Dexterous Policies for Multi-Task Manipulation with a Single Hand",
-        "summary": "Dexterous manipulation policies can solve individual skills, but composing them to perform multiple tasks with a single hand remains challenging. Adding a new task on top of an existing manipulation s",
-        "link": "http://arxiv.org/abs/2606.28323v1",
-        "date": "2026-06-26",
+        "title": "VLK: Learning Humanoid Loco-Manipulation from Synthetic Interactions in Reconstructed Scenes",
+        "summary": "Perception-based humanoid loco-manipulation requires connecting egocentric observations and task instructions to whole-body motion. Learning this mapping requires synchronized egocentric images, langu",
+        "link": "http://arxiv.org/abs/2606.30645v1",
+        "date": "2026-06-29",
         "authors": [
-          "Dihong Huang",
-          "Zhenyu Wei",
-          "Zhuxiu Xu"
+          "Yen-Jen Wang",
+          "Jiaman Li",
+          "Sirui Chen"
         ]
       },
       {
-        "title": "Which Nash Equilibrium? Solver-Dependent Selection on Zero-Sum Nash Polytopes",
-        "summary": "Many two-player zero-sum games admit not a unique Nash equilibrium but a convex set of them: a polytope of profiles that all share the minimax value V* yet prescribe different behaviour. Standard solv",
-        "link": "http://arxiv.org/abs/2606.28308v1",
-        "date": "2026-06-26",
+        "title": "LeVo 2: Stable and Melodious Song Generation via Hierarchical Representation Modeling and Progressive Post-Training",
+        "summary": "Full-length song generation must preserve coherence and musicality, render detailed vocal and accompaniment acoustics, and follow lyrics and prompts. Existing language model-based systems face a struc",
+        "link": "http://arxiv.org/abs/2606.30642v1",
+        "date": "2026-06-29",
         "authors": [
-          "Luis Leal"
+          "Shun Lei",
+          "Huaicheng Zhang",
+          "Dapeng Wu"
         ]
       },
       {
-        "title": "Agentic Hardware Design as Repository-Level Code Evolution",
-        "summary": "We present HORIZON, a self-evolving agent framework that treats hardware design as repository-level code evolution. A Markdown harness is compiled into a project pack containing domain knowledge, an e",
-        "link": "http://arxiv.org/abs/2606.28279v1",
-        "date": "2026-06-26",
+        "title": "Self-Evolving World Models for LLM Agent Planning",
+        "summary": "World models offer a principled way to equip long-horizon LLM agents with foresight: predictions of action consequences before execution. However, unreliable foresight can be ignored, misused, or even",
+        "link": "http://arxiv.org/abs/2606.30639v1",
+        "date": "2026-06-29",
         "authors": [
-          "Cunxi Yu",
-          "Chenhui Deng",
-          "Nathaniel Pinckney"
+          "Xuan Zhang",
+          "Wenxuan Zhang",
+          "See-Kiong Ng"
         ]
       },
       {
-        "title": "Towards Automating Scientific Review with Google's Paper Assistant Tool",
-        "summary": "Artificial intelligence is driving a revolution in scientific discovery, accelerating everything from hypothesis generation to mathematical theorem proving. However, this rapid acceleration is creatin",
-        "link": "http://arxiv.org/abs/2606.28277v1",
-        "date": "2026-06-26",
+        "title": "GROW$^2$: Grounding Which and Where for Robot Tool Use",
+        "summary": "Can the robot use a plate to cut a cake if no knife is available? Tool use greatly expands robot capabilities, but to use tools creatively beyond their intended functions, the robot faces the challeng",
+        "link": "http://arxiv.org/abs/2606.30632v1",
+        "date": "2026-06-29",
         "authors": [
-          "Rajesh Jayaram",
-          "Drew Tyler",
-          "David Woodruff"
+          "Yuhong Deng",
+          "Yuyao Liu",
+          "David Hsu"
         ]
       },
       {
-        "title": "Parameter Efficient Hybrid Transformer (PEHT) for Network Traffic Prediction via Dynamic Urban Congestion Integration",
-        "summary": "Accurate network traffic prediction is a critical element for efficient resource allocation in dynamic urban cellular networks. However, prediction remains challenging because network demand is influe",
-        "link": "http://arxiv.org/abs/2606.28274v1",
-        "date": "2026-06-26",
+        "title": "Pessimism's Paradox: Conservative Offline Training Amplifies Reward Hacking During Online Adaptation in Reasoning Models",
+        "summary": "Conservative offline training is widely advocated as a safe foundation for subsequent online adaptation: if a policy stays close to well-supported behaviour, the argument goes, it is less likely to ex",
+        "link": "http://arxiv.org/abs/2606.30627v1",
+        "date": "2026-06-29",
         "authors": [
-          "Abdolazim Rezaei",
-          "Mehdi Sookhak",
-          "Mahboobeh Haghparast"
+          "Subramanyam Sahoo",
+          "Aman Chadha",
+          "Vinija Jain"
         ]
       },
       {
-        "title": "Agent-Native Immune System: Architecture, Taxonomy, and Engineering",
-        "summary": "The transition from static chat bots to autonomous agents--equipped with persistent memory, tool-use protocols, and multi-agent collaboration--has fundamentally expanded the AI threat landscape. Curre",
-        "link": "http://arxiv.org/abs/2606.28270v1",
-        "date": "2026-06-26",
+        "title": "DOPD: Dual On-policy Distillation",
+        "summary": "On-policy distillation (OPD) offers superior capacity transfer by supervising student-sampled trajectories with dense token-level signals. To furnish high-quality supervision sources and thereby eleva",
+        "link": "http://arxiv.org/abs/2606.30626v1",
+        "date": "2026-06-29",
         "authors": [
-          "Bo Shen",
-          "Lifeng Chang",
-          "Tianyuan Wei"
+          "Xinlei Yu",
+          "Gen Li",
+          "Qingyi Si"
         ]
       },
       {
-        "title": "Learning Topology-Aware Representations via Test-Time Adaptation for Anomaly Segmentation",
-        "summary": "Test-time adaptation (TTA) has emerged as a promising paradigm for mitigating distribution shifts in deep models. However, existing TTA approaches for anomaly segmentation remain limited by their reli",
-        "link": "http://arxiv.org/abs/2606.28268v1",
-        "date": "2026-06-26",
+        "title": "Optimization Dynamics Imprint Semantic Specificity in Contrastive Embedding Norms",
+        "summary": "Contrastive embedding models trained with scale-invariant losses are typically paired with distance metrics like cosine similarity, effectively ignoring embedding magnitudes. However, surprisingly, em",
+        "link": "http://arxiv.org/abs/2606.30625v1",
+        "date": "2026-06-29",
         "authors": [
-          "Ali Zia",
-          "Usman Ali",
-          "Abdul Rehman"
+          "Ziwei Su",
+          "Junyu Ren",
+          "Victor Veitch"
         ]
       },
       {
-        "title": "How Width and Data Shape Generalization Scaling Laws in Quadratic Neural Networks",
-        "summary": "Understanding how performance scales jointly with model size and data is a central problem in modern machine learning. Existing theoretical works on scaling laws typically describe generalization as a",
-        "link": "http://arxiv.org/abs/2606.28242v1",
-        "date": "2026-06-26",
+        "title": "C$^{2}$R: Cross-sample Consistency Regularization Mitigates Feature Splitting and Absorption in Sparse Autoencoders",
+        "summary": "Sparse Autoencoders (SAEs) are widely used to interpret large language models by decomposing activations into sparse, human-understandable features, but scaling to large dictionaries exposes fundament",
+        "link": "http://arxiv.org/abs/2606.30609v1",
+        "date": "2026-06-29",
         "authors": [
-          "Julius Girardin",
-          "Emanuele Troiani",
-          "Yizhou Xu"
+          "Haoran Jin",
+          "Xiting Wang",
+          "Shijie Ren"
         ]
       }
     ],
-    "updated": "2026-06-29T06:49:56.585802Z"
+    "updated": "2026-06-30T06:13:46.343967Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-06-29T06:49:56.585802Z"
+    "updated": "2026-06-30T06:13:46.343967Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-06-29T06:49:56.585802Z"
+    "updated": "2026-06-30T06:13:46.343967Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-06-29T06:49:56.585802Z"
+    "updated": "2026-06-30T06:13:46.343967Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Robust Harmful Features Under Jailbreak Attacks: Mechanistic Evidence from Attention Head Specialization in Large Language Models",
-        "summary": "Jailbreak attacks bypass LLM safety alignment, yet their mechanisms remain poorly understood. We provide evidence that attacks do not comprehensively eliminate safety features, but instead selectively",
-        "link": "http://arxiv.org/abs/2606.28153v1",
-        "date": "2026-06-26",
+        "title": "Authentication in Quantum Networks",
+        "summary": "In this review, we survey the cryptographic task of authentication from the perspective of quantum communication. We review three main flavours of authentication that are often conflated in the litera",
+        "link": "http://arxiv.org/abs/2606.30636v1",
+        "date": "2026-06-29",
         "authors": [
-          "Yanchen Yin",
-          "Dongqi Han",
-          "Linghui Li"
+          "Christopher Battarbee",
+          "Suchetana Goswami",
+          "Elham Kashefi"
         ]
       },
       {
-        "title": "How Humans, Bots, and Agents Communicate About Vulnerabilities in Pull Requests",
-        "summary": "Developers may reference vulnerabilities in pull request discussions through both explicit identifiers, such as CVEs or GHSAs, and implicit security-related language (e.g., \"unauthorized access\" or \"S",
-        "link": "http://arxiv.org/abs/2606.28125v1",
-        "date": "2026-06-26",
+        "title": "MESA: Prioritizing Vulnerable Communication Channels for Securing Multi-Agent Systems",
+        "summary": "Multi-agent systems (MAS) are increasingly used to automate complex, distributed workflows. However, their inter-agent communication channels introduce new attack surfaces that remain poorly understoo",
+        "link": "http://arxiv.org/abs/2606.30602v1",
+        "date": "2026-06-29",
         "authors": [
-          "Pien Rooijendijk",
-          "Christoph Treude",
-          "Mairieli Wessel"
+          "Kunyang Li",
+          "Kyle Domico",
+          "Jonathan Gregory"
         ]
       },
       {
-        "title": "GTI-mSEMP Framework : A Proposed Framework to Stimulate Malware Propagation with Inclusion of Attacker-Defender Strategy",
-        "summary": "The rapid proliferation of automated, multi-vector malware threats poses a significant risk to heterogeneous, resource constrained cyber-physical networks. Conventional epidemiological models often tr",
-        "link": "http://arxiv.org/abs/2606.28079v1",
-        "date": "2026-06-26",
+        "title": "Wireless Backdoor Attack and Defense for Semantic Communications over Multiple Access Channel",
+        "summary": "Semantic communication (SemCom) aims to preserve semantic meaning and task-oriented information beyond conventional message recovery over wireless channels. The adoption of SemCom in shared-access wir",
+        "link": "http://arxiv.org/abs/2606.30595v1",
+        "date": "2026-06-29",
         "authors": [
-          "Shadeeb Hossain",
-          "Kristopher Wilson"
+          "Yalin E. Sagduyu",
+          "Tugba Erpek",
+          "Aylin Yener"
         ]
       },
       {
-        "title": "ToolPrivacyBench: Benchmarking Purpose-Bound Privacy in Tool-Using LLM Agents",
-        "summary": "Large language models (LLMs) have increasingly moved from standalone text generation systems to agents that invoke external tools, access environments, and execute multi-step tasks. However, conventio",
-        "link": "http://arxiv.org/abs/2606.28061v1",
-        "date": "2026-06-26",
+        "title": "Words Speak Louder Than Code: Investigating Cognitive Heuristics in LLM-Based Code Vulnerability Detection",
+        "summary": "Researchers and practitioners increasingly apply Large Language Models (LLMs) for automated vulnerability detection. Recent work has shown that LLMs are susceptible to the same cognitive heuristics th",
+        "link": "http://arxiv.org/abs/2606.30587v1",
+        "date": "2026-06-29",
         "authors": [
-          "Shijing Hu",
-          "Liang Liu",
-          "Zhu Meng"
+          "Asif Shahriar",
+          "Hongyu Cai",
+          "Hadjer Benkraouda"
         ]
       },
       {
-        "title": "Ghost Without Shell: Measuring Non-Interactive SSH Attacks on Honeypots",
-        "summary": "Cyber deception research has focused on improving honeypot deception capabilities to increase attacker engagement and extend their interactions to collect more and better intelligence. For SSH honeypo",
-        "link": "http://arxiv.org/abs/2606.28006v1",
-        "date": "2026-06-26",
+        "title": "A Hybrid Framework For Crypto-Ransomware Detection In Enterprise Shared Storage",
+        "summary": "Most corporate workplace environments enforce policies and technical controls that limit the storage of sensitive data on client endpoints. Consequently, ransomware operators have evolved variants tha",
+        "link": "http://arxiv.org/abs/2606.30586v1",
+        "date": "2026-06-29",
         "authors": [
-          "Veronica Valeros",
-          "Muris Sladi\u0107",
-          "Sebastian Garcia"
+          "Gervais Hatungimana",
+          "Abdun Naser Mahmood",
+          "Mohammad Jabed Morshed Chowdhury"
         ]
       },
       {
-        "title": "Quantum Multi-Party Threshold Private Set Intersection with Explicit Cardinality Testing",
-        "summary": "Threshold private set intersection (TPSI) allows parties to reveal their intersection only when its cardinality reaches a prescribed threshold. Existing quantum TPSI protocols typically rely on a thir",
-        "link": "http://arxiv.org/abs/2606.27996v1",
-        "date": "2026-06-26",
+        "title": "A Multi-task Mixture of Experts Framework for Malware Classification, Packing Detection, and Family Attribution",
+        "summary": "Malware classification remains a challenging problem due to its inherent heterogeneity, the presence of packed binaries, and the diverse distribution of malware families. Traditional single-model dete",
+        "link": "http://arxiv.org/abs/2606.30572v1",
+        "date": "2026-06-29",
         "authors": [
-          "Zixian Gong",
-          "Kun Tian",
-          "Yi Zhang"
+          "Jithin S.",
+          "Roshin Sleeba C.",
+          "Anvin Mariya P. B."
         ]
       },
       {
-        "title": "Verifiable and Collusion-Resistant Multi-Party Quantum Private Set Operations",
-        "summary": "Threshold private set intersection (TPSI) allows parties to reveal their intersection only when its cardinality reaches a prescribed threshold. Existing quantum TPSI protocols typically rely on a thir",
-        "link": "http://arxiv.org/abs/2606.27994v1",
-        "date": "2026-06-26",
+        "title": "Forensic Trajectory Signatures for Agent Memory Poisoning Detection",
+        "summary": "We discover a behavioral invariant in LLM agents under persistent memory poisoning: in architectures where routing information is retrieved through observable memory-tool invocations, successful attac",
+        "link": "http://arxiv.org/abs/2606.30566v1",
+        "date": "2026-06-29",
         "authors": [
-          "Zixian Gong",
-          "Kun Tian",
-          "Yi Zhang"
+          "Jun Wen Leong"
         ]
       },
       {
-        "title": "AdvancedShelLM: A Stateful Multi-Agent LLM Honeypot for SSH Deception",
-        "summary": "LLM-based SSH honeypots can generate believable interactions, but evaluations indicate they remain somewhat identifiable to determined attackers, indicating the need for a better scaffolding. We prese",
-        "link": "http://arxiv.org/abs/2606.27990v1",
-        "date": "2026-06-26",
+        "title": "The Role of Vehicles in Digital Forensic Investigations: A Structured Synthesis of Digital Vehicle Forensic Characteristics",
+        "summary": "Modern vehicles are cyber-physical, networked systems that may contain valuable digital traces for accident reconstruction, crime investigation, warranty analysis, and cybersecurity incident response.",
+        "link": "http://arxiv.org/abs/2606.30564v1",
+        "date": "2026-06-29",
         "authors": [
-          "Muris Sladi\u0107",
-          "Eman Alibali\u0107",
-          "Veronica Valeros"
+          "Kevin Mayer"
         ]
       }
     ],
-    "updated": "2026-06-29T06:49:56.585802Z"
+    "updated": "2026-06-30T06:13:46.343967Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -281,6 +280,6 @@
         ]
       }
     ],
-    "updated": "2026-06-29T06:49:56.585802Z"
+    "updated": "2026-06-30T06:13:46.343967Z"
   }
 }
