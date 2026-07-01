@@ -3,141 +3,119 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "VLK: Learning Humanoid Loco-Manipulation from Synthetic Interactions in Reconstructed Scenes",
-        "summary": "Perception-based humanoid loco-manipulation requires connecting egocentric observations and task instructions to whole-body motion. Learning this mapping requires synchronized egocentric images, langu",
-        "link": "http://arxiv.org/abs/2606.30645v1",
-        "date": "2026-06-29",
+        "title": "Introspective Coupling: Self-Explanation Training Tracks Behavioral Change Despite Fixed Supervision",
+        "summary": "When does training language models (LMs) to generate explanations of their predictions yield faithful introspection, rather than superficial imitation? We study LMs trained to explain which features o",
+        "link": "http://arxiv.org/abs/2606.32038v1",
+        "date": "2026-06-30",
         "authors": [
-          "Yen-Jen Wang",
-          "Jiaman Li",
-          "Sirui Chen"
+          "Zifan Carl Guo",
+          "Laura Ruis",
+          "Jacob Andreas"
         ]
       },
       {
-        "title": "LeVo 2: Stable and Melodious Song Generation via Hierarchical Representation Modeling and Progressive Post-Training",
-        "summary": "Full-length song generation must preserve coherence and musicality, render detailed vocal and accompaniment acoustics, and follow lyrics and prompts. Existing language model-based systems face a struc",
-        "link": "http://arxiv.org/abs/2606.30642v1",
-        "date": "2026-06-29",
+        "title": "QVal: Cheaply Evaluating Dense Supervision Signals for Long-Horizon LLM Agents",
+        "summary": "LLM agents increasingly act over long horizons, where a single trajectory can contain hundreds or thousands of actions. In these settings, outcome-only rewards provide too sparse guidance, failing to ",
+        "link": "http://arxiv.org/abs/2606.32034v1",
+        "date": "2026-06-30",
         "authors": [
-          "Shun Lei",
-          "Huaicheng Zhang",
-          "Dapeng Wu"
+          "Sergio Hern\u00e1ndez-Guti\u00e9rrez",
+          "Matteo Merler",
+          "Ilze Amanda Auzina"
         ]
       },
       {
-        "title": "Self-Evolving World Models for LLM Agent Planning",
-        "summary": "World models offer a principled way to equip long-horizon LLM agents with foresight: predictions of action consequences before execution. However, unreliable foresight can be ignored, misused, or even",
-        "link": "http://arxiv.org/abs/2606.30639v1",
-        "date": "2026-06-29",
+        "title": "Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs",
+        "summary": "Metacognition is a critical component of intelligence that describes the ability to monitor and regulate one's own cognitive processes. Yet LLMs exhibit systemic deficiencies in key metacognitive facu",
+        "link": "http://arxiv.org/abs/2606.32032v1",
+        "date": "2026-06-30",
         "authors": [
-          "Xuan Zhang",
-          "Wenxuan Zhang",
-          "See-Kiong Ng"
+          "Gabrielle Kaili-May Liu",
+          "Avi Caciularu",
+          "Gal Yona"
         ]
       },
       {
-        "title": "GROW$^2$: Grounding Which and Where for Robot Tool Use",
-        "summary": "Can the robot use a plate to cut a cake if no knife is available? Tool use greatly expands robot capabilities, but to use tools creatively beyond their intended functions, the robot faces the challeng",
-        "link": "http://arxiv.org/abs/2606.30632v1",
-        "date": "2026-06-29",
+        "title": "When LLMs Read Tables Carelessly: Measuring and Reducing Data Referencing Errors",
+        "summary": "While large language models (LLMs) perform well on table tasks, they still make data referencing errors (DREs), i.e., incorrectly citing or omitting table values, despite understanding the table struc",
+        "link": "http://arxiv.org/abs/2606.32029v1",
+        "date": "2026-06-30",
         "authors": [
-          "Yuhong Deng",
-          "Yuyao Liu",
-          "David Hsu"
+          "Yuqing Yang",
+          "Qi Zhu",
+          "Zhen Han"
         ]
       },
       {
-        "title": "Pessimism's Paradox: Conservative Offline Training Amplifies Reward Hacking During Online Adaptation in Reasoning Models",
-        "summary": "Conservative offline training is widely advocated as a safe foundation for subsequent online adaptation: if a policy stays close to well-supported behaviour, the argument goes, it is less likely to ex",
-        "link": "http://arxiv.org/abs/2606.30627v1",
-        "date": "2026-06-29",
+        "title": "Freeform Preference Learning for Robotic Manipulation",
+        "summary": "Reward design remains a central bottleneck for autonomous robot policy improvement, especially in long-horizon manipulation tasks where sparse success labels provide too little signal and binary prefe",
+        "link": "http://arxiv.org/abs/2606.32027v1",
+        "date": "2026-06-30",
         "authors": [
-          "Subramanyam Sahoo",
-          "Aman Chadha",
-          "Vinija Jain"
+          "Marcel Torne",
+          "Anubha Mahajan",
+          "Abhijnya Bhat"
         ]
       },
       {
-        "title": "DOPD: Dual On-policy Distillation",
-        "summary": "On-policy distillation (OPD) offers superior capacity transfer by supervising student-sampled trajectories with dense token-level signals. To furnish high-quality supervision sources and thereby eleva",
-        "link": "http://arxiv.org/abs/2606.30626v1",
-        "date": "2026-06-29",
+        "title": "AdaJEPA: An Adaptive Latent World Model",
+        "summary": "Latent world models enable planning from high-dimensional observations by predicting future states in a compact latent space. However, these models are typically kept frozen at test time: when their p",
+        "link": "http://arxiv.org/abs/2606.32026v1",
+        "date": "2026-06-30",
         "authors": [
-          "Xinlei Yu",
-          "Gen Li",
-          "Qingyi Si"
+          "Ying Wang",
+          "Oumayma Bounou",
+          "Yann LeCun"
         ]
       },
       {
-        "title": "Optimization Dynamics Imprint Semantic Specificity in Contrastive Embedding Norms",
-        "summary": "Contrastive embedding models trained with scale-invariant losses are typically paired with distance metrics like cosine similarity, effectively ignoring embedding magnitudes. However, surprisingly, em",
-        "link": "http://arxiv.org/abs/2606.30625v1",
-        "date": "2026-06-29",
+        "title": "FLORA: A deep learning approach to predict forest attributes from heterogeneous LiDAR data",
+        "summary": "Forest attributes are essential for national-scale resource monitoring. Airborne LiDAR metrics are among the auxiliary variables most strongly correlated with forest attributes used in National Forest",
+        "link": "http://arxiv.org/abs/2606.32023v1",
+        "date": "2026-06-30",
         "authors": [
-          "Ziwei Su",
-          "Junyu Ren",
-          "Victor Veitch"
+          "Emilie Vautier",
+          "Cl\u00e9ment Mallet",
+          "C\u00e9dric Vega"
         ]
       },
       {
-        "title": "C$^{2}$R: Cross-sample Consistency Regularization Mitigates Feature Splitting and Absorption in Sparse Autoencoders",
-        "summary": "Sparse Autoencoders (SAEs) are widely used to interpret large language models by decomposing activations into sparse, human-understandable features, but scaling to large dictionaries exposes fundament",
-        "link": "http://arxiv.org/abs/2606.30609v1",
-        "date": "2026-06-29",
+        "title": "TRIAGE: Role-Typed Credit Assignment for Agentic Reinforcement Learning",
+        "summary": "Agentic reinforcement learning requires assigning credit to environment-facing actions such as searches, clicks, edits, navigation commands, and object interactions. Standard GRPO uses the final verif",
+        "link": "http://arxiv.org/abs/2606.32017v1",
+        "date": "2026-06-30",
         "authors": [
-          "Haoran Jin",
-          "Xiting Wang",
-          "Shijie Ren"
+          "Yuanda Xu",
+          "Zhengze Zhou",
+          "Hejian Sang"
         ]
       }
     ],
-    "updated": "2026-06-30T06:13:46.343967Z"
+    "updated": "2026-07-01T06:35:11.896087Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-06-30T06:13:46.343967Z"
+    "updated": "2026-07-01T06:35:11.896087Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-06-30T06:13:46.343967Z"
+    "updated": "2026-07-01T06:35:11.896087Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-06-30T06:13:46.343967Z"
+    "updated": "2026-07-01T06:35:11.896087Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Authentication in Quantum Networks",
-        "summary": "In this review, we survey the cryptographic task of authentication from the perspective of quantum communication. We review three main flavours of authentication that are often conflated in the litera",
-        "link": "http://arxiv.org/abs/2606.30636v1",
-        "date": "2026-06-29",
-        "authors": [
-          "Christopher Battarbee",
-          "Suchetana Goswami",
-          "Elham Kashefi"
-        ]
-      },
-      {
-        "title": "MESA: Prioritizing Vulnerable Communication Channels for Securing Multi-Agent Systems",
-        "summary": "Multi-agent systems (MAS) are increasingly used to automate complex, distributed workflows. However, their inter-agent communication channels introduce new attack surfaces that remain poorly understoo",
-        "link": "http://arxiv.org/abs/2606.30602v1",
-        "date": "2026-06-29",
-        "authors": [
-          "Kunyang Li",
-          "Kyle Domico",
-          "Jonathan Gregory"
-        ]
-      },
-      {
-        "title": "Wireless Backdoor Attack and Defense for Semantic Communications over Multiple Access Channel",
-        "summary": "Semantic communication (SemCom) aims to preserve semantic meaning and task-oriented information beyond conventional message recovery over wireless channels. The adoption of SemCom in shared-access wir",
-        "link": "http://arxiv.org/abs/2606.30595v1",
-        "date": "2026-06-29",
+        "title": "Semantic Leakage and Privacy Preservation in Relay-Assisted Semantic Communications",
+        "summary": "Semantic communication (SemCom) has emerged as a promising paradigm in which the transmission of task-relevant information is prioritized over raw data, enabling efficient and robust communication und",
+        "link": "http://arxiv.org/abs/2606.31973v1",
+        "date": "2026-06-30",
         "authors": [
           "Yalin E. Sagduyu",
           "Tugba Erpek",
@@ -145,58 +123,82 @@
         ]
       },
       {
-        "title": "Words Speak Louder Than Code: Investigating Cognitive Heuristics in LLM-Based Code Vulnerability Detection",
-        "summary": "Researchers and practitioners increasingly apply Large Language Models (LLMs) for automated vulnerability detection. Recent work has shown that LLMs are susceptible to the same cognitive heuristics th",
-        "link": "http://arxiv.org/abs/2606.30587v1",
-        "date": "2026-06-29",
+        "title": "Robocalls: A Worldwide or US-only Problem? Analyzing Spam and Fraud in International Phone Calls",
+        "summary": "Unsolicited automated phone calls (robocalls) are a serious threat: in the US alone, these calls resulted in reported losses of 1.1$ billion during 2025. Phishing and spoofing consistently rank among ",
+        "link": "http://arxiv.org/abs/2606.31790v1",
+        "date": "2026-06-30",
         "authors": [
-          "Asif Shahriar",
-          "Hongyu Cai",
-          "Hadjer Benkraouda"
+          "Kemal Altwlkany",
+          "Andro Mer\u0107ep",
+          "Tomislav \u0110uri\u010di\u0107"
         ]
       },
       {
-        "title": "A Hybrid Framework For Crypto-Ransomware Detection In Enterprise Shared Storage",
-        "summary": "Most corporate workplace environments enforce policies and technical controls that limit the storage of sensitive data on client endpoints. Consequently, ransomware operators have evolved variants tha",
-        "link": "http://arxiv.org/abs/2606.30586v1",
-        "date": "2026-06-29",
+        "title": "Exploring Side-Channel Protections in Hardware Implementations of PQC ML-KEM Verification",
+        "summary": "As ML-KEM is adopted as a post-quantum cryptographic standard, resilience against physical side-channel attacks has become essential. Among the constituent steps, the decapsulation Fujisaki-Okamoto (F",
+        "link": "http://arxiv.org/abs/2606.31681v1",
+        "date": "2026-06-30",
         "authors": [
-          "Gervais Hatungimana",
-          "Abdun Naser Mahmood",
-          "Mohammad Jabed Morshed Chowdhury"
+          "Davis Ranney",
+          "Yashaswini I Makaram",
+          "A. Adam Ding"
         ]
       },
       {
-        "title": "A Multi-task Mixture of Experts Framework for Malware Classification, Packing Detection, and Family Attribution",
-        "summary": "Malware classification remains a challenging problem due to its inherent heterogeneity, the presence of packed binaries, and the diverse distribution of malware families. Traditional single-model dete",
-        "link": "http://arxiv.org/abs/2606.30572v1",
-        "date": "2026-06-29",
+        "title": "A Lifecycle and Application-Stack Survey of Large Language Model Vulnerabilities: Attacks, Risks, Defenses, and Open Problems",
+        "summary": "Large language models are no longer only text generators. They are increasingly embedded in retrieval pipelines, enterprise assistants, coding environments, robotic systems, security-operation workflo",
+        "link": "http://arxiv.org/abs/2606.31639v1",
+        "date": "2026-06-30",
         "authors": [
-          "Jithin S.",
-          "Roshin Sleeba C.",
-          "Anvin Mariya P. B."
+          "Seyed Bagher Hashemi Natanzi",
+          "Bo Tang"
         ]
       },
       {
-        "title": "Forensic Trajectory Signatures for Agent Memory Poisoning Detection",
-        "summary": "We discover a behavioral invariant in LLM agents under persistent memory poisoning: in architectures where routing information is retrieved through observable memory-tool invocations, successful attac",
-        "link": "http://arxiv.org/abs/2606.30566v1",
-        "date": "2026-06-29",
+        "title": "Hybrid Topological Data Analysis and LSTM Networks for Enhanced Network Intrusion Detection Using CIC-IDS2017 Dataset",
+        "summary": "Network intrusion detection systems (NIDS) are crucial in cybersecurity infrastructure, needing advanced techniques to detect hostile activity in network traffic. This research introduces a hybrid app",
+        "link": "http://arxiv.org/abs/2606.31619v1",
+        "date": "2026-06-30",
         "authors": [
-          "Jun Wen Leong"
+          "Amar Jeet",
+          "Bhaskar Ranjan Karn",
+          "Dinesh Kumar"
         ]
       },
       {
-        "title": "The Role of Vehicles in Digital Forensic Investigations: A Structured Synthesis of Digital Vehicle Forensic Characteristics",
-        "summary": "Modern vehicles are cyber-physical, networked systems that may contain valuable digital traces for accident reconstruction, crime investigation, warranty analysis, and cybersecurity incident response.",
-        "link": "http://arxiv.org/abs/2606.30564v1",
-        "date": "2026-06-29",
+        "title": "Robust Text Watermarking for Large Language Models via Dual Semantic Embeddings",
+        "summary": "This work presents Dual-Embedding Watermarking (DEW), a semantic watermarking scheme for large language models (LLMs) that leverages contextual and token-level embeddings to enhance robustness against",
+        "link": "http://arxiv.org/abs/2606.31602v1",
+        "date": "2026-06-30",
         "authors": [
-          "Kevin Mayer"
+          "Jonas Sch\u00e4fer",
+          "Cezary Pilaszewicz",
+          "Gerhard Wunder"
+        ]
+      },
+      {
+        "title": "Digital signature schemes based on code equivalence and syndrome decoding from restricted errors",
+        "summary": "Digital signature schemes are an important cryptographic tool to ensure data authenticity and integrity in many applications that must be resilient to attacks, including those facilitated by quantum c",
+        "link": "http://arxiv.org/abs/2606.31601v1",
+        "date": "2026-06-30",
+        "authors": [
+          "Sarah Arpin",
+          "Jason T. LeGrow",
+          "Hiram H. L\u00f3pez"
+        ]
+      },
+      {
+        "title": "Comparative Analysis of Machine Learning based Intrusion Detection in Realistic IoT Networks",
+        "summary": "The Internet of Things (IoT) is rapidly growing and expanding into various sectors, such as healthcare, transportation, smart homes, and more. Despite the benefits of using IoT devices, they present s",
+        "link": "http://arxiv.org/abs/2606.31594v1",
+        "date": "2026-06-30",
+        "authors": [
+          "Rana Alharbi",
+          "Chuadhry Mujeeb Ahmed"
         ]
       }
     ],
-    "updated": "2026-06-30T06:13:46.343967Z"
+    "updated": "2026-07-01T06:35:11.896087Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -280,6 +282,6 @@
         ]
       }
     ],
-    "updated": "2026-06-30T06:13:46.343967Z"
+    "updated": "2026-07-01T06:35:11.896087Z"
   }
 }
