@@ -1,14 +1,11 @@
 {
-  "last_run": "2026-07-01T06:35:11.896087Z",
+  "last_run": "2026-07-02T06:01:00.458293Z",
   "errors": [
     "BDI: No BDI data from any source",
-    "ACLED OAuth: HTTP Error 403: Forbidden",
+    "ACLED OAuth: Expecting value: line 1 column 1 (char 0)",
     "FIRMS: <urlopen error [Errno 101] Network is unreachable>",
-    "OpenSky: <urlopen error timed out>",
     "Restaurant: HTTP Error 400: Bad Request",
-    "Population: HTTP Error 401: Unauthorized",
-    "LifeExp: The read operation timed out",
-    "Aging: The read operation timed out"
+    "Population: HTTP Error 401: Unauthorized"
   ],
   "datasets": [
     "co2",
