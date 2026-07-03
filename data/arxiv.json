@@ -3,94 +3,95 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Measuring the Gap Between Human and LLM Research Ideas",
-        "summary": "LLMs are increasingly used to brainstorm research ideas, but existing evaluations mostly judge individual ideas by novelty, feasibility, or expert preference. We instead ask: how far are current LLM-g",
-        "link": "http://arxiv.org/abs/2607.01233v1",
-        "date": "2026-07-01",
+        "title": "Distributed Attacks in Persistent-State AI Control",
+        "summary": "As AI coding agents become more autonomous, they increasingly ship code iteratively, with the codebase persisting across sessions. This persistence creates a new attack surface: a misaligned or prompt",
+        "link": "http://arxiv.org/abs/2607.02514v1",
+        "date": "2026-07-02",
         "authors": [
-          "Ziyu Chen",
-          "Yilun Zhao",
-          "Arman Cohan"
+          "Josh Hills",
+          "Ida Caspary",
+          "Asa Cooper Stickland"
         ]
       },
       {
-        "title": "Language-Critique Imitation Learning from Suboptimal Demonstrations",
-        "summary": "Prior work on imitation learning from suboptimal demonstrations typically relies on compressed supervision signals such as confidence estimates, discriminator scores, or importance weights. These scal",
-        "link": "http://arxiv.org/abs/2607.01225v1",
-        "date": "2026-07-01",
+        "title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
+        "summary": "LLMs memorize sensitive training data, including personally identifiable information (PII), creating a pressing need for reliable post hoc removal methods. Unlearning has emerged as a promising soluti",
+        "link": "http://arxiv.org/abs/2607.02513v1",
+        "date": "2026-07-02",
         "authors": [
-          "Chih-Han Yang",
-          "Dai-Jie Wu",
-          "Yun-Ping Huang"
+          "Matteo Boglioni",
+          "Thibault Rousset",
+          "Siva Reddy"
         ]
       },
       {
-        "title": "AutoMem: Automated Learning of Memory as a Cognitive Skill",
-        "summary": "Memory expertise is a learned skill: knowing what to encode, when to retrieve, and how to organize knowledge--a capacity known in cognitive science as metamemory. We bring this perspective to LLMs by ",
-        "link": "http://arxiv.org/abs/2607.01224v1",
-        "date": "2026-07-01",
+        "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
+        "summary": "Many everyday programming tasks resist clean rule-based implementation, such as alerting on important log lines, repairing malformed JSON, or ranking search results by intent, and are increasingly out",
+        "link": "http://arxiv.org/abs/2607.02512v1",
+        "date": "2026-07-02",
         "authors": [
-          "Shengguang Wu",
-          "Hao Zhu",
-          "Yuhui Zhang"
+          "Wentao Zhang",
+          "Liliana Hotsko",
+          "Woojeong Kim"
         ]
       },
       {
-        "title": "Theoria: Rewrite-Acceptability Verification over Informal Reasoning States",
-        "summary": "When should an AI system's answer be trusted? Formal proof assistants offer certainty but cannot reach most of the problem distribution; scalar LLM judges offer coverage but produce opaque scores that",
-        "link": "http://arxiv.org/abs/2607.01223v1",
-        "date": "2026-07-01",
+        "title": "Online Safety Monitoring for LLMs",
+        "summary": "Despite alignment training, LLMs remain prone to generating unsafe outputs at deployment time. Monitoring outputs online and raising an alarm when safety can no longer be assumed is therefore critical",
+        "link": "http://arxiv.org/abs/2607.02510v1",
+        "date": "2026-07-02",
         "authors": [
-          "Ben Slivinski",
-          "Michael Saldivar"
+          "Mona Schirmer",
+          "Metod Jazbec",
+          "Alexander Timans"
         ]
       },
       {
-        "title": "The State-Prediction Separation Hypothesis",
-        "summary": "Transformers use the same forward computation stream to both predict the next token and store useful state for future token predictions. We formulate the \\emph{state-prediction separation hypothesis}:",
-        "link": "http://arxiv.org/abs/2607.01218v1",
-        "date": "2026-07-01",
+        "title": "ReContext: Recursive Evidence Replay as LLM Harness for Long-Context Reasoning",
+        "summary": "Understanding and reasoning over long contexts has become a key requirement for deploying large language models (LLMs) in realistic applications. Although recent LLMs support increasingly long context",
+        "link": "http://arxiv.org/abs/2607.02509v1",
+        "date": "2026-07-02",
         "authors": [
-          "Giovanni Monea",
-          "Nathan Godey",
-          "Kiant\u00e9 Brantley"
+          "Yanjun Zhao",
+          "Ruizhong Qiu",
+          "Tianxin Wei"
         ]
       },
       {
-        "title": "FurnitureVLA: Learning Long-Horizon Bimanual Furniture Assembly with Vision-Language-Action Model",
-        "summary": "Current work on robot furniture assembly mostly focuses on toy-scale settings or single-arm manipulation. We introduce FurnitureVLA, the first systematic study of real-scale bimanual furniture assembl",
-        "link": "http://arxiv.org/abs/2607.01212v1",
-        "date": "2026-07-01",
+        "title": "What LLM Agents Say When No One Is Watching: Social Structure and Latent Objective Emergence in Multi-Agent Debates",
+        "summary": "LLM agents will increasingly act in socially structured settings where role, audience, and relational context can shape what is advantageous or costly to say. We study whether such social structure, w",
+        "link": "http://arxiv.org/abs/2607.02507v1",
+        "date": "2026-07-02",
         "authors": [
-          "Chenyang Ma",
-          "Yue Yang",
-          "Radu Corcodel"
+          "Arman Ghaffarizadeh",
+          "Danyal Mohaddes",
+          "Aliakbar Izadkhah"
         ]
       },
       {
-        "title": "Are Performance-Optimization Benchmarks Reliably Measuring Coding Agents?",
-        "summary": "Repository-level performance-optimization benchmarks such as GSO, SWE-Perf and SWE-fficiency evaluate coding agents by applying patches to real repositories and comparing runtime against unoptimized b",
-        "link": "http://arxiv.org/abs/2607.01211v1",
-        "date": "2026-07-01",
+        "title": "Reasoning LLM Improves Speaker Recognition in Long-form TV Dramas",
+        "summary": "Long-form TV dramas present a formidable challenge for comprehensive video understanding, where deciphering complex storyline often relies on \\textbf{speaker recognition}, the task of accurately attri",
+        "link": "http://arxiv.org/abs/2607.02504v1",
+        "date": "2026-07-02",
         "authors": [
-          "Zhi Chen",
-          "Zhensu Sun",
-          "Yuling Shi"
+          "Yuxuan Li",
+          "Lingxi Xie",
+          "Xinyue Huo"
         ]
       },
       {
-        "title": "Distill to Detect: Exposing Stealth Biases in LLMs through Cartridge Distillation",
-        "summary": "Language models deployed in high-stakes roles can potentially favor certain entities, brands, or viewpoints, steering user decisions at scale. Such preferential biases can be introduced by any actor i",
-        "link": "http://arxiv.org/abs/2607.01208v1",
-        "date": "2026-07-01",
+        "title": "DemoPSD: Disagreement-Modulated Policy Self-Distillation",
+        "summary": "On-policy self-distillation (OPSD) has emerged as a practical method for training large language models (LLMs) to reason, where a single model acts as both the teacher and the student with different l",
+        "link": "http://arxiv.org/abs/2607.02502v1",
+        "date": "2026-07-02",
         "authors": [
-          "Shayan Talaei",
-          "Abhinav Chinta",
-          "Devvrit Khatri"
+          "Yunhe Li",
+          "Hao Shi",
+          "Wenhao Liu"
         ]
       }
     ],
-    "updated": "2026-07-02T06:01:00.458293Z"
+    "updated": "2026-07-03T05:55:06.793169Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
@@ -111,89 +112,91 @@
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "All-out Attack: Optimal Block Withholding Under Pay-Per-Share Scheme",
-        "summary": "Classical Block Withholding (BWH) attacks have been extensively studied in block-dependent reward schemes, where pool members are compensated upon a block discovery within the pool. However, most cont",
-        "link": "http://arxiv.org/abs/2607.01209v1",
-        "date": "2026-07-01",
+        "title": "SoK: A Taxonomy for Cybersecurity Incident Response Influence Factors",
+        "summary": "Cybersecurity incident response has emerged as a critical area of interest for both researchers and practitioners. The corpus of literature on cybersecurity incident response is expanding, yet a unifi",
+        "link": "http://arxiv.org/abs/2607.02451v1",
+        "date": "2026-07-02",
         "authors": [
-          "Mustafa Doger",
-          "Sennur Ulukus"
+          "Thomas Biege",
+          "Marius Brockhoff",
+          "Jonas Kaspereit"
         ]
       },
       {
-        "title": "Detecting Adversarial Evasion Attacks Against Autoencoder-Based Network Intrusion Detection Systems",
-        "summary": "Evasion attacks deliberately manipulate input to an ML-based system to produce an incorrect prediction while the manipulated input still appears benign. The PANDA framework has demonstrated that adver",
-        "link": "http://arxiv.org/abs/2607.01194v1",
-        "date": "2026-07-01",
+        "title": "HTTP REST API Structure Learning",
+        "summary": "Application Programming Interfaces (APIs) are essential in software development, enabling web services, mobile apps, and microservices. However, their widespread use introduces significant security ri",
+        "link": "http://arxiv.org/abs/2607.02442v1",
+        "date": "2026-07-02",
         "authors": [
-          "Niklas Bunzel",
-          "Ashim Siwakoti"
+          "Ran Dubin",
+          "Amit Dvir"
         ]
       },
       {
-        "title": "Antaeus: Hunting Repository-Level Logic Vulnerabilities via Context-Grounded LLM Reasoning",
-        "summary": "LLM-based vulnerability detectors have shown promising results in identifying memory-safety bugs and vulnerability classes whose violations can often be expressed through established security properti",
-        "link": "http://arxiv.org/abs/2607.01138v1",
-        "date": "2026-07-01",
+        "title": "Steerability via constraints: a substrate for scalable oversight of coding agents",
+        "summary": "Coding agents are capable; human oversight is the bottleneck. Unconstrained agents introduce security risks, erode codebase scalability, and make human review increasingly costly. We argue that the sa",
+        "link": "http://arxiv.org/abs/2607.02389v1",
+        "date": "2026-07-02",
         "authors": [
-          "Michele Armillotta",
-          "Nicol\u00f2 Romandini",
-          "Rebecca Montanari"
+          "Thomas Winninger"
         ]
       },
       {
-        "title": "Toward a Unified Security and Privacy Framework for AI-Native 6G Networks",
-        "summary": "Sixth Generation (6G) communication networks are expected to evolve into AI-native, highly autonomous ecosystems that integrate communication, computing, sensing, and artificial intelligence. While th",
-        "link": "http://arxiv.org/abs/2607.01019v1",
-        "date": "2026-07-01",
+        "title": "Cloak and Detonate: Scanner Evasion and Dynamic Detection of Agent Skill Malware",
+        "summary": "LLM coding agents increasingly rely on third-party agent skills from public marketplaces, which execute with the agent's privileges and create a software supply-chain attack surface: a malicious skill",
+        "link": "http://arxiv.org/abs/2607.02357v1",
+        "date": "2026-07-02",
         "authors": [
-          "Bidushi Barua",
-          "Ahsan Khan",
-          "Kangfeng Ye"
+          "Zimo Ji",
+          "Congying Xu",
+          "Zongjie Li"
         ]
       },
       {
-        "title": "The Binary Tree Mechanism is Optimal for Approximate Differentially Private Continual Counting",
-        "summary": "Private continual counting is a fundamental problem in differential privacy: given a binary stream of length $n$, where each $1$ corresponds to the contribution of one individual, the goal is to relea",
-        "link": "http://arxiv.org/abs/2607.00876v1",
-        "date": "2026-07-01",
+        "title": "Securing People and their Machines Against Major Faults",
+        "summary": "We consider grassroots platforms -- distributed systems of agents consisting of people identified by self-chosen public keys and their machines (smartphones) -- and wish to make them secure against \\e",
+        "link": "http://arxiv.org/abs/2607.02304v1",
+        "date": "2026-07-02",
         "authors": [
-          "Konstantina Bairaktari",
-          "Kasper Green Larsen"
+          "Ohad Eitan",
+          "Idit Keidar",
+          "Ehud Shapiro"
         ]
       },
       {
-        "title": "No Country for Old Privacy: The Evolving Challenges of Anonymity in Bitcoin",
-        "summary": "We present a longitudinal measurement study on the adoption of detectable, second-generation anonymisation protocols in the Bitcoin network, including CoinJoin, CoinSwap, CoinShuffle and Stealth Addre",
-        "link": "http://arxiv.org/abs/2607.00772v1",
-        "date": "2026-07-01",
+        "title": "Overview of Risk Assessment and Management for Intelligent Systems under the AI Act and Beyond",
+        "summary": "The society and emerging risk-based regulatory frameworks for AI underscore the need for rigorous risk assessment to ensure safe and reliable AI systems. In response to this imperative, this paper pre",
+        "link": "http://arxiv.org/abs/2607.02197v1",
+        "date": "2026-07-02",
         "authors": [
-          "Ben Hawkins",
-          "Joshua Levett",
-          "Siamak F. Shahandashti"
+          "Javier Irigoyen",
+          "Roberto Daza",
+          "Aythami Morales"
         ]
       },
       {
-        "title": "Forensic-Oriented Intrusion Detection Using Synthetic Network Traffic Data and Explainable Artificial Intelligence",
-        "summary": "Digital forensic investigations of network intrusions require analytical outputs that are traceable, reproducible, and court-defensible - requirements existing machine learning pipelines do not satisf",
-        "link": "http://arxiv.org/abs/2607.00763v1",
-        "date": "2026-07-01",
+        "title": "Privacy-Preserving and Verifiable Approximate Distributed Coded Computing",
+        "summary": "Distributed machine learning enables collaborative model training without centralizing data, but it also exposes learning processes to privacy leakage and malicious manipulation. Existing defenses typ",
+        "link": "http://arxiv.org/abs/2607.02187v1",
+        "date": "2026-07-02",
         "authors": [
-          "Jose Luis Vela Alonso",
-          "Carmen Pellicer"
+          "Xavier Mart\u00ednez-Lua\u00f1a",
+          "Alba Gude-Santos",
+          "Manuel Fern\u00e1ndez-Veiga"
         ]
       },
       {
-        "title": "SessionBound: Turning Enterprise Task Approval into Budgeted Database Sessions",
-        "summary": "Enterprise AI agents are useful for internal analysis, audit, compliance review, and operational investigation, but they create a difficult authorization problem. A manager or data owner may approve a",
-        "link": "http://arxiv.org/abs/2607.00751v1",
-        "date": "2026-07-01",
+        "title": "Behind the Refusal: Determining Guardrail Activation via Behavioral Monitoring",
+        "summary": "As Large Language Models (LLMs) and agentic systems become integrated into real-world applications, ensuring their safety and security is critical. Guardrail systems that detect and block malicious in",
+        "link": "http://arxiv.org/abs/2607.02121v1",
+        "date": "2026-07-02",
         "authors": [
-          "Minmin Wu"
+          "William Hackett",
+          "Peter Garraghan"
         ]
       }
     ],
-    "updated": "2026-07-02T06:01:00.458293Z"
+    "updated": "2026-07-03T05:55:06.793169Z"
   },
   "q-bio": {
     "label": "Biology",
