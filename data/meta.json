@@ -1,9 +1,9 @@
 {
-  "last_run": "2026-07-05T06:06:16.671323Z",
+  "last_run": "2026-07-06T06:37:48.536711Z",
   "errors": [
     "BDI: No BDI data from any source",
-    "ACLED OAuth: HTTP Error 403: Forbidden",
-    "FIRMS: <urlopen error [Errno 101] Network is unreachable>",
+    "ACLED OAuth: Expecting value: line 1 column 1 (char 0)",
+    "OpenSky: <urlopen error timed out>",
     "Restaurant: HTTP Error 400: Bad Request",
     "Population: HTTP Error 401: Unauthorized"
   ],
