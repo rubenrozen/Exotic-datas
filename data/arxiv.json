@@ -3,202 +3,201 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "From Fixed to Free Cameras: Calibration-Free View-Robust Vision-Language-Action Model",
-        "summary": "Real-world robot deployment rarely maintains the training-stage camera setup, where cameras often experience repositioning or remounting depending on actual scenarios. Existing view-robust Vision-Lang",
-        "link": "http://arxiv.org/abs/2607.05396v1",
-        "date": "2026-07-06",
+        "title": "ELSA3D: Elastic Semantic Anchoring for Unified 3D Understanding and Generation",
+        "summary": "Unified 3D foundation models aspire to generate 3D assets and reason about them in language within a single backbone, but their text-3D interaction remains largely implicit. Existing methods concatena",
+        "link": "http://arxiv.org/abs/2607.06565v1",
+        "date": "2026-07-07",
         "authors": [
-          "Wenhao Li",
-          "Xueying Jiang",
-          "Quanhao Qian"
+          "Tianjiao Yu",
+          "Xinzhuo Li",
+          "Yifan Shen"
         ]
       },
       {
-        "title": "Weak-to-Strong Generalization via Direct On-Policy Distillation",
-        "summary": "Reinforcement learning with verifiable rewards (RLVR) is a powerful recipe for improving language-model reasoning, but it is expensive to repeat on every new strong model because the target model must",
-        "link": "http://arxiv.org/abs/2607.05394v1",
-        "date": "2026-07-06",
+        "title": "Graph Convolutional Attention: A Spectral Perspective on Graph Denoising and Diffusion",
+        "summary": "Denoising graphs is a fundamental problem in graph learning and the core operation of graph diffusion models. Attention-based architectures like graph transformers have recently shown promise in denoi",
+        "link": "http://arxiv.org/abs/2607.06546v1",
+        "date": "2026-07-07",
         "authors": [
-          "Shiyuan Feng",
-          "Huan-ang Gao",
-          "Haohan Chi"
+          "Shervin Khalafi",
+          "Igor Krawczuk",
+          "Sergio Rozada"
         ]
       },
       {
-        "title": "Interpretable Human-Label-Free Deep Learning for Real-Bogus Classification with Uncertainty Quantification",
-        "summary": "Time-domain surveys generate many transient candidates, making Real-Bogus classification a critical step in automated discovery pipelines. Reliable labels are costly, while community labels can be noi",
-        "link": "http://arxiv.org/abs/2607.05393v1",
-        "date": "2026-07-06",
+        "title": "Rethinking Indic AI from a Lens of Cultural Heritage Preservation",
+        "summary": "As Artificial Intelligence (AI) makes inroads into different parts of the Indian subcontinent, there is significant interest in studying how AI impacts the linguistic and cultural foundations of this ",
+        "link": "http://arxiv.org/abs/2607.06544v1",
+        "date": "2026-07-07",
         "authors": [
-          "Rapha\u00ebl Bonnet-Guerrini",
-          "Bruno Sanchez",
-          "Dominique Fouchez"
+          "Aparna Madva",
+          "Sharath Srivatsa",
+          "Srinath Srinivasa"
         ]
       },
       {
-        "title": "LLM-as-a-Verifier: A General-Purpose Verification Framework",
-        "summary": "Scaling pre-training, post-training, and test-time compute have become the central paradigms for improving the capabilities of LLMs. In this work, we identify verification, the ability to determine th",
-        "link": "http://arxiv.org/abs/2607.05391v1",
-        "date": "2026-07-06",
+        "title": "The Large Cancer Assistant (LCA): A Model-Agnostic Orchestration Framework for Scalable Clinical Decision Support in Oncology",
+        "summary": "- Objective: Multimodal deep learning models in oncology are currently limited by monolithic designs that rigidly couple data ingestion, clinical routing, and artificial intelligence (AI) inference. T",
+        "link": "http://arxiv.org/abs/2607.06531v1",
+        "date": "2026-07-07",
         "authors": [
-          "Jacky Kwok",
-          "Shulu Li",
-          "Pranav Atreya"
+          "Ghassen Marrakchi",
+          "Basarab Matei"
         ]
       },
       {
-        "title": "Search Beyond What Can Be Taught: Evolving the Knowledge Boundary in Agentic Visual Generation",
-        "summary": "Visual generators excel at rendering, but they confidently fabricate what they do not know. User requests are unbounded, evolving, and deeply long-tailed: new characters, trending entities, post-cutof",
-        "link": "http://arxiv.org/abs/2607.05382v1",
-        "date": "2026-07-06",
+        "title": "RSF-GLLM: Bridging the Semantic Gap in Multi-Hop Knowledge Graph QA via Recurrent Soft-Flow and Decoupled LLM Generation",
+        "summary": "Multi-hop Question Answering over Knowledge Graphs faces a critical challenge: traditional retrieve-then-read pipelines break differentiability, preventing the retriever from learning to bridge the se",
+        "link": "http://arxiv.org/abs/2607.06527v1",
+        "date": "2026-07-07",
         "authors": [
-          "Haozhe Wang",
-          "Weijia Feng",
-          "Jinpeng Yu"
+          "Sambaran Bandyopadhyay",
+          "Ananth Muppidi"
         ]
       },
       {
-        "title": "What Does a Discrete Diffusion Model Learn?",
-        "summary": "What does a discrete diffusion model learn: a denoiser, a score ratio, or a bridge plug-in predictor? At the level of jump rates, these are one object in different coordinates, and reading a neural ne",
-        "link": "http://arxiv.org/abs/2607.05381v1",
-        "date": "2026-07-06",
+        "title": "DepthWeave-KV: Token-Adaptive Cross-Layer Residual Factorization for Long-Context KV Cache Compression",
+        "summary": "Long-context language model inference is increasingly limited by the memory bandwidth and capacity required to store key-value caches, yet existing compression methods often apply uniform budgets acro",
+        "link": "http://arxiv.org/abs/2607.06523v1",
+        "date": "2026-07-07",
         "authors": [
-          "Rodrigo Casado Noguerales",
-          "Bernhard Sch\u00f6lkopf",
-          "Thomas Hofmann"
+          "Anna Cordoba",
+          "Adam Puente Tercero",
+          "Nerea Angulo Hijo"
         ]
       },
       {
-        "title": "Cortex: A Bidirectionally Aligned Embodied Agent Framework for Long-horizon Manipulation",
-        "summary": "While recent Vision-Language-Action (VLA) models show promise toward generalist manipulation policies, they struggle with long-horizon tasks due to their Markovian nature-relying solely on current obs",
-        "link": "http://arxiv.org/abs/2607.05377v1",
-        "date": "2026-07-06",
+        "title": "Bridging Physical Reasoning and Task Generalization via Visual Action Outcome Reasoning Alignment",
+        "summary": "Vision-language models (VLMs) struggle to generalize in interactive physical reasoning, particularly under unseen tasks and environments. Two key failure modes are prominent: hallucinated chain-of-tho",
+        "link": "http://arxiv.org/abs/2607.06522v1",
+        "date": "2026-07-07",
         "authors": [
-          "Jiaqi Peng",
-          "Xiqian Yu",
-          "Delin Feng"
+          "Han-Jun Ko",
+          "Jr-Jen Chen",
+          "Haobo Yuan"
         ]
       },
       {
-        "title": "GaP: A Graph-as-Policy Multi-Agent Self-Learning Harness For Variational Automation Tasks",
-        "summary": "For robots to work reliably in commercial and industrial applications, can recent advances in agentic coding systems combine interpretable robot programming with the open-world adaptability of model-f",
-        "link": "http://arxiv.org/abs/2607.05369v1",
-        "date": "2026-07-06",
+        "title": "FreqDepthKV: Frequency-Guided Depth Sharing for Robust KV Cache Compression in Long-Context LLM Inference",
+        "summary": "Long-context LLM inference is increasingly limited by the memory and bandwidth cost of KV caches, yet aggressive compression can remove the layer-specific evidence needed for retrieval and multi-step ",
+        "link": "http://arxiv.org/abs/2607.06519v1",
+        "date": "2026-07-07",
         "authors": [
-          "Kaiyuan Chen",
-          "Shuangyu Xie",
-          "Letian Fu"
+          "Anna C\u00f3rdoba",
+          "Adam Puente Tercero",
+          "Nerea Angulo Hijo"
         ]
       }
     ],
-    "updated": "2026-07-07T06:10:15.593070Z"
+    "updated": "2026-07-08T05:22:47.173719Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-07-07T06:10:15.593070Z"
+    "updated": "2026-07-08T05:22:47.173719Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-07-07T06:10:15.593070Z"
+    "updated": "2026-07-08T05:22:47.173719Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-07-07T06:10:15.593070Z"
+    "updated": "2026-07-08T05:22:47.173719Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Selective Disclosure Watermarking for Large Language Models",
-        "summary": "Watermarking methods embed imperceptible and verifiable signals into text generated by large language models (LLMs). Existing approaches include zero-bit schemes for distinguishing synthetic text from",
-        "link": "http://arxiv.org/abs/2607.05353v1",
-        "date": "2026-07-06",
+        "title": "Crossroads: A Smart Contract Layer for Chain-Abstracted Assets",
+        "summary": "This paper introduces Crossroads, a smart contract layer for chain-abstracted assets. In Crossroads, assets from nearly any chain are represented on a single backend blockchain as ERC-20 tokens. As a ",
+        "link": "http://arxiv.org/abs/2607.06525v1",
+        "date": "2026-07-07",
         "authors": [
-          "Xuyang Chen",
-          "Xiang Li",
-          "Yangxinyu Xie"
+          "James Austgen",
+          "Dani Vilardell",
+          "Ari Juels"
         ]
       },
       {
-        "title": "PiSAs: Benchmarking Contextual Integrity in Multi-User Agentic Systems",
-        "summary": "As LLM agents evolve from single-user assistants into shared organizational infrastructure, new privacy risks emerge: inappropriate information may not only be exposed through outputs for external rec",
-        "link": "http://arxiv.org/abs/2607.05318v1",
-        "date": "2026-07-06",
+        "title": "Differentially private quantum sensor networks",
+        "summary": "Quantum sensing is a promising technology capable of demonstrating clear advantage over comparable classical techniques for precise measurement. One application of quantum sensing is in function estim",
+        "link": "http://arxiv.org/abs/2607.06521v1",
+        "date": "2026-07-07",
         "authors": [
-          "Shubham Gupta",
-          "Nazanin Mohammadi Sepahvand",
-          "Abhinav Kumar"
+          "Daniel J. Spencer",
+          "Kaiyan Shi",
+          "Emil T. Khabiboulline"
         ]
       },
       {
-        "title": "Learning Only What Valid Adapters Can Express: Subspace-Constrained Adaptation Against Fine-Tuning Poisoning",
-        "summary": "Parameter-efficient fine-tuning still leaves a broad space of behavior-changing updates reachable, so a poisoned objective can be represented and optimized. We study an alternative: adaptation constra",
-        "link": "http://arxiv.org/abs/2607.05300v1",
-        "date": "2026-07-06",
+        "title": "Assessing the Operational Impact of Poisoning Attacks over Augmented 3D Point Cloud Public Datasets for Connected and Autonomous Vehicles",
+        "summary": "Poisoning attacks against public datasets lead to major concerns, such as (i) misclassification of perceived objects when the poisoned data is used for training and (ii) embedding of backdoors that ma",
+        "link": "http://arxiv.org/abs/2607.06484v1",
+        "date": "2026-07-07",
         "authors": [
-          "Fabien Polly"
+          "Marwan Lazrag",
+          "Badis Hammi",
+          "Lorena Gonzalez-Manzano"
         ]
       },
       {
-        "title": "Untrusted Content Masking for Web Agents with Security Guarantees",
-        "summary": "Defenses that provide security guarantees against prompt injection attacks rely on strict isolation between trusted instructions and untrusted data. In text-based environments such as tool-use APIs, t",
-        "link": "http://arxiv.org/abs/2607.05277v1",
-        "date": "2026-07-06",
+        "title": "Lower Bounds for PIR with Preprocessing from Blackbox Cryptography",
+        "summary": "(shortened for arXiv metadata)   We study the limits of single-server private information retrieval (PIR) with preprocessing. Prior work has shown that single-server PIR with sublinear communication r",
+        "link": "http://arxiv.org/abs/2607.06451v1",
+        "date": "2026-07-07",
         "authors": [
-          "Kristina Nikoli\u0107",
-          "Egor Zverev",
-          "Javier Rando"
+          "Alexander Hoover",
+          "Giuseppe Persiano",
+          "Kevin Yeo"
         ]
       },
       {
-        "title": "Privacy-Preserving Robustness Verification for Neural Networks",
-        "summary": "Neural network verification and data privacy are inherently in tension: verification demands full access to model parameters and input data, yet both are increasingly restricted by privacy regulations",
-        "link": "http://arxiv.org/abs/2607.05251v1",
-        "date": "2026-07-06",
+        "title": "Automated Compliance Mapping in Cloud Security with Domain-Adapted Sentence Transformers",
+        "summary": "Mapping cloud security controls to technical metrics is currently a manual process. This paper proposes domain adaptation of Sentence Transformer models to automate it. We build a training corpus of 3",
+        "link": "http://arxiv.org/abs/2607.06364v1",
+        "date": "2026-07-07",
         "authors": [
-          "Nianyun Song",
-          "Xiaokun Luan",
-          "Yu Guo"
+          "John Bianchi",
+          "Luca Petrillo",
+          "Fabio Martinelli"
         ]
       },
       {
-        "title": "When Claws Remember but Do Not Tell: Stealthy Memory Injection in Persistent Personal Agents",
-        "summary": "Persistent personal agents combine long-term memory with access to users' external environments, enabling personalized foreground assistance and proactive background execution. This integration also c",
-        "link": "http://arxiv.org/abs/2607.05189v1",
-        "date": "2026-07-06",
+        "title": "Generalized Synthetic Image Detection with Enhanced RGB-Noise Representation Learning",
+        "summary": "The rapid advancement of large-scale generative models has accelerated the spread of highly deceptive AI-generated images, making generalized synthetic image detection a critical imperative. Existing ",
+        "link": "http://arxiv.org/abs/2607.06354v1",
+        "date": "2026-07-07",
         "authors": [
-          "Yechao Zhang",
-          "Shiqian Zhao",
-          "Jiawen Zhang"
+          "Zhen Li",
+          "Gang Cao",
+          "Tian Zhang"
         ]
       },
       {
-        "title": "Algebraic Modelings of the Supersingular Isogeny Problem",
-        "summary": "We present a new algebraic modeling of the Supersingular Isogeny Problem as a system of multivariate polynomial equations, in the case where the elliptic curves are connected by an isogeny whose degre",
-        "link": "http://arxiv.org/abs/2607.05160v1",
-        "date": "2026-07-06",
+        "title": "Dithered Gaussian Mechanism for Randomness-Efficient Differential Privacy",
+        "summary": "We present the dithered Gaussian mechanism, a novel alternative to the discrete Gaussian mechanism for differential privacy that discretizes the private output rather than the noise distribution itsel",
+        "link": "http://arxiv.org/abs/2607.06320v1",
+        "date": "2026-07-07",
         "authors": [
-          "Alessio Caminata",
-          "Andrea Sanguineti",
-          "Silvia Sconza"
+          "Nikita P. Kalinin",
+          "Rasmus Pagh"
         ]
       },
       {
-        "title": "Agent Data Injection Attacks are Realistic Threats to AI Agents",
-        "summary": "AI agents act on behalf of user prompts, consuming external data and taking actions based on the agent context. Prior research on AI agent security has primarily focused on indirect prompt injection (",
-        "link": "http://arxiv.org/abs/2607.05120v1",
-        "date": "2026-07-06",
+        "title": "FDIFormer:Protocol-Aware Transformer Learning for False Data Injection Attack Detection in Smart Grid Networks",
+        "summary": "Smart grids use communication networks and intelligent electronic devices for reliable, automated power system operation. As these systems become more interconnected, they are increasingly exposed to ",
+        "link": "http://arxiv.org/abs/2607.06213v1",
+        "date": "2026-07-07",
         "authors": [
-          "Woohyuk Choi",
-          "Juhee Kim",
-          "Taehyun Kang"
+          "Sandara Sathsarani Wijethunga",
+          "Muneeb Ul Hassan",
+          "Nasrin Sohrabi"
         ]
       }
     ],
-    "updated": "2026-07-07T06:10:15.593070Z"
+    "updated": "2026-07-08T05:22:47.173719Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -282,6 +281,6 @@
         ]
       }
     ],
-    "updated": "2026-07-07T06:10:15.593070Z"
+    "updated": "2026-07-08T05:22:47.173719Z"
   }
 }
