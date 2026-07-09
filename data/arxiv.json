@@ -3,201 +3,195 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "ELSA3D: Elastic Semantic Anchoring for Unified 3D Understanding and Generation",
-        "summary": "Unified 3D foundation models aspire to generate 3D assets and reason about them in language within a single backbone, but their text-3D interaction remains largely implicit. Existing methods concatena",
-        "link": "http://arxiv.org/abs/2607.06565v1",
-        "date": "2026-07-07",
+        "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+        "summary": "Structure-property relationships are foundational to biology, chemistry and materials science, where function, reactivity and physical response emerge from spatial, chemical and periodic organization.",
+        "link": "http://arxiv.org/abs/2607.07708v1",
+        "date": "2026-07-08",
         "authors": [
-          "Tianjiao Yu",
-          "Xinzhuo Li",
-          "Yifan Shen"
+          "Chen Tang",
+          "Yizhou Wang",
+          "Jianyu Wu"
         ]
       },
       {
-        "title": "Graph Convolutional Attention: A Spectral Perspective on Graph Denoising and Diffusion",
-        "summary": "Denoising graphs is a fundamental problem in graph learning and the core operation of graph diffusion models. Attention-based architectures like graph transformers have recently shown promise in denoi",
-        "link": "http://arxiv.org/abs/2607.06546v1",
-        "date": "2026-07-07",
+        "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+        "summary": "Limited memory language models (LMLMs) externalize factual knowledge during pretraining to a knowledge base (KB), rather than memorizing it in their weights. During generation, the model then fetches ",
+        "link": "http://arxiv.org/abs/2607.07707v1",
+        "date": "2026-07-08",
         "authors": [
-          "Shervin Khalafi",
-          "Igor Krawczuk",
-          "Sergio Rozada"
+          "Yair Feldman",
+          "Linxi Zhao",
+          "Nathan Godey"
         ]
       },
       {
-        "title": "Rethinking Indic AI from a Lens of Cultural Heritage Preservation",
-        "summary": "As Artificial Intelligence (AI) makes inroads into different parts of the Indian subcontinent, there is significant interest in studying how AI impacts the linguistic and cultural foundations of this ",
-        "link": "http://arxiv.org/abs/2607.06544v1",
-        "date": "2026-07-07",
+        "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
+        "summary": "Analytical workloads operating on data stored in external database systems face a fundamental bottleneck: data access is guarded entirely by the database driver, like JDBC or ODBC, forcing all reads t",
+        "link": "http://arxiv.org/abs/2607.07696v1",
+        "date": "2026-07-08",
         "authors": [
-          "Aparna Madva",
-          "Sharath Srivatsa",
-          "Srinath Srinivasa"
+          "Victor Giannakouris",
+          "Immanuel Trummer"
         ]
       },
       {
-        "title": "The Large Cancer Assistant (LCA): A Model-Agnostic Orchestration Framework for Scalable Clinical Decision Support in Oncology",
-        "summary": "- Objective: Multimodal deep learning models in oncology are currently limited by monolithic designs that rigidly couple data ingestion, clinical routing, and artificial intelligence (AI) inference. T",
-        "link": "http://arxiv.org/abs/2607.06531v1",
-        "date": "2026-07-07",
+        "title": "Institutional Red-Teaming: Deployment Rules, Not Just Models, Causally Shape Multi-Agent AI Safety",
+        "summary": "We introduce institutional red-teaming, an evaluation methodology for testing deployment rules in multi-agent AI: hold the agents, objectives, and task state fixed, vary only one rule, and attribute t",
+        "link": "http://arxiv.org/abs/2607.07695v1",
+        "date": "2026-07-08",
         "authors": [
-          "Ghassen Marrakchi",
-          "Basarab Matei"
+          "Yujiao Chen"
         ]
       },
       {
-        "title": "RSF-GLLM: Bridging the Semantic Gap in Multi-Hop Knowledge Graph QA via Recurrent Soft-Flow and Decoupled LLM Generation",
-        "summary": "Multi-hop Question Answering over Knowledge Graphs faces a critical challenge: traditional retrieve-then-read pipelines break differentiability, preventing the retriever from learning to bridge the se",
-        "link": "http://arxiv.org/abs/2607.06527v1",
-        "date": "2026-07-07",
+        "title": "Selective Timestep Weighting and Advantage-Based Replay for Sample-Efficient Diffusion RLHF",
+        "summary": "Reinforcement learning from human feedback (RLHF) has emerged as a powerful paradigm for aligning generative models with human preferences. However, applying RLHF to diffusion models remains highly fe",
+        "link": "http://arxiv.org/abs/2607.07693v1",
+        "date": "2026-07-08",
         "authors": [
-          "Sambaran Bandyopadhyay",
-          "Ananth Muppidi"
+          "Eric Zhu",
+          "Abhinav Shrivastava",
+          "Soumik Mukhopadhyay"
         ]
       },
       {
-        "title": "DepthWeave-KV: Token-Adaptive Cross-Layer Residual Factorization for Long-Context KV Cache Compression",
-        "summary": "Long-context language model inference is increasingly limited by the memory bandwidth and capacity required to store key-value caches, yet existing compression methods often apply uniform budgets acro",
-        "link": "http://arxiv.org/abs/2607.06523v1",
-        "date": "2026-07-07",
+        "title": "Agon: Competitive Cross-Model RL with Implicit Rival Grading of Reasoning",
+        "summary": "Reinforcement learning from verifiable rewards (e.g. GRPO) is the engine behind today's reasoning models, yet it grades only the final answer. On hard problems this trains models to write more rather ",
+        "link": "http://arxiv.org/abs/2607.07690v1",
+        "date": "2026-07-08",
         "authors": [
-          "Anna Cordoba",
-          "Adam Puente Tercero",
-          "Nerea Angulo Hijo"
+          "Vladislav Beliaev"
         ]
       },
       {
-        "title": "Bridging Physical Reasoning and Task Generalization via Visual Action Outcome Reasoning Alignment",
-        "summary": "Vision-language models (VLMs) struggle to generalize in interactive physical reasoning, particularly under unseen tasks and environments. Two key failure modes are prominent: hallucinated chain-of-tho",
-        "link": "http://arxiv.org/abs/2607.06522v1",
-        "date": "2026-07-07",
+        "title": "SkillCenter: A Large-Scale Source-Grounded Skill Library for Autonomous AI Agents",
+        "summary": "Autonomous AI agents can execute complex tasks with limited human review, yet they often lack the grounded operational knowledge to make their outputs not just executable but correct, secure, and main",
+        "link": "http://arxiv.org/abs/2607.07676v1",
+        "date": "2026-07-08",
         "authors": [
-          "Han-Jun Ko",
-          "Jr-Jen Chen",
-          "Haobo Yuan"
+          "Tianming Sha",
+          "Yue Zhao",
+          "Lichao Sun"
         ]
       },
       {
-        "title": "FreqDepthKV: Frequency-Guided Depth Sharing for Robust KV Cache Compression in Long-Context LLM Inference",
-        "summary": "Long-context LLM inference is increasingly limited by the memory and bandwidth cost of KV caches, yet aggressive compression can remove the layer-specific evidence needed for retrieval and multi-step ",
-        "link": "http://arxiv.org/abs/2607.06519v1",
-        "date": "2026-07-07",
+        "title": "DiaLLM: An Investigation into the Robustness-Generation Gap in English Dialect Adaptation",
+        "summary": "Large language models increasingly \\emph{understand} dialectal English, yet still \\emph{produce} only standard, US-leaning English, leaving dialectal generation, the harder half of the problem, largel",
+        "link": "http://arxiv.org/abs/2607.07669v1",
+        "date": "2026-07-08",
         "authors": [
-          "Anna C\u00f3rdoba",
-          "Adam Puente Tercero",
-          "Nerea Angulo Hijo"
+          "Jordan Painter",
+          "Dipankar Srirag",
+          "Adarsh Kappiyath"
         ]
       }
     ],
-    "updated": "2026-07-08T05:22:47.173719Z"
+    "updated": "2026-07-09T06:06:43.342219Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-07-08T05:22:47.173719Z"
+    "updated": "2026-07-09T06:06:43.342219Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-07-08T05:22:47.173719Z"
+    "updated": "2026-07-09T06:06:43.342219Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-07-08T05:22:47.173719Z"
+    "updated": "2026-07-09T06:06:43.342219Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Crossroads: A Smart Contract Layer for Chain-Abstracted Assets",
-        "summary": "This paper introduces Crossroads, a smart contract layer for chain-abstracted assets. In Crossroads, assets from nearly any chain are represented on a single backend blockchain as ERC-20 tokens. As a ",
-        "link": "http://arxiv.org/abs/2607.06525v1",
-        "date": "2026-07-07",
+        "title": "Modeling Failure Dynamics in Time-Constrained Authentication Systems: Evidence of a Success Cliff in USSD Workflows",
+        "summary": "Time-constrained interactive systems such as USSD (Unstructured Supplementary Service Data)-based financial services operate under strict session limits and sequential user interaction. While stronger",
+        "link": "http://arxiv.org/abs/2607.07650v1",
+        "date": "2026-07-08",
         "authors": [
-          "James Austgen",
-          "Dani Vilardell",
-          "Ari Juels"
+          "Aklile Seyoum Mamo",
+          "Amanuel Kebede",
+          "Anny Christelle Irakoze"
         ]
       },
       {
-        "title": "Differentially private quantum sensor networks",
-        "summary": "Quantum sensing is a promising technology capable of demonstrating clear advantage over comparable classical techniques for precise measurement. One application of quantum sensing is in function estim",
-        "link": "http://arxiv.org/abs/2607.06521v1",
-        "date": "2026-07-07",
+        "title": "Unlearning to Protect: A Distilled Reinforcement Learning Framework with Privacy-Preserving Feature Unlearning and XAI for IoT Security",
+        "summary": "Botnets pose a significant cybersecurity threat, enabling attacks such as DDoS, data theft, and service disruptions on IoT devices. These devices often lack built-in botnet traffic filtering, leaving ",
+        "link": "http://arxiv.org/abs/2607.07635v1",
+        "date": "2026-07-08",
         "authors": [
-          "Daniel J. Spencer",
-          "Kaiyan Shi",
-          "Emil T. Khabiboulline"
+          "Md. Nahid Hasan",
+          "Golam Rabiul Alam"
         ]
       },
       {
-        "title": "Assessing the Operational Impact of Poisoning Attacks over Augmented 3D Point Cloud Public Datasets for Connected and Autonomous Vehicles",
-        "summary": "Poisoning attacks against public datasets lead to major concerns, such as (i) misclassification of perceived objects when the poisoned data is used for training and (ii) embedding of backdoors that ma",
-        "link": "http://arxiv.org/abs/2607.06484v1",
-        "date": "2026-07-07",
+        "title": "Embedded Blockchain Infrastructure Management (eBIM): A RISC-V-Empowered Hardware--Software Co-Design Framework Towards Trustworthy Blockchain",
+        "summary": "Blockchain systems are undergoing a fundamental transition from decentralized ledgers for digital assets to general-purpose trust infrastructures for verifiable computation, decentralized physical res",
+        "link": "http://arxiv.org/abs/2607.07625v1",
+        "date": "2026-07-08",
         "authors": [
-          "Marwan Lazrag",
-          "Badis Hammi",
-          "Lorena Gonzalez-Manzano"
+          "Qinglin Yang",
+          "Yuan Liu",
+          "Yaoyao Zhang"
         ]
       },
       {
-        "title": "Lower Bounds for PIR with Preprocessing from Blackbox Cryptography",
-        "summary": "(shortened for arXiv metadata)   We study the limits of single-server private information retrieval (PIR) with preprocessing. Prior work has shown that single-server PIR with sublinear communication r",
-        "link": "http://arxiv.org/abs/2607.06451v1",
-        "date": "2026-07-07",
+        "title": "NARAD: Non-colluding Aggregator-oblivious Record-And-Decrypt",
+        "summary": "Electronic voting must keep individual ballots private while letting anyone verify the final tally. This paper presents an architecture that meets both goals without a trusted key dealer: each voter e",
+        "link": "http://arxiv.org/abs/2607.07596v1",
+        "date": "2026-07-08",
         "authors": [
-          "Alexander Hoover",
-          "Giuseppe Persiano",
-          "Kevin Yeo"
+          "Akshit Vakati Venkata",
+          "Rajat Dugar",
+          "Ayush Adarsh"
         ]
       },
       {
-        "title": "Automated Compliance Mapping in Cloud Security with Domain-Adapted Sentence Transformers",
-        "summary": "Mapping cloud security controls to technical metrics is currently a manual process. This paper proposes domain adaptation of Sentence Transformer models to automate it. We build a training corpus of 3",
-        "link": "http://arxiv.org/abs/2607.06364v1",
-        "date": "2026-07-07",
+        "title": "Multi-Class vs. Multi-Label BERT for CVE-to-CWE Mapping: How Taxonomy Structure Shapes the Errors",
+        "summary": "Assigning Common Weakness Enumeration (CWE) categories to Common Vulnerabilities and Exposures (CVE) records remains an important but largely manual step in vulnerability analysis. We study this task ",
+        "link": "http://arxiv.org/abs/2607.07573v1",
+        "date": "2026-07-08",
         "authors": [
-          "John Bianchi",
-          "Luca Petrillo",
-          "Fabio Martinelli"
+          "Ana Schwengber Kelm",
+          "Christian Bockermann",
+          "J\u00f6rg Frochte"
         ]
       },
       {
-        "title": "Generalized Synthetic Image Detection with Enhanced RGB-Noise Representation Learning",
-        "summary": "The rapid advancement of large-scale generative models has accelerated the spread of highly deceptive AI-generated images, making generalized synthetic image detection a critical imperative. Existing ",
-        "link": "http://arxiv.org/abs/2607.06354v1",
-        "date": "2026-07-07",
+        "title": "Beyond Attack-Success Rate: Action-Graded Severity Scale for Tool-Using AI Agents",
+        "summary": "Agentic red-teaming benchmarks report whether an injected agent was compromised as a single bit: the attack succeeded, or it did not. We argue that this binary attack-success rate discards the informa",
+        "link": "http://arxiv.org/abs/2607.07474v1",
+        "date": "2026-07-08",
         "authors": [
-          "Zhen Li",
-          "Gang Cao",
-          "Tian Zhang"
+          "Harry Owiredu-Ashley"
         ]
       },
       {
-        "title": "Dithered Gaussian Mechanism for Randomness-Efficient Differential Privacy",
-        "summary": "We present the dithered Gaussian mechanism, a novel alternative to the discrete Gaussian mechanism for differential privacy that discretizes the private output rather than the noise distribution itsel",
-        "link": "http://arxiv.org/abs/2607.06320v1",
-        "date": "2026-07-07",
+        "title": "Where to Intervene? Benchmarking Fairness-Aware Learning on Differentially Private Synthetic Tabular Data",
+        "summary": "Machine learning models are increasingly deployed in high-stakes domains, raising concerns about both privacy and fairness. Differential Privacy (DP) has become a gold standard for privacy-preserving ",
+        "link": "http://arxiv.org/abs/2607.07471v1",
+        "date": "2026-07-08",
         "authors": [
-          "Nikita P. Kalinin",
-          "Rasmus Pagh"
+          "Vin\u00edcius Gabriel Angelozzi",
+          "H\u00e9ber H. Arcolezi"
         ]
       },
       {
-        "title": "FDIFormer:Protocol-Aware Transformer Learning for False Data Injection Attack Detection in Smart Grid Networks",
-        "summary": "Smart grids use communication networks and intelligent electronic devices for reliable, automated power system operation. As these systems become more interconnected, they are increasingly exposed to ",
-        "link": "http://arxiv.org/abs/2607.06213v1",
-        "date": "2026-07-07",
+        "title": "Mitigating Taint-Style Vulnerabilities in MCP Servers via Security-Aware Tool Descriptions",
+        "summary": "Large language models (LLMs) are increasingly deployed as autonomous agents that interact with external tools and services via the Model Context Protocol (MCP), a standardized interface for dynamic to",
+        "link": "http://arxiv.org/abs/2607.07461v1",
+        "date": "2026-07-08",
         "authors": [
-          "Sandara Sathsarani Wijethunga",
-          "Muneeb Ul Hassan",
-          "Nasrin Sohrabi"
+          "Yang Shi",
+          "Jiaheng Fu",
+          "Yihe Huang"
         ]
       }
     ],
-    "updated": "2026-07-08T05:22:47.173719Z"
+    "updated": "2026-07-09T06:06:43.342219Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -281,6 +275,6 @@
         ]
       }
     ],
-    "updated": "2026-07-08T05:22:47.173719Z"
+    "updated": "2026-07-09T06:06:43.342219Z"
   }
 }
