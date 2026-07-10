@@ -3,195 +3,200 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
-        "summary": "Structure-property relationships are foundational to biology, chemistry and materials science, where function, reactivity and physical response emerge from spatial, chemical and periodic organization.",
-        "link": "http://arxiv.org/abs/2607.07708v1",
-        "date": "2026-07-08",
+        "title": "OpenCoF: Learning to Reason Through Video Generation",
+        "summary": "Reasoning has become a core capability for large models, especially when reliable decisions require understanding logical consequences. Recent video generation models offer a reasoning path distinct f",
+        "link": "http://arxiv.org/abs/2607.08763v1",
+        "date": "2026-07-09",
         "authors": [
-          "Chen Tang",
-          "Yizhou Wang",
-          "Jianyu Wu"
+          "Xinyan Chen",
+          "Ziyu Guo",
+          "Renrui Zhang"
         ]
       },
       {
-        "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
-        "summary": "Limited memory language models (LMLMs) externalize factual knowledge during pretraining to a knowledge base (KB), rather than memorizing it in their weights. During generation, the model then fetches ",
-        "link": "http://arxiv.org/abs/2607.07707v1",
-        "date": "2026-07-08",
+        "title": "Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation",
+        "summary": "Scientific ideas rarely start from a blank page. They inherit mechanisms, repair known limitations, and recombine pieces of earlier work, much like biological genomes. Current benchmarks still say lit",
+        "link": "http://arxiv.org/abs/2607.08758v1",
+        "date": "2026-07-09",
         "authors": [
-          "Yair Feldman",
-          "Linxi Zhao",
-          "Nathan Godey"
+          "Yifan Zhou",
+          "Qihao Yang",
+          "Yan Li"
         ]
       },
       {
-        "title": "Breaking Database Lock-in: Agentic Regeneration of High Performance Storage Readers for Database Bypass",
-        "summary": "Analytical workloads operating on data stored in external database systems face a fundamental bottleneck: data access is guarded entirely by the database driver, like JDBC or ODBC, forcing all reads t",
-        "link": "http://arxiv.org/abs/2607.07696v1",
-        "date": "2026-07-08",
+        "title": "SLORR: Simple and Efficient In-Training Low-Rank Regularization",
+        "summary": "Low-rank factorization is widely used to compress neural networks, but modern models are often not naturally amenable to aggressive factorization without significant accuracy loss. Existing training-t",
+        "link": "http://arxiv.org/abs/2607.08754v1",
+        "date": "2026-07-09",
         "authors": [
-          "Victor Giannakouris",
-          "Immanuel Trummer"
+          "David Gonz\u00e1lez-Mart\u00ednez",
+          "Shiwei Liu"
         ]
       },
       {
-        "title": "Institutional Red-Teaming: Deployment Rules, Not Just Models, Causally Shape Multi-Agent AI Safety",
-        "summary": "We introduce institutional red-teaming, an evaluation methodology for testing deployment rules in multi-agent AI: hold the agents, objectives, and task state fixed, vary only one rule, and attribute t",
-        "link": "http://arxiv.org/abs/2607.07695v1",
-        "date": "2026-07-08",
+        "title": "Using AI-based Learning Assistants in Higher Education: A Large-Scale Descriptive Analysis",
+        "summary": "In this study, we present a large-scale descriptive analysis of the use of an AI-based learning assistant (Syntea) in higher education. Based on objective log data from 77,543 students enrolled in dis",
+        "link": "http://arxiv.org/abs/2607.08748v1",
+        "date": "2026-07-09",
         "authors": [
-          "Yujiao Chen"
+          "Kristina Schaaff",
+          "Quintus Stierstorfer",
+          "Valerie Heckel"
         ]
       },
       {
-        "title": "Selective Timestep Weighting and Advantage-Based Replay for Sample-Efficient Diffusion RLHF",
-        "summary": "Reinforcement learning from human feedback (RLHF) has emerged as a powerful paradigm for aligning generative models with human preferences. However, applying RLHF to diffusion models remains highly fe",
-        "link": "http://arxiv.org/abs/2607.07693v1",
-        "date": "2026-07-08",
+        "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
+        "summary": "While UMAP is widely used for exploring high-dimensional data, typical workflows focus on its lower-dimensional embedding, largely overlooking the rich k-nearest-neighbor (kNN) graph that UMAP constru",
+        "link": "http://arxiv.org/abs/2607.08746v1",
+        "date": "2026-07-09",
         "authors": [
-          "Eric Zhu",
-          "Abhinav Shrivastava",
-          "Soumik Mukhopadhyay"
+          "Duen Horng Chau",
+          "Donghao Ren",
+          "Fred Hohman"
         ]
       },
       {
-        "title": "Agon: Competitive Cross-Model RL with Implicit Rival Grading of Reasoning",
-        "summary": "Reinforcement learning from verifiable rewards (e.g. GRPO) is the engine behind today's reasoning models, yet it grades only the final answer. On hard problems this trains models to write more rather ",
-        "link": "http://arxiv.org/abs/2607.07690v1",
-        "date": "2026-07-08",
+        "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+        "summary": "Recent advances in Vision-Language Models, Large Language Models, and Multimodal Large Language Models have improved autonomous driving tasks such as scene understanding, decision making, trajectory p",
+        "link": "http://arxiv.org/abs/2607.08745v1",
+        "date": "2026-07-09",
         "authors": [
-          "Vladislav Beliaev"
+          "Siddharth Damodharan",
+          "Radhika Gupta",
+          "Ali Alshami"
         ]
       },
       {
-        "title": "SkillCenter: A Large-Scale Source-Grounded Skill Library for Autonomous AI Agents",
-        "summary": "Autonomous AI agents can execute complex tasks with limited human review, yet they often lack the grounded operational knowledge to make their outputs not just executable but correct, secure, and main",
-        "link": "http://arxiv.org/abs/2607.07676v1",
-        "date": "2026-07-08",
+        "title": "Workflow as Knowledge: Semantic Persistence for LLM-Mediated Workflows",
+        "summary": "Large language model (LLM) applications increasingly use explicit workflows for tool use, retrieval, branching, checkpointing, and human approval. Existing workflow systems already address many execut",
+        "link": "http://arxiv.org/abs/2607.08740v1",
+        "date": "2026-07-09",
         "authors": [
-          "Tianming Sha",
-          "Yue Zhao",
-          "Lichao Sun"
+          "Emanuele Quinto",
+          "Carlo Andrea Rozzi",
+          "Francesco Zanitti"
         ]
       },
       {
-        "title": "DiaLLM: An Investigation into the Robustness-Generation Gap in English Dialect Adaptation",
-        "summary": "Large language models increasingly \\emph{understand} dialectal English, yet still \\emph{produce} only standard, US-leaning English, leaving dialectal generation, the harder half of the problem, largel",
-        "link": "http://arxiv.org/abs/2607.07669v1",
-        "date": "2026-07-08",
+        "title": "The Illusion of Equivalency: Statistical Characterization of Quantization Effects in LLMs",
+        "summary": "Post-training quantization is widely used to deploy large language models in resource-constrained settings, yet its evaluation relies almost exclusively on accuracy and perplexity. We show that these ",
+        "link": "http://arxiv.org/abs/2607.08734v1",
+        "date": "2026-07-09",
         "authors": [
-          "Jordan Painter",
-          "Dipankar Srirag",
-          "Adarsh Kappiyath"
+          "Baha Rababah",
+          "Cuneyt Gurcan Akcora",
+          "Carson K. Leung"
         ]
       }
     ],
-    "updated": "2026-07-09T06:06:43.342219Z"
+    "updated": "2026-07-10T06:05:19.033708Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-07-09T06:06:43.342219Z"
+    "updated": "2026-07-10T06:05:19.033708Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-07-09T06:06:43.342219Z"
+    "updated": "2026-07-10T06:05:19.033708Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-07-09T06:06:43.342219Z"
+    "updated": "2026-07-10T06:05:19.033708Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Modeling Failure Dynamics in Time-Constrained Authentication Systems: Evidence of a Success Cliff in USSD Workflows",
-        "summary": "Time-constrained interactive systems such as USSD (Unstructured Supplementary Service Data)-based financial services operate under strict session limits and sequential user interaction. While stronger",
-        "link": "http://arxiv.org/abs/2607.07650v1",
-        "date": "2026-07-08",
+        "title": "TRM-Raft: A Byzantine-Resistant Raft Consensus via Integrated Trust and Reputation Model",
+        "summary": "Internetware envisions autonomous software entities collaborating over the open Internet. Raft consensus is widely adopted for its simplicity and performance in distributed coordination, e.g., service",
+        "link": "http://arxiv.org/abs/2607.08666v1",
+        "date": "2026-07-09",
         "authors": [
-          "Aklile Seyoum Mamo",
-          "Amanuel Kebede",
-          "Anny Christelle Irakoze"
+          "Jie Zhang",
+          "Xubo Fan",
+          "Xiaohong Li"
         ]
       },
       {
-        "title": "Unlearning to Protect: A Distilled Reinforcement Learning Framework with Privacy-Preserving Feature Unlearning and XAI for IoT Security",
-        "summary": "Botnets pose a significant cybersecurity threat, enabling attacks such as DDoS, data theft, and service disruptions on IoT devices. These devices often lack built-in botnet traffic filtering, leaving ",
-        "link": "http://arxiv.org/abs/2607.07635v1",
-        "date": "2026-07-08",
+        "title": "Stablecoins under Stress in a National Economy: Transaction-Level Evidence from Austrian Crypto-Asset Service Providers",
+        "summary": "Cryptoassets are increasingly entangled with the traditional financial system, and how this activity integrates into national economies and behaves under stress bears on financial stability and the de",
+        "link": "http://arxiv.org/abs/2607.08524v1",
+        "date": "2026-07-09",
         "authors": [
-          "Md. Nahid Hasan",
-          "Golam Rabiul Alam"
+          "Pietro Saggese",
+          "Michael Sigmund",
+          "Burkhard Raunig"
         ]
       },
       {
-        "title": "Embedded Blockchain Infrastructure Management (eBIM): A RISC-V-Empowered Hardware--Software Co-Design Framework Towards Trustworthy Blockchain",
-        "summary": "Blockchain systems are undergoing a fundamental transition from decentralized ledgers for digital assets to general-purpose trust infrastructures for verifiable computation, decentralized physical res",
-        "link": "http://arxiv.org/abs/2607.07625v1",
-        "date": "2026-07-08",
+        "title": "Locality of Curve-Decoding and Improved Proximity Gaps",
+        "summary": "Proximity gaps are a property of error correcting codes that arise in the study of Interactive Oracle Proofs (IOPs) and Succinct Non-interactive Arguments of Zero Knowledge (SNARKs). Recent work of Go",
+        "link": "http://arxiv.org/abs/2607.08516v1",
+        "date": "2026-07-09",
         "authors": [
-          "Qinglin Yang",
-          "Yuan Liu",
-          "Yaoyao Zhang"
+          "Rohan Goyal",
+          "Venkatesan Guruswami",
+          "Yihang Sun"
         ]
       },
       {
-        "title": "NARAD: Non-colluding Aggregator-oblivious Record-And-Decrypt",
-        "summary": "Electronic voting must keep individual ballots private while letting anyone verify the final tally. This paper presents an architecture that meets both goals without a trusted key dealer: each voter e",
-        "link": "http://arxiv.org/abs/2607.07596v1",
-        "date": "2026-07-08",
+        "title": "TRACE: A Two-Channel Robust Attribution Watermark via Complementary Embeddings for LLM-Agent Trajectories",
+        "summary": "LLM agents reach users through resellers, who may rebrand a developer's agent or substitute a cheaper model. When provenance is disputed, attribution rests on the trajectory log (the record of tool ca",
+        "link": "http://arxiv.org/abs/2607.08400v1",
+        "date": "2026-07-09",
         "authors": [
-          "Akshit Vakati Venkata",
-          "Rajat Dugar",
-          "Ayush Adarsh"
+          "Zheng Gao",
+          "Xiaoyu Li",
+          "Xiaoyan Feng"
         ]
       },
       {
-        "title": "Multi-Class vs. Multi-Label BERT for CVE-to-CWE Mapping: How Taxonomy Structure Shapes the Errors",
-        "summary": "Assigning Common Weakness Enumeration (CWE) categories to Common Vulnerabilities and Exposures (CVE) records remains an important but largely manual step in vulnerability analysis. We study this task ",
-        "link": "http://arxiv.org/abs/2607.07573v1",
-        "date": "2026-07-08",
+        "title": "Token-Flow Firewall: Semantic Runtime Auditing for Persistent AI Agents",
+        "summary": "Persistent AI agents extend large language models (LLMs) beyond single-turn interaction into long-lived software systems. Unlike traditional chat assistants, unsafe content in these agents can propaga",
+        "link": "http://arxiv.org/abs/2607.08395v1",
+        "date": "2026-07-09",
         "authors": [
-          "Ana Schwengber Kelm",
-          "Christian Bockermann",
-          "J\u00f6rg Frochte"
+          "Puji Wang",
+          "Yingchen Zhang",
+          "Ruqing Zhang"
         ]
       },
       {
-        "title": "Beyond Attack-Success Rate: Action-Graded Severity Scale for Tool-Using AI Agents",
-        "summary": "Agentic red-teaming benchmarks report whether an injected agent was compromised as a single bit: the attack succeeded, or it did not. We argue that this binary attack-success rate discards the informa",
-        "link": "http://arxiv.org/abs/2607.07474v1",
-        "date": "2026-07-08",
+        "title": "Secure QR Codes: Authenticity Verification via EdDSA Signatures and CBOR Certificates",
+        "summary": "QR codes are a ubiquitous part of daily life, widely trusted by millions. However, their lack of inherent security features has given rise to critical attack vectors, such as spoofing (quishing) on pu",
+        "link": "http://arxiv.org/abs/2607.08383v1",
+        "date": "2026-07-09",
         "authors": [
-          "Harry Owiredu-Ashley"
+          "Wojciech Jonderko",
+          "Wojciech Wodo"
         ]
       },
       {
-        "title": "Where to Intervene? Benchmarking Fairness-Aware Learning on Differentially Private Synthetic Tabular Data",
-        "summary": "Machine learning models are increasingly deployed in high-stakes domains, raising concerns about both privacy and fairness. Differential Privacy (DP) has become a gold standard for privacy-preserving ",
-        "link": "http://arxiv.org/abs/2607.07471v1",
-        "date": "2026-07-08",
+        "title": "Reverse Engineering Compliance: A Dual-Graph Verification Framework for Auditing Legacy IT Security Concepts",
+        "summary": "The NIS-2 Directive increases the need for continuous, auditable compliance evidence and motivates a shift from document-based compliance toward machine-readable compliance artifacts. The Open Securit",
+        "link": "http://arxiv.org/abs/2607.08292v1",
+        "date": "2026-07-09",
         "authors": [
-          "Vin\u00edcius Gabriel Angelozzi",
-          "H\u00e9ber H. Arcolezi"
+          "Lea Roxanne Muth",
+          "Marian Margraf"
         ]
       },
       {
-        "title": "Mitigating Taint-Style Vulnerabilities in MCP Servers via Security-Aware Tool Descriptions",
-        "summary": "Large language models (LLMs) are increasingly deployed as autonomous agents that interact with external tools and services via the Model Context Protocol (MCP), a standardized interface for dynamic to",
-        "link": "http://arxiv.org/abs/2607.07461v1",
-        "date": "2026-07-08",
+        "title": "From Legacy Documentation to OSCAL: An MCP-Based Agent Pipeline for Threat-Informed Continuous Compliance in Critical Infrastructure",
+        "summary": "In critical infrastructure, operational technology environments often cannot be actively scanned, and yet active system feedback is needed for risk assessment and compliance. This paper presents a non",
+        "link": "http://arxiv.org/abs/2607.08288v1",
+        "date": "2026-07-09",
         "authors": [
-          "Yang Shi",
-          "Jiaheng Fu",
-          "Yihe Huang"
+          "Lea Roxanne Muth",
+          "Marian Margraf"
         ]
       }
     ],
-    "updated": "2026-07-09T06:06:43.342219Z"
+    "updated": "2026-07-10T06:05:19.033708Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -275,6 +280,6 @@
         ]
       }
     ],
-    "updated": "2026-07-09T06:06:43.342219Z"
+    "updated": "2026-07-10T06:05:19.033708Z"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-07-09T06:06:43.342219Z",
+  "last_run": "2026-07-10T06:05:19.033708Z",
   "errors": [
     "BDI: No BDI data from any source",
     "ACLED OAuth: HTTP Error 403: Forbidden",
