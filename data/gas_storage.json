@@ -1,13 +1,7 @@
 {
-  "eu_avg": 51.3,
-  "trend": 0.2,
+  "eu_avg": 51.5,
+  "trend": 0.21,
   "series": [
-    {
-      "date": "2025-09-13",
-      "pct": 80.3,
-      "gasInStorage": 914.7,
-      "trend": 0.24
-    },
     {
       "date": "2025-09-14",
       "pct": 80.6,
@@ -1801,61 +1795,67 @@
       "pct": 51.3,
       "gasInStorage": 580.0,
       "trend": 0.2
+    },
+    {
+      "date": "2026-07-10",
+      "pct": 51.5,
+      "gasInStorage": 582.3,
+      "trend": 0.21
     }
   ],
   "countries": {
     "DE": {
       "pct": 43.6,
-      "trend": 0.11,
-      "gasInStorage": 107.5
+      "trend": 0.09,
+      "gasInStorage": 107.7
     },
     "FR": {
       "pct": 50.8,
-      "trend": 0.05,
+      "trend": 0.04,
       "gasInStorage": 62.9
     },
     "IT": {
-      "pct": 69.8,
-      "trend": 0.23,
-      "gasInStorage": 142.0
+      "pct": 70.0,
+      "trend": 0.24,
+      "gasInStorage": 142.5
     },
     "ES": {
-      "pct": 73.2,
+      "pct": 73.1,
       "trend": -0.09,
       "gasInStorage": 26.2
     },
     "NL": {
-      "pct": 29.1,
-      "trend": 0.33,
-      "gasInStorage": 41.8
+      "pct": 29.4,
+      "trend": 0.37,
+      "gasInStorage": 42.3
     },
     "AT": {
-      "pct": 56.2,
-      "trend": 0.23,
-      "gasInStorage": 56.4
+      "pct": 56.4,
+      "trend": 0.19,
+      "gasInStorage": 56.6
     },
     "BE": {
-      "pct": 25.6,
-      "trend": 0.19,
-      "gasInStorage": 1.9
+      "pct": 25.8,
+      "trend": 0.25,
+      "gasInStorage": 2.0
     },
     "PL": {
-      "pct": 75.0,
+      "pct": 75.6,
       "trend": 0.53,
-      "gasInStorage": 27.7
+      "gasInStorage": 27.8
     },
     "CZ": {
-      "pct": 52.0,
-      "trend": 0.37,
-      "gasInStorage": 23.6
+      "pct": 52.4,
+      "trend": 0.4,
+      "gasInStorage": 23.7
     },
     "HU": {
-      "pct": 53.3,
-      "trend": 0.23,
-      "gasInStorage": 36.1
+      "pct": 53.6,
+      "trend": 0.25,
+      "gasInStorage": 36.3
     }
   },
   "alert_threshold": 20.0,
-  "score": 51,
-  "updated": "2026-07-11T05:14:41.884723Z"
+  "score": 52,
+  "updated": "2026-07-12T05:30:02.051707Z"
 }
