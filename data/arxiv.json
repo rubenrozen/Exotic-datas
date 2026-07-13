@@ -3,200 +3,202 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "OpenCoF: Learning to Reason Through Video Generation",
-        "summary": "Reasoning has become a core capability for large models, especially when reliable decisions require understanding logical consequences. Recent video generation models offer a reasoning path distinct f",
-        "link": "http://arxiv.org/abs/2607.08763v1",
-        "date": "2026-07-09",
+        "title": "PHINN-EEG: Topological Time-Series Analysis of Dream-State EEG -- Dynamic Betti Curves for Dream Content Classification and Topology-Conditioned Neural Signal Synthesis",
+        "summary": "Current electroencephalography (EEG)-based dream detection relies on power spectral density (PSD) and statistical moment features, achieving a state-of-the-art area under the receiver operating charac",
+        "link": "http://arxiv.org/abs/2607.09662v1",
+        "date": "2026-07-10",
         "authors": [
-          "Xinyan Chen",
-          "Ziyu Guo",
-          "Renrui Zhang"
+          "Ren Takahashi",
+          "Emre Yusuf",
+          "Jayabrata Bhaduri"
         ]
       },
       {
-        "title": "Ideas Have Genomes: Benchmarking Scientific Lineage Reasoning and Lineage-Grounded Idea Generation",
-        "summary": "Scientific ideas rarely start from a blank page. They inherit mechanisms, repair known limitations, and recombine pieces of earlier work, much like biological genomes. Current benchmarks still say lit",
-        "link": "http://arxiv.org/abs/2607.08758v1",
-        "date": "2026-07-09",
+        "title": "Scalable Visual Pretraining for Language Intelligence",
+        "summary": "The rapid progress of large foundation models has been driven predominantly by pretraining on large-scale text corpora. However, many forms of knowledge are conveyed through visual representations, wh",
+        "link": "http://arxiv.org/abs/2607.09657v1",
+        "date": "2026-07-10",
         "authors": [
-          "Yifan Zhou",
-          "Qihao Yang",
-          "Yan Li"
+          "Yiming Zhang",
+          "Zhonghan Zhao",
+          "Wenwei Zhang"
         ]
       },
       {
-        "title": "SLORR: Simple and Efficient In-Training Low-Rank Regularization",
-        "summary": "Low-rank factorization is widely used to compress neural networks, but modern models are often not naturally amenable to aggressive factorization without significant accuracy loss. Existing training-t",
-        "link": "http://arxiv.org/abs/2607.08754v1",
-        "date": "2026-07-09",
+        "title": "Evolution of Accuracy and Visual-Cognitive Errors in a Decade of Vision-Language AI Models",
+        "summary": "Vision language models (VLMs) have made remarkable progress in visual reasoning during the last decade. Most evaluations have used simple scenes (MS-COCO) that do not showcase complex human interactio",
+        "link": "http://arxiv.org/abs/2607.09654v1",
+        "date": "2026-07-10",
         "authors": [
-          "David Gonz\u00e1lez-Mart\u00ednez",
-          "Shiwei Liu"
+          "Shravan Murlidaran",
+          "Miguel P. Eckstein"
         ]
       },
       {
-        "title": "Using AI-based Learning Assistants in Higher Education: A Large-Scale Descriptive Analysis",
-        "summary": "In this study, we present a large-scale descriptive analysis of the use of an AI-based learning assistant (Syntea) in higher education. Based on objective log data from 77,543 students enrolled in dis",
-        "link": "http://arxiv.org/abs/2607.08748v1",
-        "date": "2026-07-09",
+        "title": "VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents",
+        "summary": "Internet of Things (IoT) systems are inherently vulnerable due to constrained hardware, outdated firmware, and insecure default configurations, creating a need for scalable and adaptive security testi",
+        "link": "http://arxiv.org/abs/2607.09653v1",
+        "date": "2026-07-10",
         "authors": [
-          "Kristina Schaaff",
-          "Quintus Stierstorfer",
-          "Valerie Heckel"
+          "Katherine Swinea",
+          "Kshitiz Aryal",
+          "Lopamudra Praharaj"
         ]
       },
       {
-        "title": "Dimensionality Reduction Meets Network Science: Sensemaking on UMAP's kNN Graph",
-        "summary": "While UMAP is widely used for exploring high-dimensional data, typical workflows focus on its lower-dimensional embedding, largely overlooking the rich k-nearest-neighbor (kNN) graph that UMAP constru",
-        "link": "http://arxiv.org/abs/2607.08746v1",
-        "date": "2026-07-09",
+        "title": "ConceptSMILE: Auditing the Trustworthiness of Concept-Based Explainable AI",
+        "summary": "Concept-based explainable artificial intelligence (AI) can make model reasoning more human-understandable, but concept-level outputs are not automatically trustworthy. We introduce ConceptSMILE, a mod",
+        "link": "http://arxiv.org/abs/2607.09649v1",
+        "date": "2026-07-10",
         "authors": [
-          "Duen Horng Chau",
-          "Donghao Ren",
-          "Fred Hohman"
+          "Mohadeseh Mollapour",
+          "Koorosh Aslansefat",
+          "Zeinab Dehghani"
         ]
       },
       {
-        "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
-        "summary": "Recent advances in Vision-Language Models, Large Language Models, and Multimodal Large Language Models have improved autonomous driving tasks such as scene understanding, decision making, trajectory p",
-        "link": "http://arxiv.org/abs/2607.08745v1",
-        "date": "2026-07-09",
+        "title": "Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection",
+        "summary": "Financial anomaly detection suffers from extreme class imbalance, causing traditional single-objective algorithms to exhibit ``fraud collapse'', defaulting to the majority class and failing to balance",
+        "link": "http://arxiv.org/abs/2607.09641v1",
+        "date": "2026-07-10",
         "authors": [
-          "Siddharth Damodharan",
-          "Radhika Gupta",
-          "Ali Alshami"
+          "Cl\u00e1udio L\u00facio do Val Lopes",
+          "Lucca Machado da Silva"
         ]
       },
       {
-        "title": "Workflow as Knowledge: Semantic Persistence for LLM-Mediated Workflows",
-        "summary": "Large language model (LLM) applications increasingly use explicit workflows for tool use, retrieval, branching, checkpointing, and human approval. Existing workflow systems already address many execut",
-        "link": "http://arxiv.org/abs/2607.08740v1",
-        "date": "2026-07-09",
+        "title": "Lean-QIT: Towards a Formal Infrastructure for Quantum Information Theory",
+        "summary": "Quantum information theory (QIT) characterizes the capabilities and fundamental limits of quantum information processing, underpinning quantum communication, computation, and error correction. Formali",
+        "link": "http://arxiv.org/abs/2607.09632v1",
+        "date": "2026-07-10",
         "authors": [
-          "Emanuele Quinto",
-          "Carlo Andrea Rozzi",
-          "Francesco Zanitti"
+          "Chengkai Zhu",
+          "Ziao Tang",
+          "Guocheng Zhen"
         ]
       },
       {
-        "title": "The Illusion of Equivalency: Statistical Characterization of Quantization Effects in LLMs",
-        "summary": "Post-training quantization is widely used to deploy large language models in resource-constrained settings, yet its evaluation relies almost exclusively on accuracy and perplexity. We show that these ",
-        "link": "http://arxiv.org/abs/2607.08734v1",
-        "date": "2026-07-09",
+        "title": "4DR360: State Reasoning for Joint 3D Detection and Occupancy Prediction in 4D Radar-Camera Full-Scene Perception",
+        "summary": "Reliable autonomous driving requires full-scene perception that couples foreground objects with dense semantic layout. Recently, 4D millimeter-wave radar has emerged as a robust and affordable sensor,",
+        "link": "http://arxiv.org/abs/2607.09629v1",
+        "date": "2026-07-10",
         "authors": [
-          "Baha Rababah",
-          "Cuneyt Gurcan Akcora",
-          "Carson K. Leung"
+          "Xiaokai Bai",
+          "Lianqing Zheng",
+          "Runwei Guan"
         ]
       }
     ],
-    "updated": "2026-07-12T05:30:02.051707Z"
+    "updated": "2026-07-13T05:39:02.794229Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-07-12T05:30:02.051707Z"
+    "updated": "2026-07-13T05:39:02.794229Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-07-12T05:30:02.051707Z"
+    "updated": "2026-07-13T05:39:02.794229Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-07-12T05:30:02.051707Z"
+    "updated": "2026-07-13T05:39:02.794229Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "TRM-Raft: A Byzantine-Resistant Raft Consensus via Integrated Trust and Reputation Model",
-        "summary": "Internetware envisions autonomous software entities collaborating over the open Internet. Raft consensus is widely adopted for its simplicity and performance in distributed coordination, e.g., service",
-        "link": "http://arxiv.org/abs/2607.08666v1",
-        "date": "2026-07-09",
+        "title": "Impact of Benign Connectivity Variations on Intrusion Detection for Encrypted OPC UA Traffic in Industrial Private 5G Networks",
+        "summary": "Machine learning (ML)-based intrusion detection systems (IDSs) are increasingly used to monitor encrypted industrial communication. However, their behavior under realistic private 5G operating conditi",
+        "link": "http://arxiv.org/abs/2607.09659v1",
+        "date": "2026-07-10",
         "authors": [
-          "Jie Zhang",
-          "Xubo Fan",
-          "Xiaohong Li"
+          "Song Son Ha",
+          "Florian Foerster",
+          "Henry Beuster"
         ]
       },
       {
-        "title": "Stablecoins under Stress in a National Economy: Transaction-Level Evidence from Austrian Crypto-Asset Service Providers",
-        "summary": "Cryptoassets are increasingly entangled with the traditional financial system, and how this activity integrates into national economies and behaves under stress bears on financial stability and the de",
-        "link": "http://arxiv.org/abs/2607.08524v1",
-        "date": "2026-07-09",
+        "title": "VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents",
+        "summary": "Internet of Things (IoT) systems are inherently vulnerable due to constrained hardware, outdated firmware, and insecure default configurations, creating a need for scalable and adaptive security testi",
+        "link": "http://arxiv.org/abs/2607.09653v1",
+        "date": "2026-07-10",
         "authors": [
-          "Pietro Saggese",
-          "Michael Sigmund",
-          "Burkhard Raunig"
+          "Katherine Swinea",
+          "Kshitiz Aryal",
+          "Lopamudra Praharaj"
         ]
       },
       {
-        "title": "Locality of Curve-Decoding and Improved Proximity Gaps",
-        "summary": "Proximity gaps are a property of error correcting codes that arise in the study of Interactive Oracle Proofs (IOPs) and Succinct Non-interactive Arguments of Zero Knowledge (SNARKs). Recent work of Go",
-        "link": "http://arxiv.org/abs/2607.08516v1",
-        "date": "2026-07-09",
+        "title": "Portable Acceleration of Learning With Errors KEMs for Post-Quantum Cryptography",
+        "summary": "The transition to post-quantum cryptography (PQC) is driving demand for implementations that can meet the computational requirements of real-world applications. Among the proposed PQC constructions, L",
+        "link": "http://arxiv.org/abs/2607.09541v1",
+        "date": "2026-07-10",
         "authors": [
-          "Rohan Goyal",
-          "Venkatesan Guruswami",
-          "Yihang Sun"
+          "Tiziana Liberati",
+          "Nitin Shukla",
+          "Simone Rizzo"
         ]
       },
       {
-        "title": "TRACE: A Two-Channel Robust Attribution Watermark via Complementary Embeddings for LLM-Agent Trajectories",
-        "summary": "LLM agents reach users through resellers, who may rebrand a developer's agent or substitute a cheaper model. When provenance is disputed, attribution rests on the trajectory log (the record of tool ca",
-        "link": "http://arxiv.org/abs/2607.08400v1",
-        "date": "2026-07-09",
+        "title": "Statistically Undetectable Backdoors in Deep Neural Networks",
+        "summary": "We show how an adversarial model trainer can plant backdoors in a large class of deep, feedforward neural networks. These backdoors are statistically undetectable in the white-box setting, meaning tha",
+        "link": "http://arxiv.org/abs/2607.09532v1",
+        "date": "2026-07-10",
         "authors": [
-          "Zheng Gao",
-          "Xiaoyu Li",
-          "Xiaoyan Feng"
+          "Andrej Bogdanov",
+          "Alon Rosen",
+          "Neekon Vafa"
         ]
       },
       {
-        "title": "Token-Flow Firewall: Semantic Runtime Auditing for Persistent AI Agents",
-        "summary": "Persistent AI agents extend large language models (LLMs) beyond single-turn interaction into long-lived software systems. Unlike traditional chat assistants, unsafe content in these agents can propaga",
-        "link": "http://arxiv.org/abs/2607.08395v1",
-        "date": "2026-07-09",
+        "title": "TSAI-MetaFraud: A Benchmark Dataset for Financial Fraud Transaction and Behavioral Risk Detection in Metaverse Ecosystems",
+        "summary": "The emergence of metaverse platforms has created virtual economies that introduce new challenges related to fraud, bot activity, and illicit financial behavior. Despite growing interest in trustworthy",
+        "link": "http://arxiv.org/abs/2607.09528v1",
+        "date": "2026-07-10",
         "authors": [
-          "Puji Wang",
-          "Yingchen Zhang",
-          "Ruqing Zhang"
+          "Refat Ishrak Hemel",
+          "Ehsan Hallaji",
+          "Roozbeh Razavi-Far"
         ]
       },
       {
-        "title": "Secure QR Codes: Authenticity Verification via EdDSA Signatures and CBOR Certificates",
-        "summary": "QR codes are a ubiquitous part of daily life, widely trusted by millions. However, their lack of inherent security features has given rise to critical attack vectors, such as spoofing (quishing) on pu",
-        "link": "http://arxiv.org/abs/2607.08383v1",
-        "date": "2026-07-09",
+        "title": "Triggering Stealthy Feature Map Backdoors via Physical Fault Injection in Embedded Neural Networks",
+        "summary": "Fault injection (FI) attacks on embedded neural network (NN) implementations primarily focus on inducing misclassification by corrupting weights or intermediate computations, overlooking their interac",
+        "link": "http://arxiv.org/abs/2607.09473v1",
+        "date": "2026-07-10",
         "authors": [
-          "Wojciech Jonderko",
-          "Wojciech Wodo"
+          "Steyn Hommes",
+          "Vincent Dankbaar",
+          "Tanguy Stekke"
         ]
       },
       {
-        "title": "Reverse Engineering Compliance: A Dual-Graph Verification Framework for Auditing Legacy IT Security Concepts",
-        "summary": "The NIS-2 Directive increases the need for continuous, auditable compliance evidence and motivates a shift from document-based compliance toward machine-readable compliance artifacts. The Open Securit",
-        "link": "http://arxiv.org/abs/2607.08292v1",
-        "date": "2026-07-09",
+        "title": "Federated Learning Architecture: Data Privacy and System Security Approaches",
+        "summary": "This study explores the integration of homomorphic encryption and differential privacy techniques to enhance data privacy and security in Federated Learning (FL) systems. FL allows data to remain on l",
+        "link": "http://arxiv.org/abs/2607.09391v1",
+        "date": "2026-07-10",
         "authors": [
-          "Lea Roxanne Muth",
-          "Marian Margraf"
+          "Cagdas Karatas",
+          "Hibanur Karadogan",
+          "Ahmet Yasin Ertug"
         ]
       },
       {
-        "title": "From Legacy Documentation to OSCAL: An MCP-Based Agent Pipeline for Threat-Informed Continuous Compliance in Critical Infrastructure",
-        "summary": "In critical infrastructure, operational technology environments often cannot be actively scanned, and yet active system feedback is needed for risk assessment and compliance. This paper presents a non",
-        "link": "http://arxiv.org/abs/2607.08288v1",
-        "date": "2026-07-09",
+        "title": "When Routes Run Out: Adversarial Co-Learning and Explainable Robustness in Quantum Repeater Networks",
+        "summary": "We study an adversarial bandit problem for entanglement-based quantum-network routing over a modest graph corpus. Alice selects an end-to-end repeater route for an Ekert-91 protocol (E91) representing",
+        "link": "http://arxiv.org/abs/2607.09378v1",
+        "date": "2026-07-10",
         "authors": [
-          "Lea Roxanne Muth",
-          "Marian Margraf"
+          "Brennan Bell",
+          "Inti Gabriel Mendoza Estrada",
+          "Andreas Tr\u00fcgler"
         ]
       }
     ],
-    "updated": "2026-07-12T05:30:02.051707Z"
+    "updated": "2026-07-13T05:39:02.794229Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -280,6 +282,6 @@
         ]
       }
     ],
-    "updated": "2026-07-12T05:30:02.051707Z"
+    "updated": "2026-07-13T05:39:02.794229Z"
   }
 }
