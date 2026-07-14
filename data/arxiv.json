@@ -3,202 +3,197 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "PHINN-EEG: Topological Time-Series Analysis of Dream-State EEG -- Dynamic Betti Curves for Dream Content Classification and Topology-Conditioned Neural Signal Synthesis",
-        "summary": "Current electroencephalography (EEG)-based dream detection relies on power spectral density (PSD) and statistical moment features, achieving a state-of-the-art area under the receiver operating charac",
-        "link": "http://arxiv.org/abs/2607.09662v1",
-        "date": "2026-07-10",
+        "title": "Metacognition in LLMs: Foundations, Progress, and Opportunities",
+        "summary": "Metacognition is a foundational component of intelligence critical to effective learning, problem solving, decision-making, communication, and more. In recent years, it has become increasingly recogni",
+        "link": "http://arxiv.org/abs/2607.11881v1",
+        "date": "2026-07-13",
         "authors": [
-          "Ren Takahashi",
-          "Emre Yusuf",
-          "Jayabrata Bhaduri"
+          "Gabrielle Kaili-May Liu",
+          "Areeb Gani",
+          "Jacqueline Lu"
         ]
       },
       {
-        "title": "Scalable Visual Pretraining for Language Intelligence",
-        "summary": "The rapid progress of large foundation models has been driven predominantly by pretraining on large-scale text corpora. However, many forms of knowledge are conveyed through visual representations, wh",
-        "link": "http://arxiv.org/abs/2607.09657v1",
-        "date": "2026-07-10",
+        "title": "Invariant Learning Dynamics of Transformers in Inductive Reasoning Tasks",
+        "summary": "We present a theoretical framework to explain the emergence of inductive reasoning abilities in Transformer language models. While previous works on Transformer learning dynamics have so far been most",
+        "link": "http://arxiv.org/abs/2607.11875v1",
+        "date": "2026-07-13",
         "authors": [
-          "Yiming Zhang",
-          "Zhonghan Zhao",
-          "Wenwei Zhang"
+          "Tiberiu Musat",
+          "Tiago Pimentel",
+          "Nicholas Zucchet"
         ]
       },
       {
-        "title": "Evolution of Accuracy and Visual-Cognitive Errors in a Decade of Vision-Language AI Models",
-        "summary": "Vision language models (VLMs) have made remarkable progress in visual reasoning during the last decade. Most evaluations have used simple scenes (MS-COCO) that do not showcase complex human interactio",
-        "link": "http://arxiv.org/abs/2607.09654v1",
-        "date": "2026-07-10",
+        "title": "A Minimalist Retargeting-Guided Reinforcement Learning Recipe for Dexterous Manipulation",
+        "summary": "Recent work in humanoid whole-body control has found success with a simple recipe: retarget human motion to robot kinematic references, then train policies via reinforcement learning (RL) to track the",
+        "link": "http://arxiv.org/abs/2607.11874v1",
+        "date": "2026-07-13",
         "authors": [
-          "Shravan Murlidaran",
-          "Miguel P. Eckstein"
+          "Yunhai Feng",
+          "Natalie Leung",
+          "Jiaxuan Wang"
         ]
       },
       {
-        "title": "VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents",
-        "summary": "Internet of Things (IoT) systems are inherently vulnerable due to constrained hardware, outdated firmware, and insecure default configurations, creating a need for scalable and adaptive security testi",
-        "link": "http://arxiv.org/abs/2607.09653v1",
-        "date": "2026-07-10",
+        "title": "Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias",
+        "summary": "Existing studies of LLM-as-judge scoring bias work predominantly at the input-output level: they perturb inputs, measure score deltas, and propose prompt-level mitigations. We argue that the same bias",
+        "link": "http://arxiv.org/abs/2607.11871v1",
+        "date": "2026-07-13",
         "authors": [
-          "Katherine Swinea",
-          "Kshitiz Aryal",
-          "Lopamudra Praharaj"
+          "Zixiang Xu",
+          "Sixian Li",
+          "Huaxing Liu"
         ]
       },
       {
-        "title": "ConceptSMILE: Auditing the Trustworthiness of Concept-Based Explainable AI",
-        "summary": "Concept-based explainable artificial intelligence (AI) can make model reasoning more human-understandable, but concept-level outputs are not automatically trustworthy. We introduce ConceptSMILE, a mod",
-        "link": "http://arxiv.org/abs/2607.09649v1",
-        "date": "2026-07-10",
+        "title": "Evidence-Backed Video Question Answering",
+        "summary": "Current Video Large Language Models (Video LLMs) excel in question answering (QA) but largely operate as black boxes, providing textual answers without verifiable visual grounding. Existing explainabi",
+        "link": "http://arxiv.org/abs/2607.11862v1",
+        "date": "2026-07-13",
         "authors": [
-          "Mohadeseh Mollapour",
-          "Koorosh Aslansefat",
-          "Zeinab Dehghani"
+          "Shijie Wang",
+          "Honglu Zhou",
+          "Ziyang Wang"
         ]
       },
       {
-        "title": "Semantic Pareto-DQN: A Multi-Objective Reinforcement Learning Framework for Financial Anomaly Detection",
-        "summary": "Financial anomaly detection suffers from extreme class imbalance, causing traditional single-objective algorithms to exhibit ``fraud collapse'', defaulting to the majority class and failing to balance",
-        "link": "http://arxiv.org/abs/2607.09641v1",
-        "date": "2026-07-10",
+        "title": "LoRA-Based Cascaded Multimodal Fusion for Action Recognition in Medical Training Environments",
+        "summary": "This paper presents a cascaded Low-Rank Adaptation (LoRA)-based multimodal fusion framework for action and activity recognition in healthcare-oriented training environments. The proposed architecture ",
+        "link": "http://arxiv.org/abs/2607.11839v1",
+        "date": "2026-07-13",
         "authors": [
-          "Cl\u00e1udio L\u00facio do Val Lopes",
-          "Lucca Machado da Silva"
+          "Divya Mereddy",
+          "Jeevan Beedareddy"
         ]
       },
       {
-        "title": "Lean-QIT: Towards a Formal Infrastructure for Quantum Information Theory",
-        "summary": "Quantum information theory (QIT) characterizes the capabilities and fundamental limits of quantum information processing, underpinning quantum communication, computation, and error correction. Formali",
-        "link": "http://arxiv.org/abs/2607.09632v1",
-        "date": "2026-07-10",
+        "title": "Transformer-Guided Swarm Intelligence for Frugal Neural Architecture Search",
+        "summary": "Neural Architecture Search (NAS) has automated the design of deep learning models but traditionally requires massive computational resources, often measured in thousands of GPU-days. In this paper, we",
+        "link": "http://arxiv.org/abs/2607.11826v1",
+        "date": "2026-07-13",
         "authors": [
-          "Chengkai Zhu",
-          "Ziao Tang",
-          "Guocheng Zhen"
+          "Romain Amigon"
         ]
       },
       {
-        "title": "4DR360: State Reasoning for Joint 3D Detection and Occupancy Prediction in 4D Radar-Camera Full-Scene Perception",
-        "summary": "Reliable autonomous driving requires full-scene perception that couples foreground objects with dense semantic layout. Recently, 4D millimeter-wave radar has emerged as a robust and affordable sensor,",
-        "link": "http://arxiv.org/abs/2607.09629v1",
-        "date": "2026-07-10",
+        "title": "MM-ToolSandBox: A Unified Framework for Evaluating Visual Tool-Calling Agents",
+        "summary": "We introduce MM-ToolSandBox, a benchmark and evaluation framework for visually grounded tool-calling agents. The framework provides a stateful execution environment spanning 500+ tools across 16 appli",
+        "link": "http://arxiv.org/abs/2607.11818v1",
+        "date": "2026-07-13",
         "authors": [
-          "Xiaokai Bai",
-          "Lianqing Zheng",
-          "Runwei Guan"
+          "Kaixin Ma",
+          "Di Feng",
+          "Alexander Metz"
         ]
       }
     ],
-    "updated": "2026-07-13T05:39:02.794229Z"
+    "updated": "2026-07-14T04:52:39.528483Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-07-13T05:39:02.794229Z"
+    "updated": "2026-07-14T04:52:39.528483Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-07-13T05:39:02.794229Z"
+    "updated": "2026-07-14T04:52:39.528483Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-07-13T05:39:02.794229Z"
+    "updated": "2026-07-14T04:52:39.528483Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Impact of Benign Connectivity Variations on Intrusion Detection for Encrypted OPC UA Traffic in Industrial Private 5G Networks",
-        "summary": "Machine learning (ML)-based intrusion detection systems (IDSs) are increasingly used to monitor encrypted industrial communication. However, their behavior under realistic private 5G operating conditi",
-        "link": "http://arxiv.org/abs/2607.09659v1",
-        "date": "2026-07-10",
+        "title": "When Local Monitors Miss Compositional Harm: Diagnosing Distributed Backdoors in Multi-Agent Systems",
+        "summary": "As multi-agent, tool-using LLM systems are deployed, a common safety net is a runtime monitor that checks each message, tool call, or step on its own. We show this net has a fundamental hole. A distri",
+        "link": "http://arxiv.org/abs/2607.11751v1",
+        "date": "2026-07-13",
         "authors": [
-          "Song Son Ha",
-          "Florian Foerster",
-          "Henry Beuster"
+          "Yibo Hu",
+          "Ren Wang"
         ]
       },
       {
-        "title": "VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents",
-        "summary": "Internet of Things (IoT) systems are inherently vulnerable due to constrained hardware, outdated firmware, and insecure default configurations, creating a need for scalable and adaptive security testi",
-        "link": "http://arxiv.org/abs/2607.09653v1",
-        "date": "2026-07-10",
+        "title": "An Explainable Agentic System for Detection of Conversational Scams with Summary-Based Memory",
+        "summary": "Following the rapid progress of generative Artificial Intelligence, there is a growing threat posed by conversational scams. These scams often span over multiple weeks or months, gradually build trust",
+        "link": "http://arxiv.org/abs/2607.11707v1",
+        "date": "2026-07-13",
         "authors": [
-          "Katherine Swinea",
-          "Kshitiz Aryal",
-          "Lopamudra Praharaj"
+          "Ahmed Omar Salim Adnan",
+          "Yogananda Manjunath",
+          "Shivanjali Khare"
         ]
       },
       {
-        "title": "Portable Acceleration of Learning With Errors KEMs for Post-Quantum Cryptography",
-        "summary": "The transition to post-quantum cryptography (PQC) is driving demand for implementations that can meet the computational requirements of real-world applications. Among the proposed PQC constructions, L",
-        "link": "http://arxiv.org/abs/2607.09541v1",
-        "date": "2026-07-10",
+        "title": "Agent Hacks Agent: Autoresearch for Production-Agent Red-Teaming",
+        "summary": "Production LLM agents such as Claude Code and Codex operate over untrusted content, files, commands, and workspace state, making safety failures directly actionable. Red-teaming must therefore keep pa",
+        "link": "http://arxiv.org/abs/2607.11698v1",
+        "date": "2026-07-13",
         "authors": [
-          "Tiziana Liberati",
-          "Nitin Shukla",
-          "Simone Rizzo"
+          "Xutao Mao",
+          "Xiang Zheng",
+          "Cong Wang"
         ]
       },
       {
-        "title": "Statistically Undetectable Backdoors in Deep Neural Networks",
-        "summary": "We show how an adversarial model trainer can plant backdoors in a large class of deep, feedforward neural networks. These backdoors are statistically undetectable in the white-box setting, meaning tha",
-        "link": "http://arxiv.org/abs/2607.09532v1",
-        "date": "2026-07-10",
+        "title": "Closing the Loop: An Access-Control Architecture for Automated, Anomaly-Driven Network Revocation in IoT Deployments",
+        "summary": "Network-based anomaly detection for IoT devices has matured to the point of reporting strong detection accuracy, yet most published systems stop at raising an alert and leave the question of automated",
+        "link": "http://arxiv.org/abs/2607.11649v1",
+        "date": "2026-07-13",
         "authors": [
-          "Andrej Bogdanov",
-          "Alon Rosen",
-          "Neekon Vafa"
+          "Muhammet Emir Korkmaz",
+          "Kemal Bicakci",
+          "Yusuf Uzunay"
         ]
       },
       {
-        "title": "TSAI-MetaFraud: A Benchmark Dataset for Financial Fraud Transaction and Behavioral Risk Detection in Metaverse Ecosystems",
-        "summary": "The emergence of metaverse platforms has created virtual economies that introduce new challenges related to fraud, bot activity, and illicit financial behavior. Despite growing interest in trustworthy",
-        "link": "http://arxiv.org/abs/2607.09528v1",
-        "date": "2026-07-10",
+        "title": "Cardano's Voltaire Governance: Complete Specification and Research Program",
+        "summary": "Blockchain governance, the set of processes by which decentralized protocols evolve, remains a fundamental challenge in balancing adaptability, security, and stakeholder representation. This technical",
+        "link": "http://arxiv.org/abs/2607.11601v1",
+        "date": "2026-07-13",
         "authors": [
-          "Refat Ishrak Hemel",
-          "Ehsan Hallaji",
-          "Roozbeh Razavi-Far"
+          "Nimrod Talmon",
+          "Oghenekaro Elem"
         ]
       },
       {
-        "title": "Triggering Stealthy Feature Map Backdoors via Physical Fault Injection in Embedded Neural Networks",
-        "summary": "Fault injection (FI) attacks on embedded neural network (NN) implementations primarily focus on inducing misclassification by corrupting weights or intermediate computations, overlooking their interac",
-        "link": "http://arxiv.org/abs/2607.09473v1",
-        "date": "2026-07-10",
+        "title": "Linux disk encryption and self-encrypting drives -- A case study on Opal2 drives security",
+        "summary": "Opal2 self-encrypting drives provide hardware-based disk encryption serving as an additional layer of protection, or a replacement, for software-based solutions. This paper presents a case study of re",
+        "link": "http://arxiv.org/abs/2607.11563v1",
+        "date": "2026-07-13",
         "authors": [
-          "Steyn Hommes",
-          "Vincent Dankbaar",
-          "Tanguy Stekke"
+          "Milan Bro\u017e",
+          "Tamara \u010ciernikov\u00e1",
+          "Ond\u0159ej Kozina"
         ]
       },
       {
-        "title": "Federated Learning Architecture: Data Privacy and System Security Approaches",
-        "summary": "This study explores the integration of homomorphic encryption and differential privacy techniques to enhance data privacy and security in Federated Learning (FL) systems. FL allows data to remain on l",
-        "link": "http://arxiv.org/abs/2607.09391v1",
-        "date": "2026-07-10",
+        "title": "Graph-Based Structural Evaluation of LLM-Translated Adversary Emulation Procedures",
+        "summary": "Adversary emulation plans describe multi-step attacker procedures using MITRE ATT&CK techniques, privilege requirements, and observable telemetry. Translating them across operating systems supports cr",
+        "link": "http://arxiv.org/abs/2607.11517v1",
+        "date": "2026-07-13",
         "authors": [
-          "Cagdas Karatas",
-          "Hibanur Karadogan",
-          "Ahmet Yasin Ertug"
+          "Ahmed M. Elmisery"
         ]
       },
       {
-        "title": "When Routes Run Out: Adversarial Co-Learning and Explainable Robustness in Quantum Repeater Networks",
-        "summary": "We study an adversarial bandit problem for entanglement-based quantum-network routing over a modest graph corpus. Alice selects an end-to-end repeater route for an Ekert-91 protocol (E91) representing",
-        "link": "http://arxiv.org/abs/2607.09378v1",
-        "date": "2026-07-10",
+        "title": "Time Is Money: Incentivized Causal Transaction Ordering",
+        "summary": "Front-running is a subtle and persistent problem for blockchains. A blockchain is a stateful virtual machine executing instructions called transactions. Users earn rewards by publishing functional tra",
+        "link": "http://arxiv.org/abs/2607.11496v1",
+        "date": "2026-07-13",
         "authors": [
-          "Brennan Bell",
-          "Inti Gabriel Mendoza Estrada",
-          "Andreas Tr\u00fcgler"
+          "Hongyin Chen",
+          "Xu Zheng",
+          "Jichen Li"
         ]
       }
     ],
-    "updated": "2026-07-13T05:39:02.794229Z"
+    "updated": "2026-07-14T04:52:39.528483Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -282,6 +277,6 @@
         ]
       }
     ],
-    "updated": "2026-07-13T05:39:02.794229Z"
+    "updated": "2026-07-14T04:52:39.528483Z"
   }
 }
