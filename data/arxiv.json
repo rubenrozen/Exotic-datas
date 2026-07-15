@@ -3,197 +3,198 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Metacognition in LLMs: Foundations, Progress, and Opportunities",
-        "summary": "Metacognition is a foundational component of intelligence critical to effective learning, problem solving, decision-making, communication, and more. In recent years, it has become increasingly recogni",
-        "link": "http://arxiv.org/abs/2607.11881v1",
-        "date": "2026-07-13",
+        "title": "Do AI Agents Know When a Task Is Simple? Toward Complexity-Aware Reasoning and Execution",
+        "summary": "Large language model (LLM) agents increasingly automate multi-step engineering and informatics workflows, yet they rarely ask how much effort a task actually requires. They often follow a maximum-cont",
+        "link": "http://arxiv.org/abs/2607.13034v1",
+        "date": "2026-07-14",
         "authors": [
-          "Gabrielle Kaili-May Liu",
-          "Areeb Gani",
-          "Jacqueline Lu"
+          "Junjie Yin",
+          "Xinyu Feng"
         ]
       },
       {
-        "title": "Invariant Learning Dynamics of Transformers in Inductive Reasoning Tasks",
-        "summary": "We present a theoretical framework to explain the emergence of inductive reasoning abilities in Transformer language models. While previous works on Transformer learning dynamics have so far been most",
-        "link": "http://arxiv.org/abs/2607.11875v1",
-        "date": "2026-07-13",
+        "title": "TerraZero: Procedural Driving Simulation for Zero-Demonstration Self-Play at Scale",
+        "summary": "Training robust autonomous driving agents requires a simulator that is fast enough for reinforcement learning at scale, realistic enough to ground behavior in real-world map structure, and diverse eno",
+        "link": "http://arxiv.org/abs/2607.13028v1",
+        "date": "2026-07-14",
         "authors": [
-          "Tiberiu Musat",
-          "Tiago Pimentel",
-          "Nicholas Zucchet"
+          "Zhouchonghao Wu",
+          "Akshay Rangesh",
+          "Weixin Li"
         ]
       },
       {
-        "title": "A Minimalist Retargeting-Guided Reinforcement Learning Recipe for Dexterous Manipulation",
-        "summary": "Recent work in humanoid whole-body control has found success with a simple recipe: retarget human motion to robot kinematic references, then train policies via reinforcement learning (RL) to track the",
-        "link": "http://arxiv.org/abs/2607.11874v1",
-        "date": "2026-07-13",
+        "title": "PalmClaw: A Native On-Device Agent Framework for Mobile Phones",
+        "summary": "Large Language Model (LLM) agents have moved beyond generating responses to executing multi-step tasks by calling tools, observing the results, and iteratively deciding the next action. Most agent sys",
+        "link": "http://arxiv.org/abs/2607.13027v1",
+        "date": "2026-07-14",
         "authors": [
-          "Yunhai Feng",
-          "Natalie Leung",
-          "Jiaxuan Wang"
+          "Hongru Cai",
+          "Yongqi Li",
+          "Ran Wei"
         ]
       },
       {
-        "title": "Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias",
-        "summary": "Existing studies of LLM-as-judge scoring bias work predominantly at the input-output level: they perturb inputs, measure score deltas, and propose prompt-level mitigations. We argue that the same bias",
-        "link": "http://arxiv.org/abs/2607.11871v1",
-        "date": "2026-07-13",
+        "title": "Audio-Native Speech Recognition with a Frozen Discrete-Diffusion Language Model",
+        "summary": "Automatic speech recognition is dominated by autoregressive decoders that emit one token at a time. We ask whether a discrete diffusion language model can transcribe speech instead, refining a whole t",
+        "link": "http://arxiv.org/abs/2607.13013v1",
+        "date": "2026-07-14",
         "authors": [
-          "Zixiang Xu",
-          "Sixian Li",
-          "Huaxing Liu"
+          "Harsha Vardhan Khurdula",
+          "Abhinav Kumar Singh",
+          "Yoeven D Khemlani"
         ]
       },
       {
-        "title": "Evidence-Backed Video Question Answering",
-        "summary": "Current Video Large Language Models (Video LLMs) excel in question answering (QA) but largely operate as black boxes, providing textual answers without verifiable visual grounding. Existing explainabi",
-        "link": "http://arxiv.org/abs/2607.11862v1",
-        "date": "2026-07-13",
+        "title": "Dynamic Resource Allocation for Ensemble Determinization MCTS",
+        "summary": "Simulation-based algorithms are especially suited for high-uncertainty environments such as adversarial board games with significant elements of randomness and hidden information. In particular, sever",
+        "link": "http://arxiv.org/abs/2607.13007v1",
+        "date": "2026-07-14",
         "authors": [
-          "Shijie Wang",
-          "Honglu Zhou",
-          "Ziyang Wang"
+          "Jakub Kowalski",
+          "Adam Ci\u0119\u017ckowski",
+          "Artur Krzy\u017cy\u0144ski"
         ]
       },
       {
-        "title": "LoRA-Based Cascaded Multimodal Fusion for Action Recognition in Medical Training Environments",
-        "summary": "This paper presents a cascaded Low-Rank Adaptation (LoRA)-based multimodal fusion framework for action and activity recognition in healthcare-oriented training environments. The proposed architecture ",
-        "link": "http://arxiv.org/abs/2607.11839v1",
-        "date": "2026-07-13",
+        "title": "Win by Silence: Deletion Non-Monotonicity, Autonomous Exploitation, and Typed-State Gating in LLM Plan Evaluation",
+        "summary": "Plan evaluators can reward a strategic plan for becoming less explicit. This paper studies that failure in a staged expected-value scorer for LLM-generated venture routes. Proposition 1 gives the scor",
+        "link": "http://arxiv.org/abs/2607.12986v1",
+        "date": "2026-07-14",
         "authors": [
-          "Divya Mereddy",
-          "Jeevan Beedareddy"
+          "Aleh Manchuliantsau"
         ]
       },
       {
-        "title": "Transformer-Guided Swarm Intelligence for Frugal Neural Architecture Search",
-        "summary": "Neural Architecture Search (NAS) has automated the design of deep learning models but traditionally requires massive computational resources, often measured in thousands of GPU-days. In this paper, we",
-        "link": "http://arxiv.org/abs/2607.11826v1",
-        "date": "2026-07-13",
+        "title": "Resist and Update: Counterfactual Report Coordinates for Incentive-Compatible LLMs",
+        "summary": "Aligned language models routinely misreport under non-evidential incentive pressure: they agree with a confident user or overstate certainty even when their internal belief is unchanged. We cast this ",
+        "link": "http://arxiv.org/abs/2607.12985v1",
+        "date": "2026-07-14",
         "authors": [
-          "Romain Amigon"
+          "Sen Yang",
+          "Yuen-Hei Yeung"
         ]
       },
       {
-        "title": "MM-ToolSandBox: A Unified Framework for Evaluating Visual Tool-Calling Agents",
-        "summary": "We introduce MM-ToolSandBox, a benchmark and evaluation framework for visually grounded tool-calling agents. The framework provides a stateful execution environment spanning 500+ tools across 16 appli",
-        "link": "http://arxiv.org/abs/2607.11818v1",
-        "date": "2026-07-13",
+        "title": "FormalAnalyticGeo: A Neural-Symbolic Based Framework for Multimodal Analytic Geometry Problem Generation",
+        "summary": "Math reasoning has achieved significant progress with the rapid advancement of Multimodal Large Language Models (MLLMs), however analytic geometry remains largely underexplored, primarily due to the s",
+        "link": "http://arxiv.org/abs/2607.12982v1",
+        "date": "2026-07-14",
         "authors": [
-          "Kaixin Ma",
-          "Di Feng",
-          "Alexander Metz"
+          "Ruoran Xu",
+          "Wending Gao",
+          "Qiufeng Wang"
         ]
       }
     ],
-    "updated": "2026-07-14T04:52:39.528483Z"
+    "updated": "2026-07-15T04:52:50.226415Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-07-14T04:52:39.528483Z"
+    "updated": "2026-07-15T04:52:50.226415Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-07-14T04:52:39.528483Z"
+    "updated": "2026-07-15T04:52:50.226415Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-07-14T04:52:39.528483Z"
+    "updated": "2026-07-15T04:52:50.226415Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "When Local Monitors Miss Compositional Harm: Diagnosing Distributed Backdoors in Multi-Agent Systems",
-        "summary": "As multi-agent, tool-using LLM systems are deployed, a common safety net is a runtime monitor that checks each message, tool call, or step on its own. We show this net has a fundamental hole. A distri",
-        "link": "http://arxiv.org/abs/2607.11751v1",
-        "date": "2026-07-13",
+        "title": "Watermark Forensics for Generative Models: An Information-Theoretic Perspective",
+        "summary": "A watermark in a generative model's output is usually asked only whether a text is machine-made. The same mark can do more: attribute it to the user who produced it, extract a hidden payload, or local",
+        "link": "http://arxiv.org/abs/2607.13003v1",
+        "date": "2026-07-14",
         "authors": [
-          "Yibo Hu",
-          "Ren Wang"
+          "Xiaoyu Li",
+          "Zheng Gao",
+          "Xiaoyan Feng"
         ]
       },
       {
-        "title": "An Explainable Agentic System for Detection of Conversational Scams with Summary-Based Memory",
-        "summary": "Following the rapid progress of generative Artificial Intelligence, there is a growing threat posed by conversational scams. These scams often span over multiple weeks or months, gradually build trust",
-        "link": "http://arxiv.org/abs/2607.11707v1",
-        "date": "2026-07-13",
+        "title": "Silent Alarm: A J-Space Protocol for Comparing Danger Recognition Across Models and Quantization Levels",
+        "summary": "Jailbreak-robustness research typically evaluates safety through generated responses using an LLM-as-judge approach. Such evaluations, however, are sensitive to the benchmark's grading procedure and c",
+        "link": "http://arxiv.org/abs/2607.12792v1",
+        "date": "2026-07-14",
         "authors": [
-          "Ahmed Omar Salim Adnan",
-          "Yogananda Manjunath",
-          "Shivanjali Khare"
+          "Roman Prosvirnin",
+          "Victor Minchenkov",
+          "Alexey Soldatov"
         ]
       },
       {
-        "title": "Agent Hacks Agent: Autoresearch for Production-Agent Red-Teaming",
-        "summary": "Production LLM agents such as Claude Code and Codex operate over untrusted content, files, commands, and workspace state, making safety failures directly actionable. Red-teaming must therefore keep pa",
-        "link": "http://arxiv.org/abs/2607.11698v1",
-        "date": "2026-07-13",
+        "title": "A Scalable Cloud-Orchestrated and Service-Oriented Multi-Domain QKD Network with PQC Integration",
+        "summary": "Quantum key distribution (QKD) offers unconditional security but existing QKD networks remain difficult to scale across heterogeneous infrastructures and administrative domains due to vendor-specific ",
+        "link": "http://arxiv.org/abs/2607.12765v1",
+        "date": "2026-07-14",
         "authors": [
-          "Xutao Mao",
-          "Xiang Zheng",
-          "Cong Wang"
+          "Konstantinos Krilakis",
+          "Antonia Tsili",
+          "Aikaterini Mandilara"
         ]
       },
       {
-        "title": "Closing the Loop: An Access-Control Architecture for Automated, Anomaly-Driven Network Revocation in IoT Deployments",
-        "summary": "Network-based anomaly detection for IoT devices has matured to the point of reporting strong detection accuracy, yet most published systems stop at raising an alert and leave the question of automated",
-        "link": "http://arxiv.org/abs/2607.11649v1",
-        "date": "2026-07-13",
+        "title": "Stability Buys Time: A Re-Keying Game for Encrypted Multi-Agent Control",
+        "summary": "Encrypted control lets a cloud coordinate a fleet of agents on fully homomorphically encrypted state, keeping their positions and commands private. The approximate scheme for real-valued control, CKKS",
+        "link": "http://arxiv.org/abs/2607.12742v1",
+        "date": "2026-07-14",
         "authors": [
-          "Muhammet Emir Korkmaz",
-          "Kemal Bicakci",
-          "Yusuf Uzunay"
+          "Sai Sandeep Damera",
+          "John S. Baras"
         ]
       },
       {
-        "title": "Cardano's Voltaire Governance: Complete Specification and Research Program",
-        "summary": "Blockchain governance, the set of processes by which decentralized protocols evolve, remains a fundamental challenge in balancing adaptability, security, and stakeholder representation. This technical",
-        "link": "http://arxiv.org/abs/2607.11601v1",
-        "date": "2026-07-13",
+        "title": "Bulkhead: Automated Semantic Detection and Remediation of Container Escape Vulnerabilities",
+        "summary": "Filesystem isolation in container ecosystems is often weakened by cross-boundary path misresolution, causing path traversal (PaTra) vulnerabilities. These vulnerabilities stem from insecure host-conta",
+        "link": "http://arxiv.org/abs/2607.12723v1",
+        "date": "2026-07-14",
         "authors": [
-          "Nimrod Talmon",
-          "Oghenekaro Elem"
+          "Qiyuan Fan",
+          "Zhi Li",
+          "Junjie Li"
         ]
       },
       {
-        "title": "Linux disk encryption and self-encrypting drives -- A case study on Opal2 drives security",
-        "summary": "Opal2 self-encrypting drives provide hardware-based disk encryption serving as an additional layer of protection, or a replacement, for software-based solutions. This paper presents a case study of re",
-        "link": "http://arxiv.org/abs/2607.11563v1",
-        "date": "2026-07-13",
+        "title": "Auditable and Transparent Fully Authenticated Disk Encryption via USB Storage Interposition",
+        "summary": "Full Disk Encryption (FDE) has become increasingly important in the last decades due to the evident confidentiality concerns. In most systems, encryption is provided by an operating system driver, thr",
+        "link": "http://arxiv.org/abs/2607.12716v1",
+        "date": "2026-07-14",
         "authors": [
-          "Milan Bro\u017e",
-          "Tamara \u010ciernikov\u00e1",
-          "Ond\u0159ej Kozina"
+          "Enrique Soriano-Salvador",
+          "Gorka Guardiola M\u00fazquiz"
         ]
       },
       {
-        "title": "Graph-Based Structural Evaluation of LLM-Translated Adversary Emulation Procedures",
-        "summary": "Adversary emulation plans describe multi-step attacker procedures using MITRE ATT&CK techniques, privilege requirements, and observable telemetry. Translating them across operating systems supports cr",
-        "link": "http://arxiv.org/abs/2607.11517v1",
-        "date": "2026-07-13",
+        "title": "PVDetector: Detecting Prompt Injection Attacks on Purpose-Specific LLM Agents through Policy-Violation Concept Analysis",
+        "summary": "Large language models (LLMs) are increasingly deployed as purpose-specific agents to handle domain-specific tasks such as customer service and code generation. These agents are expected to comply with",
+        "link": "http://arxiv.org/abs/2607.12624v1",
+        "date": "2026-07-14",
         "authors": [
-          "Ahmed M. Elmisery"
+          "Junhui Wang",
+          "Hangtao Zhang",
+          "Zhirun Zheng"
         ]
       },
       {
-        "title": "Time Is Money: Incentivized Causal Transaction Ordering",
-        "summary": "Front-running is a subtle and persistent problem for blockchains. A blockchain is a stateful virtual machine executing instructions called transactions. Users earn rewards by publishing functional tra",
-        "link": "http://arxiv.org/abs/2607.11496v1",
-        "date": "2026-07-13",
+        "title": "Explainable-by-Design Audio Deepfake Detection via Wiener-Hopf Linear Prediction",
+        "summary": "The rapid advancement of synthetic speech generation methods has made audio deepfake detection a critical challenge in multimedia forensics. While recent approaches achieve high detection accuracy, th",
+        "link": "http://arxiv.org/abs/2607.12584v1",
+        "date": "2026-07-14",
         "authors": [
-          "Hongyin Chen",
-          "Xu Zheng",
-          "Jichen Li"
+          "Mattia Tamiazzo",
+          "Simone Milani",
+          "Massimo Iuliani"
         ]
       }
     ],
-    "updated": "2026-07-14T04:52:39.528483Z"
+    "updated": "2026-07-15T04:52:50.226415Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -277,6 +278,6 @@
         ]
       }
     ],
-    "updated": "2026-07-14T04:52:39.528483Z"
+    "updated": "2026-07-15T04:52:50.226415Z"
   }
 }
