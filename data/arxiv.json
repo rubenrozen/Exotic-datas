@@ -3,196 +3,200 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Deep Interaction: An Efficient Human-AI Interaction Method for Large Reasoning Models",
-        "summary": "The emergence of Chain-of-Thought (CoT) reasoning has significantly enhanced the ability of large language models (LLMs) to tackle complex, multi-step tasks. However, when errors occur, current intera",
-        "link": "http://arxiv.org/abs/2607.14049v1",
-        "date": "2026-07-15",
+        "title": "RoboTTT: Context Scaling for Robot Policies",
+        "summary": "Recent robot foundation models operate with single-step or short-history visuomotor context. We introduce Test-Time-Training Robot Policies (RoboTTT), a robot model and training recipe that scale visu",
+        "link": "http://arxiv.org/abs/2607.15275v1",
+        "date": "2026-07-16",
         "authors": [
-          "Hefeng Zhou",
-          "Jinxuan Zhang",
-          "Jiong Lou"
+          "Yunfan Jiang",
+          "Yevgen Chebotar",
+          "Ruijie Zheng"
         ]
       },
       {
-        "title": "Earthquaker-AI: A Retrieval-Augmented Generation Framework with Rubric-Based Assessment for Primary School Earthquake Education",
-        "summary": "This paper presents Earthquaker-AI, a hybrid educational framework building upon a previously implemented educational robotics project by integrating a conversational AI assistant based on Retrieval-A",
-        "link": "http://arxiv.org/abs/2607.14046v1",
-        "date": "2026-07-15",
+        "title": "SciDiagramEdit: Learning to Edit Scientific Diagrams from Paper Revisions",
+        "summary": "Editing the figures in a research paper is a routine and time-consuming part of everyday research practice: authors relabel components, rearrange panels, and restyle visuals as they revise their manus",
+        "link": "http://arxiv.org/abs/2607.15272v1",
+        "date": "2026-07-16",
         "authors": [
-          "Xanthi Kokkinou",
-          "Chaido Mizeli",
-          "Nafsika Koulaxidou"
+          "Yasheng Sun",
+          "Zezi Zeng",
+          "Yifan Yang"
         ]
       },
       {
-        "title": "AI-accelerated End-to-End Framework for Rapid Professional Upskilling",
-        "summary": "By 2030, 59 of every 100 workers will need reskilling or upskilling, yet the average time to close an enterprise skills gap grew from roughly 3 days in 2014 to 36 days in 2018. Most current frameworks",
-        "link": "http://arxiv.org/abs/2607.14044v1",
-        "date": "2026-07-15",
+        "title": "Pretraining Data Can Be Poisoned through Computational Propaganda",
+        "summary": "Poisoning pretraining data can introduce harmful behaviors to LMs that are difficult to detect and mitigate. Prior work on poisoning pretraining data has largely exploited established data sources suc",
+        "link": "http://arxiv.org/abs/2607.15267v1",
+        "date": "2026-07-16",
         "authors": [
-          "Tam Nguyen",
-          "Hung Nguyen",
-          "Robert Ogburn"
+          "Victoria Graf",
+          "Hannaneh Hajishirzi",
+          "Noah A. Smith"
         ]
       },
       {
-        "title": "Multi-Expert Routing for Multi-Domain Low-Resource OCR: A Manchu Case Study",
-        "summary": "Historical Manchu OCR must accommodate various visually distinct writing styles, including regular script, running script, and the semi-cursive chancery hand used in palace memorials, despite limited ",
-        "link": "http://arxiv.org/abs/2607.14041v1",
-        "date": "2026-07-15",
+        "title": "SceneBind: Binding What and Where Across Vision, Audio and Language",
+        "summary": "We present SceneBind, an omni-modal representation of realistic scenes with joint semantic and 3D spatial understanding across vision, audio and language. Existing omni-modal encoders excel at instanc",
+        "link": "http://arxiv.org/abs/2607.15265v1",
+        "date": "2026-07-16",
         "authors": [
-          "Zhan Chen",
-          "Jiqiao Ma",
-          "Chih-wen Kuo"
+          "Mingfei Chen",
+          "Zijun Cui",
+          "Ruoke Zhang"
         ]
       },
       {
-        "title": "Early Adoption of Agentic Coding Tools by GitHub Projects",
-        "summary": "Agentic coding tools are increasingly capable of generating and submitting pull requests (PRs) to software projects, introducing new forms of human-agent collaboration in software development. While p",
-        "link": "http://arxiv.org/abs/2607.14037v1",
-        "date": "2026-07-15",
+        "title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
+        "summary": "Security-agent evaluations commonly measure peak offensive capability under generous inference budgets, emphasizing vulnerability discovery, exploit development, penetration testing, and CTF completio",
+        "link": "http://arxiv.org/abs/2607.15263v1",
+        "date": "2026-07-16",
         "authors": [
-          "Maliha Noushin Raida",
-          "Daqing Hou"
+          "Paul Kassianik",
+          "Blaine Nelson",
+          "Yaron Singer"
         ]
       },
       {
-        "title": "Improving Wind and Solar Power Prediction with Efficient Wrapper-based Feature Selection: An Empirical Study",
-        "summary": "With rising global energy demand and growing awareness of climate change and its impacts, the share of renewable energies in the global energy mix continues to grow. Unlike conventional power generati",
-        "link": "http://arxiv.org/abs/2607.14024v1",
-        "date": "2026-07-15",
+        "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
+        "summary": "Recent advances in Tool-Integrated Large Language Models have made web search a core capability of information-seeking agents. However, as interaction histories grow, agents increasingly struggle to t",
+        "link": "http://arxiv.org/abs/2607.15257v1",
+        "date": "2026-07-16",
         "authors": [
-          "Daniel Grillmeyer",
-          "Marius Hadry",
-          "Michael Stenger"
+          "Yuyao Zhang",
+          "Junjie Gao",
+          "Zhengxian Wu"
         ]
       },
       {
-        "title": "Transforming Rank: How Architecture Navigates the Spectral Pathologies of Depth",
-        "summary": "We investigate how each component of the Transformer feedforward block architecture design determines how much rank survives across depth at initialization. We reinterpret skip connections and normali",
-        "link": "http://arxiv.org/abs/2607.14018v1",
-        "date": "2026-07-15",
+        "title": "teLLMe Why (Ain't Nothing but a Jam): Exploratory Causal Analysis of Urban Driving Data",
+        "summary": "Traffic agencies now have access to large volumes of video-derived data for studying safety and congestion. Most of these data are observational and collected without interventions, which makes causal",
+        "link": "http://arxiv.org/abs/2607.15254v1",
+        "date": "2026-07-16",
         "authors": [
-          "Katie Everett"
+          "Qiwei Li",
+          "Jorge Ortiz"
         ]
       },
       {
-        "title": "Rethinking Penetration Testing for AI-Enabled Systems: From Resource Compromise to Behavioral Objective Violation",
-        "summary": "Penetration testing traditionally evaluates whether adversaries can exploit weaknesses in software, infrastructure, configurations, or operational controls to achieve security-relevant compromise. Thi",
-        "link": "http://arxiv.org/abs/2607.14006v1",
-        "date": "2026-07-15",
+        "title": "AutoSynthesis: An agentic system for automated meta-analysis",
+        "summary": "Evidence synthesis is crucial for turning primary research into reliable knowledge for science, medicine, education, and policy. Yet, quantitative evidence synthesis remains largely manual and difficu",
+        "link": "http://arxiv.org/abs/2607.15247v1",
+        "date": "2026-07-16",
         "authors": [
-          "Mohammad Allahbakhsh",
-          "Mohammad Hassan Bahari",
-          "Moslem Attar-Raouf"
+          "Moein Taherinezhad",
+          "Sebastian Maier",
+          "Gerardo Vitagliano"
         ]
       }
     ],
-    "updated": "2026-07-16T05:11:55.699188Z"
+    "updated": "2026-07-17T05:14:52.666698Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-07-16T05:11:55.699188Z"
+    "updated": "2026-07-17T05:14:52.666698Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-07-16T05:11:55.699188Z"
+    "updated": "2026-07-17T05:14:52.666698Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-07-16T05:11:55.699188Z"
+    "updated": "2026-07-17T05:14:52.666698Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Rethinking Penetration Testing for AI-Enabled Systems: From Resource Compromise to Behavioral Objective Violation",
-        "summary": "Penetration testing traditionally evaluates whether adversaries can exploit weaknesses in software, infrastructure, configurations, or operational controls to achieve security-relevant compromise. Thi",
-        "link": "http://arxiv.org/abs/2607.14006v1",
-        "date": "2026-07-15",
+        "title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
+        "summary": "Security-agent evaluations commonly measure peak offensive capability under generous inference budgets, emphasizing vulnerability discovery, exploit development, penetration testing, and CTF completio",
+        "link": "http://arxiv.org/abs/2607.15263v1",
+        "date": "2026-07-16",
         "authors": [
-          "Mohammad Allahbakhsh",
-          "Mohammad Hassan Bahari",
-          "Moslem Attar-Raouf"
+          "Paul Kassianik",
+          "Blaine Nelson",
+          "Yaron Singer"
         ]
       },
       {
-        "title": "Agent Skill Security: Threat Models, Attacks, Defenses, and Evaluation",
-        "summary": "Reusable skills are becoming a fundamental building block of Large Language Model (LLM) agents, enabling capabilities to be packaged, shared, and reused across diverse applications. However, existing ",
-        "link": "http://arxiv.org/abs/2607.13987v1",
-        "date": "2026-07-15",
+        "title": "When Words Are Safe But Actions Kill: Probing Physical Danger Beyond Text Safety in Hidden-State Risk Space",
+        "summary": "Large language models (LLMs) increasingly serve as high-level planners for embodied agents, where linguistically benign instructions can become unsafe once grounded in the physical world. We study whe",
+        "link": "http://arxiv.org/abs/2607.15218v1",
+        "date": "2026-07-16",
         "authors": [
-          "Sanket Badhe",
-          "Priyanka Tiwari"
+          "Weimeng Wang",
+          "Ziqiang Wang",
+          "Zihang Zhan"
         ]
       },
       {
-        "title": "ProfMalPlus: Agent-Coordinated Detection of Malicious NPM Packages via Static-Dynamic Analysis Synergy",
-        "summary": "Open source software is vulnerable to supply-chain attacks through transitive dependencies, especially malicious code injected into NPM packages. Existing detectors often inadequately model obfuscated",
-        "link": "http://arxiv.org/abs/2607.13965v1",
-        "date": "2026-07-15",
+        "title": "Setup Complete, Now You Are Compromised: Weaponizing Setup Instructions Against AI Coding Agents",
+        "summary": "AI coding agents set up projects by reading documentation and installing the dependencies it lists, without verifying their names, sources, or known vulnerabilities. By editing only a README, requirem",
+        "link": "http://arxiv.org/abs/2607.15143v1",
+        "date": "2026-07-16",
         "authors": [
-          "Yiheng Huang",
-          "Zhijia Zhao",
-          "Bihuan Chen"
+          "Aadesh Bagmar",
+          "Pushkar Saraf"
         ]
       },
       {
-        "title": "HORCRUX: A Complete PQC RISC-V eXtension Architecture",
-        "summary": "This work presents a compact RISC-V extension for Post-Quantum Cryptography (PQC) called HORCRUX, which provides a unified Instruction-Set Extension (ISE) supporting all NIST-approved PQC algorithms. ",
-        "link": "http://arxiv.org/abs/2607.13939v1",
-        "date": "2026-07-15",
+        "title": "Automated Template-free Synthesis of Instruction-Centric Leakage Contracts for Black-Box CPUs",
+        "summary": "Side-channel attacks pose a significant security threat for modern computing platforms, because they exploit subtle discrepancies in CPU behaviors to leak sensitive information. To model the informati",
+        "link": "http://arxiv.org/abs/2607.15118v1",
+        "date": "2026-07-16",
         "authors": [
-          "Alessandra Dolmeta",
-          "Valeria Piscopo",
-          "Michael Hutter"
+          "Elvira Moreno",
+          "Tiziano Marinaro",
+          "Ryan Williams"
         ]
       },
       {
-        "title": "Plausible Deniability Guarantees for Whistleblowers",
-        "summary": "Whistleblowers are a key safeguard against organizational wrongdoing, but the threat of retaliation deters reporting. Existing whistleblower-protection proposals lack formal privacy guarantees, and ex",
-        "link": "http://arxiv.org/abs/2607.13928v1",
-        "date": "2026-07-15",
+        "title": "DataShield: Uncovering Risky Fine-Tuning Data Across LLMs Through Consensus Subspace Alignment",
+        "summary": "Fine-tuning large language models (LLMs) on domain-specific datasets has become a standard paradigm for adapting LLMs to specialized applications. However, recent work has shown that even fine-tuning ",
+        "link": "http://arxiv.org/abs/2607.15081v1",
+        "date": "2026-07-16",
         "authors": [
-          "Leo Richter",
-          "Matt J. Kusner"
+          "Zefeng Wu",
+          "Weiwei Qi",
+          "Jielong Chen"
         ]
       },
       {
-        "title": "From Classification to Consistent Templates: Multiple Permuted-Label Classifier Encoding for Biometric Template Protection",
-        "summary": "Biometric template protection (BTP) must secure stored templates while tolerating intra-class variations. Existing methods rely on protected-domain similarity matching, error correction, or predefined",
-        "link": "http://arxiv.org/abs/2607.13845v1",
-        "date": "2026-07-15",
+        "title": "NFSA: Non-Forward Secure Aggregation with One Server via Two Layer Secret Sharing",
+        "summary": "Federated Learning (FL) enables collaborative model training while preserving privacy by keeping data local. However, the risk of sensitive data leakage through model updates necessitates the use of s",
+        "link": "http://arxiv.org/abs/2607.15052v1",
+        "date": "2026-07-16",
         "authors": [
-          "Baogang Song",
-          "Zhongshu Zhao",
-          "Qianrong Zheng"
+          "Yufei Zhou"
         ]
       },
       {
-        "title": "Reveal, Correct, Then Pay: Encrypted Mempools and Perpetual Funding Security",
-        "summary": "Encrypted mempools are designed to hide transaction contents until execution order is fixed, preventing many victim dependent forms of maximal extractable value. This paper studies a different class o",
-        "link": "http://arxiv.org/abs/2607.13832v1",
-        "date": "2026-07-15",
+        "title": "On Success and Simplicity: A Second Look at Transferable Vision-Language Attack Pipeline",
+        "summary": "Vision-Language Pre-training Models (VLPMs) are known to be vulnerable to adversarial attacks. Recent transferable attacks on VLPMs have followed a common pipeline with complicated loss functions or m",
+        "link": "http://arxiv.org/abs/2607.14974v1",
+        "date": "2026-07-16",
         "authors": [
-          "Benjamin Marsh"
+          "Yuchen Ren",
+          "Zhengyu Zhao",
+          "Chenhao Lin"
         ]
       },
       {
-        "title": "Assessing the Forensic Viability of Android Memory Analysis Across Production Builds: A Cross-Version Study of Security Hardening and Structure Preservation",
-        "summary": "Android memory forensics recovers evidence that never touches disk: decrypted messages, session credentials, and the live internal state of a running application. The tools that perform this recovery ",
-        "link": "http://arxiv.org/abs/2607.13821v1",
-        "date": "2026-07-15",
+        "title": "A Queueing-Stability Criterion for Causal IPD-QIM Network Flow Watermarking",
+        "summary": "On multi-hop encrypted links such as Tor and cascaded VPNs, tunneling flattens packet lengths and protocol fields, leaving inter-packet delay (IPD) as the main carrier for active flow attribution. Cau",
+        "link": "http://arxiv.org/abs/2607.14954v1",
+        "date": "2026-07-16",
         "authors": [
-          "Jayasimha Nannapanen",
-          "Sneha Sudhakaran"
+          "Jiuxiang Cai",
+          "Guang Cheng",
+          "Guangjie Liu"
         ]
       }
     ],
-    "updated": "2026-07-16T05:11:55.699188Z"
+    "updated": "2026-07-17T05:14:52.666698Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -276,6 +280,6 @@
         ]
       }
     ],
-    "updated": "2026-07-16T05:11:55.699188Z"
+    "updated": "2026-07-17T05:14:52.666698Z"
   }
 }
