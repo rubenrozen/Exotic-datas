@@ -3,200 +3,200 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "RoboTTT: Context Scaling for Robot Policies",
-        "summary": "Recent robot foundation models operate with single-step or short-history visuomotor context. We introduce Test-Time-Training Robot Policies (RoboTTT), a robot model and training recipe that scale visu",
-        "link": "http://arxiv.org/abs/2607.15275v1",
-        "date": "2026-07-16",
+        "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
+        "summary": "Connected and Autonomous Vehicles (CAVs) rely on interconnected software and hardware components, including sensors, Electronic Control Units, in-vehicle infotainment systems, and telematics units, wh",
+        "link": "http://arxiv.org/abs/2607.16175v1",
+        "date": "2026-07-17",
         "authors": [
-          "Yunfan Jiang",
-          "Yevgen Chebotar",
-          "Ruijie Zheng"
+          "Md Erfan",
+          "Ahmed Ryan",
+          "Md Kamal Hossain Chowdhury"
         ]
       },
       {
-        "title": "SciDiagramEdit: Learning to Edit Scientific Diagrams from Paper Revisions",
-        "summary": "Editing the figures in a research paper is a routine and time-consuming part of everyday research practice: authors relabel components, rearrange panels, and restyle visuals as they revise their manus",
-        "link": "http://arxiv.org/abs/2607.15272v1",
-        "date": "2026-07-16",
+        "title": "When Does Muon Help Agentic Reinforcement Learning?",
+        "summary": "Muon is competitive with AdamW in large-scale pre-training, but its value for reinforcement-learning (RL) post-training remains unclear. We study vanilla Muon in sparse-reward agentic RL through match",
+        "link": "http://arxiv.org/abs/2607.16169v1",
+        "date": "2026-07-17",
         "authors": [
-          "Yasheng Sun",
-          "Zezi Zeng",
-          "Yifan Yang"
+          "Kai Ruan",
+          "Jinghao Lin",
+          "Zihe Huang"
         ]
       },
       {
-        "title": "Pretraining Data Can Be Poisoned through Computational Propaganda",
-        "summary": "Poisoning pretraining data can introduce harmful behaviors to LMs that are difficult to detect and mitigate. Prior work on poisoning pretraining data has largely exploited established data sources suc",
-        "link": "http://arxiv.org/abs/2607.15267v1",
-        "date": "2026-07-16",
+        "title": "An Exam for Active Observers",
+        "summary": "Human vision is a closed loop: gaze is continuously redirected by intermediate hypotheses rather than a single snapshot. Decades of psychophysics and cognitive science have argued that this active obs",
+        "link": "http://arxiv.org/abs/2607.16165v1",
+        "date": "2026-07-17",
         "authors": [
-          "Victoria Graf",
-          "Hannaneh Hajishirzi",
-          "Noah A. Smith"
+          "Jiarui Zhang",
+          "Muzi Tao",
+          "Shangshang Wang"
         ]
       },
       {
-        "title": "SceneBind: Binding What and Where Across Vision, Audio and Language",
-        "summary": "We present SceneBind, an omni-modal representation of realistic scenes with joint semantic and 3D spatial understanding across vision, audio and language. Existing omni-modal encoders excel at instanc",
-        "link": "http://arxiv.org/abs/2607.15265v1",
-        "date": "2026-07-16",
+        "title": "When Do Multi-Agent Systems Help? An Information Bottleneck Perspective",
+        "summary": "LLM powered multi-agent systems (MAS) have emerged as a promising paradigm for complex tasks. However, their advantages over single-agent systems (SAS) remain unclear, with performance varying inconsi",
+        "link": "http://arxiv.org/abs/2607.16133v1",
+        "date": "2026-07-17",
         "authors": [
-          "Mingfei Chen",
-          "Zijun Cui",
-          "Ruoke Zhang"
+          "Wendi Yu",
+          "Lianhao Zhou",
+          "Xiangjue Dong"
         ]
       },
       {
-        "title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
-        "summary": "Security-agent evaluations commonly measure peak offensive capability under generous inference budgets, emphasizing vulnerability discovery, exploit development, penetration testing, and CTF completio",
-        "link": "http://arxiv.org/abs/2607.15263v1",
-        "date": "2026-07-16",
+        "title": "ToolSciVer: Multimodal Scientific Claim Verification with Visual Tool Augmented Reinforcement Learning",
+        "summary": "Multimodal Scientific Claim Verification (MSCV) requires models to verify scientific claims using visually grounded evidence from papers, including figures, tables, charts, and textual context. Howeve",
+        "link": "http://arxiv.org/abs/2607.16131v1",
+        "date": "2026-07-17",
         "authors": [
-          "Paul Kassianik",
-          "Blaine Nelson",
-          "Yaron Singer"
+          "Binglin Zhou",
+          "Peng Shi",
+          "Ryo Kamoi"
         ]
       },
       {
-        "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
-        "summary": "Recent advances in Tool-Integrated Large Language Models have made web search a core capability of information-seeking agents. However, as interaction histories grow, agents increasingly struggle to t",
-        "link": "http://arxiv.org/abs/2607.15257v1",
-        "date": "2026-07-16",
+        "title": "A Methodology for Auditable Trustworthiness Levels in AI Lifecycle Governance",
+        "summary": "AI governance increasingly requires judgments about whether an AI system remains adequately trustworthy over time, whether observed changes are tolerable, and how such judgments should be documented i",
+        "link": "http://arxiv.org/abs/2607.16130v1",
+        "date": "2026-07-17",
         "authors": [
-          "Yuyao Zhang",
-          "Junjie Gao",
-          "Zhengxian Wu"
+          "Andrea Ferrario"
         ]
       },
       {
-        "title": "teLLMe Why (Ain't Nothing but a Jam): Exploratory Causal Analysis of Urban Driving Data",
-        "summary": "Traffic agencies now have access to large volumes of video-derived data for studying safety and congestion. Most of these data are observational and collected without interventions, which makes causal",
-        "link": "http://arxiv.org/abs/2607.15254v1",
-        "date": "2026-07-16",
+        "title": "CRAFT: Clustering Rubrics to Diagnose Weak LLM Capabilities and Generate Targeted Fine-Tuning Data",
+        "summary": "Evaluations should do more than measure a models current performance. They should tell us what to fix for the next model iteration and provide a way to generate targeted post training data. Most evalu",
+        "link": "http://arxiv.org/abs/2607.16122v1",
+        "date": "2026-07-17",
         "authors": [
-          "Qiwei Li",
-          "Jorge Ortiz"
+          "Vipul Gupta",
+          "Zihao Wang",
+          "Razvan-Gabriel Dumitru"
         ]
       },
       {
-        "title": "AutoSynthesis: An agentic system for automated meta-analysis",
-        "summary": "Evidence synthesis is crucial for turning primary research into reliable knowledge for science, medicine, education, and policy. Yet, quantitative evidence synthesis remains largely manual and difficu",
-        "link": "http://arxiv.org/abs/2607.15247v1",
-        "date": "2026-07-16",
+        "title": "Harmonizing AI Safety Thresholds",
+        "summary": "Frontier AI companies have published capability thresholds that differ substantially, making it difficult for third parties to verify whether a threshold has been crossed or to compare requirements ac",
+        "link": "http://arxiv.org/abs/2607.16112v1",
+        "date": "2026-07-17",
         "authors": [
-          "Moein Taherinezhad",
-          "Sebastian Maier",
-          "Gerardo Vitagliano"
+          "Wilber Sean Anterola",
+          "Matthew Ball",
+          "Luis F. Lafuerza"
         ]
       }
     ],
-    "updated": "2026-07-19T05:23:10.931841Z"
+    "updated": "2026-07-20T05:40:58.068885Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-07-19T05:23:10.931841Z"
+    "updated": "2026-07-20T05:40:58.068885Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-07-19T05:23:10.931841Z"
+    "updated": "2026-07-20T05:40:58.068885Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-07-19T05:23:10.931841Z"
+    "updated": "2026-07-20T05:40:58.068885Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents",
-        "summary": "Security-agent evaluations commonly measure peak offensive capability under generous inference budgets, emphasizing vulnerability discovery, exploit development, penetration testing, and CTF completio",
-        "link": "http://arxiv.org/abs/2607.15263v1",
-        "date": "2026-07-16",
+        "title": "Evaluating Open-Weight LLMs for Generating Structured Threat Information for Autonomous Vehicle Vulnerabilities",
+        "summary": "Connected and Autonomous Vehicles (CAVs) rely on interconnected software and hardware components, including sensors, Electronic Control Units, in-vehicle infotainment systems, and telematics units, wh",
+        "link": "http://arxiv.org/abs/2607.16175v1",
+        "date": "2026-07-17",
         "authors": [
-          "Paul Kassianik",
-          "Blaine Nelson",
-          "Yaron Singer"
+          "Md Erfan",
+          "Ahmed Ryan",
+          "Md Kamal Hossain Chowdhury"
         ]
       },
       {
-        "title": "When Words Are Safe But Actions Kill: Probing Physical Danger Beyond Text Safety in Hidden-State Risk Space",
-        "summary": "Large language models (LLMs) increasingly serve as high-level planners for embodied agents, where linguistically benign instructions can become unsafe once grounded in the physical world. We study whe",
-        "link": "http://arxiv.org/abs/2607.15218v1",
-        "date": "2026-07-16",
+        "title": "DoSQ: A Cross-Layer Denial of Service Quality Attack by Exploiting Side Channels in 5G NR",
+        "summary": "The 3rd Generation Partnership Project (3GPP)'s Fifth Generation New Radio (5G NR) is critical to supporting mission-critical services. However, 5G systems are vulnerable to smart jamming attacks that",
+        "link": "http://arxiv.org/abs/2607.16102v1",
+        "date": "2026-07-17",
         "authors": [
-          "Weimeng Wang",
-          "Ziqiang Wang",
-          "Zihang Zhan"
+          "Mahmudul Hassan Ashik",
+          "Moinul Hossain"
         ]
       },
       {
-        "title": "Setup Complete, Now You Are Compromised: Weaponizing Setup Instructions Against AI Coding Agents",
-        "summary": "AI coding agents set up projects by reading documentation and installing the dependencies it lists, without verifying their names, sources, or known vulnerabilities. By editing only a README, requirem",
-        "link": "http://arxiv.org/abs/2607.15143v1",
-        "date": "2026-07-16",
+        "title": "Gasp: A DeFi Application Specic Rollup as a Consolidation Layer for All Assets",
+        "summary": "Gasp is a decentralized exchange designed as an application-specific Layer 2 (L2) rollup with omnichain connectivity, leveraging EigenLayer's restaked ETH for computation correctness and finalization.",
+        "link": "http://arxiv.org/abs/2607.16052v1",
+        "date": "2026-07-17",
         "authors": [
-          "Aadesh Bagmar",
-          "Pushkar Saraf"
+          "Stanislav Vozarik",
+          "Mateusz Nowakowski",
+          "Shoeb Siddiqui"
         ]
       },
       {
-        "title": "Automated Template-free Synthesis of Instruction-Centric Leakage Contracts for Black-Box CPUs",
-        "summary": "Side-channel attacks pose a significant security threat for modern computing platforms, because they exploit subtle discrepancies in CPU behaviors to leak sensitive information. To model the informati",
-        "link": "http://arxiv.org/abs/2607.15118v1",
-        "date": "2026-07-16",
+        "title": "AI Watermark Evidence Fails Forensic Readiness: An Empirical Evaluation",
+        "summary": "Governments are increasingly mandating that LLM-generated content carry watermarks. The EU AI Act calls for markings that are \"sufficiently reliable and robust.\" California's SB 942 requires disclosur",
+        "link": "http://arxiv.org/abs/2607.16010v1",
+        "date": "2026-07-17",
         "authors": [
-          "Elvira Moreno",
-          "Tiziano Marinaro",
-          "Ryan Williams"
+          "Saifur Rahman Tamim",
+          "Amir Labib Khan"
         ]
       },
       {
-        "title": "DataShield: Uncovering Risky Fine-Tuning Data Across LLMs Through Consensus Subspace Alignment",
-        "summary": "Fine-tuning large language models (LLMs) on domain-specific datasets has become a standard paradigm for adapting LLMs to specialized applications. However, recent work has shown that even fine-tuning ",
-        "link": "http://arxiv.org/abs/2607.15081v1",
-        "date": "2026-07-16",
+        "title": "Refusal is Not Safety! Benchmarking Latent Safety Risks of LLM-Driven Content Humorization",
+        "summary": "Safety defenses for large language models (LLMs) have been extensively studied, with existing approaches focusing on attack detection and refusal mechanisms. Such fixed-form direct refusal strategies ",
+        "link": "http://arxiv.org/abs/2607.15977v1",
+        "date": "2026-07-17",
         "authors": [
-          "Zefeng Wu",
-          "Weiwei Qi",
-          "Jielong Chen"
+          "Yu Cui",
+          "Ruiqing Yue",
+          "Tingyu Li"
         ]
       },
       {
-        "title": "NFSA: Non-Forward Secure Aggregation with One Server via Two Layer Secret Sharing",
-        "summary": "Federated Learning (FL) enables collaborative model training while preserving privacy by keeping data local. However, the risk of sensitive data leakage through model updates necessitates the use of s",
-        "link": "http://arxiv.org/abs/2607.15052v1",
-        "date": "2026-07-16",
+        "title": "Code-Poisoning Property Inference Attacks",
+        "summary": "The flourishing code hosting platforms and coding agents enable even beginners with private data to build tailored Machine Learning (ML) models using available code quickly. The training data for ML m",
+        "link": "http://arxiv.org/abs/2607.15970v1",
+        "date": "2026-07-17",
         "authors": [
-          "Yufei Zhou"
+          "Xukun Luan",
+          "Yuhui Gong",
+          "Gang Zhang"
         ]
       },
       {
-        "title": "On Success and Simplicity: A Second Look at Transferable Vision-Language Attack Pipeline",
-        "summary": "Vision-Language Pre-training Models (VLPMs) are known to be vulnerable to adversarial attacks. Recent transferable attacks on VLPMs have followed a common pipeline with complicated loss functions or m",
-        "link": "http://arxiv.org/abs/2607.14974v1",
-        "date": "2026-07-16",
+        "title": "The Language of Security: How Prompt Syntax Shapes Secure Code Generation in Open LLMs",
+        "summary": "Large Language Models (LLMs) are increasingly used for source code generation despite their outputs often exhibiting security vulnerabilities. Prior work shows that prompt engineering can mitigate suc",
+        "link": "http://arxiv.org/abs/2607.15937v1",
+        "date": "2026-07-17",
         "authors": [
-          "Yuchen Ren",
-          "Zhengyu Zhao",
-          "Chenhao Lin"
+          "Matteo Cicalese",
+          "Antonio Della Porta",
+          "Stefano Lambiase"
         ]
       },
       {
-        "title": "A Queueing-Stability Criterion for Causal IPD-QIM Network Flow Watermarking",
-        "summary": "On multi-hop encrypted links such as Tor and cascaded VPNs, tunneling flattens packet lengths and protocol fields, leaving inter-packet delay (IPD) as the main carrier for active flow attribution. Cau",
-        "link": "http://arxiv.org/abs/2607.14954v1",
-        "date": "2026-07-16",
+        "title": "Converging Safety and Security: IO-Link Wireless and OPC UA over 5G under prEN 50742",
+        "summary": "The integration of wireless communication technologies in industrial automation offers greater flexibility, but also exposes safety systems to a broader threat vector. Emerging regulations, such as th",
+        "link": "http://arxiv.org/abs/2607.15840v1",
+        "date": "2026-07-17",
         "authors": [
-          "Jiuxiang Cai",
-          "Guang Cheng",
-          "Guangjie Liu"
+          "Henry Beuster",
+          "Thomas Robert Doebbert",
+          "Gerd Scholl"
         ]
       }
     ],
-    "updated": "2026-07-19T05:23:10.931841Z"
+    "updated": "2026-07-20T05:40:58.068885Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -280,6 +280,6 @@
         ]
       }
     ],
-    "updated": "2026-07-19T05:23:10.931841Z"
+    "updated": "2026-07-20T05:40:58.068885Z"
   }
 }
