@@ -3,202 +3,199 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Automated Discovery Has No Universally Superior Harness",
-        "summary": "Autonomous discovery systems such as OpenEvolve and TTT-Discover are often used as general-purpose harnesses. However, in practice these are composite systems combining several design choices about ar",
-        "link": "http://arxiv.org/abs/2607.18235v1",
-        "date": "2026-07-20",
+        "title": "Copy Less, Ground More: Overcoming Repetitive Copying in Long-Context Reasoning via Evidence-Aware Reinforcement Learning",
+        "summary": "Large language models that generate step-by-step reasoning traces have achieved strong performance on complex tasks, and extending them to long-context settings has emerged as an important frontier. H",
+        "link": "http://arxiv.org/abs/2607.19345v1",
+        "date": "2026-07-21",
         "authors": [
-          "Akshat Gupta",
-          "Jermaine Lei",
-          "Alexander Lu"
+          "Lizhe Fang",
+          "Weizhou Shen",
+          "Tianyi Tang"
         ]
       },
       {
-        "title": "Simple Domain Generalization for Strong Pixel-Level Image Tampering Detection in Modern VLMs",
-        "summary": "Modern vision-language models (VLMs) have significantly improved image generation and editing capabilities, making pixel-level image tampering detection increasingly important yet challenging under cr",
-        "link": "http://arxiv.org/abs/2607.18230v1",
-        "date": "2026-07-20",
+        "title": "Appearance Pointers -- Multimodal Region Control of Diffusion Transformers",
+        "summary": "Controllable image generation remains challenging for creative professionals, who often require precise regional control over materials, object identities, and spatial arrangements that cannot be reli",
+        "link": "http://arxiv.org/abs/2607.19344v1",
+        "date": "2026-07-21",
         "authors": [
-          "Yi Tang",
-          "Xinyi Shang",
-          "Jiacheng Cui"
+          "Rahul Sajnani",
+          "Yulia Gryaditskaya",
+          "Radom\u00edr M\u011bch"
         ]
       },
       {
-        "title": "Logical Judgments Under Pressure: Diagnosing Syllogistic Stability with Learned Soft Prefixes",
-        "summary": "To test how correct logical judgments respond to learned context, we prepend a soft prefix to an exactly labeled syllogistic reasoning benchmark while keeping the model fixed. Soft prefixes are opaque",
-        "link": "http://arxiv.org/abs/2607.18228v1",
-        "date": "2026-07-20",
+        "title": "CodeRescue: Budget-Calibrated Recovery Routing for Coding Agents",
+        "summary": "Coding agents increasingly operate in executable environments where a failed attempt produces actionable feedback rather than merely an incorrect answer. Existing cost-aware systems typically treat su",
+        "link": "http://arxiv.org/abs/2607.19338v1",
+        "date": "2026-07-21",
         "authors": [
-          "Brian K Chen"
+          "Qijia He",
+          "Jiayi Cheng",
+          "Chenqian Le"
         ]
       },
       {
-        "title": "GigaPath-Flash and GigaTIME-Flash: Efficient Pathology Foundation Models for Whole-Slide and Tumor Microenvironment Analysis",
-        "summary": "Foundation models have emerged as a driving force in computational pathology, with the potential to transform cancer diagnosis, prognosis, and treatment selection by learning transferable representati",
-        "link": "http://arxiv.org/abs/2607.18218v1",
-        "date": "2026-07-20",
+        "title": "Agents in the Wild: Where Research Meets Deployment",
+        "summary": "Agentic systems large language model (LLM) based architectures capable of reasoning, planning, acting, and coordinating with tools and other agents are rapidly transitioning from research prototypes t",
+        "link": "http://arxiv.org/abs/2607.19336v1",
+        "date": "2026-07-21",
         "authors": [
-          "Naoto Usuyama",
-          "Jeya Maria Jose Valanarasu",
-          "Sicong Yao"
+          "Grace Hui Yang",
+          "Pranav N. Venkit",
+          "Hooman Sedghamiz"
         ]
       },
       {
-        "title": "Learning Adaptive Safety Margins for Visual Navigation",
-        "summary": "Robots in cluttered indoor spaces often fail not because they cannot generate collision-free paths, but because a fixed safety margin is mis-calibrated: conservative margins cause detours and timeouts",
-        "link": "http://arxiv.org/abs/2607.18200v1",
-        "date": "2026-07-20",
+        "title": "Provable diffusion-based posterior sampling for linear inverse problems via DDIM",
+        "summary": "Diffusion-based methods have achieved remarkable empirical success in solving inverse problems. However, many existing posterior samplers either lack rigorous theoretical guarantees or incur substanti",
+        "link": "http://arxiv.org/abs/2607.19333v1",
+        "date": "2026-07-21",
         "authors": [
-          "Junyi Hu",
-          "Shuaihang Yuan",
-          "Geeta Chandra Raju Bethala"
+          "Yuchen Jiao",
+          "Na Li",
+          "Changxiao Cai"
         ]
       },
       {
-        "title": "A Continual Validation, Updating, and Decision-Making Framework for Self-Adaptive Digital Twins via Robust Model Predictive Control: A Case Study in Additive Manufacturing",
-        "summary": "Digital Twins rely on surrogate models to mirror physical systems in real time, yet these models can degrade as operating conditions evolve, a phenomenon known as concept drift. Maintaining surrogate ",
-        "link": "http://arxiv.org/abs/2607.18164v1",
-        "date": "2026-07-20",
+        "title": "ISO: An RLVR-Native Optimization Stack",
+        "summary": "Reinforcement learning with verifiable rewards (RLVR) is rapidly advancing the reasoning capabilities of language models, yet the optimization layer that converts reward feedback into weight-space upd",
+        "link": "http://arxiv.org/abs/2607.19331v1",
+        "date": "2026-07-21",
         "authors": [
-          "Yi-Ping Chen",
-          "Ying-Kuan Tsai",
-          "Vispi Karkaria"
+          "Hanqing Zhu",
+          "Wenyan Cong",
+          "Zhizhou Sha"
         ]
       },
       {
-        "title": "OR Else: A Differentiable Trust Region for Policy Optimization",
-        "summary": "PPO and the GRPO baseline studied here use clipped surrogate objectives whose favorable-direction saturation introduces an abrupt change in the scalar objective's derivative. We ask whether Output Res",
-        "link": "http://arxiv.org/abs/2607.18163v1",
-        "date": "2026-07-20",
+        "title": "Associative Emotional Learning in Convolutional Neural Networks",
+        "summary": "Associative emotional learning enables organisms to adaptively link pleasant or unpleasant outcomes to the presence of predictive stimuli. Whereas computational models such as the Rescorla-Wagner mode",
+        "link": "http://arxiv.org/abs/2607.19327v1",
+        "date": "2026-07-21",
         "authors": [
-          "Chinmay Rane",
-          "Kanishka Tyagi",
-          "Michael Manry"
+          "Seowung Leem",
+          "Andreas Keil",
+          "Mingzhou Ding"
         ]
       },
       {
-        "title": "TRIM: Reducing AI-Generated CodeSlop via Agent Trajectory Minimization",
-        "summary": "Coding agents are increasingly used to accelerate code generation in many downstream tasks, such as fixing bugs, building applications, and prototyping. However, despite their value as coding assistan",
-        "link": "http://arxiv.org/abs/2607.18161v1",
-        "date": "2026-07-20",
+        "title": "ResearchArena: Evaluating Sabotage and Monitoring in Automated AI R&D",
+        "summary": "As AI agents begin to automate AI R&D, we need ways to assess whether their outputs are safe to deploy, even when the agents themselves may be untrusted. AI control offers one such approach: rather th",
+        "link": "http://arxiv.org/abs/2607.19321v1",
+        "date": "2026-07-21",
         "authors": [
-          "Alex Mathai",
-          "Shobini Iyer",
-          "Aleksandr Nogikh"
+          "Lena Libon",
+          "Ben Rank",
+          "Jehyeok Yeon"
         ]
       }
     ],
-    "updated": "2026-07-21T05:21:55.366292Z"
+    "updated": "2026-07-22T05:20:36.165998Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-07-21T05:21:55.366292Z"
+    "updated": "2026-07-22T05:20:36.165998Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-07-21T05:21:55.366292Z"
+    "updated": "2026-07-22T05:20:36.165998Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-07-21T05:21:55.366292Z"
+    "updated": "2026-07-22T05:20:36.165998Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Hardware Robustness of Sample-Based Quantum Diagonalization",
-        "summary": "Sample-based Quantum Diagonalization (SQD) is a hybrid quantum-classical method that replaces variational optimization with a self-consistent recovery loop over QPU samples. Although SQD is considered",
-        "link": "http://arxiv.org/abs/2607.18196v1",
-        "date": "2026-07-20",
+        "title": "ResearchArena: Evaluating Sabotage and Monitoring in Automated AI R&D",
+        "summary": "As AI agents begin to automate AI R&D, we need ways to assess whether their outputs are safe to deploy, even when the agents themselves may be untrusted. AI control offers one such approach: rather th",
+        "link": "http://arxiv.org/abs/2607.19321v1",
+        "date": "2026-07-21",
         "authors": [
-          "Ahatesham Bhuiyan",
+          "Lena Libon",
+          "Ben Rank",
+          "Jehyeok Yeon"
+        ]
+      },
+      {
+        "title": "SoK: Adversarial Robustness of the Variational Quantum Eigensolver via Red-Teaming",
+        "summary": "The Variational Quantum Eigensolver (VQE) is a leading algorithm for estimating molecular ground-state energies on near-term quantum hardware, with applications spanning quantum chemistry, materials s",
+        "link": "http://arxiv.org/abs/2607.19318v1",
+        "date": "2026-07-21",
+        "authors": [
+          "Ahmed Azaz Humdoon",
           "Cheng Chu",
-          "Qian Lou"
+          "Lei Jiang"
         ]
       },
       {
-        "title": "RRAM-DP: Device-Calibrated Differential Privacy for In-Memory Edge Learning",
-        "summary": "Edge Artificial Intelligence of Things (AIoT) systems often collect sensitive data in situ, raising serious privacy concerns. Resistive-switching random-access memory (RRAM) is an attractive substrate",
-        "link": "http://arxiv.org/abs/2607.18169v1",
-        "date": "2026-07-20",
+        "title": "They'll Verify. They Just Won't Act. How Authority Framing and Laundered Code Turn a Trusted Agentic CI/CD Pipeline Into an Attack Surface",
+        "summary": "We study a five-agent CI/CD pipeline (triage -> developer -> security-scan -> review -> approve/deploy), built from five distinct production LLMs across three providers, behind an LLM firewall in shad",
+        "link": "http://arxiv.org/abs/2607.19267v1",
+        "date": "2026-07-21",
         "authors": [
-          "Kwunhang Wong",
-          "Jichang Yang",
-          "Karl M. H. Lai"
+          "Yohann Sidot"
         ]
       },
       {
-        "title": "CutBackdoor: A Circuit Cut Triggered Backdoor Attack on Variational Quantum Algorithms",
-        "summary": "Variational Quantum Algorithms (VQAs) are a leading paradigm for near-term quantum computing, combining parameterized quantum circuits with classical optimization across quantum chemistry, combinatori",
-        "link": "http://arxiv.org/abs/2607.18126v1",
-        "date": "2026-07-20",
+        "title": "PTSan: A Practical Memory Safety Sanitizer for C/C++ with Pointer-Object Authority",
+        "summary": "Memory safety errors remain the dominant source of severe vulnerabilities in C and C++. Pointer-based sanitizers provide stronger guarantees than location-based tools such as LLVM's ASan, but their ov",
+        "link": "http://arxiv.org/abs/2607.19246v1",
+        "date": "2026-07-21",
         "authors": [
-          "Ahatesham Bhuiyan",
-          "Hoang Ngo",
-          "Cheng Chu"
+          "Eli Davis",
+          "Eric Lahtinen",
+          "Michael Gordon"
         ]
       },
       {
-        "title": "GARAGE: Characterizing the Automation Boundary in LLM-based Attack Graph Generation",
-        "summary": "While modern vehicle security depends on effective Cyber Threat Intelligence (CTI) synthesis, current automated tools struggle with unstructured data and automotive-specific architectural nuances. To ",
-        "link": "http://arxiv.org/abs/2607.18108v1",
-        "date": "2026-07-20",
+        "title": "Sarus: Privacy-Preserving Multi-Vendor Perception Fusion via Homomorphic Encryption",
+        "summary": "Cooperative perception enables autonomous vehicles (AVs) to improve situational awareness by aggregating detection outputs from multiple agents and sensing platforms, often via a shared fusion service",
+        "link": "http://arxiv.org/abs/2607.19146v1",
+        "date": "2026-07-21",
         "authors": [
-          "Daekwon Pi",
-          "Sangho Lee",
-          "Young Hun Lee"
+          "Munawar Hasan",
+          "Apostol Vassilev"
         ]
       },
       {
-        "title": "Adaptive Adversaries: A Multi-Turn, Multi-LLM Benchmark for LLM Agent Security",
-        "summary": "LLM-based agents process external content, exposing them to prompt injection and multi-turn manipulation. Most safety benchmarks evaluate defenders against fixed attack pools collected before evaluati",
-        "link": "http://arxiv.org/abs/2607.18063v1",
-        "date": "2026-07-20",
+        "title": "Code Division Modulation Layers Against Forgetting and Inference in Continual Gait Identification",
+        "summary": "Continual learning (CL) has been recently employed in biometric identification systems thanks to its ability to integrate new knowledge within a pre-trained model and to the possibility of reducing th",
+        "link": "http://arxiv.org/abs/2607.19122v1",
+        "date": "2026-07-21",
         "authors": [
-          "Devina Jain",
-          "David Hartmann",
-          "Chuan Li"
+          "Simone Milani"
         ]
       },
       {
-        "title": "Optimal Domain-Aware Privacy Mechanisms for Synthetic Data Generation",
-        "summary": "Differential privacy (DP) imposes fundamental trade-offs between privacy and statistical fidelity in synthetic data generation. While access to public data has been shown to improve these trade-offs e",
-        "link": "http://arxiv.org/abs/2607.18021v1",
-        "date": "2026-07-20",
+        "title": "Exploiting Load/Store Leakage of Sparse Vectors for Key Recovery in HQC",
+        "summary": "Hamming Quasi-Cyclic (HQC) is a code-based key encapsulation mechanism selected by NIST for standardization, making its resistance to implementation attacks critically important. We present a side-cha",
+        "link": "http://arxiv.org/abs/2607.19109v1",
+        "date": "2026-07-21",
         "authors": [
-          "Sajani Vithana",
-          "Sangwon Jung",
-          "Haoyang Hu"
+          "Gustavo Banegas",
+          "Benjamin Smith",
+          "Jad Zahreddine"
         ]
       },
       {
-        "title": "Self-State Attacks on Self-Hosted AI Agents: How Far Can OS Defenses Go?",
-        "summary": "Self-hosted AI agents read and write their own memory and configuration files to function. An agent may get compromised via corruption of its own state -- a compromise realized via legitimate OS syste",
-        "link": "http://arxiv.org/abs/2607.17986v1",
-        "date": "2026-07-20",
+        "title": "Chi-MERA: Defending Orbit-Based Authentication of LEO Satellites with the Space Oddity of MLAT (Long Version)",
+        "summary": "An active research area, physical layer security can be a last resort in insecure legacy systems, a resource-efficient alternative, or a complementary backup for cryptographic techniques. In this pape",
+        "link": "http://arxiv.org/abs/2607.19047v1",
+        "date": "2026-07-21",
         "authors": [
-          "Yimeng Chen",
-          "Nathana\u00ebl Denis",
-          "Roberto Di Pietro"
-        ]
-      },
-      {
-        "title": "RT-SHCUA: Real-Time Self-Hosted Computer-Use Agent for UAV Control",
-        "summary": "Natural-language control offers a promising interface for unmanned aerial vehicles (UAVs), but directly applying self-hosted computer-use agents (SHCUAs) to UAV control introduces a structural mismatc",
-        "link": "http://arxiv.org/abs/2607.17951v1",
-        "date": "2026-07-20",
-        "authors": [
-          "Di Lu",
-          "Bo Zhang",
-          "Xiyuan Li"
+          "Sarah Jung",
+          "Eric Jedermann",
+          "Martin Strohmeier"
         ]
       }
     ],
-    "updated": "2026-07-21T05:21:55.366292Z"
+    "updated": "2026-07-22T05:20:36.165998Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -282,6 +279,6 @@
         ]
       }
     ],
-    "updated": "2026-07-21T05:21:55.366292Z"
+    "updated": "2026-07-22T05:20:36.165998Z"
   }
 }
