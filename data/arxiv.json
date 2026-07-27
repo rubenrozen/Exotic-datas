@@ -3,200 +3,196 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "3D-Aware VLMs with Implicit and Explicit Geometries",
-        "summary": "Despite rapid progress, most existing vision-language models (VLMs) built from 2D visual inputs often struggle when handling various 3D tasks that require fine-grained spatial understanding and reason",
-        "link": "http://arxiv.org/abs/2607.21595v1",
-        "date": "2026-07-23",
+        "title": "SM4RT: Learning Structured Motion Geometry for 4D Reconstruction",
+        "summary": "Geometry Foundation Models (GFMs) have substantially advanced monocular 3D reconstruction, yet extending this capability to 4D dynamic understanding remains a fundamental challenge. Most existing moti",
+        "link": "http://arxiv.org/abs/2607.22534v1",
+        "date": "2026-07-24",
         "authors": [
-          "Wenhao Li",
-          "Xueying Jiang",
-          "Quanhao Qian"
+          "Shing Ho J. Lin",
+          "Wenzhao Zheng",
+          "Dong Zhuo"
         ]
       },
       {
-        "title": "GraphVid: Interactive Graph-Controllable Video Generation",
-        "summary": "Controllable video generation remains challenging due to the difficulty of specifying precise multi-object interactions using text prompts or motion-control inputs that primarily constrain pixel movem",
-        "link": "http://arxiv.org/abs/2607.21580v1",
-        "date": "2026-07-23",
+        "title": "Explainable Reinforcement Learning for assisting Air Traffic Controllers",
+        "summary": "To effectively integrate AI into high-stakes, critical environments such as healthcare, autonomous driving, and aviation--and to advance toward higher levels of automation and seamless human-AI collab",
+        "link": "http://arxiv.org/abs/2607.22525v1",
+        "date": "2026-07-24",
         "authors": [
-          "Vedant Shah",
-          "Onkar Susladkar",
-          "Tushar Prakash"
+          "Anduel Mehmeti",
+          "Gabriella Gigante",
+          "Salvatore Venticinque"
         ]
       },
       {
-        "title": "Barzilai-Borwein Fails Superlinear Convergence on an Open Set of Quadratics for Every Dimension $n\\geq 4$",
-        "summary": "Barzilai--Borwein (BB) method has shown strong practical performance in continuous optimization, yet its convergence dynamics remains poorly understood. In particular, a central unresolved question is",
-        "link": "http://arxiv.org/abs/2607.21579v1",
-        "date": "2026-07-23",
+        "title": "The Regression Tax: Decomposing Why Skills Help and Hurt LLM Agents",
+        "summary": "Adding procedural skills to an LLM agent is typically evaluated by average improvement in task success. However, this metric hides an important cost: skills can also make agents worse. We measure both",
+        "link": "http://arxiv.org/abs/2607.22520v1",
+        "date": "2026-07-24",
         "authors": [
-          "Dawei Li",
-          "Xiaotian Jiang",
-          "Mingyi Hong"
+          "Darshan Tank",
+          "Baran Nama"
         ]
       },
       {
-        "title": "Synthetic data generation framework for quality control automation in gravure printing",
-        "summary": "Quality control in printing, particularly in rotogravure printing, still depends on slow, costly, and subjective manual inspection. Automated surface defect detection is critical for maintaining high-",
-        "link": "http://arxiv.org/abs/2607.21577v1",
-        "date": "2026-07-23",
+        "title": "Quantum Spectral Model: Data Reuploading with Input-Conditioned Frequency Support",
+        "summary": "A central design principle in modern machine learning and artificial intelligence is to align a model's inductive bias with the structure of its input data. For matrix-valued inputs, relevant matrix-l",
+        "link": "http://arxiv.org/abs/2607.22516v1",
+        "date": "2026-07-24",
         "authors": [
-          "Korota Ars\u00e8ne Coulibaly",
-          "Mohamed Hamlich",
-          "Khalid Hmali"
+          "Peiyong Wang",
+          "Udaya Parampalli",
+          "Casey R. Myers"
         ]
       },
       {
-        "title": "Beyond Sufficiency: Time Series Explanation with Counterfactual Necessity",
-        "summary": "Faithful explanations of time-series classifiers should identify subsequences that are not only sufficient to preserve a black-box model's prediction, but also necessary for maintaining it. However, e",
-        "link": "http://arxiv.org/abs/2607.21573v1",
-        "date": "2026-07-23",
+        "title": "Opaque Epistemic Mediation: How LLM Deployment Configurations Shape the Validation of Pseudo-Science",
+        "summary": "Commercial large language models are increasingly used as knowledge references, yet their stance on contested scientific claims is neither stable nor transparent. We tested how four major LLM families",
+        "link": "http://arxiv.org/abs/2607.22513v1",
+        "date": "2026-07-24",
         "authors": [
-          "Hongnan Ma",
-          "Yiwei Shi",
-          "Mengyue Yang"
+          "Davide Scarso",
+          "Hugo Noronha de Almeida",
+          "Joaquim Pina"
         ]
       },
       {
-        "title": "Unsupervised Consensus-Based Anomaly Detection for Spatiotemporal Malaria Incidence in Ghana",
-        "summary": "A consensus anomaly detection framework was applied to monthly malaria surveillance data from Ghana (2014-2023) to identify atypical transmission patterns. Anomalies were highly structured in space an",
-        "link": "http://arxiv.org/abs/2607.21559v1",
-        "date": "2026-07-23",
+        "title": "CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference",
+        "summary": "Automating theoretical research is constrained not only by the generation of candidate results, but also by their reliable evaluation. A common approach is to close the research loop with a large lang",
+        "link": "http://arxiv.org/abs/2607.22511v1",
+        "date": "2026-07-24",
         "authors": [
-          "T. Ansah-Narh",
-          "Y. Asare Afrane"
+          "Jiyuan Tan",
+          "Vasilis Syrgkanis"
         ]
       },
       {
-        "title": "Beyond Sycophancy: Structured Resistance and Compliance in LLM Moral Reasoning",
-        "summary": "Building socially calibrated large language models, which can learn from others without simply yielding to them, requires more than reducing sycophancy as a one-dimensional failure mode. Models must d",
-        "link": "http://arxiv.org/abs/2607.21558v1",
-        "date": "2026-07-23",
+        "title": "\\k{appa}-LoRA: Condition Numbers Reveal Which LoRA Matrices Worth Updating",
+        "summary": "Low-Rank Adaptation (LoRA) has become a widely adopted technique for efficient neural network fine-tuning, decomposing model updates into low-rank matrices. However, LoRA remains computationally costl",
+        "link": "http://arxiv.org/abs/2607.22489v1",
+        "date": "2026-07-24",
         "authors": [
-          "Baihui Wang",
-          "Bernard Koch"
+          "Jianghui Wang",
+          "Silong Yong",
+          "Francesco Orabona"
         ]
       },
       {
-        "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
-        "summary": "Modern AI agents rely on elaborate inference harnesses such as Claude Code, Codex, and OpenClaw to drive multi-turn reasoning, tool use, and access to external systems. While powerful, these complex h",
-        "link": "http://arxiv.org/abs/2607.21557v1",
-        "date": "2026-07-23",
+        "title": "MineValiCoder: Reliable Code Generation with Test Case Quality Mining and Bipartite Graph-Based Mutual Validation",
+        "summary": "Large Language Model (LLM)-based Test-Driven Development (TDD) has advanced automated code generation. However, existing approaches depend heavily on human-crafted test cases and cannot operate effect",
+        "link": "http://arxiv.org/abs/2607.22471v1",
+        "date": "2026-07-24",
         "authors": [
-          "Xiao Yu",
-          "Baolin Peng",
-          "Ruize Xu"
+          "Zhen Zhao",
+          "Qihang Yang",
+          "Feifei Dai"
         ]
       }
     ],
-    "updated": "2026-07-26T05:33:29.061331Z"
+    "updated": "2026-07-27T05:52:08.928246Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-07-26T05:33:29.061331Z"
+    "updated": "2026-07-27T05:52:08.928246Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-07-26T05:33:29.061331Z"
+    "updated": "2026-07-27T05:52:08.928246Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-07-26T05:33:29.061331Z"
+    "updated": "2026-07-27T05:52:08.928246Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Where You Tap Matters: A Probe-and-Model Benchmark for Open-Set RF Fingerprinting",
-        "summary": "Radio Frequency Fingerprint Identification (RFFI) enables transmitter identification at the physical layer by learning device-specific impairments from received signals, yet the literature is inconsis",
-        "link": "http://arxiv.org/abs/2607.21564v1",
-        "date": "2026-07-23",
+        "title": "A Maximum Entropy Implementation of Differential Privacy Under Linear Invariants",
+        "summary": "Differential privacy is the standard for ensuring data privacy and is widely used in major data publications, including reporting results from the U.S. decennial census. Common implementation of diffe",
+        "link": "http://arxiv.org/abs/2607.22450v1",
+        "date": "2026-07-24",
         "authors": [
-          "Gabriele Oligeri",
-          "Savio Sciancalepore",
-          "Ingrid Huso"
+          "Ryan Lafferty",
+          "Anindya Roy"
         ]
       },
       {
-        "title": "Unconditional Unclonable Encryption",
-        "summary": "We give an unconditional construction of information-theoretically secure one-time private-key unclonable encryption scheme for one-bit messages, with efficient encryption and decryption and exponenti",
-        "link": "http://arxiv.org/abs/2607.21551v1",
-        "date": "2026-07-23",
+        "title": "Dynamic Capability Scoping for Enterprise AI Agents: A Synthetic Dataset and Three-Source Permission Architecture",
+        "summary": "Enterprise AI agents are typically granted static credential sets at configuration time, holding every tool the role might need for every task they perform. This persistent over-privilege expands the ",
+        "link": "http://arxiv.org/abs/2607.22445v1",
+        "date": "2026-07-24",
         "authors": [
-          "Prabhanjan Ananth",
-          "Amit Sahai"
+          "Halil Burak Noyan"
         ]
       },
       {
-        "title": "Themis Consensus Extension v1: MEV Mitigation by Randomized Delayed Execution and Intent-Hiding Transactions in Application-Specific Blockchains",
-        "summary": "Maximal extractable value (MEV) arises when privileged participants select, exclude, insert, or reorder pending transactions for private gain. We specify and analyze the Themis Consensus Extension v1,",
-        "link": "http://arxiv.org/abs/2607.21406v1",
-        "date": "2026-07-23",
+        "title": "Correlation-Aware and Gaussianity-Preserving Robust Latent Angular Watermarking for Diffusion Models",
+        "summary": "Latent domain watermarking for diffusion models embeds watermarks directly into the latent prior, enjoying non-intrusiveness to model parameters and seamless integration with the generation process. H",
+        "link": "http://arxiv.org/abs/2607.22386v1",
+        "date": "2026-07-24",
         "authors": [
-          "Shoeb Siddiqui",
-          "Mateusz Nowakowski",
-          "Stanislav Vozarik"
+          "Yebin Zheng",
+          "Haonan An",
+          "Guang Hua"
         ]
       },
       {
-        "title": "Toward cryptographically verifiable authorization for autonomous AI agents: A security hypothesis, preliminary formal model, and proof-of-concept implementation",
-        "summary": "Autonomous AI agents increasingly execute actions, invoke tools, and operate on protected resources with limited human oversight. Existing authentication and authorization mechanisms establish identit",
-        "link": "http://arxiv.org/abs/2607.21325v1",
-        "date": "2026-07-23",
+        "title": "Kalyna Block Cipher: From Design Space Exploration to ASIC Design",
+        "summary": "The Kalyna block cipher is a Ukrainian cryptography standard, selected through a national competition held between 2007 and 2010 and approved in 2015. Although its software implementations have been i",
+        "link": "http://arxiv.org/abs/2607.22269v1",
+        "date": "2026-07-24",
         "authors": [
-          "M. Llamb\u00ed-Morillas",
-          "D. Fern\u00e1ndez-Fern\u00e1ndez"
+          "Carlos Gewehr",
+          "Levent Aksoy",
+          "Mariia Rodinko"
         ]
       },
       {
-        "title": "Advances in STV Margin Computation",
-        "summary": "Single transferable vote (STV) is a multi-winner preferential proportional electoral system. The margin is the smallest number of ballots that need to be manipulated to alter the set of winners. If we",
-        "link": "http://arxiv.org/abs/2607.21178v1",
-        "date": "2026-07-23",
+        "title": "trasgoDP: An Open Source Framework for Releasing Noised Tabular Microdata under Local Differential Privacy",
+        "summary": "trasgoDP is a modular, open-source, and easy-to-use Python framework for releasing tabular microdata under \u03b5-local differential privacy guarantees, as well as location data under geo-indistinguishabil",
+        "link": "http://arxiv.org/abs/2607.22230v1",
+        "date": "2026-07-24",
         "authors": [
-          "Michelle Blom",
-          "Alexander Ek",
-          "Peter J. Stuckey"
+          "Judith S\u00e1inz-Pardo D\u00edaz",
+          "\u00c1lvaro L\u00f3pez Garc\u00eda"
         ]
       },
       {
-        "title": "Agree on the Model, Verify the Inference: GKR Protocols for HND-Based Transformer Inference",
-        "summary": "Outsourced Transformer inference exposes clients to model substitution and incomplete execution, while direct replay removes the computational benefit of delegation. We present GKR-HND, a registered-m",
-        "link": "http://arxiv.org/abs/2607.21162v1",
-        "date": "2026-07-23",
+        "title": "DeFiScreener: Efficient DeFi Attack Pre-screening in Smart Contracts via Historical Case Matching",
+        "summary": "Blockchain and its killer applications, particularly decentralized finance (DeFi), are gaining widespread adoption, with over 5,200 DeFi projects deployed on mainstream blockchains as of January 2026.",
+        "link": "http://arxiv.org/abs/2607.22184v1",
+        "date": "2026-07-24",
         "authors": [
-          "Xiaolong Liang",
-          "Juanjuan Li",
-          "Rui Qin"
+          "Rui Cao",
+          "Shaojing Fan",
+          "Zhimei Sui"
         ]
       },
       {
-        "title": "Risk-Limiting Audits for Parliamentary Majorities",
-        "summary": "Existing methods for risk-limiting audits typically focus on certifying individual contests. In parliamentary elections, however, the politically relevant outcome is often whether a party has won enou",
-        "link": "http://arxiv.org/abs/2607.21082v1",
-        "date": "2026-07-23",
+        "title": "HarnessLLM: Rust Verification Harness Generation with Large Language Models",
+        "summary": "Rust's ownership model and type system offer strong memory safety guarantees, but unsafe code and runtime panics still present significant risks. Formal verification is essential to ensure memory safe",
+        "link": "http://arxiv.org/abs/2607.22161v1",
+        "date": "2026-07-24",
         "authors": [
-          "Jack Freestone",
-          "Dennis Leung",
-          "Damjan Vukcevic"
+          "Minghua Wang",
+          "Yuwei Liu",
+          "Lin Huang"
         ]
       },
       {
-        "title": "Weak Private Information Retrieval for Graph-based Storage",
-        "summary": "A distributed storage system with graph-based replication consists of a collection of databases and the files they contain. The databases (or servers) are represented as the vertices of a graph, while",
-        "link": "http://arxiv.org/abs/2607.21014v1",
-        "date": "2026-07-23",
+        "title": "No Edges, No Verdict: A Large-Scale Empirical Study of Declared Dependency Graphs in 78K SBOMs in the Wild",
+        "summary": "Software Bills of Materials (SBOMs) are consumed not only as component inventories but as dependency graphs: vulnerability triage, reachability filtering, and impact analysis all traverse the edges an",
+        "link": "http://arxiv.org/abs/2607.22140v1",
+        "date": "2026-07-24",
         "authors": [
-          "Shodasakshari Vidya",
-          "Chandan Anand",
-          "Prasad Krishnan"
+          "Artur Zi\u0119ba-Kozarzewski"
         ]
       }
     ],
-    "updated": "2026-07-26T05:33:29.061331Z"
+    "updated": "2026-07-27T05:52:08.928246Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -280,6 +276,6 @@
         ]
       }
     ],
-    "updated": "2026-07-26T05:33:29.061331Z"
+    "updated": "2026-07-27T05:52:08.928246Z"
   }
 }
