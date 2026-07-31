@@ -1,13 +1,7 @@
 {
-  "eu_avg": 56.1,
-  "trend": 0.2,
+  "eu_avg": 56.4,
+  "trend": 0.24,
   "series": [
-    {
-      "date": "2025-10-02",
-      "pct": 82.5,
-      "gasInStorage": 942.0,
-      "trend": -0.04
-    },
     {
       "date": "2025-10-03",
       "pct": 82.6,
@@ -1801,61 +1795,67 @@
       "pct": 56.1,
       "gasInStorage": 634.6,
       "trend": 0.2
+    },
+    {
+      "date": "2026-07-29",
+      "pct": 56.4,
+      "gasInStorage": 637.4,
+      "trend": 0.24
     }
   ],
   "countries": {
     "DE": {
-      "pct": 46.4,
-      "trend": 0.09,
-      "gasInStorage": 114.3
+      "pct": 46.5,
+      "trend": 0.15,
+      "gasInStorage": 114.7
     },
     "FR": {
-      "pct": 55.4,
-      "trend": 0.33,
-      "gasInStorage": 68.6
+      "pct": 55.7,
+      "trend": 0.39,
+      "gasInStorage": 69.0
     },
     "IT": {
-      "pct": 74.8,
-      "trend": 0.03,
-      "gasInStorage": 152.1
+      "pct": 75.0,
+      "trend": 0.22,
+      "gasInStorage": 152.6
     },
     "ES": {
       "pct": 72.2,
-      "trend": 0.0,
+      "trend": -0.0,
       "gasInStorage": 25.9
     },
     "NL": {
-      "pct": 36.1,
-      "trend": 0.34,
-      "gasInStorage": 51.9
+      "pct": 36.4,
+      "trend": 0.29,
+      "gasInStorage": 52.3
     },
     "AT": {
-      "pct": 60.0,
-      "trend": 0.23,
-      "gasInStorage": 60.2
+      "pct": 60.2,
+      "trend": 0.18,
+      "gasInStorage": 60.4
     },
     "BE": {
-      "pct": 33.1,
-      "trend": 0.62,
+      "pct": 33.3,
+      "trend": 0.27,
       "gasInStorage": 2.5
     },
     "PL": {
-      "pct": 84.0,
-      "trend": 0.26,
-      "gasInStorage": 31.0
+      "pct": 84.4,
+      "trend": 0.4,
+      "gasInStorage": 31.1
     },
     "CZ": {
-      "pct": 59.6,
+      "pct": 60.0,
       "trend": 0.36,
-      "gasInStorage": 27.0
+      "gasInStorage": 27.2
     },
     "HU": {
-      "pct": 59.8,
-      "trend": 0.31,
-      "gasInStorage": 40.5
+      "pct": 60.1,
+      "trend": 0.3,
+      "gasInStorage": 40.7
     }
   },
   "alert_threshold": 20.0,
   "score": 56,
-  "updated": "2026-07-30T05:10:17.711474Z"
+  "updated": "2026-07-31T05:36:50.644719Z"
 }

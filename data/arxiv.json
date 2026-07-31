@@ -3,204 +3,200 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Can AI agents conduct open-ended AI research? Early evidence from two case studies",
-        "summary": "Forecasts of explosive AI progress hinge on AI agents automating AI research. But evidence on whether agents can carry out open-ended AI research is thin. Current evaluations either test agents on nar",
-        "link": "http://arxiv.org/abs/2607.27191v1",
-        "date": "2026-07-29",
+        "title": "Learning to Trace Seiberg Dualities",
+        "summary": "Dualities play an important role in establishing both microscopic and emergent phenomena in a wide range of physical systems. In practice, though, it can often be computationally challenging to establ",
+        "link": "http://arxiv.org/abs/2607.28628v1",
+        "date": "2026-07-30",
         "authors": [
-          "Peter Kirgis",
-          "Sayash Kapoor",
-          "Andrew Schwartz"
+          "Jonathan J. Heckman",
+          "Shani Meynet",
+          "Alessandro Mininno"
         ]
       },
       {
-        "title": "APEX-Accounting",
-        "summary": "We introduce APEX-Accounting, a benchmark built by Mercor in partnership with Ramp, to assess whether frontier models can do the real work of accountants. Tasks include reconciling accounts, accruing ",
-        "link": "http://arxiv.org/abs/2607.27189v1",
-        "date": "2026-07-29",
+        "title": "ReToken: One Token to Improve Vision-Language Models for Visual Retrieval",
+        "summary": "Long visual context poses a challenge for vision-language models: performance degrades as the number of distractors grows, and processing all tokens at once is computationally infeasible under GPU mem",
+        "link": "http://arxiv.org/abs/2607.28627v1",
+        "date": "2026-07-30",
         "authors": [
-          "Julien Benchek",
-          "Austin Bennett",
-          "Jasmin Kern"
+          "Yao Xiao",
+          "Reuben Tan",
+          "Zhen Zhu"
         ]
       },
       {
-        "title": "The Social Cost of an AI Teammate: How an Artificial Teammate Reshapes Human-Human Communication in Small-Team Decision-Making",
-        "summary": "Conversational AI is increasingly positioned as a teammate rather than a tool, yet we know little about how its presence reshapes communication among the humans on the team. We examined sociocognitive",
-        "link": "http://arxiv.org/abs/2607.27179v1",
-        "date": "2026-07-29",
+        "title": "PAC-MAN: Perception-Aware CBF-RL for Whole-Body Safety in Humanoid Dodgeball",
+        "summary": "We present PAC-MAN, a perception-aware CBF-RL framework that couples control-barrier safety with deployment-realistic onboard sensing for whole-body humanoid dodgeball. The deployed policy sees the ba",
+        "link": "http://arxiv.org/abs/2607.28623v1",
+        "date": "2026-07-30",
         "authors": [
-          "Nia Nixon",
-          "Jaeyoon Choi",
-          "Pedro Martins De Bastos"
+          "Lizhi Yang",
+          "Junheng Li",
+          "Aaron D. Ames"
         ]
       },
       {
-        "title": "Partner Capability Estimation for Task-Agnostic Adaptation in Ad-Hoc Teamwork",
-        "summary": "Effective collaboration with novel and diverse partners is a crucial skill for autonomous agents. Most current ad-hoc teamwork (AHT) approaches assume that agents will collaborate on a single, fixed t",
-        "link": "http://arxiv.org/abs/2607.27177v1",
-        "date": "2026-07-29",
+        "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
+        "summary": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists. As a resul",
+        "link": "http://arxiv.org/abs/2607.28618v1",
+        "date": "2026-07-30",
         "authors": [
-          "Peter Tisnikar",
-          "Maja Swieczkowska",
-          "Benteng Ma"
+          "Bing Yan",
+          "Gregory Wolfe",
+          "Stefano Martiniani"
         ]
       },
       {
-        "title": "Improving Item Discoverability in e-Commerce Search via Related Intent Generation",
-        "summary": "Traditional search systems are optimized to retrieve items that strictly match a query, often prioritizing precision over recall. In e-commerce marketplaces and particularly grocery, this paradigm is ",
-        "link": "http://arxiv.org/abs/2607.27172v1",
-        "date": "2026-07-29",
+        "title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
+        "summary": "System prompts are instructions configured by developers to govern the behaviors of foundation models in AI applications. They are used throughout commercial AI products, but are rarely disclosed to t",
+        "link": "http://arxiv.org/abs/2607.28617v1",
+        "date": "2026-07-30",
         "authors": [
-          "Ji Xin",
-          "Xiao Xiao",
-          "Ishan Bhatt"
+          "Xiangning Lin",
+          "Shenzhe Zhu",
+          "Shu Yang"
         ]
       },
       {
-        "title": "OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding",
-        "summary": "Large language model (LLM) agents are increasingly expected to assist users in completing tasks. However, existing benchmarks provide limited support for evaluating whether agents can carry out office",
-        "link": "http://arxiv.org/abs/2607.27155v1",
-        "date": "2026-07-29",
+        "title": "OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
+        "summary": "Computer-using agents (CUAs) are advancing rapidly across the digital world. A CUA trajectory records the agent's actions, states, and reasoning. Verifying whether it fulfilled the task instruction is",
+        "link": "http://arxiv.org/abs/2607.28609v1",
+        "date": "2026-07-30",
         "authors": [
-          "Jingbo Zhou",
-          "Yusai Zhao",
-          "Qi Bao"
+          "Qiushi Sun",
+          "Kanzhi Cheng",
+          "Yian Wang"
         ]
       },
       {
-        "title": "Anatomy Contextualized Adaption of CT Foundation Models",
-        "summary": "CT vision-language foundation models have demonstrated promising performance across downstream tasks, but are typically trained with whole-volume representations that dilute fine-grained anatomical si",
-        "link": "http://arxiv.org/abs/2607.27154v1",
-        "date": "2026-07-29",
+        "title": "PAIChecker: Uncovering and Checking PR-Issue Misalignment in SWE-Bench-Like Benchmarks",
+        "summary": "SWE-bench-like benchmarks are widely used for evaluating LLM's issue resolution capability. They typically follow a common construction pipeline: each PR (Pull Request) is paired with its linked issue",
+        "link": "http://arxiv.org/abs/2607.28587v1",
+        "date": "2026-07-30",
         "authors": [
-          "Roshan Kenia",
-          "Stephanie L McNamara",
-          "William Lotter"
+          "Manyi Wang",
+          "Junjielong Xu",
+          "Pinjia He"
         ]
       },
       {
-        "title": "Cost-Sensitive Conformal Prediction and Human-in-the-Loop Abstention for Imbalanced High-Stakes Decision Support: A Multi-Domain Benchmark",
-        "summary": "High-stakes decision systems in credit scoring, fraud detection, healthcare, and industrial safety require reliable uncertainty quantification under severe class imbalance and asymmetric error costs. ",
-        "link": "http://arxiv.org/abs/2607.27143v1",
-        "date": "2026-07-29",
+        "title": "DualG-MRAG: Decoupling Macro-Reasoning and Micro-Matching for Multimodal Retrieval-Augmented Generation",
+        "summary": "While Multimodal Retrieval-Augmented Generation (MM-RAG) has shown promising results, it still struggles with complex multi-hop reasoning tasks. Existing methods primarily focus on independent instanc",
+        "link": "http://arxiv.org/abs/2607.28580v1",
+        "date": "2026-07-30",
         "authors": [
-          "Manpreet Singh",
-          "Akshatha Srikantha",
-          "Shyamal Lakhanpal"
+          "Jiacheng Tao",
+          "Qingyun Sun",
+          "Haonan Yuan"
         ]
       }
     ],
-    "updated": "2026-07-30T05:10:17.711474Z"
+    "updated": "2026-07-31T05:36:50.644719Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-07-30T05:10:17.711474Z"
+    "updated": "2026-07-31T05:36:50.644719Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-07-30T05:10:17.711474Z"
+    "updated": "2026-07-31T05:36:50.644719Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-07-30T05:10:17.711474Z"
+    "updated": "2026-07-31T05:36:50.644719Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Function Privatization in the Local Model",
-        "summary": "We study the problem of privately releasing functions, with a particular focus on curves, which are images of continuous functions on some finite interval. Many types of data exist naturally as curves",
-        "link": "http://arxiv.org/abs/2607.27164v1",
-        "date": "2026-07-29",
+        "title": "Formalization of security",
+        "summary": "Proof assistants are often used to validate that designs and implementations meet their expected security properties. A further motivation for using proof assistants is to support certification. This ",
+        "link": "http://arxiv.org/abs/2607.28551v1",
+        "date": "2026-07-30",
         "authors": [
-          "Yuting Liang",
-          "Tian Shu",
-          "Ke Yi"
+          "Gilles Barthe"
         ]
       },
       {
-        "title": "On-Policy Distillation for LLM Safety: A Routing Approach to Template-Robust Realignment",
-        "summary": "Fine-tuning is the dominant paradigm for specializing large language models (LLMs), yet it exposes a critical vulnerability: malicious data providers can embed harmful behaviors into downstream corpor",
-        "link": "http://arxiv.org/abs/2607.27081v1",
-        "date": "2026-07-29",
+        "title": "Implementing Homomorphic Encryption-Based Logic Locking in System-on-Chip Designs",
+        "summary": "This study presents a logic locking scheme based on the binary Ring Learning With Errors algorithm, implemented in a RISC-V System-on-Chip design. Unlike traditional logic locking methods that require",
+        "link": "http://arxiv.org/abs/2607.28542v1",
+        "date": "2026-07-30",
         "authors": [
-          "Yongjian Guo",
-          "Wanlun Ma",
-          "Lingyu Shen"
+          "Ye Ziyang",
+          "Makoto Ikeda"
         ]
       },
       {
-        "title": "MemSecBench: Tracking Agent Memory Poisoning from Persistence to Consequence and Repair",
-        "summary": "Memory systems allow agents to retain and reuse information from past interactions, but they can also let malicious content persist. A malicious instruction crafted by an attacker may be stored in lon",
-        "link": "http://arxiv.org/abs/2607.27080v1",
-        "date": "2026-07-29",
+        "title": "Cybersecurity Detection Classification with Reasoning-enabled Language Models",
+        "summary": "A major issue in Security Operations Centers (SOCs) is alert fatigue, as the number of detections reported is more than staff can triage in a given day. Prior work prompts or fine-tunes large language",
+        "link": "http://arxiv.org/abs/2607.28460v1",
+        "date": "2026-07-30",
         "authors": [
-          "Xuanze Chen",
-          "Xukang Xie",
-          "Wentao Fu"
+          "Amol Khanna",
+          "Manu Nandan",
+          "Cristian Viorel Popa"
         ]
       },
       {
-        "title": "HoF-Bench: Rediscovering Real AI-Discovered CVEs Without Frontier Models",
-        "summary": "LLM-based analyzers have begun finding real vulnerabilities in mature open-source projects: AISLE's analyzer is credited with more than 280 CVEs across 78 projects, including OpenSSL, curl, and GnuTLS",
-        "link": "http://arxiv.org/abs/2607.27030v1",
-        "date": "2026-07-29",
+        "title": "Emerging Challenges in Threat Modeling for GenAI-Augmented Systems: A View from the Trenches",
+        "summary": "Threat modeling remains a central task in secure software engineering, as it enables the identification of security issues from system architectures. As Generative Artificial Intelligence (GenAI) beco",
+        "link": "http://arxiv.org/abs/2607.28431v1",
+        "date": "2026-07-30",
         "authors": [
-          "Petr Simecek",
-          "Elnaz Babayeva",
-          "Jiri Balhar"
+          "Nicol\u00e1s E. D\u00edaz Ferreyra",
+          "Manish Mahesh Kumar",
+          "Nohem\u00ed Villarreal"
         ]
       },
       {
-        "title": "AgentSnare: Learning to Delay, Divert, and Defuse Autonomous Penetration Agents",
-        "summary": "Large language model (LLM) agents automate penetration testing through an observation-action loop, selecting actions based on observations returned by tools. This dependence allows defenders to inject",
-        "link": "http://arxiv.org/abs/2607.26998v1",
-        "date": "2026-07-29",
+        "title": "Encryption-Compatible Clustered Federated Learning via Distributed Expectation-Maximization over Metadata",
+        "summary": "Clustered Federated Learning (CFL) addresses data heterogeneity in federated settings by grouping clients with similar data distributions to enable effective training. Existing methods face a trade-of",
+        "link": "http://arxiv.org/abs/2607.28338v1",
+        "date": "2026-07-30",
         "authors": [
-          "Ruoyu Wang",
-          "Heng Zhao",
-          "Renjie Wu"
+          "Michael Ben Ali",
+          "Imen Megdiche",
+          "Andr\u00e9 P\u00e9ninou"
         ]
       },
       {
-        "title": "InkShield: Writing Style Protection Against Unauthorized Handwriting Mimicry",
-        "summary": "Recent handwritten text generators can reproduce a writer's style from publicly available references, posing risks of document forgery and identity misuse. An attacker may use a publicly available han",
-        "link": "http://arxiv.org/abs/2607.26976v1",
-        "date": "2026-07-29",
+        "title": "Demystifying DRAM Read Disturbance: Bridging the Gap Between Experimental Characterization and Device-Level Modeling of RowHammer and RowPress Phenomena",
+        "summary": "DRAM read disturbance, like RowHammer and RowPress, is a critical robustness issue where accessing DRAM can cause unintended bitflips in other unaccessed DRAM locations. DRAM read disturbance bitflips",
+        "link": "http://arxiv.org/abs/2607.28233v1",
+        "date": "2026-07-30",
         "authors": [
-          "Jian Xiong",
-          "Wenbo Jiang",
-          "Zihan Wang"
+          "Haocong Luo",
+          "Longda Zhou",
+          "Ataberk Olgun"
         ]
       },
       {
-        "title": "What Does It Take to Detect an AI Agent? Minimal Feature Sets for Behavioral Detection under Browser Automation",
-        "summary": "Bot detectors deployed at scale treat traffic as binary: human or bot. This assumption breaks when AI agents browse the web through browser automation, a traffic class that is neither and that binary ",
-        "link": "http://arxiv.org/abs/2607.26935v1",
-        "date": "2026-07-29",
+        "title": "Security of World-Model-Based Embodied AI: A Lifecycle of Threats, Defenses, and Evaluation",
+        "summary": "World models give embodied AI a predictive core: they compress observations into states, simulate action-conditioned futures, and enable planning beyond reactive control. This predictive layer, howeve",
+        "link": "http://arxiv.org/abs/2607.28226v1",
+        "date": "2026-07-30",
         "authors": [
-          "Vishisht Choudhary",
-          "Lukas Schmidt",
-          "Anne Zo\u00eb Kenntner"
+          "Fazhong Liu",
+          "Zhuoyan Chen",
+          "Haozhen Tan"
         ]
       },
       {
-        "title": "Defending Against Backdoor Attacks via Alignment Checking in Model-Contrastive Federated Learning",
-        "summary": "Federated Learning (FL) is vulnerable to backdoor attacks because of its distributed nature in edge computing scenarios. Existing defense methods show limited efficacy as they overlook the deviations ",
-        "link": "http://arxiv.org/abs/2607.26933v1",
-        "date": "2026-07-29",
+        "title": "Secure Aggregation for Privacy-Preserving Federated Learning on Clinical EEG Data",
+        "summary": "Federated learning enables multiple institutions to train shared models without exchanging raw clinical EEG data, but it does not fully prevent privacy leakage from individual model updates. This pape",
+        "link": "http://arxiv.org/abs/2607.28191v1",
+        "date": "2026-07-30",
         "authors": [
-          "Hongliang Zhang",
-          "Zhongyuan Yu",
-          "Guijuan Wang"
+          "Pouya Rajabi",
+          "Mohsen Toorani"
         ]
       }
     ],
-    "updated": "2026-07-30T05:10:17.711474Z"
+    "updated": "2026-07-31T05:36:50.644719Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -284,6 +280,6 @@
         ]
       }
     ],
-    "updated": "2026-07-30T05:10:17.711474Z"
+    "updated": "2026-07-31T05:36:50.644719Z"
   }
 }
