@@ -3,200 +3,198 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Learning to Trace Seiberg Dualities",
-        "summary": "Dualities play an important role in establishing both microscopic and emergent phenomena in a wide range of physical systems. In practice, though, it can often be computationally challenging to establ",
-        "link": "http://arxiv.org/abs/2607.28628v1",
-        "date": "2026-07-30",
+        "title": "ExtractBench: A Benchmark for Schema-Guided Enterprise Document Extraction",
+        "summary": "Enterprise workflows increasingly rely on agents for \\emph{schema-guided extraction}: given a document and a user-defined schema, the agent faithfully follows the schema to produce the correct output ",
+        "link": "http://arxiv.org/abs/2607.29677v1",
+        "date": "2026-07-31",
         "authors": [
-          "Jonathan J. Heckman",
-          "Shani Meynet",
-          "Alessandro Mininno"
+          "Boyang Zhang",
+          "Adrian Lyjak",
+          "Eli Stewart"
         ]
       },
       {
-        "title": "ReToken: One Token to Improve Vision-Language Models for Visual Retrieval",
-        "summary": "Long visual context poses a challenge for vision-language models: performance degrades as the number of distractors grows, and processing all tokens at once is computationally infeasible under GPU mem",
-        "link": "http://arxiv.org/abs/2607.28627v1",
-        "date": "2026-07-30",
+        "title": "Development of FDD-ON: an Ontology for VAV HVAC System Fault Detection and Diagnostics",
+        "summary": "Fault detection and diagnosis (FDD) technology is essential for improving HVAC system reliability, energy efficiency, and maintenance effectiveness. However, effective deployment of FDD solutions in b",
+        "link": "http://arxiv.org/abs/2607.29657v1",
+        "date": "2026-07-31",
         "authors": [
-          "Yao Xiao",
-          "Reuben Tan",
-          "Zhen Zhu"
+          "Yimin Chen",
+          "Brian Fricke",
+          "Bo Shen"
         ]
       },
       {
-        "title": "PAC-MAN: Perception-Aware CBF-RL for Whole-Body Safety in Humanoid Dodgeball",
-        "summary": "We present PAC-MAN, a perception-aware CBF-RL framework that couples control-barrier safety with deployment-realistic onboard sensing for whole-body humanoid dodgeball. The deployed policy sees the ba",
-        "link": "http://arxiv.org/abs/2607.28623v1",
-        "date": "2026-07-30",
+        "title": "AgentHPOBench: A Benchmark For Evaluating LLM Agents as Sequential Hyperparameter Optimizers",
+        "summary": "As LLMs evolve from code completion systems into autonomous scientific agents, evaluating their ability to conduct experiments has become increasingly important. Existing benchmarks typically focus on",
+        "link": "http://arxiv.org/abs/2607.29626v1",
+        "date": "2026-07-31",
         "authors": [
-          "Lizhi Yang",
-          "Junheng Li",
-          "Aaron D. Ames"
+          "Tianyu Huai",
+          "Tingshuo Fan",
+          "Xinchi Chen"
         ]
       },
       {
-        "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
-        "summary": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists. As a resul",
-        "link": "http://arxiv.org/abs/2607.28618v1",
-        "date": "2026-07-30",
+        "title": "The Theoretical Foundation of Socratic Tests: Dynamic, Multimodal, Conversational Examinations",
+        "summary": "Traditional static assessments rely on a subtractive, deficit-based grading model that often penalizes ambition and obscures diagnostic feedback. Conversely, traditional face-to-face oral examinations",
+        "link": "http://arxiv.org/abs/2607.29624v1",
+        "date": "2026-07-31",
         "authors": [
-          "Bing Yan",
-          "Gregory Wolfe",
-          "Stefano Martiniani"
+          "Ilya Mikhelson"
         ]
       },
       {
-        "title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
-        "summary": "System prompts are instructions configured by developers to govern the behaviors of foundation models in AI applications. They are used throughout commercial AI products, but are rarely disclosed to t",
-        "link": "http://arxiv.org/abs/2607.28617v1",
-        "date": "2026-07-30",
+        "title": "CENDRe: Concept Extraction with Natural Domain Representations",
+        "summary": "Convolutional neural networks (CNNs) are widely used for time-series classification, but their deployment in critical domains requires understanding the temporal and spectral patterns that drive their",
+        "link": "http://arxiv.org/abs/2607.29621v1",
+        "date": "2026-07-31",
         "authors": [
-          "Xiangning Lin",
-          "Shenzhe Zhu",
-          "Shu Yang"
+          "Antonia Holzapfel",
+          "Andres Felipe Posada Moreno",
+          "Sebastian Trimpe"
         ]
       },
       {
-        "title": "OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
-        "summary": "Computer-using agents (CUAs) are advancing rapidly across the digital world. A CUA trajectory records the agent's actions, states, and reasoning. Verifying whether it fulfilled the task instruction is",
-        "link": "http://arxiv.org/abs/2607.28609v1",
-        "date": "2026-07-30",
+        "title": "When Does On-Policy Interaction Help? Representational Tradeoffs in Value-Based Imitation Learning",
+        "summary": "Imitation learning (IL)---training an agent to replicate expert behavior from demonstrations---underpins applications from robotics to language model training. Standard approaches such as Behavior Clo",
+        "link": "http://arxiv.org/abs/2607.29617v1",
+        "date": "2026-07-31",
         "authors": [
-          "Qiushi Sun",
-          "Kanzhi Cheng",
-          "Yian Wang"
+          "Luca Viano",
+          "Antoine Moulin",
+          "Audrey Huang"
         ]
       },
       {
-        "title": "PAIChecker: Uncovering and Checking PR-Issue Misalignment in SWE-Bench-Like Benchmarks",
-        "summary": "SWE-bench-like benchmarks are widely used for evaluating LLM's issue resolution capability. They typically follow a common construction pipeline: each PR (Pull Request) is paired with its linked issue",
-        "link": "http://arxiv.org/abs/2607.28587v1",
-        "date": "2026-07-30",
+        "title": "A Human-Centered Validation of the Explainability-Performance Coefficient",
+        "summary": "The rapid adoption of deep learning models in high-risk domains has intensified the need for trustworthy Explainable Artificial Intelligence (XAI). However, objectively evaluating explanation fidelity",
+        "link": "http://arxiv.org/abs/2607.29614v1",
+        "date": "2026-07-31",
         "authors": [
-          "Manyi Wang",
-          "Junjielong Xu",
-          "Pinjia He"
+          "Christian Oliva",
+          "Luis F. Lago-Fern\u00e1ndez"
         ]
       },
       {
-        "title": "DualG-MRAG: Decoupling Macro-Reasoning and Micro-Matching for Multimodal Retrieval-Augmented Generation",
-        "summary": "While Multimodal Retrieval-Augmented Generation (MM-RAG) has shown promising results, it still struggles with complex multi-hop reasoning tasks. Existing methods primarily focus on independent instanc",
-        "link": "http://arxiv.org/abs/2607.28580v1",
-        "date": "2026-07-30",
+        "title": "FriendBench: Benchmarking Dyadic Familiarity Inference in Humans and Multimodal Large Language Models",
+        "summary": "Reading a social situation often depends on behavior, not words alone. We introduce FriendBench, a benchmark for inferring whether two people are already familiar or are meeting as strangers, from a 2",
+        "link": "http://arxiv.org/abs/2607.29602v1",
+        "date": "2026-07-31",
         "authors": [
-          "Jiacheng Tao",
-          "Qingyun Sun",
-          "Haonan Yuan"
+          "Jeffrey M. Girard",
+          "Jason Z. Zheng",
+          "Jacqueline R. Vertino"
         ]
       }
     ],
-    "updated": "2026-08-02T05:29:11.381422Z"
+    "updated": "2026-08-03T05:43:02.797496Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-08-02T05:29:11.381422Z"
+    "updated": "2026-08-03T05:43:02.797496Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-08-02T05:29:11.381422Z"
+    "updated": "2026-08-03T05:43:02.797496Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-08-02T05:29:11.381422Z"
+    "updated": "2026-08-03T05:43:02.797496Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Formalization of security",
-        "summary": "Proof assistants are often used to validate that designs and implementations meet their expected security properties. A further motivation for using proof assistants is to support certification. This ",
-        "link": "http://arxiv.org/abs/2607.28551v1",
-        "date": "2026-07-30",
+        "title": "CWEEP: A Lexical Static Analysis Framework for CWE Early Prevention",
+        "summary": "As the hardware layer becomes a focus point for attackers, the need for improved hardware security verification techniques is more important than ever. State-of-the-art security verification technique",
+        "link": "http://arxiv.org/abs/2607.29604v1",
+        "date": "2026-07-31",
         "authors": [
-          "Gilles Barthe"
+          "Bryan Kwan",
+          "Benjamin Tan"
         ]
       },
       {
-        "title": "Implementing Homomorphic Encryption-Based Logic Locking in System-on-Chip Designs",
-        "summary": "This study presents a logic locking scheme based on the binary Ring Learning With Errors algorithm, implemented in a RISC-V System-on-Chip design. Unlike traditional logic locking methods that require",
-        "link": "http://arxiv.org/abs/2607.28542v1",
-        "date": "2026-07-30",
+        "title": "Beyond Resilience: Antifragility in Critical Infrastructure Cybersecurity",
+        "summary": "Critical infrastructure cybersecurity increasingly requires frameworks that move beyond recovery toward bounded improvement under disruption, yet empirically grounded theories for operational technolo",
+        "link": "http://arxiv.org/abs/2607.29550v1",
+        "date": "2026-07-31",
         "authors": [
-          "Ye Ziyang",
-          "Makoto Ikeda"
+          "Stephen Flowerday",
+          "Mauricio Papa",
+          "Ethan Flowerday"
         ]
       },
       {
-        "title": "Cybersecurity Detection Classification with Reasoning-enabled Language Models",
-        "summary": "A major issue in Security Operations Centers (SOCs) is alert fatigue, as the number of detections reported is more than staff can triage in a given day. Prior work prompts or fine-tunes large language",
-        "link": "http://arxiv.org/abs/2607.28460v1",
-        "date": "2026-07-30",
+        "title": "Bending the Curve: Operational Cyber Epidemiology for Ransomware",
+        "summary": "Ransomware is often treated as a detection problem, but the most disruptive incidents behave more like outbreaks. A single foothold can spread through identities, administrative tools, and shared serv",
+        "link": "http://arxiv.org/abs/2607.29444v1",
+        "date": "2026-07-31",
         "authors": [
-          "Amol Khanna",
-          "Manu Nandan",
-          "Cristian Viorel Popa"
+          "Stephen V Flowerday",
+          "Nikolay Lipskiy",
+          "Steven Furnell"
         ]
       },
       {
-        "title": "Emerging Challenges in Threat Modeling for GenAI-Augmented Systems: A View from the Trenches",
-        "summary": "Threat modeling remains a central task in secure software engineering, as it enables the identification of security issues from system architectures. As Generative Artificial Intelligence (GenAI) beco",
-        "link": "http://arxiv.org/abs/2607.28431v1",
-        "date": "2026-07-30",
+        "title": "AgenticRepair: Multi-Faceted Program Context Engineering for Agentic Vulnerability Repair",
+        "summary": "Automated vulnerability repair aims to reduce the time and effort required to patch security flaws from a vulnerability triage report. Recent agentic AI approaches have shown promising results in auto",
+        "link": "http://arxiv.org/abs/2607.29422v1",
+        "date": "2026-07-31",
         "authors": [
-          "Nicol\u00e1s E. D\u00edaz Ferreyra",
-          "Manish Mahesh Kumar",
-          "Nohem\u00ed Villarreal"
+          "Michael Fu",
+          "Qiyue Mei",
+          "Patanamon Thongtanunam"
         ]
       },
       {
-        "title": "Encryption-Compatible Clustered Federated Learning via Distributed Expectation-Maximization over Metadata",
-        "summary": "Clustered Federated Learning (CFL) addresses data heterogeneity in federated settings by grouping clients with similar data distributions to enable effective training. Existing methods face a trade-of",
-        "link": "http://arxiv.org/abs/2607.28338v1",
-        "date": "2026-07-30",
+        "title": "Enforcing Cryptographic Distributed-VCS Access Control with No Trust on Servers",
+        "summary": "Version control systems (VCS), including central VCS (CVCS) and distributed VCS (DVCS), are widely adopted to manage changes to software code and various types of documents. Unlike CVCS, where entitie",
+        "link": "http://arxiv.org/abs/2607.29417v1",
+        "date": "2026-07-31",
         "authors": [
-          "Michael Ben Ali",
-          "Imen Megdiche",
-          "Andr\u00e9 P\u00e9ninou"
+          "Xin Xu",
+          "Zhen Yang",
+          "Quanwei Cai"
         ]
       },
       {
-        "title": "Demystifying DRAM Read Disturbance: Bridging the Gap Between Experimental Characterization and Device-Level Modeling of RowHammer and RowPress Phenomena",
-        "summary": "DRAM read disturbance, like RowHammer and RowPress, is a critical robustness issue where accessing DRAM can cause unintended bitflips in other unaccessed DRAM locations. DRAM read disturbance bitflips",
-        "link": "http://arxiv.org/abs/2607.28233v1",
-        "date": "2026-07-30",
+        "title": "On fair and realistic performance evaluations for graph-based lateral movement detectors",
+        "summary": "Research on lateral movement detection has made significant progress in recent years, spurred by the widespread availability of benchmark datasets that make evaluating detectors practical. However, th",
+        "link": "http://arxiv.org/abs/2607.29390v1",
+        "date": "2026-07-31",
         "authors": [
-          "Haocong Luo",
-          "Longda Zhou",
-          "Ataberk Olgun"
+          "Corentin Larroche"
         ]
       },
       {
-        "title": "Security of World-Model-Based Embodied AI: A Lifecycle of Threats, Defenses, and Evaluation",
-        "summary": "World models give embodied AI a predictive core: they compress observations into states, simulate action-conditioned futures, and enable planning beyond reactive control. This predictive layer, howeve",
-        "link": "http://arxiv.org/abs/2607.28226v1",
-        "date": "2026-07-30",
+        "title": "On the Resilience of 5G NR Against Jamming",
+        "summary": "With the increasing use of 5G networks in availability-critical systems, including industrial networks and critical infrastructure, a comprehensive understanding of their resilience to cellular jammin",
+        "link": "http://arxiv.org/abs/2607.29384v1",
+        "date": "2026-07-31",
         "authors": [
-          "Fazhong Liu",
-          "Zhuoyan Chen",
-          "Haozhen Tan"
+          "Sotiris Michaelides",
+          "Fidelius Lula",
+          "Daniel Eguiguren Chavez"
         ]
       },
       {
-        "title": "Secure Aggregation for Privacy-Preserving Federated Learning on Clinical EEG Data",
-        "summary": "Federated learning enables multiple institutions to train shared models without exchanging raw clinical EEG data, but it does not fully prevent privacy leakage from individual model updates. This pape",
-        "link": "http://arxiv.org/abs/2607.28191v1",
-        "date": "2026-07-30",
+        "title": "JUNO: Aggregated Vector Consensus for Optimal Asynchronous Common Subset",
+        "summary": "In this paper, we propose \\textit{aggregated vector consensus}, a new vector consensus primitive designed for asynchronous networks. The primitive achieves agreement by outputting a vector of values a",
+        "link": "http://arxiv.org/abs/2607.29244v1",
+        "date": "2026-07-31",
         "authors": [
-          "Pouya Rajabi",
-          "Mohsen Toorani"
+          "Liangrong Zhao",
+          "Qin Wang",
+          "Joseph K. Liu"
         ]
       }
     ],
-    "updated": "2026-08-02T05:29:11.381422Z"
+    "updated": "2026-08-03T05:43:02.797496Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -280,6 +278,6 @@
         ]
       }
     ],
-    "updated": "2026-08-02T05:29:11.381422Z"
+    "updated": "2026-08-03T05:43:02.797496Z"
   }
 }
