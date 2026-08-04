@@ -3,198 +3,198 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "ExtractBench: A Benchmark for Schema-Guided Enterprise Document Extraction",
-        "summary": "Enterprise workflows increasingly rely on agents for \\emph{schema-guided extraction}: given a document and a user-defined schema, the agent faithfully follows the schema to produce the correct output ",
-        "link": "http://arxiv.org/abs/2607.29677v1",
-        "date": "2026-07-31",
+        "title": "Bridging Artificial Intelligence and Power Systems Education Using a Hands-On Executable Framework",
+        "summary": "Artificial intelligence (AI) is increasingly central to power and energy systems, supporting modeling, forecasting, optimization, and control. Yet most existing works emphasize specialized application",
+        "link": "http://arxiv.org/abs/2608.02599v1",
+        "date": "2026-08-03",
         "authors": [
-          "Boyang Zhang",
-          "Adrian Lyjak",
-          "Eli Stewart"
+          "Junjie Yin",
+          "Buxin She",
+          "Xinyu Feng"
         ]
       },
       {
-        "title": "Development of FDD-ON: an Ontology for VAV HVAC System Fault Detection and Diagnostics",
-        "summary": "Fault detection and diagnosis (FDD) technology is essential for improving HVAC system reliability, energy efficiency, and maintenance effectiveness. However, effective deployment of FDD solutions in b",
-        "link": "http://arxiv.org/abs/2607.29657v1",
-        "date": "2026-07-31",
+        "title": "UEmbed: Unified Sparse and Dense Multimodal Embeddings",
+        "summary": "Sparse retrieval underpins modern search systems, from web search to retrieval-augmented generation. Existing work has introduced Learned Sparse Retrieval (LSR) to push beyond exact lexical matching t",
+        "link": "http://arxiv.org/abs/2608.02583v1",
+        "date": "2026-08-03",
         "authors": [
-          "Yimin Chen",
-          "Brian Fricke",
-          "Bo Shen"
+          "Tingyu Song",
+          "Mingxin Li",
+          "Yanzhao Zhang"
         ]
       },
       {
-        "title": "AgentHPOBench: A Benchmark For Evaluating LLM Agents as Sequential Hyperparameter Optimizers",
-        "summary": "As LLMs evolve from code completion systems into autonomous scientific agents, evaluating their ability to conduct experiments has become increasingly important. Existing benchmarks typically focus on",
-        "link": "http://arxiv.org/abs/2607.29626v1",
-        "date": "2026-07-31",
+        "title": "CoWAM: Coordination Contracts for Selective Policy Intervention with WAMs",
+        "summary": "World Action Models (WAMs) augment robot policies with action-conditioned predicted futures, but a plausible future alone does not justify changing the action that a bimanual policy would execute. We ",
+        "link": "http://arxiv.org/abs/2608.02578v1",
+        "date": "2026-08-03",
         "authors": [
-          "Tianyu Huai",
-          "Tingshuo Fan",
-          "Xinchi Chen"
+          "Shuaijun Liu",
+          "Qifu Wen",
+          "Shuyang Hao"
         ]
       },
       {
-        "title": "The Theoretical Foundation of Socratic Tests: Dynamic, Multimodal, Conversational Examinations",
-        "summary": "Traditional static assessments rely on a subtractive, deficit-based grading model that often penalizes ambition and obscures diagnostic feedback. Conversely, traditional face-to-face oral examinations",
-        "link": "http://arxiv.org/abs/2607.29624v1",
-        "date": "2026-07-31",
+        "title": "AtumAI: A Principled Framework for Agentic Generation of Datacenter Control-Plane Policies",
+        "summary": "The efficiency of a datacenter rests on its control plane policies. Designing these policies is increasingly hard: the hardware-software stack grows fast, the design space is vast and interdependent, ",
+        "link": "http://arxiv.org/abs/2608.02569v1",
+        "date": "2026-08-03",
         "authors": [
-          "Ilya Mikhelson"
+          "Qiushi Lin",
+          "Chaojie Zhang",
+          "\u00cd\u00f1igo Goiri"
         ]
       },
       {
-        "title": "CENDRe: Concept Extraction with Natural Domain Representations",
-        "summary": "Convolutional neural networks (CNNs) are widely used for time-series classification, but their deployment in critical domains requires understanding the temporal and spectral patterns that drive their",
-        "link": "http://arxiv.org/abs/2607.29621v1",
-        "date": "2026-07-31",
+        "title": "Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection",
+        "summary": "Retrieval-augmented generation (RAG) imposes a prefill cost proportional to retrieved context length, and -- with Transformer backbones -- a KV-cache that grows with each generated token. State-Space ",
+        "link": "http://arxiv.org/abs/2608.02560v1",
+        "date": "2026-08-03",
         "authors": [
-          "Antonia Holzapfel",
-          "Andres Felipe Posada Moreno",
-          "Sebastian Trimpe"
+          "Anusha Madan Gopal",
+          "Aras Pirbadian",
+          "Kristofor D. Carlson"
         ]
       },
       {
-        "title": "When Does On-Policy Interaction Help? Representational Tradeoffs in Value-Based Imitation Learning",
-        "summary": "Imitation learning (IL)---training an agent to replicate expert behavior from demonstrations---underpins applications from robotics to language model training. Standard approaches such as Behavior Clo",
-        "link": "http://arxiv.org/abs/2607.29617v1",
-        "date": "2026-07-31",
+        "title": "A Taxonomy of Cognitive Capability Gaps in Generative and Agentic AI",
+        "summary": "Cognitive AI seeks to move beyond language generation and autonomous task execution toward systems capable of sustained reasoning, adaptive behavior, persistent memory, and self-regulation. While gene",
+        "link": "http://arxiv.org/abs/2608.02553v1",
+        "date": "2026-08-03",
         "authors": [
-          "Luca Viano",
-          "Antoine Moulin",
-          "Audrey Huang"
+          "Taye Akinrele",
+          "Sindhuja Penchala",
+          "Noorbakhsh Amiri Golilarz"
         ]
       },
       {
-        "title": "A Human-Centered Validation of the Explainability-Performance Coefficient",
-        "summary": "The rapid adoption of deep learning models in high-risk domains has intensified the need for trustworthy Explainable Artificial Intelligence (XAI). However, objectively evaluating explanation fidelity",
-        "link": "http://arxiv.org/abs/2607.29614v1",
-        "date": "2026-07-31",
+        "title": "Who Should Be Generated? Justifying Demographic Targets in Open-Ended Generation",
+        "summary": "Fairness evaluation concerns not only what a model produces, but also what its outputs ought to be compared against. When a model generates \"a CEO in the United States,\" the prompt leaves demographic ",
+        "link": "http://arxiv.org/abs/2608.02551v1",
+        "date": "2026-08-03",
         "authors": [
-          "Christian Oliva",
-          "Luis F. Lago-Fern\u00e1ndez"
+          "Zeshen Zheng",
+          "Yujia He",
+          "Qianmian Lin"
         ]
       },
       {
-        "title": "FriendBench: Benchmarking Dyadic Familiarity Inference in Humans and Multimodal Large Language Models",
-        "summary": "Reading a social situation often depends on behavior, not words alone. We introduce FriendBench, a benchmark for inferring whether two people are already familiar or are meeting as strangers, from a 2",
-        "link": "http://arxiv.org/abs/2607.29602v1",
-        "date": "2026-07-31",
+        "title": "Analytic Planning under Uncertainty with Moment Closure",
+        "summary": "Effective model-based reinforcement learning in stochastic environments requires planning that accounts for predictive uncertainty. Propagating full state distributions analytically offers a principle",
+        "link": "http://arxiv.org/abs/2608.02519v1",
+        "date": "2026-08-03",
         "authors": [
-          "Jeffrey M. Girard",
-          "Jason Z. Zheng",
-          "Jacqueline R. Vertino"
+          "Shishir Sharma",
+          "Doina Precup"
         ]
       }
     ],
-    "updated": "2026-08-03T05:43:02.797496Z"
+    "updated": "2026-08-04T05:16:05.486475Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-08-03T05:43:02.797496Z"
+    "updated": "2026-08-04T05:16:05.486475Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-08-03T05:43:02.797496Z"
+    "updated": "2026-08-04T05:16:05.486475Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-08-03T05:43:02.797496Z"
+    "updated": "2026-08-04T05:16:05.486475Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "CWEEP: A Lexical Static Analysis Framework for CWE Early Prevention",
-        "summary": "As the hardware layer becomes a focus point for attackers, the need for improved hardware security verification techniques is more important than ever. State-of-the-art security verification technique",
-        "link": "http://arxiv.org/abs/2607.29604v1",
-        "date": "2026-07-31",
+        "title": "Solving the Shortest Vector Problem in time $2^{0.6039n}$ Time via Mid-point Hessian",
+        "summary": "We present randomized algorithms for the shortest vector problem (SVP). For the $n$-dimensional lattice $\\mathcal L$, our algorithms solve SVP in time $2^{0.6039n+o(n)}$ classically and $2^{0.5411n+o(",
+        "link": "http://arxiv.org/abs/2608.02478v1",
+        "date": "2026-08-03",
         "authors": [
-          "Bryan Kwan",
-          "Benjamin Tan"
+          "Minki Hhan"
         ]
       },
       {
-        "title": "Beyond Resilience: Antifragility in Critical Infrastructure Cybersecurity",
-        "summary": "Critical infrastructure cybersecurity increasingly requires frameworks that move beyond recovery toward bounded improvement under disruption, yet empirically grounded theories for operational technolo",
-        "link": "http://arxiv.org/abs/2607.29550v1",
-        "date": "2026-07-31",
+        "title": "Agentic Incident Response through Digital Twin-Enhanced Multiscale Planning",
+        "summary": "Incident response is currently managed by security operators using predefined playbooks, resulting in slow, labor-intensive security decision-making processes. Consequently, there is a growing need fo",
+        "link": "http://arxiv.org/abs/2608.02422v1",
+        "date": "2026-08-03",
         "authors": [
-          "Stephen Flowerday",
-          "Mauricio Papa",
-          "Ethan Flowerday"
+          "Yiran Gao",
+          "Tao Li",
+          "Kim Hammar"
         ]
       },
       {
-        "title": "Bending the Curve: Operational Cyber Epidemiology for Ransomware",
-        "summary": "Ransomware is often treated as a detection problem, but the most disruptive incidents behave more like outbreaks. A single foothold can spread through identities, administrative tools, and shared serv",
-        "link": "http://arxiv.org/abs/2607.29444v1",
-        "date": "2026-07-31",
+        "title": "Antares: Foundation Models for Agentic Vulnerability Localization",
+        "summary": "Vulnerability localization is a fundamental step in software security, requiring models to reason over large codebases and iteratively identify vulnerable implementations. We present Antares, a family",
+        "link": "http://arxiv.org/abs/2608.02407v1",
+        "date": "2026-08-03",
         "authors": [
-          "Stephen V Flowerday",
-          "Nikolay Lipskiy",
-          "Steven Furnell"
+          "Supriti Vijay",
+          "Aman Priyanshu",
+          "Didier Chapoteau"
         ]
       },
       {
-        "title": "AgenticRepair: Multi-Faceted Program Context Engineering for Agentic Vulnerability Repair",
-        "summary": "Automated vulnerability repair aims to reduce the time and effort required to patch security flaws from a vulnerability triage report. Recent agentic AI approaches have shown promising results in auto",
-        "link": "http://arxiv.org/abs/2607.29422v1",
-        "date": "2026-07-31",
+        "title": "Self-Supervised Representations for Binary Program Clustering: From Empirical Study to Retrieval-Augmented Learning",
+        "summary": "Malware clustering is a critical task in cybersecurity that helps discover threats and analyze evolving malware families. While self-supervised learning (SSL) and tabular representation learning (TRL)",
+        "link": "http://arxiv.org/abs/2608.02348v1",
+        "date": "2026-08-03",
         "authors": [
-          "Michael Fu",
-          "Qiyue Mei",
-          "Patanamon Thongtanunam"
+          "Martin Mocko",
+          "Daniela Chud\u00e1"
         ]
       },
       {
-        "title": "Enforcing Cryptographic Distributed-VCS Access Control with No Trust on Servers",
-        "summary": "Version control systems (VCS), including central VCS (CVCS) and distributed VCS (DVCS), are widely adopted to manage changes to software code and various types of documents. Unlike CVCS, where entitie",
-        "link": "http://arxiv.org/abs/2607.29417v1",
-        "date": "2026-07-31",
+        "title": "Lost in Permissions: Exploring the Microsoft 365 App Ecosystem",
+        "summary": "The Microsoft 365 (M365) ecosystem hosts thousands of third-party applications that integrate with enterprise tenants via fine-grained OAuth permissions, potentially granting access to sensitive organ",
+        "link": "http://arxiv.org/abs/2608.02336v1",
+        "date": "2026-08-03",
         "authors": [
-          "Xin Xu",
-          "Zhen Yang",
-          "Quanwei Cai"
+          "Vincenzo Longo",
+          "Alberto Verna",
+          "Nikhil Jha"
         ]
       },
       {
-        "title": "On fair and realistic performance evaluations for graph-based lateral movement detectors",
-        "summary": "Research on lateral movement detection has made significant progress in recent years, spurred by the widespread availability of benchmark datasets that make evaluating detectors practical. However, th",
-        "link": "http://arxiv.org/abs/2607.29390v1",
-        "date": "2026-07-31",
+        "title": "TrainShield: Targeted Awareness for Cybersecurity Training",
+        "summary": "In recent years, cybersecurity threats have increasingly exploited human behaviour rather than purely technical vulnerabilities, exposing the limits of traditional awareness programmes delivered outsi",
+        "link": "http://arxiv.org/abs/2608.02296v1",
+        "date": "2026-08-03",
         "authors": [
-          "Corentin Larroche"
+          "Giovanni Pizzenti",
+          "Alberto Verna",
+          "Nikhil Jha"
         ]
       },
       {
-        "title": "On the Resilience of 5G NR Against Jamming",
-        "summary": "With the increasing use of 5G networks in availability-critical systems, including industrial networks and critical infrastructure, a comprehensive understanding of their resilience to cellular jammin",
-        "link": "http://arxiv.org/abs/2607.29384v1",
-        "date": "2026-07-31",
+        "title": "A Multi-Objective AutoML-based Efficient Intrusion Detection System for EV Charging Networks",
+        "summary": "Electric Vehicle Charging Systems (EVCSs) are increasingly connected with Internet of Things (IoT) devices, which improves charging intelligence but also expands their exposure to cyber-attacks. Intru",
+        "link": "http://arxiv.org/abs/2608.02274v1",
+        "date": "2026-08-03",
         "authors": [
-          "Sotiris Michaelides",
-          "Fidelius Lula",
-          "Daniel Eguiguren Chavez"
+          "Li Yang"
         ]
       },
       {
-        "title": "JUNO: Aggregated Vector Consensus for Optimal Asynchronous Common Subset",
-        "summary": "In this paper, we propose \\textit{aggregated vector consensus}, a new vector consensus primitive designed for asynchronous networks. The primitive achieves agreement by outputting a vector of values a",
-        "link": "http://arxiv.org/abs/2607.29244v1",
-        "date": "2026-07-31",
+        "title": "TurboRetry: Mitigating Large-Scale QUIC Handshake Floods with Off-the-Shelf DPU Offloading",
+        "summary": "The modern transport protocol QUIC is designed to enhance network performance and security, but it remains vulnerable to handshake flooding attacks. Such attacks exhaust CPU resources by forcing the s",
+        "link": "http://arxiv.org/abs/2608.02264v1",
+        "date": "2026-08-03",
         "authors": [
-          "Liangrong Zhao",
-          "Qin Wang",
-          "Joseph K. Liu"
+          "Jiahao Wu",
+          "Heng Pan",
+          "Kai Lv"
         ]
       }
     ],
-    "updated": "2026-08-03T05:43:02.797496Z"
+    "updated": "2026-08-04T05:16:05.486475Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -278,6 +278,6 @@
         ]
       }
     ],
-    "updated": "2026-08-03T05:43:02.797496Z"
+    "updated": "2026-08-04T05:16:05.486475Z"
   }
 }
