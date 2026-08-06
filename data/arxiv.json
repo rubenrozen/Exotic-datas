@@ -3,203 +3,200 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "TurnSight: Turn-Level Hindsight Self-Distillation for Tool-Integrated Reasoning",
-        "summary": "Tool-Integrated Reasoning (TIR) enables LLMs to solve complex tasks through iterative tool interactions. However, existing reinforcement learning methods often rely on trajectory-level supervision, li",
-        "link": "http://arxiv.org/abs/2608.04007v1",
-        "date": "2026-08-04",
+        "title": "Argus: A General-Purpose Agentic Runtime for Long-Horizon Reasoning",
+        "summary": "Long-horizon reasoning requires an agentic runtime that can persist when evidence supports its current approach and pivot when measurements reveal failure, hidden constraints, or a misspecified object",
+        "link": "http://arxiv.org/abs/2608.05144v1",
+        "date": "2026-08-05",
         "authors": [
-          "Changle Qu",
-          "Sunhao Dai",
-          "Hengyi Cai"
+          "Boxiu Li",
+          "Zimo Wen",
+          "Yijia Fan"
         ]
       },
       {
-        "title": "Test-Time Scaling in Reasoning LLMs: Inference Regimes, Evaluation, and Reproducibility",
-        "summary": "Large language models can solve substantially harder reasoning problems with more inference-time compute. The term \"test-time scaling,\" however, now covers diverse inference algorithms that extend del",
-        "link": "http://arxiv.org/abs/2608.04001v1",
-        "date": "2026-08-04",
+        "title": "OctoLong: Mid-Training On Cross-Repository Code Contexts Enhances Long-Context Modeling",
+        "summary": "Context lengths of language models (LMs) have dramatically increased, driven by the demands for in-context learning, self-improvement, and long-horizon agentic workflows. Existing long-context corpora",
+        "link": "http://arxiv.org/abs/2608.05141v1",
+        "date": "2026-08-05",
         "authors": [
-          "Mohsen Hariri",
-          "Weicong Chen",
-          "Nahal Shahini"
+          "Indraneil Paul",
+          "Falko Helm",
+          "Goran Glava\u0161"
         ]
       },
       {
-        "title": "Can Large Language Models Recover Semantic Optimization Opportunities That Compilers Miss?",
-        "summary": "Optimizing compilers miss profitable transformations when their enabling semantics are absent from the analyzed program representation. We ask whether large language models (LLMs) can recover such sem",
-        "link": "http://arxiv.org/abs/2608.03983v1",
-        "date": "2026-08-04",
+        "title": "Teaching Nemotron Greek: Mining a Corpus, Adapting Retrieval, and Grounding Generation for Modern Greek across Specialist Domains",
+        "summary": "Modern Greek is absent from NVIDIA's Nemotron retrieval models and from major multilingual retrieval benchmarks, despite being important for retrieval-augmented generation (RAG) in legal, energy, fina",
+        "link": "http://arxiv.org/abs/2608.05138v1",
+        "date": "2026-08-05",
         "authors": [
-          "Hailong Jiang",
-          "Feng Yu",
-          "Emran Hossain"
+          "Ayoub Kirouane",
+          "Christos Petrocheilos"
         ]
       },
       {
-        "title": "Video-DeepResearch: Towards the Next-Generation Multimodal Deepresearch Agent",
-        "summary": "We introduce Video-DeepResearch (Video-DR), extending multimodal agents from static images to continuous video streams, a setting that demands dense spatiotemporal grounding coupled with open-web expl",
-        "link": "http://arxiv.org/abs/2608.03979v1",
-        "date": "2026-08-04",
+        "title": "OPD-V: Visual On-Policy Self-Distillation with Modality Balance",
+        "summary": "On-Policy Self-Distillation (OPSD) has become a standard post-training approach for improving visual reasoning in multimodal large language models (MLLMs). Existing methods draw privileged information",
+        "link": "http://arxiv.org/abs/2608.05131v1",
+        "date": "2026-08-05",
         "authors": [
-          "Zhen Fang",
-          "Yu Zeng",
-          "Wenxuan Huang"
-        ]
-      },
-      {
-        "title": "ReflectRL: Learning from Golden Negative Trajectories via Reflective-to-Direct Reasoning",
-        "summary": "On-policy training has emerged as a powerful post-training paradigm for improving the reasoning capabilities of large language models, and is often enhanced by golden trajectories from stronger expert",
-        "link": "http://arxiv.org/abs/2608.03972v1",
-        "date": "2026-08-04",
-        "authors": [
+          " Aniri",
           "Jinhe Bi",
-          "Chennan Zhou",
-          "Zengjie Jin"
+          "Peng Liao"
         ]
       },
       {
-        "title": "Should We Type or Talk to LLM Agents? A Comprehensive Study of Voice and Keyboard Input Perturbations",
-        "summary": "Human input reaches language models by typing or speaking, and each channel leaves a distinct signature: orthographic noise for keyboards; for voice, disfluency from conventional transcription and res",
-        "link": "http://arxiv.org/abs/2608.03970v1",
-        "date": "2026-08-04",
+        "title": "SSTQ:Privacy-Preserving Vector Quantization via Subsampled Stochastic TurboQuant",
+        "summary": "Achieving local differential privacy in distributed optimization while maintaining low communication cost remains challenging. Existing vector quantization methods, such as vqSGD, use high-dimensional",
+        "link": "http://arxiv.org/abs/2608.05127v1",
+        "date": "2026-08-05",
         "authors": [
-          "Zizhao Hu",
-          "Nathan Elijah Segura",
-          "Mohammad Rostami"
+          "Adel Javanmard",
+          "David P. Woodruff",
+          "Vahab Mirrokni"
         ]
       },
       {
-        "title": "Separating quantum circuits from classical LLMs",
-        "summary": "Modern large language models - transformers and diffusion language models - are built around two canonical algorithmic tasks: prediction and generation. We prove unconditional separations between low-",
-        "link": "http://arxiv.org/abs/2608.03962v1",
-        "date": "2026-08-04",
+        "title": "Chained Recursive Language Models for Multi-Iteration Reasoning",
+        "summary": "Long context reasoning in large language models (LLMs) is usually constrained by the fact that a single inference trajectory has to simultaneously explore the context, store intermediate state, verify",
+        "link": "http://arxiv.org/abs/2608.05124v1",
+        "date": "2026-08-05",
         "authors": [
-          "Srinivasan Arunachalam",
-          "Arkopal Dutt",
-          "Hari Krovi"
+          "Purbesh Mitra",
+          "Sennur Ulukus"
         ]
       },
       {
-        "title": "Interpretable Adaptive Sampling for LLM Test-Time Scaling",
-        "summary": "Test-time scaling improves LLM reasoning by generating and aggregating multiple candidate answers, yet many pipelines use fixed per-query budgets that spend the same compute on easy and difficult prom",
-        "link": "http://arxiv.org/abs/2608.03961v1",
-        "date": "2026-08-04",
+        "title": "Robust and Efficient Motion Reasoning for Privacy-Aware Classroom Incident Recognition",
+        "summary": "Can computer vision help make classrooms safer? In this pilot study, we investigate privacy-aware and computationally efficient classroom incident recognition from CCTV-style observations. This settin",
+        "link": "http://arxiv.org/abs/2608.05115v1",
+        "date": "2026-08-05",
         "authors": [
-          "Mobina Kashaniyan",
-          "Ali Jannesari"
+          "Paritosh Parmar",
+          "Landy Lan",
+          "Hong Yang"
+        ]
+      },
+      {
+        "title": "Representational separation between unitary and channel quantum generative models via shared classical randomness at shallow depth",
+        "summary": "Near-term quantum hardware limits circuit depth and often imposes geometrically local connectivity for quantum generative models, restricting the output distributions accessible to shallow unitary Bor",
+        "link": "http://arxiv.org/abs/2608.05110v1",
+        "date": "2026-08-05",
+        "authors": [
+          "Arunava Majumder",
+          "Marius Krumm",
+          "Hendrik Poulsen Nautrup"
         ]
       }
     ],
-    "updated": "2026-08-05T05:15:44.269494Z"
+    "updated": "2026-08-06T05:19:08.507192Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-08-05T05:15:44.269494Z"
+    "updated": "2026-08-06T05:19:08.507192Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-08-05T05:15:44.269494Z"
+    "updated": "2026-08-06T05:19:08.507192Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-08-05T05:15:44.269494Z"
+    "updated": "2026-08-06T05:19:08.507192Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Progressive Learning of a Diffusion-based Inpainting Model for Separating Overlapped Fingerprints",
-        "summary": "Overlapped friction ridge patterns are a recurring problem in latent fingerprints recovered from crime scenes and in live-scan scenarios where residual fingerprints on the sensor may corrupt subsequen",
-        "link": "http://arxiv.org/abs/2608.03937v1",
-        "date": "2026-08-04",
+        "title": "Agent Against Agent: An Agentic System for Automatic Prompt Injection Red Teaming",
+        "summary": "Prompt injection poses significant security risks to LLM agents. Efficient and effective red-teaming is therefore critical, both for evaluating these risks and for collecting training data to improve ",
+        "link": "http://arxiv.org/abs/2608.05108v1",
+        "date": "2026-08-05",
         "authors": [
-          "Noor Hussein",
-          "Anil K. Jain",
-          "Karthik Nandakumar"
+          "Yanting Wang",
+          "Chenlong Yin",
+          "Runpeng Geng"
         ]
       },
       {
-        "title": "Delay Attacks on the German Smart Metering Infrastructure: A Security Analysis of CLS Channel Timing Constraints",
-        "summary": "This work analyzes the feasibility of delay attacks on control signals transmitted via the Controllable Local System (CLS) channel of the German Smart Metering Infrastructure (SMI). It combines theore",
-        "link": "http://arxiv.org/abs/2608.03751v1",
-        "date": "2026-08-04",
+        "title": "Hardware Design and Security in the Era of Chiplets and LLMs",
+        "summary": "The semiconductor industry is undergoing a dual revolution: the shift toward heterogeneous 2.5D chiplet systems and the integration of Large Language Models (LLMs) into Electronic Design Automation (E",
+        "link": "http://arxiv.org/abs/2608.05063v1",
+        "date": "2026-08-05",
         "authors": [
-          "Fabio Stoll",
-          "Benjamin Pottkamp",
-          "Heiko Lorenz"
+          "Johann Knechtel",
+          "Ozgur Sinanoglu",
+          "Paul V. Gratz"
         ]
       },
       {
-        "title": "Dependency Triad: A Metric to Quantify the Dependencies Between Attributes for Local Differential Privacy",
-        "summary": "Collecting multidimensional user data is essential for extracting rich insights across various applications. Local Differential Privacy (LDP) has emerged as a de facto standard for mitigating privacy ",
-        "link": "http://arxiv.org/abs/2608.03737v1",
-        "date": "2026-08-04",
+        "title": "Kerckhoffs-Compliant Watermarking for Physical Design IP Protection: From Placement to Routing",
+        "summary": "Physical design (PD) intellectual property (IP) is a valuable artifact of modern VLSI implementation. It includes optimized cell placement, clock distribution, and routing decisions produced by carefu",
+        "link": "http://arxiv.org/abs/2608.05055v1",
+        "date": "2026-08-05",
         "authors": [
-          "Sandaru Jayawardana",
-          "Sennur Ulukus",
-          "Ming Ding"
+          "Andrew B. Kahng",
+          "Yiting Liu"
         ]
       },
       {
-        "title": "When Agents Learn to Be You: Benchmarking Privacy Leakage, Impersonation Risk, and Defenses in Persona Skills",
-        "summary": "Persona skills distill personal interaction histories into portable and executable artifacts for downstream agents. While enabling flexible personalization, this process concentrates fragmented person",
-        "link": "http://arxiv.org/abs/2608.03700v1",
-        "date": "2026-08-04",
+        "title": "Gradient Immunity: Null-Space Resistance to Malicious Fine-Tuning",
+        "summary": "Released aligned large language models remain vulnerable to malicious downstream finetuning. Existing defenses are largely designed for the fine-tuning-as-a-service (FTaaS) paradigm or rely on downstr",
+        "link": "http://arxiv.org/abs/2608.05045v1",
+        "date": "2026-08-05",
         "authors": [
-          "Yongli Xiang",
-          "Zhifang Zhang",
-          "Bojun Yang"
+          "Yuxuan Huang",
+          "Xingyu Zeng",
+          "Tianhang Zheng"
         ]
       },
       {
-        "title": "Empirical Analysis of Evasion and Poisoning Against Malware Data Drift Detection",
-        "summary": "As concept drift due to malware evolution presents challenges for malware classification, machine learning-based data drift detection tools are developed to mitigate this problem. These data drift det",
-        "link": "http://arxiv.org/abs/2608.03642v1",
-        "date": "2026-08-04",
+        "title": "Private Direct Preference Optimization for LLM Alignment",
+        "summary": "Direct preference optimization (DPO) is now a standard method for aligning large language models (LLMs) using human preference data. Each DPO example contains a prompt and a pair of candidate model re",
+        "link": "http://arxiv.org/abs/2608.05040v1",
+        "date": "2026-08-05",
         "authors": [
-          "Mingyue Yang",
-          "David Lie",
-          "Nicolas Papernot"
+          "Yangfan Jiang",
+          "Fei Wei",
+          "Ergute Bao"
         ]
       },
       {
-        "title": "A Security-Oriented Lifecycle Model for Large Language Model Systems",
-        "summary": "Large language models are being integrated into critical infrastructure and enterprise workflows at unprecedented scale,yet the lifecycle frameworks governing their development and operations were des",
-        "link": "http://arxiv.org/abs/2608.03626v1",
-        "date": "2026-08-04",
+        "title": "When Do PEFT Adaptations Leak Structure? Measuring Black-Box Structural Bounds in Public-Base Model Services",
+        "summary": "Services increasingly deploy public foundation models with private parameter-efficient adaptations, creating a differential information leakage risk when auditors or adversaries can execute the public",
+        "link": "http://arxiv.org/abs/2608.05036v1",
+        "date": "2026-08-05",
         "authors": [
-          "Eleftherios Batzolis",
-          "George Drosatos",
-          "Vassilis Katsouros"
+          "Zhongjiang Yao",
+          "Shuangshuang Liang",
+          "Chun Yang"
         ]
       },
       {
-        "title": "DiagChain: A Diagnostic Benchmark for Evaluating LLM Agents on Evidence-Grounded Attack Chain Reconstruction",
-        "summary": "Large Language Model (LLM) agents offer a promising approach to attack chain reconstruction by retrieving and interpreting heterogeneous telemetry to infer ordered attacker actions. However, existing ",
-        "link": "http://arxiv.org/abs/2608.03591v1",
-        "date": "2026-08-04",
+        "title": "Towards Decentralized Searcher Competition in MEV Markets",
+        "summary": "Centralization in maximal extractable value (MEV) markets is a significant concern for blockchain systems, as persistent concentration of economic power can weaken competition, reduce openness, and un",
+        "link": "http://arxiv.org/abs/2608.05011v1",
+        "date": "2026-08-05",
         "authors": [
-          "Xuyang Liu",
-          "Yibin Han",
-          "Zhenwei Zhang"
+          "Roozbeh Sarenche",
+          "Yunwen Liu"
         ]
       },
       {
-        "title": "Secure Long-Range Autonomous Valet Parking: A Reservation Scheme With Three-Factor Authentication and Key Agreement",
-        "summary": "Long-range autonomous valet parking (LAVP) is increasingly adopted to alleviate traffic congestion and parking difficulties. For large-scale parking demand, reservation can improve parking management.",
-        "link": "http://arxiv.org/abs/2608.03590v1",
-        "date": "2026-08-04",
+        "title": "Toward Practical Decentralized Proof-of-Location via Physical Witnessing Zones",
+        "summary": "Digital services increasingly rely on claims that a person, device, or asset was in a specific place at a specific time. Today, those claims often depend on self-reported location data, which is easy ",
+        "link": "http://arxiv.org/abs/2608.04957v1",
+        "date": "2026-08-05",
         "authors": [
-          "Di Wang",
-          "Yue Cao",
-          "Fei Yan"
+          "Tamor Tomson",
+          "Eduardo Brito",
+          "Amnir Hadachi"
         ]
       }
     ],
-    "updated": "2026-08-05T05:15:44.269494Z"
+    "updated": "2026-08-06T05:19:08.507192Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -283,6 +280,6 @@
         ]
       }
     ],
-    "updated": "2026-08-05T05:15:44.269494Z"
+    "updated": "2026-08-06T05:19:08.507192Z"
   }
 }
