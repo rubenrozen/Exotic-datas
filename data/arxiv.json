@@ -3,200 +3,198 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Argus: A General-Purpose Agentic Runtime for Long-Horizon Reasoning",
-        "summary": "Long-horizon reasoning requires an agentic runtime that can persist when evidence supports its current approach and pivot when measurements reveal failure, hidden constraints, or a misspecified object",
-        "link": "http://arxiv.org/abs/2608.05144v1",
-        "date": "2026-08-05",
+        "title": "Learning When to Trust via Selective Context Preference Optimization",
+        "summary": "Language models increasingly condition their answers on external signals, and a single misleading one can turn a correct answer wrong. The obvious remedy, training models to resist such signals, hides",
+        "link": "http://arxiv.org/abs/2608.06377v1",
+        "date": "2026-08-06",
         "authors": [
-          "Boxiu Li",
-          "Zimo Wen",
-          "Yijia Fan"
+          "Xian Sun",
+          "Wei Chow",
+          "Yingshuo Wang"
         ]
       },
       {
-        "title": "OctoLong: Mid-Training On Cross-Repository Code Contexts Enhances Long-Context Modeling",
-        "summary": "Context lengths of language models (LMs) have dramatically increased, driven by the demands for in-context learning, self-improvement, and long-horizon agentic workflows. Existing long-context corpora",
-        "link": "http://arxiv.org/abs/2608.05141v1",
-        "date": "2026-08-05",
+        "title": "Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering",
+        "summary": "Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure",
+        "link": "http://arxiv.org/abs/2608.06366v1",
+        "date": "2026-08-06",
         "authors": [
-          "Indraneil Paul",
-          "Falko Helm",
-          "Goran Glava\u0161"
+          "Soorya Ram Shimgekar",
+          "Michelle Hu",
+          "Dorisa Shehi"
         ]
       },
       {
-        "title": "Teaching Nemotron Greek: Mining a Corpus, Adapting Retrieval, and Grounding Generation for Modern Greek across Specialist Domains",
-        "summary": "Modern Greek is absent from NVIDIA's Nemotron retrieval models and from major multilingual retrieval benchmarks, despite being important for retrieval-augmented generation (RAG) in legal, energy, fina",
-        "link": "http://arxiv.org/abs/2608.05138v1",
-        "date": "2026-08-05",
+        "title": "Investigating Artificial Intelligence Digital Sovereignty in Mobile Shopping Apps: A Case Study of Nigeria",
+        "summary": "The use of e-commerce mobile applications is expanding in Nigeria, creating both opportunities and risks, including fraud and reduced user control over digital technologies, raising concerns about dig",
+        "link": "http://arxiv.org/abs/2608.06364v1",
+        "date": "2026-08-06",
         "authors": [
-          "Ayoub Kirouane",
-          "Christos Petrocheilos"
+          "George Grispos",
+          "Sajda Qureshi"
         ]
       },
       {
-        "title": "OPD-V: Visual On-Policy Self-Distillation with Modality Balance",
-        "summary": "On-Policy Self-Distillation (OPSD) has become a standard post-training approach for improving visual reasoning in multimodal large language models (MLLMs). Existing methods draw privileged information",
-        "link": "http://arxiv.org/abs/2608.05131v1",
-        "date": "2026-08-05",
+        "title": "An Optimal Agnostic PAC Algorithm",
+        "summary": "Let $H\\subseteq\\{-1,+1\\}^X$ be a class of finite VC dimension $d\\ge1$. Writing $L$ for the binary risk and $L^*=\\min_{h\\in H}L(h)$, we construct a learner achieving the statistically optimal risk boun",
+        "link": "http://arxiv.org/abs/2608.06363v1",
+        "date": "2026-08-06",
         "authors": [
-          " Aniri",
-          "Jinhe Bi",
-          "Peng Liao"
+          "Markus Engelund Mathiasen",
+          "Jian Qian",
+          "Nikita Zhivotovskiy"
         ]
       },
       {
-        "title": "SSTQ:Privacy-Preserving Vector Quantization via Subsampled Stochastic TurboQuant",
-        "summary": "Achieving local differential privacy in distributed optimization while maintaining low communication cost remains challenging. Existing vector quantization methods, such as vqSGD, use high-dimensional",
-        "link": "http://arxiv.org/abs/2608.05127v1",
-        "date": "2026-08-05",
+        "title": "AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games",
+        "summary": "Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed",
+        "link": "http://arxiv.org/abs/2608.06362v1",
+        "date": "2026-08-06",
         "authors": [
-          "Adel Javanmard",
-          "David P. Woodruff",
-          "Vahab Mirrokni"
+          "Boning Li",
+          "Yu Chen",
+          "Longbo Huang"
         ]
       },
       {
-        "title": "Chained Recursive Language Models for Multi-Iteration Reasoning",
-        "summary": "Long context reasoning in large language models (LLMs) is usually constrained by the fact that a single inference trajectory has to simultaneously explore the context, store intermediate state, verify",
-        "link": "http://arxiv.org/abs/2608.05124v1",
-        "date": "2026-08-05",
+        "title": "The Low Frequency Trap: Video Language Models Fail at Simple Event Bookkeeping",
+        "summary": "Real-world video benchmarks provide broad coverage, but their fixed clips entangle event count, rate, duration, and visual complexity, making failure modes hard to isolate. While existing programmatic",
+        "link": "http://arxiv.org/abs/2608.06361v1",
+        "date": "2026-08-06",
         "authors": [
-          "Purbesh Mitra",
-          "Sennur Ulukus"
+          "Sarvesh Baskar",
+          "Zikui Cai",
+          "Shayan Shabihi"
         ]
       },
       {
-        "title": "Robust and Efficient Motion Reasoning for Privacy-Aware Classroom Incident Recognition",
-        "summary": "Can computer vision help make classrooms safer? In this pilot study, we investigate privacy-aware and computationally efficient classroom incident recognition from CCTV-style observations. This settin",
-        "link": "http://arxiv.org/abs/2608.05115v1",
-        "date": "2026-08-05",
+        "title": "Resourced Authority A Mechanism-Design Model for Participatory Governance of Deployed AI Agents",
+        "summary": "We give a formal mechanism design model for the continuous participatory governance of a deployed AI agent. The mechanism is built on the principle that governance should control an AI agent through r",
+        "link": "http://arxiv.org/abs/2608.06353v1",
+        "date": "2026-08-06",
         "authors": [
-          "Paritosh Parmar",
-          "Landy Lan",
-          "Hong Yang"
+          "Praphul Chandra",
+          "Sujit Gujar",
+          "Ganesh Ghalme"
         ]
       },
       {
-        "title": "Representational separation between unitary and channel quantum generative models via shared classical randomness at shallow depth",
-        "summary": "Near-term quantum hardware limits circuit depth and often imposes geometrically local connectivity for quantum generative models, restricting the output distributions accessible to shallow unitary Bor",
-        "link": "http://arxiv.org/abs/2608.05110v1",
-        "date": "2026-08-05",
+        "title": "Challenges in Evaluating Explanation Methods for Static and Evolving Data",
+        "summary": "This paper addresses the limitations of Explainable Artificial Intelligence (XAI) with respect to insufficient evaluation. They are illustrated through the DetoxAI image recognition system for bias de",
+        "link": "http://arxiv.org/abs/2608.06351v1",
+        "date": "2026-08-06",
         "authors": [
-          "Arunava Majumder",
-          "Marius Krumm",
-          "Hendrik Poulsen Nautrup"
+          "Jerzy Stefanowski"
         ]
       }
     ],
-    "updated": "2026-08-06T05:19:08.507192Z"
+    "updated": "2026-08-07T04:26:07.722844Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-08-06T05:19:08.507192Z"
+    "updated": "2026-08-07T04:26:07.722844Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-08-06T05:19:08.507192Z"
+    "updated": "2026-08-07T04:26:07.722844Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-08-06T05:19:08.507192Z"
+    "updated": "2026-08-07T04:26:07.722844Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Agent Against Agent: An Agentic System for Automatic Prompt Injection Red Teaming",
-        "summary": "Prompt injection poses significant security risks to LLM agents. Efficient and effective red-teaming is therefore critical, both for evaluating these risks and for collecting training data to improve ",
-        "link": "http://arxiv.org/abs/2608.05108v1",
-        "date": "2026-08-05",
+        "title": "A Sound Translation from Tamarin to ProVerif: Enabling Comparative Analysis",
+        "summary": "Tamarin and ProVerif are two prominent tools for the formal verification of security protocols. They share the same high-level goal but differ significantly in their underlying formalisms and verifica",
+        "link": "http://arxiv.org/abs/2608.06315v1",
+        "date": "2026-08-06",
         "authors": [
-          "Yanting Wang",
-          "Chenlong Yin",
-          "Runpeng Geng"
+          "Kevin Morio",
+          "Yavor Ivanov",
+          "Robert K\u00fcnnemann"
         ]
       },
       {
-        "title": "Hardware Design and Security in the Era of Chiplets and LLMs",
-        "summary": "The semiconductor industry is undergoing a dual revolution: the shift toward heterogeneous 2.5D chiplet systems and the integration of Large Language Models (LLMs) into Electronic Design Automation (E",
-        "link": "http://arxiv.org/abs/2608.05063v1",
-        "date": "2026-08-05",
+        "title": "Game Hopping in Lean",
+        "summary": "We present HOPSCOTCH, a Lean 4 framework for mechanizing computationally sound, game-based cryptographic proofs. Security definitions are expressed as indistinguishability between stateful probabilist",
+        "link": "http://arxiv.org/abs/2608.06261v1",
+        "date": "2026-08-06",
         "authors": [
-          "Johann Knechtel",
-          "Ozgur Sinanoglu",
-          "Paul V. Gratz"
+          "Stefan Dziembowski",
+          "Grzegorz Fabia\u0144ski",
+          "Daniele Micciancio"
         ]
       },
       {
-        "title": "Kerckhoffs-Compliant Watermarking for Physical Design IP Protection: From Placement to Routing",
-        "summary": "Physical design (PD) intellectual property (IP) is a valuable artifact of modern VLSI implementation. It includes optimized cell placement, clock distribution, and routing decisions produced by carefu",
-        "link": "http://arxiv.org/abs/2608.05055v1",
-        "date": "2026-08-05",
+        "title": "Reversible Unlearnable Examples: Towards the Copyright Protection in Deep Learning Era",
+        "summary": "Significant advancements in deep learning have been made possible by the utilization of large datasets, underscoring the critical importance of copyright protection. Adding meticulously designed pertu",
+        "link": "http://arxiv.org/abs/2608.06211v1",
+        "date": "2026-08-06",
         "authors": [
-          "Andrew B. Kahng",
-          "Yiting Liu"
+          "Binze Wang",
+          "Jinyu Tian",
+          "Xingrun Wang"
         ]
       },
       {
-        "title": "Gradient Immunity: Null-Space Resistance to Malicious Fine-Tuning",
-        "summary": "Released aligned large language models remain vulnerable to malicious downstream finetuning. Existing defenses are largely designed for the fine-tuning-as-a-service (FTaaS) paradigm or rely on downstr",
-        "link": "http://arxiv.org/abs/2608.05045v1",
-        "date": "2026-08-05",
+        "title": "Hardware Keystores for AI Agent Signing Workflows: A Zero-Trust MCP Enforcement Architecture",
+        "summary": "AI agents performing cryptographic operations (signing Git commits, authenticating API calls, issuing certificates) currently store private keys in software-accessible locations: plaintext files, envi",
+        "link": "http://arxiv.org/abs/2608.06130v1",
+        "date": "2026-08-06",
         "authors": [
-          "Yuxuan Huang",
-          "Xingyu Zeng",
-          "Tianhang Zheng"
+          "Leo Sambrook",
+          "Sampo Sovio"
         ]
       },
       {
-        "title": "Private Direct Preference Optimization for LLM Alignment",
-        "summary": "Direct preference optimization (DPO) is now a standard method for aligning large language models (LLMs) using human preference data. Each DPO example contains a prompt and a pair of candidate model re",
-        "link": "http://arxiv.org/abs/2608.05040v1",
-        "date": "2026-08-05",
+        "title": "dfence: Fine-Grained Speculation Barriers for Efficient and Effective Hardware-Software Protection in the Spectre Era (Extended Version)",
+        "summary": "Speculative execution attacks such as Spectre-PHT and Spectre-STL remain a critical security concern in modern processors. While software-based mitigations like Speculative Load Hardening (SLH) offer ",
+        "link": "http://arxiv.org/abs/2608.06124v1",
+        "date": "2026-08-06",
         "authors": [
-          "Yangfan Jiang",
-          "Fei Wei",
-          "Ergute Bao"
+          "Davide Davoli",
+          "Marton Bognar",
+          "Lesly-Ann Daniel"
         ]
       },
       {
-        "title": "When Do PEFT Adaptations Leak Structure? Measuring Black-Box Structural Bounds in Public-Base Model Services",
-        "summary": "Services increasingly deploy public foundation models with private parameter-efficient adaptations, creating a differential information leakage risk when auditors or adversaries can execute the public",
-        "link": "http://arxiv.org/abs/2608.05036v1",
-        "date": "2026-08-05",
+        "title": "A Note on the Influence of a Zero Length Nonce on GCM and GMAC",
+        "summary": "In this note, we show a simple attack that can recover the hash key of GCM and GMAC by using a zero length nonce. After recovering the hash key, the adversary can forge an arbitrary ciphertext or mess",
+        "link": "http://arxiv.org/abs/2608.06061v1",
+        "date": "2026-08-06",
         "authors": [
-          "Zhongjiang Yao",
-          "Shuangshuang Liang",
-          "Chun Yang"
+          "Yaobin Shen"
         ]
       },
       {
-        "title": "Towards Decentralized Searcher Competition in MEV Markets",
-        "summary": "Centralization in maximal extractable value (MEV) markets is a significant concern for blockchain systems, as persistent concentration of economic power can weaken competition, reduce openness, and un",
-        "link": "http://arxiv.org/abs/2608.05011v1",
-        "date": "2026-08-05",
+        "title": "MMAligner: Safeguarding Multimodal Large Language Models through Representation Calibration",
+        "summary": "Multimodal large language models (MLLMs) often refuse unsafe text prompts yet generate harmful responses to semantically equivalent multimodal inputs. Existing defenses either rely on external guardra",
+        "link": "http://arxiv.org/abs/2608.05909v1",
+        "date": "2026-08-06",
         "authors": [
-          "Roozbeh Sarenche",
-          "Yunwen Liu"
+          "Shenyi Zhang",
+          "Keyan Guo",
+          "Zihao Wang"
         ]
       },
       {
-        "title": "Toward Practical Decentralized Proof-of-Location via Physical Witnessing Zones",
-        "summary": "Digital services increasingly rely on claims that a person, device, or asset was in a specific place at a specific time. Today, those claims often depend on self-reported location data, which is easy ",
-        "link": "http://arxiv.org/abs/2608.04957v1",
-        "date": "2026-08-05",
+        "title": "Tool Demo: Topology analysis with GPML for detection of cyberattacks in Water Distribution Networks",
+        "summary": "Water distribution networks depends on industrial control systems to integrate the physical process with communication network, making them vulnerable to cyberattacks that alter the traffic pattern an",
+        "link": "http://arxiv.org/abs/2608.05902v1",
+        "date": "2026-08-06",
         "authors": [
-          "Tamor Tomson",
-          "Eduardo Brito",
-          "Amnir Hadachi"
+          "Majed Jaber",
+          "Abdul Qadir Khan",
+          "Ankush Meshram"
         ]
       }
     ],
-    "updated": "2026-08-06T05:19:08.507192Z"
+    "updated": "2026-08-07T04:26:07.722844Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -280,6 +278,6 @@
         ]
       }
     ],
-    "updated": "2026-08-06T05:19:08.507192Z"
+    "updated": "2026-08-07T04:26:07.722844Z"
   }
 }
