@@ -3,198 +3,202 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Learning When to Trust via Selective Context Preference Optimization",
-        "summary": "Language models increasingly condition their answers on external signals, and a single misleading one can turn a correct answer wrong. The obvious remedy, training models to resist such signals, hides",
-        "link": "http://arxiv.org/abs/2608.06377v1",
-        "date": "2026-08-06",
+        "title": "CreativeInstruct: Scalably Teaching LLMs to Balance Quality, Creativity, and Diversity",
+        "summary": "While post-training improves the capabilities of large language models (LLMs), it generally lowers their output diversity and creativity, negatively impacting tasks that explicitly require creativity ",
+        "link": "http://arxiv.org/abs/2608.07460v1",
+        "date": "2026-08-07",
         "authors": [
-          "Xian Sun",
-          "Wei Chow",
-          "Yingshuo Wang"
+          "Ananya Sahu",
+          "Mohit Bansal",
+          "Elias Stengel-Eskin"
         ]
       },
       {
-        "title": "Tracing the Heart: An Evidence-Linked Pipeline for Heart-Failure Feature Engineering",
-        "summary": "Electronic health record (EHR) feature engineering is a major bottleneck in clinical research and AI, accounting for 39-45% of data scientists' workload. This is especially pronounced in heart failure",
-        "link": "http://arxiv.org/abs/2608.06366v1",
-        "date": "2026-08-06",
+        "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
+        "summary": "Recent optimization studies on Retrieval-Augmented Generation (RAG) have exploited chunk-level KV cache reuse to avoid processing long retrieved contexts for higher efficiency, while significant infor",
+        "link": "http://arxiv.org/abs/2608.07458v1",
+        "date": "2026-08-07",
         "authors": [
-          "Soorya Ram Shimgekar",
-          "Michelle Hu",
-          "Dorisa Shehi"
+          "Gyuwan Kim",
+          "Cheoneum Park",
+          "Tao Yang"
         ]
       },
       {
-        "title": "Investigating Artificial Intelligence Digital Sovereignty in Mobile Shopping Apps: A Case Study of Nigeria",
-        "summary": "The use of e-commerce mobile applications is expanding in Nigeria, creating both opportunities and risks, including fraud and reduced user control over digital technologies, raising concerns about dig",
-        "link": "http://arxiv.org/abs/2608.06364v1",
-        "date": "2026-08-06",
+        "title": "Interaction Creates Dynamical AI Behavior Absent in Isolation",
+        "summary": "What will happen when AI agents interact in daily life, e.g. when one AI starts bossing another around? We find a counterintuitive answer that opens new avenues for out-of-equilibrium Physics. When a ",
+        "link": "http://arxiv.org/abs/2608.07457v1",
+        "date": "2026-08-07",
         "authors": [
-          "George Grispos",
-          "Sajda Qureshi"
+          "Bella Xinrui Li",
+          "Frank Yingjie Huo",
+          "Neil F Johnson"
         ]
       },
       {
-        "title": "An Optimal Agnostic PAC Algorithm",
-        "summary": "Let $H\\subseteq\\{-1,+1\\}^X$ be a class of finite VC dimension $d\\ge1$. Writing $L$ for the binary risk and $L^*=\\min_{h\\in H}L(h)$, we construct a learner achieving the statistically optimal risk boun",
-        "link": "http://arxiv.org/abs/2608.06363v1",
-        "date": "2026-08-06",
+        "title": "Strategy-first synthesis planning for complex natural products",
+        "summary": "The total synthesis of a complex molecule is among the most demanding intellectual and experimental feats in chemistry: a chemist must plan many steps ahead for how to assemble simple building blocks ",
+        "link": "http://arxiv.org/abs/2608.07454v1",
+        "date": "2026-08-07",
         "authors": [
-          "Markus Engelund Mathiasen",
-          "Jian Qian",
-          "Nikita Zhivotovskiy"
+          "Daniel Armstrong",
+          "Xuan-Vu Nguyen",
+          "Octavian Susanu"
         ]
       },
       {
-        "title": "AV-AIVAT: 74x Cheaper Agent Evaluation with Certified Anytime-Valid Stopping in Imperfect-Information Games",
-        "summary": "Deciding which of two agents is stronger means playing games until skill outweighs luck, and every game costs money, model inference, or expert time. Since the number of games needed is unknown, fixed",
-        "link": "http://arxiv.org/abs/2608.06362v1",
-        "date": "2026-08-06",
+        "title": "SkillProx: Self-Evolving Agent Skills via Proximal Textual Gradient Descent",
+        "summary": "LLM agents increasingly adapt to recurring tasks by accumulating procedural knowledge in skills. These skills are lightweight, reusable textual artifacts that are loaded into the agent's context witho",
+        "link": "http://arxiv.org/abs/2608.07449v1",
+        "date": "2026-08-07",
         "authors": [
-          "Boning Li",
-          "Yu Chen",
-          "Longbo Huang"
+          "Mingxuan Zheng",
+          "Yujin Zhou",
+          "Chuxue Cao"
         ]
       },
       {
-        "title": "The Low Frequency Trap: Video Language Models Fail at Simple Event Bookkeeping",
-        "summary": "Real-world video benchmarks provide broad coverage, but their fixed clips entangle event count, rate, duration, and visual complexity, making failure modes hard to isolate. While existing programmatic",
-        "link": "http://arxiv.org/abs/2608.06361v1",
-        "date": "2026-08-06",
+        "title": "Taxonomy-Driven Analysis of Open-Source AI Risk Mitigation Tools",
+        "summary": "Rapid adoption of large language models (LLMs) in enterprise settings has introduced operational, security, and governance risks. As generative AI applications move from pilot to production, manual ha",
+        "link": "http://arxiv.org/abs/2608.07446v1",
+        "date": "2026-08-07",
         "authors": [
-          "Sarvesh Baskar",
-          "Zikui Cai",
-          "Shayan Shabihi"
+          "Afreen Alam",
+          "Evgenija Popchanovska",
+          "Ana Gjorgjevikj"
         ]
       },
       {
-        "title": "Resourced Authority A Mechanism-Design Model for Participatory Governance of Deployed AI Agents",
-        "summary": "We give a formal mechanism design model for the continuous participatory governance of a deployed AI agent. The mechanism is built on the principle that governance should control an AI agent through r",
-        "link": "http://arxiv.org/abs/2608.06353v1",
-        "date": "2026-08-06",
+        "title": "Blast Radius",
+        "summary": "Agentic coding faces growing problems of affordability and wasted tokens. We introduce Blast Radius, a predictive memory management layer that estimates an incoming prompt's reach through coupled cont",
+        "link": "http://arxiv.org/abs/2608.07440v1",
+        "date": "2026-08-07",
         "authors": [
-          "Praphul Chandra",
-          "Sujit Gujar",
-          "Ganesh Ghalme"
+          "MY Pitsane",
+          "Hope Mogale"
         ]
       },
       {
-        "title": "Challenges in Evaluating Explanation Methods for Static and Evolving Data",
-        "summary": "This paper addresses the limitations of Explainable Artificial Intelligence (XAI) with respect to insufficient evaluation. They are illustrated through the DetoxAI image recognition system for bias de",
-        "link": "http://arxiv.org/abs/2608.06351v1",
-        "date": "2026-08-06",
+        "title": "PsychoAgent: An Affect-Sensitive Cognitive Architecture for Conflict-Aware Memory in LLM Agents",
+        "summary": "Human-like cognition does not select past experience by topical similarity alone: affective significance and unresolved conflict also shape what becomes accessible. We present PsychoAgent, a cognitive",
+        "link": "http://arxiv.org/abs/2608.07438v1",
+        "date": "2026-08-07",
         "authors": [
-          "Jerzy Stefanowski"
+          "Mohammad Amanlou",
+          "Parham Abed Azad",
+          "Farbod Davoodi"
         ]
       }
     ],
-    "updated": "2026-08-09T03:43:41.328070Z"
+    "updated": "2026-08-10T03:57:06.160834Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-08-09T03:43:41.328070Z"
+    "updated": "2026-08-10T03:57:06.160834Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-08-09T03:43:41.328070Z"
+    "updated": "2026-08-10T03:57:06.160834Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-08-09T03:43:41.328070Z"
+    "updated": "2026-08-10T03:57:06.160834Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "A Sound Translation from Tamarin to ProVerif: Enabling Comparative Analysis",
-        "summary": "Tamarin and ProVerif are two prominent tools for the formal verification of security protocols. They share the same high-level goal but differ significantly in their underlying formalisms and verifica",
-        "link": "http://arxiv.org/abs/2608.06315v1",
-        "date": "2026-08-06",
+        "title": "An Analysis of Architectural and Operational Dynamics of Phishkits in the Wild",
+        "summary": "Phishing attacks have always been a favored vector for adversaries to defraud users, bypass modern defense mechanisms, and penetrate critical systems. Among all the elements contributing to the creati",
+        "link": "http://arxiv.org/abs/2608.07451v1",
+        "date": "2026-08-07",
         "authors": [
-          "Kevin Morio",
-          "Yavor Ivanov",
-          "Robert K\u00fcnnemann"
+          "Behzad Ousat",
+          "Mohammad Ali Tofighi",
+          "Estefan Schafir"
         ]
       },
       {
-        "title": "Game Hopping in Lean",
-        "summary": "We present HOPSCOTCH, a Lean 4 framework for mechanizing computationally sound, game-based cryptographic proofs. Security definitions are expressed as indistinguishability between stateful probabilist",
-        "link": "http://arxiv.org/abs/2608.06261v1",
-        "date": "2026-08-06",
+        "title": "\"Operator, can you hear me?\" A Faithful Line into the UNISOC Baseband",
+        "summary": "Baseband processors are reachable over the radio at all times. Their most security-relevant logic runs deep inside protocol state machines: the control-plane handlers that gate registration, authentic",
+        "link": "http://arxiv.org/abs/2608.07143v1",
+        "date": "2026-08-07",
         "authors": [
-          "Stefan Dziembowski",
-          "Grzegorz Fabia\u0144ski",
-          "Daniele Micciancio"
+          "Eduard Vlad",
+          "Philipp Mao",
+          "Marcel Busch"
         ]
       },
       {
-        "title": "Reversible Unlearnable Examples: Towards the Copyright Protection in Deep Learning Era",
-        "summary": "Significant advancements in deep learning have been made possible by the utilization of large datasets, underscoring the critical importance of copyright protection. Adding meticulously designed pertu",
-        "link": "http://arxiv.org/abs/2608.06211v1",
-        "date": "2026-08-06",
+        "title": "SoK: Cryptographic Key Recovery for Cryptoasset Custody and Financial Technologies",
+        "summary": "Cryptoasset systems often bind cryptographic key control to financial control: losing a wallet seed, custody share, hardware device, or smart-account credential can remove spend authority, while compr",
+        "link": "http://arxiv.org/abs/2608.07104v1",
+        "date": "2026-08-07",
         "authors": [
-          "Binze Wang",
-          "Jinyu Tian",
-          "Xingrun Wang"
+          "Francisco Javier Becerra Sanchez",
+          "Antonio Ken Iannillo",
+          "Radu State"
         ]
       },
       {
-        "title": "Hardware Keystores for AI Agent Signing Workflows: A Zero-Trust MCP Enforcement Architecture",
-        "summary": "AI agents performing cryptographic operations (signing Git commits, authenticating API calls, issuing certificates) currently store private keys in software-accessible locations: plaintext files, envi",
-        "link": "http://arxiv.org/abs/2608.06130v1",
-        "date": "2026-08-06",
+        "title": "Soft Redaction of Image Provenance via Zero-Knowledge Proofs",
+        "summary": "Content provenance standards, such as C2PA, are increasingly used to attach signed records of origin, editing history, and rights to digital images. However, provenance transparency can conflict with ",
+        "link": "http://arxiv.org/abs/2608.07063v1",
+        "date": "2026-08-07",
         "authors": [
-          "Leo Sambrook",
-          "Sampo Sovio"
+          "Muhammad Awan",
+          "John Collomosse"
         ]
       },
       {
-        "title": "dfence: Fine-Grained Speculation Barriers for Efficient and Effective Hardware-Software Protection in the Spectre Era (Extended Version)",
-        "summary": "Speculative execution attacks such as Spectre-PHT and Spectre-STL remain a critical security concern in modern processors. While software-based mitigations like Speculative Load Hardening (SLH) offer ",
-        "link": "http://arxiv.org/abs/2608.06124v1",
-        "date": "2026-08-06",
+        "title": "Beyond Text Matching: Towards Reference-Free Evaluation for Human-Oriented Binary Reverse Engineering",
+        "summary": "Human-Oriented Binary Reverse Engineering (HOBRE) aims to transform decompiled pseudocode into a more human-friendly representation, thereby reducing the cognitive burden of reverse analysis and impro",
+        "link": "http://arxiv.org/abs/2608.07038v1",
+        "date": "2026-08-07",
         "authors": [
-          "Davide Davoli",
-          "Marton Bognar",
-          "Lesly-Ann Daniel"
+          "Xiuwei Shang",
+          "Li Hu",
+          "Xiao Jiang"
         ]
       },
       {
-        "title": "A Note on the Influence of a Zero Length Nonce on GCM and GMAC",
-        "summary": "In this note, we show a simple attack that can recover the hash key of GCM and GMAC by using a zero length nonce. After recovering the hash key, the adversary can forge an arbitrary ciphertext or mess",
-        "link": "http://arxiv.org/abs/2608.06061v1",
-        "date": "2026-08-06",
+        "title": "Effects of parental controls in the context of Digital Forensics",
+        "summary": "Parental control systems are designed to protect minors online, but can inadvertently obstruct digital forensic investigations. When enabled, these systems restrict administrative privileges, disable ",
+        "link": "http://arxiv.org/abs/2608.07016v1",
+        "date": "2026-08-07",
         "authors": [
-          "Yaobin Shen"
+          "Selina M\u00e4rchya",
+          "Mauro Vignatia",
+          "Frank Breitinger"
         ]
       },
       {
-        "title": "MMAligner: Safeguarding Multimodal Large Language Models through Representation Calibration",
-        "summary": "Multimodal large language models (MLLMs) often refuse unsafe text prompts yet generate harmful responses to semantically equivalent multimodal inputs. Existing defenses either rely on external guardra",
-        "link": "http://arxiv.org/abs/2608.05909v1",
-        "date": "2026-08-06",
+        "title": "HarnessSafe: Evaluating Safety Across Persistent Carriers in Agent Harnesses",
+        "summary": "Modern agent harnesses persist state across tasks and sessions through persistent carriers like memory, skills, tools, and shared artifacts. However, this capability creates delayed safety risks: atta",
+        "link": "http://arxiv.org/abs/2608.06984v1",
+        "date": "2026-08-07",
         "authors": [
-          "Shenyi Zhang",
-          "Keyan Guo",
-          "Zihao Wang"
+          "Xiao Zhang",
+          "Yusheng Wang",
+          "Yuhao Fei"
         ]
       },
       {
-        "title": "Tool Demo: Topology analysis with GPML for detection of cyberattacks in Water Distribution Networks",
-        "summary": "Water distribution networks depends on industrial control systems to integrate the physical process with communication network, making them vulnerable to cyberattacks that alter the traffic pattern an",
-        "link": "http://arxiv.org/abs/2608.05902v1",
-        "date": "2026-08-06",
+        "title": "Statistical Analysis of Executability and Program Equivalence in Decompilation for IoT Vulnerability Detection",
+        "summary": "Internet of Things (IoT) devices handle sensitive privacy-related information such as user audio, video, and authentication data, making it essential to detect vulnerabilities in their firmware. Decom",
+        "link": "http://arxiv.org/abs/2608.06960v1",
+        "date": "2026-08-07",
         "authors": [
-          "Majed Jaber",
-          "Abdul Qadir Khan",
-          "Ankush Meshram"
+          "Minami Yoda",
+          "Jialong Li",
+          "Yasuyuki Tahara"
         ]
       }
     ],
-    "updated": "2026-08-09T03:43:41.328070Z"
+    "updated": "2026-08-10T03:57:06.160834Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -278,6 +282,6 @@
         ]
       }
     ],
-    "updated": "2026-08-09T03:43:41.328070Z"
+    "updated": "2026-08-10T03:57:06.160834Z"
   }
 }
