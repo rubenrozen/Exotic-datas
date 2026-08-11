@@ -3,285 +3,119 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "CreativeInstruct: Scalably Teaching LLMs to Balance Quality, Creativity, and Diversity",
-        "summary": "While post-training improves the capabilities of large language models (LLMs), it generally lowers their output diversity and creativity, negatively impacting tasks that explicitly require creativity ",
-        "link": "http://arxiv.org/abs/2608.07460v1",
-        "date": "2026-08-07",
+        "title": "Beyond Naturalness: Probing Automated Text-To-Speech Evaluators on Linguistically Grounded Dimensions",
+        "summary": "Automated Text-to-Speech (TTS) evaluation methods (Mean Opinion Score (MOS) predictors and Audio Large Language Models (Audio-LLM) judges) are expected to reflect human perception, yet it is unclear h",
+        "link": "http://arxiv.org/abs/2608.09930v1",
+        "date": "2026-08-10",
         "authors": [
-          "Ananya Sahu",
-          "Mohit Bansal",
-          "Elias Stengel-Eskin"
+          "Oluwanifemi Bamgbose",
+          "Simon Rosen",
+          "Jash Shah"
         ]
       },
       {
-        "title": "CoinRAG: Contextualized Information Nugget KV Cache Reuse for Long-Context RAG",
-        "summary": "Recent optimization studies on Retrieval-Augmented Generation (RAG) have exploited chunk-level KV cache reuse to avoid processing long retrieved contexts for higher efficiency, while significant infor",
-        "link": "http://arxiv.org/abs/2608.07458v1",
-        "date": "2026-08-07",
+        "title": "Multimodal Model Diffing for Feature Discovery and Control",
+        "summary": "Multimodal Large Language Models (MLLMs) exhibit strong visual understanding, yet the internal features that cause these behaviors remain difficult to identify, audit, or control. While applicable to ",
+        "link": "http://arxiv.org/abs/2608.09928v1",
+        "date": "2026-08-10",
         "authors": [
-          "Gyuwan Kim",
-          "Cheoneum Park",
-          "Tao Yang"
+          "Hunar Batra",
+          "Lachin Naghashyar",
+          "Ashkan Khakzar"
         ]
       },
       {
-        "title": "Interaction Creates Dynamical AI Behavior Absent in Isolation",
-        "summary": "What will happen when AI agents interact in daily life, e.g. when one AI starts bossing another around? We find a counterintuitive answer that opens new avenues for out-of-equilibrium Physics. When a ",
-        "link": "http://arxiv.org/abs/2608.07457v1",
-        "date": "2026-08-07",
+        "title": "From Values to Benchmarks: Evaluating Large Language Models for Governmental Use in Dutch",
+        "summary": "Large language models are increasingly being deployed in governmental settings, yet few existing evaluation frameworks jointly reflect the values of public administration and the linguistic requiremen",
+        "link": "http://arxiv.org/abs/2608.09925v1",
+        "date": "2026-08-10",
         "authors": [
-          "Bella Xinrui Li",
-          "Frank Yingjie Huo",
-          "Neil F Johnson"
+          "Laurens Samson",
+          "Iva Gornishka",
+          "Gossa L\u00f4"
         ]
       },
       {
-        "title": "Strategy-first synthesis planning for complex natural products",
-        "summary": "The total synthesis of a complex molecule is among the most demanding intellectual and experimental feats in chemistry: a chemist must plan many steps ahead for how to assemble simple building blocks ",
-        "link": "http://arxiv.org/abs/2608.07454v1",
-        "date": "2026-08-07",
+        "title": "GENCO - A Unified Neural Solver Embedded in a Development Framework for Steady-State Grid Analysis",
+        "summary": "Foundation models are transforming business workflows and boosting productivity, yet they remain largely absent from engineering domains such as power system analysis, where strict physical consistenc",
+        "link": "http://arxiv.org/abs/2608.09921v1",
+        "date": "2026-08-10",
         "authors": [
-          "Daniel Armstrong",
-          "Xuan-Vu Nguyen",
-          "Octavian Susanu"
+          "Alban Puech",
+          "Matteo Mazzonelli",
+          "Tamara R. Govindasamy"
         ]
       },
       {
-        "title": "SkillProx: Self-Evolving Agent Skills via Proximal Textual Gradient Descent",
-        "summary": "LLM agents increasingly adapt to recurring tasks by accumulating procedural knowledge in skills. These skills are lightweight, reusable textual artifacts that are loaded into the agent's context witho",
-        "link": "http://arxiv.org/abs/2608.07449v1",
-        "date": "2026-08-07",
+        "title": "DSLE: A Learning Environment for Dark Souls Boss Encounters",
+        "summary": "We introduce the Dark Souls Learning Environment (DSLE), a containerized platform that presents all 22 boss encounters of Dark Souls: Remastered as game-playing agent benchmarks through a Gymnasium-st",
+        "link": "http://arxiv.org/abs/2608.09902v1",
+        "date": "2026-08-10",
         "authors": [
-          "Mingxuan Zheng",
-          "Yujin Zhou",
-          "Chuxue Cao"
+          "Derin Gezgin",
+          "Jim O'Connor",
+          "Tanner Goodwin"
         ]
       },
       {
-        "title": "Taxonomy-Driven Analysis of Open-Source AI Risk Mitigation Tools",
-        "summary": "Rapid adoption of large language models (LLMs) in enterprise settings has introduced operational, security, and governance risks. As generative AI applications move from pilot to production, manual ha",
-        "link": "http://arxiv.org/abs/2608.07446v1",
-        "date": "2026-08-07",
+        "title": "Fusion Training for Mathematical Generalization in Large Language Models",
+        "summary": "Thinking Mode Fusion (TMF) enables large language models to support both concise responses and long-form reasoning by unifying a non-thinking mode and a thinking mode within a single model. However, i",
+        "link": "http://arxiv.org/abs/2608.09893v1",
+        "date": "2026-08-10",
         "authors": [
-          "Afreen Alam",
-          "Evgenija Popchanovska",
-          "Ana Gjorgjevikj"
+          "Congfeng Cao",
+          "Pengyu Zhang",
+          "Jelke Bloem"
         ]
       },
       {
-        "title": "Blast Radius",
-        "summary": "Agentic coding faces growing problems of affordability and wasted tokens. We introduce Blast Radius, a predictive memory management layer that estimates an incoming prompt's reach through coupled cont",
-        "link": "http://arxiv.org/abs/2608.07440v1",
-        "date": "2026-08-07",
+        "title": "BDH-CQ: In-Context Learning with Recurrent Latent Reasoning",
+        "summary": "We introduce BDH-CQ, a reasoning model that combines in-context learning with recurrent latent reasoning. Inputs presented at inference time continuously update the model's recurrent memory; the model",
+        "link": "http://arxiv.org/abs/2608.09888v1",
+        "date": "2026-08-10",
         "authors": [
-          "MY Pitsane",
-          "Hope Mogale"
+          "Bj\u00f6rn Engdahl",
+          "Adrian Kosowski",
+          "Jan Chorowski"
         ]
       },
       {
-        "title": "PsychoAgent: An Affect-Sensitive Cognitive Architecture for Conflict-Aware Memory in LLM Agents",
-        "summary": "Human-like cognition does not select past experience by topical similarity alone: affective significance and unresolved conflict also shape what becomes accessible. We present PsychoAgent, a cognitive",
-        "link": "http://arxiv.org/abs/2608.07438v1",
-        "date": "2026-08-07",
+        "title": "SHE: Trajectory-driven Safety Harness Evolution for LLM Agents",
+        "summary": "The safety of large language model (LLM) agents depends not only on model weights but also on the agent harness that manages context, memory, tools, permissions, and runtime control. Existing safety m",
+        "link": "http://arxiv.org/abs/2608.09885v1",
+        "date": "2026-08-10",
         "authors": [
-          "Mohammad Amanlou",
-          "Parham Abed Azad",
-          "Farbod Davoodi"
+          "Wanying Qu",
+          "Qinghua Mao",
+          "Yu Li"
         ]
       }
     ],
-    "updated": "2026-08-10T03:57:06.160834Z"
+    "updated": "2026-08-11T03:45:05.771376Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-08-10T03:57:06.160834Z"
+    "error": "HTTP Error 406: Not Acceptable"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-08-10T03:57:06.160834Z"
+    "error": "HTTP Error 406: Not Acceptable"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-08-10T03:57:06.160834Z"
+    "error": "HTTP Error 406: Not Acceptable"
   },
   "cs.CR": {
     "label": "Cybersecurity",
-    "papers": [
-      {
-        "title": "An Analysis of Architectural and Operational Dynamics of Phishkits in the Wild",
-        "summary": "Phishing attacks have always been a favored vector for adversaries to defraud users, bypass modern defense mechanisms, and penetrate critical systems. Among all the elements contributing to the creati",
-        "link": "http://arxiv.org/abs/2608.07451v1",
-        "date": "2026-08-07",
-        "authors": [
-          "Behzad Ousat",
-          "Mohammad Ali Tofighi",
-          "Estefan Schafir"
-        ]
-      },
-      {
-        "title": "\"Operator, can you hear me?\" A Faithful Line into the UNISOC Baseband",
-        "summary": "Baseband processors are reachable over the radio at all times. Their most security-relevant logic runs deep inside protocol state machines: the control-plane handlers that gate registration, authentic",
-        "link": "http://arxiv.org/abs/2608.07143v1",
-        "date": "2026-08-07",
-        "authors": [
-          "Eduard Vlad",
-          "Philipp Mao",
-          "Marcel Busch"
-        ]
-      },
-      {
-        "title": "SoK: Cryptographic Key Recovery for Cryptoasset Custody and Financial Technologies",
-        "summary": "Cryptoasset systems often bind cryptographic key control to financial control: losing a wallet seed, custody share, hardware device, or smart-account credential can remove spend authority, while compr",
-        "link": "http://arxiv.org/abs/2608.07104v1",
-        "date": "2026-08-07",
-        "authors": [
-          "Francisco Javier Becerra Sanchez",
-          "Antonio Ken Iannillo",
-          "Radu State"
-        ]
-      },
-      {
-        "title": "Soft Redaction of Image Provenance via Zero-Knowledge Proofs",
-        "summary": "Content provenance standards, such as C2PA, are increasingly used to attach signed records of origin, editing history, and rights to digital images. However, provenance transparency can conflict with ",
-        "link": "http://arxiv.org/abs/2608.07063v1",
-        "date": "2026-08-07",
-        "authors": [
-          "Muhammad Awan",
-          "John Collomosse"
-        ]
-      },
-      {
-        "title": "Beyond Text Matching: Towards Reference-Free Evaluation for Human-Oriented Binary Reverse Engineering",
-        "summary": "Human-Oriented Binary Reverse Engineering (HOBRE) aims to transform decompiled pseudocode into a more human-friendly representation, thereby reducing the cognitive burden of reverse analysis and impro",
-        "link": "http://arxiv.org/abs/2608.07038v1",
-        "date": "2026-08-07",
-        "authors": [
-          "Xiuwei Shang",
-          "Li Hu",
-          "Xiao Jiang"
-        ]
-      },
-      {
-        "title": "Effects of parental controls in the context of Digital Forensics",
-        "summary": "Parental control systems are designed to protect minors online, but can inadvertently obstruct digital forensic investigations. When enabled, these systems restrict administrative privileges, disable ",
-        "link": "http://arxiv.org/abs/2608.07016v1",
-        "date": "2026-08-07",
-        "authors": [
-          "Selina M\u00e4rchya",
-          "Mauro Vignatia",
-          "Frank Breitinger"
-        ]
-      },
-      {
-        "title": "HarnessSafe: Evaluating Safety Across Persistent Carriers in Agent Harnesses",
-        "summary": "Modern agent harnesses persist state across tasks and sessions through persistent carriers like memory, skills, tools, and shared artifacts. However, this capability creates delayed safety risks: atta",
-        "link": "http://arxiv.org/abs/2608.06984v1",
-        "date": "2026-08-07",
-        "authors": [
-          "Xiao Zhang",
-          "Yusheng Wang",
-          "Yuhao Fei"
-        ]
-      },
-      {
-        "title": "Statistical Analysis of Executability and Program Equivalence in Decompilation for IoT Vulnerability Detection",
-        "summary": "Internet of Things (IoT) devices handle sensitive privacy-related information such as user audio, video, and authentication data, making it essential to detect vulnerabilities in their firmware. Decom",
-        "link": "http://arxiv.org/abs/2608.06960v1",
-        "date": "2026-08-07",
-        "authors": [
-          "Minami Yoda",
-          "Jialong Li",
-          "Yasuyuki Tahara"
-        ]
-      }
-    ],
-    "updated": "2026-08-10T03:57:06.160834Z"
+    "papers": [],
+    "error": "HTTP Error 406: Not Acceptable"
   },
   "q-bio": {
     "label": "Biology",
-    "papers": [
-      {
-        "title": "Synchronization of active mechanical oscillators by an inertial load",
-        "summary": "Motivated by the operation of myogenic (self-oscillatory) insect flight muscle, we study a model consisting of a large number of identical oscillatory contractile elements joined in a chain, whose end",
-        "link": "http://arxiv.org/abs/physics/0307155v1",
-        "date": "2003-07-31",
-        "authors": [
-          "Andrej Vilfan",
-          "Thomas Duke"
-        ]
-      },
-      {
-        "title": "Towards the Understanding of Stability Puzzles in Phage lambda",
-        "summary": "We discuss two aspects, the in vivo and in vitro difference and the modeling of noise, of integrative modeling of network dynamics in biology, using phage lambda as an example. We believe those two as",
-        "link": "http://arxiv.org/abs/cond-mat/0307747v1",
-        "date": "2003-07-30",
-        "authors": [
-          "P. Ao",
-          "L. Yin"
-        ]
-      },
-      {
-        "title": "A Growth Model for Multicellular Tumor Spheroids",
-        "summary": "Most organisms grow according to simple laws, which in principle can be derived from energy conservation and scaling arguments, critically dependent on the relation between the metabolic rate B of ene",
-        "link": "http://arxiv.org/abs/physics/0307136v1",
-        "date": "2003-07-29",
-        "authors": [
-          "Pier Paolo Delsanto",
-          "Caterina Guiot",
-          "Piero Giorgio Degiorgis"
-        ]
-      },
-      {
-        "title": "Bidirectional communication in neural networks moderated by a Hebb-like learning rule",
-        "summary": "We demonstrate that our recently introduced stochastic Hebb-like learning rule is capable of learning the problem of timing in general network topologies generated by an algorithm of Watts and Strogat",
-        "link": "http://arxiv.org/abs/cond-mat/0307667v1",
-        "date": "2003-07-28",
-        "authors": [
-          "Frank Emmert-Streib"
-        ]
-      },
-      {
-        "title": "A novel stochastic Hebb-like learning rule for neural networks",
-        "summary": "We present a novel stochastic Hebb-like learning rule for neural networks. This learning rule is stochastic with respect to the selection of the time points when a synaptic modification is induced by ",
-        "link": "http://arxiv.org/abs/cond-mat/0307666v1",
-        "date": "2003-07-28",
-        "authors": [
-          "Frank Emmert-Streib"
-        ]
-      },
-      {
-        "title": "Free Energy Transduction in a Chemical Motor Model",
-        "summary": "Motor enzymes catalyze chemical reactions, like the hydrolysis of ATP, and in the process they also perform work. Recent studies indicate that motor enzymes perform work with specific intermediate ste",
-        "link": "http://arxiv.org/abs/physics/0307121v1",
-        "date": "2003-07-24",
-        "authors": [
-          "Josh E. Baker"
-        ]
-      },
-      {
-        "title": "Maximisation Principles and Daisyworld",
-        "summary": "We investigate whether the equilibrium time averaged state of a self-organising system with many internal degrees of freedom, 2D- daisyworld, can be described by optimising a single quantity. Unlike p",
-        "link": "http://arxiv.org/abs/cond-mat/0307567v1",
-        "date": "2003-07-23",
-        "authors": [
-          "G. J. Ackland"
-        ]
-      },
-      {
-        "title": "Xerogel Protein Substrates for Far Infrared Studies",
-        "summary": "A number of researchers are attempting to develop a biosensor based on terahertz sensing. Key to the realization of any biosensor system is the access of the target molecules to the sensor. In the cas",
-        "link": "http://arxiv.org/abs/cond-mat/0307558v1",
-        "date": "2003-07-23",
-        "authors": [
-          "J. -Y. Chen",
-          "W. Cox",
-          "E. Tehan"
-        ]
-      }
-    ],
-    "updated": "2026-08-10T03:57:06.160834Z"
+    "papers": [],
+    "error": "HTTP Error 406: Not Acceptable"
   }
 }
