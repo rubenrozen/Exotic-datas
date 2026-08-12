@@ -3,119 +3,117 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "Beyond Naturalness: Probing Automated Text-To-Speech Evaluators on Linguistically Grounded Dimensions",
-        "summary": "Automated Text-to-Speech (TTS) evaluation methods (Mean Opinion Score (MOS) predictors and Audio Large Language Models (Audio-LLM) judges) are expected to reflect human perception, yet it is unclear h",
-        "link": "http://arxiv.org/abs/2608.09930v1",
-        "date": "2026-08-10",
+        "title": "Surgical WAM: A World-Action Model for Data-Efficient Surgical Robot Learning",
+        "summary": "Learning reliable surgical manipulation policies is bottlenecked by the scarcity of action-labeled demonstrations: teleoperated surgical robot (e.g., dVRK) trajectories with synchronized kinematics ar",
+        "link": "http://arxiv.org/abs/2608.11204v1",
+        "date": "2026-08-11",
         "authors": [
-          "Oluwanifemi Bamgbose",
-          "Simon Rosen",
-          "Jash Shah"
+          "Wenrui Bao",
+          "Tianyun Jiang",
+          "Zhiben Chen"
         ]
       },
       {
-        "title": "Multimodal Model Diffing for Feature Discovery and Control",
-        "summary": "Multimodal Large Language Models (MLLMs) exhibit strong visual understanding, yet the internal features that cause these behaviors remain difficult to identify, audit, or control. While applicable to ",
-        "link": "http://arxiv.org/abs/2608.09928v1",
-        "date": "2026-08-10",
+        "title": "ConVAWG: A Retrieval-Grounded Framework for Controlled Synthetic Dialogue Generation in Violence Against Women and Girls",
+        "summary": "Synthetic dialogue generation offers a way to study conversational dynamics in sensitive domains where real data are difficult to access, release, or annotate. The underlying abuse may occur online or",
+        "link": "http://arxiv.org/abs/2608.11200v1",
+        "date": "2026-08-11",
         "authors": [
-          "Hunar Batra",
-          "Lachin Naghashyar",
-          "Ashkan Khakzar"
+          "Chen Lyu",
+          "Xingwei Tan",
+          "Simon Cullen"
         ]
       },
       {
-        "title": "From Values to Benchmarks: Evaluating Large Language Models for Governmental Use in Dutch",
-        "summary": "Large language models are increasingly being deployed in governmental settings, yet few existing evaluation frameworks jointly reflect the values of public administration and the linguistic requiremen",
-        "link": "http://arxiv.org/abs/2608.09925v1",
-        "date": "2026-08-10",
+        "title": "Long-Horizon AI Research for Grothendieck Constant: A Case Study in Human-AI Mathematical Collaboration",
+        "summary": "AI agents are increasingly used in mathematics research, but it is often unclear how to use them effectively. Towards this, we present an extensive case study of how AI was used to improve bounds on t",
+        "link": "http://arxiv.org/abs/2608.11195v1",
+        "date": "2026-08-11",
         "authors": [
-          "Laurens Samson",
-          "Iva Gornishka",
-          "Gossa L\u00f4"
+          "Alan Li",
+          "Rahul Saha",
+          "Anton Xue"
         ]
       },
       {
-        "title": "GENCO - A Unified Neural Solver Embedded in a Development Framework for Steady-State Grid Analysis",
-        "summary": "Foundation models are transforming business workflows and boosting productivity, yet they remain largely absent from engineering domains such as power system analysis, where strict physical consistenc",
-        "link": "http://arxiv.org/abs/2608.09921v1",
-        "date": "2026-08-10",
+        "title": "Test-Time Self-Evolving GUI Visual Grounding via Reflection-Guided On-Policy Self-Distillation",
+        "summary": "GUI Visual Grounding is a fundamental capability for GUI agents. Existing models typically freeze their parameters after deployment, limiting their ability to adapt to unseen interfaces. Although rece",
+        "link": "http://arxiv.org/abs/2608.11191v1",
+        "date": "2026-08-11",
         "authors": [
-          "Alban Puech",
-          "Matteo Mazzonelli",
-          "Tamara R. Govindasamy"
+          "Shiyu Xuan",
+          "Zechao Li"
         ]
       },
       {
-        "title": "DSLE: A Learning Environment for Dark Souls Boss Encounters",
-        "summary": "We introduce the Dark Souls Learning Environment (DSLE), a containerized platform that presents all 22 boss encounters of Dark Souls: Remastered as game-playing agent benchmarks through a Gymnasium-st",
-        "link": "http://arxiv.org/abs/2608.09902v1",
-        "date": "2026-08-10",
+        "title": "How to Verify Consistency of Probabilistic Claims",
+        "summary": "When a probabilistic predictor answers many conditional-probability queries, are its answers self-consistent, and can this be verified in polynomial time? This problem is of interest for AI safety, wh",
+        "link": "http://arxiv.org/abs/2608.11181v1",
+        "date": "2026-08-11",
         "authors": [
-          "Derin Gezgin",
-          "Jim O'Connor",
-          "Tanner Goodwin"
+          "Orr Paradise",
+          "Oliver Richardson",
+          "Yoshua Bengio"
         ]
       },
       {
-        "title": "Fusion Training for Mathematical Generalization in Large Language Models",
-        "summary": "Thinking Mode Fusion (TMF) enables large language models to support both concise responses and long-form reasoning by unifying a non-thinking mode and a thinking mode within a single model. However, i",
-        "link": "http://arxiv.org/abs/2608.09893v1",
-        "date": "2026-08-10",
+        "title": "From Interpretability to Control: Insights from Six Years of the TrustNLP Workshop",
+        "summary": "The Workshop on Trustworthy Natural Language Processing (TrustNLP), co-located with major ACL conferences since 2021, has grown from 8 proceedings papers to 41 over six editions, documenting a field-w",
+        "link": "http://arxiv.org/abs/2608.11171v1",
+        "date": "2026-08-11",
         "authors": [
-          "Congfeng Cao",
-          "Pengyu Zhang",
-          "Jelke Bloem"
+          "Rahul Gupta",
+          "Abhinav Mohanty",
+          "Anaelia Ovalle"
         ]
       },
       {
-        "title": "BDH-CQ: In-Context Learning with Recurrent Latent Reasoning",
-        "summary": "We introduce BDH-CQ, a reasoning model that combines in-context learning with recurrent latent reasoning. Inputs presented at inference time continuously update the model's recurrent memory; the model",
-        "link": "http://arxiv.org/abs/2608.09888v1",
-        "date": "2026-08-10",
+        "title": "Attention-Path Fragility as an Uncertainty Signal in Large Language Models",
+        "summary": "We propose that a model's uncertainty about a token is reflected not only in the breadth of its output distribution but also in whether a confident prediction is \\emph{fragile} under perturbation of i",
+        "link": "http://arxiv.org/abs/2608.11138v1",
+        "date": "2026-08-11",
         "authors": [
-          "Bj\u00f6rn Engdahl",
-          "Adrian Kosowski",
-          "Jan Chorowski"
+          "Minsoo Kim",
+          "Sungyoung Ji",
+          "Kisung Moon"
         ]
       },
       {
-        "title": "SHE: Trajectory-driven Safety Harness Evolution for LLM Agents",
-        "summary": "The safety of large language model (LLM) agents depends not only on model weights but also on the agent harness that manages context, memory, tools, permissions, and runtime control. Existing safety m",
-        "link": "http://arxiv.org/abs/2608.09885v1",
-        "date": "2026-08-10",
+        "title": "sLTN: Structural Logic Tensor Networks",
+        "summary": "Logic Tensor Networks (LTN) provide a neurosymbolic framework in which first-order logic is interpreted through tensor operations, enabling logical constraints to be integrated with differentiable lea",
+        "link": "http://arxiv.org/abs/2608.11136v1",
+        "date": "2026-08-11",
         "authors": [
-          "Wanying Qu",
-          "Qinghua Mao",
-          "Yu Li"
+          "Davide Rinaldi",
+          "Luciano Serafini"
         ]
       }
     ],
-    "updated": "2026-08-11T03:45:05.771376Z"
+    "updated": "2026-08-12T04:08:50.610842Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "error": "HTTP Error 406: Not Acceptable"
+    "error": "The read operation timed out"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "error": "HTTP Error 406: Not Acceptable"
+    "error": "The read operation timed out"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "error": "HTTP Error 406: Not Acceptable"
+    "error": "HTTP Error 429: Unknown Error"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [],
-    "error": "HTTP Error 406: Not Acceptable"
+    "error": "HTTP Error 429: Unknown Error"
   },
   "q-bio": {
     "label": "Biology",
     "papers": [],
-    "error": "HTTP Error 406: Not Acceptable"
+    "error": "The read operation timed out"
   }
 }
