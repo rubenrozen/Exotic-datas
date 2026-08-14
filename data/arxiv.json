@@ -3,201 +3,200 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "DreamFly: Causal Memory and Receding-Horizon Diffusion Planning for Aerial Vision-Language Navigation",
-        "summary": "Aerial vision-language navigation (VLN) requires an embodied agent to integrate visual evidence over time, plan future actions, and determine when it has reached a navigation goal under partial observ",
-        "link": "http://arxiv.org/abs/2608.12308v1",
-        "date": "2026-08-12",
+        "title": "AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design",
+        "summary": "Transforming multimodal sources into condensed and structured media outputs can be fundamentally conceptualized as a long-horizon agentic process centered on a model-harness system. While an ideal har",
+        "link": "http://arxiv.org/abs/2608.13560v1",
+        "date": "2026-08-13",
         "authors": [
-          "Yan Deng",
-          "Fei Xu"
+          "Yaxin Luo",
+          "Haobin Jiang",
+          "Jialv Zou"
         ]
       },
       {
-        "title": "AI4AI at Test-Time: Strong-to-Weak Capability Transfer via Harnesses",
-        "summary": "Recent work on distillation transfers the capabilities of large models to smaller ones often by updating the latter's parameters, through teacher forcing, on-policy distillation, and related training-",
-        "link": "http://arxiv.org/abs/2608.12307v1",
-        "date": "2026-08-12",
+        "title": "OmniScientist: An Omni-Modal Omni-Discipline AI Scientist",
+        "summary": "Recent advances in foundation models have enabled AI scientists to automate increasingly complete research workflows, from hypothesis generation and code execution to manuscript preparation. Yet workf",
+        "link": "http://arxiv.org/abs/2608.13558v1",
+        "date": "2026-08-13",
         "authors": [
-          "Cheng Qian",
-          "Wenting Zhao",
-          "Liangwei Yang"
+          "Bobo Li",
+          "Hao Fei",
+          "Tianjie Ju"
         ]
       },
       {
-        "title": "Redistribution-based Cost Inference Improves Sparse Safe Offline RL",
-        "summary": "Safe offline RL typically assumes access to dense per-step cost annotations, but in practice supervisors provide only trajectory-level stop-feedback: a binary signal at the first unsafe transition, wi",
-        "link": "http://arxiv.org/abs/2608.12306v1",
-        "date": "2026-08-12",
+        "title": "HumanTracker: Towards Comprehensive and Human-Aligned Motion Tracking Benchmark",
+        "summary": "Humanoid motion tracking is central to teleoperation and whole-body imitation, yet evaluation often disagrees with what people perceive in videos. Kinematic errors average per-frame pose differences b",
+        "link": "http://arxiv.org/abs/2608.13555v1",
+        "date": "2026-08-13",
         "authors": [
-          "Ebenezer Gelo",
-          "Geraud Nangue Tasse",
-          "Steven James"
+          "Dairu Liu",
+          "Zekun Qi",
+          "Jiayu Zeng"
         ]
       },
       {
-        "title": "Constructing Dynamic Master Logic Models as Knowledge Graphs for Complex System Diagnostics Using Retrieval-Augmented Large Language Models",
-        "summary": "Dynamic Master Logic (DML) provides a hierarchical framework for representing system behavior by linking functional objectives to underlying structural elements. However, DML construction typically re",
-        "link": "http://arxiv.org/abs/2608.12304v1",
-        "date": "2026-08-12",
+        "title": "QuoteBench: How Matched Scores Can Hide Command-Path Failures",
+        "summary": "LLM coding agents issue Bash commands through interfaces that may serialize, wrap, and reparse model output. Matched execution scores alone cannot distinguish command-generation errors from failures i",
+        "link": "http://arxiv.org/abs/2608.13547v1",
+        "date": "2026-08-13",
         "authors": [
-          "Saman Marandi",
-          "Yu-Shu Hu",
-          "Mohammad Modarres"
+          "Shangao Li",
+          "Yao Zhang",
+          "Volker Tresp"
         ]
       },
       {
-        "title": "Class Activation Mapping in Explainable Computer Vision: A Method-Centered Review of CNN, Transformer, and Foundation-Model-Era Visual Explanations",
-        "summary": "Class activation mapping (CAM) is one of the most widely used visual explanation families in explainable artificial intelligence. Its purpose is intuitive: it converts internal model evidence into a h",
-        "link": "http://arxiv.org/abs/2608.12299v1",
-        "date": "2026-08-12",
+        "title": "LittleLearner: Language Models Under Pedagogically Controlled Knowledge Exposure",
+        "summary": "Modern language models are trained on heterogeneous web-scale text corpora. Consequently, studying knowledge and skill acquisition is difficult, as prior exposure to related content is hard to charact",
+        "link": "http://arxiv.org/abs/2608.13545v1",
+        "date": "2026-08-13",
         "authors": [
-          "AmirHossein Eshghi",
-          "Hamid Saadatfar",
-          "Seyyed Ali Hoseini"
+          "Fanfei Li",
+          "Jana Zeller",
+          "Manuel Prada-Corral"
         ]
       },
       {
-        "title": "Beyond Trial-and-Error: Agentic Optimization for Image-to-Video Adherence",
-        "summary": "Modern black-box Image-to-Video (I2V) models offer powerful capabilities in automated content creation, yet their lack of fine-grained control and reliability presents significant challenges in profes",
-        "link": "http://arxiv.org/abs/2608.12290v1",
-        "date": "2026-08-12",
+        "title": "Vero: Can AI Agents Build Formally Verified Software Repositories?",
+        "summary": "AI agents are increasingly used for programming, but do not provide any guarantee on the correctness of generated code. Verified code generation, in which an agent produces both an implementation and ",
+        "link": "http://arxiv.org/abs/2608.13522v1",
+        "date": "2026-08-13",
         "authors": [
-          "Aman Tyagi",
-          "Hemanth Boinpally",
-          "Jonathan Chen"
+          "Zhe Ye",
+          "Hantao Lou",
+          "Yuechun Sun"
         ]
       },
       {
-        "title": "VAKRA: Evaluating Multi-Hop Reasoning Across APIs and Retrieval Under Tool-Use Policies",
-        "summary": "Agents deployed in enterprise settings must reason across structured APIs and document collections, yet existing benchmarks evaluate these capabilities in isolation. We introduce VAKRA (e\\textbf{V}alu",
-        "link": "http://arxiv.org/abs/2608.12282v1",
-        "date": "2026-08-12",
+        "title": "The data geometry of masking diffusion: Certified-optimal schedules via unmasking growth complexity",
+        "summary": "We study masking diffusion for discrete sampling and introduce a path-resolved measure of data geometry called the \\emph{unmasking growth complexity} ({\\textsf{UGC}\\xspace}). Its local increments dire",
+        "link": "http://arxiv.org/abs/2608.13520v1",
+        "date": "2026-08-13",
         "authors": [
-          "Ankita Rajaram Naik",
-          "Anupama Murthi",
-          "Benjamin Elder"
+          "Martin J. Wainwright"
         ]
       },
       {
-        "title": "Structural Silence: When AI Infrastructure Fails Speakers of Underrepresented Languages",
-        "summary": "Artificial intelligence tools for education and language support are increasingly framed as scalable responses to access gaps in under-resourced communities. Yet the infrastructure underlying these to",
-        "link": "http://arxiv.org/abs/2608.12278v1",
-        "date": "2026-08-12",
+        "title": "DFM Mimir v1: An Open HRM Delivering Frontier Performance at 1B Parameters Using Only Permissible Post-Training Data",
+        "summary": "Current large language model development relies on massive, often non-permissible datasets, creating a high barrier for researchers committed to open-source and ethically sourced data. We introduce Mi",
+        "link": "http://arxiv.org/abs/2608.13517v1",
+        "date": "2026-08-13",
         "authors": [
-          "Avijit Roy",
-          "Proma Roy"
+          "Peter Schneider-Kamp",
+          "Jacob Nielsen",
+          "Gianluca Barmina"
         ]
       }
     ],
-    "updated": "2026-08-13T04:12:31.422668Z"
+    "updated": "2026-08-14T04:09:56.540436Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-08-13T04:12:31.422668Z"
+    "updated": "2026-08-14T04:09:56.540436Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-08-13T04:12:31.422668Z"
+    "updated": "2026-08-14T04:09:56.540436Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-08-13T04:12:31.422668Z"
+    "updated": "2026-08-14T04:09:56.540436Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Convergent Detour Hijacking: Task-Preserving Resource Amplification in Skill-Based LLM Agents",
-        "summary": "LLM agents increasingly rely on third-party skills, using natural-language descriptions for selection and instruction bodies for planning. This progressive-disclosure design exposes two sequential con",
-        "link": "http://arxiv.org/abs/2608.12273v1",
-        "date": "2026-08-12",
+        "title": "Concept Drift Detection and Adaptive Retraining of Malware Classification Models",
+        "summary": "Concept drift refers to changes over time in the statistical properties of data, as compared to the data that was used to train a learning model. Machine learning models for malware detection or class",
+        "link": "http://arxiv.org/abs/2608.13465v1",
+        "date": "2026-08-13",
         "authors": [
-          "Junliang Liu",
-          "Ruoyu Li",
-          "Wenxin Tang"
+          "Christofer Washington Berruz Chungata",
+          "Martin Jurecek",
+          "Katerina Potika"
         ]
       },
       {
-        "title": "VICBench: A Multi-Language Benchmark for Code Vulnerability Detection",
-        "summary": "Evaluating security vulnerability detection tools requires benchmark datasets with vulnerability-inducing commits (VICs) - the commits that first introduce vulnerabilities into codebases. VICs are ess",
-        "link": "http://arxiv.org/abs/2608.12246v1",
-        "date": "2026-08-12",
+        "title": "LLM-Assisted Dynamic Threat Analysis for Attacker-Reachable Software Weaknesses in Autonomous Vehicles",
+        "summary": "Autonomous vehicles depend on large safety-critical software stacks, where weaknesses reachable from adversarial inputs may affect steering, braking, or other control decisions. Static analysis can id",
+        "link": "http://arxiv.org/abs/2608.13450v1",
+        "date": "2026-08-13",
         "authors": [
-          "Jin Lu",
-          "Xuening Han",
-          "Yang Zhong"
+          "Md Wasiul Haque",
+          "Sagar Dasgupta",
+          "Mizanur Rahman"
         ]
       },
       {
-        "title": "Machine Learning-Based Cyber Defense for Cloud Infrastructure: An Adaptive Deep Q-Network Architecture for Intelligent Intrusion Detection and Automated Threat Mitigation",
-        "summary": "With the increasing complexity of cyber assaults in cloud environments, adaptable security solutions are needed that can support real-time detection and autonomous response. In this paper, we propose ",
-        "link": "http://arxiv.org/abs/2608.12190v1",
-        "date": "2026-08-12",
+        "title": "Does Fixing Break Security? An Empirical Study of Security Degradation in Iterative LLM-Driven Infrastructure-as-Code Repair",
+        "summary": "Background: Iterative feedback loops are the dominant paradigm for improving LLM-generated Infrastructure-as-Code (IaC): validators such as Checkov and terraform validate feed error signals back for s",
+        "link": "http://arxiv.org/abs/2608.13404v1",
+        "date": "2026-08-13",
         "authors": [
-          "Md Yassir Mottalib",
-          "Md Yousuf",
-          "Eklachur Rahman Bhuiyan"
+          "Benjamin Agyekum",
+          "Fabio Santos"
         ]
       },
       {
-        "title": "A Comparison of Malware Image Transformations Using Grad-CAM and Hybrid Learning Models",
-        "summary": "Recent studies have shown that binary-to-image representations can enable effective machine learning-based results for malware detection and classification. However, performance can vary significantly",
-        "link": "http://arxiv.org/abs/2608.12077v1",
-        "date": "2026-08-12",
+        "title": "TeleGapper: On the (un)reliability of Privacy Policies in Telegram Mini apps",
+        "summary": "Telegram Mini Apps are Web applications embedded within the Telegram client, forming an ecosystem of third-party services within one of the world's most widely used messaging platforms. Despite their ",
+        "link": "http://arxiv.org/abs/2608.13390v1",
+        "date": "2026-08-13",
         "authors": [
-          "Vibha Bhavikatti",
-          "Mark Stamp"
+          "Luca Ferrari",
+          "Mariano Ceccato",
+          "Luca Verderame"
         ]
       },
       {
-        "title": "Slips: Behavioral Evidence Aggregation for Network Security",
-        "summary": "Network intrusion detection systems often analyze individual packets or flows, although malicious behavior may develop across many connections and over time. This may limit their ability to combine is",
-        "link": "http://arxiv.org/abs/2608.11979v1",
-        "date": "2026-08-12",
+        "title": "TopoIntent: Compiling Security Intent into Executable, Compliance-Checked Network Topologies",
+        "summary": "Enterprise security topology design requires translating business intent, regulatory requirements, and risk assumptions into zones, boundary devices, inter-zone paths, and access-control policies. Exi",
+        "link": "http://arxiv.org/abs/2608.13389v1",
+        "date": "2026-08-13",
         "authors": [
-          "Sebastian Garcia",
-          "Veronica Valeros",
-          "Alya Gomaa"
+          "Xiaokang Qu",
+          "Jianliang Ma",
+          "Zao Fan"
         ]
       },
       {
-        "title": "Rank-Two Frobenius-Linearized Normal Forms and Orthoderivative Dual Coordinates in Quadratic APN Maps",
-        "summary": "We classify binary-linear two-term Frobenius-linearized operators $L(Y)=AY^\u03c3+BY$ on $K^3$, where $K$ is a finite extension of $\\mathbb{F}_2$ and $\u03c3$ is a fixed nontrivial Frobenius automorphism of $K$",
-        "link": "http://arxiv.org/abs/2608.11939v1",
-        "date": "2026-08-12",
+        "title": "VR-Themis: A Scalable Framework for Virtual Reality Application Clone Detection",
+        "summary": "Repackaging of mobile applications (aka app cloning) not only threatens the security and privacy of mobile users but also infringes upon the copyright of the original app developers. However, existing",
+        "link": "http://arxiv.org/abs/2608.13290v1",
+        "date": "2026-08-13",
         "authors": [
-          "Jingchuan Ma",
-          "Yanhua Liu",
-          "Qiaoyun Huang"
+          "Gengyang Xu",
+          "Hanyang Guo",
+          "Hong-Ning Dai"
         ]
       },
       {
-        "title": "ToolHazard: Scaling Adversarial Environments for Security Evaluation and Alignment of LLM-based Agents",
-        "summary": "Large language model (LLM) agents integrated with external tools are vulnerable to indirect prompt injections embedded in environmental states. However, existing studies largely rely on manually imple",
-        "link": "http://arxiv.org/abs/2608.11878v1",
-        "date": "2026-08-12",
+        "title": "Sovereign by necessity? Frontier AI export controls, cyber security, and the limits of national AI capability",
+        "summary": "A small number of firms based in two states produce the most capable frontier AI models. The governments of those states have shown both the legal power and the political will to decide which other co",
+        "link": "http://arxiv.org/abs/2608.13272v1",
+        "date": "2026-08-13",
         "authors": [
-          "Yutao Mou",
-          "Pengfei Yang",
-          "Zhe Yin"
+          "Alan Woodward",
+          "Andrew Rogoyski"
         ]
       },
       {
-        "title": "How China-Origin Vision-Language Models Move from Refusal to Reframing in State Alignment",
-        "summary": "State-aligned distortion has been documented in China-origin text-based large language models (LLMs), but whether, and in what form, it arises in multimodal systems has not been systematically examine",
-        "link": "http://arxiv.org/abs/2608.11816v1",
-        "date": "2026-08-12",
+        "title": "Slow and Steady: Preventing MEV with Verifiable Delays",
+        "summary": "Our work presents a defense mechanism against Maximal Extractable Value (MEV) opportunities in distributed ledgers. The mechanism relies on the idea of enforcing a verifiable delay when generating tra",
+        "link": "http://arxiv.org/abs/2608.13271v1",
+        "date": "2026-08-13",
         "authors": [
-          "Guang Yang",
-          "Fengchen Liu",
-          "Alex Wang"
+          "Zeta Avarikioti",
+          "Dimitris Karakostas",
+          "Karl Kreder"
         ]
       }
     ],
-    "updated": "2026-08-13T04:12:31.422668Z"
+    "updated": "2026-08-14T04:09:56.540436Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -281,6 +280,6 @@
         ]
       }
     ],
-    "updated": "2026-08-13T04:12:31.422668Z"
+    "updated": "2026-08-14T04:09:56.540436Z"
   }
 }
