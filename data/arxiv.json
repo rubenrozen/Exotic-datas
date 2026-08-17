@@ -3,200 +3,197 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "AutoDesign: Meta-Harness Optimization for Long-Horizon Agentic Design",
-        "summary": "Transforming multimodal sources into condensed and structured media outputs can be fundamentally conceptualized as a long-horizon agentic process centered on a model-harness system. While an ideal har",
-        "link": "http://arxiv.org/abs/2608.13560v1",
-        "date": "2026-08-13",
+        "title": "Decoding the Past: An Uncertainty-Aware Deep Learning Framework for Sex Attribution in Prehistoric Hand Stencils",
+        "summary": "Determining the biological sex of the individuals who created Upper Paleolithic hand stencils remains a challenging problem due to the absence of ground truth, population differences between contempor",
+        "link": "http://arxiv.org/abs/2608.14539v1",
+        "date": "2026-08-14",
         "authors": [
-          "Yaxin Luo",
-          "Haobin Jiang",
-          "Jialv Zou"
+          "Karel Becerra",
+          "Boris Mederos",
+          "Dean Snow"
         ]
       },
       {
-        "title": "OmniScientist: An Omni-Modal Omni-Discipline AI Scientist",
-        "summary": "Recent advances in foundation models have enabled AI scientists to automate increasingly complete research workflows, from hypothesis generation and code execution to manuscript preparation. Yet workf",
-        "link": "http://arxiv.org/abs/2608.13558v1",
-        "date": "2026-08-13",
+        "title": "Marionette: Predicting World States, Rendering Geometry, Painting Appearance",
+        "summary": "Interactive game world models typically autoregress visual observations directly in pixel or latent space, forcing structured properties such as pose, geometry, and occlusion to be implicitly maintain",
+        "link": "http://arxiv.org/abs/2608.14530v1",
+        "date": "2026-08-14",
         "authors": [
-          "Bobo Li",
-          "Hao Fei",
-          "Tianjie Ju"
+          "Zian Meng",
+          "Zhen Li",
+          "Chuanhao Li"
         ]
       },
       {
-        "title": "HumanTracker: Towards Comprehensive and Human-Aligned Motion Tracking Benchmark",
-        "summary": "Humanoid motion tracking is central to teleoperation and whole-body imitation, yet evaluation often disagrees with what people perceive in videos. Kinematic errors average per-frame pose differences b",
-        "link": "http://arxiv.org/abs/2608.13555v1",
-        "date": "2026-08-13",
+        "title": "Handover of In-Context Learning State Across Session Boundaries",
+        "summary": "This study investigates the methodological and theoretical properties of session handover in applications that use large language models. A task may continue in a new session when the context reaches ",
+        "link": "http://arxiv.org/abs/2608.14528v1",
+        "date": "2026-08-14",
         "authors": [
-          "Dairu Liu",
-          "Zekun Qi",
-          "Jiayu Zeng"
+          "Masahiro Kato",
+          "Taka Kato"
         ]
       },
       {
-        "title": "QuoteBench: How Matched Scores Can Hide Command-Path Failures",
-        "summary": "LLM coding agents issue Bash commands through interfaces that may serialize, wrap, and reparse model output. Matched execution scores alone cannot distinguish command-generation errors from failures i",
-        "link": "http://arxiv.org/abs/2608.13547v1",
-        "date": "2026-08-13",
+        "title": "Participatory Moral AI Is Not Neutral: The Invisible Hand of Developers",
+        "summary": "As AI systems make more morally loaded decisions across society, one response has been moral preference elicitation. In this approach, researchers poll participants on hypothetical dilemmas and use th",
+        "link": "http://arxiv.org/abs/2608.14522v1",
+        "date": "2026-08-14",
         "authors": [
-          "Shangao Li",
-          "Yao Zhang",
-          "Volker Tresp"
+          "Taenyun Kim",
+          "Edyta Bogucka",
+          "Daniele Quercia"
         ]
       },
       {
-        "title": "LittleLearner: Language Models Under Pedagogically Controlled Knowledge Exposure",
-        "summary": "Modern language models are trained on heterogeneous web-scale text corpora. Consequently, studying knowledge and skill acquisition is difficult, as prior exposure to related content is hard to charact",
-        "link": "http://arxiv.org/abs/2608.13545v1",
-        "date": "2026-08-13",
+        "title": "Learning-to-Transition for Large-scale and High-Order MIMO Detection",
+        "summary": "High-order multiple-input multiple-output (MIMO) detection requires efficient search over a large discrete symbol space while producing reliable soft information for channel decoding. This paper devel",
+        "link": "http://arxiv.org/abs/2608.14511v1",
+        "date": "2026-08-14",
         "authors": [
-          "Fanfei Li",
-          "Jana Zeller",
-          "Manuel Prada-Corral"
+          "Yubo Zhang",
+          "Yiyao Liu",
+          "Xiaodong Wang"
         ]
       },
       {
-        "title": "Vero: Can AI Agents Build Formally Verified Software Repositories?",
-        "summary": "AI agents are increasingly used for programming, but do not provide any guarantee on the correctness of generated code. Verified code generation, in which an agent produces both an implementation and ",
-        "link": "http://arxiv.org/abs/2608.13522v1",
-        "date": "2026-08-13",
+        "title": "Split the Labor: Separating Evidence Interpretation from Decision Aggregation",
+        "summary": "Systems that ask a language model to reach a conclusion from many sources usually concatenate them into one prompt. This conflates two operations with different requirements. Interpreting a source rew",
+        "link": "http://arxiv.org/abs/2608.14509v1",
+        "date": "2026-08-14",
         "authors": [
-          "Zhe Ye",
-          "Hantao Lou",
-          "Yuechun Sun"
+          "Zhelun Wu"
         ]
       },
       {
-        "title": "The data geometry of masking diffusion: Certified-optimal schedules via unmasking growth complexity",
-        "summary": "We study masking diffusion for discrete sampling and introduce a path-resolved measure of data geometry called the \\emph{unmasking growth complexity} ({\\textsf{UGC}\\xspace}). Its local increments dire",
-        "link": "http://arxiv.org/abs/2608.13520v1",
-        "date": "2026-08-13",
+        "title": "RecipeNet: A Hierarchical Transformer for Recipe Data",
+        "summary": "Recipe data arises in domains such as materials synthesis, pharmaceutical formulation, and industrial manufacturing, where procedures are represented as ordered sequences of steps containing heterogen",
+        "link": "http://arxiv.org/abs/2608.14505v1",
+        "date": "2026-08-14",
         "authors": [
-          "Martin J. Wainwright"
+          "Pin-Yen Huang",
+          "Sachin Chhabra",
+          "Prasanth Sai Gouripeddi"
         ]
       },
       {
-        "title": "DFM Mimir v1: An Open HRM Delivering Frontier Performance at 1B Parameters Using Only Permissible Post-Training Data",
-        "summary": "Current large language model development relies on massive, often non-permissible datasets, creating a high barrier for researchers committed to open-source and ethically sourced data. We introduce Mi",
-        "link": "http://arxiv.org/abs/2608.13517v1",
-        "date": "2026-08-13",
+        "title": "Universal Thermodynamic Interatomic Potentials for Crystalline Materials",
+        "summary": "Free energies govern solid-state phase stability, yet computational materials discovery still relies largely on ground-state energies because free energy calculations require ensemble averages. We int",
+        "link": "http://arxiv.org/abs/2608.14502v1",
+        "date": "2026-08-14",
         "authors": [
-          "Peter Schneider-Kamp",
-          "Jacob Nielsen",
-          "Gianluca Barmina"
+          "Juno Nam",
+          "Bowen Deng",
+          "Xiaochen Du"
         ]
       }
     ],
-    "updated": "2026-08-16T03:00:40.911901Z"
+    "updated": "2026-08-17T03:00:21.011396Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-08-16T03:00:40.911901Z"
+    "updated": "2026-08-17T03:00:21.011396Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-08-16T03:00:40.911901Z"
+    "updated": "2026-08-17T03:00:21.011396Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-08-16T03:00:40.911901Z"
+    "updated": "2026-08-17T03:00:21.011396Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Concept Drift Detection and Adaptive Retraining of Malware Classification Models",
-        "summary": "Concept drift refers to changes over time in the statistical properties of data, as compared to the data that was used to train a learning model. Machine learning models for malware detection or class",
-        "link": "http://arxiv.org/abs/2608.13465v1",
-        "date": "2026-08-13",
+        "title": "Finding Vulnerabilities via LLM-Augmented Semantics-Aware Type-Checking",
+        "summary": "Vulnerability detection via static analysis traditionally relies on security experts encoding insecure coding patterns into algorithmic rules. However, this approach often focuses on syntactic pattern",
+        "link": "http://arxiv.org/abs/2608.14533v1",
+        "date": "2026-08-14",
         "authors": [
-          "Christofer Washington Berruz Chungata",
-          "Martin Jurecek",
-          "Katerina Potika"
+          "Ruizhe Wang",
+          "Meng Xu",
+          "N. Asokan"
         ]
       },
       {
-        "title": "LLM-Assisted Dynamic Threat Analysis for Attacker-Reachable Software Weaknesses in Autonomous Vehicles",
-        "summary": "Autonomous vehicles depend on large safety-critical software stacks, where weaknesses reachable from adversarial inputs may affect steering, braking, or other control decisions. Static analysis can id",
-        "link": "http://arxiv.org/abs/2608.13450v1",
-        "date": "2026-08-13",
+        "title": "Trust Without Boundaries: An Architectural Analysis of Satellite Flight Software",
+        "summary": "As spacecraft become more software-driven and interconnected, onboard flight software is an increasingly important security boundary. Popular flight software architectures often treat onboard componen",
+        "link": "http://arxiv.org/abs/2608.14532v1",
+        "date": "2026-08-14",
         "authors": [
-          "Md Wasiul Haque",
-          "Sagar Dasgupta",
-          "Mizanur Rahman"
+          "Jack Vanlyssel",
+          "Gruia-Catalin Roman",
+          "Kendra Cook"
         ]
       },
       {
-        "title": "Does Fixing Break Security? An Empirical Study of Security Degradation in Iterative LLM-Driven Infrastructure-as-Code Repair",
-        "summary": "Background: Iterative feedback loops are the dominant paradigm for improving LLM-generated Infrastructure-as-Code (IaC): validators such as Checkov and terraform validate feed error signals back for s",
-        "link": "http://arxiv.org/abs/2608.13404v1",
-        "date": "2026-08-13",
+        "title": "Lower Bounds on Black-Box Constructions of Pseudorandom Functions",
+        "summary": "In their seminal work, Goldreich, Goldwasser, and Micali [CRYPTO 1984] constructed a pseudorandom function (PRF) using a black-box access to a pseudorandom generator (PRG). When combined with Levin's ",
+        "link": "http://arxiv.org/abs/2608.14501v1",
+        "date": "2026-08-14",
         "authors": [
-          "Benjamin Agyekum",
-          "Fabio Santos"
+          "Bar Alon",
+          "Itai Dinur",
+          "Muthuramakrishnan Venkitasubramaniam"
         ]
       },
       {
-        "title": "TeleGapper: On the (un)reliability of Privacy Policies in Telegram Mini apps",
-        "summary": "Telegram Mini Apps are Web applications embedded within the Telegram client, forming an ecosystem of third-party services within one of the world's most widely used messaging platforms. Despite their ",
-        "link": "http://arxiv.org/abs/2608.13390v1",
-        "date": "2026-08-13",
+        "title": "STINER: Automated Extraction of Strategic Cyber Threat Intelligence from X",
+        "summary": "Strategic Cyber Threat Intelligence (CTI) focuses on high-level insights, such as identifying targeted industries, attributing attacks to specific ransomware groups, and assessing the scale of data lo",
+        "link": "http://arxiv.org/abs/2608.14418v1",
+        "date": "2026-08-14",
         "authors": [
-          "Luca Ferrari",
-          "Mariano Ceccato",
-          "Luca Verderame"
+          "Yasir Ech-Chammakhy",
+          "Oussama Azrara",
+          "Jaafar Chbili"
         ]
       },
       {
-        "title": "TopoIntent: Compiling Security Intent into Executable, Compliance-Checked Network Topologies",
-        "summary": "Enterprise security topology design requires translating business intent, regulatory requirements, and risk assumptions into zones, boundary devices, inter-zone paths, and access-control policies. Exi",
-        "link": "http://arxiv.org/abs/2608.13389v1",
-        "date": "2026-08-13",
+        "title": "A Hybrid LLM-Based Framework for Automated Security Annotation Generation in Business Process Models",
+        "summary": "The modelling and analysis of secure business processes require the incorporation of security annotations into process models. Although BPMN extensions, including SecBPMN2, exist for this purpose, the",
+        "link": "http://arxiv.org/abs/2608.14370v1",
+        "date": "2026-08-14",
         "authors": [
-          "Xiaokang Qu",
-          "Jianliang Ma",
-          "Zao Fan"
+          "Md Kamrul Islam",
+          "Tiphaine Henry",
+          "Mattia Salnitri"
         ]
       },
       {
-        "title": "VR-Themis: A Scalable Framework for Virtual Reality Application Clone Detection",
-        "summary": "Repackaging of mobile applications (aka app cloning) not only threatens the security and privacy of mobile users but also infringes upon the copyright of the original app developers. However, existing",
-        "link": "http://arxiv.org/abs/2608.13290v1",
-        "date": "2026-08-13",
+        "title": "Designing Inclusive Crypto-Asset Dispute Resolution A Hybrid AI and Smart Contract Online Dispute Resolution Framework for Vulnerable Users",
+        "summary": "The growing use of crypto-assets has generated disputes that sit uneasily within existing legal redress mechanisms. Their resolution is complicated by the technical features of blockchain transactions",
+        "link": "http://arxiv.org/abs/2608.14356v1",
+        "date": "2026-08-14",
         "authors": [
-          "Gengyang Xu",
-          "Hanyang Guo",
-          "Hong-Ning Dai"
+          "Gioia Arnone",
+          "Marco Giacalone"
         ]
       },
       {
-        "title": "Sovereign by necessity? Frontier AI export controls, cyber security, and the limits of national AI capability",
-        "summary": "A small number of firms based in two states produce the most capable frontier AI models. The governments of those states have shown both the legal power and the political will to decide which other co",
-        "link": "http://arxiv.org/abs/2608.13272v1",
-        "date": "2026-08-13",
+        "title": "Equivalence Between Average-Case Hardness of Learning and Cryptography for Mixed Quantum States",
+        "summary": "The relationship between cryptography and learning theory has long been a central theme in the foundations of theoretical computer science: cryptographic primitives can imply hardness of learning, whi",
+        "link": "http://arxiv.org/abs/2608.14331v1",
+        "date": "2026-08-14",
         "authors": [
-          "Alan Woodward",
-          "Andrew Rogoyski"
+          "Alexandru Cojocaru",
+          "Laura Lewis"
         ]
       },
       {
-        "title": "Slow and Steady: Preventing MEV with Verifiable Delays",
-        "summary": "Our work presents a defense mechanism against Maximal Extractable Value (MEV) opportunities in distributed ledgers. The mechanism relies on the idea of enforcing a verifiable delay when generating tra",
-        "link": "http://arxiv.org/abs/2608.13271v1",
-        "date": "2026-08-13",
+        "title": "A Four-Axis Trustworthiness Benchmark for LLM-as-Judge in Principle-Based Regulation",
+        "summary": "Principle-based regulation, with evaluative standards such as \"fair, clear, and not misleading\" or \"deliver good outcomes\", cannot be reduced to binary predicates, and LLM-as-judge is increasingly use",
+        "link": "http://arxiv.org/abs/2608.14329v1",
+        "date": "2026-08-14",
         "authors": [
-          "Zeta Avarikioti",
-          "Dimitris Karakostas",
-          "Karl Kreder"
+          "Dipankar Sarkar"
         ]
       }
     ],
-    "updated": "2026-08-16T03:00:40.911901Z"
+    "updated": "2026-08-17T03:00:21.011396Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -280,6 +277,6 @@
         ]
       }
     ],
-    "updated": "2026-08-16T03:00:40.911901Z"
+    "updated": "2026-08-17T03:00:21.011396Z"
   }
 }
