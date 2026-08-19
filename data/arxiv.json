@@ -3,200 +3,200 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "The Authority Resolution Framework: A Five-Domain Ontology for Governing Who and What Decides, at Scale",
-        "summary": "As AI systems become increasingly capable of autonomous action, determining whether an agent is technically capable of performing an action is insufficient: the system must also determine whether the ",
-        "link": "http://arxiv.org/abs/2608.15832v1",
-        "date": "2026-08-16",
+        "title": "From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation",
+        "summary": "Large-scale image generation has benefited from advances in data scale, quality, rebalancing, and recaptioning, yet conventional pipelines typically optimize task-specific datasets in isolation. A cen",
+        "link": "http://arxiv.org/abs/2608.18076v1",
+        "date": "2026-08-18",
         "authors": [
-          "Parviz Shariff"
+          "Xingjian Wang",
+          "Zhao Wang",
+          "Taihang Hu"
         ]
       },
       {
-        "title": "CardiacMamba: Fair and Robust RGB-RF Fusion for Remote Heart Rate Estimation via State Space Modeling",
-        "summary": "Remote photoplethysmography (rPPG) enables non-contact heart rate (HR) monitoring from facial videos, but RGB-only methods are vulnerable to illumination changes, motion artifacts, and skin-tone-depen",
-        "link": "http://arxiv.org/abs/2608.15831v1",
-        "date": "2026-08-16",
+        "title": "On the Fragility of Self-Improving Agents: Variance, Task Order, and Underspecification",
+        "summary": "Memory-based self-improving agents--those that learn from an online stream of tasks and improve over time by maintaining a textual memory bank--have shown great promise in recent literature. However, ",
+        "link": "http://arxiv.org/abs/2608.18066v1",
+        "date": "2026-08-18",
         "authors": [
-          "Bo Zhao",
-          "Zheng Wu",
-          "Yiping Xie"
+          "Qinyuan Ye",
+          "Yu Li",
+          "Yada Pruksachatkun"
         ]
       },
       {
-        "title": "A Cognitively Motivated Multidimensional Framework for Evaluating Metaphor Explanations",
-        "summary": "Current evaluation of metaphor explanations relies mainly on holistic quality ratings, revealing little about how explanation quality is structured or where human judgments agree and diverge. We intro",
-        "link": "http://arxiv.org/abs/2608.15828v1",
-        "date": "2026-08-16",
+        "title": "Delegation Asymmetry in Agentic Recommender Systems: Measuring Two-Sided Receptivity in Online Dating",
+        "summary": "Autonomous LLM agents that converse on a user's behalf are an emerging design pattern in matching platforms, yet their viability depends on a condition rarely examined: users must accept not only dele",
+        "link": "http://arxiv.org/abs/2608.18058v1",
+        "date": "2026-08-18",
         "authors": [
-          "Ana Naveriani",
-          "Jakob Suchan",
-          "Stefano Zoia"
+          "Daria Leshchikova",
+          "Valentina V. Kuskova",
+          "Dmitry Zaytsev"
         ]
       },
       {
-        "title": "RLCascadeRouter: Quality-Estimator-Free Cascade Routing via Reinforcement Learning",
-        "summary": "The growing ecosystem of large language models (LLMs) offers huge potential to optimize performance-cost trade-offs. However, their heterogeneous capabilities and inference costs make efficiently rout",
-        "link": "http://arxiv.org/abs/2608.15817v1",
-        "date": "2026-08-16",
+        "title": "HLSR: Hybrid Live Forecast Selective Dynamic Vehicle Rerouting for Real-Time Congestion Avoidance",
+        "summary": "Urban traffic congestion reduces productivity and increases travel cost and emissions. Network-wide live travel-time shortest-path rerouting can be highly effective in simulation, but assumes that ess",
+        "link": "http://arxiv.org/abs/2608.18056v1",
+        "date": "2026-08-18",
         "authors": [
-          "Shihong Huang",
-          "Shengjie Wang",
-          "Hong Ma"
+          "Xiao Wang",
+          "Shun Ren Yang",
+          "Hui Nien Hung"
         ]
       },
       {
-        "title": "Pricing the Risk of Runtime Compression: Anytime-Valid Admission and a Served-Output Law for Compressed Serving State",
-        "summary": "Runtime compression of serving state trades quality for capacity with no priced guarantee: systems adapt precision on load signals with no soundness statement, and certified approaches budget request-",
-        "link": "http://arxiv.org/abs/2608.15810v1",
-        "date": "2026-08-16",
+        "title": "StagedWorkspace: A Versioned Workspace for Knowledge-Work Agents",
+        "summary": "AI agents increasingly perform knowledge work (i.e., produce and modify persistent digital artifacts such as code repositories, documents, spreadsheets, slides, reports), yet the parsed views they sea",
+        "link": "http://arxiv.org/abs/2608.18050v1",
+        "date": "2026-08-18",
         "authors": [
-          "Fanzhe Wei",
-          "Li Liu"
+          "Yining Hua",
+          "Hongbin Na",
+          "Yifan Zhou"
         ]
       },
       {
-        "title": "KV-Rescue: Recovering Reasoning Language Model KV Eviction Loss via Stepwise Interleaving",
-        "summary": "KV-cache eviction caps the memory cost of long reasoning traces but is inherently lossy because the model decodes from a partial view of its history. Under aggressive budgets, this not only lowers acc",
-        "link": "http://arxiv.org/abs/2608.15797v1",
-        "date": "2026-08-16",
+        "title": "Harnessing Magnitude-Only and Complex Measurements for Improved Dynamic MRI Reconstruction with Learned Priors",
+        "summary": "MRI reconstruction methods for undersampled k-space data naturally utilize complex-valued measurements. Parallel developments in sparse phase retrieval have shown that magnitude-only measurements may ",
+        "link": "http://arxiv.org/abs/2608.18036v1",
+        "date": "2026-08-18",
         "authors": [
-          "Minsoo Cheong",
-          "Woosang Lim",
-          "Vincent-Daniel Yun"
+          "Mahdi Saberi",
+          "Ya\u015far Utku Al\u00e7alar",
+          "Merve G\u00fclle"
         ]
       },
       {
-        "title": "Routing Divergence Is Not Evidence of Behavioral Influence in Same-Weight MoE Self-Distillation",
-        "summary": "Two Mixture-of-Experts (MoE) forward passes can share every weight yet route the same token through different experts. This creates a possible blind spot in same-weight self-distillation, where a demo",
-        "link": "http://arxiv.org/abs/2608.15787v1",
-        "date": "2026-08-16",
+        "title": "Why GPT-Style Models Do Not Directly Transfer to Symbolic Music: Compression in the Wrong Coordinate System",
+        "summary": "GPT-style models achieve strong performance by representing language with finite vocabularies of reusable discrete tokens. This success has motivated symbolic music tokenizations to treat recurring mu",
+        "link": "http://arxiv.org/abs/2608.18025v1",
+        "date": "2026-08-18",
         "authors": [
-          "Cedric Caruzzo",
-          "Donggeun Yoo",
-          "Tae Soo Kim"
+          "Yi Wang"
         ]
       },
       {
-        "title": "Decomposing Staleness in Recommender Systems: A Dual-Filter Framework for Supersession and Decay",
-        "summary": "Stale recommendations are a pervasive challenge and a leading source of user complaints on large-scale content platforms. Items lose relevance through two primary mechanisms: supersession, where emerg",
-        "link": "http://arxiv.org/abs/2608.15780v1",
-        "date": "2026-08-16",
+        "title": "Can Large Language Models Explain Flight Safety Events? A Prior-Guided Semantic LLM-based Approach",
+        "summary": "Improving flight safety with flight data requires not only accurate detection of risk events, but more importantly, clear interpretation of their underlying causes at the level of pilot control behavi",
+        "link": "http://arxiv.org/abs/2608.18017v1",
+        "date": "2026-08-18",
         "authors": [
-          "Di Bai",
-          "Feng Han",
-          "Zhenwei Tang"
+          "Lu Xu",
+          "Xu Li",
+          "Linjiang Zheng"
         ]
       }
     ],
-    "updated": "2026-08-18T02:55:48.424990Z"
+    "updated": "2026-08-19T02:57:35.867794Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-08-18T02:55:48.424990Z"
+    "updated": "2026-08-19T02:57:35.867794Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-08-18T02:55:48.424990Z"
+    "updated": "2026-08-19T02:57:35.867794Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-08-18T02:55:48.424990Z"
+    "updated": "2026-08-19T02:57:35.867794Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "ECO-ID: Event-Camera based Optical System for Secure Multi-User Ultra-Low Latency Identification",
-        "summary": "Time-critical interactive systems increasingly require ultra-low-latency device identification for multiple users, yet prevailing approaches such as passwords, QR codes, and RFID/NFC are constrained b",
-        "link": "http://arxiv.org/abs/2608.16858v1",
-        "date": "2026-08-17",
+        "title": "Multivalued Consensus: General Adversaries Require More Communication",
+        "summary": "We study $n$-party fault-tolerant consensus against general (non-threshold) adversaries. We describe an infinite family $Z_\\mathsf{proj}^{n,d}$ of $Q^d$-satisfying $n$-party adversary structures based",
+        "link": "http://arxiv.org/abs/2608.17998v1",
+        "date": "2026-08-18",
         "authors": [
-          "Subham Sabud",
-          "Chengling Xu",
-          "Feng Ye"
+          "Mose Mizrahi",
+          "Roger Wattenhofer"
         ]
       },
       {
-        "title": "GEO-Flag: Detecting and Measuring GEO-Optimized Web Content",
-        "summary": "Generative Engine Optimization (GEO) modifies web content to increase its likelihood of being selected and cited by generative search engines. This can give strategically optimized pages visibility di",
-        "link": "http://arxiv.org/abs/2608.16824v1",
-        "date": "2026-08-17",
+        "title": "COMA: A Compositional Misleading Attack Class on Security-RAG, and a Causal Counterfactual Defense",
+        "summary": "Every document a security copilot retrieves can be true, instruction-free, and non-contradictory --- and the copilot can still be driven to assess a critical, exploitable vulnerability correctly and t",
+        "link": "http://arxiv.org/abs/2608.17960v1",
+        "date": "2026-08-18",
         "authors": [
-          "Junjie Chu",
-          "Ye Leng",
-          "Mingjie Li"
+          "Chinmay Gondhalekar",
+          "Urjitkumar Patel"
         ]
       },
       {
-        "title": "Steering the Flow: Inverting Face Recognition Models via Gradient-Guided Flow Matching",
-        "summary": "Model Inversion Attacks (MIAs) aim to reconstruct representative training samples of target identities from face recognition models, exposing critical security vulnerabilities. Existing methods typica",
-        "link": "http://arxiv.org/abs/2608.16791v1",
-        "date": "2026-08-17",
+        "title": "Tail exponents of conditional guesswork via the method of types",
+        "summary": "We study the problem of guessing a realization of an i.i.d. random sequence given element-wise correlated side-information. We use type-counting to provide estimates of the tail probabilities of the n",
+        "link": "http://arxiv.org/abs/2608.17949v1",
+        "date": "2026-08-18",
         "authors": [
-          "Ye Lu",
-          "Shen Wang",
-          "Zhaoyang Zhang"
+          "Adway Girish",
+          "Andreina Patrizia Motter",
+          "Emre Telatar"
         ]
       },
       {
-        "title": "Topological Attribution Distance (TAD): Revealing Segment-Level RAG Influence on LLM Output Geometry for Incident Log Analysis",
-        "summary": "Large Language Models (LLMs) are increasingly being deployed in cybersecurity operations to assist cybersecurity analysts with rapid decision-making against emerging threats. However, there is a main ",
-        "link": "http://arxiv.org/abs/2608.16775v1",
-        "date": "2026-08-17",
+        "title": "The Model's Tell: Measuring Context-Leakage Attack Signals with Behavior Gauges",
+        "summary": "LLMs increasingly rely on external contexts, such as pre-defined system prompts or retrieved documents, to improve generation quality. However, processing these contexts alongside user queries creates",
+        "link": "http://arxiv.org/abs/2608.17829v1",
+        "date": "2026-08-18",
         "authors": [
-          "Reza Fayyazi",
-          "Michael Zuzak",
-          "Shanchieh Jay Yang"
+          "Maosen Zhang",
+          "Jianshuo Dong",
+          "Boting Lu"
         ]
       },
       {
-        "title": "A Deployment-Oriented and Resource-Efficient Neuro-Symbolic Framework for Explainable DDoS Detection in Operational Technology Networks",
-        "summary": "Operational technology (OT) environments, including programmable logic controllers (PLCs), industrial control systems (ICS), and supervisory control and data acquisition (SCADA) systems, are increasin",
-        "link": "http://arxiv.org/abs/2608.16769v1",
-        "date": "2026-08-17",
+        "title": "Diff-DDoS: Realistic Cyber-Physical Attack Synthesis and Robust Detection for 5G-Enabled CPS Using Tabular Diffusion Models",
+        "summary": "Deep learning-based DDoS detectors for 5G-enabled cyber-physical systems face scarce labeled attack data and unrealistic synthetic substitutes, which limit robustness against adaptive adversaries. Det",
+        "link": "http://arxiv.org/abs/2608.17796v1",
+        "date": "2026-08-18",
         "authors": [
-          "Mikiyas Alemayehu",
-          "Mohamed Chahine Ghanem",
-          "Hamza Kheddar"
+          "Bilal Hussain",
+          "Xiao Tang",
+          "Qinghe Du"
         ]
       },
       {
-        "title": "Rigorous Statements and Proofs of the Lemmas in Simon's Algorithm for the Dihedral Coset Problem and Their Underlying Hypothesis",
-        "summary": "In a recent preprint, Simon proposed a polynomial-time quantum algorithm for the Dihedral Coset Problem and rested the analysis on four lemmas. Three of them carry only proof sketches, and this paper ",
-        "link": "http://arxiv.org/abs/2608.16598v1",
-        "date": "2026-08-17",
+        "title": "Efficient Fuzzy PSI under One-Sided Assumptions",
+        "summary": "Fuzzy private set intersection (PSI) enables two parties to identify approximately matching elements between their input sets, where two elements are considered a match if their distance is at most a ",
+        "link": "http://arxiv.org/abs/2608.17770v1",
+        "date": "2026-08-18",
         "authors": [
-          "Yuchen Guo",
-          "Shuo Yang"
+          "Xinpeng Yang",
+          "Meng Hao",
+          "Yanxue Jia"
         ]
       },
       {
-        "title": "What to Remember, What to Reveal: Privacy-Aware Memory for Conversational Agents",
-        "summary": "Long-term memory enables personalized conversational agents to retain user information across sessions. However, existing memory architectures primarily optimize for utility while neglecting the risks",
-        "link": "http://arxiv.org/abs/2608.16551v1",
-        "date": "2026-08-17",
+        "title": "Advancing Inclusivity in Cybersecurity Education: Integrating Intersectionality to Enhance Student Engagement in Australian Higher Education Curriculums Strategies, Barriers, and Future Directions",
+        "summary": "Australian women, gender-diverse individuals, and culturally and linguistically diverse (CALD) communities are often more susceptible to phishing and other forms of cybercrimes due to factors such as ",
+        "link": "http://arxiv.org/abs/2608.17758v1",
+        "date": "2026-08-18",
         "authors": [
-          "Wenjie Wang",
-          "Wenhe Si",
-          "Xinyue Xu"
+          "Nalin A. G. Arachchilage",
+          "Asangi Jayatilaka",
+          "Senuri Wijenayake"
         ]
       },
       {
-        "title": "DSPrompt: Dynamic Soft Prompt Defense Against M-RAG Corruption",
-        "summary": "Multimodal Retrieval Augmented Generation (M-RAG) is increasingly vulnerable to adversarial attacks where malicious data are crafted to produce embeddings that align with benign entries in the vector ",
-        "link": "http://arxiv.org/abs/2608.16536v1",
-        "date": "2026-08-17",
+        "title": "Achievement Unlocked: Let's Get Hacked! An Empirical Study of Cybercrime in the Video Gaming Ecosystem",
+        "summary": "The ubiquity of the video game industry and its large user base have transformed video games into complex social and economic ecosystems. Unfortunately, this growing popularity also attracts cybercrim",
+        "link": "http://arxiv.org/abs/2608.17754v1",
+        "date": "2026-08-18",
         "authors": [
-          "Chang Liu",
-          "Yuni Lai",
-          "Mingyue Cui"
+          "Janine Schneider",
+          "Jan Kallenborn",
+          "Tim Hoffmann"
         ]
       }
     ],
-    "updated": "2026-08-18T02:55:48.424990Z"
+    "updated": "2026-08-19T02:57:35.867794Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -280,6 +280,6 @@
         ]
       }
     ],
-    "updated": "2026-08-18T02:55:48.424990Z"
+    "updated": "2026-08-19T02:57:35.867794Z"
   }
 }
