@@ -3,200 +3,196 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation",
-        "summary": "Large-scale image generation has benefited from advances in data scale, quality, rebalancing, and recaptioning, yet conventional pipelines typically optimize task-specific datasets in isolation. A cen",
-        "link": "http://arxiv.org/abs/2608.18076v1",
-        "date": "2026-08-18",
+        "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments",
+        "summary": "Continuous self-improvement requires an ever-expanding pool of self-generated, diverse, adaptive goals. For language agents, existing training environment pools (hand-curated, statically synthesized, ",
+        "link": "http://arxiv.org/abs/2608.19197v1",
+        "date": "2026-08-19",
         "authors": [
-          "Xingjian Wang",
-          "Zhao Wang",
-          "Taihang Hu"
+          "Bo Liu",
+          "Simon Yu",
+          "Yiding Jiang"
         ]
       },
       {
-        "title": "On the Fragility of Self-Improving Agents: Variance, Task Order, and Underspecification",
-        "summary": "Memory-based self-improving agents--those that learn from an online stream of tasks and improve over time by maintaining a textual memory bank--have shown great promise in recent literature. However, ",
-        "link": "http://arxiv.org/abs/2608.18066v1",
-        "date": "2026-08-18",
+        "title": "ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning",
+        "summary": "We introduce Accelerating Dexterity via Pre-Training (ADEPT), a large-scale reinforcement learning (RL) framework for learning sim-to-real transferable dexterity across high degree-of-freedom (DoF) ro",
+        "link": "http://arxiv.org/abs/2608.19182v1",
+        "date": "2026-08-19",
         "authors": [
-          "Qinyuan Ye",
-          "Yu Li",
-          "Yada Pruksachatkun"
+          "Jayjun Lee",
+          "Jessica Yin",
+          "Asif Rana"
         ]
       },
       {
-        "title": "Delegation Asymmetry in Agentic Recommender Systems: Measuring Two-Sided Receptivity in Online Dating",
-        "summary": "Autonomous LLM agents that converse on a user's behalf are an emerging design pattern in matching platforms, yet their viability depends on a condition rarely examined: users must accept not only dele",
-        "link": "http://arxiv.org/abs/2608.18058v1",
-        "date": "2026-08-18",
+        "title": "Beyond Teacher Likelihood: Group-Calibrated On-Policy Distillation for Long-Context Reasoning",
+        "summary": "On-policy distillation (OPD) trains a student on its own responses using dense token-level guidance from a stronger teacher. In long-context tasks, however, token-level teacher support can favor local",
+        "link": "http://arxiv.org/abs/2608.19181v1",
+        "date": "2026-08-19",
         "authors": [
-          "Daria Leshchikova",
-          "Valentina V. Kuskova",
-          "Dmitry Zaytsev"
+          "Zhu Zhang",
+          "Jixun Wang",
+          "Xiaoang Xu"
         ]
       },
       {
-        "title": "HLSR: Hybrid Live Forecast Selective Dynamic Vehicle Rerouting for Real-Time Congestion Avoidance",
-        "summary": "Urban traffic congestion reduces productivity and increases travel cost and emissions. Network-wide live travel-time shortest-path rerouting can be highly effective in simulation, but assumes that ess",
-        "link": "http://arxiv.org/abs/2608.18056v1",
-        "date": "2026-08-18",
+        "title": "Finetuning Strategies for Querying Sounds by Vocal Imitation",
+        "summary": "This technical report describes our winning submission to the AES AIMLA 2025 Challenge on querying sound effects by vocal imitation. We investigate two complementary fine-tuning strategies: contrastiv",
+        "link": "http://arxiv.org/abs/2608.19174v1",
+        "date": "2026-08-19",
         "authors": [
-          "Xiao Wang",
-          "Shun Ren Yang",
-          "Hui Nien Hung"
+          "Aditya Bhattacharjee",
+          "Christos Plachouras",
+          "Sungkyun Chang"
         ]
       },
       {
-        "title": "StagedWorkspace: A Versioned Workspace for Knowledge-Work Agents",
-        "summary": "AI agents increasingly perform knowledge work (i.e., produce and modify persistent digital artifacts such as code repositories, documents, spreadsheets, slides, reports), yet the parsed views they sea",
-        "link": "http://arxiv.org/abs/2608.18050v1",
-        "date": "2026-08-18",
+        "title": "Interpretable AI predicts a 2026 summer dry anomaly in central China",
+        "summary": "Seasonal precipitation anomalies are largely regulated by atmospheric circulation, which dynamical models predict with greater reliability than precipitation itself. Here, we employ a deep learning mo",
+        "link": "http://arxiv.org/abs/2608.19163v1",
+        "date": "2026-08-19",
         "authors": [
-          "Yining Hua",
-          "Hongbin Na",
-          "Yifan Zhou"
+          "Anran Wang",
+          "Wen Shi",
+          "Yong Luo"
         ]
       },
       {
-        "title": "Harnessing Magnitude-Only and Complex Measurements for Improved Dynamic MRI Reconstruction with Learned Priors",
-        "summary": "MRI reconstruction methods for undersampled k-space data naturally utilize complex-valued measurements. Parallel developments in sparse phase retrieval have shown that magnitude-only measurements may ",
-        "link": "http://arxiv.org/abs/2608.18036v1",
-        "date": "2026-08-18",
+        "title": "Beyond the Transcript: Detecting Covert Co ordination in Latent Multi-Agent Communication",
+        "summary": "Language-model agents can communicate through continuous hidden states that are invisible in public transcripts, creating opportunities for covert harmful coordination. We introduce Verifiable Latent ",
+        "link": "http://arxiv.org/abs/2608.19161v1",
+        "date": "2026-08-19",
         "authors": [
-          "Mahdi Saberi",
-          "Ya\u015far Utku Al\u00e7alar",
-          "Merve G\u00fclle"
+          "Ramneet Kaur",
+          "Pradyumna Chari",
+          "Ramesh Raskar"
         ]
       },
       {
-        "title": "Why GPT-Style Models Do Not Directly Transfer to Symbolic Music: Compression in the Wrong Coordinate System",
-        "summary": "GPT-style models achieve strong performance by representing language with finite vocabularies of reusable discrete tokens. This success has motivated symbolic music tokenizations to treat recurring mu",
-        "link": "http://arxiv.org/abs/2608.18025v1",
-        "date": "2026-08-18",
+        "title": "Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets",
+        "summary": "Modern Intel AI PCs ship capable integrated GPUs and NPUs with 16+ GB of unified memory, and they spend considerable time idle. That is not enough memory to fit a large model such as a 70B-parameter L",
+        "link": "http://arxiv.org/abs/2608.19147v1",
+        "date": "2026-08-19",
         "authors": [
-          "Yi Wang"
+          "Tate Berenbaum",
+          "Muthaiah Venkatachalam"
         ]
       },
       {
-        "title": "Can Large Language Models Explain Flight Safety Events? A Prior-Guided Semantic LLM-based Approach",
-        "summary": "Improving flight safety with flight data requires not only accurate detection of risk events, but more importantly, clear interpretation of their underlying causes at the level of pilot control behavi",
-        "link": "http://arxiv.org/abs/2608.18017v1",
-        "date": "2026-08-18",
+        "title": "Grouping the Stochastic Machine: Precision, Not Capability, as the Frontier Metric for AI Systems",
+        "summary": "Frontier language models are compared, marketed, and benchmarked on capability -- what their best or average output can achieve. I argue this measures the wrong axis. The models have saturated accurac",
+        "link": "http://arxiv.org/abs/2608.19140v1",
+        "date": "2026-08-19",
         "authors": [
-          "Lu Xu",
-          "Xu Li",
-          "Linjiang Zheng"
+          "George Andrikopoulos"
         ]
       }
     ],
-    "updated": "2026-08-19T02:57:35.867794Z"
+    "updated": "2026-08-20T02:57:18.971151Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-08-19T02:57:35.867794Z"
+    "updated": "2026-08-20T02:57:18.971151Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-08-19T02:57:35.867794Z"
+    "updated": "2026-08-20T02:57:18.971151Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-08-19T02:57:35.867794Z"
+    "updated": "2026-08-20T02:57:18.971151Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "Multivalued Consensus: General Adversaries Require More Communication",
-        "summary": "We study $n$-party fault-tolerant consensus against general (non-threshold) adversaries. We describe an infinite family $Z_\\mathsf{proj}^{n,d}$ of $Q^d$-satisfying $n$-party adversary structures based",
-        "link": "http://arxiv.org/abs/2608.17998v1",
-        "date": "2026-08-18",
+        "title": "The Structured Totient Preimage Problem: Reconstruction, Collisions, and Cryptographic Implications",
+        "summary": "We define and study the Structured Totient Preimage (STP) problem as a restricted reconstruction relation with a direct cryptographic motivation. Let $p_1,\\ldots,p_k$ be distinct primes of the same bi",
+        "link": "http://arxiv.org/abs/2608.19191v1",
+        "date": "2026-08-19",
         "authors": [
-          "Mose Mizrahi",
-          "Roger Wattenhofer"
+          "Luis Adri\u00e1n Lizama-P\u00e9rez"
         ]
       },
       {
-        "title": "COMA: A Compositional Misleading Attack Class on Security-RAG, and a Causal Counterfactual Defense",
-        "summary": "Every document a security copilot retrieves can be true, instruction-free, and non-contradictory --- and the copilot can still be driven to assess a critical, exploitable vulnerability correctly and t",
-        "link": "http://arxiv.org/abs/2608.17960v1",
-        "date": "2026-08-18",
+        "title": "SiNMULI: Novel Signed Network Approach for Malicious URL Identification",
+        "summary": "In today's era of rapid advancements in artificial intelligence, computer security and online safeguarding measures have undergone significant improvements. However, malicious websites continue to fac",
+        "link": "http://arxiv.org/abs/2608.19190v1",
+        "date": "2026-08-19",
         "authors": [
-          "Chinmay Gondhalekar",
-          "Urjitkumar Patel"
+          "Avijit Gayen",
+          "Sayan Mondal",
+          "Angshuman Jana"
         ]
       },
       {
-        "title": "Tail exponents of conditional guesswork via the method of types",
-        "summary": "We study the problem of guessing a realization of an i.i.d. random sequence given element-wise correlated side-information. We use type-counting to provide estimates of the tail probabilities of the n",
-        "link": "http://arxiv.org/abs/2608.17949v1",
-        "date": "2026-08-18",
+        "title": "Beyond the Transcript: Detecting Covert Co ordination in Latent Multi-Agent Communication",
+        "summary": "Language-model agents can communicate through continuous hidden states that are invisible in public transcripts, creating opportunities for covert harmful coordination. We introduce Verifiable Latent ",
+        "link": "http://arxiv.org/abs/2608.19161v1",
+        "date": "2026-08-19",
         "authors": [
-          "Adway Girish",
-          "Andreina Patrizia Motter",
-          "Emre Telatar"
+          "Ramneet Kaur",
+          "Pradyumna Chari",
+          "Ramesh Raskar"
         ]
       },
       {
-        "title": "The Model's Tell: Measuring Context-Leakage Attack Signals with Behavior Gauges",
-        "summary": "LLMs increasingly rely on external contexts, such as pre-defined system prompts or retrieved documents, to improve generation quality. However, processing these contexts alongside user queries creates",
-        "link": "http://arxiv.org/abs/2608.17829v1",
-        "date": "2026-08-18",
+        "title": "FedGuard-DC: Privacy-Preserving Federated Load Forecasting and Cyber-Attack Detection for Data-Center Loads in Transmission Systems",
+        "summary": "The rapid growth of large data-center (DC) loads is creating new challenges for power-system visibility, privacy, and cyber-physical security. System operators need accurate short-term information abo",
+        "link": "http://arxiv.org/abs/2608.19155v1",
+        "date": "2026-08-19",
         "authors": [
-          "Maosen Zhang",
-          "Jianshuo Dong",
-          "Boting Lu"
+          "Md Kibria Saroare",
+          "Md Rubel Ahmed"
         ]
       },
       {
-        "title": "Diff-DDoS: Realistic Cyber-Physical Attack Synthesis and Robust Detection for 5G-Enabled CPS Using Tabular Diffusion Models",
-        "summary": "Deep learning-based DDoS detectors for 5G-enabled cyber-physical systems face scarce labeled attack data and unrealistic synthetic substitutes, which limit robustness against adaptive adversaries. Det",
-        "link": "http://arxiv.org/abs/2608.17796v1",
-        "date": "2026-08-18",
+        "title": "Autonomous Cyber Defense in Connected Vehicles: A Multi-Agent Approach to V2X Security",
+        "summary": "A connected vehicle has roughly 100 milliseconds to decide whether an incoming Basic Safety Message is real or fabricated. If a false emergency braking alert reaches the planning pipeline in time, the",
+        "link": "http://arxiv.org/abs/2608.19135v1",
+        "date": "2026-08-19",
         "authors": [
-          "Bilal Hussain",
-          "Xiao Tang",
-          "Qinghe Du"
+          "Krishna Teja Medam"
         ]
       },
       {
-        "title": "Efficient Fuzzy PSI under One-Sided Assumptions",
-        "summary": "Fuzzy private set intersection (PSI) enables two parties to identify approximately matching elements between their input sets, where two elements are considered a match if their distance is at most a ",
-        "link": "http://arxiv.org/abs/2608.17770v1",
-        "date": "2026-08-18",
+        "title": "Toward Quantum Advantage in Learning Parities with Structured Noise via Lower Bound Optimization of the Condition Number",
+        "summary": "Learning Parities with Structured Noise (LPSN) can be reduced to solving nonlinear Boolean systems. In quantum computing, such systems are typically transformed into Macaulay linear systems and solved",
+        "link": "http://arxiv.org/abs/2608.19122v1",
+        "date": "2026-08-19",
         "authors": [
-          "Xinpeng Yang",
-          "Meng Hao",
-          "Yanxue Jia"
+          "Yusen Han",
+          "Xuelian Li",
+          "Juntao Gao"
         ]
       },
       {
-        "title": "Advancing Inclusivity in Cybersecurity Education: Integrating Intersectionality to Enhance Student Engagement in Australian Higher Education Curriculums Strategies, Barriers, and Future Directions",
-        "summary": "Australian women, gender-diverse individuals, and culturally and linguistically diverse (CALD) communities are often more susceptible to phishing and other forms of cybercrimes due to factors such as ",
-        "link": "http://arxiv.org/abs/2608.17758v1",
-        "date": "2026-08-18",
+        "title": "Malformer: A Multi-Modal Malware Detector Using Transformers",
+        "summary": "Traditional malware detection systems that rely on a single representation of malware often fail to identify novel threats. These representations of malware binaries, also known as modalities, do not ",
+        "link": "http://arxiv.org/abs/2608.19052v1",
+        "date": "2026-08-19",
         "authors": [
-          "Nalin A. G. Arachchilage",
-          "Asangi Jayatilaka",
-          "Senuri Wijenayake"
+          "Samuel Howard",
+          "Kshitiz Aryal",
+          "Mahmoud Abdelsalam"
         ]
       },
       {
-        "title": "Achievement Unlocked: Let's Get Hacked! An Empirical Study of Cybercrime in the Video Gaming Ecosystem",
-        "summary": "The ubiquity of the video game industry and its large user base have transformed video games into complex social and economic ecosystems. Unfortunately, this growing popularity also attracts cybercrim",
-        "link": "http://arxiv.org/abs/2608.17754v1",
-        "date": "2026-08-18",
+        "title": "From Threat Intelligence to Detection: Knowledge-driven Enrichment and Template-based Rule Grounding for Automated Sigma Rule Generation",
+        "summary": "Mechanisms for dynamically converting cyber threat intelligence (CTI) into actionable detection capabilities are necessary due to the rapid evolution of Advanced Persistent Threats (APTs). Sigma rules",
+        "link": "http://arxiv.org/abs/2608.19011v1",
+        "date": "2026-08-19",
         "authors": [
-          "Janine Schneider",
-          "Jan Kallenborn",
-          "Tim Hoffmann"
+          "Sepehr Ghaffarzadegan",
+          "Boubakr Nour",
+          "Makan Pourzandi"
         ]
       }
     ],
-    "updated": "2026-08-19T02:57:35.867794Z"
+    "updated": "2026-08-20T02:57:18.971151Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -280,6 +276,6 @@
         ]
       }
     ],
-    "updated": "2026-08-19T02:57:35.867794Z"
+    "updated": "2026-08-20T02:57:18.971151Z"
   }
 }
