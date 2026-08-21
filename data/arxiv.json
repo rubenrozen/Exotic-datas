@@ -3,196 +3,204 @@
     "label": "AI / Machine Learning",
     "papers": [
       {
-        "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments",
-        "summary": "Continuous self-improvement requires an ever-expanding pool of self-generated, diverse, adaptive goals. For language agents, existing training environment pools (hand-curated, statically synthesized, ",
-        "link": "http://arxiv.org/abs/2608.19197v1",
-        "date": "2026-08-19",
+        "title": "G-CARL: Grounded Checklist-Aligned Reward Learning for Patient-Oriented Medical Report Interpretation",
+        "summary": "Personalized interpretation of medical reports has emerged as an increasingly important need among patients. Addressing this need requires both evidence-grounded medical factuality and context-depende",
+        "link": "http://arxiv.org/abs/2608.20331v1",
+        "date": "2026-08-20",
         "authors": [
-          "Bo Liu",
-          "Simon Yu",
-          "Yiding Jiang"
+          "Shiao Xie",
+          "Siyu Chen",
+          "Jianwei Lv"
         ]
       },
       {
-        "title": "ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning",
-        "summary": "We introduce Accelerating Dexterity via Pre-Training (ADEPT), a large-scale reinforcement learning (RL) framework for learning sim-to-real transferable dexterity across high degree-of-freedom (DoF) ro",
-        "link": "http://arxiv.org/abs/2608.19182v1",
-        "date": "2026-08-19",
+        "title": "An Agentic Approach for Active Data Collection, Travel Behavior Modeling, and Weather-Sensitive Demand Prediction",
+        "summary": "Travel behavior research increasingly combines digital data collection with predictive modeling, yet these stages are often developed and evaluated separately. This study proposes a three-agent workfl",
+        "link": "http://arxiv.org/abs/2608.20320v1",
+        "date": "2026-08-20",
         "authors": [
-          "Jayjun Lee",
-          "Jessica Yin",
-          "Asif Rana"
+          "Narges Ahmadi",
+          "Yubo Jiao",
+          "J\u00f4natas Augusto Manzolli"
         ]
       },
       {
-        "title": "Beyond Teacher Likelihood: Group-Calibrated On-Policy Distillation for Long-Context Reasoning",
-        "summary": "On-policy distillation (OPD) trains a student on its own responses using dense token-level guidance from a stronger teacher. In long-context tasks, however, token-level teacher support can favor local",
-        "link": "http://arxiv.org/abs/2608.19181v1",
-        "date": "2026-08-19",
+        "title": "Inducing Task Models from Computer-Use Traces",
+        "summary": "Naturalistic computer-use traces, passively recorded screenshots and mouse or keyboard actions, are a valuable resource for deriving symbolic, auditable, and reusable models of how everyday work is do",
+        "link": "http://arxiv.org/abs/2608.20319v1",
+        "date": "2026-08-20",
         "authors": [
-          "Zhu Zhang",
-          "Jixun Wang",
-          "Xiaoang Xu"
+          "Yucheng Jiang",
+          "Zora Zhiruo Wang",
+          "Ruishi Chen"
         ]
       },
       {
-        "title": "Finetuning Strategies for Querying Sounds by Vocal Imitation",
-        "summary": "This technical report describes our winning submission to the AES AIMLA 2025 Challenge on querying sound effects by vocal imitation. We investigate two complementary fine-tuning strategies: contrastiv",
-        "link": "http://arxiv.org/abs/2608.19174v1",
-        "date": "2026-08-19",
+        "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement",
+        "summary": "Recursive self-improvement (RSI) asks whether an AI system can improve the process that produces AI systems, so that the next system inherits the improvement. That process is the training algorithm: a",
+        "link": "http://arxiv.org/abs/2608.20318v1",
+        "date": "2026-08-20",
         "authors": [
-          "Aditya Bhattacharjee",
-          "Christos Plachouras",
-          "Sungkyun Chang"
+          "Yizhe Chi",
+          "Wenyi Li",
+          "Deyao Hong"
         ]
       },
       {
-        "title": "Interpretable AI predicts a 2026 summer dry anomaly in central China",
-        "summary": "Seasonal precipitation anomalies are largely regulated by atmospheric circulation, which dynamical models predict with greater reliability than precipitation itself. Here, we employ a deep learning mo",
-        "link": "http://arxiv.org/abs/2608.19163v1",
-        "date": "2026-08-19",
+        "title": "Pandora's AI Model Routing Box: Efficient Allocation with Costly Value Estimation",
+        "summary": "Heterogeneous AI systems composed of multiple models, architectures, harnesses, or inference-time settings can improve quality and efficiency by routing queries to the specialist who can answer most e",
+        "link": "http://arxiv.org/abs/2608.20316v1",
+        "date": "2026-08-20",
         "authors": [
-          "Anran Wang",
-          "Wen Shi",
-          "Yong Luo"
+          "Adam Fisch",
+          "Shubhendu Trivedi",
+          "Fantine Huot"
         ]
       },
       {
-        "title": "Beyond the Transcript: Detecting Covert Co ordination in Latent Multi-Agent Communication",
-        "summary": "Language-model agents can communicate through continuous hidden states that are invisible in public transcripts, creating opportunities for covert harmful coordination. We introduce Verifiable Latent ",
-        "link": "http://arxiv.org/abs/2608.19161v1",
-        "date": "2026-08-19",
+        "title": "MidTool: Mid-training Data Synthesis for Agentic Tool Use",
+        "summary": "Mid-training is increasingly recognized as a critical stage for shaping the capabilities of large language models. Recent work has shown that targeted mid-training can strengthen reasoning-intensive a",
+        "link": "http://arxiv.org/abs/2608.20314v1",
+        "date": "2026-08-20",
         "authors": [
-          "Ramneet Kaur",
-          "Pradyumna Chari",
-          "Ramesh Raskar"
+          "Fengqing Jiang",
+          "Yite Wang",
+          "Boyi Liu"
         ]
       },
       {
-        "title": "Pre-Compiled Pipeline Shards for Distributed LLM Inference on Intel AI PC Fleets",
-        "summary": "Modern Intel AI PCs ship capable integrated GPUs and NPUs with 16+ GB of unified memory, and they spend considerable time idle. That is not enough memory to fit a large model such as a 70B-parameter L",
-        "link": "http://arxiv.org/abs/2608.19147v1",
-        "date": "2026-08-19",
+        "title": "Phantom Gains: Auditing Self-Improvement Against a Measured Null",
+        "summary": "Whether a language model has improved itself is increasingly judged not by mean accuracy but by which individual problems it gains and loses. Tracking these transitions means differencing two noisy es",
+        "link": "http://arxiv.org/abs/2608.20290v1",
+        "date": "2026-08-20",
         "authors": [
-          "Tate Berenbaum",
-          "Muthaiah Venkatachalam"
+          "Cheng Xu",
+          "Nan Yan",
+          "Liming Chen"
         ]
       },
       {
-        "title": "Grouping the Stochastic Machine: Precision, Not Capability, as the Frontier Metric for AI Systems",
-        "summary": "Frontier language models are compared, marketed, and benchmarked on capability -- what their best or average output can achieve. I argue this measures the wrong axis. The models have saturated accurac",
-        "link": "http://arxiv.org/abs/2608.19140v1",
-        "date": "2026-08-19",
+        "title": "Inject, Align, Recover: Staged Post-Training for Retrieval-Free Document Knowledge Internalization",
+        "summary": "Large language models often fail to answer questions about a bounded document collection when the source documents are not retrieved at inference time. We study this setting as document knowledge inte",
+        "link": "http://arxiv.org/abs/2608.20281v1",
+        "date": "2026-08-20",
         "authors": [
-          "George Andrikopoulos"
+          "Qian Kou",
+          "Xiaofeng Shi",
+          "Xiaosong Qiu"
         ]
       }
     ],
-    "updated": "2026-08-20T02:57:18.971151Z"
+    "updated": "2026-08-21T03:03:17.585074Z"
   },
   "q-fin": {
     "label": "Quantitative Finance",
     "papers": [],
-    "updated": "2026-08-20T02:57:18.971151Z"
+    "updated": "2026-08-21T03:03:17.585074Z"
   },
   "physics": {
     "label": "Physics",
     "papers": [],
-    "updated": "2026-08-20T02:57:18.971151Z"
+    "updated": "2026-08-21T03:03:17.585074Z"
   },
   "econ": {
     "label": "Economics",
     "papers": [],
-    "updated": "2026-08-20T02:57:18.971151Z"
+    "updated": "2026-08-21T03:03:17.585074Z"
   },
   "cs.CR": {
     "label": "Cybersecurity",
     "papers": [
       {
-        "title": "The Structured Totient Preimage Problem: Reconstruction, Collisions, and Cryptographic Implications",
-        "summary": "We define and study the Structured Totient Preimage (STP) problem as a restricted reconstruction relation with a direct cryptographic motivation. Let $p_1,\\ldots,p_k$ be distinct primes of the same bi",
-        "link": "http://arxiv.org/abs/2608.19191v1",
-        "date": "2026-08-19",
+        "title": "QUASAR: A Quantum-Classical Neural Network for SAR Satellite Physical-Layer Authentication",
+        "summary": "X-band SAR satellites (8-12 GHz) play a critical role in disaster response, environmental monitoring, and military intelligence. Yet, they lack robust physical-layer authentication (PLA), a security l",
+        "link": "http://arxiv.org/abs/2608.20240v1",
+        "date": "2026-08-20",
         "authors": [
-          "Luis Adri\u00e1n Lizama-P\u00e9rez"
+          "Vincenzo Sammartino",
+          "Nathanael Denis",
+          "Roberto Di Pietro"
         ]
       },
       {
-        "title": "SiNMULI: Novel Signed Network Approach for Malicious URL Identification",
-        "summary": "In today's era of rapid advancements in artificial intelligence, computer security and online safeguarding measures have undergone significant improvements. However, malicious websites continue to fac",
-        "link": "http://arxiv.org/abs/2608.19190v1",
-        "date": "2026-08-19",
+        "title": "Chameleon: Robust Defense Against Tor Website Fingerprinting via Many-to-Many Traffic Morphing",
+        "summary": "Website fingerprinting (WF) attacks can infer users' browsing activities from encrypted Tor traffic by exploiting side-channel features. Although many WF defenses have been proposed, we find that most",
+        "link": "http://arxiv.org/abs/2608.20160v1",
+        "date": "2026-08-20",
         "authors": [
-          "Avijit Gayen",
-          "Sayan Mondal",
-          "Angshuman Jana"
+          "Yuwen Cui",
+          "Kai Wei",
+          "Kehan Shen"
         ]
       },
       {
-        "title": "Beyond the Transcript: Detecting Covert Co ordination in Latent Multi-Agent Communication",
-        "summary": "Language-model agents can communicate through continuous hidden states that are invisible in public transcripts, creating opportunities for covert harmful coordination. We introduce Verifiable Latent ",
-        "link": "http://arxiv.org/abs/2608.19161v1",
-        "date": "2026-08-19",
+        "title": "Trustworthy mobile edge caching: a blockchain approach to mitigate malicious nodes and incentivize cache sharing",
+        "summary": "As mobile network traffic continues to grow, content caching on edge servers is critical for reducing latency. However, challenges such as malicious edge servers that may delete or manipulate cached c",
+        "link": "http://arxiv.org/abs/2608.20145v1",
+        "date": "2026-08-20",
         "authors": [
-          "Ramneet Kaur",
-          "Pradyumna Chari",
-          "Ramesh Raskar"
+          "Motahare Ebrahimi",
+          "Nastooh Taheri Javan",
+          "Seyedakbar Mostafavi"
         ]
       },
       {
-        "title": "FedGuard-DC: Privacy-Preserving Federated Load Forecasting and Cyber-Attack Detection for Data-Center Loads in Transmission Systems",
-        "summary": "The rapid growth of large data-center (DC) loads is creating new challenges for power-system visibility, privacy, and cyber-physical security. System operators need accurate short-term information abo",
-        "link": "http://arxiv.org/abs/2608.19155v1",
-        "date": "2026-08-19",
+        "title": "Privacy-Preserving Detection of Rare Disease-Associated Cell Subsets via Secure Multi-Party Computation",
+        "summary": "The detection of rare disease-associated cell subsets from high-dimensional single-cell measurements is critical for understanding diseases such as leukaemia and viral infections. CellCnn, a convoluti",
+        "link": "http://arxiv.org/abs/2608.20118v1",
+        "date": "2026-08-20",
         "authors": [
-          "Md Kibria Saroare",
-          "Md Rubel Ahmed"
+          "\u015e. Selcan Magara",
+          "Esther Havemann",
+          "Debora Jutz"
         ]
       },
       {
-        "title": "Autonomous Cyber Defense in Connected Vehicles: A Multi-Agent Approach to V2X Security",
-        "summary": "A connected vehicle has roughly 100 milliseconds to decide whether an incoming Basic Safety Message is real or fabricated. If a false emergency braking alert reaches the planning pipeline in time, the",
-        "link": "http://arxiv.org/abs/2608.19135v1",
-        "date": "2026-08-19",
+        "title": "A Meta-Study on Replication Papers in Usable Security & Privacy",
+        "summary": "The field of usable security and privacy research is a young and expanding field, which is still developing standards for its research, e.g. regarding replications. We used a mixed-method approach, in",
+        "link": "http://arxiv.org/abs/2608.20108v1",
+        "date": "2026-08-20",
         "authors": [
-          "Krishna Teja Medam"
+          "Christian Mack",
+          "Benjamin Berens",
+          "Hanna Algedri"
         ]
       },
       {
-        "title": "Toward Quantum Advantage in Learning Parities with Structured Noise via Lower Bound Optimization of the Condition Number",
-        "summary": "Learning Parities with Structured Noise (LPSN) can be reduced to solving nonlinear Boolean systems. In quantum computing, such systems are typically transformed into Macaulay linear systems and solved",
-        "link": "http://arxiv.org/abs/2608.19122v1",
-        "date": "2026-08-19",
+        "title": "TrustRAG: Blockchain-Enhanced RAG via Committee-Based Credibility Scoring",
+        "summary": "Retrieval-Augmented Generation (RAG) lets Large Language Models (LLMs) pull in up-to-date, domain-specific information instead of relying only on what they were trained on. Yet most RAG systems still ",
+        "link": "http://arxiv.org/abs/2608.20097v1",
+        "date": "2026-08-20",
         "authors": [
-          "Yusen Han",
-          "Xuelian Li",
-          "Juntao Gao"
+          "Baixiang Liu",
+          "Haotian Che",
+          "Yuan Li"
         ]
       },
       {
-        "title": "Malformer: A Multi-Modal Malware Detector Using Transformers",
-        "summary": "Traditional malware detection systems that rely on a single representation of malware often fail to identify novel threats. These representations of malware binaries, also known as modalities, do not ",
-        "link": "http://arxiv.org/abs/2608.19052v1",
-        "date": "2026-08-19",
+        "title": "EchoCoT: Extracting Hidden Chain-of-Thought from Large Reasoning Models",
+        "summary": "Hidden chain-of-thought (CoT) traces, especially those from frontier proprietary large reasoning models (LRMs), are valuable model assets. Yet whether these hidden CoTs can be directly extracted from ",
+        "link": "http://arxiv.org/abs/2608.20055v1",
+        "date": "2026-08-20",
         "authors": [
-          "Samuel Howard",
-          "Kshitiz Aryal",
-          "Mahmoud Abdelsalam"
+          "Yiting Qu",
+          "Ziqing Yang",
+          "Chi Cui"
         ]
       },
       {
-        "title": "From Threat Intelligence to Detection: Knowledge-driven Enrichment and Template-based Rule Grounding for Automated Sigma Rule Generation",
-        "summary": "Mechanisms for dynamically converting cyber threat intelligence (CTI) into actionable detection capabilities are necessary due to the rapid evolution of Advanced Persistent Threats (APTs). Sigma rules",
-        "link": "http://arxiv.org/abs/2608.19011v1",
-        "date": "2026-08-19",
+        "title": "Auditing Cross-Lingual Fairness in Language Model Watermarking",
+        "summary": "Watermarking schemes for large language model output are evaluated almost exclusively on English text using each scheme's detection threshold and a narrow set of quality measurements. Multilingual dep",
+        "link": "http://arxiv.org/abs/2608.20047v1",
+        "date": "2026-08-20",
         "authors": [
-          "Sepehr Ghaffarzadegan",
-          "Boubakr Nour",
-          "Makan Pourzandi"
+          "Alexander Nemecek",
+          "Osama Zafar",
+          "Debargha Ganguly"
         ]
       }
     ],
-    "updated": "2026-08-20T02:57:18.971151Z"
+    "updated": "2026-08-21T03:03:17.585074Z"
   },
   "q-bio": {
     "label": "Biology",
@@ -276,6 +284,6 @@
         ]
       }
     ],
-    "updated": "2026-08-20T02:57:18.971151Z"
+    "updated": "2026-08-21T03:03:17.585074Z"
   }
 }
